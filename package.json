@@ -2,7 +2,7 @@
     "name": "abpx",
     "displayName": "ABPx",
     "description": "Code Snippets that start with an x to speed up your ABP development process in VsCode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.49.0"
     },
@@ -10,7 +10,7 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/bartvanhoey/ABPx.git"
-      },
+    },
     "categories": [
         "Snippets"
     ],
