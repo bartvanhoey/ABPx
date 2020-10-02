@@ -5,4 +5,8 @@
     ],
     "prefix": "xEntity"
   },
+  "auditedEntity": {
+    "body": ["AuditedEntity<${1|int,Guid|}>$0"],
+    "prefix": "xAuditedEntity"
+  }
 }
