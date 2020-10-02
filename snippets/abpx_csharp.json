@@ -8,5 +8,80 @@
   "auditedEntity": {
     "body": ["AuditedEntity<${1|int,Guid|}>$0"],
     "prefix": "xAuditedEntity"
+  },"creationAuditedEntity": {
+    "body": ["CreationAuditedEntity<${1|int,Guid|}>$0"],
+    "prefix": "tCreationAuditedEntity"
+  },
+  "fullAuditedEntity": {
+    "body": ["FullAuditedEntity<${1|int,Guid|}>$0"],
+    "prefix": "tFullAuditedEntity"
+  },
+  "aggregateRoot": {
+    "body": ["aggregateRoot<${1|int,Guid|}>$0"],
+    "prefix": "tAggregateRoot"
+  },
+  "auditedAggregateRoot": {
+    "body": ["AuditedAggregateRoot<${1|int,Guid|}>$0"],
+    "prefix": "tAuditedAggregateRoot"
+  },
+  "creationAuditedAggregateRoot": {
+    "body": ["CreationAuditedAggregateRoot<${1|int,Guid|}>$0"],
+    "prefix": "tCreationAuditedAggregateRoot"
+  },
+  "fullAuditedAggregateRoot": {
+    "body": ["FullAuditedAggregateRoot<${1|int,Guid|}>$0"],
+    "prefix": "tFullAuditedAggregateRoot"
+  },
+  "iDataSeedContributor": {
+    "body": "IDataSeedContributor$1",
+    "prefix": "tIDataSeedContributor"
+  },
+  "iTransientDependency": {
+    "body": "ITransientDependency$1",
+    "prefix": "tITransientDependency"
+  },
+  "iRepository": {
+    "body": "IRepository<${1:Type},${2:TypePrimaryKey}> ${3:Name}Repository$0",
+    "prefix": "tIRepository"
+  },
+  "auditedEntityDto": {
+    "body": "AuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "tAuditedEntityDto"
+  },
+  "creationAuditedEntityDto": {
+    "body": "CreationAuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "tCreationAuditedEntityDto"
+  },
+  "fullAuditedEntityDto": {
+    "body": "FullAuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "tFullAuditedEntityDto"
+  },
+  "createMapToDto": {
+    "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
+    "prefix": "tCreateMapToDto"
+  },
+  "createMapFromDto": {
+    "body": "CreateMap<${1:SourceType}Dto,${2:$1}>();$0",
+    "prefix": "tCreateMapFromDto"
+  },
+  "createMap": {
+    "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
+    "prefix": "tCreateMap"
+  },
+  "iCrudAppService": {
+    "body": "ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+    "prefix": "tICrudAppService"
+  },
+  "crudAppService": {
+    "body": [
+      "CrudAppService<${1:Type}, ${2:$1}Dto, ${3|Guid,int|}$4, PagedAndSortedResultRequestDto$5, CreateUpdate${6:$1}Dto>, I${7:$1}AppService",
+      "{",
+      "public ${8:$1}AppService(IRepository<${9:$1}, ${10:$3}> repository): base(repository)",
+      "\t{",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "prefix": "tCrudAppService"
   }
 }
