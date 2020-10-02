@@ -10,67 +10,67 @@
     "prefix": "xAuditedEntity"
   },"creationAuditedEntity": {
     "body": ["CreationAuditedEntity<${1|int,Guid|}>$0"],
-    "prefix": "tCreationAuditedEntity"
+    "prefix": "xCreationAuditedEntity"
   },
   "fullAuditedEntity": {
     "body": ["FullAuditedEntity<${1|int,Guid|}>$0"],
-    "prefix": "tFullAuditedEntity"
+    "prefix": "xFullAuditedEntity"
   },
   "aggregateRoot": {
     "body": ["aggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "tAggregateRoot"
+    "prefix": "xAggregateRoot"
   },
   "auditedAggregateRoot": {
     "body": ["AuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "tAuditedAggregateRoot"
+    "prefix": "xAuditedAggregateRoot"
   },
   "creationAuditedAggregateRoot": {
     "body": ["CreationAuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "tCreationAuditedAggregateRoot"
+    "prefix": "xCreationAuditedAggregateRoot"
   },
   "fullAuditedAggregateRoot": {
     "body": ["FullAuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "tFullAuditedAggregateRoot"
+    "prefix": "xFullAuditedAggregateRoot"
   },
   "iDataSeedContributor": {
     "body": "IDataSeedContributor$1",
-    "prefix": "tIDataSeedContributor"
+    "prefix": "xIDataSeedContributor"
   },
   "iTransientDependency": {
     "body": "ITransientDependency$1",
-    "prefix": "tITransientDependency"
+    "prefix": "xITransientDependency"
   },
   "iRepository": {
     "body": "IRepository<${1:Type},${2:TypePrimaryKey}> ${3:Name}Repository$0",
-    "prefix": "tIRepository"
+    "prefix": "xIRepository"
   },
   "auditedEntityDto": {
     "body": "AuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "tAuditedEntityDto"
+    "prefix": "xAuditedEntityDto"
   },
   "creationAuditedEntityDto": {
     "body": "CreationAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "tCreationAuditedEntityDto"
+    "prefix": "xCreationAuditedEntityDto"
   },
   "fullAuditedEntityDto": {
     "body": "FullAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "tFullAuditedEntityDto"
+    "prefix": "xFullAuditedEntityDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
-    "prefix": "tCreateMapToDto"
+    "prefix": "xCreateMapToDto"
   },
   "createMapFromDto": {
     "body": "CreateMap<${1:SourceType}Dto,${2:$1}>();$0",
-    "prefix": "tCreateMapFromDto"
+    "prefix": "xCreateMapFromDto"
   },
   "createMap": {
     "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
-    "prefix": "tCreateMap"
+    "prefix": "xCreateMap"
   },
   "iCrudAppService": {
     "body": "ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
-    "prefix": "tICrudAppService"
+    "prefix": "xICrudAppService"
   },
   "crudAppService": {
     "body": [
@@ -82,6 +82,6 @@
       "\t}",
       "}"
     ],
-    "prefix": "tCrudAppService"
+    "prefix": "xCrudAppService"
   }
 }
