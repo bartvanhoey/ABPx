@@ -1,0 +1,8 @@
+{
+  "entity": {
+    "body": [
+      "Entity<${1|int,Guid|}>$0"
+    ],
+    "prefix": "xEntity"
+  },
+}
