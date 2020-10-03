@@ -1,0 +1,6 @@
+"injectAuthorisationService": {
+  "body": [
+    "@* uncomment line below or add to _imports.razor *@",
+    "@* @using Microsoft.AspNetCore.Authorization *@",
+    "@inject IAuthorizationService AuthorizationService"
+  
