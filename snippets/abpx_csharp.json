@@ -98,11 +98,23 @@
       "{",
       "\t$0",
       "}"
-      ],
+    ],
     "prefix": "xTestFactMethodStub"
   },
   "testVarResultGetListAsync": {
-    "body": "var result = await _bookAppService.GetListAsync(new PagedAndSortedResultRequestDto$1());$0",
+    "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
     "prefix": "xTestVarResultGetListAsync"
+  },
+  "testVarResultCreateAsync": {
+    "body": [
+      "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
+      "\tnew ${1|CreateUpdate,Create|}${2}Dto$4",
+      "\t{",
+      "\t\t${5:PropertyName} = ${6:PropertyValue},",
+      "\t\t$0",
+      "\t}",
+      ");"
+    ],
+    "prefix": "xTestVarResCreateAsync"
   }
 }
