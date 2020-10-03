@@ -171,5 +171,26 @@
       "//\"Permission:${23:$15}.Delete\": \"Deleting the ${26:$24}s\"$0"
     ],
     "prefix": "xDefinePermissions"
+  },
+  "canCreate": {
+    "body": [
+      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
+      "protected bool canCreate${3:$1};$0"
+    ],
+    "prefix": "xCanCreate"
+  },
+  "canEdit": {
+    "body": [
+      "canEdit${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Edit);",
+      "protected bool canEdit${3:$1};$0"
+    ],
+    "prefix": "xCanEdit"
+  },
+  "canDelete": {
+    "body": [
+      "canDelete${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Delete);",
+      "protected bool canDelete${3:$1};$0"
+    ],
+    "prefix": "xCanDelete"
   }
 }
