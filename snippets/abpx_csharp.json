@@ -133,5 +133,9 @@
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$9(mem => mem == \"${10:$5}\"));"
     ],
     "prefix": "xTestAssertThrowsException"
+  },
+  "groupNamePermissionConst": {
+    "body": "public const string GroupName = \"${1:GroupName}\";$0",
+    "prefix": "xGroupNamePermissionConst"
   }
 }
