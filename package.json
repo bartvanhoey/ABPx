@@ -1,25 +1,44 @@
 {
-    "name": "abpx",
-    "displayName": "ABPx",
-    "description": "Code Snippets that start with an x to speed up your ABP development process in VsCode",
-    "version": "0.0.16",
-    "engines": {
-        "vscode": "^1.49.0"
-    },
-    "publisher": "BartVanHoey",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/bartvanhoey/ABPx.git"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "csharp",
-                "path": "./snippets/abpx_csharp.json"
-            }
-        ]
-    }
+  "name": "abpx",
+  "displayName": "ABPx",
+  "description": "Code Snippets that start with an x to speed up your ABP.IO development process in VsCode",
+  "icon": "images/abpx-icon.png",
+  "version": "0.0.16",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "publisher": "BartVanHoey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bartvanhoey/ABPx.git"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "Blazor",
+    ".NET Core",
+    "Razor",
+    "C#",
+    "ASP.NET Core",
+    "Snippets",
+    "abp",
+    "abp.io"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "aspnetcorerazor",
+        "path": "./snippets/abpx_razor.json"
+      },
+      {
+        "language": "razor",
+        "path": "./snippets/abpx_razor.json"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/abpx_csharp.json"
+      }
+    ]
+  }
 }
