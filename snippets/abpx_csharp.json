@@ -90,5 +90,20 @@
   "getRequiredService": {
     "body": "_${2:${1/(.*)/${1:/downcase}/}}AppService$3 = GetRequiredService<I${1:Name}AppService>();$0",
     "prefix": "xGetRequiredService"
-  }
+  },
+  "testFactMethodStub": {
+    "body": [
+      "[Fact$1]",
+      "public async Task$2 ${3:Name_Of_Your_Test}()",
+      "{",
+      "\t$0",
+      "}",
+    
+      ],
+    "prefix": "xTestFactMethodStub"
+  },
+  "testVarResultGetListAsync": {
+    "body": "var result = await _bookAppService.GetListAsync(new PagedAndSortedResultRequestDto$1());$0",
+    "prefix": "xTestVarResultGetListAsync"
+  },
 }
