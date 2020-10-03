@@ -137,5 +137,17 @@
   "groupNamePermissionConst": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "prefix": "xGroupNamePermissionConst"
+  },
+  "permissionClass": {
+    "body": [
+      "public static class ${1:ClassName}",
+      "{",
+      "\tpublic const string Default = GroupName + \".${2:$1}s\";",
+      "\tpublic const string Create = Default + \".Create\";",
+      "\tpublic const string Edit = Default+ \".Edit\";",
+      "\tpublic const string Delete = Default + \".Delete\";",
+      "}$0"
+    ],
+    "prefix": "xPermissionClass"
   }
 }
