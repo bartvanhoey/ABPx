@@ -1,14 +1,13 @@
 {
   "entity": {
-    "body": [
-      "Entity<${1|int,Guid|}>$0"
-    ],
+    "body": ["Entity<${1|int,Guid|}>$0"],
     "prefix": "xEntity"
   },
   "auditedEntity": {
     "body": ["AuditedEntity<${1|int,Guid|}>$0"],
     "prefix": "xAuditedEntity"
-  },"creationAuditedEntity": {
+  },
+  "creationAuditedEntity": {
     "body": ["CreationAuditedEntity<${1|int,Guid|}>$0"],
     "prefix": "xCreationAuditedEntity"
   },
@@ -83,5 +82,13 @@
       "}"
     ],
     "prefix": "xCrudAppService"
+  },
+  "inheritsApplicationTestBase": {
+    "body": ": ${1:ProjectName}ApplicationTestBase$0",
+    "prefix": "xInheritsApplicationTestBase"
+  },
+  "getRequiredService": {
+    "body": "_${2:${1/(.*)/${1:/downcase}/}}AppService$3 = GetRequiredService<I${1:Name}AppService>();$0",
+    "prefix": "xGetRequiredService"
   }
 }
