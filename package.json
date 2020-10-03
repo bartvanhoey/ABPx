@@ -2,7 +2,7 @@
     "name": "abpx",
     "displayName": "ABPx",
     "description": "Code Snippets that start with an x to speed up your ABP development process in VsCode",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "engines": {
         "vscode": "^1.49.0"
     },
