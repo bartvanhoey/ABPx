@@ -103,7 +103,7 @@
   },
   "testVarResultGetListAsync": {
     "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
-    "prefix": "xTestVarResultGetListAsync"
+    "prefix": "xTestVarResGetListAsync"
   },
   "testVarResultCreateAsync": {
     "body": [
@@ -116,5 +116,22 @@
       ");"
     ],
     "prefix": "xTestVarResCreateAsync"
+  },
+  "testAssertThrowsException": {
+    "body": [
+      "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
+      "{",
+      "\tawait _${2:name}AppService.${3|CreateAsync, GetListAsync|} (",
+      "\t\tnew ${4:Name}Dto",
+      "\t\t{",
+      "\t\t${5:PropertyName} = ${6:PropertyValue},",
+      "\t\t$7",
+      "\t\t}",
+      "\t);",
+      "});",
+      "",
+      "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$9(mem => mem == \"${10:$5}\"));"
+    ],
+    "prefix": "xTestAssertThrowsException"
   }
 }
