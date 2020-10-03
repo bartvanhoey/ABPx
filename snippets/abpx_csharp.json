@@ -73,13 +73,17 @@
   },
   "crudAppService": {
     "body": [
-      "CrudAppService<${1:Type}, ${2:$1}Dto, ${3|Guid,int|}$4, PagedAndSortedResultRequestDto$5, CreateUpdate${6:$1}Dto>, I${7:$1}AppService",
+      "public class ${1:${TM_FILENAME/.cs//}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|Guid,int|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate${7:$2}Dto>, I${8:$2}AppService",
       "{",
-      "public ${8:$1}AppService(IRepository<${9:$1}, ${10:$3}> repository): base(repository)",
+      "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)",
       "\t{",
-      "\t\t$0",
+      "\t\t// GetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;",
+      "\t\t// GetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${13:$12}.Default;",
+      "\t\t// CreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${14:$12}.Create;",
+      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${15:$12}.Edit;",
+      "\t\t// DeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${16:$12}.Delete;",
       "\t}",
-      "}"
+      "}$0"
     ],
     "prefix": "xCrudAppService"
   },
