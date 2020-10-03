@@ -149,5 +149,23 @@
       "}$0"
     ],
     "prefix": "xPermissionClass"
+  },
+  "definePermissions": {
+    "body": [
+      "var ${1:groupName}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
+      "",
+      "var ${4:permissionName} = ${2:$1}Group.AddPermission(${8:$3}Permissions.${15:ClassName}.Default, L(\"Permission:${16:$15}\"));",
+      "${5:$4}.AddChild(${9:$3}Permissions.Books.Create, L(\"Permission:${17:$15}:Create\"));",
+      "${6:$4}.AddChild(${10:$3}Permissions.Books.Edit, L(\"Permission:${18:$15}:Edit\"));",
+      "${7:$4}.AddChild(${11:$3}Permissions.Books.Delete, L(\"Permission:${19:$15}:Delete\"));",
+      "",
+      "// Translations",
+      "//\"Permission:${12:$3}\": \"${13:$3}\",",
+      "//\"Permission:${20:$15}\": \"${14:$3} Management\",",
+      "//\"Permission:${21:$15}.Create\": \"Creating new ${24:item}s\",",
+      "//\"Permission:${22:$15}.Edit\": \"Editing the ${25:$24}s\",",
+      "//\"Permission:${23:$15}.Delete\": \"Deleting the ${26:$24}s\"$0"
+    ],
+    "prefix": "xDefinePermissions"
   }
 }
