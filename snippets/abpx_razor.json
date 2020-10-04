@@ -6,5 +6,40 @@
       "@inject IAuthorizationService AuthorizationService"
     ],
     "prefix": "xInjectAuthorizationService"
+  },
+  "authorizeAttribute": {
+    "body": [
+      "@attribute [Authorize(${WORKSPACE_NAME/Project//}Permissions.${1:ClassName}.Default)]",
+      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME/Project//}.Permissions",
+      "@* @using Microsoft.AspNetCore.Authorization *@"
+    ],
+    "prefix": "xAuthorizeAttribute"
+  },
+  "ifCanCreate": {
+    "body": [
+      "@if (canCreate${1:What})",
+      "{",
+      "",
+      "}$0"
+    ],
+    "prefix": "xIfCanCreate"
+  },
+  "ifCanEdit": {
+    "body": [
+      "@if (canEdit${1:What})",
+      "{",
+      "",
+      "}$0"
+    ],
+    "prefix": "xIfCanEdit"
+  },
+  "ifCanDelete": {
+    "body": [
+      "@if (canDelete${1:What})",
+      "{",
+      "",
+      "}$0"
+    ],
+    "prefix": "xIfCanDelete"
   }
 }
