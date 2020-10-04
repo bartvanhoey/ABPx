@@ -192,5 +192,13 @@
       "protected bool canDelete${3:$1};$0"
     ],
     "prefix": "xCanDelete"
+  },
+  "authorizeAttribute": {
+    "body": [
+      "@attribute [Authorize(${WORKSPACE_NAME/Project//}Permissions.${1:ClassName}.Default)]",
+      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME/Project//}.Permissions",
+      "@* @using Microsoft.AspNetCore.Authorization *@",
+    ],
+    "prefix": "xAuthorizeAttribute"
   }
 }
