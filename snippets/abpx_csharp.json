@@ -198,5 +198,14 @@
       "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");"
     ],
     "prefix": "xVarNewApplicationMenuItem"
+  },
+  "ifIsGrantedAsync": {
+    "body": [
+      "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
+      "{",
+      "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:url}\"));",
+      "}$0"
+    ],
+    "prefix": "xifIsGrantedAsync"
   }
 }
