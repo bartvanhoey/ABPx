@@ -111,24 +111,6 @@
     ],
     "prefix": "xPermissionDefinitionsClass"
   },
-  "definePermissions": {
-    "body": [
-      "var ${1:groupName}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
-      "",
-      "var ${4:permissionName} = ${2:$1}Group.AddPermission(${8:$3}Permissions.${15:ClassName}.Default, L(\"Permission:${16:$15}\"));",
-      "${5:$4}.AddChild(${9:$3}Permissions.Books.Create, L(\"Permission:${17:$15}:Create\"));",
-      "${6:$4}.AddChild(${10:$3}Permissions.Books.Edit, L(\"Permission:${18:$15}:Edit\"));",
-      "${7:$4}.AddChild(${11:$3}Permissions.Books.Delete, L(\"Permission:${19:$15}:Delete\"));",
-      "",
-      "// Translations",
-      "//\"Permission:${12:$3}\": \"${13:$3}\",",
-      "//\"Permission:${20:$15}\": \"${14:$3} Management\",",
-      "//\"Permission:${21:$15}.Create\": \"Creating new ${24:item}s\",",
-      "//\"Permission:${22:$15}.Edit\": \"Editing the ${25:$24}s\",",
-      "//\"Permission:${23:$15}.Delete\": \"Deleting the ${26:$24}s\"$0"
-    ],
-    "prefix": "xDefinePermissions"
-  },
   "canCreate": {
     "body": [
       "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
@@ -320,5 +302,25 @@
   "inheritsAppService": {
     "body": [" : BookStoreAppService$0"],
     "prefix": "xInhAppService"
+  },
+  "addGroupPermission": {
+    "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
+    "prefix": "xAddGroupPermission"
+  },
+  "addPermissionToGroup": {
+    "body": [
+      "var ${1:name}Permission = ${5:name}Group.AddPermission(${6:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${12:ClassName}.Default, L(\"Permission:${13:$12}\"));",
+      "${2:$1}Permission.AddChild(${7:$6}Permissions.${14:$12}.Create, L(\"Permission:${17:$12}:Create\"));",
+      "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Edit, L(\"Permission:${18:$12}:Edit\"));",
+      "${4:$1}Permission.AddChild(${9:$6}Permissions.${16:$12}.Delete, L(\"Permission:${19:$12}:Delete\"));",
+      "",
+      "// Translations",
+      "//\"Permission:${10:$6}\": \"${11:$6}\",",
+      "//\"Permission:${21:$12}\": \"${12:$6} Management\",",
+      "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",",
+      "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",",
+      "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
+    ],
+    "prefix": "xAddPermissionToGroup"
   }
 }
