@@ -7,7 +7,6 @@
     "body": " : ITransientDependency$1",
     "prefix": "xImpITransientDependency"
   },
- 
 
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -47,7 +46,7 @@
   },
   "getRequiredService": {
     "body": "_${3:${1/(.*)/${1:/downcase}/}}AppService$4 = GetRequiredService<I${1:Name}AppService$2>();$0",
-    "prefix": "GetRequiredService"
+    "prefix": "xGetRequiredService"
   },
   "testFactMethodStub": {
     "body": [
