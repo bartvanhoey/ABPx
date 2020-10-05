@@ -322,5 +322,9 @@
       "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
     ],
     "prefix": "xAddPermissionToGroup"
+  },
+  "objectMapperMap": {
+    "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
+    "prefix": "xObjectMapperMap"
   }
 }
