@@ -1,16 +1,13 @@
 {
-  "iDataSeedContributor": {
-    "body": "IDataSeedContributor$1",
-    "prefix": "xIDataSeedContributor"
+  "implementIDataSeedContributor": {
+    "body": " : IDataSeedContributor$1",
+    "prefix": "xImpIDataSeedContributor"
   },
-  "iTransientDependency": {
-    "body": "ITransientDependency$1",
-    "prefix": "xITransientDependency"
+  "implementITransientDependency": {
+    "body": " : ITransientDependency$1",
+    "prefix": "xImpITransientDependency"
   },
-  "iRepository": {
-    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
-    "prefix": "xIRepository"
-  },
+ 
 
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -197,7 +194,11 @@
   },
   "implementIRepository": {
     "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
-    "prefix": "xImplementsIRepository"
+    "prefix": "xImpIRepository"
+  },
+  "iRepository": {
+    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
+    "prefix": "xIRepository"
   },
   "builderEntity": {
     "body": [
