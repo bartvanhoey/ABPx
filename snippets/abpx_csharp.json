@@ -40,7 +40,7 @@
     "prefix": "xITransientDependency"
   },
   "iRepository": {
-    "body": "IRepository<${1:Type},${2:TypePrimaryKey}> ${3:Name}Repository$0",
+    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
     "prefix": "xIRepository"
   },
   "auditedEntityDto": {
@@ -88,7 +88,7 @@
     "prefix": "xCrudAppService"
   },
   "inheritsApplicationTestBase": {
-    "body": ": ${1:ProjectName}ApplicationTestBase$0",
+    "body": " : ${1:ProjectName}ApplicationTestBase$0",
     "prefix": "xInheritsApplicationTestBase"
   },
   "getRequiredService": {
@@ -227,5 +227,29 @@
   "checkNotNullOrEmpty": {
     "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
     "prefix": "xCheckNotNullOrEmpty"
+  },
+  "ifInlineStatement": {
+    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "prefix": "xIfInline"
+  },
+  "ifNotNullStatement": {
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "prefix": "xIfNotNull"
+  },
+  "ifNotNullInlineStatement": {
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "prefix": "xIfNotNullInline"
+  },
+  "ifNullInlineStatement": {
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "prefix": "xIfNullInline"
+  },
+  "ifNullStatement": {
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "prefix": "xIfNull"
+  },
+  "ifStatement": {
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "prefix": "xIf"
   }
 }
