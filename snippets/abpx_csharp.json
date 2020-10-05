@@ -302,6 +302,14 @@
   "inheritsPagedAndSortedResultRequestDto": {
     "body": " : PagedAndSortedResultRequestDto$0",
     "prefix": "xInhPagedAndSortedResultRequestDto"
+  },
+  "requiredAttribute": {
+    "body": ["[Required$1]", "$0"],
+    "prefix": "xRequiredAttribute"
+  },
+    "stringLengthAttribute": {
+    "body": ["[StringLength(${1:50})$2]", "$0"],
+    "prefix": "xStringLengthAttribute"
   }
   
 }
