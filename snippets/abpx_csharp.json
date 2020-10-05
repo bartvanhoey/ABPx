@@ -209,11 +209,11 @@
     "prefix": "xifIsGrantedAsync"
   },
   "notNullAttribute": {
-    "body": ["[NotNull$1] $0"],
+    "body": ["[NotNull$1] ${2:string} ${3:parameterName}$0"],
     "prefix": "xNotNullAttribute"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] $0"],
+    "body": ["[CanBeNull$1] ${2:string} ${3:parameterName}$0"],
     "prefix": "xCanBeNullAttribute"
   },
   "checkNotNullOrWhiteSpace": {
