@@ -99,7 +99,7 @@
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "prefix": "xGroupNamePermissionConst"
   },
-  "permissionClass": {
+  "permissionDefinitionsClass": {
     "body": [
       "public static class ${1:ClassName}",
       "{",
@@ -109,7 +109,7 @@
       "\tpublic const string Delete = Default + \".Delete\";",
       "}$0"
     ],
-    "prefix": "xPermissionClass"
+    "prefix": "xPermissionDefinitionsClass"
   },
   "definePermissions": {
     "body": [
@@ -307,9 +307,18 @@
     "body": ["[Required$1]", "$0"],
     "prefix": "xRequiredAttribute"
   },
-    "stringLengthAttribute": {
+  "stringLengthAttribute": {
     "body": ["[StringLength(${1:50})$2]", "$0"],
     "prefix": "xStringLengthAttribute"
+  },
+  "authorizeAttribute": {
+    "body": [
+      "[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
+    ],
+    "prefix": "xAuthorizeAttribute"
+  },
+  "inheritsAppService": {
+    "body": [" : BookStoreAppService$0"],
+    "prefix": "xInhAppService"
   }
-  
 }
