@@ -207,5 +207,17 @@
       "}$0"
     ],
     "prefix": "xifIsGrantedAsync"
+  },
+  "notNullAttribute": {
+    "body": [
+      "[NotNull$1] $0"
+    ],
+    "prefix": "xNotNullAttribute"
+  },
+  "canBeNullAttribute": {
+    "body": [
+      "[CanBeNull$1] $0"
+    ],
+    "prefix": "xCanBeNullAttribute"
   }
 }
