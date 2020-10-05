@@ -1,36 +1,4 @@
 {
-  "entity": {
-    "body": ["Entity<${1|int,Guid|}>$0"],
-    "prefix": "xEntity"
-  },
-  "auditedEntity": {
-    "body": ["AuditedEntity<${1|int,Guid|}>$0"],
-    "prefix": "xAuditedEntity"
-  },
-  "creationAuditedEntity": {
-    "body": ["CreationAuditedEntity<${1|int,Guid|}>$0"],
-    "prefix": "xCreationAuditedEntity"
-  },
-  "fullAuditedEntity": {
-    "body": ["FullAuditedEntity<${1|int,Guid|}>$0"],
-    "prefix": "xFullAuditedEntity"
-  },
-  "aggregateRoot": {
-    "body": ["aggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "xAggregateRoot"
-  },
-  "auditedAggregateRoot": {
-    "body": ["AuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "xAuditedAggregateRoot"
-  },
-  "creationAuditedAggregateRoot": {
-    "body": ["CreationAuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "xCreationAuditedAggregateRoot"
-  },
-  "fullAuditedAggregateRoot": {
-    "body": ["FullAuditedAggregateRoot<${1|int,Guid|}>$0"],
-    "prefix": "xFullAuditedAggregateRoot"
-  },
   "iDataSeedContributor": {
     "body": "IDataSeedContributor$1",
     "prefix": "xIDataSeedContributor"
@@ -43,18 +11,7 @@
     "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
     "prefix": "xIRepository"
   },
-  "auditedEntityDto": {
-    "body": "AuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xAuditedEntityDto"
-  },
-  "creationAuditedEntityDto": {
-    "body": "CreationAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xCreationAuditedEntityDto"
-  },
-  "fullAuditedEntityDto": {
-    "body": "FullAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xFullAuditedEntityDto"
-  },
+
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
     "prefix": "xCreateMapToDto"
@@ -276,5 +233,70 @@
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "prefix": "xDbSet"
+  },
+  "efCoreRepositoryClassStub": {
+    "body": [
+      "public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME/Project//}}DbContext, ${4:$1}$5, ${6:TypePrimaryKey}$7>, I${8:$1}Repository$11",
+      "{",
+      "public EfCoreAuthorRepository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
+      "{",
+      "}",
+      "$0",
+      "",
+      "}"
+    ],
+    "prefix": "xEfCoreRepositoryClassStub"
+  },
+  "implementIApplicationService": {
+    "body": " : IApplicationService$0",
+    "prefix": "xImplementIApplicationService"
+  },
+  "inheritsEntity": {
+    "body": " : Entity<${1|int,Guid|}>$0",
+    "prefix": "xInheritsEntity"
+  },
+  "inheritsAuditedEntity": {
+    "body": " : AuditedEntity<${1|int,Guid|}>$0",
+    "prefix": "xInheritsAuditedEntity"
+  },
+  "inheritsCreationAuditedEntity": {
+    "body": " : CreationAuditedEntity<${1|int,Guid|}>$0",
+    "prefix": "xInheritsCreationAuditedEntity"
+  },
+  "inheritsFullAuditedEntity": {
+    "body": " : FullAuditedEntity<${1|int,Guid|}>$0",
+    "prefix": "xInheritsFullAuditedEntity"
+  },
+  "inheritsAggregateRoot": {
+    "body": " : aggregateRoot<${1|int,Guid|}>$0",
+    "prefix": "xInheritsAggregateRoot"
+  },
+  "inheritsAuditedAggregateRoot": {
+    "body": " : AuditedAggregateRoot<${1|int,Guid|}>$0",
+    "prefix": "xInheritsAuditedAggregateRoot"
+  },
+  "inheritsCreationAuditedAggregateRoot": {
+    "body": " : CreationAuditedAggregateRoot<${1|int,Guid|}>$0",
+    "prefix": "xInheritsCreationAuditedAggregateRoot"
+  },
+  "inheritsFullAuditedAggregateRoot": {
+    "body": " : FullAuditedAggregateRoot<${1|int,Guid|}>$0",
+    "prefix": "xInheritsFullAuditedAggregateRoot"
+  },
+  "inheritsEntityDto": {
+    "body": " : EntityDto$1<${2|int,Guid|}$3>$0",
+    "prefix": "xInheritsEntityDto"
+  },
+  "inheritsAuditedEntityDto": {
+    "body": " : AuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "xInheritsAuditedEntityDto"
+  },
+  "inheritsCreationAuditedEntityDto": {
+    "body": " : CreationAuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "xInheritsCreationAuditedEntityDto"
+  },
+  "inheritsFullAuditedEntityDto": {
+    "body": " : FullAuditedEntityDto<${1|int,Guid|}>$0",
+    "prefix": "xInheritsFullAuditedEntityDto"
   }
 }
