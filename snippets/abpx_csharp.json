@@ -42,7 +42,7 @@
     "prefix": "xCrudAppService"
   },
   "inheritsApplicationTestBase": {
-    "body": " : ${1:ProjectName}ApplicationTestBase$0",
+    "body": " : ${1:${WORKSPACE_NAME/Project//}}ApplicationTestBase$0",
     "prefix": "xInhApplicationTestBase"
   },
   "getRequiredService": {
