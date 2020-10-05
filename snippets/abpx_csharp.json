@@ -47,7 +47,7 @@
   },
   "getRequiredService": {
     "body": "_${3:${1/(.*)/${1:/downcase}/}}AppService$4 = GetRequiredService<I${1:Name}AppService$2>();$0",
-    "prefix": "xGetRequiredService"
+    "prefix": "GetRequiredService"
   },
   "testFactMethodStub": {
     "body": [
@@ -317,7 +317,7 @@
       "",
       "// Translations",
       "//\"Permission:${10:$6}\": \"${11:$6}\",",
-      "//\"Permission:${21:$12}\": \"${12:$6} Management\",",
+      "//\"Permission:${20:$12}\": \"${21:$12} Management\",",
       "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",",
       "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",",
       "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
