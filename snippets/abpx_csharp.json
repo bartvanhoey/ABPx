@@ -1,330 +1,234 @@
 {
-  "implementIDataSeedContributor": {
-    "body": " : IDataSeedContributor$1",
-    "prefix": "xImpIDataSeedContributor"
-  },
-  "implementITransientDependency": {
-    "body": " : ITransientDependency$1",
-    "prefix": "xImpITransientDependency"
-  },
-
-  "createMapToDto": {
-    "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
-    "prefix": "xCreateMapToDto"
-  },
-  "createMapFromDto": {
-    "body": "CreateMap<${1:SourceType}Dto,${2:$1}>();$0",
-    "prefix": "xCreateMapFromDto"
-  },
-  "createMap": {
-    "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
-    "prefix": "xCreateMap"
-  },
-  "iCrudAppService": {
-    "body": "public interface${1:${TM_FILENAME/.cs//}} : ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
-    "prefix": "xICrudAppService"
-  },
-  "crudAppService": {
-    "body": [
-      "public class ${1:${TM_FILENAME/.cs//}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|Guid,int|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate${7:$2}Dto>, I${8:$2}AppService",
-      "{",
-      "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)",
-      "\t{",
-      "\t\t// GetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;",
-      "\t\t// GetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${13:$12}.Default;",
-      "\t\t// CreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${14:$12}.Create;",
-      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${15:$12}.Edit;",
-      "\t\t// DeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${16:$12}.Delete;",
-      "\t}",
-      "}$0"
-    ],
-    "prefix": "xCrudAppService"
-  },
-  "inheritsApplicationTestBase": {
-    "body": " : ${1:${WORKSPACE_NAME/Project//}}ApplicationTestBase$0",
-    "prefix": "xInhApplicationTestBase"
-  },
-  "getRequiredService": {
-    "body": "_${3:${1/(.*)/${1:/downcase}/}}AppService$4 = GetRequiredService<I${1:Name}AppService$2>();$0",
-    "prefix": "xGetRequiredService"
-  },
-  "testFactMethodStub": {
-    "body": [
-      "[Fact$1]",
-      "public async Task$2 ${3:Name_Of_Your_Test}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "prefix": "xTestFactMethodStub"
-  },
-  "testVarResultGetListAsync": {
-    "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
-    "prefix": "xTestVarResGetListAsync"
-  },
-  "testVarResultCreateAsync": {
-    "body": [
-      "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
-      "\tnew ${1|CreateUpdate,Create|}${2}Dto$4",
-      "\t{",
-      "\t\t${5:PropertyName} = ${6:PropertyValue},",
-      "\t\t$0",
-      "\t}",
-      ");"
-    ],
-    "prefix": "xTestVarResCreateAsync"
-  },
-  "testAssertThrowsException": {
-    "body": [
-      "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
-      "{",
-      "\tawait _${2:name}AppService.${3|CreateAsync, GetListAsync|} (",
-      "\t\tnew ${4:Name}Dto",
-      "\t\t{",
-      "\t\t${5:PropertyName} = ${6:PropertyValue},",
-      "\t\t$7",
-      "\t\t}",
-      "\t);",
-      "});",
-      "",
-      "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$9(mem => mem == \"${10:$5}\"));"
-    ],
-    "prefix": "xTestAssertThrowsException"
-  },
-  "groupNamePermissionConst": {
-    "body": "public const string GroupName = \"${1:GroupName}\";$0",
-    "prefix": "xGroupNamePermissionConst"
-  },
-  "permissionDefinitionsClass": {
-    "body": [
-      "public static class ${1:ClassName}",
-      "{",
-      "\tpublic const string Default = GroupName + \".${2:$1}\";",
-      "\tpublic const string Create = Default + \".Create\";",
-      "\tpublic const string Edit = Default+ \".Edit\";",
-      "\tpublic const string Delete = Default + \".Delete\";",
-      "}$0"
-    ],
-    "prefix": "xPermissionDefinitionsClass"
-  },
-  "canCreate": {
-    "body": [
-      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
-      "protected bool canCreate${3:$1};$0"
-    ],
-    "prefix": "xCanCreate"
-  },
-  "canEdit": {
-    "body": [
-      "canEdit${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Edit);",
-      "protected bool canEdit${3:$1};$0"
-    ],
-    "prefix": "xCanEdit"
-  },
-  "canDelete": {
-    "body": [
-      "canDelete${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Delete);",
-      "protected bool canDelete${3:$1};$0"
-    ],
-    "prefix": "xCanDelete"
-  },
-  "varNewApplicationMenuItem": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");"
-    ],
-    "prefix": "xVarNewApplicationMenuItem"
-  },
-  "ifIsGrantedAsync": {
-    "body": [
-      "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
-      "{",
-      "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:url}\"));",
-      "}$0"
-    ],
-    "prefix": "xifIsGrantedAsync"
-  },
-  "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:parameterName}$0"],
-    "prefix": "xNotNullAttribute"
-  },
-  "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:parameterName}$0"],
-    "prefix": "xCanBeNullAttribute"
-  },
-  "checkNotNullOrWhiteSpace": {
-    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
-    "prefix": "xCheckNotNullOrWhiteSpace"
-  },
-  "checkNotNull": {
-    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
-    "prefix": "xCheckNotNull"
-  },
-  "checkNotNullOrEmpty": {
-    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
-    "prefix": "xCheckNotNullOrEmpty"
-  },
-  "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
-    "prefix": "xIfInline"
-  },
-  "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
-    "prefix": "xIfNotNull"
-  },
-  "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
-    "prefix": "xIfNotNullInline"
-  },
-  "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
-    "prefix": "xIfNullInline"
-  },
-  "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
-    "prefix": "xIfNull"
-  },
-  "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
-    "prefix": "xIf"
-  },
-  "inheritsDomainService": {
-    "body": " : DomainService$1",
-    "prefix": "xInhDomainService"
-  },
-  "implementIRepository": {
-    "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
-    "prefix": "xImpIRepository"
-  },
-  "iRepository": {
-    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
-    "prefix": "xIRepository"
-  },
-  "builderEntity": {
-    "body": [
-      "builder.Entity<${1:ClassName}>(b =>",
-      "{",
-      "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);",
-      "\tb.ConfigureByConvention();",
-      "",
-      "\t$4//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$5.MaxNameLength);",
-      "\t$6// b.HasIndex(x => x.Name);",
-      "});$0"
-    ],
-    "prefix": "xBuilderEntity"
-  },
-  "dbSet": {
-    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
-    "prefix": "xDbSet"
-  },
-  "efCoreRepositoryClassStub": {
-    "body": [
-      "public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME/Project//}}DbContext, ${4:$1}$5, ${6:TypePrimaryKey}$7>, I${8:$1}Repository$11",
-      "{",
-      "public EfCoreAuthorRepository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
-      "{",
-      "}",
-      "$0",
-      "",
-      "}"
-    ],
-    "prefix": "xEfCoreRepositoryClassStub"
-  },
-  "implementIApplicationService": {
-    "body": " : IApplicationService$0",
-    "prefix": "xImplementIApplicationService"
-  },
-  "inheritsEntity": {
-    "body": " : Entity<${1|int,Guid|}>$0",
-    "prefix": "xInhEntity"
-  },
-  "inheritsAuditedEntity": {
-    "body": " : AuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInhAuditedEntity"
-  },
-  "inheritsCreationAuditedEntity": {
-    "body": " : CreationAuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInhCreationAuditedEntity"
-  },
-  "inheritsFullAuditedEntity": {
-    "body": " : FullAuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInhFullAuditedEntity"
-  },
-  "inheritsAggregateRoot": {
-    "body": " : aggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInhAggregateRoot"
-  },
-  "inheritsAuditedAggregateRoot": {
-    "body": " : AuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInhAuditedAggregateRoot"
-  },
-  "inheritsCreationAuditedAggregateRoot": {
-    "body": " : CreationAuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInhCreationAuditedAggregateRoot"
-  },
-  "inheritsFullAuditedAggregateRoot": {
-    "body": " : FullAuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInhFullAuditedAggregateRoot"
-  },
-  "inheritsEntityDto": {
-    "body": " : EntityDto$1<${2|int,Guid|}$3>$0",
-    "prefix": "xInhEntityDto"
-  },
-  "inheritsAuditedEntityDto": {
-    "body": " : AuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInhAuditedEntityDto"
-  },
-  "inheritsCreationAuditedEntityDto": {
-    "body": " : CreationAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInhCreationAuditedEntityDto"
-  },
-  "inheritsFullAuditedEntityDto": {
-    "body": " : FullAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInhFullAuditedEntityDto"
-  },
-  "inheritsPagedAndSortedResultRequestDto": {
-    "body": " : PagedAndSortedResultRequestDto$0",
-    "prefix": "xInhPagedAndSortedResultRequestDto"
-  },
-  "requiredAttribute": {
-    "body": ["[Required$1]", "$0"],
-    "prefix": "xRequiredAttribute"
-  },
-  "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]", "$0"],
-    "prefix": "xStringLengthAttribute"
-  },
-  "authorizeAttribute": {
-    "body": [
-      "[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
-    ],
-    "prefix": "xAuthorizeAttribute"
-  },
-  "inheritsAppService": {
-    "body": [" : BookStoreAppService$0"],
-    "prefix": "xInhAppService"
-  },
   "addGroupPermission": {
-    "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
-    "prefix": "xAddGroupPermission"
+      "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
+      "prefix": "xAddGroupPermission"
   },
   "addPermissionToGroup": {
-    "body": [
-      "var ${1:name}Permission = ${5:name}Group.AddPermission(${6:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${12:ClassName}.Default, L(\"Permission:${13:$12}\"));",
-      "${2:$1}Permission.AddChild(${7:$6}Permissions.${14:$12}.Create, L(\"Permission:${17:$12}:Create\"));",
-      "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Edit, L(\"Permission:${18:$12}:Edit\"));",
-      "${4:$1}Permission.AddChild(${9:$6}Permissions.${16:$12}.Delete, L(\"Permission:${19:$12}:Delete\"));",
-      "",
-      "// Translations",
-      "//\"Permission:${10:$6}\": \"${11:$6}\",",
-      "//\"Permission:${20:$12}\": \"${21:$12} Management\",",
-      "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",",
-      "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",",
-      "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
-    ],
-    "prefix": "xAddPermissionToGroup"
+      "body": ["var ${1:name}Permission = ${5:name}Group.AddPermission(${6:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${12:ClassName}.Default, L(\"Permission:${13:$12}\"));", "${2:$1}Permission.AddChild(${7:$6}Permissions.${14:$12}.Create, L(\"Permission:${17:$12}:Create\"));", "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Edit, L(\"Permission:${18:$12}:Edit\"));", "${4:$1}Permission.AddChild(${9:$6}Permissions.${16:$12}.Delete, L(\"Permission:${19:$12}:Delete\"));", "", "// Translations", "//\"Permission:${10:$6}\": \"${11:$6}\",", "//\"Permission:${20:$12}\": \"${21:$12} Management\",", "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",", "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",", "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"],
+      "prefix": "xAddPermissionToGroup"
+  },
+  "authorizeAttribute": {
+      "body": ["[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"],
+      "prefix": "xAuthorizeAttribute"
+  },
+  "builderEntity": {
+      "body": ["builder.Entity<${1:ClassName}>(b =>", "{", "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);", "\tb.ConfigureByConvention();", "", "\t$4//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$5.MaxNameLength);", "\t$6// b.HasIndex(x => x.Name);", "});$0"],
+      "prefix": "xBuilderEntity"
+  },
+  "canBeNullAttribute": {
+      "body": ["[CanBeNull$1] ${2:string} ${3:parameterName}$0"],
+      "prefix": "xCanBeNullAttribute"
+  },
+  "canCreate": {
+      "body": ["canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);", "protected bool canCreate${3:$1};$0"],
+      "prefix": "xCanCreate"
+  },
+  "canDelete": {
+      "body": ["canDelete${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Delete);", "protected bool canDelete${3:$1};$0"],
+      "prefix": "xCanDelete"
+  },
+  "canEdit": {
+      "body": ["canEdit${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Edit);", "protected bool canEdit${3:$1};$0"],
+      "prefix": "xCanEdit"
+  },
+  "checkNotNull": {
+      "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+      "prefix": "xCheckNotNull"
+  },
+  "checkNotNullOrEmpty": {
+      "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+      "prefix": "xCheckNotNullOrEmpty"
+  },
+  "checkNotNullOrWhiteSpace": {
+      "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+      "prefix": "xCheckNotNullOrWhiteSpace"
+  },
+  "createMap": {
+      "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
+      "prefix": "xCreateMap"
+  },
+  "createMapFromDto": {
+      "body": "CreateMap<${1:SourceType}Dto,${2:$1}>();$0",
+      "prefix": "xCreateMapFromDto"
+  },
+  "createMapToDto": {
+      "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
+      "prefix": "xCreateMapToDto"
+  },
+  "crudAppService": {
+      "body": ["public class ${1:${TM_FILENAME/.cs//}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|Guid,int|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate${7:$2}Dto>, I${8:$2}AppService", "{", "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)", "\t{", "\t\t// GetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;", "\t\t// GetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${13:$12}.Default;", "\t\t// CreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${14:$12}.Create;", "\t\t// UpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${15:$12}.Edit;", "\t\t// DeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${16:$12}.Delete;", "\t}", "}$0"],
+      "prefix": "xCrudAppService"
+  },
+  "dbSet": {
+      "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+      "prefix": "xDbSet"
+  },
+  "efCoreRepositoryClassStub": {
+      "body": ["public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME/Project//}}DbContext, ${4:$1}$5, ${6:TypePrimaryKey}$7>, I${8:$1}Repository$11", "{", "public EfCoreAuthorRepository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)", "{", "}", "$0", "", "}"],
+      "prefix": "xEfCoreRepositoryClassStub"
+  },
+  "getRequiredService": {
+      "body": "_${3:${1/(.*)/${1:/downcase}/}}AppService$4 = GetRequiredService<I${1:Name}AppService$2>();$0",
+      "prefix": "xGetRequiredService"
+  },
+  "groupNamePermissionConst": {
+      "body": "public const string GroupName = \"${1:GroupName}\";$0",
+      "prefix": "xGroupNamePermissionConst"
+  },
+  "iCrudAppService": {
+      "body": "public interface${1:${TM_FILENAME/.cs//}} : ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+      "prefix": "xICrudAppService"
+  },
+  "iRepository": {
+      "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
+      "prefix": "xIRepository"
+  },
+  "ifInlineStatement": {
+      "body": ["if (${1:MyCondition}) $2", "$0"],
+      "prefix": "xIfInline"
+  },
+  "ifIsGrantedAsync": {
+      "body": ["if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))", "{", "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:url}\"));", "}$0"],
+      "prefix": "xifIsGrantedAsync"
+  },
+  "ifNotNullInlineStatement": {
+      "body": ["if (${1:MyVariable} != null) $2", "$0"],
+      "prefix": "xIfNotNullInline"
+  },
+  "ifNotNullStatement": {
+      "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+      "prefix": "xIfNotNull"
+  },
+  "ifNullInlineStatement": {
+      "body": ["if (${1:MyVariable} == null) $2", "$0"],
+      "prefix": "xIfNullInline"
+  },
+  "ifNullStatement": {
+      "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+      "prefix": "xIfNull"
+  },
+  "ifStatement": {
+      "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+      "prefix": "xIf"
+  },
+  "implementIApplicationService": {
+      "body": " : IApplicationService$0",
+      "prefix": "xImplementIApplicationService"
+  },
+  "implementIDataSeedContributor": {
+      "body": " : IDataSeedContributor$1",
+      "prefix": "xImpIDataSeedContributor"
+  },
+  "implementIRepository": {
+      "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
+      "prefix": "xImpIRepository"
+  },
+  "implementITransientDependency": {
+      "body": " : ITransientDependency$1",
+      "prefix": "xImpITransientDependency"
+  },
+  "inheritsAggregateRoot": {
+      "body": " : aggregateRoot<${1|int,Guid|}>$0",
+      "prefix": "xInhAggregateRoot"
+  },
+  "inheritsAppService": {
+      "body": [" : BookStoreAppService$0"],
+      "prefix": "xInhAppService"
+  },
+  "inheritsApplicationTestBase": {
+      "body": " : ${1:${WORKSPACE_NAME/Project//}}ApplicationTestBase$0",
+      "prefix": "xInhApplicationTestBase"
+  },
+  "inheritsAuditedAggregateRoot": {
+      "body": " : AuditedAggregateRoot<${1|int,Guid|}>$0",
+      "prefix": "xInhAuditedAggregateRoot"
+  },
+  "inheritsAuditedEntity": {
+      "body": " : AuditedEntity<${1|int,Guid|}>$0",
+      "prefix": "xInhAuditedEntity"
+  },
+  "inheritsAuditedEntityDto": {
+      "body": " : AuditedEntityDto<${1|int,Guid|}>$0",
+      "prefix": "xInhAuditedEntityDto"
+  },
+  "inheritsCreationAuditedAggregateRoot": {
+      "body": " : CreationAuditedAggregateRoot<${1|int,Guid|}>$0",
+      "prefix": "xInhCreationAuditedAggregateRoot"
+  },
+  "inheritsCreationAuditedEntity": {
+      "body": " : CreationAuditedEntity<${1|int,Guid|}>$0",
+      "prefix": "xInhCreationAuditedEntity"
+  },
+  "inheritsCreationAuditedEntityDto": {
+      "body": " : CreationAuditedEntityDto<${1|int,Guid|}>$0",
+      "prefix": "xInhCreationAuditedEntityDto"
+  },
+  "inheritsDomainService": {
+      "body": " : DomainService$1",
+      "prefix": "xInhDomainService"
+  },
+  "inheritsEntity": {
+      "body": " : Entity<${1|int,Guid|}>$0",
+      "prefix": "xInhEntity"
+  },
+  "inheritsEntityDto": {
+      "body": " : EntityDto$1<${2|int,Guid|}$3>$0",
+      "prefix": "xInhEntityDto"
+  },
+  "inheritsFullAuditedAggregateRoot": {
+      "body": " : FullAuditedAggregateRoot<${1|int,Guid|}>$0",
+      "prefix": "xInhFullAuditedAggregateRoot"
+  },
+  "inheritsFullAuditedEntity": {
+      "body": " : FullAuditedEntity<${1|int,Guid|}>$0",
+      "prefix": "xInhFullAuditedEntity"
+  },
+  "inheritsFullAuditedEntityDto": {
+      "body": " : FullAuditedEntityDto<${1|int,Guid|}>$0",
+      "prefix": "xInhFullAuditedEntityDto"
+  },
+  "inheritsPagedAndSortedResultRequestDto": {
+      "body": " : PagedAndSortedResultRequestDto$0",
+      "prefix": "xInhPagedAndSortedResultRequestDto"
+  },
+  "notNullAttribute": {
+      "body": ["[NotNull$1] ${2:string} ${3:parameterName}$0"],
+      "prefix": "xNotNullAttribute"
   },
   "objectMapperMap": {
-    "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
-    "prefix": "xObjectMapperMap"
+      "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
+      "prefix": "xObjectMapperMap"
+  },
+  "permissionDefinitionsClass": {
+      "body": ["public static class ${1:ClassName}", "{", "\tpublic const string Default = GroupName + \".${2:$1}\";", "\tpublic const string Create = Default + \".Create\";", "\tpublic const string Edit = Default+ \".Edit\";", "\tpublic const string Delete = Default + \".Delete\";", "}$0"],
+      "prefix": "xPermissionDefinitionsClass"
+  },
+  "requiredAttribute": {
+      "body": ["[Required$1]", "$0"],
+      "prefix": "xRequiredAttribute"
+  },
+  "stringLengthAttribute": {
+      "body": ["[StringLength(${1:50})$2]", "$0"],
+      "prefix": "xStringLengthAttribute"
+  },
+  "testAssertThrowsException": {
+      "body": ["var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>", "{", "\tawait _${2:name}AppService.${3|CreateAsync, GetListAsync|} (", "\t\tnew ${4:Name}Dto", "\t\t{", "\t\t${5:PropertyName} = ${6:PropertyValue},", "\t\t$7", "\t\t}", "\t);", "});", "", "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$9(mem => mem == \"${10:$5}\"));"],
+      "prefix": "xTestAssertThrowsException"
+  },
+  "testFactMethodStub": {
+      "body": ["[Fact$1]", "public async Task$2 ${3:Name_Of_Your_Test}()", "{", "\t$0", "}"],
+      "prefix": "xTestFactMethodStub"
+  },
+  "testVarResultCreateAsync": {
+      "body": ["var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(", "\tnew ${1|CreateUpdate,Create|}${2}Dto$4", "\t{", "\t\t${5:PropertyName} = ${6:PropertyValue},", "\t\t$0", "\t}", ");"],
+      "prefix": "xTestVarResCreateAsync"
+  },
+  "testVarResultGetListAsync": {
+      "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
+      "prefix": "xTestVarResGetListAsync"
+  },
+  "varNewApplicationMenuItem": {
+      "body": ["var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");"],
+      "prefix": "xVarNewApplicationMenuItem"
   }
 }
