@@ -272,5 +272,9 @@
       "});$0"
     ],
     "prefix": "xBuilderEntity"
+  },
+  "dbSet": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+    "prefix": "xDbSet"
   }
 }
