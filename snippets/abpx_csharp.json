@@ -209,15 +209,23 @@
     "prefix": "xifIsGrantedAsync"
   },
   "notNullAttribute": {
-    "body": [
-      "[NotNull$1] $0"
-    ],
+    "body": ["[NotNull$1] $0"],
     "prefix": "xNotNullAttribute"
   },
   "canBeNullAttribute": {
-    "body": [
-      "[CanBeNull$1] $0"
-    ],
+    "body": ["[CanBeNull$1] $0"],
     "prefix": "xCanBeNullAttribute"
+  },
+  "checkNotNullOrWhiteSpace": {
+    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "prefix": "xCheckNotNullOrWhiteSpace"
+  },
+  "checkNotNull": {
+    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "prefix": "xCheckNotNull"
+  },
+  "checkNotNullOrEmpty": {
+    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "prefix": "xCheckNotNullOrEmpty"
   }
 }
