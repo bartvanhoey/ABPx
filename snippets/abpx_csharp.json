@@ -46,7 +46,7 @@
   },
   "inheritsApplicationTestBase": {
     "body": " : ${1:ProjectName}ApplicationTestBase$0",
-    "prefix": "xInheritsApplicationTestBase"
+    "prefix": "xInhApplicationTestBase"
   },
   "getRequiredService": {
     "body": "_${2:${1/(.*)/${1:/downcase}/}}AppService$3 = GetRequiredService<I${1:Name}AppService>();$0",
@@ -211,7 +211,7 @@
   },
   "inheritsDomainService": {
     "body": " : DomainService$1",
-    "prefix": "xInheritsDomainService"
+    "prefix": "xInhDomainService"
   },
   "implementIRepository": {
     "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
@@ -253,50 +253,55 @@
   },
   "inheritsEntity": {
     "body": " : Entity<${1|int,Guid|}>$0",
-    "prefix": "xInheritsEntity"
+    "prefix": "xInhEntity"
   },
   "inheritsAuditedEntity": {
     "body": " : AuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInheritsAuditedEntity"
+    "prefix": "xInhAuditedEntity"
   },
   "inheritsCreationAuditedEntity": {
     "body": " : CreationAuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInheritsCreationAuditedEntity"
+    "prefix": "xInhCreationAuditedEntity"
   },
   "inheritsFullAuditedEntity": {
     "body": " : FullAuditedEntity<${1|int,Guid|}>$0",
-    "prefix": "xInheritsFullAuditedEntity"
+    "prefix": "xInhFullAuditedEntity"
   },
   "inheritsAggregateRoot": {
     "body": " : aggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInheritsAggregateRoot"
+    "prefix": "xInhAggregateRoot"
   },
   "inheritsAuditedAggregateRoot": {
     "body": " : AuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInheritsAuditedAggregateRoot"
+    "prefix": "xInhAuditedAggregateRoot"
   },
   "inheritsCreationAuditedAggregateRoot": {
     "body": " : CreationAuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInheritsCreationAuditedAggregateRoot"
+    "prefix": "xInhCreationAuditedAggregateRoot"
   },
   "inheritsFullAuditedAggregateRoot": {
     "body": " : FullAuditedAggregateRoot<${1|int,Guid|}>$0",
-    "prefix": "xInheritsFullAuditedAggregateRoot"
+    "prefix": "xInhFullAuditedAggregateRoot"
   },
   "inheritsEntityDto": {
     "body": " : EntityDto$1<${2|int,Guid|}$3>$0",
-    "prefix": "xInheritsEntityDto"
+    "prefix": "xInhEntityDto"
   },
   "inheritsAuditedEntityDto": {
     "body": " : AuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInheritsAuditedEntityDto"
+    "prefix": "xInhAuditedEntityDto"
   },
   "inheritsCreationAuditedEntityDto": {
     "body": " : CreationAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInheritsCreationAuditedEntityDto"
+    "prefix": "xInhCreationAuditedEntityDto"
   },
   "inheritsFullAuditedEntityDto": {
     "body": " : FullAuditedEntityDto<${1|int,Guid|}>$0",
-    "prefix": "xInheritsFullAuditedEntityDto"
+    "prefix": "xInhFullAuditedEntityDto"
+  },
+  "inheritsPagedAndSortedResultRequestDto": {
+    "body": " : PagedAndSortedResultRequestDto$0",
+    "prefix": "xInhPagedAndSortedResultRequestDto"
   }
+  
 }
