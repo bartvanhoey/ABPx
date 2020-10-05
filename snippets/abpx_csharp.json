@@ -259,5 +259,18 @@
   "implementIRepository": {
     "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
     "prefix": "xImplementsIRepository"
+  },
+  "builderEntity": {
+    "body": [
+      "builder.Entity<${1:ClassName}>(b =>",
+      "{",
+      "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);",
+      "\tb.ConfigureByConvention();",
+      "",
+      "\t$4//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$5.MaxNameLength);",
+      "\t$6// b.HasIndex(x => x.Name);",
+      "});$0"
+    ],
+    "prefix": "xBuilderEntity"
   }
 }
