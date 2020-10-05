@@ -251,5 +251,13 @@
   "ifStatement": {
     "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "prefix": "xIf"
+  },
+  "inheritsDomainService": {
+    "body": " : DomainService$1",
+    "prefix": "xInheritsDomainService"
+  },
+  "implementIRepository": {
+    "body": " : IRepository$1<${2:Type}, ${3:TypePrimaryKey}>$0",
+    "prefix": "xImplementsIRepository"
   }
 }
