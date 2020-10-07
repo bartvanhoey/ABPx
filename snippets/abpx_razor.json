@@ -19,8 +19,8 @@
     "body": [
       "@if (canCreate${1:What})",
       "{",
-      "",
-      "}$0"
+      "\t$0",
+      "}"
     ],
     "prefix": "xIfCanCreate"
   },
@@ -28,8 +28,8 @@
     "body": [
       "@if (canEdit${1:What})",
       "{",
-      "",
-      "}$0"
+      "\t$0",
+      "}"
     ],
     "prefix": "xIfCanEdit"
   },
@@ -37,8 +37,8 @@
     "body": [
       "@if (canDelete${1:What})",
       "{",
-      "",
-      "}$0"
+      "\t$0",
+      "}"
     ],
     "prefix": "xIfCanDelete"
   }
