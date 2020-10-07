@@ -12,7 +12,7 @@
       "prefix": "xAuthorizeAttribute"
   },
   "builderEntity": {
-      "body": ["builder.Entity<${1:ClassName}>(b =>", "{", "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);", "\tb.ConfigureByConvention();", "", "\t$4//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$5.MaxNameLength);", "\t$6// b.HasIndex(x => x.Name);", "});$0"],
+      "body": ["builder.Entity<${1:ClassName}>(b =>", "{", "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);", "\tb.ConfigureByConvention$4();", "", "\t$5//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$6.MaxNameLength);", "\t$7// b.HasIndex(x => x.Name);", "});$0"],
       "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
