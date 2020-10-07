@@ -334,6 +334,6 @@
       "\t$0",
       "}"
     ],
-    "prefix": "tIfRepoGetCountAsyncLessOrEqualToZero"
+    "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
   }
 }
