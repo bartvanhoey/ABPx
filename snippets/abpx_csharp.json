@@ -270,11 +270,11 @@
     "prefix": "xPermissionDefinitionsClass"
   },
   "requiredAttribute": {
-    "body": ["[Required$1]", "$0"],
+    "body": ["[Required$1] $0"],
     "prefix": "xRequiredAttribute"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]", "$0"],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "prefix": "xStringLengthAttribute"
   },
   "testAssertThrowsException": {
@@ -326,7 +326,6 @@
     ],
     "prefix": "xVarNewApplicationMenuItem"
   },
-
   "ifRepositoryGetCountAsyncLessEqualZero": {
     "body": [
       "if (await _${1:name}Repository.GetCountAsync$2() <= 0)",
@@ -335,5 +334,9 @@
       "}"
     ],
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
+  },  
+  "dataTypeAttribute": {
+    "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
+    "prefix": "xDataTypeAttribute"
   }
 }
