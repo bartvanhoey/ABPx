@@ -129,7 +129,12 @@
     "prefix": "xGroupNamePermissionConst"
   },
   "iCrudAppService": {
-    "body": "public interface${1:${TM_FILENAME/.cs//}} : ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+    "body": [
+      "public interface ${TM_FILENAME/.cs//} : ICrudAppService<${1:Type}Dto, ${2|Guid,int|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "prefix": "xICrudAppService"
   },
   "iRepository": {
