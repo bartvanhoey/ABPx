@@ -289,7 +289,7 @@
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
       "{",
-      "\tawait _${2:name}AppService.${3|CreateAsync, GetListAsync|} (",
+      "\tawait _${2:name}AppService.${3|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
       "\t\tnew ${4:Name}Dto",
       "\t\t{",
       "\t\t${5:PropertyName} = ${6:PropertyValue},",
