@@ -120,9 +120,12 @@
     ],
     "prefix": "xEfCoreRepositoryClassStub"
   },
-  "getRequiredService": {
-    "body": "_${3:${1/(.*)/${1:/downcase}/}}AppService$4 = GetRequiredService<I${1:Name}AppService$2>();$0",
-    "prefix": "xGetRequiredService"
+  "getRequiredAppService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
+      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
+    ],
+    "prefix": "xGetRequiredAppService"
   },
   "groupNamePermissionConst": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
@@ -339,7 +342,7 @@
       "}"
     ],
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
-  },  
+  },
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
     "prefix": "xDataTypeAttribute"
