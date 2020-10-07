@@ -346,5 +346,15 @@
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
     "prefix": "xDataTypeAttribute"
+  },
+  "addPolicyPermissions": {
+    "body": [
+      "\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions$1.${2:ClassName}.Default;",
+      "\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${3:$2}.Default;",
+      "\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${4:$2}.Create;",
+      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${5:$2}.Edit;",
+      "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${6:$2}.Delete;"
+    ],
+    "prefix": "xAddPolicyPermissions"
   }
 }
