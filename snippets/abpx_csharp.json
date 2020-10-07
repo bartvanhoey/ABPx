@@ -265,7 +265,7 @@
     "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
     "prefix": "xObjectMapperMap"
   },
-  "permissionDefinitionsClass": {
+  "permissionsClass": {
     "body": [
       "public static class ${1:ClassName}",
       "{",
@@ -275,7 +275,7 @@
       "\tpublic const string Delete = Default + \".Delete\";",
       "}$0"
     ],
-    "prefix": "xPermissionDefinitionsClass"
+    "prefix": "xPermissionsClass"
   },
   "requiredAttribute": {
     "body": ["[Required$1] $0"],
