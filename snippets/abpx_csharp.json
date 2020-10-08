@@ -360,5 +360,19 @@
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
     "prefix": "propPrivateSetter"
+  },
+  "ctorBusinessException": {
+    "body": [
+      "public ${TM_FILENAME_BASE}(${1:string} ${2:name})",
+      "\t: base(${3:${WORKSPACE_NAME/Project//}}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
+      "{",
+      "\tWithData$5(\"${6:$2}\", ${7:$2});",
+      "}"
+    ],
+    "prefix": "xCtorBusinessException"
+  },
+  "inhBusinessException": {
+    "body": " : BusinessException$1",
+    "prefix": " xInhBusinessException"
   }
 }
