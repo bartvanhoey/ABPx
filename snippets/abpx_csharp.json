@@ -179,7 +179,7 @@
   },
   "implementIApplicationService": {
     "body": " : IApplicationService$0",
-    "prefix": "xImplementIApplicationService"
+    "prefix": "xImpIApplicationService"
   },
   "implementIDataSeedContributor": {
     "body": " : IDataSeedContributor$1",
