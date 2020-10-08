@@ -258,7 +258,7 @@
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:parameterName}$0"],
+    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
     "prefix": "xNotNullAttribute"
   },
   "objectMapperMap": {
@@ -356,5 +356,9 @@
       "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${6:$2}.Delete;"
     ],
     "prefix": "xAddPolicyPermissions"
+  },
+  "propPrivateSetter": {
+    "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
+    "prefix": "propPrivateSetter"
   }
 }

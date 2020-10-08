@@ -26,9 +26,5 @@
   "ifCanDelete": {
     "body": ["@if (canDelete${1:What})", "{", "\t$0", "}"],
     "prefix": "xIfCanDelete"
-  },
-  "propPrivateSetter": {
-    "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
-    "prefix": "propPrivateSetter"
   }
 }
