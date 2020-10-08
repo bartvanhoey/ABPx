@@ -39,7 +39,7 @@
     "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:parameterName}$0"],
+    "body": ["[CanBeNull$1] ${2:string} ${3:name}$0"],
     "prefix": "xCanBeNullAttribute"
   },
   "canCreate": {
