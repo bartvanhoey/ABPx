@@ -388,5 +388,14 @@
       "Task DeleteAsync($3 id);$0"
     ],
     "prefix": "xCrudMethodsIAppService"
+  },
+  "ctor": {
+    "body": [
+      "${1|private,internal,protected,public|} ${TM_FILENAME_BASE}($2)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "xCtor"
   }
 }
