@@ -141,7 +141,7 @@
     "prefix": "xICrudAppService"
   },
   "iRepository": {
-    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:Name}Repository$0",
+    "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:${2/(.*)/${1:/downcase}/}}Repository$0",
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
