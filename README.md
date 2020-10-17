@@ -67,4 +67,4 @@
 | `xTestFactMethodStub` | Inserts a xUnit test method stub|
 | `xTestVarResCreateAsync` | Inserts var result = AppService.CreateAsync statement in a unit test|
 | `xTestVarResGetListAsync` | Inserts var result = AppService.GetListAsync statement in a unit test|
-| `xVarNewApplicationMenuItem` | Insert a new ApplicationMenuItem variable|
+| `xVarNewApplicationMenuItem` | Inserts   a new ApplicationMenuItem variable|
