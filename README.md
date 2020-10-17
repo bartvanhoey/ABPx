@@ -2,12 +2,12 @@
 
 | Prefix                                  | Description                                                           |
 | --------------------------------------- | --------------------------------------------------------------------- |
-| `xAddGroupPermission`                   | Add group permission to context                                       |
-| `xAddPermissionToGroup`                 | Add permission to group                                               |
-| `xAddPolicyPermissions`                 | Add policy permissions                                                |
+| `xAddGroupPermission`                   | Adds group permission to context                                       |
+| `xAddPermissionToGroup`                 | Adds permission to group                                               |
+| `xAddPolicyPermissions`                 | Adds policy permissions                                                |
 | `xAuthorizeAttribute`                   | Authorize attribute                                                   |
 | `xBuilderEntity`                        | Inserts builder.Entity stub                                           |
-| `xCanBeNullAttribute`                   | Can be null attribute                                                 |
+| `xCanBeNullAttribute`                   | CanBeNull attribute                                                 |
 | `xCanCreate`                            | Inserts boolean canCreate variable and checks if Create is granted    |
 | `xCanDelete`                            | Inserts boolean canDelete variable and checks if Delete is granted    |
 | `xCanEdit`                              | Inserts boolean canEdit variable and checks if Edit is granted        |
@@ -29,6 +29,7 @@
 | `xICrudAppService`                      | Inserts an ICrudAppService interface                                  |
 | `xIRepository`                          | Inserts an IRepository for a type parameter                           |
 | `xIfInline`                             | Inline if statement                                                   |
+| `xIfIsGrantedAsync`                     | Inserts if IsGranted permission statement                             |
 | `xIfNotNullInline`                      | Inline if not null statement                                          |
 | `xIfNotNull`                            | If not null statement                                                 |
 | `xIfNullInline`                         | Inline if not null statement                                          |
@@ -66,5 +67,4 @@
 | `xTestFactMethodStub`                   | Inserts a xUnit test method stub                                      |
 | `xTestVarResCreateAsync`                | Inserts var result = AppService.CreateAsync statement in a unit test  |
 | `xTestVarResGetListAsync`               | Inserts var result = AppService.GetListAsync statement in a unit test |
-| `xVarNewApplicationMenuItem`            | Inserts a new ApplicationMenuItem variable                            |
-| `xifIsGrantedAsync`                     | Inserts if IsGranted permission statement                             |
+| `xVarNewApplicationMenuItem`            | Insert a new ApplicationMenuItem variable                             |

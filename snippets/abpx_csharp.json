@@ -1,7 +1,7 @@
 {
   "addGroupPermission": {
     "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
-    "description": "Add group permission to context",
+    "description": "Adds group permission to context",
     "prefix": "xAddGroupPermission"
   },
   "addPermissionToGroup": {
@@ -18,7 +18,7 @@
       "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",",
       "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
     ],
-    "description": "Add permission to group",
+    "description": "Adds permission to group",
     "prefix": "xAddPermissionToGroup"
   },
   "addPolicyPermissions": {
@@ -29,7 +29,7 @@
       "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${5:$2}.Edit;",
       "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${6:$2}.Delete;"
     ],
-    "description": "Add policy permissions",
+    "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
   "authorizeAttribute": {
@@ -57,7 +57,7 @@
     "body": [
       "[CanBeNull$1] ${2:string} ${3:name}$0"
     ],
-    "description": "Can be null attribute",
+    "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
   "canCreate": {
@@ -235,7 +235,7 @@
       "}$0"
     ],
     "description": "Inserts if IsGranted permission statement",
-    "prefix": "xifIsGrantedAsync"
+    "prefix": "xIfIsGrantedAsync"
   },
   "ifNotNullInlineStatement": {
     "body": [
