@@ -431,7 +431,7 @@
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
     "description": "Inserts property with private setter",
-    "prefix": "propPrivateSetter"
+    "prefix": "xPropPrivateSetter"
   },
   "requiredAttribute": {
     "body": [
@@ -491,7 +491,7 @@
   },
   "testVarResultGetListAsync": {
     "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
-    "description": "Inserts var result = AppService.GetListAysnc statement in a unit test",
+    "description": "Inserts var result = AppService.GetListAsync statement in a unit test",
     "prefix": "xTestVarResGetListAsync"
   },
   "varNewApplicationMenuItem": {
