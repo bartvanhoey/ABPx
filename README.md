@@ -1,13 +1,13 @@
-# Code Snippets that start with an x to speed up your ABP development process in VsCode
+# Code Snippets that start with an x to speed up your [(abp.io)](https://abp.io/) development process in VsCode
 
 | Prefix                                  | Description                                                           |
 | --------------------------------------- | --------------------------------------------------------------------- |
-| `xAddGroupPermission`                   | Adds group permission to context                                       |
-| `xAddPermissionToGroup`                 | Adds permission to group                                               |
-| `xAddPolicyPermissions`                 | Adds policy permissions                                                |
+| `xAddGroupPermission`                   | Adds group permission to context                                      |
+| `xAddPermissionToGroup`                 | Adds permission to group                                              |
+| `xAddPolicyPermissions`                 | Adds policy permissions                                               |
 | `xAuthorizeAttribute`                   | Authorize attribute                                                   |
 | `xBuilderEntity`                        | Inserts builder.Entity stub                                           |
-| `xCanBeNullAttribute`                   | CanBeNull attribute                                                 |
+| `xCanBeNullAttribute`                   | CanBeNull attribute                                                   |
 | `xCanCreate`                            | Inserts boolean canCreate variable and checks if Create is granted    |
 | `xCanDelete`                            | Inserts boolean canDelete variable and checks if Delete is granted    |
 | `xCanEdit`                              | Inserts boolean canEdit variable and checks if Edit is granted        |
