@@ -1,12 +1,4 @@
 {
-  "injectAuthorizationService": {
-    "body": [
-      "@* uncomment line below or add to _imports.razor *@",
-      "@* @using Microsoft.AspNetCore.Authorization *@",
-      "@inject IAuthorizationService AuthorizationService"
-    ],
-    "prefix": "xInjAuthorizationService"
-  },
   "authorizeAttribute": {
     "body": [
       "@attribute [Authorize(${WORKSPACE_NAME/Project//}Permissions.${1:ClassName}.Default)]",
@@ -16,15 +8,38 @@
     "prefix": "xAuthorizeAttribute"
   },
   "ifCanCreate": {
-    "body": ["@if (canCreate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (canCreate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "prefix": "xIfCanCreate"
   },
+  "ifCanDelete": {
+    "body": [
+      "@if (canDelete${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "prefix": "xIfCanDelete"
+  },
   "ifCanEdit": {
-    "body": ["@if (canEdit${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (canEdit${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "prefix": "xIfCanEdit"
   },
-  "ifCanDelete": {
-    "body": ["@if (canDelete${1:What})", "{", "\t$0", "}"],
-    "prefix": "xIfCanDelete"
+  "injectAuthorizationService": {
+    "body": [
+      "@* uncomment line below or add to _imports.razor *@",
+      "@* @using Microsoft.AspNetCore.Authorization *@",
+      "@inject IAuthorizationService AuthorizationService"
+    ],
+    "prefix": "xInjAuthorizationService"
   }
 }
