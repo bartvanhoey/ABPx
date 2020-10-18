@@ -32,7 +32,7 @@
 | `xIfIsGrantedAsync`                     | Inserts if IsGranted permission statement                             |
 | `xIfNotNullInline`                      | Inline if not null statement                                          |
 | `xIfNotNull`                            | If not null statement                                                 |
-| `xIfNullInline`                         | Inline if not null statement                                          |
+| `xIfNullInline`                         | Inline if null statement                                              |
 | `xIfNull`                               | If null statement                                                     |
 | `xIfRepoGetCountAsyncLessOrEqualToZero` | Insert Repository.GetCountAsync less or equal to zero statement       |
 | `xIf`                                   | If statement                                                          |
