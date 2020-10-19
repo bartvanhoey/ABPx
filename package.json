@@ -29,15 +29,15 @@
     "snippets": [
       {
         "language": "aspnetcorerazor",
-        "path": "./snippets/abpx_razor.json"
+        "path": "./snippets/razor.json"
       },
       {
         "language": "razor",
-        "path": "./snippets/abpx_razor.json"
+        "path": "./snippets/razor.json"
       },
       {
         "language": "csharp",
-        "path": "./snippets/abpx_csharp.json"
+        "path": "./snippets/csharp.json"
       }
     ]
   }
