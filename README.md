@@ -73,7 +73,7 @@
      xTestVarResGetListAsync               | Inserts var result = AppService.GetListAsync statement in a unit test
      xVarNewApplicationMenuItem            | Insert a new ApplicationMenuItem variable                            
 
-## C# snippets[(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
+## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
      Prefix                   | Description             
      ------------------------ | ------------------------ 

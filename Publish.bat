@@ -6,6 +6,13 @@ if "%result%" == "true" (
     SET argument=%1
 )
 
+SET PathCurrentDirectory=%~dp0
+FOR %%a IN ("%PathCurrentDirectory:~0,-1%") DO SET PathParentCurrentDirectory=%%~dpa
+SET PathReadMeGeneratorDirectory=%PathParentCurrentDirectory%ReadMeGenerator\bin\Debug\netcoreapp3.1\
+CD %PathReadMeGeneratorDirectory%
+ReadMeGenerator.exe
+CD %PathCurrentDirectory%
+
 FOR /f %%i in ('node -pe "require('./package.json')['version']"') do @SET VersionNumber="%%i"
 
 FOR /F "tokens=1 delims=." %%A IN (%VersionNumber%) DO SET MajorVersionNumber=%%A
