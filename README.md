@@ -68,10 +68,10 @@
      xRepoInsertAsync                      | repository.InsertAsync statement                               
      xRequiredAttribute                    | Required Attribute                                             
      xStringLengthAttribute                | StringLength attribute                                         
-     xTestAssertThrowsException            | Assert.Throws AbpValidationException in a unit test            
+     xTestAssertThrowsException            | Assert.Throws AbpValidationException                           
+     xTestCreateAsync                      | var result = await AppService.CreateAsync statement            
+     xTestGetListAsync                     | var result = await AppService.GetListAsync statement           
      xTestMethodStub                       | a xUnit test method stub                                       
-     xTestCreateAsync                      | var result = AppService.CreateAsync statement in a unit test   
-     xTestGetListAsync                     | var result = AppService.GetListAsync statement in a unit test  
      xNewApplicationMenuItem               | New ApplicationMenuItem variable                               
 
 ## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)

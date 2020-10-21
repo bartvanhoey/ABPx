@@ -475,8 +475,25 @@
       "",
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$9(mem => mem == \"${10:$5}\"));"
     ],
-    "description": "Assert.Throws AbpValidationException in a unit test",
+    "description": "Assert.Throws AbpValidationException",
     "prefix": "xTestAssertThrowsException"
+  },
+  "testCreateAsync": {
+    "body": [
+      "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
+      "\tnew ${1|CreateUpdate,Create|}${2:Type}Dto$4",
+      "\t{",
+      "\t\t${5:PropertyName} = ${6:PropertyValue}$7",
+      "\t}",
+      ");$0"
+    ],
+    "description": "var result = await AppService.CreateAsync statement",
+    "prefix": "xTestCreateAsync"
+  },
+  "testGetListAsync": {
+    "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
+    "description": "var result = await AppService.GetListAsync statement",
+    "prefix": "xTestGetListAsync"
   },
   "testMethodStub": {
     "body": [
@@ -488,24 +505,6 @@
     ],
     "description": "a xUnit test method stub",
     "prefix": "xTestMethodStub"
-  },
-  "testCreateAsync": {
-    "body": [
-      "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
-      "\tnew ${1|CreateUpdate,Create|}${2}Dto$4",
-      "\t{",
-      "\t\t${5:PropertyName} = ${6:PropertyValue},",
-      "\t\t$0",
-      "\t}",
-      ");"
-    ],
-    "description": "var result = AppService.CreateAsync statement in a unit test",
-    "prefix": "xTestCreateAsync"
-  },
-  "testGetListAsync": {
-    "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
-    "description": "var result = AppService.GetListAsync statement in a unit test",
-    "prefix": "xTestGetListAsync"
   },
   "varNewApplicationMenuItem": {
     "body": [
