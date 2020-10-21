@@ -72,7 +72,7 @@
      xTestMethodStub                       | a xUnit test method stub                                       
      xTestCreateAsync                      | var result = AppService.CreateAsync statement in a unit test   
      xTestGetListAsync                     | var result = AppService.GetListAsync statement in a unit test  
-     xVarNewApplicationMenuItem            | Insert a new ApplicationMenuItem variable                      
+     xNewApplicationMenuItem               | New ApplicationMenuItem variable                               
 
 ## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
