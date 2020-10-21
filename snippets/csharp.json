@@ -328,9 +328,9 @@
   },
   "inheritsAppService": {
     "body": [
-      " : AppService$0"
+      " : ${1:${WORKSPACE_NAME/Project//}}AppService$0"
     ],
-    "description": "Inherits AppService class",
+    "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
   "inheritsApplicationTestBase": {

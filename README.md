@@ -46,7 +46,7 @@
      xImpITransientDependency              | Implements ITransientDependency interface                    
      xInhBusinessException                 | Inherits BusinessException class                             
      xInhAggregateRoot                     | Inherits AggregateRoot class                                 
-     xInhAppService                        | Inherits AppService class                                    
+     xInhAppService                        | Inherits ProjectNameAppService class                         
      xInhApplicationTestBase               | Inherits ApplicationTestBase class                           
      xInhAuditedAggregateRoot              | Inherits AuditedAggregateRoot class                          
      xInhAuditedEntity                     | Inherits AuditedEntity class                                 
