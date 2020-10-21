@@ -55,7 +55,7 @@
   },
   "canBeNullAttribute": {
     "body": [
-      "[CanBeNull$1] ${2:string} ${3:name}$0"
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
     ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
