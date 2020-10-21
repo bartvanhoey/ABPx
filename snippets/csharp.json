@@ -282,7 +282,7 @@
       "\t$0",
       "}"
     ],
-    "description": "Insert Repository.GetCountAsync less or equal to zero statement",
+    "description": "Repository.GetCountAsync less or equal to zero statement",
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
   },
   "ifStatement": {
