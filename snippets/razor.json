@@ -7,6 +7,15 @@
     ],
     "prefix": "xAuthorizeAttribute"
   },
+  "codeBlock": {
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
+    "description": "@code block",
+    "prefix": "xCode"
+  },
   "ifCanCreate": {
     "body": [
       "@if (canCreate${1:What})",

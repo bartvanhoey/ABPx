@@ -79,6 +79,7 @@
      Prefix                   | Description             
      ------------------------ | ------------------------ 
      xAuthorizeAttribute      | xAuthorizeAttribute     
+     xCode                    | @code block             
      xIfCanCreate             | xIfCanCreate            
      xIfCanDelete             | xIfCanDelete            
      xIfCanEdit               | xIfCanEdit              
