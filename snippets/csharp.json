@@ -433,6 +433,19 @@
     "description": "Inserts property with private setter",
     "prefix": "xPropPrivateSetter"
   },
+  "repoInsertAsync": {
+    "body": [
+      "await _${1:name}Repository.InsertAsync(",
+      "\tnew ${2:YourType}",
+      "\t\t{",
+      "\t\t\t${3:Property} = ${4:Value}$5",
+      "\t\t}",
+      ",autoSave:true",
+      ");$0"
+    ],
+    "description": "Inserts repository.InsertAsync statement",
+    "prefix": "xRepoInsertAsync"
+  },
   "requiredAttribute": {
     "body": [
       "[Required$1] $0"

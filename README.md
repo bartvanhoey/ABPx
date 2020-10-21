@@ -65,6 +65,7 @@
      xObjectMapperMap                      | Inherits ObjectMapper.Map statement                                  
      xPermissionsClass                     | Inserts a permissions class with Default/Create/Edit/Delete constants
      xPropPrivateSetter                    | Inserts property with private setter                                 
+     xRepoInsertAsync                      | Inserts repository.InsertAsync statement                             
      xRequiredAttribute                    | Required Attribute                                                   
      xStringLengthAttribute                | StringLength attribute                                               
      xTestAssertThrowsException            | Inserts Assert.Throws AbpValidationException in a unit test          
