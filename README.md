@@ -4,7 +4,7 @@
 
 You see room for improvement or you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
-## C# snippets[(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
+## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
 
      Prefix                                | Description                                                  
      ------------------------------------- | ------------------------------------------------------------- 
