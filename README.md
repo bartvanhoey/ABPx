@@ -1,4 +1,4 @@
-# Code Snippets that start with an x to speed up your [(abp.io)](https://abp.io/) development process in VsCode
+# Code Snippets `that start with an x` to speed up your [(abp.io)](https://abp.io/) development process
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 

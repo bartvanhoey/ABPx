@@ -1,5 +1,5 @@
 {
-  "title": "# Code Snippets that start with an x to speed up your [(abp.io)](https://abp.io/) development process in VsCode",
+  "title": "# Code Snippets `that start with an x` to speed up your [(abp.io)](https://abp.io/) development process",
   "animated_gif": "![ABPx in Action!](images/abpx_in_action.gif \"ABPx - Code snippets that start with an 'x' - in Action!\")",
   "csharp_table_header": "## C# snippets[(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)",
   "razor_table_header": "## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)"
