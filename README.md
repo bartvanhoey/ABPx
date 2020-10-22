@@ -6,7 +6,7 @@
 
      Prefix                                | Description                                                  
      ------------------------------------- | ------------------------------------------------------------- 
-     xAddGroupPermission                   | Adds group permission to context                             
+     xAddPermissionGroup                   | Adds group permission to context                             
      xAddPermissionToGroup                 | Adds permission to group                                     
      xAddPolicyPermissions                 | Adds policy permissions                                      
      xAuthorizeAttribute                   | Authorize attribute                                          

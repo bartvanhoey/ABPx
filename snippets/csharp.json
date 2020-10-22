@@ -1,8 +1,8 @@
 {
-  "addGroupPermission": {
+  "addPermissionGroup": {
     "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
     "description": "Adds group permission to context",
-    "prefix": "xAddGroupPermission"
+    "prefix": "xAddPermissionGroup"
   },
   "addPermissionToGroup": {
     "body": [
