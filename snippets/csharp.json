@@ -415,11 +415,6 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
-  "returnObjectMapperMap": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
-    "description": "return ObjectMapper.Map statement",
-    "prefix": "xReturnObjectMapperMap"
-  },
   "permissionsClass": {
     "body": [
       "public static class ${1:ClassName}",
@@ -457,6 +452,11 @@
     ],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
+  },
+  "returnObjectMapperMap": {
+    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "description": "return ObjectMapper.Map statement",
+    "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
     "body": [
@@ -510,7 +510,7 @@
     "description": "a xUnit test method stub",
     "prefix": "xTestMethodStub"
   },
-  "varNewApplicationMenuItem": {
+  "newApplicationMenuItem": {
     "body": [
       "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");"
     ],

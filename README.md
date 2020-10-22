@@ -63,11 +63,11 @@
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                
      xNotNullAttribute                     | NotNull attribute                                            
      xObjectMapperMap                      | ObjectMapper.Map statement                                   
-     xReturnObjectMapperMap                | return ObjectMapper.Map statement                            
      xPermissionsClass                     | a permissions class with Default/Create/Edit/Delete constants
      xPropPrivateSetter                    | property with private setter                                 
      xRepoInsertAsync                      | repository.InsertAsync statement                             
      xRequiredAttribute                    | Required Attribute                                           
+     xReturnObjectMapperMap                | return ObjectMapper.Map statement                            
      xStringLengthAttribute                | StringLength attribute                                       
      xTestAssertThrowsException            | Assert.Throws AbpValidationException                         
      xTestCreateAsync                      | var result = await AppService.CreateAsync statement          
