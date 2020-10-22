@@ -411,9 +411,14 @@
     "prefix": "xNotNullAttribute"
   },
   "objectMapperMap": {
-    "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
-    "description": "Inherits ObjectMapper.Map statement",
+    "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
+  },
+  "returnObjectMapperMap": {
+    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "description": "return ObjectMapper.Map statement",
+    "prefix": "xReturnObjectMapperMap"
   },
   "permissionsClass": {
     "body": [

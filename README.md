@@ -62,7 +62,8 @@
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                          
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                
      xNotNullAttribute                     | NotNull attribute                                            
-     xObjectMapperMap                      | Inherits ObjectMapper.Map statement                          
+     xObjectMapperMap                      | ObjectMapper.Map statement                                   
+     xReturnObjectMapperMap                | return ObjectMapper.Map statement                            
      xPermissionsClass                     | a permissions class with Default/Create/Edit/Delete constants
      xPropPrivateSetter                    | property with private setter                                 
      xRepoInsertAsync                      | repository.InsertAsync statement                             
