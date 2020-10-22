@@ -231,7 +231,7 @@
     "body": [
       "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:url}\"));",
+      "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:${3/(.*)/${1:/downcase}/}}\"));",
       "}$0"
     ],
     "description": "if IsGranted permission statement",
