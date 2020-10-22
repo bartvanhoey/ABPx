@@ -403,6 +403,23 @@
     "description": "Inherits PagedAndSortedResultRequestDto class",
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
+  "applicationMenuItemIcon": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");",
+      "// \"Menu:$1\": \"$1\""
+
+    ],
+    "description": "New ApplicationMenuItem variable with icon",
+    "prefix": "xApplicationMenuItemIcon"
+  },
+  "applicationMenuItemUrl": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
+      "// \"Menu:$1\": \"$1\""
+    ],
+    "description": "New ApplicationMenuItem variable with url",
+    "prefix": "xApplicationMenuItemUrl"
+  },
   "notNullAttribute": {
     "body": [
       "[NotNull$1] ${2:string} ${3:name}$0"
@@ -509,12 +526,5 @@
     ],
     "description": "a xUnit test method stub",
     "prefix": "xTestMethodStub"
-  },
-  "newApplicationMenuItem": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");"
-    ],
-    "description": "New ApplicationMenuItem variable",
-    "prefix": "xNewApplicationMenuItem"
   }
 }

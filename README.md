@@ -63,6 +63,8 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xInhFullAuditedEntity                 | Inherits FullAuditedEntity class                             
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                          
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                
+     xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                   
+     xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                    
      xNotNullAttribute                     | NotNull attribute                                            
      xObjectMapperMap                      | ObjectMapper.Map statement                                   
      xPermissionsClass                     | a permissions class with Default/Create/Edit/Delete constants
@@ -75,7 +77,6 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xTestCreateAsync                      | var result = await AppService.CreateAsync statement          
      xTestGetListAsync                     | var result = await AppService.GetListAsync statement         
      xTestMethodStub                       | a xUnit test method stub                                     
-     xNewApplicationMenuItem               | New ApplicationMenuItem variable                             
 
 ## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
