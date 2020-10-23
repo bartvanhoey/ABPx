@@ -246,10 +246,11 @@
   "ifIsGrantedAsync": {
     "body": [
       "// using ${WORKSPACE_NAME/Project//}.Permissions;",
+      "// \"Menu:${9:$3}\": \"Menu$3\", ",
       "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${5:$3}sMenu\", l[\"${6:Menu}:${7:$3}s\"], url: \"/${8:${3/(.*)/${1:/downcase}/}}s\");",
-      "\t${9:menuName}.AddItem($4sMenu);",
+      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${5:$3}sMenu\", l[\"${6:Menu}:${7:$3}\"], url: \"/${8:${3/(.*)/${1:/downcase}/}}s\");",
+      "\t${10:menuName}.AddItem($4sMenu);",
       "}$0"
     ],
     "description": "if IsGranted permission statement",
