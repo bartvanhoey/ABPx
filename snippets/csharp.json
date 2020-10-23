@@ -32,6 +32,22 @@
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
+  "applicationMenuItemIcon": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");",
+      "// \"Menu:$1\": \"$1\""
+    ],
+    "description": "New ApplicationMenuItem variable with icon",
+    "prefix": "xApplicationMenuItemIcon"
+  },
+  "applicationMenuItemUrl": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
+      "// \"Menu:$1\": \"$1\""
+    ],
+    "description": "New ApplicationMenuItem variable with url",
+    "prefix": "xApplicationMenuItemUrl"
+  },
   "authorizeAttribute": {
     "body": [
       "[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
@@ -229,9 +245,11 @@
   },
   "ifIsGrantedAsync": {
     "body": [
+      "// using ${WORKSPACE_NAME/Project//}.Permissions;",
       "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\t${4:menuName}.AddItem(new ApplicationMenuItem(\"${5:$1}.${6:$3}\", l[\"${7:Menu}:${8:$3}\"], url: \"/${9:${3/(.*)/${1:/downcase}/}}\"));",
+      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${5:$3}sMenu\", l[\"${6:Menu}:${7:$3}s\"], url: \"/${8:${3/(.*)/${1:/downcase}/}}s\");",
+      "\t${9:menuName}.AddItem($4sMenu);",
       "}$0"
     ],
     "description": "if IsGranted permission statement",
@@ -402,23 +420,6 @@
     "body": " : PagedAndSortedResultRequestDto$0",
     "description": "Inherits PagedAndSortedResultRequestDto class",
     "prefix": "xInhPagedAndSortedResultRequestDto"
-  },
-  "applicationMenuItemIcon": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");",
-      "// \"Menu:$1\": \"$1\""
-
-    ],
-    "description": "New ApplicationMenuItem variable with icon",
-    "prefix": "xApplicationMenuItemIcon"
-  },
-  "applicationMenuItemUrl": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
-      "// \"Menu:$1\": \"$1\""
-    ],
-    "description": "New ApplicationMenuItem variable with url",
-    "prefix": "xApplicationMenuItemUrl"
   },
   "notNullAttribute": {
     "body": [
