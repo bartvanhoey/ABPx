@@ -85,7 +85,7 @@
       "protected bool canUpdate$1;",
       "protected bool canDelete$1;"
     ],
-    "description": "Boolean canCreate variable and checks if Create is granted",
+    "description": "Checks if CRUD methods are granted",
     "prefix": "xCanCrudMethods"
   },
   "canCreate": {

@@ -16,7 +16,7 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xAuthorizeAttribute                   | Authorize attribute                                            
      xBuilderEntity                        | builder.Entity stub                                            
      xCanBeNullAttribute                   | CanBeNull attribute                                            
-     xCanCrudMethods                       | Boolean canCreate variable and checks if Create is granted     
+     xCanCrudMethods                       | Checks if CRUD methods are granted                             
      xCanCreate                            | Boolean canCreate variable and checks if Create is granted     
      xCanDelete                            | Boolean canDelete variable and checks if Delete is granted     
      xCanUpdate                            | boolean canUpdate variable and checks if Edit/Update is granted
