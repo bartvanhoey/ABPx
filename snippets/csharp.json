@@ -32,21 +32,21 @@
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
-  "applicationMenuItemIcon": {
+  "menuItemIcon": {
     "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], icon: \"${4:fa fa-book}\");",
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
       "// \"Menu:$1\": \"$1\""
     ],
     "description": "New ApplicationMenuItem variable with icon",
-    "prefix": "xApplicationMenuItemIcon"
+    "prefix": "xMenuItemIcon"
   },
-  "applicationMenuItemUrl": {
+  "menuItemUrl": {
     "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"${1:MenuName}\",l[\"Menu:${2:$1}\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
       "// \"Menu:$1\": \"$1\""
     ],
     "description": "New ApplicationMenuItem variable with url",
-    "prefix": "xApplicationMenuItemUrl"
+    "prefix": "xMenuItemUrl"
   },
   "authorizeAttribute": {
     "body": [

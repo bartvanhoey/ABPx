@@ -11,8 +11,8 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xAddPermissionGroup                   | Adds group permission to context                             
      xAddPermissionToGroup                 | Adds permission to group                                     
      xAddPolicyPermissions                 | Adds policy permissions                                      
-     xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                   
-     xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                    
+     xMenuItemIcon                         | New ApplicationMenuItem variable with icon                   
+     xMenuItemUrl                          | New ApplicationMenuItem variable with url                    
      xAuthorizeAttribute                   | Authorize attribute                                          
      xBuilderEntity                        | builder.Entity stub                                          
      xCanBeNullAttribute                   | CanBeNull attribute                                          
