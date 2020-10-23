@@ -34,14 +34,14 @@
     ],
     "prefix": "xIfCanDelete"
   },
-  "ifCanEdit": {
+  "ifCanUpdate": {
     "body": [
-      "@if (canEdit${1:What})",
+      "@if (canUpdate${1:What})",
       "{",
       "\t$0",
       "}"
     ],
-    "prefix": "xIfCanEdit"
+    "prefix": "xIfCanUpdate"
   },
   "injectAuthorizationService": {
     "body": [

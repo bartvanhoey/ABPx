@@ -8,14 +8,14 @@
     "body": [
       "var ${1:name}Permission = ${5:name}Group.AddPermission(${6:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${12:ClassName}.Default, L(\"Permission:${13:$12}\"));",
       "${2:$1}Permission.AddChild(${7:$6}Permissions.${14:$12}.Create, L(\"Permission:${17:$12}:Create\"));",
-      "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Edit, L(\"Permission:${18:$12}:Edit\"));",
+      "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Update, L(\"Permission:${18:$12}:Update\"));",
       "${4:$1}Permission.AddChild(${9:$6}Permissions.${16:$12}.Delete, L(\"Permission:${19:$12}:Delete\"));",
       "",
       "// Translations -> paste in en.json in Domain.Shared\\localization folder",
       "//\"Permission:${10:$6}\": \"${11:$6}\",",
       "//\"Permission:${20:$12}\": \"${21:$12} Management\",",
       "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",",
-      "//\"Permission:${23:$12}.Edit\": \"Editing the ${26:$25}s\",",
+      "//\"Permission:${23:$12}.Update\": \"Editing the ${26:$25}s\",",
       "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
     ],
     "description": "Adds permission to group",
@@ -26,7 +26,7 @@
       "\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions$1.${2:ClassName}.Default;",
       "\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${3:$2}.Default;",
       "\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${4:$2}.Create;",
-      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${5:$2}.Edit;",
+      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${5:$2}.Update;",
       "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${6:$2}.Delete;"
     ],
     "description": "Adds policy permissions",
@@ -76,6 +76,18 @@
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
+  "canCrudMethods": {
+    "body": [
+      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
+      "canUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.$2.Update});",
+      "canDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.$2.Delete);",
+      "protected bool canCreate$1;",
+      "protected bool canUpdate$1;",
+      "protected bool canDelete$1;"
+    ],
+    "description": "Boolean canCreate variable and checks if Create is granted",
+    "prefix": "xCanCrudMethods"
+  },
   "canCreate": {
     "body": [
       "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
@@ -92,13 +104,13 @@
     "description": "Boolean canDelete variable and checks if Delete is granted",
     "prefix": "xCanDelete"
   },
-  "canEdit": {
+  "canUpdate": {
     "body": [
-      "canEdit${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Edit);",
-      "protected bool canEdit${3:$1};$0"
+      "canUpdate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Update);",
+      "protected bool canUpdate${3:$1};$0"
     ],
-    "description": "boolean canEdit variable and checks if Edit is granted",
-    "prefix": "xCanEdit"
+    "description": "boolean canUpdate variable and checks if Edit/Update is granted",
+    "prefix": "xCanUpdate"
   },
   "checkNotNull": {
     "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
