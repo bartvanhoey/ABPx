@@ -81,13 +81,21 @@ You see room for improvement or you have a snippet in mind you want to have incl
 
 ## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
-     Prefix                   | Description             
-     ------------------------ | ------------------------ 
-     xAuthorizeAttribute      | xAuthorizeAttribute     
-     xCode                    | @code block             
-     xIfCanCreate             | xIfCanCreate            
-     xIfCanDelete             | xIfCanDelete            
-     xIfCanUpdate             | xIfCanUpdate            
-     xInjAuthorizationService | xInjAuthorizationService
+     Prefix                   | Description                                              
+     ------------------------ | --------------------------------------------------------- 
+     xAuthorizeAttribute      | xAuthorizeAttribute                                      
+     xCode                    | @code block                                              
+     xCreateModalDialog       | Create modal dialog                                      
+     xDataGridColumn          | DataGridColumn                                           
+     xDateField               | Inserts a TextEdit field in a Create/Update dialog       
+     xIfCanCreate             | xIfCanCreate                                             
+     xIfCanDelete             | xIfCanDelete                                             
+     xIfCanUpdate             | xIfCanUpdate                                             
+     xInjAuthorizationService | xInjAuthorizationService                                 
+     xListPage                | xListPage                                                
+     xNumericField            | Inserts a NumericEdit field in a Create/Update dialog    
+     xSelectEnumField         | Inserts a Select field for enum in a Create/Update dialog
+     xTextField               | Inserts a TextEdit field in a Create/Update dialog       
+     xUpdateModalDialog       | Update modal dialog                                      
 
 
