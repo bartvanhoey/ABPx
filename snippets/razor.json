@@ -49,8 +49,8 @@
   "dateField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"${2:$1}\"]</FieldLabel>",
-      "  <DateEdit TValue=\"DateTime\" @bind-Date=\"NewEntity.${1:PropertyName}\" />",
+      "  <FieldLabel>@L[\"$2}\"]</FieldLabel>",
+      "  <DateEdit TValue=\"DateTime\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
@@ -174,8 +174,8 @@
   "numericField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"${2:$1}\"]</FieldLabel>",
-      "  <NumericEdit TValue=\"${3:NumericType}\" @bind-Value=\"NewEntity.${1:PropertyName}\" />",
+      "  <FieldLabel>@L[\"$2\"]</FieldLabel>",
+      "  <NumericEdit TValue=\"${3:NumericType}\" @bind-Value=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
@@ -184,12 +184,12 @@
   "selectEnumField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"${1:PropertyName}\"]</FieldLabel>",
-      "  <Select TValue=\"${2:Type}\" @bind-SelectedValue=\"@NewEntity.$1\">",
-      "    @foreach (int enumValue in Enum.GetValues(typeof($2)))",
+      "  <FieldLabel>@L[\"$2\"]</FieldLabel>",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
+      "    @foreach (int enumValue in Enum.GetValues(typeof($3)))",
       "    {",
-      "      <SelectItem TValue=\"$2\" Value=\"@(($2)enumValue)\">",
-      "          @L[$\"Enum:$2:{enumValue}\"]",
+      "      <SelectItem TValue=\"$3\" Value=\"@(($3)enumValue)\">",
+      "          @L[$\"Enum:$3:{enumValue}\"]",
       "      </SelectItem>",
       "    }",
       "  </Select>",
@@ -201,8 +201,8 @@
   "textField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"${2:$1}\"]</FieldLabel>",
-      "  <TextEdit @bind-text=\"NewEntity.${1:PropertyName}\" />",
+      "  <FieldLabel>@L[\"$2}\"]</FieldLabel>",
+      "  <TextEdit @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
