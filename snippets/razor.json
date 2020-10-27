@@ -29,7 +29,7 @@
       "           <Row>",
       "             <Column ColumnSize=\"ColumnSize.Is12\">",
       "             $0@* <Field>",
-      "                   <FieldLabel>@L[\"Name\"]</FieldLabel>",
+      "                   <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}Name\"]</FieldLabel>",
       "                   <TextEdit @bind-text=\"NewEntity.Name\" />",
       "                   </Field> *@",
       "             </Column>",
@@ -46,14 +46,14 @@
     "prefix": "xCreateModalDialog"
   },
   "dataGridColumn": {
-    "body": "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"$2\"]\"></DataGridColumn>",
+    "body": "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
     "description": "DataGridColumn",
     "prefix": "xDataGridColumn"
   },
   "dateField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"$2}\"]</FieldLabel>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2}\"]</FieldLabel>",
       "  <DateEdit TValue=\"DateTime\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
@@ -156,7 +156,7 @@
       "                        </Dropdown>",
       "                    </DisplayTemplate>",
       "                </DataGridColumn>",
-      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"$2\"]\"></DataGridColumn>",
+      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
       "            </DataGridColumns>",
       "        </DataGrid>",
       "    </CardBody>",
@@ -183,7 +183,7 @@
   "numericField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"$2\"]</FieldLabel>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <NumericEdit TValue=\"${3:NumericType}\" @bind-Value=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
@@ -193,7 +193,7 @@
   "selectEnumField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"$2\"]</FieldLabel>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
       "    @foreach (int enumValue in Enum.GetValues(typeof($3)))",
       "    {",
@@ -210,7 +210,7 @@
   "textField": {
     "body": [
       "<Field>",
-      "  <FieldLabel>@L[\"$2}\"]</FieldLabel>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2}\"]</FieldLabel>",
       "  <TextEdit @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
@@ -230,7 +230,7 @@
       "       <Row>",
       "         <Column ColumnSize=\"ColumnSize.Is12\">",
       "           $0@* <Field>",
-      "                <FieldLabel>@L[\"Name\"]</FieldLabel>",
+      "                <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}Name\"]</FieldLabel>",
       "                <TextEdit @bind-text=\"EditingEntity.Name\" />",
       "              </Field> *@",
       "         </Column>",
