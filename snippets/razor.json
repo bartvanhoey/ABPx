@@ -231,7 +231,7 @@
       "         <Column ColumnSize=\"ColumnSize.Is12\">",
       "           $0@* <Field>",
       "                <FieldLabel>@L[\"Name\"]</FieldLabel>",
-      "                <TextEdit @bind-text=\"NewEntity.Name\" />",
+      "                <TextEdit @bind-text=\"EditingEntity.Name\" />",
       "              </Field> *@",
       "         </Column>",
       "       </Row>",     
