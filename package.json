@@ -1,7 +1,7 @@
 {
   "name": "abpx",
   "displayName": "ABPx",
-  "description": "Code Snippets that start with an x to speed up your ABP.IO development process in VsCode",
+  "description": "Code Snippets that start with an x to speed up your ABP.IO development process",
   "icon": "images/abpx-icon.png",
   "version": "0.0.112",
   "engines": {
