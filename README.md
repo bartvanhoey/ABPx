@@ -88,9 +88,9 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xCreateModalDialog       | Create modal dialog                                      
      xDataGridColumn          | DataGridColumn                                           
      xDateField               | Inserts a TextEdit field in a Create/Update dialog       
-     xIfCanCreate             | xIfCanCreate                                             
-     xIfCanDelete             | xIfCanDelete                                             
-     xIfCanUpdate             | xIfCanUpdate                                             
+     xIfCanCreate             | If CanCreate                                             
+     xIfCanDelete             | If CanDelete                                             
+     xIfCanUpdate             | If CanUpdate                                             
      xInjAuthorizationService | xInjAuthorizationService                                 
      xListPage                | xListPage                                                
      xNumericField            | Inserts a NumericEdit field in a Create/Update dialog    

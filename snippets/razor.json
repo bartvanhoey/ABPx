@@ -67,6 +67,7 @@
       "\t$0",
       "}"
     ],
+    "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
@@ -76,6 +77,7 @@
       "\t$0",
       "}"
     ],
+    "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
@@ -85,6 +87,7 @@
       "\t$0",
       "}"
     ],
+    "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },
   "injectAuthorizationService": {
