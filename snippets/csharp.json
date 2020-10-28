@@ -123,7 +123,7 @@
   "createMapFromDto": {
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
     "description": "CreateMap from Dto to UpdateDto statement",
-    "prefix": "tCreateMapFromDtoToUpdateDto"
+    "prefix": "xCreateMapFromDtoToUpdateDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",

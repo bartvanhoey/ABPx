@@ -22,7 +22,7 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xCheckNotNullOrEmpty                  | Check.NotNullOrEmpty statement                                 
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                            
      xCreateMap                            | CreateMap statement                                            
-     tCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                      
+     xCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                      
      xCreateMapToDto                       | CreateMap to Dto statement                                     
      xCrudAppService                       | CrudAppService class                                           
      xCrudMethodsIAppService               | the basic CRUD methods in an IAppService                       
