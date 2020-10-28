@@ -125,10 +125,10 @@
     "description": "CreateMap from Dto to UpdateDto statement",
     "prefix": "xCreateMapFromDtoToUpdateDto"
   }, 
-  "createMapFromDtoToLookupDto": {
-    "body": "CreateMap<${1:SourceType}Dto, $1LookupDto>();$0",
-    "description": "CreateMap from Dto to LookupDto statement",
-    "prefix": "xCreateMapFromDtoToLookupDto"
+  "createMapFromToLookupDto": {
+    "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
+    "description": "CreateMap from to LookupDto statement",
+    "prefix": "xCreateMapFromToLookupDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
