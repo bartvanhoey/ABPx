@@ -211,7 +211,7 @@
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
-      "    @foreach (int value in ${4:${2/(.*)/${1:/downcase}/}}List)",
+      "    @foreach (var value in ${4:${2/(.*)/${1:/downcase}/}}List)",
       "    {",
       "      <SelectItem TValue=\"$3\" Value=\"@value.Id\">",
       "          @value.${5:PropertyName}",
