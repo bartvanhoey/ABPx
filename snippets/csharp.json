@@ -215,6 +215,23 @@
     "description": "GetRequiredService and an IAppService field",
     "prefix": "xGetRequiredAppService"
   },
+  "getLookupIAppService": {
+    "prefix": "xGetLookupIAppService",
+    "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
+    "description": "Adds a GetLookupAsync method to an IAppService interface"
+  },
+  "getLookupAppService": {
+    "prefix": "xGetLookupAppService",
+    "body": [
+      "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
+      "{",
+      "\tvar ${2:${1/(.*)/${1:/downcase}/}}s = await _${3:${1/(.*)/${1:/downcase}/}}Repository.GetListAsync();",
+      "",
+      "\treturn new ListResultDto<$1LookupDto>(ObjectMapper.Map<List$6<${1:Type}>, List<$1LookupDto>>(authors));",
+      "}"
+    ],
+    "description": "Adds a GetLookupAsync method to an AppService class"
+  },
   "groupNamePermissionConst": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "description": "a GroupName constant",
