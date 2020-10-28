@@ -230,7 +230,7 @@
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
       "{",
-      "\tvar ${2:${1/(.*)/${1:/downcase}/}}s = await _repository.GetListAsync();",
+      "\tvar ${2:${1/(.*)/${1:/downcase}/}}s = await _${2:${1/(.*)/${1:/downcase}/}}Repository.GetListAsync();",
       "",
       "\treturn new ListResultDto<$1LookupDto>(ObjectMapper.Map<List$6<${1:Type}>, List<$1LookupDto>>(${2:${1/(.*)/${1:/downcase}/}}s));",
       "}"
