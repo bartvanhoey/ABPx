@@ -32,22 +32,6 @@
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
-  "menuItemIcon": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
-      "// \"Menu:$1\": \"$1\""
-    ],
-    "description": "New ApplicationMenuItem variable with icon",
-    "prefix": "xMenuItemIcon"
-  },
-  "menuItemUrl": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
-      "// \"Menu:$1\": \"$1\""
-    ],
-    "description": "New ApplicationMenuItem variable with url",
-    "prefix": "xMenuItemUrl"
-  },
   "authorizeAttribute": {
     "body": [
       "[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
@@ -70,9 +54,19 @@
     "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
+  },
+  "canCreate": {
+    "body": [
+      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
+      "protected bool canCreate${3:$1};$0"
+    ],
+    "description": "Boolean canCreate variable and checks if Create is granted",
+    "prefix": "xCanCreate"
   },
   "canCrudMethods": {
     "body": [
@@ -89,14 +83,6 @@
     ],
     "description": "Checks if CRUD methods are granted",
     "prefix": "xCanCrudMethods"
-  },
-  "canCreate": {
-    "body": [
-      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
-      "protected bool canCreate${3:$1};$0"
-    ],
-    "description": "Boolean canCreate variable and checks if Create is granted",
-    "prefix": "xCanCreate"
   },
   "canDelete": {
     "body": [
@@ -135,9 +121,9 @@
     "prefix": "xCreateMap"
   },
   "createMapFromDto": {
-    "body": "CreateMap<${1:SourceType}Dto,${2:$1}>();$0",
-    "description": "CreateMap from Dto statement",
-    "prefix": "xCreateMapFromDto"
+    "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
+    "description": "CreateMap from Dto to UpdateDto statement",
+    "prefix": "tCreateMapFromDtoToUpdateDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -250,7 +236,10 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -268,22 +257,40 @@
     "prefix": "xIfIsGrantedAsync"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -298,7 +305,13 @@
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -333,7 +346,9 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [" : ${1:${WORKSPACE_NAME/Project//}}AppService$0"],
+    "body": [
+      " : ${1:${WORKSPACE_NAME/Project//}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
@@ -407,8 +422,26 @@
     "description": "Inherits PagedAndSortedResultRequestDto class",
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
+  "menuItemIcon": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
+      "// \"Menu:$1\": \"$1\""
+    ],
+    "description": "New ApplicationMenuItem variable with icon",
+    "prefix": "xMenuItemIcon"
+  },
+  "menuItemUrl": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
+      "// \"Menu:$1\": \"$1\""
+    ],
+    "description": "New ApplicationMenuItem variable with url",
+    "prefix": "xMenuItemUrl"
+  },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -449,7 +482,9 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
@@ -459,7 +494,9 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },

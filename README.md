@@ -11,20 +11,18 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xAddPermissionGroup                   | Adds group permission to context                               
      xAddPermissionToGroup                 | Adds permission to group                                       
      xAddPolicyPermissions                 | Adds policy permissions                                        
-     xMenuItemIcon                         | New ApplicationMenuItem variable with icon                     
-     xMenuItemUrl                          | New ApplicationMenuItem variable with url                      
      xAuthorizeAttribute                   | Authorize attribute                                            
      xBuilderEntity                        | builder.Entity stub                                            
      xCanBeNullAttribute                   | CanBeNull attribute                                            
-     xCanCrudMethods                       | Checks if CRUD methods are granted                             
      xCanCreate                            | Boolean canCreate variable and checks if Create is granted     
+     xCanCrudMethods                       | Checks if CRUD methods are granted                             
      xCanDelete                            | Boolean canDelete variable and checks if Delete is granted     
      xCanUpdate                            | boolean canUpdate variable and checks if Edit/Update is granted
      xCheckNotNull                         | Check.NotNull statement                                        
      xCheckNotNullOrEmpty                  | Check.NotNullOrEmpty statement                                 
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                            
      xCreateMap                            | CreateMap statement                                            
-     xCreateMapFromDto                     | CreateMap from Dto statement                                   
+     tCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                      
      xCreateMapToDto                       | CreateMap to Dto statement                                     
      xCrudAppService                       | CrudAppService class                                           
      xCrudMethodsIAppService               | the basic CRUD methods in an IAppService                       
@@ -66,6 +64,8 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xInhFullAuditedEntity                 | Inherits FullAuditedEntity class                               
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                            
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                  
+     xMenuItemIcon                         | New ApplicationMenuItem variable with icon                     
+     xMenuItemUrl                          | New ApplicationMenuItem variable with url                      
      xNotNullAttribute                     | NotNull attribute                                              
      xObjectMapperMap                      | ObjectMapper.Map statement                                     
      xPermissionsClass                     | a permissions class with Default/Create/Edit/Delete constants  
