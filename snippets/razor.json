@@ -100,7 +100,6 @@
   },
   "listPage": {
     "body": [
-      "@* translations *@",
       "@* \"New$1\": \"New $1\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
       "@using Volo.Abp.Application.Dtos",
