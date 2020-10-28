@@ -225,9 +225,9 @@
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
       "{",
-      "\tvar ${2:${1/(.*)/${1:/downcase}/}}s = await _${3:${1/(.*)/${1:/downcase}/}}Repository.GetListAsync();",
+      "\tvar ${2:${1/(.*)/${1:/downcase}/}}s = await _repository.GetListAsync();",
       "",
-      "\treturn new ListResultDto<$1LookupDto>(ObjectMapper.Map<List$6<${1:Type}>, List<$1LookupDto>>(authors));",
+      "\treturn new ListResultDto<$1LookupDto>(ObjectMapper.Map<List$6<${1:Type}>, List<$1LookupDto>>(${2:${1/(.*)/${1:/downcase}/}}s));",
       "}"
     ],
     "description": "Adds a GetLookupAsync method to an AppService class"
