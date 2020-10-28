@@ -95,6 +95,7 @@ You see room for improvement or you have a snippet in mind you want to have incl
      xListPage                | xListPage                                                
      xNumericField            | Inserts a NumericEdit field in a Create/Update dialog    
      xSelectEnumField         | Inserts a Select field for enum in a Create/Update dialog
+     xSelectField             | Inserts a Select field a Create/Update dialog            
      xTextField               | Inserts a TextEdit field in a Create/Update dialog       
      xUpdateModalDialog       | Update modal dialog                                      
 

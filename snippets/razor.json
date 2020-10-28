@@ -206,6 +206,23 @@
     "description": "Inserts a Select field for enum in a Create/Update dialog",
     "prefix": "xSelectEnumField"
   },
+  "selectField": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
+      "    @foreach (int value in ${4:${2/(.*)/${1:/downcase}/}}sList)",
+      "    {",
+      "      <SelectItem TValue=\"$3\" Value=\"@value.Id\">",
+      "          @value.${5:PropertyName}",
+      "      </SelectItem>",
+      "    }",
+      "  </Select>",
+      "</Field>"
+    ],
+    "description": "Inserts a Select field a Create/Update dialog",
+    "prefix": "xSelectField"
+  },
   "textField": {
     "body": [
       "<Field>",
@@ -233,7 +250,7 @@
       "                <TextEdit @bind-text=\"EditingEntity.Name\" />",
       "              </Field> *@",
       "         </Column>",
-      "       </Row>",     
+      "       </Row>",
       "      </ModalBody>",
       "      <ModalFooter>",
       "          <Button Color=\"Color.Secondary\" Clicked=\"CloseEditModalAsync\">@L[\"Cancel\"]</Button>",
