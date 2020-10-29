@@ -220,6 +220,14 @@
     "description": "GetRequiredService and an IAppService field",
     "prefix": "xGetRequiredAppService"
   },
+  "lookupListAppService": {
+    "prefix": "xLookupListAppService",
+    "body": [
+      "protected IReadOnlyList$4<${1:Type}LookupDto$3> ${2:${1/(.*)/${1:/downcase}/}}List = Array$5.Empty<$1LookupDto>();",
+      "// ${2:${1/(.*)/${1:/downcase}/}}List = (await AppService.Get$1LookupAsync()).Items;"
+    ],
+    "description": "Inserts an IReadOnlyList for a LookupDto object"
+  },
   "getLookupIAppService": {
     "prefix": "xGetLookupIAppService",
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
