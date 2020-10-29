@@ -120,15 +120,15 @@
     "description": "CreateMap statement",
     "prefix": "xCreateMap"
   },
-  "createMapFromToUpdateDto": {
-    "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
-    "description": "CreateMap from Dto to UpdateDto statement",
-    "prefix": "xCreateMapFromDtoToUpdateDto"
-  }, 
   "createMapFromToLookupDto": {
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
     "description": "CreateMap from to LookupDto statement",
     "prefix": "xCreateMapFromToLookupDto"
+  },
+  "createMapFromToUpdateDto": {
+    "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
+    "description": "CreateMap from Dto to UpdateDto statement",
+    "prefix": "xCreateMapFromDtoToUpdateDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -212,29 +212,7 @@
     "description": "CreateMap EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
   },
-  "getRequiredAppService": {
-    "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
-      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
-    ],
-    "description": "GetRequiredService and an IAppService field",
-    "prefix": "xGetRequiredAppService"
-  },
-  "lookupListAppService": {
-    "prefix": "xLookupListAppService",
-    "body": [
-      "protected IReadOnlyList$4<${1:Type}LookupDto$3> ${2:${1/(.*)/${1:/downcase}/}}List = Array$5.Empty<$1LookupDto>();",
-      "// ${2:${1/(.*)/${1:/downcase}/}}List = (await AppService.Get$1LookupAsync()).Items;"
-    ],
-    "description": "Inserts an IReadOnlyList for a LookupDto object"
-  },
-  "getLookupIAppService": {
-    "prefix": "xGetLookupIAppService",
-    "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
-    "description": "Adds a GetLookupAsync method to an IAppService interface"
-  },
   "getLookupAppService": {
-    "prefix": "xGetLookupAppService",
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
       "{",
@@ -243,7 +221,21 @@
       "\treturn new ListResultDto<$1LookupDto>(ObjectMapper.Map<List$6<${1:Type}>, List<$1LookupDto>>(${2:${1/(.*)/${1:/downcase}/}}s));",
       "}"
     ],
-    "description": "Adds a GetLookupAsync method to an AppService class"
+    "description": "Adds a GetLookupAsync method to an AppService class",
+    "prefix": "xGetLookupAppService"
+  },
+  "getLookupIAppService": {
+    "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
+    "description": "Adds a GetLookupAsync method to an IAppService interface",
+    "prefix": "xGetLookupIAppService"
+  },
+  "getRequiredAppService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
+      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
+    ],
+    "description": "GetRequiredService and an IAppService field",
+    "prefix": "xGetRequiredAppService"
   },
   "groupNamePermissionConst": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
@@ -451,6 +443,14 @@
     "body": " : PagedAndSortedResultRequestDto$0",
     "description": "Inherits PagedAndSortedResultRequestDto class",
     "prefix": "xInhPagedAndSortedResultRequestDto"
+  },
+  "lookupListAppService": {
+    "body": [
+      "protected IReadOnlyList$4<${1:Type}LookupDto$3> ${2:${1/(.*)/${1:/downcase}/}}List = Array$5.Empty<$1LookupDto>();",
+      "// ${2:${1/(.*)/${1:/downcase}/}}List = (await AppService.Get$1LookupAsync()).Items;"
+    ],
+    "description": "Inserts an IReadOnlyList for a LookupDto object",
+    "prefix": "xLookupListAppService"
   },
   "menuItemIcon": {
     "body": [
