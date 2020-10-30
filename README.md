@@ -83,7 +83,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xTestGetListAsync                     | var result = await AppService.GetListAsync statement           
      xTestMethodStub                       | a xUnit test method stub                                       
 
-## Blazor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
+## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
      Prefix                   | Description                                              
      ------------------------ | --------------------------------------------------------- 
