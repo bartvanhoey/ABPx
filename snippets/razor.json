@@ -54,7 +54,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <DateEdit TValue=\"DateTime\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <DateEdit TValue=\"DateTime$3\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
