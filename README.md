@@ -91,16 +91,16 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCode                    | @code block                                              
      xCreateModalDialog       | Create modal dialog                                      
      xDataGridColumn          | DataGridColumn                                           
-     xDateField               | Inserts a TextEdit field in a Create/Update dialog       
+     xFieldDate               | Inserts a TextEdit field in a Create/Update dialog       
      xIfCanCreate             | If CanCreate                                             
      xIfCanDelete             | If CanDelete                                             
      xIfCanUpdate             | If CanUpdate                                             
      xInjAuthorizationService | xInjAuthorizationService                                 
      xListPage                | xListPage                                                
-     xNumericField            | Inserts a NumericEdit field in a Create/Update dialog    
-     xSelectEnumField         | Inserts a Select field for enum in a Create/Update dialog
-     xSelectField             | Inserts a Select field a Create/Update dialog            
-     xTextField               | Inserts a TextEdit field in a Create/Update dialog       
+     xFieldNumeric            | Inserts a NumericEdit field in a Create/Update dialog    
+     xFieldSelectEnum         | Inserts a Select field for enum in a Create/Update dialog
+     xFieldSelect             | Inserts a Select field a Create/Update dialog            
+     xFieldText               | Inserts a TextEdit field in a Create/Update dialog       
      xUpdateModalDialog       | Update modal dialog                                      
 
 

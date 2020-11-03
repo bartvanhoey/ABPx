@@ -50,7 +50,7 @@
     "description": "DataGridColumn",
     "prefix": "xDataGridColumn"
   },
-  "dateField": {
+  "fieldDate": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -58,7 +58,7 @@
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
-    "prefix": "xDateField"
+    "prefix": "xFieldDate"
   },
   "ifCanCreate": {
     "body": [
@@ -179,7 +179,7 @@
     ],
     "prefix": "xListPage"
   },
-  "numericField": {
+  "fieldNumeric": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -187,9 +187,9 @@
       "</Field>"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
-    "prefix": "xNumericField"
+    "prefix": "xFieldNumeric"
   },
-  "selectEnumField": {
+  "fieldSelectEnum": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -204,9 +204,9 @@
       "</Field>"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
-    "prefix": "xSelectEnumField"
+    "prefix": "xFieldSelectEnum"
   },
-  "selectField": {
+  "fieldSelect": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -221,9 +221,9 @@
       "</Field>"
     ],
     "description": "Inserts a Select field a Create/Update dialog",
-    "prefix": "xSelectField"
+    "prefix": "xFieldSelect"
   },
-  "textField": {
+  "fieldText": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -231,7 +231,7 @@
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
-    "prefix": "xTextField"
+    "prefix": "xFieldText"
   },
   "updateModalDialog": {
     "body": [
