@@ -8,11 +8,7 @@
     "prefix": "xAuthorizeAttribute"
   },
   "codeBlock": {
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -46,10 +42,22 @@
     "prefix": "xCreateModalDialog"
   },
   "dataGridColumn": {
-    "body": "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
+    "body": "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
     "description": "DataGridColumn",
     "prefix": "xDataGridColumn"
   },
+  "dataGridColumnEnum": {
+    "body": [
+      "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
+      "\t<DisplayTemplate>",
+      "\t\t@L[$\"Enum:${4:EnumName}:{(int)context.$2}\"]",
+      "\t</DisplayTemplate>",
+      "</DataGridColumn>"
+    ],
+    "description": "DataGridColumn",
+    "prefix": "xDataGridColumnEnum"
+  },
+
   "fieldDate": {
     "body": [
       "<Field>",
@@ -61,32 +69,17 @@
     "prefix": "xFieldDate"
   },
   "ifCanCreate": {
-    "body": [
-      "@if (canCreate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (canCreate${1:What})", "{", "\t$0", "}"],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
-    "body": [
-      "@if (canDelete${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (canDelete${1:What})", "{", "\t$0", "}"],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": [
-      "@if (canUpdate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (canUpdate${1:What})", "{", "\t$0", "}"],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },

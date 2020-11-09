@@ -91,6 +91,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCode                    | @code block                                              
      xCreateModalDialog       | Create modal dialog                                      
      xDataGridColumn          | DataGridColumn                                           
+     xDataGridColumnEnum      | DataGridColumn                                           
      xFieldDate               | Inserts a TextEdit field in a Create/Update dialog       
      xIfCanCreate             | If CanCreate                                             
      xIfCanDelete             | If CanDelete                                             
