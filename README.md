@@ -28,6 +28,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateMap                            | CreateMap statement                                                 
      xCreateMapFromToLookupDto             | CreateMap from to LookupDto statement                               
      xCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                           
+     xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                     
      xCreateMapToDto                       | CreateMap to Dto statement                                          
      xCrudAppService                       | CrudAppService class                                                
      xCrudMethodsIAppService               | the basic CRUD methods in an IAppService                            

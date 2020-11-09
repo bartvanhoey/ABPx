@@ -130,6 +130,11 @@
     "description": "CreateMap from Dto to UpdateDto statement",
     "prefix": "xCreateMapFromDtoToUpdateDto"
   },
+  "createMapFromToCreateUpdateDto": {
+    "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
+    "description": "CreateMap from Dto to CreateUpdateDto statement",
+    "prefix": "xCreateMapFromDtoToCreateUpdateDto"
+  },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
     "description": "CreateMap to Dto statement",
