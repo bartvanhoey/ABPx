@@ -57,17 +57,6 @@
     "description": "Inserts a DataGridColumn for an enum",
     "prefix": "xDataGridColumnEnum"
   },
-  "dataGridColumnShortDate": {
-    "body": [
-      "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
-      "\t<DisplayTemplate>",
-      "\t\t@context.$2.ToShortDateString()",
-      "\t</DisplayTemplate>",
-      "</DataGridColumn>"
-    ],
-    "description": "Inserts a DataGridColumn in short date format",
-    "prefix": "xDataGridColumnShortDateString"
-  },
   "dataGridColumnLongDate": {
     "body": [
       "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
@@ -79,15 +68,80 @@
     "description": "Inserts a DataGridColumn in long date format",
     "prefix": "xDataGridColumnLongDateString"
   },
+  "dataGridColumnShortDate": {
+    "body": [
+      "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
+      "\t<DisplayTemplate>",
+      "\t\t@context.$2.ToShortDateString()",
+      "\t</DisplayTemplate>",
+      "</DataGridColumn>"
+    ],
+    "description": "Inserts a DataGridColumn in short date format",
+    "prefix": "xDataGridColumnShortDateString"
+  },
   "fieldDate": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <DateEdit TValue=\"DateTime$3\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <DateEdit TValue=\"${3|DateTime,DateTime?|}\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldDate"
+  },
+  "fieldNumeric": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <NumericEdit TValue=\"${3|int, int?, float, long|}\" @bind-Value=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>"
+    ],
+    "description": "Inserts a NumericEdit field in a Create/Update dialog",
+    "prefix": "xFieldNumeric"
+  },
+  "fieldSelect": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
+      "    @foreach (var value in ${4:${2/(.*)/${1:/downcase}/}}List)",
+      "    {",
+      "      <SelectItem TValue=\"$3\" Value=\"@value.Id\">",
+      "          @value.${5:PropertyName}",
+      "      </SelectItem>",
+      "    }",
+      "  </Select>",
+      "</Field>"
+    ],
+    "description": "Inserts a Select field a Create/Update dialog",
+    "prefix": "xFieldSelect"
+  },
+  "fieldSelectEnum": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
+      "    @foreach (int enumValue in Enum.GetValues(typeof($3)))",
+      "    {",
+      "      <SelectItem TValue=\"$3\" Value=\"@(($3)enumValue)\">",
+      "          @L[$\"Enum:$3:{enumValue}\"]",
+      "      </SelectItem>",
+      "    }",
+      "  </Select>",
+      "</Field>"
+    ],
+    "description": "Inserts a Select field for enum in a Create/Update dialog",
+    "prefix": "xFieldSelectEnum"
+  },
+  "fieldText": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <TextEdit @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>"
+    ],
+    "description": "Inserts a TextEdit field in a Create/Update dialog",
+    "prefix": "xFieldText"
   },
   "ifCanCreate": {
     "body": ["@if (canCreate${1:What})", "{", "\t$0", "}"],
@@ -192,60 +246,6 @@
       "}"
     ],
     "prefix": "xListPage"
-  },
-  "fieldNumeric": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <NumericEdit TValue=\"${3:NumericType}\" @bind-Value=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
-    ],
-    "description": "Inserts a NumericEdit field in a Create/Update dialog",
-    "prefix": "xFieldNumeric"
-  },
-  "fieldSelectEnum": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
-      "    @foreach (int enumValue in Enum.GetValues(typeof($3)))",
-      "    {",
-      "      <SelectItem TValue=\"$3\" Value=\"@(($3)enumValue)\">",
-      "          @L[$\"Enum:$3:{enumValue}\"]",
-      "      </SelectItem>",
-      "    }",
-      "  </Select>",
-      "</Field>"
-    ],
-    "description": "Inserts a Select field for enum in a Create/Update dialog",
-    "prefix": "xFieldSelectEnum"
-  },
-  "fieldSelect": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
-      "    @foreach (var value in ${4:${2/(.*)/${1:/downcase}/}}List)",
-      "    {",
-      "      <SelectItem TValue=\"$3\" Value=\"@value.Id\">",
-      "          @value.${5:PropertyName}",
-      "      </SelectItem>",
-      "    }",
-      "  </Select>",
-      "</Field>"
-    ],
-    "description": "Inserts a Select field a Create/Update dialog",
-    "prefix": "xFieldSelect"
-  },
-  "fieldText": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <TextEdit @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
-    ],
-    "description": "Inserts a TextEdit field in a Create/Update dialog",
-    "prefix": "xFieldText"
   },
   "updateModalDialog": {
     "body": [
