@@ -1,24 +1,24 @@
 {
   "addPermissionGroup": {
     "body": "var ${1:name}Group = context.AddGroup(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.GroupName);",
-    "description": "Adds group permission to context",
+    "description": "Adds group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddPermissionGroup"
   },
   "addPermissionToGroup": {
     "body": [
-      "var ${1:name}Permission = ${5:name}Group.AddPermission(${6:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${12:ClassName}.Default, L(\"Permission:${13:$12}\"));",
-      "${2:$1}Permission.AddChild(${7:$6}Permissions.${14:$12}.Create, L(\"Permission:${17:$12}:Create\"));",
-      "${3:$1}Permission.AddChild(${8:$6}Permissions.${15:$12}.Update, L(\"Permission:${18:$12}:Update\"));",
-      "${4:$1}Permission.AddChild(${9:$6}Permissions.${16:$12}.Delete, L(\"Permission:${19:$12}:Delete\"));",
+      "var ${1:name}Permission = ${2:name}Group.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
+      "$1Permission.AddChild($3Permissions.$4.Create, L(\"Permission:$4:Create\"));",
+      "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
+      "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
       "// Translations -> paste in en.json in Domain.Shared\\localization folder",
-      "//\"Permission:${10:$6}\": \"${11:$6}\",",
-      "//\"Permission:${20:$12}\": \"${21:$12} Management\",",
-      "//\"Permission:${22:$12}.Create\": \"Creating new ${25:item}s\",",
-      "//\"Permission:${23:$12}.Update\": \"Editing the ${26:$25}s\",",
-      "//\"Permission:${24:$12}.Delete\": \"Deleting the ${27:$25}s\"$0"
+      "//\"Permission:$3\": \"$3\",",
+      "//\"Permission:$4\": \"$4 Management\",",
+      "//\"Permission:$4.Create\": \"Creating new ${5:item}s\",",
+      "//\"Permission:$4.Update\": \"Editing the $5s\",",
+      "//\"Permission:$4.Delete\": \"Deleting the $5s\"$0"
     ],
-    "description": "Adds permission to group",
+    "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
     "prefix": "xAddPermissionToGroup"
   },
   "addPolicyPermissions": {

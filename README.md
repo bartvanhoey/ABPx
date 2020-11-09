@@ -8,8 +8,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
      Prefix                                | Description                                                         
      ------------------------------------- | -------------------------------------------------------------------- 
-     xAddPermissionGroup                   | Adds group permission to context                                    
-     xAddPermissionToGroup                 | Adds permission to group                                            
+     xAddPermissionGroup                   | Adds group permission to context in PermissionDefinitionProvider.cs 
+     xAddPermissionToGroup                 | Adds permission to group in PermissionDefinitionProvider.cs         
      xAddPolicyPermissions                 | Adds policy permissions                                             
      xAuthorizeAttribute                   | Authorize attribute                                                 
      xBuilderEntity                        | builder.Entity stub                                                 
