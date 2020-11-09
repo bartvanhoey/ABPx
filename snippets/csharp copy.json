@@ -23,18 +23,18 @@
   },
   "addPolicyPermissions": {
     "body": [
-      "\tGetPolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$1.${2:ClassName}.Default;",
-      "\tGetListPolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Default;",
-      "\tCreatePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Create;",
-      "\tUpdatePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Update;",
-      "\tDeletePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Delete;"
+      "\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions$1.${2:ClassName}.Default;",
+      "\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Default;",
+      "\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Create;",
+      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Update;",
+      "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Delete;"
     ],
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
   "authorizeAttribute": {
     "body": [
-      "[Authorize$1(${2:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
+      "[Authorize$1(${2:${WORKSPACE_NAME/Project//}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
     ],
     "description": "Authorize attribute",
     "prefix": "xAuthorizeAttribute"
@@ -43,7 +43,7 @@
     "body": [
       "builder.Entity<${1:ClassName}>(b =>",
       "{",
-      "\tb.ToTable(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Consts.DbSchema);",
+      "\tb.ToTable(${WORKSPACE_NAME/Project//}Consts.DbTablePrefix + \"${2:$1}s\", ${WORKSPACE_NAME/Project//}Consts.DbSchema);",
       "\tb.ConfigureByConvention$4();",
       "",
       "\t$5//b.Property(x => x.Name).IsRequired().HasMaxLength(${3:$1}Consts$6.MaxNameLength);",
@@ -62,7 +62,7 @@
   },
   "canCreate": {
     "body": [
-      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${2:ClassName}.Create);",
+      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Create);",
       "protected bool canCreate${3:$1};$0"
     ],
     "description": "Boolean canCreate variable and checks if Create is granted",
@@ -71,22 +71,22 @@
   "canCrudMethods": {
     "body": [
       "// using Microsoft.AspNetCore.Authorization;",
-      "// using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions;",
+      "// using ${WORKSPACE_NAME}.Permissions;",
       "",
       "$0protected bool canCreate$1;",
       "protected bool canUpdate$1;",
       "protected bool canDelete$1;",
       "",
-      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${2:$1}.Create);",
-      "canUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Update);",
-      "canDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$2.Delete);"
+      "canCreate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:$1}.Create);",
+      "canUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.$2.Update);",
+      "canDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.$2.Delete);"
     ],
     "description": "Checks if CRUD methods are granted",
     "prefix": "xCanCrudMethods"
   },
   "canDelete": {
     "body": [
-      "canDelete${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${2:ClassName}.Delete);",
+      "canDelete${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Delete);",
       "protected bool canDelete${3:$1};$0"
     ],
     "description": "Boolean canDelete variable and checks if Delete is granted",
@@ -94,7 +94,7 @@
   },
   "canUpdate": {
     "body": [
-      "canUpdate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${2:ClassName}.Update);",
+      "canUpdate${1:Name} = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/Project//}Permissions.${2:ClassName}.Update);",
       "protected bool canUpdate${3:$1};$0"
     ],
     "description": "boolean canUpdate variable and checks if Edit/Update is granted",
@@ -141,11 +141,11 @@
       "{",
       "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)",
       "\t{",
-      "\t\tGetPolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${12:ClassName}.Default;",
-      "\t\tGetListPolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$12.Default;",
-      "\t\tCreatePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$12.Create;",
-      "\t\tUpdatePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$12.Update;",
-      "\t\tDeletePolicyName = ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$12.Delete;",
+      "\t\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;",
+      "\t\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Default;",
+      "\t\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Create;",
+      "\t\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Update;",
+      "\t\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Delete;",
       "\t}",
       "}$0"
     ],
@@ -180,7 +180,7 @@
   "ctorBusinessException": {
     "body": [
       "public ${TM_FILENAME_BASE}(${1:string} ${2:name})",
-      "\t: base(${3:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
+      "\t: base(${3:${WORKSPACE_NAME/Project//}}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
       "{",
       "\tWithData$5(\"${6:$2}\", ${7:$2});",
       "}"
@@ -200,7 +200,7 @@
   },
   "efCoreRepositoryClassStub": {
     "body": [
-      "public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}DbContext, ${4:$1}$5, ${6:TypePrimaryKey}$7>, I${8:$1}Repository$11",
+      "public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME/Project//}}DbContext, ${4:$1}$5, ${6:TypePrimaryKey}$7>, I${8:$1}Repository$11",
       "{",
       "public EfCoreAuthorRepository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
       "{",
@@ -267,9 +267,9 @@
   },
   "ifIsGrantedAsync": {
     "body": [
-      "// using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions;",
+      "// using ${WORKSPACE_NAME/Project//}.Permissions;",
       "// \"Menu:${9:$3}\": \"Menu$3\", ",
-      "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}Permissions$2.${3:ClassName}.Default))",
+      "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/Project//}}Permissions$2.${3:ClassName}.Default))",
       "{",
       "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${5:$3}sMenu\", l[\"${6:Menu}:${7:$3}\"], url: \"/${8:${3/(.*)/${1:/downcase}/}}s\");",
       "\t${10:menuName}.AddItem($4sMenu);",
@@ -369,13 +369,13 @@
   },
   "inheritsAppService": {
     "body": [
-      " : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}AppService$0"
+      " : ${1:${WORKSPACE_NAME/Project//}}AppService$0"
     ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
   "inheritsApplicationTestBase": {
-    "body": " : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}ApplicationTestBase$0",
+    "body": " : ${1:${WORKSPACE_NAME/Project//}}ApplicationTestBase$0",
     "description": "Inherits ApplicationTestBase class",
     "prefix": "xInhApplicationTestBase"
   },

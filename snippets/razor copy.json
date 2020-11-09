@@ -1,8 +1,8 @@
 {
   "authorizeAttribute": {
     "body": [
-      "@attribute [Authorize(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${1:ClassName}.Default)]",
-      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions",
+      "@attribute [Authorize(${WORKSPACE_NAME/Project//}Permissions.${1:ClassName}.Default)]",
+      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME/Project//}.Permissions",
       "@* @using Microsoft.AspNetCore.Authorization *@"
     ],
     "prefix": "xAuthorizeAttribute"
@@ -172,12 +172,12 @@
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
-      "@using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Domain",
-      "@using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Localization",
-      "@using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions",
+      "@using ${WORKSPACE_NAME}.Domain",
+      "@using ${WORKSPACE_NAME}.Localization",
+      "@using ${WORKSPACE_NAME}.Permissions",
       "@using Microsoft.AspNetCore.Authorization",
       "@using Microsoft.Extensions.Localization",
-      "@inject IStringLocalizer<${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Resource> L",
+      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
       "@inherits AbpCrudPageBase<I${1:TypeName}AppService, $1Dto, int, PagedAndSortedResultRequestDto, Create$1Dto, Update$1Dto>",
       "",
       "<Card>",
@@ -239,9 +239,9 @@
       "  {",
       "    await base.OnInitializedAsync();",
       "",
-      "    canCreate$1 =await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Create);",
-      "    canUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Update);",
-      "    canDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Delete);",
+      "    canCreate$1 =await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Create);",
+      "    canUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Update);",
+      "    canDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Delete);",
       "  }",
       "}"
     ],
