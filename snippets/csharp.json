@@ -24,10 +24,10 @@
   "addPolicyPermissions": {
     "body": [
       "\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions$1.${2:ClassName}.Default;",
-      "\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${3:$2}.Default;",
-      "\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${4:$2}.Create;",
-      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${5:$2}.Update;",
-      "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${6:$2}.Delete;"
+      "\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Default;",
+      "\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Create;",
+      "\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Update;",
+      "\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$2.Delete;"
     ],
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
@@ -141,11 +141,11 @@
       "{",
       "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)",
       "\t{",
-      "\t\t// GetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;",
-      "\t\t// GetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${13:$12}.Default;",
-      "\t\t// CreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${14:$12}.Create;",
-      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${15:$12}.Edit;",
-      "\t\t// DeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.${16:$12}.Delete;",
+      "\t\tGetPolicyName = ${WORKSPACE_NAME/Project//}Permissions.${12:ClassName}.Default;",
+      "\t\tGetListPolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Default;",
+      "\t\tCreatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Create;",
+      "\t\tUpdatePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Update;",
+      "\t\tDeletePolicyName = ${WORKSPACE_NAME/Project//}Permissions.$12.Delete;",
       "\t}",
       "}$0"
     ],
