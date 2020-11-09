@@ -121,7 +121,7 @@
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
-      "    @foreach (var value in Enum.GetValues(typeof($3)))",
+      "    @foreach (int value in Enum.GetValues(typeof($3)))",
       "    {",
       "      <SelectItem TValue=\"$3\" Value=\"@(($3)value)\">",
       "          @L[$\"Enum:$3:{value}\"]",
