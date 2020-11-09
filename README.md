@@ -85,23 +85,25 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
-     Prefix                   | Description                                              
-     ------------------------ | --------------------------------------------------------- 
-     xAuthorizeAttribute      | xAuthorizeAttribute                                      
-     xCode                    | @code block                                              
-     xCreateModalDialog       | Create modal dialog                                      
-     xDataGridColumn          | DataGridColumn                                           
-     xDataGridColumnEnum      | DataGridColumn                                           
-     xFieldDate               | Inserts a TextEdit field in a Create/Update dialog       
-     xIfCanCreate             | If CanCreate                                             
-     xIfCanDelete             | If CanDelete                                             
-     xIfCanUpdate             | If CanUpdate                                             
-     xInjAuthorizationService | xInjAuthorizationService                                 
-     xListPage                | xListPage                                                
-     xFieldNumeric            | Inserts a NumericEdit field in a Create/Update dialog    
-     xFieldSelectEnum         | Inserts a Select field for enum in a Create/Update dialog
-     xFieldSelect             | Inserts a Select field a Create/Update dialog            
-     xFieldText               | Inserts a TextEdit field in a Create/Update dialog       
-     xUpdateModalDialog       | Update modal dialog                                      
+     Prefix                         | Description                                              
+     ------------------------------ | --------------------------------------------------------- 
+     xAuthorizeAttribute            | xAuthorizeAttribute                                      
+     xCode                          | @code block                                              
+     xCreateModalDialog             | Create modal dialog                                      
+     xDataGridColumn                | Inserts a DataGridColumn                                 
+     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                     
+     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format            
+     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format             
+     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog       
+     xIfCanCreate                   | If CanCreate                                             
+     xIfCanDelete                   | If CanDelete                                             
+     xIfCanUpdate                   | If CanUpdate                                             
+     xInjAuthorizationService       | xInjAuthorizationService                                 
+     xListPage                      | xListPage                                                
+     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog    
+     xFieldSelectEnum               | Inserts a Select field for enum in a Create/Update dialog
+     xFieldSelect                   | Inserts a Select field a Create/Update dialog            
+     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog       
+     xUpdateModalDialog             | Update modal dialog                                      
 
 
