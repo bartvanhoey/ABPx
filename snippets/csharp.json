@@ -480,18 +480,18 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
-  "permissionsClass": {
+  "addPermissionName0": {
     "body": [
       "public static class ${1:ClassName}",
       "{",
       "\tpublic const string Default = GroupName + \".${2:$1}\";",
       "\tpublic const string Create = Default + \".Create\";",
-      "\tpublic const string Edit = Default+ \".Edit\";",
+      "\tpublic const string Update = Default+ \".Update\";",
       "\tpublic const string Delete = Default + \".Delete\";",
       "}$0"
     ],
-    "description": "a permissions class with Default/Create/Edit/Delete constants",
-    "prefix": "xPermissionsClass"
+    "description": "adds a permissions class with Default/Create/Update/Delete constants",
+    "prefix": "xAddPermissionName"
   },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
