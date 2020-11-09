@@ -2,6 +2,10 @@
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 
+
+PRO TIP: Rename the aspnet-core folder of your abp.io to [Your-Project-Name] To take full advantage of ABPx
+
+
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
      Prefix                                | Description                                                         
