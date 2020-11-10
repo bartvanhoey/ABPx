@@ -216,21 +216,6 @@
     "description": "CrudAppService class",
     "prefix": "xCrudAppService"
   },
-  "crudMethodsIAppService": {
-    "body": [
-      "Task$2<${1:ClassName}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
-      "",
-      "Task<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
-      "",
-      "Task<$1Dto> CreateAsync(Create$1Dto$8 input);",
-      "",
-      "Task UpdateAsync($3 id, Update$1Dto$9 input);",
-      "",
-      "Task DeleteAsync($3 id);$0"
-    ],
-    "description": "the basic CRUD methods in an IAppService",
-    "prefix": "xCrudMethodsIAppService"
-  },
   "ctor": {
     "body": [
       "${1|private,internal,protected,public|} ${TM_FILENAME_BASE}($2)",
@@ -315,6 +300,21 @@
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "description": "a GroupName constant",
     "prefix": "xGroupNamePermissionConst"
+  },
+  "iAppServiceCrudMethods": {
+    "body": [
+      "Task$2<${1:ClassName}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
+      "",
+      "Task<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
+      "",
+      "Task<$1Dto> CreateAsync(Create$1Dto$8 input);",
+      "",
+      "Task UpdateAsync($3 id, Update$1Dto$9 input);",
+      "",
+      "Task DeleteAsync($3 id);$0"
+    ],
+    "description": "the basic CRUD methods in an IAppService",
+    "prefix": "xIAppServiceCrudMethods"
   },
   "iCrudAppService": {
     "body": [

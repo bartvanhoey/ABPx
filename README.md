@@ -40,7 +40,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                           
      xCreateMapToDto                       | CreateMap to Dto statement                                          
      xCrudAppService                       | CrudAppService class                                                
-     xCrudMethodsIAppService               | the basic CRUD methods in an IAppService                            
      xCtor                                 | constructor stub                                                    
      xCtorBusinessException                | constructor stub in a class derived from BusinessException          
      xDataTypeAttribute                    | DataType attribute                                                  
@@ -52,6 +51,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetLookupIAppService                 | Adds a GetLookupAsync method to an IAppService interface            
      xGetRequiredAppService                | GetRequiredService and an IAppService field                         
      xGroupNamePermissionConst             | a GroupName constant                                                
+     xIAppServiceCrudMethods               | the basic CRUD methods in an IAppService                            
      xICrudAppService                      | an ICrudAppService interface                                        
      xIRepository                          | an IRepository for a type parameter                                 
      xIfInline                             | Inline if statement                                                 
