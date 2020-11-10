@@ -605,7 +605,7 @@
     "prefix": "xTestCreateAsync"
   },
   "testGetListAsync": {
-    "body": "var result = await _${1:name}AppService.GetListAsync(new PagedAndSortedResultRequestDto$2());$0",
+    "body": "var result = await _${1:name}AppService.GetListAsync(${2:new PagedAndSortedResultRequestDto}$3());$0",
     "description": "var result = await AppService.GetListAsync statement",
     "prefix": "xTestGetListAsync"
   },
