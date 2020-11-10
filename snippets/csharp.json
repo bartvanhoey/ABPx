@@ -563,10 +563,10 @@
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "returnObjectMapperMap": {
+  "objectMapperMapReturn": {
     "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
     "description": "return ObjectMapper.Map statement",
-    "prefix": "xReturnObjectMapperMap"
+    "prefix": "xObjectMapperMapReturn"
   },
   "stringLengthAttribute": {
     "body": [

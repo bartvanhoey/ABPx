@@ -89,7 +89,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPropPrivateSetter                    | property with private setter                                        
      xRepoInsertAsync                      | repository.InsertAsync statement                                    
      xRequiredAttribute                    | Required Attribute                                                  
-     xReturnObjectMapperMap                | return ObjectMapper.Map statement                                   
+     xObjectMapperMapReturn                | return ObjectMapper.Map statement                                   
      xStringLengthAttribute                | StringLength attribute                                              
      xTestAssertThrowsException            | Assert.Throws AbpValidationException                                
      xTestCreateAsync                      | var result = await AppService.CreateAsync statement                 
