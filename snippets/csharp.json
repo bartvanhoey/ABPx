@@ -83,9 +83,7 @@
     "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
-    "body": [
-      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
-    ],
+    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -130,19 +128,49 @@
     "prefix": "xCanUpdate"
   },
   "checkNotNull": {
-    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}));$0",
     "description": "Check.NotNull statement",
     "prefix": "xCheckNotNull"
   },
+  "checkNotNullMaxLength": {
+    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647});$0",
+    "description": "Check.NotNull (+ MaxLength) statement",
+    "prefix": "xCheckNotNullMaxLength"
+  },
+  "checkNotNullMaxMinLength": {
+    "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "description": "Check.NotNull (+ Max/MinLength) statement",
+    "prefix": "xCheckNotNullMaxMinLength"
+  },
   "checkNotNullOrEmpty": {
-    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}));$0",
     "description": "Check.NotNullOrEmpty statement",
     "prefix": "xCheckNotNullOrEmpty"
   },
+  "checkNotNullOrEmptyMaxLength": {
+    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647});$0",
+    "description": "Check.NotNullOrEmpty (+ MaxLength) statement",
+    "prefix": "xCheckNotNullOrEmptyMaxLength"
+  },
+  "checkNotNullOrEmptyMaxMinLength": {
+    "body": "Check$1.NotNullOrEmpty(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "description": "Check.NotNullOrEmpty (+ Max/MinLength) statement",
+    "prefix": "xCheckNotNullOrEmptyMaxMinLength"
+  },
   "checkNotNullOrWhiteSpace": {
-    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}));$0",
     "description": "Check.NotNullOrWhiteSpace statement",
     "prefix": "xCheckNotNullOrWhiteSpace"
+  },
+  "checkNotNullOrWhiteSpaceMaxLength": {
+    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647});$0",
+    "description": "Check.NotNullOrWhiteSpace (+ MaxLength) statement",
+    "prefix": "xCheckNotNullOrWhiteSpaceMaxLength"
+  },
+  "checkNotNullOrWhiteSpaceMaxMinLength": {
+    "body": "Check$1.NotNullOrWhiteSpace(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
+    "description": "Check.NotNullOrWhiteSpace (+ Max/MinLength) statement",
+    "prefix": "xCheckNotNullOrWhiteSpaceMaxMinLength"
   },
   "createMap": {
     "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
@@ -302,10 +330,7 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -323,40 +348,22 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -371,13 +378,7 @@
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -412,9 +413,7 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [
-      " : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}AppService$0"
-    ],
+    "body": [" : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}AppService$0"],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
@@ -497,9 +496,7 @@
     "prefix": "xLookupListAppService"
   },
   "notNullAttribute": {
-    "body": [
-      "[NotNull$1] ${2:string} ${3:name}$0"
-    ],
+    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -527,9 +524,7 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1] $0"
-    ],
+    "body": ["[Required$1] $0"],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
@@ -539,9 +534,7 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
-    "body": [
-      "[StringLength(${1:50})$2]$0"
-    ],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },

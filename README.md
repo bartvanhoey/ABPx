@@ -26,8 +26,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCanDelete                            | Boolean canDelete variable and checks if Delete is granted          
      xCanUpdate                            | boolean canUpdate variable and checks if Edit/Update is granted     
      xCheckNotNull                         | Check.NotNull statement                                             
+     xCheckNotNullMaxLength                | Check.NotNull (+ MaxLength) statement                               
+     xCheckNotNullMaxMinLength             | Check.NotNull (+ Max/MinLength) statement                           
      xCheckNotNullOrEmpty                  | Check.NotNullOrEmpty statement                                      
+     xCheckNotNullOrEmptyMaxLength         | Check.NotNullOrEmpty (+ MaxLength) statement                        
+     xCheckNotNullOrEmptyMaxMinLength      | Check.NotNullOrEmpty (+ Max/MinLength) statement                    
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                                 
+     xCheckNotNullOrWhiteSpaceMaxLength    | Check.NotNullOrWhiteSpace (+ MaxLength) statement                   
+     xCheckNotNullOrWhiteSpaceMaxMinLength | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement               
      xCreateMap                            | CreateMap statement                                                 
      xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                     
      xCreateMapFromToLookupDto             | CreateMap from to LookupDto statement                               
