@@ -41,6 +41,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xDbSet                                | DbSet for a class statement                                         
      xEfCoreRepositoryClassStub            | CreateMap EfCoreRepositoryClass stub                                
      xGetListAsyncIRepository              | Adds a GetListAsync method to an IRepository interface              
+     xFindByNameAsyncIRepository           | Adds a FindByNameAsync method to an IRepository interface           
      xGetLookupAppService                  | Adds a GetLookupAsync method to an AppService class                 
      xGetLookupIAppService                 | Adds a GetLookupAsync method to an IAppService interface            
      xGetRequiredAppService                | GetRequiredService and an IAppService field                         

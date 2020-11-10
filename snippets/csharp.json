@@ -251,6 +251,11 @@
     "description": "Adds a GetListAsync method to an IRepository interface",
     "prefix": "xGetListAsyncIRepository"
   },
+  "findByNameAsyncIRepository": {
+    "body": "Task$2<${1:Type}> FindByName(string name);$0",
+    "description": "Adds a FindByNameAsync method to an IRepository interface",
+    "prefix": "xFindByNameAsyncIRepository"
+  },
   "getLookupAppService": {
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
