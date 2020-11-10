@@ -270,18 +270,18 @@
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
-  "ifIsGrantedAsync": {
+  "ifIsGrantedAsyncApplicationMenuItem": {
     "body": [
-      "// using ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions;",
-      "// \"Menu:${9:$3}\": \"Menu$3\", ",
-      "if (await context.IsGrantedAsync(${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}Permissions$2.${3:ClassName}.Default))",
+      "// using ${WORKSPACE_NAME}.Permissions;",
+      "// \"Menu:$3s\": \"$3s\", ",
+      "if (await context.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${5:$3}sMenu\", l[\"${6:Menu}:${7:$3}\"], url: \"/${8:${3/(.*)/${1:/downcase}/}}s\");",
-      "\t${10:menuName}.AddItem($4sMenu);",
+      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"$3sMenu\", l[\"Menu:$3s\"], url: \"/${5:${3/(.*)/${1:/downcase}/}}s\");",
+      "\t${6:menuName}.AddItem($4sMenu);",
       "}$0"
     ],
     "description": "if IsGranted permission statement",
-    "prefix": "xIfIsGrantedAsync"
+    "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
     "body": [
@@ -457,21 +457,21 @@
     "description": "Inserts an IReadOnlyList for a LookupDto object",
     "prefix": "xLookupListAppService"
   },
-  "menuItemIcon": {
+  "applicationMenuItemIcon": {
     "body": [
       "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
-      "// \"Menu:$1\": \"$1\""
+      "// \"Menu:$1s\": \"$1s\""
     ],
     "description": "New ApplicationMenuItem variable with icon",
-    "prefix": "xMenuItemIcon"
+    "prefix": "xApplicationMenuItemIcon"
   },
-  "menuItemUrl": {
+  "applicationMenuItemUrl": {
     "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}\");",
-      "// \"Menu:$1\": \"$1\""
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}s\");",
+      "// \"Menu:$1s\": \"$1s\""
     ],
     "description": "New ApplicationMenuItem variable with url",
-    "prefix": "xMenuItemUrl"
+    "prefix": "xApplicationMenuItemUrl"
   },
   "notNullAttribute": {
     "body": [

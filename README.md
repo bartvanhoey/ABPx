@@ -44,7 +44,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xICrudAppService                      | an ICrudAppService interface                                        
      xIRepository                          | an IRepository for a type parameter                                 
      xIfInline                             | Inline if statement                                                 
-     xIfIsGrantedAsync                     | if IsGranted permission statement                                   
+     xIfIsGrantedAsyncApplicationMenuItem  | if IsGranted permission statement                                   
      xIfNotNullInline                      | Inline if not null statement                                        
      xIfNotNull                            | If not null statement                                               
      xIfNullInline                         | Inline if not null statement                                        
@@ -73,8 +73,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                                 
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                       
      xLookupListAppService                 | Inserts an IReadOnlyList for a LookupDto object                     
-     xMenuItemIcon                         | New ApplicationMenuItem variable with icon                          
-     xMenuItemUrl                          | New ApplicationMenuItem variable with url                           
+     xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                          
+     xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                           
      xNotNullAttribute                     | NotNull attribute                                                   
      xObjectMapperMap                      | ObjectMapper.Map statement                                          
      xAddPermissionName                    | adds a permissions class with Default/Create/Update/Delete constants
