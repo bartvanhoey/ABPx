@@ -589,7 +589,7 @@
       "",
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$8(mem => mem == \"${9:$5}\"));"
     ],
-    "description": "Assert.Throws AbpValidationException",
+    "description": "Inserts var exception = Assert.ThrowsAsync AbpValidationException",
     "prefix": "xTestAssertThrowsException"
   },
   "testCreateAsync": {
@@ -601,12 +601,12 @@
       "\t}",
       ");$0"
     ],
-    "description": "var result = await AppService.CreateAsync statement",
+    "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xTestCreateAsync"
   },
   "testGetListAsync": {
     "body": "var result = await _${1:name}AppService.GetListAsync(new ${2:PagedAndSortedResultRequestDto}$3());$0",
-    "description": "var result = await AppService.GetListAsync statement",
+    "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xTestGetListAsync"
   },
   "testResultTotalCountShouldBeGreater": {

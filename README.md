@@ -91,9 +91,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRequiredAttribute                    | Required Attribute                                                  
      xObjectMapperMapReturn                | return ObjectMapper.Map statement                                   
      xStringLengthAttribute                | StringLength attribute                                              
-     xTestAssertThrowsException            | Assert.Throws AbpValidationException                                
-     xTestCreateAsync                      | var result = await AppService.CreateAsync statement                 
-     xTestGetListAsync                     | var result = await AppService.GetListAsync statement                
+     xTestAssertThrowsException            | Inserts var exception = Assert.ThrowsAsync AbpValidationException   
+     xTestCreateAsync                      | Inserts var result = await AppService.CreateAsync statement         
+     xTestGetListAsync                     | Inserts var result = await AppService.GetListAsync statement        
      xTestResultTotalCountShouldBeGreater  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement      
      xTestMethodStub                       | a xUnit test method stub                                            
 
