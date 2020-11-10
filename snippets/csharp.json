@@ -609,6 +609,11 @@
     "description": "var result = await AppService.GetListAsync statement",
     "prefix": "xTestGetListAsync"
   },
+  "testResultTotalCountShouldBeGreater": {
+    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo(${1:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
+    "prefix": "xTestResultTotalCountShouldBeGreater"
+  },
   "testMethodStub": {
     "body": [
       "[Fact$1]",
