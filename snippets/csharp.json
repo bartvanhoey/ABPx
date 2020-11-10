@@ -83,7 +83,9 @@
     "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -274,15 +276,15 @@
     "description": "CreateMap EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
   },
-  "getListAsyncIRepository": {
-    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync method to an IRepository interface",
-    "prefix": "xGetListAsyncIRepository"
-  },
   "findByNameAsyncIRepository": {
     "body": "Task$2<${1:Type}> FindByName(string name);$0",
     "description": "Adds a FindByNameAsync method to an IRepository interface",
     "prefix": "xFindByNameAsyncIRepository"
+  },
+  "getListAsyncIRepository": {
+    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
+    "description": "Adds a GetListAsync method to an IRepository interface",
+    "prefix": "xGetListAsyncIRepository"
   },
   "getLookupAppService": {
     "body": [
@@ -330,7 +332,10 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -348,22 +353,40 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -378,7 +401,13 @@
     "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -413,7 +442,9 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [" : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}AppService$0"],
+    "body": [
+      " : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
@@ -496,7 +527,9 @@
     "prefix": "xLookupListAppService"
   },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -524,7 +557,9 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
@@ -534,7 +569,9 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
