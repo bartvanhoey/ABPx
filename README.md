@@ -92,7 +92,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xObjectMapperMapReturn                | return ObjectMapper.Map statement                                   
      xStringLengthAttribute                | StringLength attribute                                              
      xTestAssertThrowsException            | Inserts var exception = Assert.ThrowsAsync AbpValidationException   
-     xTestAssertThrowsException            | Inserts var exception = Assert.ThrowsAsync YourCustomException      
+     xTestAssertThrowsCustomException      | Inserts var exception = Assert.ThrowsAsync YourCustomException      
      xTestCreateAsync                      | Inserts var result = await AppService.CreateAsync statement         
      xTestGetListAsync                     | Inserts var result = await AppService.GetListAsync statement        
      xTestResultTotalCountShouldBeGreater  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement      

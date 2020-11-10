@@ -605,7 +605,7 @@
       "});"
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync YourCustomException",
-    "prefix": "xTestAssertThrowsException"
+    "prefix": "xTestAssertThrowsCustomException"
   },
   "testCreateAsync": {
     "body": [
