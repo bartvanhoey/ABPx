@@ -449,7 +449,7 @@
     "prefix": "xInhAppService"
   },
   "inheritsApplicationTestBase": {
-    "body": " : ${1:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}ApplicationTestBase$0",
+    "body": " : ${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}ApplicationTestBase$0",
     "description": "Inherits ApplicationTestBase class",
     "prefix": "xInhApplicationTestBase"
   },
