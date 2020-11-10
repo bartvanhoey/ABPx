@@ -63,9 +63,9 @@
   },
   "authorizeAttribute": {
     "body": [
-      "[Authorize$1(${2:${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}}Permissions$3.${4:ClassName}.${5|Default,Create,Edit,Delete|})]$0"
+      "[Authorize$1(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$3.${4:ClassName}.${5|Default,Create,Update,Delete|})]$0"
     ],
-    "description": "Authorize attribute",
+    "description": "Inserts the Authorize attribute for a class or a method",
     "prefix": "xAuthorizeAttribute"
   },
   "builderEntity": {

@@ -18,7 +18,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPolicyPermissions                 | Adds policy permissions                                             
      xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                          
      xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                           
-     xAuthorizeAttribute                   | Authorize attribute                                                 
+     xAuthorizeAttribute                   | Inserts the Authorize attribute for a class or a method             
      xBuilderEntity                        | builder.Entity stub                                                 
      xCanBeNullAttribute                   | CanBeNull attribute                                                 
      xCanCreate                            | Boolean canCreate variable and checks if Create is granted          
