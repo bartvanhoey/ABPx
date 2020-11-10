@@ -4,6 +4,19 @@
     "description": "Adds group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddPermissionGroup"
   },
+  "addPermissionName0": {
+    "body": [
+      "public static class ${1:ClassName}",
+      "{",
+      "\tpublic const string Default = GroupName + \".$1\";",
+      "\tpublic const string Create = Default + \".Create\";",
+      "\tpublic const string Update = Default+ \".Update\";",
+      "\tpublic const string Delete = Default + \".Delete\";",
+      "}$0"
+    ],
+    "description": "adds a permissions class with Default/Create/Update/Delete constants",
+    "prefix": "xAddPermissionName"
+  },
   "addPermissionToGroup": {
     "body": [
       "var ${1:name}Permission = ${2:name}Group.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
@@ -31,6 +44,22 @@
     ],
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
+  },
+  "applicationMenuItemIcon": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
+      "// \"Menu:$1s\": \"$1s\""
+    ],
+    "description": "New ApplicationMenuItem variable with icon",
+    "prefix": "xApplicationMenuItemIcon"
+  },
+  "applicationMenuItemUrl": {
+    "body": [
+      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}s\");",
+      "// \"Menu:$1s\": \"$1s\""
+    ],
+    "description": "New ApplicationMenuItem variable with url",
+    "prefix": "xApplicationMenuItemUrl"
   },
   "authorizeAttribute": {
     "body": [
@@ -120,6 +149,11 @@
     "description": "CreateMap statement",
     "prefix": "xCreateMap"
   },
+  "createMapFromToCreateUpdateDto": {
+    "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
+    "description": "CreateMap from Dto to CreateUpdateDto statement",
+    "prefix": "xCreateMapFromDtoToCreateUpdateDto"
+  },
   "createMapFromToLookupDto": {
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
     "description": "CreateMap from to LookupDto statement",
@@ -129,11 +163,6 @@
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
     "description": "CreateMap from Dto to UpdateDto statement",
     "prefix": "xCreateMapFromDtoToUpdateDto"
-  },
-  "createMapFromToCreateUpdateDto": {
-    "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
-    "description": "CreateMap from Dto to CreateUpdateDto statement",
-    "prefix": "xCreateMapFromDtoToCreateUpdateDto"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -216,6 +245,11 @@
     ],
     "description": "CreateMap EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
+  },
+  "getListAsyncIRepository": {
+    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
+    "description": "Adds a GetListAsync method to an IRepository interface",
+    "prefix": "xGetListAsyncIRepository"
   },
   "getLookupAppService": {
     "body": [
@@ -457,22 +491,6 @@
     "description": "Inserts an IReadOnlyList for a LookupDto object",
     "prefix": "xLookupListAppService"
   },
-  "applicationMenuItemIcon": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], icon: \"${4:fa fa-book}\");",
-      "// \"Menu:$1s\": \"$1s\""
-    ],
-    "description": "New ApplicationMenuItem variable with icon",
-    "prefix": "xApplicationMenuItemIcon"
-  },
-  "applicationMenuItemUrl": {
-    "body": [
-      "var ${3:${1/^([A-Z])/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:${2:$1}s\"], url: \"/${4:${1/(.*)/${1:/downcase}/}}s\");",
-      "// \"Menu:$1s\": \"$1s\""
-    ],
-    "description": "New ApplicationMenuItem variable with url",
-    "prefix": "xApplicationMenuItemUrl"
-  },
   "notNullAttribute": {
     "body": [
       "[NotNull$1] ${2:string} ${3:name}$0"
@@ -484,19 +502,6 @@
     "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
-  },
-  "addPermissionName0": {
-    "body": [
-      "public static class ${1:ClassName}",
-      "{",
-      "\tpublic const string Default = GroupName + \".$1\";",
-      "\tpublic const string Create = Default + \".Create\";",
-      "\tpublic const string Update = Default+ \".Update\";",
-      "\tpublic const string Delete = Default + \".Delete\";",
-      "}$0"
-    ],
-    "description": "adds a permissions class with Default/Create/Update/Delete constants",
-    "prefix": "xAddPermissionName"
   },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",

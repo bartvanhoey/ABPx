@@ -13,8 +13,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      Prefix                                | Description                                                         
      ------------------------------------- | -------------------------------------------------------------------- 
      xAddPermissionGroup                   | Adds group permission to context in PermissionDefinitionProvider.cs 
+     xAddPermissionName                    | adds a permissions class with Default/Create/Update/Delete constants
      xAddPermissionToGroup                 | Adds permission to group in PermissionDefinitionProvider.cs         
      xAddPolicyPermissions                 | Adds policy permissions                                             
+     xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                          
+     xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                           
      xAuthorizeAttribute                   | Authorize attribute                                                 
      xBuilderEntity                        | builder.Entity stub                                                 
      xCanBeNullAttribute                   | CanBeNull attribute                                                 
@@ -26,9 +29,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrEmpty                  | Check.NotNullOrEmpty statement                                      
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                                 
      xCreateMap                            | CreateMap statement                                                 
+     xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                     
      xCreateMapFromToLookupDto             | CreateMap from to LookupDto statement                               
      xCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                           
-     xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                     
      xCreateMapToDto                       | CreateMap to Dto statement                                          
      xCrudAppService                       | CrudAppService class                                                
      xCrudMethodsIAppService               | the basic CRUD methods in an IAppService                            
@@ -37,6 +40,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xDataTypeAttribute                    | DataType attribute                                                  
      xDbSet                                | DbSet for a class statement                                         
      xEfCoreRepositoryClassStub            | CreateMap EfCoreRepositoryClass stub                                
+     xGetListAsyncIRepository              | Adds a GetListAsync method to an IRepository interface              
      xGetLookupAppService                  | Adds a GetLookupAsync method to an AppService class                 
      xGetLookupIAppService                 | Adds a GetLookupAsync method to an IAppService interface            
      xGetRequiredAppService                | GetRequiredService and an IAppService field                         
@@ -73,11 +77,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                                 
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                       
      xLookupListAppService                 | Inserts an IReadOnlyList for a LookupDto object                     
-     xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                          
-     xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                           
      xNotNullAttribute                     | NotNull attribute                                                   
      xObjectMapperMap                      | ObjectMapper.Map statement                                          
-     xAddPermissionName                    | adds a permissions class with Default/Create/Update/Delete constants
      xPropPrivateSetter                    | property with private setter                                        
      xRepoInsertAsync                      | repository.InsertAsync statement                                    
      xRequiredAttribute                    | Required Attribute                                                  
