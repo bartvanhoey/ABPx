@@ -591,6 +591,21 @@
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync AbpValidationException",
     "prefix": "xTestAssertThrowsException"
+  },  
+  "testAssertThrowsYourCustomException": {
+    "body": [
+      "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
+      "{",
+      "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
+      "\t\tnew ${5:Name}Dto",
+      "\t\t{",
+      "\t\t\t${6:PropertyName} = ${7:PropertyValue}$8",
+      "\t\t}",
+      "\t);",
+      "});"
+    ],
+    "description": "Inserts var exception = Assert.ThrowsAsync YourCustomException",
+    "prefix": "xTestAssertThrowsException"
   },
   "testCreateAsync": {
     "body": [
