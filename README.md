@@ -60,7 +60,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIfNotNull                            | If not null statement                                               
      xIfNullInline                         | Inline if not null statement                                        
      xIfNull                               | If null statement                                                   
-     xIfRepoGetCountAsyncLessOrEqualToZero | Repository.GetCountAsync less or equal to zero statement            
+     xIfRepoGetCountAsync                  | Inserts if(await _repository.GetCountAsync() ? 0) statement         
      xIf                                   | If statement                                                        
      xImpIApplicationService               | Implements IApplicationService interface                            
      xImpIDataSeedContributor              | Implements IDataSeedContributor interface                           

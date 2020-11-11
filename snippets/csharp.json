@@ -390,15 +390,15 @@
     "description": "If null statement",
     "prefix": "xIfNull"
   },
-  "ifRepositoryGetCountAsyncLessEqualZero": {
+  "ifRepositoryGetCountAsync": {
     "body": [
-      "if (await _${1:name}Repository.GetCountAsync$2() <= 0)",
+      "if (await _${1:name}Repository.GetCountAsync$2() ${3|<,<=,==,!=,>=,>|} 0)",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "Repository.GetCountAsync less or equal to zero statement",
-    "prefix": "xIfRepoGetCountAsyncLessOrEqualToZero"
+    "description": "Inserts if(await _repository.GetCountAsync() ? 0) statement",
+    "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
     "body": [
