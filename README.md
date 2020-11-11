@@ -120,7 +120,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIfCanDelete                   | If CanDelete                                             
      xIfCanUpdate                   | If CanUpdate                                             
      xInjAuthorizationService       | xInjAuthorizationService                                 
-     xListPage                      | xListPage                                                
+     xListAbpCrudPageBase           | xListAbpCrudPageBase                                     
+     xListIAppService               | xListIAppService                                         
      xUpdateModalDialog             | Update modal dialog                                      
 
 

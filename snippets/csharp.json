@@ -61,7 +61,7 @@
     "description": "New ApplicationMenuItem variable with url",
     "prefix": "xApplicationMenuItemUrl"
   },
-  "authorizeAttribute": {
+   "authorizeAttributeApp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}.${5|Default,Create,Update,Delete|})]$0"
     ],
