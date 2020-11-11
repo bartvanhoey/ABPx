@@ -119,9 +119,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIfCanCreate                   | If CanCreate                                             
      xIfCanDelete                   | If CanDelete                                             
      xIfCanUpdate                   | If CanUpdate                                             
-     xInjAuthorizationService       | xInjAuthorizationService                                 
-     xListAbpCrudPageBase           | xListAbpCrudPageBase                                     
-     xListIAppService               | xListIAppService                                         
+     xInjAuthorizationService       | Injects interface IAuthorizationService                  
+     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService       
+     xListIAppService               | Inserts a paged list for a custom IAppService            
      xUpdateModalDialog             | Update modal dialog                                      
 
 
