@@ -173,6 +173,7 @@
       "@attribute [Authorize(BookStorePermissions.$1.Default)]",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
+      "@* below namespace where I$1AppService exists *@",
       "@using ${WORKSPACE_NAME}.${2:${TM_FILENAME_BASE}}",
       "@using ${WORKSPACE_NAME}.Localization",
       "@using ${WORKSPACE_NAME}.Permissions",
