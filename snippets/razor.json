@@ -224,7 +224,7 @@
       "                        </Dropdown>",
       "                    </DisplayTemplate>",
       "                </DataGridColumn>",
-      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${3:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
+      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${4:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
       "            </DataGridColumns>",
       "        </DataGrid>",
       "    </CardBody>",
