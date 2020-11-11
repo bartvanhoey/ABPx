@@ -301,6 +301,25 @@
     "description": "a GroupName constant",
     "prefix": "xGroupNamePermissionConst"
   },
+  "iAppService": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE}",
+      "{",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([I]*)(.*)(AppService)/$2/gi}}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
+      "",
+      "\tTask<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
+      "",
+      "\tTask<$1Dto> CreateAsync(Create$1Dto$8 input);",
+      "",
+      "\tTask UpdateAsync($3 id, Update$1Dto$9 input);",
+      "",
+      "\tTask DeleteAsync($3 id);$0",
+      "",
+      "}"
+    ],
+    "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
+    "prefix": "xIAppService"
+  },
   "iAppServiceCrudMethods": {
     "body": [
       "Task$2<${1:ClassName}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
@@ -538,6 +557,11 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
+  "objectMapperMapReturn": {
+    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "description": "return ObjectMapper.Map statement",
+    "prefix": "xObjectMapperMapReturn"
+  },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
     "description": "property with private setter",
@@ -563,11 +587,6 @@
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "objectMapperMapReturn": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
-    "description": "return ObjectMapper.Map statement",
-    "prefix": "xObjectMapperMapReturn"
-  },
   "stringLengthAttribute": {
     "body": [
       "[StringLength(${1:50})$2]$0"
@@ -591,7 +610,7 @@
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync AbpValidationException",
     "prefix": "xTestAssertThrowsException"
-  },  
+  },
   "testAssertThrowsYourCustomException": {
     "body": [
       "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
@@ -624,11 +643,6 @@
     "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xTestGetListAsync"
   },
-  "testResultTotalCountShouldBeGreater": {
-    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo(${1:totalCount});$0",
-    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
-    "prefix": "xTestResultTotalCountShouldBeGreater"
-  },
   "testMethodStub": {
     "body": [
       "[Fact$1]",
@@ -639,5 +653,10 @@
     ],
     "description": "a xUnit test method stub",
     "prefix": "xTestMethodStub"
+  },
+  "testResultTotalCountShouldBeGreater": {
+    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo(${1:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
+    "prefix": "xTestResultTotalCountShouldBeGreater"
   }
 }
