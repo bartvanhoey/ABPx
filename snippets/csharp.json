@@ -63,7 +63,7 @@
   },
   "authorizeAttribute": {
     "body": [
-      "[Authorize$1(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$3.${4:ClassName}.${5|Default,Create,Update,Delete|})]$0"
+      "[Authorize$1(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}.${5|Default,Create,Update,Delete|})]$0"
     ],
     "description": "Inserts the Authorize attribute for a class or a method",
     "prefix": "xAuthorizeAttribute"
