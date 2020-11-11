@@ -237,6 +237,20 @@
     "description": "constructor stub in a class derived from BusinessException",
     "prefix": "xCtorBusinessException"
   },
+  "businessExceptionClass": {
+    "body": [
+      "public class ${TM_FILENAME_BASE}  : BusinessException$1",
+      "{",
+      "\tpublic ${TM_FILENAME_BASE}(${2:string} ${3:name})",
+      "\t\t: base(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
+      "\t{",
+      "\t\tWithData$5(\"${6:$3}\", ${7:$3});",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
+    "prefix": "xBusinessExceptionClass"
+  },
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
     "description": "DataType attribute",
