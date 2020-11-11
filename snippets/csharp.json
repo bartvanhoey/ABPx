@@ -276,7 +276,7 @@
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "findByNameAsyncIRepository": {
-    "body": "Task$2<${1:Type}> FindByName(string name);$0",
+    "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method to an IRepository interface",
     "prefix": "xFindByNameAsyncIRepository"
   },
