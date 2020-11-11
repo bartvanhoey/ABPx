@@ -252,10 +252,10 @@
   },
   "listIAppService": {
     "body": [
-      "@* \"New$1\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
+      "@* \"New$1\": \"New ${3:${1/(.*)/${1:/downcase}/}}\", *@",
       "@* below namespace where I$1AppService exists *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@using ${WORKSPACE_NAME}.${3:${TM_FILENAME_BASE}}",
+      "@using ${WORKSPACE_NAME}.${2:${TM_FILENAME_BASE}}",
       "@using ${WORKSPACE_NAME}.Localization",
       "@using Microsoft.AspNetCore.Authorization",
       "@using Microsoft.Extensions.Localization",
@@ -309,7 +309,7 @@
       "                        </Dropdown>",
       "                    </DisplayTemplate>",
       "                </DataGridColumn>",
-      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${5:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
+      "                <DataGridColumn TItem=\"$1Dto\" Field=\"@nameof($1Dto.${4:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]\"></DataGridColumn>",
       "            </DataGridColumns>",
       "        </DataGrid>",
       "    </CardBody>",
