@@ -116,11 +116,11 @@
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
   },
-  "fieldSelectEnum": {
+  "fieldEnum": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.$2\">",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\">",
       "    @foreach (int value in Enum.GetValues(typeof($3)))",
       "    {",
       "      <SelectItem TValue=\"$3\" Value=\"@(($3)value)\">",
@@ -131,7 +131,7 @@
       "</Field>"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
-    "prefix": "xFieldSelectEnum"
+    "prefix": "xFieldEnum"
   },
   "fieldText": {
     "body": [
