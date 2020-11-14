@@ -1,8 +1,8 @@
 {
   "authorizeAttribute": {
     "body": [
-      "@attribute [Authorize(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.${1:ClassName}.Default)]",
-      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}.Permissions",
+      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}.Default)]",
+      "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME}.Permissions",
       "@* @using Microsoft.AspNetCore.Authorization *@"
     ],
     "prefix": "xAuthorizeAttribute"
@@ -171,7 +171,7 @@
     "body": [
       "@* \"New$1\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@attribute [Authorize(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Default)]",
+      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.$1.Default)]",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
       "@* below namespace where I$1AppService exists *@",
@@ -180,7 +180,7 @@
       "@using ${WORKSPACE_NAME}.Permissions",
       "@using Microsoft.AspNetCore.Authorization",
       "@using Microsoft.Extensions.Localization",
-      "@inject IStringLocalizer<${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Resource> L",
+      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
       "@inherits AbpCrudPageBase<I${1:TypeName}AppService, $1Dto, ${2|int,Guid,string|}, PagedAndSortedResultRequestDto, Create$1Dto, Update$1Dto>",
       "@*  @inherits AbpCrudPageBase<I$1AppService, $1Dto, $2, PagedAndSortedResultRequestDto, CreateUpdate$1Dto> *@",
       "",
@@ -243,9 +243,9 @@
       "  {",
       "    await base.OnInitializedAsync();",
       "",
-      "    CanCreate$1 =await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Create);",
-      "    CanUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Update);",
-      "    CanDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Delete);",
+      "    CanCreate$1 =await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Create);",
+      "    CanUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Update);",
+      "    CanDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Delete);",
       "  }",
       "}"
     ],
@@ -266,7 +266,7 @@
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.ObjectMapping",
       "@inject I${1:TypeName}AppService $1AppService",
-      "@inject IStringLocalizer<${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Resource> L",
+      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
       "@inject IAuthorizationService AuthorizationService",
       "@inject IUiMessageService UiMessageService",
       "@inject IObjectMapper ObjectMapper",
@@ -397,9 +397,9 @@
       "",
       "   protected async Task SetPermissionsAsync()",
       "   {",
-      "    CanCreate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Create);",
-      "    CanUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Update);",
-      "    CanDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME/([^\\.]*)(\\.)*(.*)/$3/gi}Permissions.$1.Delete);",
+      "    CanCreate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Create);",
+      "    CanUpdate$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Update);",
+      "    CanDelete$1 = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions.$1.Delete);",
       "   }",
       "",
       "   protected void OpenCreateModal()",
