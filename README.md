@@ -3,9 +3,6 @@
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 
 
-PRO TIP: Rename the aspnet-core folder of your abp.io project to [Your-Project-Name] to take full advantage of ABPx
-
-
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
 ## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
@@ -20,6 +17,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                                          
      xAuthorizeAttribute                   | Inserts the Authorize attribute for a class or a method                            
      xBuilderEntity                        | builder.Entity stub                                                                
+     xBusinessExceptionClass               | Inserts a complete CustomException class that inherits from class BusinessException
      xCanBeNullAttribute                   | CanBeNull attribute                                                                
      xCanCreate                            | Boolean canCreate variable and checks if Create is granted                         
      xCanCrudMethods                       | Checks if CRUD methods are granted                                                 
@@ -34,6 +32,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                                                
      xCheckNotNullOrWhiteSpaceMaxLength    | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                  
      xCheckNotNullOrWhiteSpaceMaxMinLength | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                              
+     xContactClass                         | Inserts a sample Contact class                                                     
      xCreateMap                            | CreateMap statement                                                                
      xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                                    
      xCreateMapFromToLookupDto             | CreateMap from to LookupDto statement                                              
@@ -42,7 +41,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCrudAppService                       | CrudAppService class                                                               
      xCtor                                 | constructor stub                                                                   
      xCtorBusinessException                | constructor stub in a class derived from BusinessException                         
-     xBusinessExceptionClass               | Inserts a complete CustomException class that inherits from class BusinessException
      xDataTypeAttribute                    | DataType attribute                                                                 
      xDbSet                                | DbSet for a class statement                                                        
      xEfCoreRepositoryClassStub            | CreateMap EfCoreRepositoryClass stub                                               
@@ -123,6 +121,5 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService       
      xListIAppService               | Inserts a paged list for a custom IAppService            
      xUpdateModalDialog             | Update modal dialog                                      
-     xContactClass                  | Inserts a sample Contact class                           
 
 

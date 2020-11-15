@@ -548,22 +548,5 @@
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"
-  },
-  "contactClass" : {
-    "body" : [
-    "public class Contact  : FullAuditedAggregateRoot$1<Guid$2>",
-    "{",
-    "    public string FirstName { get; set; }",
-    "",
-    "    public string LastName { get; set; }",
-    "",
-    "    public string EmailAddress { get; set; }",
-    "",
-    "    public string PhoneNumber { get; set; }",
-    "",
-    "}"
-    ],
-    "description": "Inserts a sample Contact class",
-    "prefix" : "xContactClass"
   }
 }

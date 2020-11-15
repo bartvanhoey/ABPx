@@ -61,7 +61,7 @@
     "description": "New ApplicationMenuItem variable with url",
     "prefix": "xApplicationMenuItemUrl"
   },
-   "authorizeAttributeApp": {
+  "authorizeAttributeApp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}.${5|Default,Create,Update,Delete|})]$0"
     ],
@@ -81,6 +81,20 @@
     ],
     "description": "builder.Entity stub",
     "prefix": "xBuilderEntity"
+  },
+  "businessExceptionClass": {
+    "body": [
+      "public class ${TM_FILENAME_BASE}  : BusinessException$1",
+      "{",
+      "\tpublic ${TM_FILENAME_BASE}(${2:string} ${3:name})",
+      "\t\t: base(${WORKSPACE_NAME}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
+      "\t{",
+      "\t\tWithData$5(\"${6:$3}\", ${7:$3});",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
+    "prefix": "xBusinessExceptionClass"
   },
   "canBeNullAttribute": {
     "body": [
@@ -174,6 +188,23 @@
     "description": "Check.NotNullOrWhiteSpace (+ Max/MinLength) statement",
     "prefix": "xCheckNotNullOrWhiteSpaceMaxMinLength"
   },
+  "contactClass": {
+    "body": [
+      "public class Contact  : FullAuditedAggregateRoot$1<Guid$2>",
+      "{",
+      "    public string FirstName { get; set; }",
+      "",
+      "    public string LastName { get; set; }",
+      "",
+      "    public string EmailAddress { get; set; }",
+      "",
+      "    public string PhoneNumber { get; set; }",
+      "",
+      "}"
+    ],
+    "description": "Inserts a sample Contact class",
+    "prefix": "xContactClass"
+  },
   "createMap": {
     "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
     "description": "CreateMap statement",
@@ -236,20 +267,6 @@
     ],
     "description": "constructor stub in a class derived from BusinessException",
     "prefix": "xCtorBusinessException"
-  },
-  "businessExceptionClass": {
-    "body": [
-      "public class ${TM_FILENAME_BASE}  : BusinessException$1",
-      "{",
-      "\tpublic ${TM_FILENAME_BASE}(${2:string} ${3:name})",
-      "\t\t: base(${WORKSPACE_NAME}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
-      "\t{",
-      "\t\tWithData$5(\"${6:$3}\", ${7:$3});",
-      "\t}",
-      "}"
-    ],
-    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
-    "prefix": "xBusinessExceptionClass"
   },
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
