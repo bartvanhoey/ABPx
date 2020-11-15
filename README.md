@@ -123,5 +123,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService       
      xListIAppService               | Inserts a paged list for a custom IAppService            
      xUpdateModalDialog             | Update modal dialog                                      
+     xContactClass                  | Inserts a sample Contact class                           
 
 
