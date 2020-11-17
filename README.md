@@ -36,11 +36,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpaceMaxLength    | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                  
      xCheckNotNullOrWhiteSpaceMaxMinLength | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                              
      xContactClass                         | Inserts a sample Contact class                                                     
-     xCreateMap                            | CreateMap statement                                                                
-     xCreateMapFromDtoToCreateUpdateDto    | CreateMap from Dto to CreateUpdateDto statement                                    
-     xCreateMapFromToLookupDto             | CreateMap from to LookupDto statement                                              
-     xCreateMapFromDtoToUpdateDto          | CreateMap from Dto to UpdateDto statement                                          
-     xCreateMapToDto                       | CreateMap to Dto statement                                                         
+     xCreateMap                            | CreateMap from [Type]Dto to [Type] statement                                       
+     xCreateMapFromDtoToCreateUpdateDto    | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                        
+     xCreateMapFromToLookupDto             | CreateMap from [Type] to [Type]LookupDto statement                                 
+     xCreateMapFromDtoToUpdateDto          | CreateMap from [Type]Dto to Update[Type]Dto statement                              
+     xCreateMapToDto                       | CreateMap [Type] to [Type]Dto statement                                            
      xCrudAppService                       | CrudAppService class                                                               
      xCtor                                 | constructor stub                                                                   
      xCtorBusinessException                | constructor stub in a class derived from BusinessException                         
