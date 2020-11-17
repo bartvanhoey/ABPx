@@ -24,7 +24,7 @@
       "        <ModalBody>",
       "           <Row>",
       "             <Column ColumnSize=\"ColumnSize.Is12\">",
-      "             $0@* <Field>",
+      "             @* <Field>",
       "                   <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}Name\"]</FieldLabel>",
       "                   <TextEdit @bind-text=\"NewEntity.${3:PropertyName}\" />",
       "                   </Field> *@",
@@ -52,7 +52,7 @@
       "            <Button Color=\"Color.Primary\" Clicked=\"CreateEntityAsync\">@L[\"Save\"]</Button>",
       "        </ModalFooter>",
       "    </ModalContent>",
-      "</Modal>"
+      "</Modal>$0"
     ],
     "description": "Create modal dialog",
     "prefix": "xCreateModalDialog"
@@ -518,7 +518,7 @@
       "      <ModalBody>",
       "       <Row>",
       "         <Column ColumnSize=\"ColumnSize.Is12\">",
-      "           $0@* <Field>",
+      "           @* <Field>",
       "                <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$1\"]</FieldLabel>",
       "                <TextEdit @bind-text=\"EditingEntity.${3:$1}\" />",
       "              </Field> *@",
@@ -546,7 +546,7 @@
       "          <Button Color=\"Color.Primary\" Clicked=\"UpdateEntityAsync\">@L[\"Save\"]</Button>",
       "      </ModalFooter>",
       "  </ModalContent>",
-      "</Modal>"
+      "</Modal>$0"
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"

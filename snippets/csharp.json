@@ -188,23 +188,6 @@
     "description": "Check.NotNullOrWhiteSpace (+ Max/MinLength) statement",
     "prefix": "xCheckNotNullOrWhiteSpaceMaxMinLength"
   },
-  "contactClass": {
-    "body": [
-      "public class Contact  : FullAuditedAggregateRoot$1<Guid$2>",
-      "{",
-      "    public string FirstName { get; set; }",
-      "",
-      "    public string LastName { get; set; }",
-      "",
-      "    public string EmailAddress { get; set; }",
-      "",
-      "    public string PhoneNumber { get; set; }",
-      "",
-      "}"
-    ],
-    "description": "Inserts a sample Contact class",
-    "prefix": "xContactClass"
-  },
   "createMap": {
     "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
     "description": "CreateMap from [Type]Dto to [Type] statement",

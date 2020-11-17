@@ -35,7 +35,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpace             | Check.NotNullOrWhiteSpace statement                                                
      xCheckNotNullOrWhiteSpaceMaxLength    | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                  
      xCheckNotNullOrWhiteSpaceMaxMinLength | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                              
-     xContactClass                         | Inserts a sample Contact class                                                     
      xCreateMap                            | CreateMap from [Type]Dto to [Type] statement                                       
      xCreateMapFromDtoToCreateUpdateDto    | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                        
      xCreateMapFromToLookupDto             | CreateMap from [Type] to [Type]LookupDto statement                                 
