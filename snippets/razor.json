@@ -254,6 +254,8 @@
       "    </CardBody>",
       "</Card>",
       "",
+      "$0",
+      "",
       "@code",
       "{",
       "  protected bool CanCreate$1;",
