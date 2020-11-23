@@ -12,7 +12,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
      Prefix                                | Description                                                                        
      ------------------------------------- | ----------------------------------------------------------------------------------- 
-     xAddPermissionGroup                   | Adds group permission to context in PermissionDefinitionProvider.cs                
+     xAddPermissionGroup                   | Add group permission to context in PermissionDefinitionProvider.cs                 
      xAddPermissionName                    | adds a permissions class with Default/Create/Update/Delete constants               
      xAddPermissionToGroup                 | Adds permission to group in PermissionDefinitionProvider.cs                        
      xAddPolicyPermissions                 | Adds policy permissions                                                            
