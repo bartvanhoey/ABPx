@@ -509,6 +509,7 @@
       "                 </Validation> *@",
       "               </Column>",
       "             </Row>",
+      "           </Validations>",
       "      </ModalBody>",
       "      <ModalFooter>",
       "          <Button Color=\"Color.Secondary\" Clicked=\"CloseEditModalAsync\">@L[\"Cancel\"]</Button>",
