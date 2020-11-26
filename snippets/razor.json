@@ -221,7 +221,7 @@
       "                   }",
       "                   @if (CanDelete$1)",
       "                   {",
-      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Delete\"]\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"@() => GetDeleteConfirmationMessage(context)\" />",
+      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Delete\"]\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\" />",
       "                   }",
       "                 </EntityActions>",
       "               </DisplayTemplate>",
