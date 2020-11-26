@@ -230,7 +230,7 @@
       "                            <DropdownMenu>",
       "                                @if (CanUpdate$1)",
       "                                {",
-      "                                    <DropdownItem Clicked=\"() => OpenEditModalAsync(context.Id)\">",
+      "                                    <DropdownItem Clicked=\"() => OpenEditModalAsync(context)\">",
       "                                        @L[\"Edit\"]",
       "                                    </DropdownItem>",
       "                                }",
