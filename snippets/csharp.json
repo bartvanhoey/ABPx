@@ -97,9 +97,7 @@
     "prefix": "xBusinessExceptionClass"
   },
   "canBeNullAttribute": {
-    "body": [
-      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
-    ],
+    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -207,6 +205,11 @@
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
     "description": "CreateMap from [Type]Dto to Update[Type]Dto statement",
     "prefix": "xCreateMapFromDtoToUpdateDto"
+  },
+  "createMapFromCreateUpdateDtoToType": {
+    "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
+    "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromCreateUpdateDtoToType"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -365,10 +368,7 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -386,40 +386,22 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -434,13 +416,7 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -475,9 +451,7 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [
-      " : ${1:${WORKSPACE_NAME}}AppService$0"
-    ],
+    "body": [" : ${1:${WORKSPACE_NAME}}AppService$0"],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
@@ -560,9 +534,7 @@
     "prefix": "xLookupListAppService"
   },
   "notNullAttribute": {
-    "body": [
-      "[NotNull$1] ${2:string} ${3:name}$0"
-    ],
+    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -595,16 +567,12 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1] $0"
-    ],
+    "body": ["[Required$1] $0"],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
   "stringLengthAttribute": {
-    "body": [
-      "[StringLength(${1:50})$2]$0"
-    ],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },

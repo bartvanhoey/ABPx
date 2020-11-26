@@ -39,6 +39,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateMapFromDtoToCreateUpdateDto    | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                        
      xCreateMapFromToLookupDto             | CreateMap from [Type] to [Type]LookupDto statement                                 
      xCreateMapFromDtoToUpdateDto          | CreateMap from [Type]Dto to Update[Type]Dto statement                              
+     xCreateMapFromCreateUpdateDtoToType   | CreateMap from CreateUpdate[Type]Dto to [Type] statement                           
      xCreateMapToDto                       | CreateMap [Type] to [Type]Dto statement                                            
      xCrudAppService                       | CrudAppService class                                                               
      xCtor                                 | constructor stub                                                                   
