@@ -716,6 +716,20 @@
     "description": "method stub without arguments",
     "prefix": "xMethodReturn"
   },
+  "getPrivateSet": {
+    "body": [
+      "{ get; private set; }$0"
+    ],
+    "description": "Inserts { get, private set }",
+    "prefix": "xGps"
+  },
+  "getSet": {
+    "body": [
+      "{ get; set; }$0"
+    ],
+    "description": "Inserts { get, set }",
+    "prefix": "xGs"
+  },
   "methodVoid": {
     "body": [
       "${1|internal,private,public,protected|} void ${3:MethodName}()",

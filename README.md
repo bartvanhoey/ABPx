@@ -108,6 +108,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xMethodAsync                          | async method stub without arguments                                                
      xMethodAsyncReturn                    | async task method stub without arguments                                           
      xMethodReturn                         | method stub without arguments                                                      
+     xGps                                  | Inserts { get, private set }                                                       
+     xGs                                   | Inserts { get, set }                                                               
      xMethodVoid                           | void method stub without arguments                                                 
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
