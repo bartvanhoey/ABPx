@@ -70,6 +70,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xImpIRepository                       | Implements IRepository interface                                                   
      xImpITransientDependency              | Implements ITransientDependency interface                                          
      xInhBusinessException                 | Inherits BusinessException class                                                   
+     xInhSpecification                     | Inherits Specification class                                                       
      xInhAggregateRoot                     | Inherits AggregateRoot class                                                       
      xInhAppService                        | Inherits ProjectNameAppService class                                               
      xInhApplicationService                | Inherits ApplicationService class                                                  

@@ -445,6 +445,11 @@
     "description": "Inherits BusinessException class",
     "prefix": "xInhBusinessException"
   },
+  "inhSpecification": {
+    "body": " : Specification$1<$2:Type>",
+    "description": "Inherits Specification class",
+    "prefix": "xInhSpecification"
+  },
   "inheritsAggregateRoot": {
     "body": " : aggregateRoot<${1|int,Guid,string|}>$0",
     "description": "Inherits AggregateRoot class",
