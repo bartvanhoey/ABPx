@@ -46,7 +46,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCtorBusinessException                | constructor stub in a class derived from BusinessException                         
      xDataTypeAttribute                    | DataType attribute                                                                 
      xDbSet                                | DbSet for a class statement                                                        
-     xEfCoreRepositoryClassStub            | CreateMap EfCoreRepositoryClass stub                                               
+     xEfCoreRepositoryClassStub            | Inserts EfCoreRepositoryClass stub                                                 
      xFindByNameAsyncIRepository           | Adds a FindByNameAsync method to an IRepository interface                          
      xGetListAsyncIRepository              | Adds a GetListAsync method to an IRepository interface                             
      xGetLookupAppService                  | Adds a GetLookupAsync method to an AppService class                                
