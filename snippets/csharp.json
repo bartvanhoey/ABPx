@@ -455,6 +455,11 @@
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
+  "inheritsApplicationService": {
+    "body": [" : ApplicationService$0"],
+    "description": "Inherits ApplicationService class",
+    "prefix": "xInhApplicationService"
+  },
   "inheritsApplicationTestBase": {
     "body": " : ${WORKSPACE_NAME}ApplicationTestBase$0",
     "description": "Inherits ApplicationTestBase class",
@@ -640,5 +645,85 @@
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo(${1:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xTestResultTotalCountShouldBeGreater"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "xMethodAsyncWithArgs"
+  },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "xMethodAsyncReturnWithArgs"
+  },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "xMethodReturnWithArgs"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "xMethodVoidWithArgs"
+  },
+  "methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "xMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "xMethodAsyncReturn"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "xMethodReturn"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
+    "prefix": "xMethodVoid"
   }
 }

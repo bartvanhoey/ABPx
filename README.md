@@ -72,6 +72,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhBusinessException                 | Inherits BusinessException class                                                   
      xInhAggregateRoot                     | Inherits AggregateRoot class                                                       
      xInhAppService                        | Inherits ProjectNameAppService class                                               
+     xInhApplicationService                | Inherits ApplicationService class                                                  
      xInhApplicationTestBase               | Inherits ApplicationTestBase class                                                 
      xInhAuditedAggregateRoot              | Inherits AuditedAggregateRoot class                                                
      xInhAuditedEntity                     | Inherits AuditedEntity class                                                       
@@ -100,6 +101,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xTestGetListAsync                     | Inserts var result = await AppService.GetListAsync statement                       
      xTestMethodStub                       | a xUnit test method stub                                                           
      xTestResultTotalCountShouldBeGreater  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                     
+     xMethodAsyncWithArgs                  | async method stub with arguments                                                   
+     xMethodAsyncReturnWithArgs            | async task method stub with arguments                                              
+     xMethodReturnWithArgs                 | method stub with arguments                                                         
+     xMethodVoidWithArgs                   | void method stub with arguments                                                    
+     xMethodAsync                          | async method stub without arguments                                                
+     xMethodAsyncReturn                    | async task method stub without arguments                                           
+     xMethodReturn                         | method stub without arguments                                                      
+     xMethodVoid                           | void method stub without arguments                                                 
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
