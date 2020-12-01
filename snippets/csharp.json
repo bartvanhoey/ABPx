@@ -322,7 +322,7 @@
     "body": [
       "public interface ${TM_FILENAME_BASE}",
       "{",
-      "\tTask$2<${1:${TM_FILENAME_BASE/([I]*)(.*)(AppService)/$2/gi}}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$6> GetAsync(${3|Guid,int|}$4 id);",
       "",
       "\tTask<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
       "",
