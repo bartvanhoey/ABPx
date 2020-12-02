@@ -581,6 +581,14 @@
     "description": "repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
+  "repoGetAsync": {
+    "body": [
+      "var ${1:VarName} = await _${2:$1}Repository.GetAsync(${3:id});",
+      "$0"
+    ],
+    "description": "Inserts var VarName = repository.GetAsync statement",
+    "prefix": "xRepoGetAsync"
+  },
   "requiredAttribute": {
     "body": ["[Required$1] $0"],
     "description": "Required Attribute",
