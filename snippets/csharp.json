@@ -466,7 +466,7 @@
     "prefix": "xInhApplicationService"
   },
   "throwNewBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\")"],
+    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowNewBusinessException"
   },
