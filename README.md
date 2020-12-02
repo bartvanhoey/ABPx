@@ -54,7 +54,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredAppService                | GetRequiredService and an IAppService field                                        
      xGroupNamePermissionConst             | a GroupName constant                                                               
      xIAppService                          | Inserts a complete IAppService interface with CRUD methods for a given Type        
-     xIAppServiceCrudMethods               | the basic CRUD methods in an IAppService                                           
+     xCrudMethodsIAppService               | Inserts the basic CRUD methods in an IAppService                                   
      xICrudAppService                      | an ICrudAppService interface                                                       
      xIRepository                          | an IRepository for a type parameter                                                
      xIfInline                             | Inline if statement                                                                
@@ -92,7 +92,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xLookupListAppService                 | Inserts an IReadOnlyList for a LookupDto object                                    
      xNotNullAttribute                     | NotNull attribute                                                                  
      xObjectMapperMap                      | ObjectMapper.Map statement                                                         
-     xObjectMapperMapReturn                | return ObjectMapper.Map statement                                                  
+     xReturnObjectMapperMap                | return ObjectMapper.Map statement                                                  
      xPropPrivateSetter                    | property with private setter                                                       
      xRepoInsertAsync                      | repository.InsertAsync statement                                                   
      xRequiredAttribute                    | Required Attribute                                                                 
