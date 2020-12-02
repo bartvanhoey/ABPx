@@ -268,8 +268,6 @@
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.ObjectMapping",
       "@inject I${1:TypeName}AppService $1AppService",
-      "@inject IAuthorizationService AuthorizationService",
-      "@inject IObjectMapper ObjectMapper",
       "",
       "<Card>",
       "    <CardHeader>",
