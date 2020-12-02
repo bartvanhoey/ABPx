@@ -259,7 +259,7 @@
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
       "@* below namespace where I$1AppService exists *@",
       "@using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}",
-      "@using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}.Dtos",
+      "@* @using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}.Dtos *@",
       "@using ${WORKSPACE_NAME}.Localization",
       "@using Microsoft.AspNetCore.Authorization",
       "@using Microsoft.Extensions.Localization",
