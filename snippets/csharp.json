@@ -446,7 +446,7 @@
     "prefix": "xInhBusinessException"
   },
   "inhSpecification": {
-    "body": " : Specification$1<$2:Type>",
+    "body": " : Specification$1<${2:Type}>",
     "description": "Inherits Specification class",
     "prefix": "xInhSpecification"
   },
