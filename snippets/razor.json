@@ -260,6 +260,7 @@
       "@* below namespace where I$1AppService exists *@",
       "@using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}",
       "@* @using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}.Dtos *@",
+      "@inherits ${WORKSPACE_NAME}ComponentBase",
       "@using ${WORKSPACE_NAME}.Localization",
       "@using Microsoft.AspNetCore.Authorization",
       "@using Microsoft.Extensions.Localization",
