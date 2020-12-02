@@ -586,6 +586,11 @@
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
+  "emailAddressAttribute": {
+    "body": ["[EmailAddress$1] $0"],
+    "description": "EmailAddress Attribute",
+    "prefix": "xEmailAddressAttribute"
+  },
   "stringLengthAttribute": {
     "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
