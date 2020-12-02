@@ -465,6 +465,11 @@
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
+  "throwNewBusinessException": {
+    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\")"],
+    "description": "Inserts throw new BusinessException statement",
+    "prefix": "xThrowNewBusinessException"
+  },
   "inheritsApplicationTestBase": {
     "body": " : ${WORKSPACE_NAME}ApplicationTestBase$0",
     "description": "Inherits ApplicationTestBase class",
@@ -722,16 +727,12 @@
     "prefix": "xMethodReturn"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
