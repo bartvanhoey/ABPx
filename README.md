@@ -141,5 +141,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService       
      xListIAppService               | Inserts a paged list for a custom IAppService            
      xUpdateModalDialog             | Update modal dialog                                      
+     xPage                          | Inserts @page directive                                  
+     xPageParam                     | Inserts @page directive with Parameter                   
 
 

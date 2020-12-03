@@ -501,7 +501,7 @@
       "                       <TextEdit @bind-text=\"EditingEntity.${3:$1}\" />",
       "                       <Feedback>",
       "                         <ValidationError/>",
-      "                       </Feedback>",              
+      "                       </Feedback>",
       "                   </Field>",
       "                 </Validation> *@",
       "               </Column>",
@@ -517,5 +517,21 @@
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"
+  },
+  "pageDirective": {
+    "body": [
+      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
+    "description": "Inserts @page directive",
+    "prefix": "xPage"
+  },
+  "pageDirectiveWithParameter": {
+    "body": [
+      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\"",
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
+    "description": "Inserts @page directive with Parameter",
+    "prefix": "xPageParam"
   }
 }
