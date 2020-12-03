@@ -261,8 +261,13 @@
   },
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
-    "description": "DbSet for a class statement",
+    "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSet"
+  },
+  "iMongoCollection": {
+    "body": "public IMongoCollection<${1:ClassName}$2> ${3:$1}s => Collection<$1>();$0",
+    "description": "Inserts as IMongoCollection for a class statement in DbContext",
+    "prefix": "xIMongoCollection"
   },
   "efCoreRepositoryClassStub": {
     "body": [
