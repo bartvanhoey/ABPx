@@ -96,6 +96,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntity                 | Inherits FullAuditedEntity class                                                         
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                                                      
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                                            
+     xInjectAppService                     | Inserts Inject IMyAppService MyAppService statement                                      
      xLookupListAppService                 | Inserts an IReadOnlyList for a LookupDto object                                          
      xMethodAsync                          | async method stub without arguments                                                      
      xMethodAsyncReturn                    | async task method stub without arguments                                                 
