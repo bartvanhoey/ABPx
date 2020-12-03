@@ -425,6 +425,11 @@
     "description": "Implements IApplicationService interface",
     "prefix": "xImpIApplicationService"
   },
+  "implementHasCreationTime": {
+    "body": " : IHasCreationTime$0",
+    "description": "Implements IHasCreationTime interface",
+    "prefix": "xImpIHasCreationTime"
+  },
   "implementIDataSeedContributor": {
     "body": " : IDataSeedContributor$1",
     "description": "Implements IDataSeedContributor interface",

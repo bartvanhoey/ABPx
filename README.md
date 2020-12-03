@@ -66,6 +66,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIfRepoGetCountAsync                  | Inserts if(await _repository.GetCountAsync() ? 0) statement                        
      xIf                                   | If statement                                                                       
      xImpIApplicationService               | Implements IApplicationService interface                                           
+     xImpIHasCreationTime                  | Implements IHasCreationTime interface                                              
      xImpIDataSeedContributor              | Implements IDataSeedContributor interface                                          
      xImpIRepository                       | Implements IRepository interface                                                   
      xImpITransientDependency              | Implements ITransientDependency interface                                          
