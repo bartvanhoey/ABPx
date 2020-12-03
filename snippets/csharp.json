@@ -255,7 +255,7 @@
   },
   "ctor": {
     "body": [
-      "${1|private,internal,protected,public|} ${TM_FILENAME_BASE}($2)",
+      "${1|private,internal,protected,public|} ${TM_FILENAME_BASE/.razor//}($2)",
       "{",
       "\t$0",
       "}"
