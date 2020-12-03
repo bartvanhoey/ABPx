@@ -45,6 +45,19 @@
     "description": "Adds policy permissions",
     "prefix": "xAddPolicyPermissions"
   },
+  "appServiceClassStub": {
+    "body": [
+      "public class ${TM_FILENAME_BASE}  : ${WORKSPACE_NAME}AppService, I${TM_FILENAME_BASE}$1",
+      "{",
+      "\tpublic ${TM_FILENAME_BASE}($2)",
+      "\t{",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts a complete AppService class stub based upon the [YourProjectName]AppService class",
+    "prefix": "xAppServiceClassStub"
+  },
   "applicationMenuItemIcon": {
     "body": [
       "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], icon: \"${2:fa fa-book}\");",
@@ -97,7 +110,9 @@
     "prefix": "xBusinessExceptionClass"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -191,6 +206,16 @@
     "description": "CreateMap from [Type]Dto to [Type] statement",
     "prefix": "xCreateMap"
   },
+  "createMapFromCreateUpdateDtoToType": {
+    "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
+    "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromCreateUpdateDtoToType"
+  },
+  "createMapFromDtoToToUpdateDto": {
+    "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
+    "description": "CreateMap from [Type]Dto to Update[Type]Dto statement",
+    "prefix": "xCreateMapFromDtoToUpdateDto"
+  },
   "createMapFromToCreateUpdateDto": {
     "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
     "description": "CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement",
@@ -200,16 +225,6 @@
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
     "description": "CreateMap from [Type] to [Type]LookupDto statement",
     "prefix": "xCreateMapFromToLookupDto"
-  },
-  "createMapFromDtoToToUpdateDto": {
-    "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
-    "description": "CreateMap from [Type]Dto to Update[Type]Dto statement",
-    "prefix": "xCreateMapFromDtoToUpdateDto"
-  },
-  "createMapFromCreateUpdateDtoToType": {
-    "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
-    "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
-    "prefix": "xCreateMapFromCreateUpdateDtoToType"
   },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
@@ -264,11 +279,6 @@
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSet"
   },
-  "iMongoCollection": {
-    "body": "public IMongoCollection<${1:ClassName}$2> ${3:$1}s => Collection<$1>();$0",
-    "description": "Inserts as IMongoCollection for a class statement in DbContext",
-    "prefix": "xIMongoCollection"
-  },
   "efCoreRepositoryClassStub": {
     "body": [
       "public class EfCore${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME}}DbContext, ${4:$1}$5, ${6|int,Guid,string|}$7>, I${8:$1}Repository$11",
@@ -282,6 +292,13 @@
     ],
     "description": "Inserts EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
+  },
+  "emailAddressAttribute": {
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
+    "description": "EmailAddress Attribute",
+    "prefix": "xEmailAddressAttribute"
   },
   "findByNameAsyncIRepository": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
@@ -310,6 +327,13 @@
     "description": "Adds a GetLookupAsync method to an IAppService interface",
     "prefix": "xGetLookupIAppService"
   },
+  "getPrivateSet": {
+    "body": [
+      "{ get; private set; }$0"
+    ],
+    "description": "Inserts { get, private set }",
+    "prefix": "xGps"
+  },
   "getRequiredAppService": {
     "body": [
       "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
@@ -317,6 +341,13 @@
     ],
     "description": "GetRequiredService and an IAppService field",
     "prefix": "xGetRequiredAppService"
+  },
+  "getSet": {
+    "body": [
+      "{ get; set; }$0"
+    ],
+    "description": "Inserts { get, set }",
+    "prefix": "xGs"
   },
   "groupNamePermissionConst": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
@@ -342,6 +373,16 @@
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppService"
   },
+  "iCrudAppService": {
+    "body": [
+      "public interface ${TM_FILENAME/.cs//} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "an ICrudAppService interface",
+    "prefix": "xICrudAppService"
+  },
   "iCrudMethodsAppService": {
     "body": [
       "Task$2<${1:ClassName}Dto$6> GetAsync(${3|int,Guid,string|}$4 id);",
@@ -357,15 +398,10 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
-  "iCrudAppService": {
-    "body": [
-      "public interface ${TM_FILENAME/.cs//} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "an ICrudAppService interface",
-    "prefix": "xICrudAppService"
+  "iMongoCollection": {
+    "body": "public IMongoCollection<${1:ClassName}$2> ${3:$1}s => Collection<$1>();$0",
+    "description": "Inserts as IMongoCollection for a class statement in DbContext",
+    "prefix": "xIMongoCollection"
   },
   "iRepository": {
     "body": "IRepository$1<${2:Type}, ${3:TypePrimaryKey}> ${4:${2/(.*)/${1:/downcase}/}}Repository$0",
@@ -373,7 +409,10 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -391,22 +430,40 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -421,19 +478,25 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
-  },
-  "implementIApplicationService": {
-    "body": " : IApplicationService$0",
-    "description": "Implements IApplicationService interface",
-    "prefix": "xImpIApplicationService"
   },
   "implementHasCreationTime": {
     "body": " : IHasCreationTime$0",
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
+  },
+  "implementIApplicationService": {
+    "body": " : IApplicationService$0",
+    "description": "Implements IApplicationService interface",
+    "prefix": "xImpIApplicationService"
   },
   "implementIDataSeedContributor": {
     "body": " : IDataSeedContributor$1",
@@ -466,19 +529,18 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [" : ${1:${WORKSPACE_NAME}}AppService$0"],
+    "body": [
+      " : ${1:${WORKSPACE_NAME}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
   "inheritsApplicationService": {
-    "body": [" : ApplicationService$0"],
+    "body": [
+      " : ApplicationService$0"
+    ],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
-  },
-  "throwNewBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
-    "description": "Inserts throw new BusinessException statement",
-    "prefix": "xThrowNewBusinessException"
   },
   "inheritsApplicationTestBase": {
     "body": " : ${WORKSPACE_NAME}ApplicationTestBase$0",
@@ -558,8 +620,90 @@
     "description": "Inserts an IReadOnlyList for a LookupDto object",
     "prefix": "xLookupListAppService"
   },
+  "methodAsync": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub without arguments",
+    "prefix": "xMethodAsync"
+  },
+  "methodAsyncReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub without arguments",
+    "prefix": "xMethodAsyncReturn"
+  },
+  "methodAsyncReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async task method stub with arguments",
+    "prefix": "xMethodAsyncReturnWithArgs"
+  },
+  "methodAsyncWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "async method stub with arguments",
+    "prefix": "xMethodAsyncWithArgs"
+  },
+  "methodReturn": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub without arguments",
+    "prefix": "xMethodReturn"
+  },
+  "methodReturnWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "method stub with arguments",
+    "prefix": "xMethodReturnWithArgs"
+  },
+  "methodVoid": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub without arguments",
+    "prefix": "xMethodVoid"
+  },
+  "methodVoidWithArgs": {
+    "body": [
+      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "void method stub with arguments",
+    "prefix": "xMethodVoidWithArgs"
+  },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -568,15 +712,18 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
-  "returnObjectMapperMap": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
-    "description": "return ObjectMapper.Map statement",
-    "prefix": "xReturnObjectMapperMap"
-  },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
     "description": "property with private setter",
     "prefix": "xPropPrivateSetter"
+  },
+  "repoGetAsync": {
+    "body": [
+      "var ${1:VarName} = await _${2:$1}Repository.GetAsync(${3:id});",
+      "$0"
+    ],
+    "description": "Inserts var VarName = repository.GetAsync statement",
+    "prefix": "xRepoGetAsync"
   },
   "repoInsertAsync": {
     "body": [
@@ -591,26 +738,22 @@
     "description": "repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
-  "repoGetAsync": {
-    "body": [
-      "var ${1:VarName} = await _${2:$1}Repository.GetAsync(${3:id});",
-      "$0"
-    ],
-    "description": "Inserts var VarName = repository.GetAsync statement",
-    "prefix": "xRepoGetAsync"
-  },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "emailAddressAttribute": {
-    "body": ["[EmailAddress$1] $0"],
-    "description": "EmailAddress Attribute",
-    "prefix": "xEmailAddressAttribute"
+  "returnObjectMapperMap": {
+    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "description": "return ObjectMapper.Map statement",
+    "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
@@ -679,94 +822,11 @@
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xTestResultTotalCountShouldBeGreater"
   },
-  "methodAsyncWithArgs": {
+  "throwNewBusinessException": {
     "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
+      "throw new BusinessException$1(\"${2:TranslationKey}\");"
     ],
-    "description": "async method stub with arguments",
-    "prefix": "xMethodAsyncWithArgs"
-  },
-  "methodAsyncReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub with arguments",
-    "prefix": "xMethodAsyncReturnWithArgs"
-  },
-  "methodReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub with arguments",
-    "prefix": "xMethodReturnWithArgs"
-  },
-  "methodVoidWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub with arguments",
-    "prefix": "xMethodVoidWithArgs"
-  },
-  "methodAsync": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async method stub without arguments",
-    "prefix": "xMethodAsync"
-  },
-  "methodAsyncReturn": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub without arguments",
-    "prefix": "xMethodAsyncReturn"
-  },
-  "methodReturn": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub without arguments",
-    "prefix": "xMethodReturn"
-  },
-  "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
-    "description": "Inserts { get, private set }",
-    "prefix": "xGps"
-  },
-  "getSet": {
-    "body": ["{ get; set; }$0"],
-    "description": "Inserts { get, set }",
-    "prefix": "xGs"
-  },
-  "methodVoid": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}()",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub without arguments",
-    "prefix": "xMethodVoid"
+    "description": "Inserts throw new BusinessException statement",
+    "prefix": "xThrowNewBusinessException"
   }
 }
