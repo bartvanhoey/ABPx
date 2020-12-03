@@ -841,11 +841,18 @@
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xTestResultTotalCountShouldBeGreater"
   },
-  "throwNewBusinessException": {
+  "throwBusinessException": {
     "body": [
       "throw new BusinessException$1(\"${2:TranslationKey}\");"
     ],
     "description": "Inserts throw new BusinessException statement",
-    "prefix": "xThrowNewBusinessException"
+    "prefix": "xThrowBusinessException"
+  },
+  "throwUserFriendlyException": {
+    "body": [
+      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
+    ],
+    "description": "Inserts throw new UserFriendlyException statement",
+    "prefix": "xThrowUserFriendlyException"
   }
 }

@@ -120,7 +120,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xTestGetListAsync                     | Inserts var result = await AppService.GetListAsync statement                             
      xTestMethodStub                       | a xUnit test method stub                                                                 
      xTestResultTotalCountShouldBeGreater  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
-     xThrowNewBusinessException            | Inserts throw new BusinessException statement                                            
+     xThrowBusinessException               | Inserts throw new BusinessException statement                                            
+     xThrowUserFriendlyException           | Inserts throw new UserFriendlyException statement                                        
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
