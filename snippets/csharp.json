@@ -85,7 +85,7 @@
     "body": [
       "[Authorize$1]$0"
     ],
-    "description": "Inserts the standard .NET Authorize attribute",
+    "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthorizeAttribute"
   },
   "builderEntity": {

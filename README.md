@@ -20,7 +20,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xApplicationMenuItemIcon              | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl               | New ApplicationMenuItem variable with url                                                
      xAuthorizeAbpAttribute                | Inserts the ABP Authorize attribute for a class or a method                              
-     xAuthorizeAttribute                   | Inserts the standard .NET Authorize attribute                                            
+     xAuthorizeAttribute                   | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                        | builder.Entity stub                                                                      
      xBusinessExceptionClass               | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                   | CanBeNull attribute                                                                      
