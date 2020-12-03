@@ -38,8 +38,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpaceMaxLength    | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                        
      xCheckNotNullOrWhiteSpaceMaxMinLength | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
      xCreateMap                            | CreateMap from [Type]Dto to [Type] statement                                             
-     xCreateMapFromCreateUpdateDtoToType   | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
      xCreateMapFromCreateDtoToType         | CreateMap from Create[Type]Dto to [Type] statement                                       
+     xCreateMapFromCreateUpdateDtoToType   | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
      xCreateMapFromDtoToUpdateDto          | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
      xCreateMapFromDtoToCreateUpdateDto    | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
      xCreateMapFromToLookupDto             | CreateMap from [Type] to [Type]LookupDto statement                                       
@@ -123,28 +123,29 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
-     Prefix                         | Description                                              
-     ------------------------------ | --------------------------------------------------------- 
-     xAuthorizeAttribute            | xAuthorizeAttribute                                      
-     xCode                          | @code block                                              
-     xCreateModalDialog             | Create modal dialog                                      
-     xDataGridColumn                | Inserts a DataGridColumn                                 
-     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                     
-     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format             
-     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format            
-     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog       
-     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog    
-     xFieldSelect                   | Inserts a Select field a Create/Update dialog            
-     xFieldEnum                     | Inserts a Select field for enum in a Create/Update dialog
-     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog       
-     xIfCanCreate                   | If CanCreate                                             
-     xIfCanDelete                   | If CanDelete                                             
-     xIfCanUpdate                   | If CanUpdate                                             
-     xInjAuthorizationService       | Injects interface IAuthorizationService                  
-     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService       
-     xListIAppService               | Inserts a paged list for a custom IAppService            
-     xUpdateModalDialog             | Update modal dialog                                      
-     xPage                          | Inserts @page directive                                  
-     xPageParam                     | Inserts @page directive with Parameter                   
+     Prefix                         | Description                                               
+     ------------------------------ | ---------------------------------------------------------- 
+     xAuthorizeAttribute            | xAuthorizeAttribute                                       
+     xCode                          | @code block                                               
+     xCreateModalDialog             | Create modal dialog                                       
+     xDataGridColumn                | Inserts a DataGridColumn                                  
+     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                      
+     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format              
+     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format             
+     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog        
+     xFieldEnum                     | Inserts a Select field for enum in a Create/Update dialog 
+     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog     
+     xFieldSelect                   | Inserts a Select field a Create/Update dialog             
+     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog        
+     xIfCanCreate                   | If CanCreate                                              
+     xIfCanDelete                   | If CanDelete                                              
+     xIfCanUpdate                   | If CanUpdate                                              
+     xInheritsComponentBase         | Inserts @inherits [YourProjectName]ComponentBase statement
+     xInjAuthorizationService       | Injects interface IAuthorizationService                   
+     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService        
+     xListIAppService               | Inserts a paged list for a custom IAppService             
+     xPage                          | Inserts @page directive                                   
+     xPageParam                     | Inserts @page directive with Parameter                    
+     xUpdateModalDialog             | Update modal dialog                                       
 
 

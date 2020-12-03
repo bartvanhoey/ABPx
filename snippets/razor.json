@@ -8,7 +8,11 @@
     "prefix": "xAuthorizeAttribute"
   },
   "codeBlock": {
-    "body": ["@code {", "\t$0", "}"],
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -96,6 +100,23 @@
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldDate"
   },
+  "fieldEnum": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\">",
+      "    @foreach (int value in Enum.GetValues(typeof($3)))",
+      "    {",
+      "      <SelectItem TValue=\"$3\" Value=\"@(($3)value)\">",
+      "          @L[$\"Enum:$3:{value}\"]",
+      "      </SelectItem>",
+      "    }",
+      "  </Select>",
+      "</Field>"
+    ],
+    "description": "Inserts a Select field for enum in a Create/Update dialog",
+    "prefix": "xFieldEnum"
+  },
   "fieldNumeric": {
     "body": [
       "<Field>",
@@ -123,23 +144,6 @@
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
   },
-  "fieldEnum": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\">",
-      "    @foreach (int value in Enum.GetValues(typeof($3)))",
-      "    {",
-      "      <SelectItem TValue=\"$3\" Value=\"@(($3)value)\">",
-      "          @L[$\"Enum:$3:{value}\"]",
-      "      </SelectItem>",
-      "    }",
-      "  </Select>",
-      "</Field>"
-    ],
-    "description": "Inserts a Select field for enum in a Create/Update dialog",
-    "prefix": "xFieldEnum"
-  },
   "fieldText": {
     "body": [
       "<Field>",
@@ -151,19 +155,41 @@
     "prefix": "xFieldText"
   },
   "ifCanCreate": {
-    "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanCreate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
-    "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanDelete${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": ["@if (CanUpdate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanUpdate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
+  },
+  "inheritsComponentBase": {
+    "body": [
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
+    "description": "Inserts @inherits [YourProjectName]ComponentBase statement",
+    "prefix": "xInheritsComponentBase"
   },
   "injectAuthorizationService": {
     "body": [
@@ -482,6 +508,22 @@
     "description": "Inserts a paged list for a custom IAppService",
     "prefix": "xListIAppService"
   },
+  "pageDirective": {
+    "body": [
+      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
+    "description": "Inserts @page directive",
+    "prefix": "xPage"
+  },
+  "pageDirectiveWithParameter": {
+    "body": [
+      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\"",
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
+    "description": "Inserts @page directive with Parameter",
+    "prefix": "xPageParam"
+  },
   "updateModalDialog": {
     "body": [
       "<Modal @ref=\"@EditModal\">",
@@ -517,21 +559,5 @@
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"
-  },
-  "pageDirective": {
-    "body": [
-      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
-    ],
-    "description": "Inserts @page directive",
-    "prefix": "xPage"
-  },
-  "pageDirectiveWithParameter": {
-    "body": [
-      "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\"",
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
-    ],
-    "description": "Inserts @page directive with Parameter",
-    "prefix": "xPageParam"
   }
 }

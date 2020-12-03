@@ -213,15 +213,15 @@
     "description": "CreateMap from [Type]Dto to [Type] statement",
     "prefix": "xCreateMap"
   },
-  "createMapFromCreateUpdateDtoToType": {
-    "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
-    "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
-    "prefix": "xCreateMapFromCreateUpdateDtoToType"
-  },
   "createMapFromCreateDtoToType": {
     "body": "CreateMap<Create${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from Create[Type]Dto to [Type] statement",
     "prefix": "xCreateMapFromCreateDtoToType"
+  },
+  "createMapFromCreateUpdateDtoToType": {
+    "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
+    "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromCreateUpdateDtoToType"
   },
   "createMapFromDtoToToUpdateDto": {
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
