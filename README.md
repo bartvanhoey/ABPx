@@ -149,5 +149,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPage                          | Inserts @page directive                                   
      xPageParam                     | Inserts @page directive with Parameter                    
      xUpdateModalDialog             | Update modal dialog                                       
+     xInjectHttpClient              | Inject HttpClient property                                
+     xInjectIJSRuntime              | Inject IJSRuntime property                                
+     xInjectIMapper                 | Inject IMapper property                                   
+     xInjectNavigationManager       | Inject NavigationManager property                         
+     xInjectService                 | Inject MyService MyService                                
 
 

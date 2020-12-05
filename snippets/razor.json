@@ -8,11 +8,7 @@
     "prefix": "xAuthorizeAttribute"
   },
   "codeBlock": {
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -155,39 +151,22 @@
     "prefix": "xFieldText"
   },
   "ifCanCreate": {
-    "body": [
-      "@if (CanCreate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
-    "body": [
-      "@if (CanDelete${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": [
-      "@if (CanUpdate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanUpdate${1:What})", "{", "\t$0", "}"],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },
   "inheritsComponentBase": {
-    "body": [
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
-    ],
+    "body": ["@inherits ${WORKSPACE_NAME}ComponentBase"],
     "description": "Inserts @inherits [YourProjectName]ComponentBase statement",
     "prefix": "xInheritsComponentBase"
   },
@@ -559,5 +538,38 @@
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"
+  },
+  "injectHttpClient": {
+    "body": [
+      "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
+    ],
+    "description": "Inject HttpClient property",
+    "prefix": "xInjectHttpClient"
+  },
+  "injectIJSRuntime": {
+    "body": [
+      "[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"
+    ],
+    "description": "Inject IJSRuntime property",
+    "prefix": "xInjectIJSRuntime"
+  },
+  "injectIMapper": {
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "description": "Inject IMapper property",
+    "prefix": "xInjectIMapper"
+  },
+  "injectNavigationManager": {
+    "body": [
+      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
+    ],
+    "description": "Inject NavigationManager property",
+    "prefix": "xInjectNavigationManager"
+  },
+  "injectService": {
+    "body": [
+      "[Inject$1] ${2|protected,public|} I${4:$3} ${3:Name} { get; set; }$0"
+    ],
+    "description": "Inject MyService MyService",
+    "prefix": "xInjectService"
   }
 }
