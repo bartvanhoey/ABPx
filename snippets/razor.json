@@ -540,36 +540,39 @@
     "prefix": "xUpdateModalDialog"
   },
   "injectHttpClient": {
-    "body": [
-      "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
-    ],
-    "description": "Inject HttpClient property",
+    "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
+    "description": "Inserts @inject HttpClient directive",
     "prefix": "xInjectHttpClient"
   },
   "injectIJSRuntime": {
-    "body": [
-      "[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"
-    ],
-    "description": "Inject IJSRuntime property",
+    "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
+    "description": "Inserts @inject IJSRuntime directive",
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
-    "description": "Inject IMapper property",
+    "body": "@inject IMapper Mapper$0",
+    "description": "Inserts @inject IMapper directive",
     "prefix": "xInjectIMapper"
   },
+  "injectMyServiceDirective": {
+    "body": "@inject ${1:MyService} ${2:$1}",
+    "description": "Inserts @inject MyService MyService",
+    "prefix": "xInjectService"
+  },
+  "injectAppService": {
+    "body": "@inject I${2:$1}AppService ${1:Name}AppService",
+    "description": "Inserts @inject MyService MyService",
+    "prefix": "xInjectAppService"
+  },
   "injectNavigationManager": {
-    "body": [
-      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
-    ],
-    "description": "Inject NavigationManager property",
+    "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
+    "description": "Inserts @inject NavigationManager directive",
     "prefix": "xInjectNavigationManager"
   },
-  "injectService": {
-    "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3} ${3:Name} { get; set; }$0"
-    ],
-    "description": "Inject MyService MyService",
-    "prefix": "xInjectService"
+  "injectProtectedLocalStorage": {
+    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
+    "description": "Inserts @inject ProtectedLocalStorage directive in Blazor Server app",
+    "prefix": "xInjectProtectedLocalStorage"
   }
+
 }

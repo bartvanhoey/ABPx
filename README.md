@@ -97,6 +97,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntityDto              | Inherits FullAuditedEntityDto class                                                      
      xInhPagedAndSortedResultRequestDto    | Inherits PagedAndSortedResultRequestDto class                                            
      xInjectAppService                     | Inserts Inject IMyAppService MyAppService statement                                      
+     xInjectHttpClient                     | Inject HttpClient property                                                               
+     xInjectIJSRuntime                     | Inject IJSRuntime property                                                               
+     xInjectIMapper                        | Inject IMapper property                                                                  
+     xInjectNavigationManager              | Inject NavigationManager property                                                        
+     xInjectService                        | Inject IMyService MyService                                                              
      xLookupListAppService                 | Inserts an IReadOnlyList for a LookupDto object                                          
      xMethodAsync                          | async method stub without arguments                                                      
      xMethodAsyncReturn                    | async task method stub without arguments                                                 
@@ -125,34 +130,36 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
-     Prefix                         | Description                                               
-     ------------------------------ | ---------------------------------------------------------- 
-     xAuthorizeAttribute            | xAuthorizeAttribute                                       
-     xCode                          | @code block                                               
-     xCreateModalDialog             | Create modal dialog                                       
-     xDataGridColumn                | Inserts a DataGridColumn                                  
-     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                      
-     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format              
-     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format             
-     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog        
-     xFieldEnum                     | Inserts a Select field for enum in a Create/Update dialog 
-     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog     
-     xFieldSelect                   | Inserts a Select field a Create/Update dialog             
-     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog        
-     xIfCanCreate                   | If CanCreate                                              
-     xIfCanDelete                   | If CanDelete                                              
-     xIfCanUpdate                   | If CanUpdate                                              
-     xInheritsComponentBase         | Inserts @inherits [YourProjectName]ComponentBase statement
-     xInjAuthorizationService       | Injects interface IAuthorizationService                   
-     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService        
-     xListIAppService               | Inserts a paged list for a custom IAppService             
-     xPage                          | Inserts @page directive                                   
-     xPageParam                     | Inserts @page directive with Parameter                    
-     xUpdateModalDialog             | Update modal dialog                                       
-     xInjectHttpClient              | Inject HttpClient property                                
-     xInjectIJSRuntime              | Inject IJSRuntime property                                
-     xInjectIMapper                 | Inject IMapper property                                   
-     xInjectNavigationManager       | Inject NavigationManager property                         
-     xInjectService                 | Inject MyService MyService                                
+     Prefix                         | Description                                                         
+     ------------------------------ | -------------------------------------------------------------------- 
+     xAuthorizeAttribute            | xAuthorizeAttribute                                                 
+     xCode                          | @code block                                                         
+     xCreateModalDialog             | Create modal dialog                                                 
+     xDataGridColumn                | Inserts a DataGridColumn                                            
+     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
+     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        
+     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format                       
+     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog                  
+     xFieldEnum                     | Inserts a Select field for enum in a Create/Update dialog           
+     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog               
+     xFieldSelect                   | Inserts a Select field a Create/Update dialog                       
+     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog                  
+     xIfCanCreate                   | If CanCreate                                                        
+     xIfCanDelete                   | If CanDelete                                                        
+     xIfCanUpdate                   | If CanUpdate                                                        
+     xInheritsComponentBase         | Inserts @inherits [YourProjectName]ComponentBase statement          
+     xInjAuthorizationService       | Injects interface IAuthorizationService                             
+     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService                  
+     xListIAppService               | Inserts a paged list for a custom IAppService                       
+     xPage                          | Inserts @page directive                                             
+     xPageParam                     | Inserts @page directive with Parameter                              
+     xUpdateModalDialog             | Update modal dialog                                                 
+     xInjectHttpClient              | Inserts @inject HttpClient directive                                
+     xInjectIJSRuntime              | Inserts @inject IJSRuntime directive                                
+     xInjectIMapper                 | Inserts @inject IMapper directive                                   
+     xInjectService                 | Inserts @inject MyService MyService                                 
+     xInjectAppService              | Inserts @inject MyService MyService                                 
+     xInjectNavigationManager       | Inserts @inject NavigationManager directive                         
+     xInjectProtectedLocalStorage   | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
 
 

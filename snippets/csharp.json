@@ -631,6 +631,41 @@
     "description": "Inserts Inject IMyAppService MyAppService statement",
     "prefix": "xInjectAppService"
   },
+  "injectHttpClient": {
+    "body": [
+      "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
+    ],
+    "description": "Inject HttpClient property",
+    "prefix": "xInjectHttpClient"
+  },
+  "injectIJSRuntime": {
+    "body": [
+      "[Inject$1] public IJSRuntime$2 ${3|JSRuntime,Js|} { get; set; }$0"
+    ],
+    "description": "Inject IJSRuntime property",
+    "prefix": "xInjectIJSRuntime"
+  },
+  "injectIMapper": {
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
+    "description": "Inject IMapper property",
+    "prefix": "xInjectIMapper"
+  },
+  "injectNavigationManager": {
+    "body": [
+      "[Inject$1] public NavigationManager$2 ${3|NavigationManager,Navigation,Nav|} { get; set; }$0"
+    ],
+    "description": "Inject NavigationManager property",
+    "prefix": "xInjectNavigationManager"
+  },
+  "injectService": {
+    "body": [
+      "[Inject$1] ${2|protected,public|} I${4:$3} ${3:Name} { get; set; }$0"
+    ],
+    "description": "Inject IMyService MyService",
+    "prefix": "xInjectService"
+  },
   "lookupListAppService": {
     "body": [
       "protected IReadOnlyList$4<${1:Type}LookupDto$3> ${2:${1/(.*)/${1:/downcase}/}}List = Array$5.Empty<$1LookupDto>();",
