@@ -40,7 +40,7 @@
         "path": "./snippets/csharp.json"
       },
       {
-        "language": "json",
+        "language": "jsonc",
         "path": "./snippets/jsonc.json"
       }
     ]
