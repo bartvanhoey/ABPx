@@ -163,7 +163,8 @@
       "           ],",
       "           \"problemMatcher\": \"$msCompile\"",
       "       }",
-      "   ]"
+      "   ]",
+      "}"
     ],
     "description": "Inserts tasks in tasks.json needed to run project",
     "prefix": "xTaskJson"
