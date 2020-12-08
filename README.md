@@ -128,6 +128,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xThrowBusinessException               | Inserts throw new BusinessException statement                                            
      xThrowUserFriendlyException           | Inserts throw new UserFriendlyException statement                                        
 
+## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
+
      Prefix      | Description                                                       
      ----------- | ------------------------------------------------------------------ 
      xLaunchJson | Inserts launch configurations in launch.json needed to run project
