@@ -128,6 +128,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xThrowBusinessException               | Inserts throw new BusinessException statement                                            
      xThrowUserFriendlyException           | Inserts throw new UserFriendlyException statement                                        
 
+     Prefix                | Description                                
+     --------------------- | ------------------------------------------- 
+     Log output to console | [\r\n  "console.log('$1');",\r\n  "$2"\r\n]
+
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
      Prefix                         | Description                                                         

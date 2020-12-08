@@ -38,6 +38,10 @@
       {
         "language": "csharp",
         "path": "./snippets/csharp.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/jsonc.json"
       }
     ]
   }

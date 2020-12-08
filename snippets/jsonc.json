@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"prefix": "xLog",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
