@@ -131,7 +131,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      Prefix      | Description                                                       
      ----------- | ------------------------------------------------------------------ 
      xLaunchJson | Inserts launch configurations in launch.json needed to run project
-     xTaskJson   | Inserts tasks in tasks.json needed to run project                 
+     xTasksJson  | Inserts tasks in tasks.json needed to run project                 
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
