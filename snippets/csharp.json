@@ -354,6 +354,14 @@
     "description": "GetRequiredService and an IAppService field",
     "prefix": "xGetRequiredAppService"
   },
+  "getRequiredService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
+      "private readonly ${3:$1} _${5:$4}$6;"
+    ],
+    "description": "GetRequiredService and matching field",
+    "prefix": "xGetRequiredService"
+  },
   "getSet": {
     "body": [
       "{ get; set; }$0"

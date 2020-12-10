@@ -57,6 +57,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetLookupIAppService                    | Adds a GetLookupAsync method to an IAppService interface                                 
      xGps                                     | Inserts { get, private set }                                                             
      xGetRequiredAppService                   | GetRequiredService and an IAppService field                                              
+     xGetRequiredService                      | GetRequiredService and matching field                                                    
      xGs                                      | Inserts { get, set }                                                                     
      xGroupNamePermissionConst                | a GroupName constant                                                                     
      xIAppService                             | Inserts a complete IAppService interface with CRUD methods for a given Type              
