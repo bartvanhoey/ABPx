@@ -123,7 +123,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xTestAssertThrowsCustomException      | Inserts var exception = Assert.ThrowsAsync YourCustomException                           
      xTestCreateAsync                      | Inserts var result = await AppService.CreateAsync statement                              
      xTestGetListAsync                     | Inserts var result = await AppService.GetListAsync statement                             
-     xTestMethodStub                       | a xUnit test method stub                                                                 
+     xTestMethodTaskStub                   | a xUnit test Task method stub                                                            
+     xTestMethodVoidStub                   | a xUnit test void method stub                                                            
      xTestResultTotalCountShouldBeGreater  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xThrowBusinessException               | Inserts throw new BusinessException statement                                            
      xThrowUserFriendlyException           | Inserts throw new UserFriendlyException statement                                        

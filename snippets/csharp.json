@@ -860,7 +860,7 @@
     "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xTestGetListAsync"
   },
-  "testMethodStub": {
+  "testMethodTaskStub": {
     "body": [
       "[Fact$1]",
       "public async Task$2 Should_${3:Name_Of_Your_Test}()",
@@ -868,8 +868,19 @@
       "\t$0",
       "}"
     ],
-    "description": "a xUnit test method stub",
-    "prefix": "xTestMethodStub"
+    "description": "a xUnit test Task method stub",
+    "prefix": "xTestMethodTaskStub"
+  },
+  "testMethodVoidStub": {
+    "body": [
+      "[Fact$1]",
+      "public void Should_${3:Name_Of_Your_Test}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "a xUnit test void method stub",
+    "prefix": "xTestMethodVoidStub"
   },
   "testResultTotalCountShouldBeGreater": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo(${1:totalCount});$0",
