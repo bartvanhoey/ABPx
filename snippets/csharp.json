@@ -879,6 +879,11 @@
     "description": "a xUnit test Task method stub",
     "prefix": "xTestMethodTaskStub"
   },
+  "guidGeneratorCreate" : {
+    "body" : "GuidGenerator.Create()$0",
+    "prefix": "xGuidGeneratorCreate",
+    "description" : "Inserts GuidGenerator.Create() statement"
+  },
   "testMethodVoidStub": {
     "body": [
       "[Fact$1]",
