@@ -119,7 +119,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRequiredAttribute                       | Required Attribute                                                                       
      xReturnObjectMapperMap                   | return ObjectMapper.Map statement                                                        
      xStringLengthAttribute                   | StringLength attribute                                                                   
-     xTestAssertThrowsAsyncException          | Inserts var exception = Assert.ThrowsAsync AbpValidationException                        
+     xTestAssertThrowsAsyncException          | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xTestAssertThrowsAsyncCustomException    | Inserts Assert.ThrowsAsync<YourCustomException>                                          
      xTestAssertThrowsAsyncBusinessException  | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xTestAssertThrowsCustomException         | Inserts Assert.Throws<YourCustomException>                                               
