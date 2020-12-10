@@ -811,7 +811,7 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
-  "testAssertThrowsException": {
+  "testAssertThrowsAsyncException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
       "{",
@@ -826,9 +826,9 @@
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$8(mem => mem == \"${9:$5}\"));"
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync AbpValidationException",
-    "prefix": "xTestAssertThrowsException"
+    "prefix": "xTestAssertThrowsAsyncException"
   },
-  "testAssertThrowsYourCustomException": {
+  "testAssertThrowsAsyncCustomException": {
     "body": [
       "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
       "{",
@@ -840,7 +840,18 @@
       "\t);",
       "});"
     ],
-    "description": "Inserts var exception = Assert.ThrowsAsync YourCustomException",
+    "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
+    "prefix": "xTestAssertThrowsAsyncCustomException"
+  },
+  "testAssertThrowsCustomException": {
+    "body": [
+      "Assert.Throws<${1:YourCustomException}$2>(() =>",
+      "{",
+      "\t // statement that throws exception comes here",
+      "\t",
+      "});"
+    ],
+    "description": "Inserts Assert.Throws<YourCustomException>",
     "prefix": "xTestAssertThrowsCustomException"
   },
   "testCreateAsync": {

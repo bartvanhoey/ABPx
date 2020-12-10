@@ -119,8 +119,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRequiredAttribute                       | Required Attribute                                                                       
      xReturnObjectMapperMap                   | return ObjectMapper.Map statement                                                        
      xStringLengthAttribute                   | StringLength attribute                                                                   
-     xTestAssertThrowsException               | Inserts var exception = Assert.ThrowsAsync AbpValidationException                        
-     xTestAssertThrowsCustomException         | Inserts var exception = Assert.ThrowsAsync YourCustomException                           
+     xTestAssertThrowsAsyncException          | Inserts var exception = Assert.ThrowsAsync AbpValidationException                        
+     xTestAssertThrowsAsyncCustomException    | Inserts Assert.ThrowsAsync<YourCustomException>                                          
+     xTestAssertThrowsCustomException         | Inserts Assert.Throws<YourCustomException>                                               
      xTestCreateAsync                         | Inserts var result = await AppService.CreateAsync statement                              
      xTestGetListAsync                        | Inserts var result = await AppService.GetListAsync statement                             
      xTestMethodTaskStub                      | a xUnit test Task method stub                                                            
