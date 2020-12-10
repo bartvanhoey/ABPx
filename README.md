@@ -121,6 +121,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xStringLengthAttribute                   | StringLength attribute                                                                   
      xTestAssertThrowsAsyncException          | Inserts var exception = Assert.ThrowsAsync AbpValidationException                        
      xTestAssertThrowsAsyncCustomException    | Inserts Assert.ThrowsAsync<YourCustomException>                                          
+     xTestAssertThrowsAsyncBusinessException  | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xTestAssertThrowsCustomException         | Inserts Assert.Throws<YourCustomException>                                               
      xTestCreateAsync                         | Inserts var result = await AppService.CreateAsync statement                              
      xTestGetListAsync                        | Inserts var result = await AppService.GetListAsync statement                             

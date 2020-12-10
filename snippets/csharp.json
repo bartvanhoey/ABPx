@@ -843,6 +843,20 @@
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xTestAssertThrowsAsyncCustomException"
   },
+ "testAssertThrowsAsyncBusinessException": {
+    "body": [
+      "var exception = await Assert.ThrowsAsync<BusinessException>(async () =>",
+      "{",
+      "\t // statement that throws exception comes here",
+      "\t $1",
+      "});",
+      "",
+      "// exception.Code.ShouldBe(\"${2:YourExceptionCode}\");",
+      "exception.Message.ShouldBe(\"${2:YourExceptionMessage}\");"
+    ],
+    "description": "Inserts var exception = Assert.ThrowsAsync<BusinessException>",
+    "prefix": "xTestAssertThrowsAsyncBusinessException"
+  },
   "testAssertThrowsCustomException": {
     "body": [
       "Assert.Throws<${1:YourCustomException}$2>(() =>",
