@@ -82,6 +82,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhAggregateRoot                        | Inherits AggregateRoot class                                                             
      xInhAppService                           | Inherits ProjectNameAppService class                                                     
      xInhApplicationService                   | Inherits ApplicationService class                                                        
+     xInhDomainTestBase                       | Inherits DomainTestBase class                                                            
      xInhApplicationTestBase                  | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                 | Inherits AuditedAggregateRoot class                                                      
      xInhAuditedEntity                        | Inherits AuditedEntity class                                                             

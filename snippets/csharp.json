@@ -554,6 +554,11 @@
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
+  "inheritsDomainTestBase": {
+    "body": " ${WORKSPACE_NAME}DomainTestBase$0",
+    "description": "Inherits DomainTestBase class",
+    "prefix": "xInhDomainTestBase"
+  },
   "inheritsApplicationTestBase": {
     "body": " ${WORKSPACE_NAME}ApplicationTestBase$0",
     "description": "Inherits ApplicationTestBase class",
