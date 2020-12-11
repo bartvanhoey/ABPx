@@ -245,9 +245,9 @@
   },
   "crudAppService": {
     "body": [
-      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate${7:$2}Dto>, I${8:$2}AppService",
+      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
       "{",
-      "\tpublic ${9:$1}(IRepository<${10:$2}, ${11:$4}> repository): base(repository)",
+      "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
       "\t{",
       "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
       "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
