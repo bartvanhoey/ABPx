@@ -109,11 +109,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectService                               | Inject IMyService MyService                                                              
      xLookupListAppService                        | Inserts an IReadOnlyList for a LookupDto object                                          
      xMethodAsync                                 | async method stub without arguments                                                      
-     xMethodAsyncReturn                           | async task method stub without arguments                                                 
-     xMethodAsyncReturnWithArgs                   | async task method stub with arguments                                                    
+     xMethodAsyncReturn                           | async task method stub                                                                   
      xMethodAsyncWithArgs                         | async method stub with arguments                                                         
      xMethodReturn                                | method stub without arguments                                                            
-     xMethodReturnWithArgs                        | method stub with arguments                                                               
      xMethodVoid                                  | void method stub without arguments                                                       
      xMethodVoidWithArgs                          | void method stub with arguments                                                          
      xNotNullAttribute                            | NotNull attribute                                                                        

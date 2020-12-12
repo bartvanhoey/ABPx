@@ -688,23 +688,13 @@
   },
   "methodAsyncReturn": {
     "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}()",
+      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}($5)",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "async task method stub without arguments",
+    "description": "async task method stub",
     "prefix": "xMethodAsyncReturn"
-  },
-  "methodAsyncReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async task method stub with arguments",
-    "prefix": "xMethodAsyncReturnWithArgs"
   },
   "methodAsyncWithArgs": {
     "body": [
@@ -718,23 +708,13 @@
   },
   "methodReturn": {
     "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}()",
+      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}($4)",
       "{",
       "\t$0",
       "}"
     ],
     "description": "method stub without arguments",
     "prefix": "xMethodReturn"
-  },
-  "methodReturnWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "method stub with arguments",
-    "prefix": "xMethodReturnWithArgs"
   },
   "methodVoid": {
     "body": [
