@@ -807,7 +807,7 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
-  "testAssertThrowsAsyncException": {
+  "testAssertThrowsAsyncAbpValidationException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
       "{",
@@ -822,7 +822,7 @@
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$8(mem => mem == \"${9:$5}\"));"
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync<AbpValidationException>",
-    "prefix": "xTestAssertThrowsAsyncException"
+    "prefix": "xTestAssertThrowsAsyncAbpValidationException"
   },
   "testAssertThrowsAsyncCustomException": {
     "body": [
