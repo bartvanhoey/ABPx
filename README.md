@@ -61,7 +61,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGs                                      | Inserts { get, set }                                                                     
      xGroupNamePermissionConst                | a GroupName constant                                                                     
      xIAppService                             | Inserts a complete IAppService interface with CRUD methods for a given Type              
-     xICrudAppService                         | an ICrudAppService interface                                                             
+     xICrudAppServiceCreateUpdateDto          | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
+     xICrudAppServiceCreateDtoAndUpdateDto    | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
      xCrudMethodsIAppService                  | Inserts the basic CRUD methods in an IAppService                                         
      xIMongoCollection                        | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                             | an IRepository for a type parameter                                                      

@@ -393,15 +393,25 @@
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppService"
   },
-  "iCrudAppService": {
+  "iCrudAppServiceCreatUpdateDto": {
     "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate${5:$1}Dto>$0",
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "an ICrudAppService interface",
-    "prefix": "xICrudAppService"
+    "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined",
+    "prefix": "xICrudAppServiceCreateUpdateDto"
+  },
+  "iCrudAppServiceCreateDtoUpdateDto": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, Create$$1Dto, Update$$1Dto>$0",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated",
+    "prefix": "xICrudAppServiceCreateDtoAndUpdateDto"
   },
   "iCrudMethodsAppService": {
     "body": [
