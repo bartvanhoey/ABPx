@@ -678,7 +678,7 @@
   },
   "methodAsync": {
     "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}()",
+      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}($5)",
       "{",
       "\t$0",
       "}"
