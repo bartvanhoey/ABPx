@@ -13,7 +13,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      Prefix                                       | Description                                                                              
      -------------------------------------------- | ----------------------------------------------------------------------------------------- 
      xAddPermissionGroup                          | Add group permission to context in PermissionDefinitionProvider.cs                       
-     xAddStaticPermissionClass                    | Inserts a static class with Default/Create/Update/Delete constants                       
+     xPermissionClass                             | Inserts a static class with Default/Create/Update/Delete constants                       
      xAddPermissionToGroup                        | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPolicyPermissions                        | Adds policy permissions                                                                  
      xAppServiceClassStub                         | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
@@ -61,7 +61,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredAppService                       | GetRequiredService and an IAppService field                                              
      xGetRequiredService                          | GetRequiredService and matching field                                                    
      xGs                                          | Inserts { get, set }                                                                     
-     xGroupNamePermissionConst                    | a GroupName constant                                                                     
+     xPermissionGroupNameConstant                 | a GroupName constant                                                                     
      xIAppService                                 | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto              | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto        | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      

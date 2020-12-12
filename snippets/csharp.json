@@ -4,7 +4,7 @@
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddPermissionGroup"
   },
-  "addStaticPermissionClass": {
+  "permissionClass": {
     "body": [
       "public static class ${1:ClassName}",
       "{",
@@ -15,7 +15,7 @@
       "}$0"
     ],
     "description": "Inserts a static class with Default/Create/Update/Delete constants",
-    "prefix": "xAddStaticPermissionClass"
+    "prefix": "xPermissionClass"
   },
   "addPermissionToGroup": {
     "body": [
@@ -381,10 +381,10 @@
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
-  "groupNamePermissionConst": {
+  "xPermissionGroupNameConstant": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "description": "a GroupName constant",
-    "prefix": "xGroupNamePermissionConst"
+    "prefix": "xPermissionGroupNameConstant"
   },
   "iAppService": {
     "body": [
