@@ -4,7 +4,7 @@
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddPermissionGroup"
   },
-  "addPermissionName0": {
+  "addStaticPermissionClass": {
     "body": [
       "public static class ${1:ClassName}",
       "{",
@@ -14,8 +14,8 @@
       "\tpublic const string Delete = Default + \".Delete\";",
       "}$0"
     ],
-    "description": "adds a permissions class with Default/Create/Update/Delete constants",
-    "prefix": "xAddPermissionName"
+    "description": "Inserts a static class with Default/Create/Update/Delete constants",
+    "prefix": "xAddStaticPermissionClass"
   },
   "addPermissionToGroup": {
     "body": [
