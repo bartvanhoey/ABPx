@@ -44,7 +44,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateMapFromDtoToCreateUpdateDto       | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
      xCreateMapFromToLookupDto                | CreateMap from [Type] to [Type]LookupDto statement                                       
      xCreateMapToDto                          | CreateMap [Type] to [Type]Dto statement                                                  
-     xCrudAppService                          | CrudAppService class                                                                     
+     xCrudAppServiceCreateUpdateDto           | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
+     xCrudAppServiceCreateDtoAndUpdateDto     | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated           
      xCtor                                    | constructor stub                                                                         
      xCtorBusinessException                   | constructor stub in a class derived from BusinessException                               
      xDataTypeAttribute                       | DataType attribute                                                                       

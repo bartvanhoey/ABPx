@@ -82,9 +82,7 @@
     "prefix": "xAuthorizeAbpAttribute"
   },
   "authorizeAttribute": {
-    "body": [
-      "[Authorize$1]$0"
-    ],
+    "body": ["[Authorize$1]$0"],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthorizeAttribute"
   },
@@ -117,9 +115,7 @@
     "prefix": "xBusinessExceptionClass"
   },
   "canBeNullAttribute": {
-    "body": [
-      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
-    ],
+    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -243,7 +239,7 @@
     "description": "CreateMap [Type] to [Type]Dto statement",
     "prefix": "xCreateMapToDto"
   },
-  "crudAppService": {
+  "crudAppServiceCreateUpdateDto": {
     "body": [
       "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
       "{",
@@ -257,8 +253,25 @@
       "\t}",
       "}$0"
     ],
-    "description": "CrudAppService class",
-    "prefix": "xCrudAppService"
+    "description": "Inserts a complete CrudAppService class with CreateUpdateDto combined",
+    "prefix": "xCrudAppServiceCreateUpdateDto"
+  },
+  "crudAppServiceCreateDtoUpdateDto": {
+    "body": [
+      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, Create$2Dto, Update$2Dto>, I$2AppService",
+      "{",
+      "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
+      "\t{",
+      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
+      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
+      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Create;",
+      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
+      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;",
+      "\t}",
+      "}$0"
+    ],
+    "description": "Inserts a complete CrudAppService class with CreateDto and UpdateDto separated",
+    "prefix": "xCrudAppServiceCreateDtoAndUpdateDto"
   },
   "ctor": {
     "body": [
@@ -306,9 +319,7 @@
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "emailAddressAttribute": {
-    "body": [
-      "[EmailAddress$1] $0"
-    ],
+    "body": ["[EmailAddress$1] $0"],
     "description": "EmailAddress Attribute",
     "prefix": "xEmailAddressAttribute"
   },
@@ -340,9 +351,7 @@
     "prefix": "xGetLookupIAppService"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
@@ -363,9 +372,7 @@
     "prefix": "xGetRequiredService"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
@@ -439,10 +446,7 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -460,40 +464,22 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -508,13 +494,7 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -559,16 +539,12 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [
-      " : ${1:${WORKSPACE_NAME}}AppService$0"
-    ],
+    "body": [" : ${1:${WORKSPACE_NAME}}AppService$0"],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
   "inheritsApplicationService": {
-    "body": [
-      " : ApplicationService$0"
-    ],
+    "body": [" : ApplicationService$0"],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
@@ -669,9 +645,7 @@
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": [
-      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
-    ],
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
     "description": "Inject IMapper property",
     "prefix": "xInjectIMapper"
   },
@@ -778,9 +752,7 @@
     "prefix": "xMethodVoidWithArgs"
   },
   "notNullAttribute": {
-    "body": [
-      "[NotNull$1] ${2:string} ${3:name}$0"
-    ],
+    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -816,9 +788,7 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1] $0"
-    ],
+    "body": ["[Required$1] $0"],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
@@ -828,9 +798,7 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "stringLengthAttribute": {
-    "body": [
-      "[StringLength(${1:50})$2]$0"
-    ],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
@@ -866,7 +834,7 @@
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xTestAssertThrowsAsyncCustomException"
   },
- "testAssertThrowsAsyncBusinessException": {
+  "testAssertThrowsAsyncBusinessException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<BusinessException>(async () =>",
       "{",
@@ -927,10 +895,10 @@
     "description": "a xUnit test Task method stub",
     "prefix": "xTestMethodTaskStub"
   },
-  "guidGeneratorCreate" : {
-    "body" : "GuidGenerator.Create()$0",
+  "guidGeneratorCreate": {
+    "body": "GuidGenerator.Create()$0",
     "prefix": "xGuidGeneratorCreate",
-    "description" : "Inserts GuidGenerator.Create() statement"
+    "description": "Inserts GuidGenerator.Create() statement"
   },
   "testMethodVoidStub": {
     "body": [
@@ -957,16 +925,12 @@
     "prefix": "xTestResultTotalCountShouldBeGreater"
   },
   "throwBusinessException": {
-    "body": [
-      "throw new BusinessException$1(\"${2:TranslationKey}\");"
-    ],
+    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
   },
   "throwUserFriendlyException": {
-    "body": [
-      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
-    ],
+    "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowUserFriendlyException"
   }
