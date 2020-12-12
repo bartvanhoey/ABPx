@@ -388,17 +388,17 @@
   },
   "iAppService": {
     "body": [
-      "public interface ${TM_FILENAME_BASE}",
+      "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
       "{",
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$6> GetAsync(${3|int,Guid,string|}$4 id);",
+      "\tTask$3<${2:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$7> GetAsync(${4|int,Guid,string|}$5 id);",
       "",
-      "\tTask<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
+      "\tTask<PagedResultDto<$2Dto>$6> GetListAsync(Get$2ListDto$8 input);",
       "",
-      "\tTask<$1Dto> CreateAsync(Create$1Dto$8 input);",
+      "\tTask<$2Dto> CreateAsync(Create$2Dto$9 input);",
       "",
-      "\tTask UpdateAsync($3 id, Update$1Dto$9 input);",
+      "\tTask UpdateAsync($4 id, Update$2Dto$10 input);",
       "",
-      "\tTask DeleteAsync($3 id);$0",
+      "\tTask DeleteAsync($4 id);$0",
       "",
       "}"
     ],
