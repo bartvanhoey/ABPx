@@ -168,6 +168,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService                  
      xListIAppService               | Inserts a paged list for a custom IAppService                       
      xPage                          | Inserts @page directive                                             
+     xFeedbackValidation            | Inserts <Feedback> validation statement                             
      xPageParam                     | Inserts @page directive with Parameter                              
      xUpdateModalDialog             | Update modal dialog                                                 
      xInjectHttpClient              | Inserts @inject HttpClient directive                                
