@@ -214,6 +214,11 @@
     "description": "CreateMap from Create[Type]Dto to [Type] statement",
     "prefix": "xCreateMapFromCreateDtoToType"
   },
+  "createMapFromUpdateDtoToType": {
+    "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
+    "description": "CreateMap from Update[Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromUpdateDtoToType"
+  },
   "createMapFromCreateUpdateDtoToType": {
     "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",

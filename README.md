@@ -39,6 +39,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpaceMaxMinLength    | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
      xCreateMap                               | CreateMap from [Type]Dto to [Type] statement                                             
      xCreateMapFromCreateDtoToType            | CreateMap from Create[Type]Dto to [Type] statement                                       
+     xCreateMapFromUpdateDtoToType            | CreateMap from Update[Type]Dto to [Type] statement                                       
      xCreateMapFromCreateUpdateDtoToType      | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
      xCreateMapFromDtoToUpdateDto             | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
      xCreateMapFromDtoToCreateUpdateDto       | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
