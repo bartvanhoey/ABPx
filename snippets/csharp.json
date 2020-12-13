@@ -390,6 +390,13 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
+  "hasOneWithManyForeignKeyRequired": {
+    "body": [
+      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
+    ],
+    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
+    "prefix": "xHasOneWithManyForeignKeyRequired"
+  },
   "iAppService": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
@@ -428,13 +435,6 @@
     ],
     "description": "Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated",
     "prefix": "xICrudAppServiceCreateDtoAndUpdateDto"
-  },
-  "hasOneWithManyForeignKeyRequired": {
-    "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
-    ],
-    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xHasOneWithManyForeignKeyRequired"
   },
   "iCrudMethodsAppService": {
     "body": [
@@ -879,6 +879,11 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
+  "testAppServiceGetListAsync": {
+    "body": "var result = await _${1:name}AppService.GetListAsync(${2:new PagedAndSortedResultRequestDto}$3()$4);$0",
+    "description": "Inserts var result = await AppService.GetListAsync statement",
+    "prefix": "xTestAppServiceGetListAsync"
+  },
   "testAssertThrowsAsyncAbpValidationException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
@@ -948,11 +953,6 @@
     "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xTestAppServiceCreateAsync"
   },
-  "testAppServiceGetListAsync": {
-    "body": "var result = await _${1:name}AppService.GetListAsync(${2:new PagedAndSortedResultRequestDto}$3()$4);$0",
-    "description": "Inserts var result = await AppService.GetListAsync statement",
-    "prefix": "xTestAppServiceGetListAsync"
-  },
   "testMethodTaskStub": {
     "body": [
       "[Fact$1]",
@@ -990,6 +990,13 @@
     ],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
+  },
+  "throwEntityNotFoundException": {
+    "body": [
+      "throw new EntityNotFoundException();"
+    ],
+    "description": "Inserts throw new EntityNotFoundException statement",
+    "prefix": "xThrowEntityNotFoundException"
   },
   "throwUserFriendlyException": {
     "body": [

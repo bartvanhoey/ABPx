@@ -62,10 +62,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                          | GetRequiredService and matching field                                                    
      xGs                                          | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                         | Inserts GuidGenerator.Create() statement                                                 
+     xHasOneWithManyForeignKeyRequired            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xIAppService                                 | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto              | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto        | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
-     xHasOneWithManyForeignKeyRequired            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xCrudMethodsIAppService                      | Inserts the basic CRUD methods in an IAppService                                         
      xIMongoCollection                            | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                                 | an IRepository for a type parameter                                                      
@@ -129,16 +129,17 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnPagedResultDto                        | Inserts return new PagedResultDto statement                                              
      xStringLengthAttribute                       | StringLength attribute                                                                   
+     xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xTestAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xTestAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
      xTestAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
      xTestAppServiceCreateAsync                   | Inserts var result = await AppService.CreateAsync statement                              
-     xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestMethodTaskStub                          | a xUnit test Task method stub                                                            
      xTestMethodVoidStub                          | a xUnit test void method stub                                                            
      xTestResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xThrowBusinessException                      | Inserts throw new BusinessException statement                                            
+     xThrowEntityNotFoundException                | Inserts throw new EntityNotFoundException statement                                      
      xThrowUserFriendlyException                  | Inserts throw new UserFriendlyException statement                                        
      xPermissionGroupNameConstant                 | a GroupName constant                                                                     
 
