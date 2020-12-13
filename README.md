@@ -118,6 +118,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xObjectMapperMap                             | ObjectMapper.Map statement                                                               
      xPermissionClass                             | Inserts a static class with Default/Create/Update/Delete constants                       
      xPropPrivateSetter                           | property with private setter                                                             
+     xRepoDeleteAsync                             | Inserts repository.DeleteAsync statement                                                 
      xRepoGetAsync                                | Inserts var VarName = repository.GetAsync statement                                      
      xRepoGetListAsync                            | Inserts var items = repository.GetListAsync statement                                    
      xRepoInsertAsync                             | Inserts repository.InsertAsync statement                                                 

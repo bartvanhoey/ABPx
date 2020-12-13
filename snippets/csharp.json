@@ -803,6 +803,13 @@
     "description": "property with private setter",
     "prefix": "xPropPrivateSetter"
   },
+  "repoDeleteAsync": {
+    "body": [
+      "await _${1:name}Repository.DeleteAsync$3(id, autoSave:${2|false,true|});$0"
+    ],
+    "description": "Inserts repository.DeleteAsync statement",
+    "prefix": "xRepoDeleteAsync"
+  },
   "repoGetAsync": {
     "body": [
       "var ${1:VarName} = await _${2:$1}Repository.GetAsync$4(${3:id});",
