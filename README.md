@@ -120,7 +120,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPropPrivateSetter                           | property with private setter                                                             
      xRepoGetAsync                                | Inserts var VarName = repository.GetAsync statement                                      
      xRepoGetListAsync                            | Inserts var items = repository.GetListAsync statement                                    
-     xRepoInsertAsync                             | repository.InsertAsync statement                                                         
+     xRepoInsertAsync                             | Inserts repository.InsertAsync statement                                                 
      xRequiredAttribute                           | Required Attribute                                                                       
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 

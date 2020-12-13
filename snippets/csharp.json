@@ -821,15 +821,9 @@
   },
   "repoInsertAsync": {
     "body": [
-      "await _${1:name}Repository.InsertAsync(",
-      "\tnew ${2:YourType}",
-      "\t\t{",
-      "\t\t\t${3:Property} = ${4:Value}$5",
-      "\t\t}",
-      ",autoSave:true",
-      ");$0"
+      "await _${1:name}Repository.InsertAsync(${2;$1},autoSave:${3|false,true|});$0"
     ],
-    "description": "repository.InsertAsync statement",
+    "description": "Inserts repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
