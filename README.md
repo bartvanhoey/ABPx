@@ -132,8 +132,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xTestAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xTestAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
      xTestAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
-     xTestCreateAsync                             | Inserts var result = await AppService.CreateAsync statement                              
-     xTestGetListAsync                            | Inserts var result = await AppService.GetListAsync statement                             
+     xTestAppServiceCreateAsync                   | Inserts var result = await AppService.CreateAsync statement                              
+     xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestMethodTaskStub                          | a xUnit test Task method stub                                                            
      xTestMethodVoidStub                          | a xUnit test void method stub                                                            
      xTestResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           

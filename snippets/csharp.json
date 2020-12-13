@@ -929,7 +929,7 @@
     "description": "Inserts Assert.Throws<YourCustomException>",
     "prefix": "xTestAssertThrowsCustomException"
   },
-  "testCreateAsync": {
+  "testCreateAppServiceAsync": {
     "body": [
       "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
       "\tnew ${1|CreateUpdate,Create|}${2:Type}Dto$4",
@@ -939,25 +939,19 @@
       ");$0"
     ],
     "description": "Inserts var result = await AppService.CreateAsync statement",
-    "prefix": "xTestCreateAsync"
+    "prefix": "xTestAppServiceCreateAsync"
   },
-  "testGetListAsync": {
+  "testAppServiceGetListAsync": {
     "body": "var result = await _${1:name}AppService.GetListAsync(new ${2:PagedAndSortedResultRequestDto}$3());$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
-    "prefix": "xTestGetListAsync"
+    "prefix": "xTestAppServiceGetListAsync"
   },
   "testMethodTaskStub": {
     "body": [
       "[Fact$1]",
       "public async Task$2 Should_${3:Name_Of_Your_Test}()",
       "{",
-      "\t// Arrange",
-      "\t$0",
-      "",
-      "\t// Act",
-      "",
-      "",
-      "\t// Assert",
+      "\t// $0",
       "",
       "",
       "}"
@@ -970,13 +964,7 @@
       "[Fact$1]",
       "public void Should_${3:Name_Of_Your_Test}()",
       "{",
-      "\t// Arrange",
       "\t$0",
-      "",
-      "\t// Act",
-      "",
-      "",
-      "\t// Assert",
       "",
       "",
       "}"
