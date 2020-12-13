@@ -86,7 +86,7 @@
     "description": "Inserts a DataGridColumn in short date format",
     "prefix": "xDataGridColumnShortDateString"
   },
-  "fieldDate": {
+  "fieldDateEdit": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -94,9 +94,9 @@
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
-    "prefix": "xFieldDate"
+    "prefix": "xFieldDateEdit"
   },
-  "fieldEnum": {
+  "fieldEnumSelect": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -111,9 +111,9 @@
       "</Field>"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
-    "prefix": "xFieldEnum"
+    "prefix": "xFieldEnumSelect"
   },
-  "fieldNumeric": {
+  "fieldNumericEdit": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -121,7 +121,7 @@
       "</Field>"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
-    "prefix": "xFieldNumeric"
+    "prefix": "xFieldNumericEdit"
   },
   "fieldSelect": {
     "body": [
@@ -140,7 +140,7 @@
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
   },
-  "fieldText": {
+  "fieldTextEdit": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
@@ -148,7 +148,17 @@
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
-    "prefix": "xFieldText"
+    "prefix": "xFieldTextEdit"
+  },
+  "fieldMemoEdit": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>"
+    ],
+    "description": "Inserts a MemoEdit field in a Create/Update dialog",
+    "prefix": "xFieldMemoEdit"
   },
   "ifCanCreate": {
     "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],

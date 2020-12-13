@@ -159,11 +159,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
      xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        
      xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format                       
-     xFieldDate                     | Inserts a TextEdit field in a Create/Update dialog                  
-     xFieldEnum                     | Inserts a Select field for enum in a Create/Update dialog           
-     xFieldNumeric                  | Inserts a NumericEdit field in a Create/Update dialog               
+     xFieldDateEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
+     xFieldEnumSelect               | Inserts a Select field for enum in a Create/Update dialog           
+     xFieldNumericEdit              | Inserts a NumericEdit field in a Create/Update dialog               
      xFieldSelect                   | Inserts a Select field a Create/Update dialog                       
-     xFieldText                     | Inserts a TextEdit field in a Create/Update dialog                  
+     xFieldTextEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
+     xFieldMemoEdit                 | Inserts a MemoEdit field in a Create/Update dialog                  
      xIfCanCreate                   | If CanCreate                                                        
      xIfCanDelete                   | If CanDelete                                                        
      xIfCanUpdate                   | If CanUpdate                                                        
