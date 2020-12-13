@@ -65,6 +65,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIAppService                                 | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto              | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto        | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
+     xHasOneWithManyForeignKeyRequired            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xCrudMethodsIAppService                      | Inserts the basic CRUD methods in an IAppService                                         
      xIMongoCollection                            | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                                 | an IRepository for a type parameter                                                      
