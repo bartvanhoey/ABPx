@@ -90,7 +90,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <DateEdit TValue=\"${3|DateTime,DateTime?|}\" @bind-Date=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <DateEdit TValue=\"${3|DateTime,DateTime?|}\" @bind-Date=@\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
@@ -117,7 +117,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <NumericEdit TValue=\"${3|int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <NumericEdit TValue=\"${3|int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
@@ -144,7 +144,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <TextEdit @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <TextEdit @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
@@ -154,7 +154,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>"
     ],
     "description": "Inserts a MemoEdit field in a Create/Update dialog",
