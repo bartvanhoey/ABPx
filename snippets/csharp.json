@@ -789,6 +789,11 @@
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
   },
+  "returnObjectMapperToDto": {
+    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${${1/(.*)/${1:/downcase}/}$2);$0",
+    "description": "return ObjectMapper.Map statement",
+    "prefix": "xReturnObjectMapperToDto"
+  },
   "stringLengthAttribute": {
     "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",

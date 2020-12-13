@@ -122,6 +122,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoInsertAsync                             | repository.InsertAsync statement                                                         
      xRequiredAttribute                           | Required Attribute                                                                       
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
+     xReturnObjectMapperToDto                     | return ObjectMapper.Map statement                                                        
      xStringLengthAttribute                       | StringLength attribute                                                                   
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xTestAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
