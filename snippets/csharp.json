@@ -920,7 +920,7 @@
   },
   "testAssertThrowsCustomException": {
     "body": [
-      "Assert.Throws<${1:YourCustomException}$2>(() =>",
+      "Assert.Throws<${1:YourCustom}Exception$2>(() =>",
       "{",
       "\t // statement that throws exception comes here",
       "\t",
