@@ -19,8 +19,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAppServiceClassStub                         | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
      xApplicationMenuItemIcon                     | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                      | New ApplicationMenuItem variable with url                                                
-     xAuthorizeAbpAttribute                       | Inserts the ABP Authorize attribute for a class or a method                              
-     xAuthorizeAttribute                          | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
+     xAuthorizeAttributeAbp                       | Inserts the ABP Authorize attribute for a class or a method                              
+     xAuthorizeAttributeMicrosoft                 | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                               | builder.Entity stub                                                                      
      xBusinessExceptionClass                      | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                          | CanBeNull attribute                                                                      
