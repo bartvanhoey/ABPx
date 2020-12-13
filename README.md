@@ -119,6 +119,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xObjectMapperMap                             | ObjectMapper.Map statement                                                               
      xPropPrivateSetter                           | property with private setter                                                             
      xRepoGetAsync                                | Inserts var VarName = repository.GetAsync statement                                      
+     xRepoGetListAsync                            | Inserts var VarName = repository.GetAsync statement                                      
      xRepoInsertAsync                             | repository.InsertAsync statement                                                         
      xRequiredAttribute                           | Required Attribute                                                                       
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        

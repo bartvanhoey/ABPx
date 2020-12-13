@@ -760,11 +760,19 @@
   },
   "repoGetAsync": {
     "body": [
-      "var ${1:VarName} = await _${2:$1}Repository.GetAsync(${3:id});",
+      "var ${1:VarName} = await _${2:$1}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
     "description": "Inserts var VarName = repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
+  },
+  "repoGetListAsync": {
+    "body": [
+      "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
+      "$0"
+    ],
+    "description": "Inserts var VarName = repository.GetAsync statement",
+    "prefix": "xRepoGetListAsync"
   },
   "repoInsertAsync": {
     "body": [
