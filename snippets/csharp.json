@@ -821,10 +821,17 @@
   },
   "repoInsertAsync": {
     "body": [
-      "await _${1:name}Repository.InsertAsync(${2;$1},autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.InsertAsync(${2:$1}, autoSave:${3|false,true|});$0"
     ],
     "description": "Inserts repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
+  },
+  "repoUpdateAsync": {
+    "body": [
+      "await _${1:name}Repository.UpdateAsync(${2:$1}, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts repository.UpdateAsync statement",
+    "prefix": "xRepoUpdateAsync"
   },
   "requiredAttribute": {
     "body": [

@@ -121,6 +121,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoGetAsync                                | Inserts var VarName = repository.GetAsync statement                                      
      xRepoGetListAsync                            | Inserts var items = repository.GetListAsync statement                                    
      xRepoInsertAsync                             | Inserts repository.InsertAsync statement                                                 
+     xRepoUpdateAsync                             | Inserts repository.UpdateAsync statement                                                 
      xRequiredAttribute                           | Required Attribute                                                                       
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 
