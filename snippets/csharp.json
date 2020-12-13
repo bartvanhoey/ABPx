@@ -415,6 +415,13 @@
     "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined",
     "prefix": "xICrudAppServiceCreateUpdateDto"
   },
+  "filterProperty": {
+    "body": [
+      "public string Filter { get; set; }"
+    ],
+    "description": "Inserts property Filter",
+    "prefix": "xFilterProperty"
+  },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, Create$1Dto, Update$1Dto>$0",

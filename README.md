@@ -64,6 +64,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPermissionGroupNameConstant                 | a GroupName constant                                                                     
      xIAppService                                 | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto              | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
+     xFilterProperty                              | Inserts property Filter                                                                  
      xICrudAppServiceCreateDtoAndUpdateDto        | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
      xCrudMethodsIAppService                      | Inserts the basic CRUD methods in an IAppService                                         
      xIMongoCollection                            | Inserts as IMongoCollection for a class statement in DbContext                           
