@@ -4,19 +4,6 @@
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddPermissionGroup"
   },
-  "permissionClass": {
-    "body": [
-      "public static class ${1:ClassName}",
-      "{",
-      "\tpublic const string Default = GroupName + \".$1\";",
-      "\tpublic const string Create = Default + \".Create\";",
-      "\tpublic const string Update = Default+ \".Update\";",
-      "\tpublic const string Delete = Default + \".Delete\";",
-      "}$0"
-    ],
-    "description": "Inserts a static class with Default/Create/Update/Delete constants",
-    "prefix": "xPermissionClass"
-  },
   "addPermissionToGroup": {
     "body": [
       "var ${1:name}Permission = ${2:name}Group.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
@@ -82,7 +69,9 @@
     "prefix": "xAuthorizeAttributeAbp"
   },
   "authorizeAttributeMicrosoft": {
-    "body": ["[Authorize$1]$0"],
+    "body": [
+      "[Authorize$1]$0"
+    ],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthorizeAttributeMicrosoft"
   },
@@ -115,7 +104,9 @@
     "prefix": "xBusinessExceptionClass"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -214,11 +205,6 @@
     "description": "CreateMap from Create[Type]Dto to [Type] statement",
     "prefix": "xCreateMapFromCreateDtoToType"
   },
-  "createMapFromUpdateDtoToType": {
-    "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
-    "description": "CreateMap from Update[Type]Dto to [Type] statement",
-    "prefix": "xCreateMapFromUpdateDtoToType"
-  },
   "createMapFromCreateUpdateDtoToType": {
     "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
@@ -239,27 +225,15 @@
     "description": "CreateMap from [Type] to [Type]LookupDto statement",
     "prefix": "xCreateMapFromToLookupDto"
   },
+  "createMapFromUpdateDtoToType": {
+    "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
+    "description": "CreateMap from Update[Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromUpdateDtoToType"
+  },
   "createMapToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
     "description": "CreateMap [Type] to [Type]Dto statement",
     "prefix": "xCreateMapToDto"
-  },
-  "crudAppServiceCreateUpdateDto": {
-    "body": [
-      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
-      "{",
-      "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
-      "\t{",
-      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Create;",
-      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
-      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;",
-      "\t}",
-      "}$0"
-    ],
-    "description": "Inserts a complete CrudAppService class with CreateUpdateDto combined",
-    "prefix": "xCrudAppServiceCreateUpdateDto"
   },
   "crudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -277,6 +251,23 @@
     ],
     "description": "Inserts a complete CrudAppService class with CreateDto and UpdateDto separated",
     "prefix": "xCrudAppServiceCreateDtoAndUpdateDto"
+  },
+  "crudAppServiceCreateUpdateDto": {
+    "body": [
+      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
+      "{",
+      "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
+      "\t{",
+      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
+      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
+      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Create;",
+      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
+      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;",
+      "\t}",
+      "}$0"
+    ],
+    "description": "Inserts a complete CrudAppService class with CreateUpdateDto combined",
+    "prefix": "xCrudAppServiceCreateUpdateDto"
   },
   "ctor": {
     "body": [
@@ -324,9 +315,18 @@
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "emailAddressAttribute": {
-    "body": ["[EmailAddress$1] $0"],
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
     "description": "EmailAddress Attribute",
     "prefix": "xEmailAddressAttribute"
+  },
+  "filterProperty": {
+    "body": [
+      "public string Filter { get; set; }"
+    ],
+    "description": "Inserts property Filter",
+    "prefix": "xFilterProperty"
   },
   "findByNameAsyncIRepository": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
@@ -356,7 +356,9 @@
     "prefix": "xGetLookupIAppService"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
@@ -377,14 +379,16 @@
     "prefix": "xGetRequiredService"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
-  "xPermissionGroupNameConstant": {
-    "body": "public const string GroupName = \"${1:GroupName}\";$0",
-    "description": "a GroupName constant",
-    "prefix": "xPermissionGroupNameConstant"
+  "guidGeneratorCreate": {
+    "body": "GuidGenerator.Create()$0",
+    "description": "Inserts GuidGenerator.Create() statement",
+    "prefix": "xGuidGeneratorCreate"
   },
   "iAppService": {
     "body": [
@@ -414,13 +418,6 @@
     ],
     "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined",
     "prefix": "xICrudAppServiceCreateUpdateDto"
-  },
-  "filterProperty": {
-    "body": [
-      "public string Filter { get; set; }"
-    ],
-    "description": "Inserts property Filter",
-    "prefix": "xFilterProperty"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -458,7 +455,10 @@
     "prefix": "xIRepository"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -476,22 +476,40 @@
     "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -506,7 +524,13 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -551,19 +575,18 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsAppService": {
-    "body": [" : ${1:${WORKSPACE_NAME}}AppService$0"],
+    "body": [
+      " : ${1:${WORKSPACE_NAME}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhAppService"
   },
   "inheritsApplicationService": {
-    "body": [" : ApplicationService$0"],
+    "body": [
+      " : ApplicationService$0"
+    ],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
-  },
-  "inheritsDomainTestBase": {
-    "body": " ${WORKSPACE_NAME}DomainTestBase$0",
-    "description": "Inherits DomainTestBase class",
-    "prefix": "xInhDomainTestBase"
   },
   "inheritsApplicationTestBase": {
     "body": " ${WORKSPACE_NAME}ApplicationTestBase$0",
@@ -604,6 +627,11 @@
     "body": " DomainService$1",
     "description": "Inherits DomainService class",
     "prefix": "xInhDomainService"
+  },
+  "inheritsDomainTestBase": {
+    "body": " ${WORKSPACE_NAME}DomainTestBase$0",
+    "description": "Inherits DomainTestBase class",
+    "prefix": "xInhDomainTestBase"
   },
   "inheritsEntity": {
     "body": " Entity<${1|int,Guid,string|}>$0",
@@ -657,7 +685,9 @@
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
     "description": "Inject IMapper property",
     "prefix": "xInjectIMapper"
   },
@@ -744,7 +774,9 @@
     "prefix": "xMethodVoidWithArgs"
   },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -752,6 +784,19 @@
     "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
+  },
+  "permissionClass": {
+    "body": [
+      "public static class ${1:ClassName}",
+      "{",
+      "\tpublic const string Default = GroupName + \".$1\";",
+      "\tpublic const string Create = Default + \".Create\";",
+      "\tpublic const string Update = Default+ \".Update\";",
+      "\tpublic const string Delete = Default + \".Delete\";",
+      "}$0"
+    ],
+    "description": "Inserts a static class with Default/Create/Update/Delete constants",
+    "prefix": "xPermissionClass"
   },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
@@ -771,7 +816,7 @@
       "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
-    "description": "Inserts var VarName = repository.GetAsync statement",
+    "description": "Inserts var items = repository.GetListAsync statement",
     "prefix": "xRepoGetListAsync"
   },
   "repoInsertAsync": {
@@ -788,7 +833,9 @@
     "prefix": "xRepoInsertAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
@@ -798,12 +845,22 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "returnObjectMapperToDto": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${${1/(.*)/${1:/downcase}/}$2)$0",
-    "description": "return ObjectMapper.Map statement",
+    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${1/(.*)/${1:/downcase}/}$2)$0",
+    "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
+  "returnPagedResultDto": {
+    "body": [
+      "return new PagedResultDto<$1Dto>(totalCount, ObjectMapper.Map<List$2<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));",
+      "$0"
+    ],
+    "description": "Inserts return new PagedResultDto statement",
+    "prefix": "xReturnPagedResultDto"
+  },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
@@ -824,6 +881,20 @@
     "description": "Inserts var exception = Assert.ThrowsAsync<AbpValidationException>",
     "prefix": "xTestAssertThrowsAsyncAbpValidationException"
   },
+  "testAssertThrowsAsyncBusinessException": {
+    "body": [
+      "var exception = await Assert.ThrowsAsync<BusinessException>(async () =>",
+      "{",
+      "\t // statement that throws exception comes here",
+      "\t $1",
+      "});",
+      "",
+      "// exception.Code.ShouldBe(\"${2:YourExceptionCode}\");",
+      "exception.Message.ShouldBe(\"${2:YourExceptionMessage}\");"
+    ],
+    "description": "Inserts var exception = Assert.ThrowsAsync<BusinessException>",
+    "prefix": "xTestAssertThrowsAsyncBusinessException"
+  },
   "testAssertThrowsAsyncCustomException": {
     "body": [
       "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
@@ -838,20 +909,6 @@
     ],
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xTestAssertThrowsAsyncCustomException"
-  },
-  "testAssertThrowsAsyncBusinessException": {
-    "body": [
-      "var exception = await Assert.ThrowsAsync<BusinessException>(async () =>",
-      "{",
-      "\t // statement that throws exception comes here",
-      "\t $1",
-      "});",
-      "",
-      "// exception.Code.ShouldBe(\"${2:YourExceptionCode}\");",
-      "exception.Message.ShouldBe(\"${2:YourExceptionMessage}\");"
-    ],
-    "description": "Inserts var exception = Assert.ThrowsAsync<BusinessException>",
-    "prefix": "xTestAssertThrowsAsyncBusinessException"
   },
   "testAssertThrowsCustomException": {
     "body": [
@@ -900,11 +957,6 @@
     "description": "a xUnit test Task method stub",
     "prefix": "xTestMethodTaskStub"
   },
-  "guidGeneratorCreate": {
-    "body": "GuidGenerator.Create()$0",
-    "prefix": "xGuidGeneratorCreate",
-    "description": "Inserts GuidGenerator.Create() statement"
-  },
   "testMethodVoidStub": {
     "body": [
       "[Fact$1]",
@@ -930,13 +982,22 @@
     "prefix": "xTestResultTotalCountShouldBeGreater"
   },
   "throwBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
+    "body": [
+      "throw new BusinessException$1(\"${2:TranslationKey}\");"
+    ],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
   },
   "throwUserFriendlyException": {
-    "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
+    "body": [
+      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
+    ],
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowUserFriendlyException"
+  },
+  "xPermissionGroupNameConstant": {
+    "body": "public const string GroupName = \"${1:GroupName}\";$0",
+    "description": "a GroupName constant",
+    "prefix": "xPermissionGroupNameConstant"
   }
 }

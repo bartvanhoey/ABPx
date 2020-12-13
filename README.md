@@ -13,7 +13,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      Prefix                                       | Description                                                                              
      -------------------------------------------- | ----------------------------------------------------------------------------------------- 
      xAddPermissionGroup                          | Add group permission to context in PermissionDefinitionProvider.cs                       
-     xPermissionClass                             | Inserts a static class with Default/Create/Update/Delete constants                       
      xAddPermissionToGroup                        | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPolicyPermissions                        | Adds policy permissions                                                                  
      xAppServiceClassStub                         | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
@@ -39,20 +38,21 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpaceMaxMinLength        | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
      xCreateMap                                   | CreateMap from [Type]Dto to [Type] statement                                             
      xCreateMapFromCreateDtoToType                | CreateMap from Create[Type]Dto to [Type] statement                                       
-     xCreateMapFromUpdateDtoToType                | CreateMap from Update[Type]Dto to [Type] statement                                       
      xCreateMapFromCreateUpdateDtoToType          | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
      xCreateMapFromDtoToUpdateDto                 | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
      xCreateMapFromDtoToCreateUpdateDto           | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
      xCreateMapFromToLookupDto                    | CreateMap from [Type] to [Type]LookupDto statement                                       
+     xCreateMapFromUpdateDtoToType                | CreateMap from Update[Type]Dto to [Type] statement                                       
      xCreateMapToDto                              | CreateMap [Type] to [Type]Dto statement                                                  
-     xCrudAppServiceCreateUpdateDto               | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCrudAppServiceCreateDtoAndUpdateDto         | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated           
+     xCrudAppServiceCreateUpdateDto               | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCtor                                        | constructor stub                                                                         
      xCtorBusinessException                       | constructor stub in a class derived from BusinessException                               
      xDataTypeAttribute                           | DataType attribute                                                                       
      xDbSet                                       | Inserts a DbSet for a class statement in DbContext                                       
      xEfCoreRepositoryClassStub                   | Inserts EfCoreRepositoryClass stub                                                       
      xEmailAddressAttribute                       | EmailAddress Attribute                                                                   
+     xFilterProperty                              | Inserts property Filter                                                                  
      xFindByNameAsyncIRepository                  | Adds a FindByNameAsync method to an IRepository interface                                
      xGetListAsyncIRepository                     | Adds a GetListAsync method to an IRepository interface                                   
      xGetLookupAppService                         | Adds a GetLookupAsync method to an AppService class                                      
@@ -61,10 +61,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredAppService                       | GetRequiredService and an IAppService field                                              
      xGetRequiredService                          | GetRequiredService and matching field                                                    
      xGs                                          | Inserts { get, set }                                                                     
-     xPermissionGroupNameConstant                 | a GroupName constant                                                                     
+     xGuidGeneratorCreate                         | Inserts GuidGenerator.Create() statement                                                 
      xIAppService                                 | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto              | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
-     xFilterProperty                              | Inserts property Filter                                                                  
      xICrudAppServiceCreateDtoAndUpdateDto        | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
      xCrudMethodsIAppService                      | Inserts the basic CRUD methods in an IAppService                                         
      xIMongoCollection                            | Inserts as IMongoCollection for a class statement in DbContext                           
@@ -87,7 +86,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhAggregateRoot                            | Inherits AggregateRoot class                                                             
      xInhAppService                               | Inherits ProjectNameAppService class                                                     
      xInhApplicationService                       | Inherits ApplicationService class                                                        
-     xInhDomainTestBase                           | Inherits DomainTestBase class                                                            
      xInhApplicationTestBase                      | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                     | Inherits AuditedAggregateRoot class                                                      
      xInhAuditedEntity                            | Inherits AuditedEntity class                                                             
@@ -96,6 +94,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhCreationAuditedEntity                    | Inherits CreationAuditedEntity class                                                     
      xInhCreationAuditedEntityDto                 | Inherits CreationAuditedEntityDto class                                                  
      xInhDomainService                            | Inherits DomainService class                                                             
+     xInhDomainTestBase                           | Inherits DomainTestBase class                                                            
      xInhEntity                                   | Inherits Entity class                                                                    
      xInhEntityDto                                | Inherits EntityDto class                                                                 
      xInhFullAuditedAggregateRoot                 | Inherits FullAuditedAggregateRoot class                                                  
@@ -117,26 +116,28 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xMethodVoidWithArgs                          | void method stub with arguments                                                          
      xNotNullAttribute                            | NotNull attribute                                                                        
      xObjectMapperMap                             | ObjectMapper.Map statement                                                               
+     xPermissionClass                             | Inserts a static class with Default/Create/Update/Delete constants                       
      xPropPrivateSetter                           | property with private setter                                                             
      xRepoGetAsync                                | Inserts var VarName = repository.GetAsync statement                                      
-     xRepoGetListAsync                            | Inserts var VarName = repository.GetAsync statement                                      
+     xRepoGetListAsync                            | Inserts var items = repository.GetListAsync statement                                    
      xRepoInsertAsync                             | repository.InsertAsync statement                                                         
      xRequiredAttribute                           | Required Attribute                                                                       
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
-     xReturnObjectMapperToDto                     | return ObjectMapper.Map statement                                                        
+     xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 
+     xReturnPagedResultDto                        | Inserts return new PagedResultDto statement                                              
      xStringLengthAttribute                       | StringLength attribute                                                                   
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
-     xTestAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
      xTestAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
+     xTestAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
      xTestAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
      xTestCreateAsync                             | Inserts var result = await AppService.CreateAsync statement                              
      xTestGetListAsync                            | Inserts var result = await AppService.GetListAsync statement                             
      xTestMethodTaskStub                          | a xUnit test Task method stub                                                            
-     Inserts GuidGenerator.Create() statement     | xGuidGeneratorCreate                                                                     
      xTestMethodVoidStub                          | a xUnit test void method stub                                                            
      xTestResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xThrowBusinessException                      | Inserts throw new BusinessException statement                                            
      xThrowUserFriendlyException                  | Inserts throw new UserFriendlyException statement                                        
+     xPermissionGroupNameConstant                 | a GroupName constant                                                                     
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 
