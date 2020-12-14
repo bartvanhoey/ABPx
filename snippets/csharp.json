@@ -887,6 +887,27 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
+  "asyncExecuterFirstOrDefaultAsync": {
+    "body": [
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.FirstOrDefaultAsync statement",
+    "prefix": "xAsyncExecuterFirstOrDefaultAsync"
+  },
+  "asyncExecuterToListAsync": {
+    "body": [
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.ToListAsync statement",
+    "prefix": "xAsyncExecuterToListAsync"
+  },
+  "asyncExecuterCountAsync": {
+    "body": [
+      "var ${1|count.totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.CountAsync statement",
+    "prefix": "xAsyncExecuterCountAsync"
+  },
   "testAppServiceGetListAsync": {
     "body": "var result = await _${1:name}AppService.GetListAsync(${2:new PagedAndSortedResultRequestDto}$3()$4);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",

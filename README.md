@@ -130,6 +130,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnPagedResultDto                        | Inserts return new PagedResultDto statement                                              
      xReturnListResultDto                         | Inserts return new ListResultDto statement                                               
      xStringLengthAttribute                       | StringLength attribute                                                                   
+     xAsyncExecuterFirstOrDefaultAsync            | Inserts AsyncExecuter.FirstOrDefaultAsync statement                                      
+     xAsyncExecuterToListAsync                    | Inserts AsyncExecuter.ToListAsync statement                                              
+     xAsyncExecuterCountAsync                     | Inserts AsyncExecuter.CountAsync statement                                               
      xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xTestAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
