@@ -909,7 +909,7 @@
     "prefix": "xAsyncExecuterCountAsync"
   },
   "testAppServiceGetListAsync": {
-    "body": "var result = await _${1:name}AppService.GetListAsync(${2:new PagedAndSortedResultRequestDto}$3()$4);$0",
+    "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xTestAppServiceGetListAsync"
   },
