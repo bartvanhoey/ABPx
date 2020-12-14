@@ -128,6 +128,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnPagedResultDto                        | Inserts return new PagedResultDto statement                                              
+     xReturnListResultDto                         | Inserts return new ListResultDto statement                                               
      xStringLengthAttribute                       | StringLength attribute                                                                   
      xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
