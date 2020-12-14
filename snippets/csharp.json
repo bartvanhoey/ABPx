@@ -61,6 +61,27 @@
     "description": "New ApplicationMenuItem variable with url",
     "prefix": "xApplicationMenuItemUrl"
   },
+  "asyncExecuterCountAsync": {
+    "body": [
+      "var ${1|count.totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.CountAsync statement",
+    "prefix": "xAsyncExecuterCountAsync"
+  },
+  "asyncExecuterFirstOrDefaultAsync": {
+    "body": [
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.FirstOrDefaultAsync statement",
+    "prefix": "xAsyncExecuterFirstOrDefaultAsync"
+  },
+  "asyncExecuterToListAsync": {
+    "body": [
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:query});"
+    ],
+    "description": "Inserts AsyncExecuter.ToListAsync statement",
+    "prefix": "xAsyncExecuterToListAsync"
+  },
   "authorizeAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}.${5|Default,Create,Update,Delete|})]$0"
@@ -792,6 +813,66 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
+  "onAfterRender": {
+    "body": [
+      "protected override void OnAfterRender(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRender method stub",
+    "prefix": "xOnAfterRender"
+  },
+  "onAfterRenderAsync": {
+    "body": [
+      "protected override async Task$1 OnAfterRenderAsync(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRenderAsync method stub",
+    "prefix": "xOnAfterRenderAsync"
+  },
+  "onInitialized": {
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitialized method stub",
+    "prefix": "xOnInitialized"
+  },
+  "onInitializedAsync": {
+    "body": [
+      "protected override async Task$1 OnInitializedAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitializedAsync method stub",
+    "prefix": "xOnInitializedAsync"
+  },
+  "onParametersSet": {
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSet method stub",
+    "prefix": "xOnParametersSet"
+  },
+  "onParametersSetAsync": {
+    "body": [
+      "protected override async Task$1 OnParametersSetAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSetAsync method stub",
+    "prefix": "xOnParametersSetAsync"
+  },
   "permissionClass": {
     "body": [
       "public static class ${1:ClassName}",
@@ -854,6 +935,14 @@
     "description": "Required Attribute",
     "prefix": "xRequiredAttribute"
   },
+  "returnListResultDto": {
+    "body": [
+      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${2/(.*)/${1:/downcase}/}s));",
+      "$0"
+    ],
+    "description": "Inserts return new ListResultDto statement",
+    "prefix": "xReturnListResultDto"
+  },
   "returnObjectMapperMap": {
     "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
     "description": "return ObjectMapper.Map statement",
@@ -872,41 +961,12 @@
     "description": "Inserts return new PagedResultDto statement",
     "prefix": "xReturnPagedResultDto"
   },
-  "returnListResultDto": {
-    "body": [
-      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${2/(.*)/${1:/downcase}/}s));",
-      "$0"
-    ],
-    "description": "Inserts return new ListResultDto statement",
-    "prefix": "xReturnListResultDto"
-  },
   "stringLengthAttribute": {
     "body": [
       "[StringLength(${1:50})$2]$0"
     ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
-  },
-  "asyncExecuterFirstOrDefaultAsync": {
-    "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:query});"
-    ],
-    "description": "Inserts AsyncExecuter.FirstOrDefaultAsync statement",
-    "prefix": "xAsyncExecuterFirstOrDefaultAsync"
-  },
-  "asyncExecuterToListAsync": {
-    "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:query});"
-    ],
-    "description": "Inserts AsyncExecuter.ToListAsync statement",
-    "prefix": "xAsyncExecuterToListAsync"
-  },
-  "asyncExecuterCountAsync": {
-    "body": [
-      "var ${1|count.totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
-    ],
-    "description": "Inserts AsyncExecuter.CountAsync statement",
-    "prefix": "xAsyncExecuterCountAsync"
   },
   "testAppServiceGetListAsync": {
     "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",

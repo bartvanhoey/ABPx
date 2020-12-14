@@ -18,6 +18,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAppServiceClassStub                         | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
      xApplicationMenuItemIcon                     | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                      | New ApplicationMenuItem variable with url                                                
+     xAsyncExecuterCountAsync                     | Inserts AsyncExecuter.CountAsync statement                                               
+     xAsyncExecuterFirstOrDefaultAsync            | Inserts AsyncExecuter.FirstOrDefaultAsync statement                                      
+     xAsyncExecuterToListAsync                    | Inserts AsyncExecuter.ToListAsync statement                                              
      xAuthorizeAttributeAbp                       | Inserts the ABP Authorize attribute for a class or a method                              
      xAuthorizeAttributeMicrosoft                 | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                               | builder.Entity stub                                                                      
@@ -117,6 +120,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xMethodVoidWithArgs                          | void method stub with arguments                                                          
      xNotNullAttribute                            | NotNull attribute                                                                        
      xObjectMapperMap                             | ObjectMapper.Map statement                                                               
+     xOnAfterRender                               | OnAfterRender method stub                                                                
+     xOnAfterRenderAsync                          | OnAfterRenderAsync method stub                                                           
+     xOnInitialized                               | OnInitialized method stub                                                                
+     xOnInitializedAsync                          | OnInitializedAsync method stub                                                           
+     xOnParametersSet                             | OnParameterSet method stub                                                               
+     xOnParametersSetAsync                        | OnParameterSetAsync method stub                                                          
      xPermissionClass                             | Inserts a static class with Default/Create/Update/Delete constants                       
      xPropPrivateSetter                           | property with private setter                                                             
      xRepoDeleteAsync                             | Inserts repository.DeleteAsync statement                                                 
@@ -125,14 +134,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoInsertAsync                             | Inserts repository.InsertAsync statement                                                 
      xRepoUpdateAsync                             | Inserts repository.UpdateAsync statement                                                 
      xRequiredAttribute                           | Required Attribute                                                                       
+     xReturnListResultDto                         | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                       | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                     | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnPagedResultDto                        | Inserts return new PagedResultDto statement                                              
-     xReturnListResultDto                         | Inserts return new ListResultDto statement                                               
      xStringLengthAttribute                       | StringLength attribute                                                                   
-     xAsyncExecuterFirstOrDefaultAsync            | Inserts AsyncExecuter.FirstOrDefaultAsync statement                                      
-     xAsyncExecuterToListAsync                    | Inserts AsyncExecuter.ToListAsync statement                                              
-     xAsyncExecuterCountAsync                     | Inserts AsyncExecuter.CountAsync statement                                               
      xTestAppServiceGetListAsync                  | Inserts var result = await AppService.GetListAsync statement                             
      xTestAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xTestAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
