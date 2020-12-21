@@ -582,6 +582,10 @@
     "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
     "description": "Inserts @inject ProtectedLocalStorage directive in Blazor Server app",
     "prefix": "xInjectProtectedLocalStorage"
+  },
+  "submitButton": {
+    "body": "<SubmitButton Clicked=\"UpdateEntityAsync\" />",
+    "description": "Inserts a SubmitButton",
+    "prefix": "xSubmitButton"
   }
-
 }

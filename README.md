@@ -195,5 +195,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectAppService              | Inserts @inject MyService MyService                                 
      xInjectNavigationManager       | Inserts @inject NavigationManager directive                         
      xInjectProtectedLocalStorage   | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
+     xSubmitButton                  | Inserts a SubmitButton                                              
 
 
