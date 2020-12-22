@@ -112,12 +112,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectNavigationManager                   | Inject NavigationManager property                                                        
      xInjectService                             | Inject IMyService MyService                                                              
      xLookupListAppService                      | Inserts an IReadOnlyList for a LookupDto object                                          
-     xMethodAsync                               | async method stub without arguments                                                      
-     xMethodAsyncReturn                         | async task method stub                                                                   
-     xMethodAsyncWithArgs                       | async method stub with arguments                                                         
-     xMethodReturn                              | method stub without arguments                                                            
-     xMethodVoid                                | void method stub without arguments                                                       
-     xMethodVoidWithArgs                        | void method stub with arguments                                                          
+     xMethodAsync                               | Inserts an async Task method stub                                                        
+     xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
+     xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
+     xMethodVoid                                | Inserts a void method stub                                                               
      xNotNullAttribute                          | NotNull attribute                                                                        
      xObjectMapperMap                           | ObjectMapper.Map statement                                                               
      xOnAfterRender                             | OnAfterRender method stub                                                                

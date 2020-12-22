@@ -748,7 +748,7 @@
       "\t$0",
       "}"
     ],
-    "description": "async method stub without arguments",
+    "description": "Inserts an async Task method stub",
     "prefix": "xMethodAsync"
   },
   "methodAsyncReturn": {
@@ -758,18 +758,8 @@
       "\t$0",
       "}"
     ],
-    "description": "async task method stub",
+    "description": "Inserts an async task<ReturnType> method stub",
     "prefix": "xMethodAsyncReturn"
-  },
-  "methodAsyncWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}(${5:paramType} ${6:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "async method stub with arguments",
-    "prefix": "xMethodAsyncWithArgs"
   },
   "methodReturn": {
     "body": [
@@ -778,28 +768,18 @@
       "\t$0",
       "}"
     ],
-    "description": "method stub without arguments",
+    "description": "Inserts a <ReturnType> method stub",
     "prefix": "xMethodReturn"
   },
   "methodVoid": {
     "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}()",
+      "${1|internal,private,public,protected|} void ${2:MethodName}($3)",
       "{",
       "\t$0",
       "}"
     ],
-    "description": "void method stub without arguments",
+    "description": "Inserts a void method stub",
     "prefix": "xMethodVoid"
-  },
-  "methodVoidWithArgs": {
-    "body": [
-      "${1|internal,private,public,protected|} void ${3:MethodName}(${4:paramType} ${5:paramName})",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "void method stub with arguments",
-    "prefix": "xMethodVoidWithArgs"
   },
   "notNullAttribute": {
     "body": [
