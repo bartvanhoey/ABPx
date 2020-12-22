@@ -113,7 +113,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectIMapper                             | Inject IMapper property                                                                  
      xInjectNavigationManager                   | Inject NavigationManager property                                                        
      xInjectService                             | Inject IMyService MyService                                                              
-     xLookupListAppService                      | Inserts an IReadOnlyList for a LookupDto object                                          
+     xReadOnlyListLookupDto                     | Inserts an IReadOnlyList for a LookupDto object                                          
      xMethodAsync                               | Inserts an async Task method stub                                                        
      xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
      xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
