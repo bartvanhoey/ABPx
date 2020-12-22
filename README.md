@@ -65,6 +65,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xCheckGetPolicyAsync                       | Inserts await CheckGetPolicyAsync()                                                      
+     xCheckGetListPolicyAsync                   | Inserts await CheckGetListPolicyAsync()                                                  
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xHasOneWithManyForeignKeyRequired          | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xIAppService                               | Inserts a complete IAppService interface with CRUD methods for a given Type              

@@ -401,6 +401,11 @@
     "description": "Inserts await CheckGetPolicyAsync()",
     "prefix": "xCheckGetPolicyAsync"
   },
+  "checkGetListPolicyAsync": {
+    "body": ["await CheckGetListPolicyAsync$1();$0"],
+    "description": "Inserts await CheckGetListPolicyAsync()",
+    "prefix": "xCheckGetListPolicyAsync"
+  },
   "guidGeneratorCreate": {
     "body": "GuidGenerator.Create()$0",
     "description": "Inserts GuidGenerator.Create() statement",
