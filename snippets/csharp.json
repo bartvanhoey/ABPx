@@ -65,7 +65,7 @@
   "asyncExecuterCountAsync": {
     "body": [
       "// using System.Linq;",
-      "var ${1|count,totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+      "var ${1|totalCount,count,total|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
     ],
     "description": "Inserts AsyncExecuter.CountAsync statement",
     "prefix": "xAsyncExecuterCountAsync"
@@ -840,6 +840,14 @@
     ],
     "description": "Inserts var VarName = repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
+  },
+  "repoGetCountAsync": {
+    "body": [
+      "var ${1|totalCount,count,total|} = await _${2:$1}Repository.GetCountAsync$4();$0",
+      "$0"
+    ],
+    "description": "Inserts var totalCount = repository.GetCountAsync statement",
+    "prefix": "xRepoGetCountAsync"
   },
   "repoGetListAsync": {
     "body": [

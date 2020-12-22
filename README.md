@@ -130,6 +130,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPropPrivateSetter                         | property with private setter                                                             
      xRepoDeleteAsync                           | Inserts repository.DeleteAsync statement                                                 
      xRepoGetAsync                              | Inserts var VarName = repository.GetAsync statement                                      
+     xRepoGetCountAsync                         | Inserts var totalCount = repository.GetCountAsync statement                              
      xRepoGetListAsync                          | Inserts var items = repository.GetListAsync statement                                    
      xRepoInsertAsync                           | Inserts repository.InsertAsync statement                                                 
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
