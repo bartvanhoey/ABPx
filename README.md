@@ -150,6 +150,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xThrowEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                      
      xThrowUserFriendlyException                | Inserts throw new UserFriendlyException statement                                        
      xConstantGroupNamePermission               | a GroupName constant                                                                     
+     xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 
