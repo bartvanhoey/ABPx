@@ -61,9 +61,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetLookupAppService                       | Adds a GetLookupAsync method to an AppService class                                      
      xGetLookupIAppService                      | Adds a GetLookupAsync method to an IAppService interface                                 
      xGps                                       | Inserts { get, private set }                                                             
-     xGetRequiredAppService                     | GetRequiredService and an IAppService field                                              
-     xGetRequiredService                        | GetRequiredService and matching field                                                    
+     xGetRequiredIAppService                    | Inserts GetRequiredService<IAppService> and IAppService field                            
+     xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
+     xCheckGetPolicyAsync                       | Inserts await CheckGetPolicyAsync()                                                      
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xHasOneWithManyForeignKeyRequired          | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xIAppService                               | Inserts a complete IAppService interface with CRUD methods for a given Type              
