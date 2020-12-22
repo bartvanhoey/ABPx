@@ -64,6 +64,7 @@
   },
   "asyncExecuterCountAsync": {
     "body": [
+      "// using System.Linq;",
       "var ${1|count,totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
     ],
     "description": "Inserts AsyncExecuter.CountAsync statement",
