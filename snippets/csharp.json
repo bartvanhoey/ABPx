@@ -1005,7 +1005,7 @@
     "prefix": "xThrowBusinessException"
   },
   "throwEntityNotFoundException": {
-    "body": ["throw new EntityNotFoundException();"],
+    "body": ["throw new EntityNotFoundException$1();$0"],
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowEntityNotFoundException"
   },
