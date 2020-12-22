@@ -34,6 +34,7 @@
   },
   "appServiceClassStub": {
     "body": [
+      "// [Authorize(AbpBookStorePermissions.${TM_FILENAME_BASE/AppService//}.Default)] ",
       "public class ${TM_FILENAME_BASE} : ${WORKSPACE_NAME}AppService, I${TM_FILENAME_BASE}$1",
       "{",
       "\tpublic ${TM_FILENAME_BASE}($2)",
