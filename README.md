@@ -151,7 +151,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xThrowBusinessException                    | Inserts throw new BusinessException statement                                            
      xThrowEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                      
      xThrowUserFriendlyException                | Inserts throw new UserFriendlyException statement                                        
-     xPermissionGroupNameConstant               | a GroupName constant                                                                     
+     xConstantGroupNamePermission               | a GroupName constant                                                                     
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 

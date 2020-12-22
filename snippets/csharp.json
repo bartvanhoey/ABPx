@@ -1094,9 +1094,9 @@
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowUserFriendlyException"
   },
-  "xPermissionGroupNameConstant": {
+  "xConstantGroupNamePermission": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "description": "a GroupName constant",
-    "prefix": "xPermissionGroupNameConstant"
+    "prefix": "xConstantGroupNamePermission"
   }
 }
