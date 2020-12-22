@@ -73,7 +73,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                               | an IRepository for a type parameter                                                      
      xIfInline                                  | Inline if statement                                                                      
-     xIfIsGrantedAsyncApplicationMenuItem       | if IsGranted permission statement                                                        
+     xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             
      xIfNotNull                                 | If not null statement                                                                    
      xIfNullInline                              | Inline if not null statement                                                             

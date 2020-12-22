@@ -490,7 +490,7 @@
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
-  "ifIsGrantedAsyncApplicationMenuItem": {
+  "ifIsGrantedAsyncPermission": {
     "body": [
       "// using ${WORKSPACE_NAME}.Permissions;",
       "// \"Menu:$3s\": \"$3s\", ",
@@ -500,8 +500,8 @@
       "\t${6:menuName}.AddItem($4sMenu);",
       "}$0"
     ],
-    "description": "if IsGranted permission statement",
-    "prefix": "xIfIsGrantedAsyncApplicationMenuItem"
+    "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
+    "prefix": "xIfIsGrantedAsyncPermission"
   },
   "ifNotNullInlineStatement": {
     "body": [
