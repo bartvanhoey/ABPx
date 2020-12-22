@@ -138,6 +138,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
+     xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xStringLengthAttribute                     | StringLength attribute                                                                   
      xUtGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             

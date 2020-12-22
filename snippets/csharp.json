@@ -894,10 +894,16 @@
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
+  "returnPagedResultDtoObjectMapper": {
+    "body": [
+      "return new PagedResultDto<$1Dto>(totalCount, ObjectMapper.Map<List$2<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
+    ],
+    "description": "Inserts return new PagedResultDto with ObjectMapper statement",
+    "prefix": "xReturnPagedResultDtoObjectMapper"
+  },
   "returnPagedResultDto": {
     "body": [
-      "return new PagedResultDto<$1Dto>(totalCount, ObjectMapper.Map<List$2<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));",
-      "$0"
+      "return new PagedResultDto<$1Dto>(totalCount, ${1/(.*)/${1:/downcase}/}Dtos);$0"
     ],
     "description": "Inserts return new PagedResultDto statement",
     "prefix": "xReturnPagedResultDto"
