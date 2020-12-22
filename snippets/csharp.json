@@ -866,12 +866,12 @@
     "prefix": "xReturnListResultDto"
   },
   "returnObjectMapperMap": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable})$0",
+    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
   },
   "returnObjectMapperToDto": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${1/(.*)/${1:/downcase}/}$2)$0",
+    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${1/(.*)/${1:/downcase}/}$2);$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
