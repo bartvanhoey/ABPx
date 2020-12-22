@@ -843,7 +843,7 @@
   },
   "repoGetCountAsync": {
     "body": [
-      "var ${1|totalCount,count,total|} = await _${2:$1}Repository.GetCountAsync$4();$0",
+      "var ${1|totalCount,count,total|} = await _${2:name}Repository.GetCountAsync$3();",
       "$0"
     ],
     "description": "Inserts var totalCount = repository.GetCountAsync statement",
