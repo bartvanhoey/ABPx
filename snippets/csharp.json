@@ -64,7 +64,7 @@
   },
   "asyncExecuterCountAsync": {
     "body": [
-      "var ${1|count.totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+      "var ${1|count,totalCount|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
     ],
     "description": "Inserts AsyncExecuter.CountAsync statement",
     "prefix": "xAsyncExecuterCountAsync"
