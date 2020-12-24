@@ -1,4 +1,4 @@
-# Code snippets `that start with an x` for the [(ABP framework)](https://abp.io/) 
+# Code snippets for [ABP](https://abp.io/) `that start with an x`  
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 
