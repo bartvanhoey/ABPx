@@ -141,15 +141,15 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xStringLengthAttribute                     | StringLength attribute                                                                   
-     xUtGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             
-     xUtAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
-     xUtAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
-     xUtAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
-     xUtAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
-     xUtCreateAsyncAppService                   | Inserts var result = await AppService.CreateAsync statement                              
-     xUtMethodTaskStub                          | a xUnit test Task method stub                                                            
-     xUtMethodVoidStub                          | a xUnit test void method stub                                                            
-     xUtResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xUnGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             
+     xUnAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
+     xUnAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
+     xUnAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
+     xUnAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
+     xUnCreateAsyncAppService                   | Inserts var result = await AppService.CreateAsync statement                              
+     xUnMethodTaskStub                          | a xUnit test Task method stub                                                            
+     xUnMethodVoidStub                          | a xUnit test void method stub                                                            
+     xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xThrowBusinessException                    | Inserts throw new BusinessException statement                                            
      xThrowEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                      
      xThrowUserFriendlyException                | Inserts throw new UserFriendlyException statement                                        

@@ -914,12 +914,12 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
-  "uTGetListAsyncAppService": {
+  "unGetListAsyncAppService": {
     "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
-    "prefix": "xUtGetListAsyncAppService"
+    "prefix": "xUnGetListAsyncAppService"
   },
-  "uTAssertThrowsAsyncAbpValidationException": {
+  "unAssertThrowsAsyncAbpValidationException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
       "{",
@@ -934,9 +934,9 @@
       "exception.ValidationErrors.ShouldContain$8(err => err.MemberNames.Any$8(mem => mem == \"${9:$5}\"));"
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync<AbpValidationException>",
-    "prefix": "xUtAssertThrowsAsyncAbpValidationException"
+    "prefix": "xUnAssertThrowsAsyncAbpValidationException"
   },
-  "uTAssertThrowsAsyncBusinessException": {
+  "unAssertThrowsAsyncBusinessException": {
     "body": [
       "var exception = await Assert.ThrowsAsync<BusinessException>(async () =>",
       "{",
@@ -948,9 +948,9 @@
       "exception.Message.ShouldBe(\"${2:YourExceptionMessage}\");"
     ],
     "description": "Inserts var exception = Assert.ThrowsAsync<BusinessException>",
-    "prefix": "xUtAssertThrowsAsyncBusinessException"
+    "prefix": "xUnAssertThrowsAsyncBusinessException"
   },
-  "uTAssertThrowsAsyncCustomException": {
+  "unAssertThrowsAsyncCustomException": {
     "body": [
       "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
       "{",
@@ -963,9 +963,9 @@
       "});"
     ],
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
-    "prefix": "xUtAssertThrowsAsyncCustomException"
+    "prefix": "xUnAssertThrowsAsyncCustomException"
   },
-  "uTAssertThrowsCustomException": {
+  "unAssertThrowsCustomException": {
     "body": [
       "Assert.Throws<${1:YourCustom}Exception$2>(() =>",
       "{",
@@ -974,9 +974,9 @@
       "});"
     ],
     "description": "Inserts Assert.Throws<YourCustomException>",
-    "prefix": "xUtAssertThrowsCustomException"
+    "prefix": "xUnAssertThrowsCustomException"
   },
-  "uTCreateAsyncAppService": {
+  "unCreateAsyncAppService": {
     "body": [
       "var result = await _${3:${2/(.*)/${1:/downcase}/}}AppService.CreateAsync(",
       "\tnew ${1|CreateUpdate,Create|}${2:Type}Dto$4",
@@ -986,9 +986,9 @@
       ");$0"
     ],
     "description": "Inserts var result = await AppService.CreateAsync statement",
-    "prefix": "xUtCreateAsyncAppService"
+    "prefix": "xUnCreateAsyncAppService"
   },
-  "uTMethodTaskStub": {
+  "unMethodTaskStub": {
     "body": [
       "[Fact$1]",
       "public async Task$2 Should_${3:Name_Of_Your_Test}()",
@@ -999,9 +999,9 @@
       "}"
     ],
     "description": "a xUnit test Task method stub",
-    "prefix": "xUtMethodTaskStub"
+    "prefix": "xUnMethodTaskStub"
   },
-  "uTMethodVoidStub": {
+  "unMethodVoidStub": {
     "body": [
       "[Fact$1]",
       "public void Should_${3:Name_Of_Your_Test}()",
@@ -1012,12 +1012,12 @@
       "}"
     ],
     "description": "a xUnit test void method stub",
-    "prefix": "xUtMethodVoidStub"
+    "prefix": "xUnMethodVoidStub"
   },
-  "uTResultTotalCountShouldBeGreater": {
+  "unResultTotalCountShouldBeGreater": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
-    "prefix": "xUtResultTotalCountShouldBeGreater"
+    "prefix": "xUnResultTotalCountShouldBeGreater"
   },
   "throwBusinessException": {
     "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
@@ -1025,7 +1025,7 @@
     "prefix": "xThrowBusinessException"
   },
   "throwEntityNotFoundException": {
-    "body": ["throw new EntityNotFoundException$1();$0"],
+    "body": ["throw new EntityNotFoundException$1($2);$0"],
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowEntityNotFoundException"
   },
