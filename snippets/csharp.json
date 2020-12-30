@@ -754,7 +754,7 @@
     "prefix": "xNotNullAttribute"
   },
   "objectMapperMap": {
-    "body": "ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
   },
@@ -886,18 +886,18 @@
     "prefix": "xReturnListResultDto"
   },
   "returnObjectMapperMap": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, ${2:DestinationType}>(${3:variable});$0",
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
   },
   "returnObjectMapperToDto": {
-    "body": "return ObjectMapper.Map<${1:SourceType}, $1Dto>(${1/(.*)/${1:/downcase}/}$2);$0",
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${1/(.*)/${1:/downcase}/}$3);$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
   "returnPagedResultDtoObjectMapper": {
     "body": [
-      "return new PagedResultDto<$1Dto>(totalCount, ObjectMapper.Map<List$2<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
+      "return new PagedResultDto<$1Dto>(totalCount, ${1|ObjectMapper,_objectMapper|}.Map<List$3<${1:SourceType}>, List<$2Dto>>(${2/(.*)/${1:/downcase}/}s));$0"
     ],
     "description": "Inserts return new PagedResultDto with ObjectMapper statement",
     "prefix": "xReturnPagedResultDtoObjectMapper"
