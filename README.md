@@ -84,7 +84,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIf                                        | If statement                                                                             
      xImpIHasCreationTime                       | Implements IHasCreationTime interface                                                    
      xImpIApplicationService                    | Implements IApplicationService interface                                                 
-     xImpIDataSeedContributor                   | Implements IDataSeedContributor interface                                                
+     xImpIDataSeedContributor                   | Implements IDataSeedContributor (+ ITransientDependency) interface                       
      xImpIRepository                            | Implements IRepository interface                                                         
      xImpITransientDependency                   | Implements ITransientDependency interface                                                
      xInhBusinessException                      | Inherits BusinessException class                                                         
@@ -172,6 +172,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateModalDialog             | Create modal dialog                                                 
      xDataGridColumn                | Inserts a DataGridColumn                                            
      xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
+     xDataGridCheckColumn           | Inserts a DataGridCheckColumn for boolean values                    
      xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        
      xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format                       
      xFieldDateEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
