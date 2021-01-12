@@ -407,7 +407,7 @@
     "prefix": "xCheckGetListPolicyAsync"
   },
   "guidGeneratorCreate": {
-    "body": "GuidGenerator.Create()$0",
+    "body": "${1|GuidGenerator,_guidGenerator,guidGenerator|}.Create()$0",
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
