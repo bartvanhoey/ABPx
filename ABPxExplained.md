@@ -16,7 +16,7 @@ Please feel free to install the **ABPx extension in VsCode**, and if you see roo
 
 ![CrudAppService snippet!](images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
 
-### Generate Launch configurations for your ABP application
+### Generate Launch Configurations for your ABP application
 
 When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
 
