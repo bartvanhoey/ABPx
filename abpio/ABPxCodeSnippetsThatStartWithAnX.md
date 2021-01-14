@@ -26,6 +26,10 @@ When opening an ABP application in **Visual Studio Code**, the editor will show 
 
 ![CrudAppService snippet!](../images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
 
+### Create a Permission Group, add Permissions to Permission Group and generate Translations
+
+![Permissions Added!](../images/abpx_in_action.gif "Create a Permission Group and generate Translations!")
+
 ## ABPx Source Code
 
 Get the [source code](https://github.com/bartvanhoey/ABPx) of the **ABPx VsCode Extension** on GitHub.
