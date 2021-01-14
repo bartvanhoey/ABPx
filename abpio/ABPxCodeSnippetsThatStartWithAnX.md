@@ -8,7 +8,9 @@ The **main goal of ABPx**, code snippets that **start with an x**, is to **speed
 
 When I started learning the ABP Framework, I noticed that the ABP Framework is rather **convention-based** and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
 
-## ABPx in Action
+## Some of the ABPx Code Snippets in Action
+
+Below you will see 3 examples of how to use ABPx code snippets in practice. At the moment of this writing, there are **about 180 ABPx code snippets for C#, razor and jsonc files** that you can use in your daily ABP Framework coding.
 
 ### Generate VsCode Launch Configurations for your ABP application
 
