@@ -1,4 +1,4 @@
-## Speed Up the Development Process of an ABP Blazor Application in VsCode
+## Speed Up the Development Process of an ABP Application in VsCode with ABPx
 
 ## Introduction
 
