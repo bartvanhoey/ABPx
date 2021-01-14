@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In this article, I would like to introduce you **ABPx**, a **VsCode Extension** for the ABP Framework, available in the **Visual Studio Marketplace**.
+In this article, I would like to introduce you **ABPx**, a **VsCode Extension** for the ABP Framework, available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BartVanHoey.abpx).
 
-The **main goal** of ABPx, code snippets that **start with an x**, is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
+The **main goal of ABPx**, code snippets that **start with an x**, is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
 
-I noticed that the ABP Framework is rather **convention-based** and you often have to write the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
+I noticed that the ABP Framework is rather **convention-based** and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
 
 ## ABPx in Action
 
@@ -27,6 +27,8 @@ When opening an ABP application in **Visual Studio Code**, the editor will show 
 ### Source Code
 
 Get the [source code](https://github.com/bartvanhoey/ABPx) of the **ABPx VsCode Extension** on GitHub.
+
+### Install ABPx
 
 Please feel free to install the **ABPx extension in VsCode**, and if you see room for improvement or you have a snippet in mind you want to have included? [Create an issue](https://github.com/bartvanhoey/ABPx/issues/new) in the ABPx repository. I will see what I can do! :-)
 
