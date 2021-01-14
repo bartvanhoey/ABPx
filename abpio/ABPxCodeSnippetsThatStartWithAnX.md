@@ -16,15 +16,15 @@ Starting with an ABP project in VsCode can be a bit of hassle. ABPx makes it a l
 
 When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
 
-![Required Assets Missing!](images/RequiredAssetsMissing.jpg "Required Assets Missing!")
+![Required Assets Missing!](../images/RequiredAssetsMissing.jpg "Required Assets Missing!")
 
 * Click **Yes** to add the *required assets to build and debug* your application. Select the *IssueTracking.HttpApi.Host* project in the *Select the project to launch* dropdown.
 
-![Generate Launch Configurations!](images/launchconfigurations.gif "Generate Launch Configurations needed for your project!")
+![Generate Launch Configurations!](../images/launchconfigurations.gif "Generate Launch Configurations needed for your project!")
 
 ### Generate an AppService class that inherits from the CrudAppService base class
 
-![CrudAppService snippet!](images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
+![CrudAppService snippet!](../images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
 
 ## ABPx Source Code
 
