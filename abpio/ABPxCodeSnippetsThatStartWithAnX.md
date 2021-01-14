@@ -10,7 +10,7 @@ When I started learning the ABP Framework, I noticed that the ABP Framework is r
 
 ## ABPx in Action
 
-### Generate Launch Configurations for your ABP application
+### Generate VsCode Launch Configurations for your ABP application
 
 Starting with an ABP project in VsCode can be a bit of hassle. ABPx makes it a lot easier to get you up and running by **generating the launch configurations needed**, as you can see below.
 
