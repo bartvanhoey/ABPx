@@ -6,7 +6,7 @@ In this article, I would like to introduce you **ABPx**, a **VsCode Extension** 
 
 The **main goal of ABPx**, code snippets that **start with an x**, is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
 
-I noticed that the ABP Framework is rather **convention-based** and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
+When I started learning the ABP Framework, I noticed that the ABP Framework is rather **convention-based** and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
 
 ## ABPx in Action
 
