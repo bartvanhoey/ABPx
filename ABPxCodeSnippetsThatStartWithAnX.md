@@ -12,7 +12,7 @@ When I started learning the ABP Framework, I noticed that the ABP Framework is r
 
 ### Generate Launch Configurations for your ABP application
 
-Starting with an ABP project in VsCode can be a bit of hassle. ABPx makes it a lot easier to get you up and running as you can see below.
+Starting with an ABP project in VsCode can be a bit of hassle. ABPx makes it a lot easier to get you up and running by **generating the launch configurations needed**, as you can see below.
 
 When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
 
