@@ -1,4 +1,4 @@
-## Speed Up the Development Process of an ABP Application in VsCode with ABPx
+## Speed Up the Development Process of ABP Applications in VsCode with ABPx
 
 ## Introduction
 
@@ -10,10 +10,6 @@ When I started learning the ABP Framework, I noticed that the ABP Framework is r
 
 ## ABPx in Action
 
-### Generate an AppService class that inherits from the CrudAppService base class
-
-![CrudAppService snippet!](images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
-
 ### Generate Launch Configurations for your ABP application
 
 When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
@@ -24,11 +20,15 @@ When opening an ABP application in **Visual Studio Code**, the editor will show 
 
 ![Generate Launch Configurations!](images/launchconfigurations.gif "Generate Launch Configurations needed for your project!")
 
-### Source Code
+### Generate an AppService class that inherits from the CrudAppService base class
+
+![CrudAppService snippet!](images/crudappservice.gif "Generate an AppService class that inherits from the CrudAppService base class!")
+
+## ABPx Source Code
 
 Get the [source code](https://github.com/bartvanhoey/ABPx) of the **ABPx VsCode Extension** on GitHub.
 
-### Install ABPx
+## Install ABPx
 
 Please feel free to install the **ABPx extension in VsCode**, and if you see room for improvement or you have a snippet in mind you want to have included? [Create an issue](https://github.com/bartvanhoey/ABPx/issues/new) in the ABPx repository. I will see what I can do! :-)
 
