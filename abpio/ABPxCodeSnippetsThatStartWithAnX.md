@@ -1,20 +1,22 @@
-## Speed Up the Development Process of ABP Applications in VsCode with ABPx
+## Speed Up the Development Process of ABP Applications in Visual Studio Code
+
+**ABPx** - code snippets that **start with an x**
 
 ## Introduction
 
 In this article, I would like to introduce you **ABPx**, a **VsCode Extension** for the ABP Framework, available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BartVanHoey.abpx).
 
-The **main goal of ABPx**, code snippets that **start with an x**, is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
+The **main goal of ABPx** is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
 
-When I started learning the ABP Framework, I noticed that the ABP Framework is rather **convention-based** and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
+When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
 
 ## Some of the ABPx Code Snippets in Action
 
-Below you will see 3 examples of how to use ABPx code snippets in practice. At the moment of this writing, there are **about 180 ABPx code snippets for C#, razor and jsonc files** that you can use in your daily ABP Framework coding.
+Below you will see 3 examples of how to use ABPx code snippets in practice. At the moment of this writing, there are **about 180 ABPx code snippets for C#, razor and jsonc files** that you can use in your daily ABP Framework coding work.
 
 ### Generate VsCode Launch Configurations for your ABP application
 
-Starting with an ABP project in VsCode can be a bit of hassle. ABPx makes it a lot easier to get you up and running by **generating the launch configurations needed**, as you can see below.
+Starting with an ABP project in VsCode can be a bit of hassle. **ABPx makes it a lot easier** to get you up and running by **generating the launch configurations needed**, as you can see below.
 
 When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
 
