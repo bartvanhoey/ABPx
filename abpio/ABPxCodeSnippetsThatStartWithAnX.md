@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this article, I would like to introduce you **ABPx**, a **VsCode Extension** for the ABP Framework, available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BartVanHoey.abpx).
+In this article, I would like to introduce you to **ABPx**, a **VsCode Extension** for the ABP Framework, available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BartVanHoey.abpx).
 
 The **main goal of ABPx** is to **speed up the Development Process** of **ABP Blazor applications** in **Visual Studio Code**.
 
