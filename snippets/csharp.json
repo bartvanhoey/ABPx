@@ -977,7 +977,7 @@
   },
   "returnPagedResultDtoObjectMapper": {
     "body": [
-      "return new PagedResultDto<$1Dto>(totalCount, ${1|ObjectMapper,_objectMapper|}.Map<List$3<${1:SourceType}>, List<$2Dto>>(${2/(.*)/${1:/downcase}/}s));$0"
+      "return new PagedResultDto<$1Dto>(totalCount, ${2|ObjectMapper,_objectMapper|}.Map<List$3<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
     ],
     "description": "Inserts return new PagedResultDto with ObjectMapper statement",
     "prefix": "xReturnPagedResultDtoObjectMapper"
