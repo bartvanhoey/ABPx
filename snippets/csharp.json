@@ -551,7 +551,7 @@
     "prefix": "xImpIApplicationService"
   },
   "implementIDataSeedContributor": {
-    "body": " IDataSeedContributor$1, ITransientDependency$0",
+    "body": " IDataSeedContributor$2, ITransientDependency$1$0",
     "description": "Implements IDataSeedContributor (+ ITransientDependency) interface",
     "prefix": "xImpIDataSeedContributor"
   },
