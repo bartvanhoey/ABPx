@@ -964,7 +964,7 @@
     "prefix": "xReturnObjectMapperMap"
   },
   "returnObjectMapperToDto": {
-    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${1/(.*)/${1:/downcase}/}$3);$0",
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${2/(.*)/${1:/downcase}/}$3);$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
