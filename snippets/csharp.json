@@ -49,7 +49,7 @@
   "applicationMenuItemIcon": {
     "body": [
       "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], icon: \"${2:fa fa-book}\");",
-      "// \"Menu:$1s\": \"$1s\""
+      "// \"Menu:$1s\": \"$1s\","
     ],
     "description": "New ApplicationMenuItem variable with icon",
     "prefix": "xApplicationMenuItemIcon"
@@ -57,7 +57,7 @@
   "applicationMenuItemUrl": {
     "body": [
       "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], url: \"/${2:${1/(.*)/${1:/downcase}/}}s\");",
-      "// \"Menu:$1s\": \"$1s\""
+      "// \"Menu:$1s\": \"$1s\","
     ],
     "description": "New ApplicationMenuItem variable with url",
     "prefix": "xApplicationMenuItemUrl"
