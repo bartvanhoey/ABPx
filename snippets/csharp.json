@@ -646,17 +646,17 @@
     "prefix": "xInhEntityDto"
   },
   "inheritsFullAuditedAggregateRoot": {
-    "body": " FullAuditedAggregateRoot<${1|int,Guid,string|}>$0",
+    "body": " FullAuditedAggregateRoot$1<${2|int,Guid,string|}>$0",
     "description": "Inherits FullAuditedAggregateRoot class",
     "prefix": "xInhFullAuditedAggregateRoot"
   },
   "inheritsFullAuditedEntity": {
-    "body": " FullAuditedEntity<${1|int,Guid,string|}>$0",
+    "body": " FullAuditedEntity$1<${2|int,Guid,string|}>$0",
     "description": "Inherits FullAuditedEntity class",
     "prefix": "xInhFullAuditedEntity"
   },
   "inheritsFullAuditedEntityDto": {
-    "body": " FullAuditedEntityDto<${1|int,Guid,string|}>$0",
+    "body": " FullAuditedEntityDto$1<${2|int,Guid,string|}>$0",
     "description": "Inherits FullAuditedEntityDto class",
     "prefix": "xInhFullAuditedEntityDto"
   },
