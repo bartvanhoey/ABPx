@@ -1057,7 +1057,7 @@
   },
   "unAssertThrowsAsyncCustomException": {
     "body": [
-      "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
+      "await Assert.ThrowsAsync<${1:YourCustom}Exception$2>(async () =>",
       "{",
       "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
       "\t\tnew ${5:Name}Dto",
