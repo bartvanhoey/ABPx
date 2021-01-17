@@ -159,7 +159,8 @@
       "    }",
       "  </Select>",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@",
+      "@* \"PickAn$2\": \"Pick ${5|a,an|} $2\"  *@"
     ],
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
