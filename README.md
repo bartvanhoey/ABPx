@@ -67,7 +67,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
-     xHasOneWithManyForeignKeyRequired          | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
+     xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xIAppService                               | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto            | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      

@@ -427,12 +427,12 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "hasOneWithManyForeignKeyRequired": {
+  "builderHasOneWithManyForeignKeyRequired": {
     "body": [
       "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xHasOneWithManyForeignKeyRequired"
+    "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
   "iAppService": {
     "body": [
