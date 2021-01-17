@@ -129,11 +129,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPermissionClass                           | Inserts a static class with Default/Create/Update/Delete constants                       
      xPropPrivateSetter                         | property with private setter                                                             
      xReadOnlyListLookupDto                     | Inserts an IReadOnlyList for a LookupDto object                                          
-     xRepoDeleteAsync                           | Inserts repository.DeleteAsync statement                                                 
-     xRepoGetAsync                              | Inserts var VarName = repository.GetAsync statement                                      
-     xRepoGetCountAsync                         | Inserts var totalCount = repository.GetCountAsync statement                              
-     xRepoGetListAsync                          | Inserts var items = repository.GetListAsync statement                                    
-     xRepoInsertAsync                           | Inserts repository.InsertAsync statement                                                 
+     xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
+     xRepoGetAsync                              | Inserts var VarName = _repository.GetAsync statement                                     
+     xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
+     xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
+     xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
+     xManagerCreateAsync                        | Inserts _manager.CreateAsync statement                                                   
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRequiredAttribute                         | Required Attribute                                                                       
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         

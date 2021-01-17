@@ -897,7 +897,7 @@
     "body": [
       "await _${1:name}Repository.DeleteAsync$3(id, autoSave:${2|false,true|});$0"
     ],
-    "description": "Inserts repository.DeleteAsync statement",
+    "description": "Inserts _repository.DeleteAsync statement",
     "prefix": "xRepoDeleteAsync"
   },
   "repoGetAsync": {
@@ -905,7 +905,7 @@
       "var ${1:VarName} = await _${2:$1}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var VarName = repository.GetAsync statement",
+    "description": "Inserts var VarName = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
@@ -913,7 +913,7 @@
       "var ${1|totalCount,count,total|} = await ${2:Repository}.GetCountAsync$3();",
       "$0"
     ],
-    "description": "Inserts var totalCount = repository.GetCountAsync statement",
+    "description": "Inserts var totalCount = _repository.GetCountAsync statement",
     "prefix": "xRepoGetCountAsync"
   },
   "repoGetListAsync": {
@@ -921,15 +921,22 @@
       "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
-    "description": "Inserts var items = repository.GetListAsync statement",
+    "description": "Inserts var items = _repository.GetListAsync statement",
     "prefix": "xRepoGetListAsync"
   },
   "repoInsertAsync": {
     "body": [
       "await _${1:name}Repository.InsertAsync(${2:$1}, autoSave:${3|false,true|});$0"
     ],
-    "description": "Inserts repository.InsertAsync statement",
+    "description": "Inserts _repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
+  },
+  "managerCreateAsync": {
+    "body": [
+      "await _${1:name}Manager.CreateAsync(${2:$1});$0"
+    ],
+    "description": "Inserts _manager.CreateAsync statement",
+    "prefix": "xManagerCreateAsync"
   },
   "repoUpdateAsync": {
     "body": [
