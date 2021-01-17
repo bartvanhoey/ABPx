@@ -129,7 +129,7 @@
       "    }",
       "  </Select>",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"  *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
     "prefix": "xFieldEnumSelect"
@@ -140,7 +140,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <NumericEdit TValue=\"${3|int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"  *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
     "prefix": "xFieldNumericEdit"
@@ -159,7 +159,7 @@
       "    }",
       "  </Select>",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"  *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
@@ -170,8 +170,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <TextEdit @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\" *@"
-        
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldTextEdit"
@@ -182,7 +181,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
     ],
     "description": "Inserts a MemoEdit field in a Create/Update dialog",
     "prefix": "xFieldMemoEdit"
