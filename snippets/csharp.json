@@ -415,6 +415,22 @@
     "description": "Inserts GetRequiredService and matching field",
     "prefix": "xGetRequiredService"
   },
+  "unGetRequiredIAppService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
+      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
+    ],
+    "description": "Inserts GetRequiredService<IAppService> and IAppService field",
+    "prefix": "xUnGetRequiredIAppService"
+  },
+  "unGetRequiredService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
+      "private readonly ${3:$1} _${5:$4}$6;"
+    ],
+    "description": "Inserts GetRequiredService and matching field",
+    "prefix": "xUnGetRequiredService"
+  },
   "getSet": {
     "body": [
       "{ get; set; }$0"
@@ -933,7 +949,7 @@
   },
   "managerCreateAsync": {
     "body": [
-      "await _${1:name}Manager.CreateAsync(${2:$1});$0"
+      "await _${1:name}Manager.CreateAsync($2);$0"
     ],
     "description": "Inserts _manager.CreateAsync statement",
     "prefix": "xManagerCreateAsync"
