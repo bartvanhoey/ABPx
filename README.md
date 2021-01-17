@@ -178,7 +178,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttribute            | xAuthorizeAttribute                                                 
      xCode                          | @code block                                                         
      xCreateModalDialog             | Create modal dialog                                                 
-     xDataGridColumn                | Inserts a DataGridColumn                                            
+     xDataGridColumnText            | Inserts a DataGridColumn                                            
      xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
      xDataGridCheckColumn           | Inserts a DataGridCheckColumn for boolean values                    
      xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        

@@ -49,13 +49,13 @@
     "description": "Create modal dialog",
     "prefix": "xCreateModalDialog"
   },
-  "dataGridColumn": {
+  "dataGridColumnText": {
     "body": [
         "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
-        "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"  
+        "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"  
       ],
     "description": "Inserts a DataGridColumn",
-    "prefix": "xDataGridColumn"
+    "prefix": "xDataGridColumnText"
   },
   "dataGridColumnEnum": {
     "body": [
@@ -64,7 +64,7 @@
       "\t\t@L[$\"Enum:${4:EnumName}:{(int)context.$2}\"]",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"  
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"  
     ],
     "description": "Inserts a DataGridColumn for an enum",
     "prefix": "xDataGridColumnEnum"
@@ -76,7 +76,7 @@
       "   <Check TValue=\"bool\" Checked=\"context.$2\" Disabled=\"true\" ReadOnly=\"true\" />",
       " </DisplayTemplate>",
       "</DataGridCheckColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"  
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"  
     ],
     "description": "Inserts a DataGridCheckColumn for boolean values",
     "prefix": "xDataGridCheckColumn"
@@ -88,7 +88,7 @@
       "\t\t@context.$2.ToLongDateString()",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"  
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"  
     ],
     "description": "Inserts a DataGridColumn in long date format",
     "prefix": "xDataGridColumnLongDateString"
