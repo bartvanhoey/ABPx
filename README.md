@@ -41,14 +41,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpace                  | Check.NotNullOrWhiteSpace statement                                                      
      xCheckNotNullOrWhiteSpaceMaxLength         | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                        
      xCheckNotNullOrWhiteSpaceMaxMinLength      | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
-     xCreateMap                                 | CreateMap from [Type]Dto to [Type] statement                                             
+     xCreateMapFromDtoToType                    | CreateMap from [Type]Dto to [Type] statement                                             
      xCreateMapFromCreateDtoToType              | CreateMap from Create[Type]Dto to [Type] statement                                       
      xCreateMapFromCreateUpdateDtoToType        | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
      xCreateMapFromDtoToUpdateDto               | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
      xCreateMapFromDtoToCreateUpdateDto         | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
-     xCreateMapFromToLookupDto                  | CreateMap from [Type] to [Type]LookupDto statement                                       
+     xCreateMapFromTypeToLookupDto              | CreateMap from [Type] to [Type]LookupDto statement                                       
      xCreateMapFromUpdateDtoToType              | CreateMap from Update[Type]Dto to [Type] statement                                       
-     xCreateMapToDto                            | CreateMap [Type] to [Type]Dto statement                                                  
+     xCreateMapFromTypeToDto                    | CreateMap from [Type] to [Type]Dto statement                                             
      xCrudAppServiceCreateDtoAndUpdateDto       | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated           
      xCrudAppServiceCreateUpdateDto             | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCtor                                      | constructor stub                                                                         
