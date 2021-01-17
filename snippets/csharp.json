@@ -232,11 +232,6 @@
     "description": "Check.NotNullOrWhiteSpace (+ Max/MinLength) statement",
     "prefix": "xCheckNotNullOrWhiteSpaceMaxMinLength"
   },
-  "createMapFromDtoToType": {
-    "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
-    "description": "CreateMap from [Type]Dto to [Type] statement",
-    "prefix": "xCreateMapFromDtoToType"
-  },
   "createMapFromCreateDtoToType": {
     "body": "CreateMap<Create${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from Create[Type]Dto to [Type] statement",
@@ -247,15 +242,25 @@
     "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
     "prefix": "xCreateMapFromCreateUpdateDtoToType"
   },
+  "createMapFromDtoToCreateUpdateDto": {
+    "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
+    "description": "CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement",
+    "prefix": "xCreateMapFromDtoToCreateUpdateDto"
+  },
+  "createMapFromDtoToType": {
+    "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
+    "description": "CreateMap from [Type]Dto to [Type] statement",
+    "prefix": "xCreateMapFromDtoToType"
+  },
   "createMapFromDtoToUpdateDto": {
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
     "description": "CreateMap from [Type]Dto to Update[Type]Dto statement",
     "prefix": "xCreateMapFromDtoToUpdateDto"
   },
-  "createMapFromDtoToCreateUpdateDto": {
-    "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
-    "description": "CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement",
-    "prefix": "xCreateMapFromDtoToCreateUpdateDto"
+  "createMapFromTypeToDto": {
+    "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
+    "description": "CreateMap from [Type] to [Type]Dto statement",
+    "prefix": "xCreateMapFromTypeToDto"
   },
   "createMapFromTypeToLookupDto": {
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
@@ -266,11 +271,6 @@
     "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from Update[Type]Dto to [Type] statement",
     "prefix": "xCreateMapFromUpdateDtoToType"
-  },
-  "createMapFromTypeToDto": {
-    "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
-    "description": "CreateMap from [Type] to [Type]Dto statement",
-    "prefix": "xCreateMapFromTypeToDto"
   },
   "crudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -414,22 +414,6 @@
     ],
     "description": "Inserts GetRequiredService and matching field",
     "prefix": "xGetRequiredService"
-  },
-  "unGetRequiredIAppService": {
-    "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
-      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
-    ],
-    "description": "Inserts GetRequiredService<IAppService> and IAppService field",
-    "prefix": "xUnGetRequiredIAppService"
-  },
-  "unGetRequiredService": {
-    "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
-      "private readonly ${3:$1} _${5:$4}$6;"
-    ],
-    "description": "Inserts GetRequiredService and matching field",
-    "prefix": "xUnGetRequiredService"
   },
   "getSet": {
     "body": [
@@ -770,6 +754,13 @@
     "description": "Inject IMyService MyService",
     "prefix": "xInjectService"
   },
+  "managerCreateAsync": {
+    "body": [
+      "await _${1:name}Manager.CreateAsync($2);$0"
+    ],
+    "description": "Inserts _manager.CreateAsync statement",
+    "prefix": "xManagerCreateAsync"
+  },
   "methodAsync": {
     "body": [
       "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}($5)",
@@ -947,13 +938,6 @@
     "description": "Inserts _repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
-  "managerCreateAsync": {
-    "body": [
-      "await _${1:name}Manager.CreateAsync($2);$0"
-    ],
-    "description": "Inserts _manager.CreateAsync statement",
-    "prefix": "xManagerCreateAsync"
-  },
   "repoUpdateAsync": {
     "body": [
       "await _${1:name}Repository.UpdateAsync(${2:$1}, autoSave:${3|false,true|});$0"
@@ -1114,6 +1098,22 @@
     "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xUnGetListAsyncAppService"
   },
+  "unGetRequiredIAppService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
+      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
+    ],
+    "description": "Inserts GetRequiredService<IAppService> and IAppService field",
+    "prefix": "xUnGetRequiredIAppService"
+  },
+  "unGetRequiredService": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
+      "private readonly ${3:$1} _${5:$4}$6;"
+    ],
+    "description": "Inserts GetRequiredService and matching field",
+    "prefix": "xUnGetRequiredService"
+  },
   "unMethodTaskStub": {
     "body": [
       "[Fact$1]",
@@ -1139,6 +1139,16 @@
     ],
     "description": "a xUnit test void method stub",
     "prefix": "xUnMethodVoidStub"
+  },
+  "unResultItemsShouldContain": {
+    "body": "result.Items.ShouldContain$1(i => $2);$0",
+    "description": "Inserts result.Items.ShouldContain statement",
+    "prefix": "xUnResultItemsShouldContain"
+  },
+  "unResultItemsShouldNotContain": {
+    "body": "result.Items.ShouldNotContain$1(i => $2);$0",
+    "description": "Inserts result.Items.ShouldNotContain statement",
+    "prefix": "xUnResultItemsShouldNotContain"
   },
   "unResultTotalCountShouldBeGreater": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",

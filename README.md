@@ -41,14 +41,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCheckNotNullOrWhiteSpace                  | Check.NotNullOrWhiteSpace statement                                                      
      xCheckNotNullOrWhiteSpaceMaxLength         | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                        
      xCheckNotNullOrWhiteSpaceMaxMinLength      | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
-     xCreateMapFromDtoToType                    | CreateMap from [Type]Dto to [Type] statement                                             
      xCreateMapFromCreateDtoToType              | CreateMap from Create[Type]Dto to [Type] statement                                       
      xCreateMapFromCreateUpdateDtoToType        | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
-     xCreateMapFromDtoToUpdateDto               | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
      xCreateMapFromDtoToCreateUpdateDto         | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
+     xCreateMapFromDtoToType                    | CreateMap from [Type]Dto to [Type] statement                                             
+     xCreateMapFromDtoToUpdateDto               | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
+     xCreateMapFromTypeToDto                    | CreateMap from [Type] to [Type]Dto statement                                             
      xCreateMapFromTypeToLookupDto              | CreateMap from [Type] to [Type]LookupDto statement                                       
      xCreateMapFromUpdateDtoToType              | CreateMap from Update[Type]Dto to [Type] statement                                       
-     xCreateMapFromTypeToDto                    | CreateMap from [Type] to [Type]Dto statement                                             
      xCrudAppServiceCreateDtoAndUpdateDto       | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated           
      xCrudAppServiceCreateUpdateDto             | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCtor                                      | constructor stub                                                                         
@@ -65,8 +65,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGps                                       | Inserts { get, private set }                                                             
      xGetRequiredIAppService                    | Inserts GetRequiredService<IAppService> and IAppService field                            
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
-     xUnGetRequiredIAppService                  | Inserts GetRequiredService<IAppService> and IAppService field                            
-     xUnGetRequiredService                      | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xHasOneWithManyForeignKeyRequired          | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
@@ -116,6 +114,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectIMapper                             | Inject IMapper property                                                                  
      xInjectNavigationManager                   | Inject NavigationManager property                                                        
      xInjectService                             | Inject IMyService MyService                                                              
+     xManagerCreateAsync                        | Inserts _manager.CreateAsync statement                                                   
      xMethodAsync                               | Inserts an async Task method stub                                                        
      xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
      xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
@@ -136,7 +135,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
      xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
-     xManagerCreateAsync                        | Inserts _manager.CreateAsync statement                                                   
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRequiredAttribute                         | Required Attribute                                                                       
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
@@ -156,8 +154,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
      xUnCreateAsyncAppService                   | Inserts var result = await AppService.CreateAsync statement                              
      xUnGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             
+     xUnGetRequiredIAppService                  | Inserts GetRequiredService<IAppService> and IAppService field                            
+     xUnGetRequiredService                      | Inserts GetRequiredService and matching field                                            
      xUnMethodTaskStub                          | a xUnit test Task method stub                                                            
      xUnMethodVoidStub                          | a xUnit test void method stub                                                            
+     xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
+     xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xConstantGroupNamePermission               | a GroupName constant                                                                     
 
