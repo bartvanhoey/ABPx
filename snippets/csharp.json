@@ -1145,6 +1145,12 @@
     "description": "Inserts result.Items.ShouldContain statement",
     "prefix": "xUnResultItemsShouldContain"
   },
+  "unResultIdShouldNotBeGuidEmpty": {
+    "body": "result.Id.ShouldNotBe$1(Guid$2.Empty);$0",
+    "description": "Inserts result.Id.ShouldNotBe(Guid.Empty)",
+    "prefix": "xUnResultIdShouldNotBeGuidEmpty"
+  },
+  
   "unResultItemsShouldNotContain": {
     "body": "result.Items.ShouldNotContain$1(i => i.$2);$0",
     "description": "Inserts result.Items.ShouldNotContain statement",

@@ -159,6 +159,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnMethodTaskStub                          | a xUnit test Task method stub                                                            
      xUnMethodVoidStub                          | a xUnit test void method stub                                                            
      xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
+     xUnResultIdShouldNotBeGuidEmpty            | Inserts result.Id.ShouldNotBe(Guid.Empty)                                                
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xConstantGroupNamePermission               | a GroupName constant                                                                     
