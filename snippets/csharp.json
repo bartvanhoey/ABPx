@@ -1141,12 +1141,12 @@
     "prefix": "xUnMethodVoidStub"
   },
   "unResultItemsShouldContain": {
-    "body": "result.Items.ShouldContain$1(i => $2);$0",
+    "body": "result.Items.ShouldContain$1(i => i.$2);$0",
     "description": "Inserts result.Items.ShouldContain statement",
     "prefix": "xUnResultItemsShouldContain"
   },
   "unResultItemsShouldNotContain": {
-    "body": "result.Items.ShouldNotContain$1(i => $2);$0",
+    "body": "result.Items.ShouldNotContain$1(i => i.$2);$0",
     "description": "Inserts result.Items.ShouldNotContain statement",
     "prefix": "xUnResultItemsShouldNotContain"
   },
