@@ -1,4 +1,4 @@
-## Speed Up the Development Process of ABP Applications in Visual Studio Code
+## Code Faster with ABPx in Visual Studio Code
 
 **ABPx** - code snippets that **start with an x**
 
