@@ -133,6 +133,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
      xRepoGetAsync                              | Inserts var VarName = _repository.GetAsync statement                                     
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
+     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
      xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 

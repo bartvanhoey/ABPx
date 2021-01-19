@@ -923,6 +923,14 @@
     "description": "Inserts var totalCount = _repository.GetCountAsync statement",
     "prefix": "xRepoGetCountAsync"
   },
+  "repoGetQueryableAsync": {
+    "body": [
+      "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
+      "$0"
+    ],
+    "description": "Inserts var queryable = _repository.GetQueryableAsync statement",
+    "prefix": "xRepoGetQueryableAsync"
+  },
   "repoGetListAsync": {
     "body": [
       "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
