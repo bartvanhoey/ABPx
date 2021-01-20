@@ -53,6 +53,13 @@
     "description": "Inserts _appService.CreateAsync statement",
     "prefix": "xAppServiceCreateAsync"
   },
+  "appServiceGetAsync": {
+    "body": [
+      "await _${1:name}AppService.GetAsync(${2:Id});$0"
+    ],
+    "description": "Inserts _appService.GetAsync statement",
+    "prefix": "xAppServiceGetAsync"
+  },
   "applicationMenuItemIcon": {
     "body": [
       "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], icon: \"${2:fa fa-book}\");",
