@@ -446,7 +446,7 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "iAppService": {
+  "iAppServiceStubCrudMethods": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
       "{",
@@ -463,9 +463,8 @@
       "}"
     ],
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
-    "prefix": "xIAppService"
+    "prefix": "xIAppServiceStubCrudMethods"
   },
-  "iCrudAppServiceCreatUpdateDto": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
       "{",
@@ -500,20 +499,25 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
-  "iGuidGenerator guidGenerator": {
+  "iGuidGeneratorParamInCtor": {
     "body": "IGuidGenerator$1 guidGenerator$0",
     "description": "Inserts a IGuidGenerator parameter in a constructor",
-    "prefix": "xIGuidGenerator"
+    "prefix": "xIGuidGeneratorParamInCtor"
   },
   "iMongoCollection": {
     "body": "public IMongoCollection<${1:ClassName}$2> ${3:$1}s => Collection<$1>();$0",
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepository": {
+  "iRepositoryParamInCtor": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${4:${2/(.*)/${1:/downcase}/}}Repository$0",
-    "description": "Inserts a IRepository parameter in  a constructor",
-    "prefix": "xIRepository"
+    "description": "Inserts a IRepository parameter in a constructor",
+    "prefix": "xIRepositoryParamInCtor"
+  },
+  "iAppServiceParamInCtor": {
+    "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
+    "description": "Inserts a IAppService parameter in a constructor",
+    "prefix": "xIAppServiceParamInCtor"
   },
   "ifInlineStatement": {
     "body": [
@@ -832,10 +836,10 @@
     "description": "Inserts NavigationManager.NavigateTo page\\Id",
     "prefix": "xNavigateToId"
   },
-  "navigationManager": {
+  "navigationManagerParamInCtor": {
     "body": "NavigationManager$1 navigationManager$0",
-    "description": "Inserts a Navigation parameter in  a constructor",
-    "prefix": "xNavigationManager"
+    "description": "Inserts a Navigation parameter in a constructor",
+    "prefix": "xNavigationManagerParamInCtor"
   },
   "notNullAttribute": {
     "body": [
