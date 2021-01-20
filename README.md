@@ -85,6 +85,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIf                                        | If statement                                                                             
      xImpIHasCreationTime                       | Implements IHasCreationTime interface                                                    
      xImpIApplicationService                    | Implements IApplicationService interface                                                 
+     xImpICorrespondingAppService               | Implements corresponding IAppService interface                                           
      xImpIDataSeedContributor                   | Implements IDataSeedContributor (+ ITransientDependency) interface                       
      xImpIRepository                            | Implements IRepository interface                                                         
      xImpITransientDependency                   | Implements ITransientDependency interface                                                
