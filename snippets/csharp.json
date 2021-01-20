@@ -479,7 +479,7 @@
       "\t$0",
       "}"
     ],
-    "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined",
+    "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
