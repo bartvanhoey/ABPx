@@ -151,6 +151,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
+     xReturnObjectMapperListTypeToListTypeDto   | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                              
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xStringLengthAttribute                     | StringLength attribute                                                                   

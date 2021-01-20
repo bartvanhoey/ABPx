@@ -1040,6 +1040,11 @@
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
+  "returnObjectMapperListTypeToListTypeDto": {
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<List<${2:Type}>, List<${3:TypeDto}>>(${4:input});$0",
+    "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
+    "prefix": "xReturnObjectMapperListTypeToListTypeDto"
+  },
   "returnPagedResultDto": {
     "body": [
       "return new PagedResultDto<$1Dto>(totalCount, ${1/(.*)/${1:/downcase}/}Dtos);$0"
