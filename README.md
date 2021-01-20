@@ -16,6 +16,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPermissionToGroup                      | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPolicyPermissions                      | Adds policy permissions                                                                  
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
+     xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
      xApplicationMenuItemIcon                   | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                    | New ApplicationMenuItem variable with url                                                
      xAsyncExecuterCountAsync                   | Inserts AsyncExecuter.CountAsync statement                                               
@@ -24,6 +25,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttributeAbp                     | Inserts the ABP Authorize attribute for a class or a method                              
      xAuthorizeAttributeMicrosoft               | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
+     xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xBusinessExceptionClass                    | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                        | CanBeNull attribute                                                                      
      xCanCreate                                 | Boolean canCreate variable and checks if Create is granted                               
@@ -68,7 +70,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
-     xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xIAppService                               | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto            | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
@@ -76,7 +77,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIGuidGenerator                            | Inserts a IGuidGenerator parameter in a constructor                                      
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                               | Inserts a IRepository parameter in  a constructor                                        
-     xNavigationManager                         | Inserts a Navigation parameter in  a constructor                                         
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             
@@ -94,7 +94,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhBusinessException                      | Inherits BusinessException class                                                         
      xInhSpecification                          | Inherits Specification class                                                             
      xInhAggregateRoot                          | Inherits AggregateRoot class                                                             
-     xInhProjectNameAppService                  | Inherits ProjectNameAppService class                                                     
      xInhApplicationService                     | Inherits ApplicationService class                                                        
      xInhApplicationTestBase                    | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                   | Inherits AuditedAggregateRoot class                                                      
@@ -111,6 +110,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntity                      | Inherits FullAuditedEntity class                                                         
      xInhFullAuditedEntityDto                   | Inherits FullAuditedEntityDto class                                                      
      xInhPagedAndSortedResultRequestDto         | Inherits PagedAndSortedResultRequestDto class                                            
+     xInhProjectNameAppService                  | Inherits ProjectNameAppService class                                                     
      xInjectAppService                          | Inserts Inject IMyAppService MyAppService statement                                      
      xInjectHttpClient                          | Inject HttpClient property                                                               
      xInjectIJSRuntime                          | Inject IJSRuntime property                                                               
@@ -122,6 +122,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
      xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
      xMethodVoid                                | Inserts a void method stub                                                               
+     xNavigateTo                                | Inserts NavigationManager.NavigateTo page                                                
+     xNavigateToId                              | Inserts NavigationManager.NavigateTo page\\Id                                            
+     xNavigationManager                         | Inserts a Navigation parameter in  a constructor                                         
      xNotNullAttribute                          | NotNull attribute                                                                        
      xObjectMapperMap                           | ObjectMapper.Map statement                                                               
      xOnAfterRender                             | OnAfterRender method stub                                                                
@@ -137,10 +140,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
      xRepoGetAsync                              | Inserts var VarName = _repository.GetAsync statement                                     
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
-     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
      xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
+     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
-     xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync statement                                             
@@ -149,7 +151,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
      xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
-     xVarIsObjectMapperMap                      | var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement        
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xStringLengthAttribute                     | StringLength attribute                                                                   
@@ -167,10 +168,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnGetRequiredService                      | Inserts GetRequiredService and matching field                                            
      xUnMethodTaskStub                          | a xUnit test Task method stub                                                            
      xUnMethodVoidStub                          | a xUnit test void method stub                                                            
-     xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultIdShouldNotBeGuidEmpty            | Inserts result.Id.ShouldNotBe(Guid.Empty)                                                
+     xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xVarIsObjectMapperMap                      | var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement        
      xConstantGroupNamePermission               | a GroupName constant                                                                     
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)

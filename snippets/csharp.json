@@ -46,6 +46,13 @@
     "description": "Inserts a complete AppService class stub based upon the [YourProjectName]AppService class",
     "prefix": "xAppServiceClassStub"
   },
+  "appServiceCreateAsync": {
+    "body": [
+      "await _${1:name}AppService.CreateAsync(${2:Input});$0"
+    ],
+    "description": "Inserts _appService.CreateAsync statement",
+    "prefix": "xAppServiceCreateAsync"
+  },
   "applicationMenuItemIcon": {
     "body": [
       "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], icon: \"${2:fa fa-book}\");",
@@ -111,6 +118,13 @@
     ],
     "description": "builder.Entity stub",
     "prefix": "xBuilderEntity"
+  },
+  "builderHasOneWithManyForeignKeyRequired": {
+    "body": [
+      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
+    ],
+    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
+    "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
   "businessExceptionClass": {
     "body": [
@@ -432,13 +446,6 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "builderHasOneWithManyForeignKeyRequired": {
-    "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
-    ],
-    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
-  },
   "iAppService": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
@@ -507,11 +514,6 @@
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${4:${2/(.*)/${1:/downcase}/}}Repository$0",
     "description": "Inserts a IRepository parameter in  a constructor",
     "prefix": "xIRepository"
-  },
-  "navigationManager": {
-    "body": "NavigationManager$1 navigationManager$0",
-    "description": "Inserts a Navigation parameter in  a constructor",
-    "prefix": "xNavigationManager"
   },
   "ifInlineStatement": {
     "body": [
@@ -638,13 +640,6 @@
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
-  "inheritsProjectNameAppService": {
-    "body": [
-      " ${1:${WORKSPACE_NAME}}AppService$0"
-    ],
-    "description": "Inherits ProjectNameAppService class",
-    "prefix": "xInhProjectNameAppService"
-  },
   "inheritsApplicationService": {
     "body": [
       " : ApplicationService$0"
@@ -726,6 +721,13 @@
     "body": " PagedAndSortedResultRequestDto$0",
     "description": "Inherits PagedAndSortedResultRequestDto class",
     "prefix": "xInhPagedAndSortedResultRequestDto"
+  },
+  "inheritsProjectNameAppService": {
+    "body": [
+      " ${1:${WORKSPACE_NAME}}AppService$0"
+    ],
+    "description": "Inherits ProjectNameAppService class",
+    "prefix": "xInhProjectNameAppService"
   },
   "injectAppService": {
     "body": [
@@ -815,6 +817,25 @@
     ],
     "description": "Inserts a void method stub",
     "prefix": "xMethodVoid"
+  },
+  "navigateTo": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo(\"${2:routeUrl}\", ${3|false,true|});$0"
+    ],
+    "description": "Inserts NavigationManager.NavigateTo page",
+    "prefix": "xNavigateTo"
+  },
+  "navigateToId": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
+    ],
+    "description": "Inserts NavigationManager.NavigateTo page\\Id",
+    "prefix": "xNavigateToId"
+  },
+  "navigationManager": {
+    "body": "NavigationManager$1 navigationManager$0",
+    "description": "Inserts a Navigation parameter in  a constructor",
+    "prefix": "xNavigationManager"
   },
   "notNullAttribute": {
     "body": [
@@ -945,14 +966,6 @@
     "description": "Inserts var totalCount = _repository.GetCountAsync statement",
     "prefix": "xRepoGetCountAsync"
   },
-  "repoGetQueryableAsync": {
-    "body": [
-      "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
-      "$0"
-    ],
-    "description": "Inserts var queryable = _repository.GetQueryableAsync statement",
-    "prefix": "xRepoGetQueryableAsync"
-  },
   "repoGetListAsync": {
     "body": [
       "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
@@ -961,19 +974,20 @@
     "description": "Inserts var items = _repository.GetListAsync statement",
     "prefix": "xRepoGetListAsync"
   },
+  "repoGetQueryableAsync": {
+    "body": [
+      "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
+      "$0"
+    ],
+    "description": "Inserts var queryable = _repository.GetQueryableAsync statement",
+    "prefix": "xRepoGetQueryableAsync"
+  },
   "repoInsertAsync": {
     "body": [
       "await _${1:name}Repository.InsertAsync(${2:$1}, autoSave:${3|false,true|});$0"
     ],
     "description": "Inserts _repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
-  },
-  "appServiceCreateAsync": {
-    "body": [
-      "await _${1:name}AppService.CreateAsync(${2:Input});$0"
-    ],
-    "description": "Inserts _appService.CreateAsync statement",
-    "prefix": "xAppServiceCreateAsync"
   },
   "repoInsertManyAsync": {
     "body": [
@@ -1025,11 +1039,6 @@
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${2/(.*)/${1:/downcase}/}$3);$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
-  },
-  "varIsObjectMapperMap": {
-    "body": "var ${1:mappedObject} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
-    "description": "var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
-    "prefix": "xVarIsObjectMapperMap"
   },
   "returnPagedResultDto": {
     "body": [
@@ -1196,17 +1205,16 @@
     "description": "a xUnit test void method stub",
     "prefix": "xUnMethodVoidStub"
   },
-  "unResultItemsShouldContain": {
-    "body": "result.Items.ShouldContain$1(i => i.$2);$0",
-    "description": "Inserts result.Items.ShouldContain statement",
-    "prefix": "xUnResultItemsShouldContain"
-  },
   "unResultIdShouldNotBeGuidEmpty": {
     "body": "result.Id.ShouldNotBe$1(Guid$2.Empty);$0",
     "description": "Inserts result.Id.ShouldNotBe(Guid.Empty)",
     "prefix": "xUnResultIdShouldNotBeGuidEmpty"
   },
-  
+  "unResultItemsShouldContain": {
+    "body": "result.Items.ShouldContain$1(i => i.$2);$0",
+    "description": "Inserts result.Items.ShouldContain statement",
+    "prefix": "xUnResultItemsShouldContain"
+  },
   "unResultItemsShouldNotContain": {
     "body": "result.Items.ShouldNotContain$1(i => i.$2);$0",
     "description": "Inserts result.Items.ShouldNotContain statement",
@@ -1216,6 +1224,11 @@
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xUnResultTotalCountShouldBeGreater"
+  },
+  "varIsObjectMapperMap": {
+    "body": "var ${1:mappedObject} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
+    "description": "var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
+    "prefix": "xVarIsObjectMapperMap"
   },
   "xConstantGroupNamePermission": {
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
