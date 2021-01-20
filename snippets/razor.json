@@ -138,7 +138,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <NumericEdit TValue=\"${3|int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <NumericEdit TValue=\"${3|byte,byte?,int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
       "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
