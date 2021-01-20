@@ -508,6 +508,11 @@
     "description": "Inserts a IRepository parameter in  a constructor",
     "prefix": "xIRepository"
   },
+  "navigationManager": {
+    "body": "NavigationManager$1 navigationManager$0",
+    "description": "Inserts a Navigation parameter in  a constructor",
+    "prefix": "xNavigationManager"
+  },
   "ifInlineStatement": {
     "body": [
       "if (${1:MyCondition}) $2",

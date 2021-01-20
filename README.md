@@ -76,6 +76,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIGuidGenerator                            | Inserts a IGuidGenerator parameter in a constructor                                      
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepository                               | Inserts a IRepository parameter in  a constructor                                        
+     xNavigationManager                         | Inserts a Navigation parameter in  a constructor                                         
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             
