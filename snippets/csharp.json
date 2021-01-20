@@ -473,7 +473,6 @@
       "}"
     ],
     "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined",
-    "prefix": "xICrudAppServiceCreateUpdateDto"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -1236,8 +1235,8 @@
     "prefix": "xUnResultTotalCountShouldBeGreater"
   },
   "varIsObjectMapperMap": {
-    "body": "var ${1:mappedObject} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
-    "description": "var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
+    "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
+    "description": "var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
     "prefix": "xVarIsObjectMapperMap"
   },
   "xConstantGroupNamePermission": {
