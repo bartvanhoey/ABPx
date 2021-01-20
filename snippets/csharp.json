@@ -1009,6 +1009,11 @@
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
   },
+  "varIsObjectMapperMap": {
+    "body": "var ${1:mappedObject} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
+    "description": "var mappedObject =  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
+    "prefix": "xVarIsObjectMapperMap"
+  },
   "returnPagedResultDto": {
     "body": [
       "return new PagedResultDto<$1Dto>(totalCount, ${1/(.*)/${1:/downcase}/}Dtos);$0"
