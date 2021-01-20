@@ -46,6 +46,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCreateMapFromDtoToCreateUpdateDto         | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
      xCreateMapFromDtoToType                    | CreateMap from [Type]Dto to [Type] statement                                             
      xCreateMapFromDtoToUpdateDto               | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
+     xCreateMapFromTo                           | CreateMap from SourceType to DestinationType statement                                   
      xCreateMapFromTypeToDto                    | CreateMap from [Type] to [Type]Dto statement                                             
      xCreateMapFromTypeToLookupDto              | CreateMap from [Type] to [Type]LookupDto statement                                       
      xCreateMapFromUpdateDtoToType              | CreateMap from Update[Type]Dto to [Type] statement                                       
