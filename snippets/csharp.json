@@ -647,7 +647,7 @@
     "prefix": "xInhSpecification"
   },
   "inheritsAggregateRoot": {
-    "body": " aggregateRoot<${1|int,Guid,string|}>$0",
+    "body": " AggregateRoot<${1|int,Guid,string|}>$0",
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
