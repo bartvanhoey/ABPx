@@ -623,12 +623,12 @@
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
-  "inheritsAppService": {
+  "inheritsProjectNameAppService": {
     "body": [
       " ${1:${WORKSPACE_NAME}}AppService$0"
     ],
     "description": "Inherits ProjectNameAppService class",
-    "prefix": "xInhAppService"
+    "prefix": "xInhProjectNameAppService"
   },
   "inheritsApplicationService": {
     "body": [
