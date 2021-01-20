@@ -131,12 +131,15 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPropPrivateSetter                         | property with private setter                                                             
      xReadOnlyListLookupDto                     | Inserts an IReadOnlyList for a LookupDto object                                          
      xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
+     xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
      xRepoGetAsync                              | Inserts var VarName = _repository.GetAsync statement                                     
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
      xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
      xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
+     xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
+     xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync statement                                             
      xRequiredAttribute                         | Required Attribute                                                                       
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               

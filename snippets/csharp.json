@@ -902,10 +902,17 @@
   },
   "repoDeleteAsync": {
     "body": [
-      "await _${1:name}Repository.DeleteAsync$3(id, autoSave:${2|false,true|});$0"
+      "await _${1:name}Repository.DeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
     ],
     "description": "Inserts _repository.DeleteAsync statement",
     "prefix": "xRepoDeleteAsync"
+  },
+  "repoDeleteManyAsync": {
+    "body": [
+      "await _${1:name}Repository.DeleteManyAsync$4(${2:ids}, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts _repository.DeleteManyAsync statement",
+    "prefix": "xRepoDeleteManyAsync"
   },
   "repoGetAsync": {
     "body": [
@@ -946,12 +953,26 @@
     "description": "Inserts _repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
+  "repoInsertManyAsync": {
+    "body": [
+      "await _${1:name}Repository.InsertManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts _repository.InsertManyAsync statement",
+    "prefix": "xRepoInsertManyAsync"
+  },
   "repoUpdateAsync": {
     "body": [
       "await _${1:name}Repository.UpdateAsync(${2:$1}, autoSave:${3|false,true|});$0"
     ],
     "description": "Inserts repository.UpdateAsync statement",
     "prefix": "xRepoUpdateAsync"
+  },
+  "repoUpdateManyAsync": {
+    "body": [
+      "await _${1:name}Repository.UpdateManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts repository.UpdateManyAsync statement",
+    "prefix": "xRepoUpdateManyAsync"
   },
   "requiredAttribute": {
     "body": [
