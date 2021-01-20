@@ -140,6 +140,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
      xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
+     xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync statement                                             

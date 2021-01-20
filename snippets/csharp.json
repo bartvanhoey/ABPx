@@ -968,6 +968,13 @@
     "description": "Inserts _repository.InsertAsync statement",
     "prefix": "xRepoInsertAsync"
   },
+  "appServiceCreateAsync": {
+    "body": [
+      "await _${1:name}AppService.CreateAsync(${2:Input});$0"
+    ],
+    "description": "Inserts _appService.CreateAsync statement",
+    "prefix": "xAppServiceCreateAsync"
+  },
   "repoInsertManyAsync": {
     "body": [
       "await _${1:name}Repository.InsertManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
