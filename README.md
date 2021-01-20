@@ -70,13 +70,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
-     xIAppService                               | Inserts a complete IAppService interface with CRUD methods for a given Type              
+     xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto            | Inserts a completed ICrudAppService interface with CreateUpdateDto combined              
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated      
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
-     xIGuidGenerator                            | Inserts a IGuidGenerator parameter in a constructor                                      
+     xIGuidGeneratorParamInCtor                 | Inserts a IGuidGenerator parameter in a constructor                                      
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepository                               | Inserts a IRepository parameter in  a constructor                                        
+     xIRepositoryParamInCtor                    | Inserts a IRepository parameter in a constructor                                         
+     xIAppServiceParamInCtor                    | Inserts a IAppService parameter in a constructor                                         
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             
