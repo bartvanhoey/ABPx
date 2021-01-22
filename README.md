@@ -60,6 +60,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xDataTypeAttribute                                                          | DataType attribute                                                                       
      xDbSet                                                                      | Inserts a DbSet for a class statement in DbContext                                       
      xEfCoreRepositoryClassStub                                                  | Inserts EfCoreRepositoryClass stub                                                       
+     xGetQueryableExtensionsClassStub                                            | Inserts GetQueryableExtensionsClass stub                                                 
      xEmailAddressAttribute                                                      | EmailAddress Attribute                                                                   
      xFilterProperty                                                             | Inserts property Filter                                                                  
      xFindByNameAsyncIRepository                                                 | Adds a FindByNameAsync method to an IRepository interface                                

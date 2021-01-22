@@ -377,6 +377,20 @@
     "description": "Inserts EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
   },
+  "GetQueryableExtensionsClassStub": {
+    "body": [
+      "public static class ${1:Type}GetQueryableExtensions",
+      "{",
+      "\tpublic static IQueryable<$1> IncludeDetails(this IQueryable<$1> queryable, bool include = true)",
+      "\t{",
+      "\t\tif (!include) return queryable;",
+      "\t\treturn queryable.Include(x => x.${2:PropertyName});",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts GetQueryableExtensionsClass stub",
+    "prefix": "xGetQueryableExtensionsClassStub"
+  },
   "emailAddressAttribute": {
     "body": [
       "[EmailAddress$1] $0"
@@ -963,7 +977,7 @@
   },
   "repoGetAsync": {
     "body": [
-      "var ${1:VarName} = await _${2:$1}Repository.GetAsync$4(${3:id});",
+      "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
     "description": "Inserts var VarName = _repository.GetAsync statement",
@@ -971,7 +985,7 @@
   },
   "repoGetCountAsync": {
     "body": [
-      "var ${1|totalCount,count,total|} = await ${2:Repository}.GetCountAsync$3();",
+      "var ${1|totalCount,count,total|} = await _${2:name}Repository.GetCountAsync$3();",
       "$0"
     ],
     "description": "Inserts var totalCount = _repository.GetCountAsync statement",
@@ -979,7 +993,7 @@
   },
   "repoGetListAsync": {
     "body": [
-      "var ${1:VarName}s = await _${2:$1}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
     "description": "Inserts var items = _repository.GetListAsync statement",
