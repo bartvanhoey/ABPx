@@ -6,9 +6,9 @@
 
 In this article, I would like to introduce you to **ABPx**, a **VsCode Extension** for the ABP Framework, available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BartVanHoey.abpx).
 
-The **main goal of ABPx** is to **speed up the Development Process** of **ABP applications** in **Visual Studio Code**.
+The **main goal of ABPx** is to **speed up the development process** of **ABP applications** in **Visual Studio Code**.
 
-When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an ABP developer a little easier.
+When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an **ABP Framework developer** a little easier.
 
 ## Some of the ABPx Code Snippets in Action
 
