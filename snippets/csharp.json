@@ -983,6 +983,20 @@
     "description": "Inserts var VarName = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
   },
+  "newObjectConstructor": {
+    "body": [
+      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3($4)$0;"
+    ],
+    "description": "Instantiates a new object with constructor",
+    "prefix": "xNewObjectConstructor"
+  },
+  "newObjectInitializer": {
+    "body": [
+      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3{$4}$0;"
+    ],
+    "description": "Instantiates a new Object with initializer",
+    "prefix": "xNewObjectInitializer"
+  },
   "repoGetCountAsync": {
     "body": [
       "var ${1|totalCount,count,total|} = await _${2:name}Repository.GetCountAsync$3();",
