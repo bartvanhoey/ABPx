@@ -493,7 +493,7 @@
       "\t$0",
       "}"
     ],
-    "description": "Inserts a completed ICrudAppService interface with CreateUpdateDto combined"
+    "description": "Inserts a complete ICrudAppService - CreateUpdateDto"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -502,7 +502,7 @@
       "\t$0",
       "}"
     ],
-    "description": "Inserts a complete ICrudAppService interface with CreateDto and UpdateDto separated",
+    "description": "Inserts a complete ICrudAppService CreateDto - UpdateDto",
     "prefix": "xICrudAppServiceCreateDtoAndUpdateDto"
   },
   "iCrudMethodsAppService": {
