@@ -74,8 +74,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
      xICrudAppServiceCreateUpdateDto            | Inserts a complete ICrudAppService - CreateUpdateDto                                     
-     xExposeServices                            | Inserts ExposeServices attribute                                                         
-     xDependency                                | Inserts Dependency attribute                                                             
+     xExposeServicesAttribute                   | Inserts ExposeServices attribute                                                         
+     xDependencyAttribute                       | Inserts Dependency attribute                                                             
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService CreateDto - UpdateDto                                 
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
      xIGuidGeneratorParamInCtor                 | Inserts a IGuidGenerator parameter in a constructor                                      
@@ -230,5 +230,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectNavigationManager       | Inserts @inject NavigationManager directive                         
      xInjectProtectedLocalStorage   | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
      xSubmitButton                  | Inserts a SubmitButton                                              
+     xExposeServicesAttribute       | Inserts @attribute ExposeServices                                   
+     xDependencyAttribute           | Inserts @attribute Dependency ReplaceServices                       
 
 

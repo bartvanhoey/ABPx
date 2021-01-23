@@ -612,5 +612,15 @@
     "body": "<SubmitButton Clicked=\"UpdateEntityAsync\" />",
     "description": "Inserts a SubmitButton",
     "prefix": "xSubmitButton"
+  },
+  "exposeServicesAttribute": {
+    "body": "@attribute [ExposeServices(typeof(${1:TypeName}))]",
+    "description": "Inserts @attribute ExposeServices",
+    "prefix": "xExposeServicesAttribute"
+  },
+  "dependencyAttribute": {
+    "body": "@attribute [Dependency(ReplaceServices = ${1|true,false|})]",
+    "description": "Inserts @attribute Dependency ReplaceServices",
+    "prefix": "xDependencyAttribute"
   }
 }
