@@ -200,37 +200,37 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttribute            | xAuthorizeAttribute                                                 
      xCode                          | @code block                                                         
      xCreateModalDialog             | Create modal dialog                                                 
-     xDataGridColumnText            | Inserts a DataGridColumn                                            
-     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
      xDataGridCheckColumn           | Inserts a DataGridCheckColumn for boolean values                    
+     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
      xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        
      xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format                       
+     xDataGridColumnText            | Inserts a DataGridColumn                                            
+     xDependencyAttribute           | Inserts @attribute Dependency ReplaceServices                       
+     xExposeServicesAttribute       | Inserts @attribute ExposeServices                                   
+     xFeedbackValidation            | Inserts <Feedback> validation statement                             
      xFieldDateEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
      xFieldEnumSelect               | Inserts a Select field for enum in a Create/Update dialog           
+     xFieldMemoEdit                 | Inserts a MemoEdit field in a Create/Update dialog                  
      xFieldNumericEdit              | Inserts a NumericEdit field in a Create/Update dialog               
      xFieldSelect                   | Inserts a Select field a Create/Update dialog                       
      xFieldTextEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
-     xFieldMemoEdit                 | Inserts a MemoEdit field in a Create/Update dialog                  
      xIfCanCreate                   | If CanCreate                                                        
      xIfCanDelete                   | If CanDelete                                                        
      xIfCanUpdate                   | If CanUpdate                                                        
      xInheritsComponentBase         | Inserts @inherits [YourProjectName]ComponentBase statement          
+     xInjectAppService              | Inserts @inject MyService MyService                                 
      xInjAuthorizationService       | Injects interface IAuthorizationService                             
-     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService                  
-     xListIAppService               | Inserts a paged list for a custom IAppService                       
-     xPage                          | Inserts @page directive                                             
-     xFeedbackValidation            | Inserts <Feedback> validation statement                             
-     xPageParam                     | Inserts @page directive with Parameter                              
-     xUpdateModalDialog             | Update modal dialog                                                 
      xInjectHttpClient              | Inserts @inject HttpClient directive                                
      xInjectIJSRuntime              | Inserts @inject IJSRuntime directive                                
      xInjectIMapper                 | Inserts @inject IMapper directive                                   
      xInjectService                 | Inserts @inject MyService MyService                                 
-     xInjectAppService              | Inserts @inject MyService MyService                                 
      xInjectNavigationManager       | Inserts @inject NavigationManager directive                         
      xInjectProtectedLocalStorage   | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
+     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService                  
+     xListIAppService               | Inserts a paged list for a custom IAppService                       
+     xPage                          | Inserts @page directive                                             
+     xPageParam                     | Inserts @page directive with Parameter                              
      xSubmitButton                  | Inserts a SubmitButton                                              
-     xExposeServicesAttribute       | Inserts @attribute ExposeServices                                   
-     xDependencyAttribute           | Inserts @attribute Dependency ReplaceServices                       
+     xUpdateModalDialog             | Update modal dialog                                                 
 
 
