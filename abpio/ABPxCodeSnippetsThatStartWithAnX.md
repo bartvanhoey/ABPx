@@ -10,7 +10,7 @@ The **main goal of ABPx** is to **speed up the development process** of **ABP ap
 
 When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an **ABP Framework developer** a little easier.
 
-## Some of the ABPx Code Snippets in Action
+## ABPx Code Snippets in Action
 
 Below you will see 3 examples of how to use ABPx code snippets in practice. At the moment of this writing, there are **about 180 ABPx code snippets for C#, razor and jsonc files** that you can use in your daily ABP Framework coding work.
 
