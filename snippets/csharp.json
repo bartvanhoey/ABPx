@@ -535,6 +535,22 @@
     "description": "Inserts a IRepository parameter in a constructor",
     "prefix": "xIRepositoryParamInCtor"
   },
+  "iDataFilterISoftDeleteParamInCtor": {
+    "body": "IDataFilter<ISoftDelete> softDeleteFilter",
+    "description": "Inserts a IDataFilterISoftDelete parameter in a constructor",
+    "prefix": "xIDataFilterISoftDeleteParamInCtor"
+  },
+  "iSoftDeleteDisable": {
+    "body": [
+     "//Temporary disable the ISoftDelete filter",
+     "using (_softDeleteFilter.Disable())",
+     "{",
+     "\t$0",
+     "}"
+    ],
+    "description": "Inserts using (_softDeleteFilter.Disable()){} statement",
+    "prefix": "xISoftDeleteDisable"
+  },
   "iAppServiceParamInCtor": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
     "description": "Inserts a IAppService parameter in a constructor",
