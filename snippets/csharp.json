@@ -493,7 +493,22 @@
       "\t$0",
       "}"
     ],
-    "description": "Inserts a complete ICrudAppService - CreateUpdateDto"
+    "description": "Inserts a complete ICrudAppService - CreateUpdateDto",
+    "prefix": "xICrudAppServiceCreateUpdateDto"
+  },
+  "exposeServices" :{
+    "body": [
+      "[ExposeServices$1(typeof(${2:TypeName}))]"
+    ],
+    "description": "Inserts ExposeServices attribute",
+    "prefix": "xExposeServices"
+  },
+  "dependency" :{
+    "body": [
+      "[Dependency$1(ReplaceServices = ${2|true,false|})]"
+    ],
+    "description": "Inserts Dependency attribute",
+    "prefix": "xDependency"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
