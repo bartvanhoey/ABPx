@@ -540,11 +540,6 @@
     "description": "Inserts a IDataFilterISoftDelete parameter in a constructor",
     "prefix": "xIDataFilterISoftDeleteParamInCtor"
   },
-  "errorCodes": {
-    "body": "${WORKSPACE_NAME}DomainErrorCodes",
-    "description": "Inserts YourAppNameDomainNameErrorCodes",
-    "prefix": "xErrorCodes"
-  },
   "iSoftDeleteDisable": {
     "body": [
      "//Temporary disable the ISoftDelete filter",
