@@ -140,6 +140,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPropPrivateSetter                                                          | property with private setter                                                             
      xReadOnlyListLookupDto                                                      | Inserts an IReadOnlyList for a LookupDto object                                          
      xRepoDeleteAsync                                                            | Inserts _repository.DeleteAsync statement                                                
+     xRepoHardDeleteAsync                                                        | Inserts _repository.HardDeleteAsync statement                                            
      xRepoDeleteManyAsync                                                        | Inserts _repository.DeleteManyAsync statement                                            
      xRepoGetAsync                                                               | Inserts var VarName = _repository.GetAsync statement                                     
      xNewObjectConstructor                                                       | Instantiates a new object with constructor                                               

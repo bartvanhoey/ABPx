@@ -968,6 +968,13 @@
     "description": "Inserts _repository.DeleteAsync statement",
     "prefix": "xRepoDeleteAsync"
   },
+  "repoHardDeleteAsync": {
+    "body": [
+      "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts _repository.HardDeleteAsync statement",
+    "prefix": "xRepoHardDeleteAsync"
+  },
   "repoDeleteManyAsync": {
     "body": [
       "await _${1:name}Repository.DeleteManyAsync$4(${2:ids}, autoSave:${3|false,true|});$0"
