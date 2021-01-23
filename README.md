@@ -80,6 +80,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                                                           | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepositoryParamInCtor                                                     | Inserts a IRepository parameter in a constructor                                         
      xIDataFilterISoftDeleteParamInCtor                                          | Inserts a IDataFilterISoftDelete parameter in a constructor                              
+     xErrorCodes                                                                 | Inserts YourAppNameDomainNameErrorCodes                                                  
      xISoftDeleteDisable                                                         | Inserts using (_softDeleteFilter.Disable()){} statement                                  
      xIAppServiceParamInCtor                                                     | Inserts a IAppService parameter in a constructor                                         
      xIfInline                                                                   | Inline if statement                                                                      
