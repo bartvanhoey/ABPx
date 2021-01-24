@@ -8,7 +8,11 @@
     "prefix": "xAuthorizeAttribute"
   },
   "codeBlock": {
-    "body": ["@code {", "\t$0", "}"],
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -49,10 +53,17 @@
     "description": "Create modal dialog",
     "prefix": "xCreateModalDialog"
   },
-  "dataGridColumn": {
-    "body": "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
-    "description": "Inserts a DataGridColumn",
-    "prefix": "xDataGridColumn"
+  "dataGridCheckColumn": {
+    "body": [
+      "<DataGridCheckColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
+      " <DisplayTemplate>",
+      "   <Check TValue=\"bool\" Checked=\"context.$2\" Disabled=\"true\" ReadOnly=\"true\" />",
+      " </DisplayTemplate>",
+      "</DataGridCheckColumn>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+    ],
+    "description": "Inserts a DataGridCheckColumn for boolean values",
+    "prefix": "xDataGridCheckColumn"
   },
   "dataGridColumnEnum": {
     "body": [
@@ -60,17 +71,11 @@
       "\t<DisplayTemplate>",
       "\t\t@L[$\"Enum:${4:EnumName}:{(int)context.$2}\"]",
       "\t</DisplayTemplate>",
-      "</DataGridColumn>"
+      "</DataGridColumn>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
     ],
     "description": "Inserts a DataGridColumn for an enum",
     "prefix": "xDataGridColumnEnum"
-  },
-  "dataGridCheckColumn": {
-    "body": [
-      "<DataGridCheckColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridCheckColumn>"
-    ],
-    "description": "Inserts a DataGridCheckColumn for boolean values",
-    "prefix": "xDataGridCheckColumn"
   },
   "dataGridColumnLongDate": {
     "body": [
@@ -78,7 +83,8 @@
       "\t<DisplayTemplate>",
       "\t\t@context.$2.ToLongDateString()",
       "\t</DisplayTemplate>",
-      "</DataGridColumn>"
+      "</DataGridColumn>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
     ],
     "description": "Inserts a DataGridColumn in long date format",
     "prefix": "xDataGridColumnLongDateString"
@@ -89,17 +95,46 @@
       "\t<DisplayTemplate>",
       "\t\t@context.$2.ToShortDateString()",
       "\t</DisplayTemplate>",
-      "</DataGridColumn>"
+      "</DataGridColumn>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"
     ],
     "description": "Inserts a DataGridColumn in short date format",
     "prefix": "xDataGridColumnShortDateString"
+  },
+  "dataGridColumnText": {
+    "body": [
+      "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+    ],
+    "description": "Inserts a DataGridColumn",
+    "prefix": "xDataGridColumnText"
+  },
+  "dependencyAttribute": {
+    "body": "@attribute [Dependency(ReplaceServices = ${1|true,false|})]",
+    "description": "Inserts @attribute Dependency ReplaceServices",
+    "prefix": "xDependencyAttribute"
+  },
+  "exposeServicesAttribute": {
+    "body": "@attribute [ExposeServices(typeof(${1:TypeName}))]",
+    "description": "Inserts @attribute ExposeServices",
+    "prefix": "xExposeServicesAttribute"
+  },
+  "feedbackValidation": {
+    "body": [
+      "<Feedback>",
+      "\t<ValidationError/>",
+      "</Feedback>"
+    ],
+    "description": "Inserts <Feedback> validation statement",
+    "prefix": "xFeedbackValidation"
   },
   "fieldDateEdit": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <DateEdit TValue=\"${3|DateTime,DateTime?|}\" @bind-Date=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\" *@"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldDateEdit"
@@ -116,17 +151,30 @@
       "      </SelectItem>",
       "    }",
       "  </Select>",
-      "</Field>"
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
     "prefix": "xFieldEnumSelect"
+  },
+  "fieldMemoEdit": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
+    ],
+    "description": "Inserts a MemoEdit field in a Create/Update dialog",
+    "prefix": "xFieldMemoEdit"
   },
   "fieldNumericEdit": {
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <NumericEdit TValue=\"${3|int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
+      "  <NumericEdit TValue=\"${3|byte,byte?,int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@"
     ],
     "description": "Inserts a NumericEdit field in a Create/Update dialog",
     "prefix": "xFieldNumericEdit"
@@ -144,7 +192,9 @@
       "      </SelectItem>",
       "    }",
       "  </Select>",
-      "</Field>"
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\"  *@",
+      "@* \"PickAn$2\": \"Pick ${5|a,an|} $2\"  *@"
     ],
     "description": "Inserts a Select field a Create/Update dialog",
     "prefix": "xFieldSelect"
@@ -154,40 +204,53 @@
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <TextEdit @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldTextEdit"
   },
-  "fieldMemoEdit": {
-    "body": [
-      "<Field>",
-      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-      "</Field>"
-    ],
-    "description": "Inserts a MemoEdit field in a Create/Update dialog",
-    "prefix": "xFieldMemoEdit"
-  },
   "ifCanCreate": {
-    "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanCreate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
-    "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanDelete${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": ["@if (CanUpdate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanUpdate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },
   "inheritsComponentBase": {
-    "body": ["@inherits ${WORKSPACE_NAME}ComponentBase"],
+    "body": [
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
     "description": "Inserts @inherits [YourProjectName]ComponentBase statement",
     "prefix": "xInheritsComponentBase"
+  },
+  "injectAppService": {
+    "body": "@inject I${2:$1}AppService ${1:Name}AppService",
+    "description": "Inserts @inject MyService MyService",
+    "prefix": "xInjectAppService"
   },
   "injectAuthorizationService": {
     "body": [
@@ -197,6 +260,36 @@
     ],
     "description": "Injects interface IAuthorizationService",
     "prefix": "xInjAuthorizationService"
+  },
+  "injectHttpClient": {
+    "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
+    "description": "Inserts @inject HttpClient directive",
+    "prefix": "xInjectHttpClient"
+  },
+  "injectIJSRuntime": {
+    "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
+    "description": "Inserts @inject IJSRuntime directive",
+    "prefix": "xInjectIJSRuntime"
+  },
+  "injectIMapper": {
+    "body": "@inject IMapper Mapper$0",
+    "description": "Inserts @inject IMapper directive",
+    "prefix": "xInjectIMapper"
+  },
+  "injectMyServiceDirective": {
+    "body": "@inject ${1:MyService} ${2:$1}",
+    "description": "Inserts @inject MyService MyService",
+    "prefix": "xInjectService"
+  },
+  "injectNavigationManager": {
+    "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
+    "description": "Inserts @inject NavigationManager directive",
+    "prefix": "xInjectNavigationManager"
+  },
+  "injectProtectedLocalStorage": {
+    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
+    "description": "Inserts @inject ProtectedLocalStorage directive in Blazor Server app",
+    "prefix": "xInjectProtectedLocalStorage"
   },
   "listAbpCrudPageBase": {
     "body": [
@@ -215,7 +308,9 @@
       "@using Microsoft.Extensions.Localization",
       "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
       "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH",
+      "@* separate Create$1Dto and Update$1Dto *@",
       "@inherits AbpCrudPageBase<I${1:TypeName}AppService, $1Dto, ${3|int,Guid,string|}, PagedAndSortedResultRequestDto, Create$1Dto, Update$1Dto>",
+      "@* CreateUpdate$1Dto  *@",
       "@*  @inherits AbpCrudPageBase<I$1AppService, $1Dto, $3, PagedAndSortedResultRequestDto, CreateUpdate$1Dto> *@",
       "",
       "<Card>",
@@ -503,15 +598,6 @@
     "description": "Inserts @page directive",
     "prefix": "xPage"
   },
-  "feedbackValidation": {
-    "body": [
-      "<Feedback>",
-      "\t<ValidationError/>",
-      "</Feedback>"
-    ],
-    "description": "Inserts <Feedback> validation statement",
-    "prefix": "xFeedbackValidation"
-  },
   "pageDirectiveWithParameter": {
     "body": [
       "@page \"/${1:${TM_FILENAME_BASE/(.*)/${1:/downcase}/}}/{${2:Id}:${3|int,bool,datetime,decimal,double,float,guid,long|}}\"",
@@ -519,6 +605,11 @@
     ],
     "description": "Inserts @page directive with Parameter",
     "prefix": "xPageParam"
+  },
+  "submitButton": {
+    "body": "<SubmitButton Clicked=\"UpdateEntityAsync\" />",
+    "description": "Inserts a SubmitButton",
+    "prefix": "xSubmitButton"
   },
   "updateModalDialog": {
     "body": [
@@ -556,45 +647,5 @@
     ],
     "description": "Update modal dialog",
     "prefix": "xUpdateModalDialog"
-  },
-  "injectHttpClient": {
-    "body": "@inject HttpClient$1 ${2|HttpClient,Http|$0",
-    "description": "Inserts @inject HttpClient directive",
-    "prefix": "xInjectHttpClient"
-  },
-  "injectIJSRuntime": {
-    "body": "@inject IJSRuntime$1 ${2|JSRuntime,Js|}$0",
-    "description": "Inserts @inject IJSRuntime directive",
-    "prefix": "xInjectIJSRuntime"
-  },
-  "injectIMapper": {
-    "body": "@inject IMapper Mapper$0",
-    "description": "Inserts @inject IMapper directive",
-    "prefix": "xInjectIMapper"
-  },
-  "injectMyServiceDirective": {
-    "body": "@inject ${1:MyService} ${2:$1}",
-    "description": "Inserts @inject MyService MyService",
-    "prefix": "xInjectService"
-  },
-  "injectAppService": {
-    "body": "@inject I${2:$1}AppService ${1:Name}AppService",
-    "description": "Inserts @inject MyService MyService",
-    "prefix": "xInjectAppService"
-  },
-  "injectNavigationManager": {
-    "body": "@inject NavigationManager$1 ${2|NavigationManager,Navigation,Nav|}$0",
-    "description": "Inserts @inject NavigationManager directive",
-    "prefix": "xInjectNavigationManager"
-  },
-  "injectProtectedLocalStorage": {
-    "body": "@inject ProtectedLocalStorage$1 ${2|LocalStorage,Storage|$0",
-    "description": "Inserts @inject ProtectedLocalStorage directive in Blazor Server app",
-    "prefix": "xInjectProtectedLocalStorage"
-  },
-  "submitButton": {
-    "body": "<SubmitButton Clicked=\"UpdateEntityAsync\" />",
-    "description": "Inserts a SubmitButton",
-    "prefix": "xSubmitButton"
   }
 }
