@@ -551,7 +551,7 @@
     "prefix": "xIRepositoryParam"
   },
   "iSpecificationParam": {
-    "body": "ISpecification$1<${2:Type} spec$0",
+    "body": "ISpecification$1<${2:Type}> spec$0",
     "description": "Inserts a ISpecification parameter",
     "prefix": "xISpecificationParam"
   },
