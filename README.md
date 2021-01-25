@@ -119,7 +119,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntityDto                   | Inherits FullAuditedEntityDto class                                                      
      xInhPagedAndSortedResultRequestDto         | Inherits PagedAndSortedResultRequestDto class                                            
      xInhProjectNameAppService                  | Inherits ProjectNameAppService class                                                     
-     xInjectAppService                          | Inserts Inject IMyAppService MyAppService statement                                      
+     xInjectAppService                          | Inject IMyAppService MyAppService statement                                              
      xInjectHttpClient                          | Inject HttpClient property                                                               
      xInjectIJSRuntime                          | Inject IJSRuntime property                                                               
      xInjectIMapper                             | Inject IMapper property                                                                  
