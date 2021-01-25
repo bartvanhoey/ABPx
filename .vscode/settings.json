@@ -1,7 +1,19 @@
 {
   "cSpell.words": [
+    "Blazor",
+    "Blazorise",
+    "Dtos",
+    "Multiline",
     "Queryable",
+    "Volo",
+    "aspnetcorerazor",
+    "consts",
     "crudappservice",
-    "launchconfigurations"
+    "datetime",
+    "downcase",
+    "launchconfigurations",
+    "linq",
+    "readonly",
+    "typeof"
   ]
 }
