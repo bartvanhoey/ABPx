@@ -78,12 +78,13 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xDependencyAttribute                       | Inserts Dependency attribute                                                             
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService CreateDto - UpdateDto                                 
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
-     xIGuidGeneratorParamInCtor                 | Inserts a IGuidGenerator parameter in a constructor                                      
+     xIGuidGeneratorParam                       | Inserts a IGuidGenerator parameter                                                       
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepositoryParamInCtor                    | Inserts a IRepository parameter in a constructor                                         
-     xIDataFilterISoftDeleteParamInCtor         | Inserts a IDataFilterISoftDelete parameter in a constructor                              
+     xIRepositoryParam                          | Inserts a IRepository parameter                                                          
+     xISpecificationParam                       | Inserts a ISpecification parameter                                                       
+     xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
-     xIAppServiceParamInCtor                    | Inserts a IAppService parameter in a constructor                                         
+     xIAppServiceParam                          | Inserts a IAppService parameter                                                          
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             

@@ -535,25 +535,30 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
-  "iGuidGeneratorParamInCtor": {
+  "iGuidGeneratorParam": {
     "body": "IGuidGenerator$1 guidGenerator$0",
-    "description": "Inserts a IGuidGenerator parameter in a constructor",
-    "prefix": "xIGuidGeneratorParamInCtor"
+    "description": "Inserts a IGuidGenerator parameter",
+    "prefix": "xIGuidGeneratorParam"
   },
   "iMongoCollection": {
     "body": "public IMongoCollection<${1:ClassName}$2> ${3:$1}s => Collection<$1>();$0",
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepositoryParamInCtor": {
+  "iRepositoryParam": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${4:${2/(.*)/${1:/downcase}/}}Repository$0",
-    "description": "Inserts a IRepository parameter in a constructor",
-    "prefix": "xIRepositoryParamInCtor"
+    "description": "Inserts a IRepository parameter",
+    "prefix": "xIRepositoryParam"
   },
-  "iDataFilterISoftDeleteParamInCtor": {
+  "iSpecificationParam": {
+    "body": "ISpecification$1<${2:Type} spec$0",
+    "description": "Inserts a ISpecification parameter",
+    "prefix": "xISpecificationParam"
+  },
+  "iDataFilterISoftDeleteParam": {
     "body": "IDataFilter<ISoftDelete> softDeleteFilter",
-    "description": "Inserts a IDataFilterISoftDelete parameter in a constructor",
-    "prefix": "xIDataFilterISoftDeleteParamInCtor"
+    "description": "Inserts a IDataFilterISoftDelete parameter",
+    "prefix": "xIDataFilterISoftDeleteParam"
   },
   "iSoftDeleteDisable": {
     "body": [
@@ -566,10 +571,10 @@
     "description": "Inserts using (_softDeleteFilter.Disable()){} statement",
     "prefix": "xISoftDeleteDisable"
   },
-  "iAppServiceParamInCtor": {
+  "iAppServiceParam": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
-    "description": "Inserts a IAppService parameter in a constructor",
-    "prefix": "xIAppServiceParamInCtor"
+    "description": "Inserts a IAppService parameter",
+    "prefix": "xIAppServiceParam"
   },
   "ifInlineStatement": {
     "body": [
