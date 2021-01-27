@@ -1126,7 +1126,7 @@
     "prefix": "xReturnObjectMapperToDto"
   },
   "returnObjectMapperListTypeToListTypeDto": {
-    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<List<${2:Type}>, List<${3:TypeDto}>>(${4:input});$0",
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<List<${2:Type}>, List<${3:$2}Dto>>(${4:input});$0",
     "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
     "prefix": "xReturnObjectMapperListTypeToListTypeDto"
   },
