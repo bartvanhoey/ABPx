@@ -132,6 +132,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xMethodVoid                                | Inserts a void method stub                                                               
      xNavigateTo                                | Inserts NavigationManager.NavigateTo page                                                
      xNavigateToId                              | Inserts NavigationManager.NavigateTo page\\Id                                            
+     xNavigateToHomePage                        | Inserts NavigationManager.NavigateTo("/")                                                
      xNavigationManager                         | Inserts a Navigation parameter in  a constructor                                         
      xNotNullAttribute                          | NotNull attribute                                                                        
      xObjectMapperMap                           | ObjectMapper.Map statement                                                               

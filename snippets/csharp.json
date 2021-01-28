@@ -893,6 +893,13 @@
     "description": "Inserts NavigationManager.NavigateTo page\\Id",
     "prefix": "xNavigateToId"
   },
+  "navigateToHomePage": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo(\"/\");$0"
+    ],
+    "description": "Inserts NavigationManager.NavigateTo(\"/\") ",
+    "prefix": "xNavigateToHomePage"
+  },
   "navigationManager": {
     "body": "NavigationManager$1 navigationManager$0",
     "description": "Inserts a Navigation parameter in  a constructor",
@@ -1327,7 +1334,7 @@
   },
   "parameter": {
     "body": [
-      "[Parameter$1] public string ${3:Name} { get; set; }$0"
+      "[Parameter$1] public string ${2:Name} { get; set; }$0"
     ],
     "description": "Inserts property with Parameter attribute",
     "prefix": "xPara"
