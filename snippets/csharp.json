@@ -1327,14 +1327,14 @@
   },
   "parameter": {
     "body": [
-      "[Parameter$1] public ${2:string} ${3:Name} { get; set; }$0"
+      "[Parameter$1] public string ${3:Name} { get; set; }$0"
     ],
     "description": "Inserts property with Parameter attribute",
     "prefix": "xPara"
   },
   "parameterId": {
     "body": [
-      "[Parameter$1] public ${2:string} Id { get; set; }$0"
+      "[Parameter$1] public string Id { get; set; }$0"
     ],
     "description": "Inserts Id property with Parameter attribute",
     "prefix": "xParaId"
