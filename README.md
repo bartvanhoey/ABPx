@@ -186,6 +186,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
      xConstantGroupNamePermission               | a GroupName constant                                                                     
+     xPara                                      | Inserts property with Parameter attribute                                                
+     xParaId                                    | Inserts Id property with Parameter attribute                                             
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 
