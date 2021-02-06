@@ -168,6 +168,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xStringLengthAttribute                     | StringLength attribute                                                                   
      xThrowBusinessException                    | Inserts throw new BusinessException statement                                            
+     xThrowNotImplementedException              | Inserts throw new NotImplementedException statement                                      
      xThrowCustomException                      | Inserts throw new CustomException statement                                              
      xThrowEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                      
      xThrowUserFriendlyException                | Inserts throw new UserFriendlyException statement                                        
