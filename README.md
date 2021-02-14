@@ -193,10 +193,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 
-     Prefix      | Description                                                       
-     ----------- | ------------------------------------------------------------------ 
-     xLaunchJson | Inserts launch configurations in launch.json needed to run project
-     xTasksJson  | Inserts tasks in tasks.json needed to run project                 
+     Prefix                            | Description                                                       
+     --------------------------------- | ------------------------------------------------------------------ 
+     xLaunchJson                       | Inserts launch configurations in launch.json needed to run project
+     xLaunchSeparateIdentityServerJson | Inserts launch configurations in launch.json needed to run project
+     xTasksJson                        | Inserts tasks in tasks.json needed to run project                 
+     xTaskSeparateIdentityServerJson   | Inserts tasks in tasks.json needed to run project                 
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
