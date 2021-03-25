@@ -651,7 +651,7 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsApplicationService": {
-    "body": [" : ApplicationService$0"],
+    "body": [" ApplicationService$0"],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
