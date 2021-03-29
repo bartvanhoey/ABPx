@@ -964,8 +964,16 @@
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var VarName = _repository.GetAsync statement",
+    "description": "Inserts var varName = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
+  },
+  "repoFindAsync": {
+    "body": [
+      "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
+      "$0"
+    ],
+    "description": "Inserts var varName = _repository.FindAsync statement",
+    "prefix": "xRepoFindAsync"
   },
   "newObjectConstructor": {
     "body": [

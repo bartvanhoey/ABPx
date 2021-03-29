@@ -148,7 +148,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
      xRepoHardDeleteAsync                       | Inserts _repository.HardDeleteAsync statement                                            
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
-     xRepoGetAsync                              | Inserts var VarName = _repository.GetAsync statement                                     
+     xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
      xNewObjectConstructor                      | Instantiates a new object with constructor                                               
      xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
