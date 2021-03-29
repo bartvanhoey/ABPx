@@ -1159,6 +1159,21 @@
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xUnAssertThrowsAsyncCustomException"
   },
+  "unAssertThrowsAsyncAbpValidationExceptionException": {
+    "body": [
+      "await Assert.ThrowsAsync<AbpValidationException$2>(async () =>",
+      "{",
+      "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
+      "\t\tnew ${5:Name}Dto",
+      "\t\t{",
+      "\t\t\t${6:PropertyName} = ${7:PropertyValue}$8",
+      "\t\t}",
+      "\t);",
+      "});"
+    ],
+    "description": "Inserts Assert.ThrowsAsync<AbpValidationException>",
+    "prefix": "xUnAssertThrowsAsyncAbpValidationException"
+  },
   "unAssertThrowsCustomException": {
     "body": [
       "Assert.Throws<${1:YourCustom}Exception$2>(() =>",
