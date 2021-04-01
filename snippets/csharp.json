@@ -1067,6 +1067,11 @@
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
   },
+  "todo": {
+    "body": "// TODO $0",
+    "description": "Inserts TODO statement",
+    "prefix": "xTodo"
+  },
   "returnObjectMapperToDto": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${2/(.*)/${1:/downcase}/}$3);$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
