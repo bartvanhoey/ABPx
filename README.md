@@ -190,6 +190,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xUnResultShouldBe                          | Inserts result.PropertyName.ShouldBe(Value) statement                                    
      xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
      xConstantGroupNamePermission               | a GroupName constant                                                                     
      xPara                                      | Inserts property with Parameter attribute                                                

@@ -1277,6 +1277,11 @@
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xUnResultTotalCountShouldBeGreater"
   },
+  "unResultShouldBe": {
+    "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
+    "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
+    "prefix": "xUnResultShouldBe"
+  },
   "varIsObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
     "description": "var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
