@@ -178,7 +178,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xUnAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xUnAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
-     xUnAssertThrowsAsyncAbpValidationException | Inserts Assert.ThrowsAsync<AbpValidationException>                                       
      xUnAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
      xUnCreateAsyncAppService                   | Inserts var result = await AppService.CreateAsync statement                              
      xUnGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             
