@@ -521,10 +521,15 @@
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepositoryParam": {
+  "iRepositoryDefaultCtorParam": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a IRepository parameter",
-    "prefix": "xIRepositoryParam"
+    "prefix": "xIRepositoryDefaultCtorParam"
+  },
+  "iRepositoryCustomCtorParam": {
+    "body": "I${1:${TM_FILENAME/AppService.cs//}}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
+    "description": "Inserts a custom ClassRepository parameter",
+    "prefix": "iRepositoryCustomCtorParam"
   },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
@@ -651,7 +656,7 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsApplicationService": {
-    "body": [" : ApplicationService$0"],
+    "body": [" ApplicationService$0"],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
@@ -959,8 +964,16 @@
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var VarName = _repository.GetAsync statement",
+    "description": "Inserts var varName = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
+  },
+  "repoFindAsync": {
+    "body": [
+      "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
+      "$0"
+    ],
+    "description": "Inserts var varName = _repository.FindAsync statement",
+    "prefix": "xRepoFindAsync"
   },
   "newObjectConstructor": {
     "body": [
@@ -1053,6 +1066,11 @@
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
+  },
+  "todo": {
+    "body": "// TODO $0",
+    "description": "Inserts TODO statement",
+    "prefix": "xTodo"
   },
   "returnObjectMapperToDto": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${2/(.*)/${1:/downcase}/}$3);$0",
@@ -1153,6 +1171,21 @@
     ],
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xUnAssertThrowsAsyncCustomException"
+  },
+  "unAssertThrowsAsyncAbpValidationExceptionException": {
+    "body": [
+      "await Assert.ThrowsAsync<AbpValidationException$2>(async () =>",
+      "{",
+      "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
+      "\t\tnew ${5:Name}Dto",
+      "\t\t{",
+      "\t\t\t${6:PropertyName} = ${7:PropertyValue}$8",
+      "\t\t}",
+      "\t);",
+      "});"
+    ],
+    "description": "Inserts Assert.ThrowsAsync<AbpValidationException>",
+    "prefix": "xUnAssertThrowsAsyncAbpValidationException"
   },
   "unAssertThrowsCustomException": {
     "body": [
