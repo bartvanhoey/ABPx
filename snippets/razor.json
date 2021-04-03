@@ -592,8 +592,7 @@
   },
   "pageDirective": {
     "body": [
-      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
+      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
     ],
     "description": "Inserts @page directive",
     "prefix": "xPage"
