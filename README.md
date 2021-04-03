@@ -80,7 +80,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
      xIGuidGeneratorParam                       | Inserts a IGuidGenerator parameter                                                       
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepositoryParam                          | Inserts a IRepository parameter                                                          
+     xIRepositoryDefaultCtorParam               | Inserts a IRepository parameter                                                          
+     xIRepositoryCustomCtorParam                | Inserts a custom ClassRepository parameter                                               
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
@@ -149,6 +150,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoHardDeleteAsync                       | Inserts _repository.HardDeleteAsync statement                                            
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
      xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
+     xRepoFindAsync                             | Inserts var varName = _repository.FindAsync statement                                    
      xNewObjectConstructor                      | Instantiates a new object with constructor                                               
      xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
@@ -162,6 +164,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
+     xTodo                                      | Inserts TODO statement                                                                   
      xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnObjectMapperListTypeToListTypeDto   | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                              
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
@@ -175,6 +178,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xUnAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xUnAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
+     xUnAssertThrowsAsyncAbpValidationException | Inserts Assert.ThrowsAsync<AbpValidationException>                                       
      xUnAssertThrowsCustomException             | Inserts Assert.Throws<YourCustomException>                                               
      xUnCreateAsyncAppService                   | Inserts var result = await AppService.CreateAsync statement                              
      xUnGetListAsyncAppService                  | Inserts var result = await AppService.GetListAsync statement                             

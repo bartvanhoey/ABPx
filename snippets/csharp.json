@@ -529,7 +529,7 @@
   "iRepositoryCustomCtorParam": {
     "body": "I${1:${TM_FILENAME/AppService.cs//}}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter",
-    "prefix": "iRepositoryCustomCtorParam"
+    "prefix": "xIRepositoryCustomCtorParam"
   },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
