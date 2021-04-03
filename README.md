@@ -242,6 +242,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPage                          | Inserts @page directive                                             
      xPageParam                     | Inserts @page directive with Parameter                              
      xSubmitButton                  | Inserts a SubmitButton                                              
-     xUpdateModalDialog             | Update modal dialog                                                 
+     xEditModalDialog               | Edit modal dialog                                                   
 
 

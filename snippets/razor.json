@@ -610,7 +610,7 @@
     "description": "Inserts a SubmitButton",
     "prefix": "xSubmitButton"
   },
-  "updateModalDialog": {
+  "editModalDialog": {
     "body": [
       "<Modal @ref=\"@EditModal\">",
       "  <ModalBackdrop />",
@@ -644,7 +644,7 @@
       "  </ModalContent>",
       "</Modal>$0"
     ],
-    "description": "Update modal dialog",
-    "prefix": "xUpdateModalDialog"
+    "description": "Edit modal dialog",
+    "prefix": "xEditModalDialog"
   }
 }
