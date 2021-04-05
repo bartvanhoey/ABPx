@@ -351,9 +351,9 @@
       "{",
       "  public ${TM_FILENAME_BASE}()",
       "  {",
-      "    @* CreatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Create;",
-      "       UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Update;",
-      "       DeletePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Delete; *@",
+      "    @* CreatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Create; *@",
+      "    @* UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Update; *@",
+      "    @* DeletePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Delete; *@",
       "  }",
       "}"
     ],
