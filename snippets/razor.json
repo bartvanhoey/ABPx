@@ -1,7 +1,7 @@
 {
   "authorizeAttribute": {
     "body": [
-      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}.Default)]",
+      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}s.Default)]",
       "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME}.Permissions",
       "@* @using Microsoft.AspNetCore.Authorization *@"
     ],
@@ -295,7 +295,7 @@
     "body": [
       "@* \"New$1\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1.Default)] *@",
+      "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1s.Default)] *@",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
       "@* below namespace where I$1AppService exists *@",
