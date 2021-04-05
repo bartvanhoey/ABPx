@@ -526,7 +526,7 @@
     "prefix": "xIRepositoryDefaultCtorParam"
   },
   "iRepositoryCustomCtorParam": {
-    "body": "I${1:${TM_FILENAME/AppService.cs//}}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
+    "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter",
     "prefix": "xIRepositoryCustomCtorParam"
   },
