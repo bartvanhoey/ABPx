@@ -126,7 +126,7 @@
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
-  "businessExceptionClass": {
+  "customBusinessExceptionClass": {
     "body": [
       "public class ${TM_FILENAME_BASE}  : BusinessException$1",
       "{",
@@ -138,7 +138,7 @@
       "}"
     ],
     "description": "Inserts a complete CustomException class that inherits from class BusinessException",
-    "prefix": "xBusinessExceptionClass"
+    "prefix": "xCustomBusinessExceptionClass"
   },
   "canBeNullAttribute": {
     "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],

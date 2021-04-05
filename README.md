@@ -27,7 +27,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttributeMicrosoft               | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
      xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
-     xBusinessExceptionClass                    | Inserts a complete CustomException class that inherits from class BusinessException      
+     xCustomBusinessExceptionClass              | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                        | CanBeNull attribute                                                                      
      xCanCreate                                 | Boolean canCreate variable and checks if Create is granted                               
      xCanCrudMethods                            | Checks if CRUD methods are granted                                                       
