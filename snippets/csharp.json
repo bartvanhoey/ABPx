@@ -11,7 +11,6 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "// Translations -> paste in en.json in Domain.Shared\\localization folder",
       "//\"Permission:$3\": \"$3\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:item}s\",",
