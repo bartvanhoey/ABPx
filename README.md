@@ -80,8 +80,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
      xIGuidGeneratorParam                       | Inserts a IGuidGenerator parameter                                                       
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepositoryDefaultCtorParam               | Inserts a IRepository parameter                                                          
-     xIRepositoryCustomCtorParam                | Inserts a custom ClassRepository parameter                                               
+     xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
+     xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  

@@ -520,15 +520,15 @@
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepositoryDefaultCtorParam": {
+  "iRepoDefaultCtorParam": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a IRepository parameter",
-    "prefix": "xIRepositoryDefaultCtorParam"
+    "prefix": "xIRepoDefaultCtorParam"
   },
-  "iRepositoryCustomCtorParam": {
+  "iRepoCustomCtorParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter",
-    "prefix": "xIRepositoryCustomCtorParam"
+    "prefix": "xIRepoCustomCtorParam"
   },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
