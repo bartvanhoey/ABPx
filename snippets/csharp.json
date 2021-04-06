@@ -388,15 +388,15 @@
     "description": "Inserts property Filter",
     "prefix": "xFilterProperty"
   },
-  "findByNameAsyncIRepository": {
+  "iRepoFindByNameAsync": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method to an IRepository interface",
-    "prefix": "xFindByNameAsyncIRepository"
+    "prefix": "xIRepoFindByNameAsync"
   },
-  "getListAsyncIRepository": {
+  "iRepoGetListAsync": {
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method to an IRepository interface",
-    "prefix": "xGetListAsyncIRepository"
+    "prefix": "xIRepoGetListAsync"
   },
   "getLookupAppService": {
     "body": [
