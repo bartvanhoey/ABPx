@@ -83,6 +83,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
      xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
+     xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
