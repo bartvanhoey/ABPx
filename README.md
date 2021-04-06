@@ -58,13 +58,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCtor                                      | constructor stub                                                                         
      xCtorBusinessException                     | constructor stub in a class derived from BusinessException                               
      xDataTypeAttribute                         | DataType attribute                                                                       
+     xGetDbSetAsync                             | Inserts var dbSet = await GetDbSetAsync();                                               
      xDbSet                                     | Inserts a DbSet for a class statement in DbContext                                       
      xEfCoreRepositoryClassStub                 | Inserts EfCoreRepositoryClass stub                                                       
      xGetQueryableExtensionsClassStub           | Inserts GetQueryableExtensionsClass stub                                                 
      xEmailAddressAttribute                     | EmailAddress Attribute                                                                   
      xFilterProperty                            | Inserts property Filter                                                                  
-     xFindByNameAsyncIRepository                | Adds a FindByNameAsync method to an IRepository interface                                
-     xGetListAsyncIRepository                   | Adds a GetListAsync method to an IRepository interface                                   
+     xIRepoFindByNameAsync                      | Adds a FindByNameAsync method to an IRepository interface                                
+     xIRepoGetListAsync                         | Adds a GetListAsync method to an IRepository interface                                   
      xGetLookupAppService                       | Adds a GetLookupAsync method to an AppService class                                      
      xGetLookupIAppService                      | Adds a GetLookupAsync method to an IAppService interface                                 
      xGps                                       | Inserts { get, private set }                                                             

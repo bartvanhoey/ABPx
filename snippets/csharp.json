@@ -345,6 +345,12 @@
     "description": "DataType attribute",
     "prefix": "xDataTypeAttribute"
   },
+  "getDbSetGetAsync": {
+    "body": "var dbSet = await GetDbSetAsync();$0",
+    "description": "Inserts var dbSet = await GetDbSetAsync();",
+    "prefix": "xGetDbSetAsync"
+  },
+
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
