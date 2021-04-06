@@ -585,6 +585,16 @@
     "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
     "prefix": "xIfIsGrantedAsyncPermission"
   },
+  "ifInputSortingIsNullOrWhiteSpace": {
+    "body": [
+      " if (input.Sorting.IsNullOrWhiteSpace())",
+      "{",
+      "\tinput.Sorting = nameof(${1:Type}.${2:Property});",
+      "}$0"
+    ],
+    "description": "Inserts if input.Sorting.IsNullOrWhiteSpace statement",
+    "prefix": "xIfInputSortingIsNullOrWhiteSpace"
+  },
   "ifNotNullInlineStatement": {
     "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inline if not null statement",

@@ -90,6 +90,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIAppServiceParam                          | Inserts a IAppService parameter                                                          
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
+     xIfInputSortingIsNullOrWhiteSpace          | Inserts if input.Sorting.IsNullOrWhiteSpace statement                                    
      xIfNotNullInline                           | Inline if not null statement                                                             
      xIfNotNull                                 | If not null statement                                                                    
      xIfNullInline                              | Inline if not null statement                                                             
