@@ -1,7 +1,7 @@
 {
   "authorizeAttribute": {
     "body": [
-      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}.Default)]",
+      "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}s.Default)]",
       "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME}.Permissions",
       "@* @using Microsoft.AspNetCore.Authorization *@"
     ],
@@ -295,7 +295,7 @@
     "body": [
       "@* \"New$1\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1.Default)] *@",
+      "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1s.Default)] *@",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
       "@* below namespace where I$1AppService exists *@",
@@ -334,8 +334,8 @@
       "             <DataGridEntityActionsColumn TItem=\"$1Dto\" @ref=\"@EntityActionsColumn\">",
       "               <DisplayTemplate>",
       "                 <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
-      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Edit\"]\" RequiredPolicy=\"@UpdatePolicyName\" Clicked=\"() => OpenEditModalAsync(context)\" />",
-      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Delete\"]\" RequiredPolicy=\"@DeletePolicyName\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\" />",
+      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Edit\"]\" Visible=\"HasUpdatePermission\" Clicked=\"() => OpenEditModalAsync(context)\" />",
+      "                     <EntityAction TItem=\"$1Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\" />",
       "                 </EntityActions>",
       "               </DisplayTemplate>",
       "             </DataGridEntityActionsColumn>",
@@ -351,9 +351,9 @@
       "{",
       "  public ${TM_FILENAME_BASE}()",
       "  {",
-      "    // CreatePolicyName = ${WORKSPACE_NAME}Permissions.$1.Create;",
-      "    // UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$1.Update;",
-      "    // DeletePolicyName = ${WORKSPACE_NAME}Permissions.$1.Delete;",
+      "    @* CreatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Create; *@",
+      "    @* UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Update; *@",
+      "    @* DeletePolicyName = ${WORKSPACE_NAME}Permissions.$1s.Delete; *@",
       "  }",
       "}"
     ],
@@ -592,8 +592,7 @@
   },
   "pageDirective": {
     "body": [
-      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
+      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
     ],
     "description": "Inserts @page directive",
     "prefix": "xPage"
@@ -611,7 +610,7 @@
     "description": "Inserts a SubmitButton",
     "prefix": "xSubmitButton"
   },
-  "updateModalDialog": {
+  "editModalDialog": {
     "body": [
       "<Modal @ref=\"@EditModal\">",
       "  <ModalBackdrop />",
@@ -645,7 +644,7 @@
       "  </ModalContent>",
       "</Modal>$0"
     ],
-    "description": "Update modal dialog",
-    "prefix": "xUpdateModalDialog"
+    "description": "Edit modal dialog",
+    "prefix": "xEditModalDialog"
   }
 }

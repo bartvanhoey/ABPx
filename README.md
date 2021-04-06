@@ -27,7 +27,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttributeMicrosoft               | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
      xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
-     xBusinessExceptionClass                    | Inserts a complete CustomException class that inherits from class BusinessException      
+     xCustomBusinessExceptionClass              | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                        | CanBeNull attribute                                                                      
      xCanCreate                                 | Boolean canCreate variable and checks if Create is granted                               
      xCanCrudMethods                            | Checks if CRUD methods are granted                                                       
@@ -80,7 +80,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
      xIGuidGeneratorParam                       | Inserts a IGuidGenerator parameter                                                       
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepositoryParam                          | Inserts a IRepository parameter                                                          
+     xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
+     xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
@@ -149,6 +150,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoHardDeleteAsync                       | Inserts _repository.HardDeleteAsync statement                                            
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
      xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
+     xRepoFindAsync                             | Inserts var varName = _repository.FindAsync statement                                    
      xNewObjectConstructor                      | Instantiates a new object with constructor                                               
      xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
@@ -162,6 +164,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
+     xTodo                                      | Inserts TODO statement                                                                   
      xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnObjectMapperListTypeToListTypeDto   | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                              
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
@@ -186,6 +189,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
      xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xUnResultShouldBe                          | Inserts result.PropertyName.ShouldBe(Value) statement                                    
      xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
      xConstantGroupNamePermission               | a GroupName constant                                                                     
      xPara                                      | Inserts property with Parameter attribute                                                
@@ -238,6 +242,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPage                          | Inserts @page directive                                             
      xPageParam                     | Inserts @page directive with Parameter                              
      xSubmitButton                  | Inserts a SubmitButton                                              
-     xUpdateModalDialog             | Update modal dialog                                                 
+     xEditModalDialog               | Edit modal dialog                                                   
 
 

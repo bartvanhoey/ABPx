@@ -11,7 +11,6 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "// Translations -> paste in en.json in Domain.Shared\\localization folder",
       "//\"Permission:$3\": \"$3\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:item}s\",",
@@ -127,7 +126,7 @@
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
-  "businessExceptionClass": {
+  "customBusinessExceptionClass": {
     "body": [
       "public class ${TM_FILENAME_BASE}  : BusinessException$1",
       "{",
@@ -139,7 +138,7 @@
       "}"
     ],
     "description": "Inserts a complete CustomException class that inherits from class BusinessException",
-    "prefix": "xBusinessExceptionClass"
+    "prefix": "xCustomBusinessExceptionClass"
   },
   "canBeNullAttribute": {
     "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
@@ -292,11 +291,11 @@
       "{",
       "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
       "\t{",
-      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Create;",
-      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
-      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;",
+      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2s.Default;",
+      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2s.Default;",
+      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Create;",
+      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Update;",
+      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Delete;",
       "\t}",
       "}$0"
     ],
@@ -309,11 +308,11 @@
       "{",
       "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
       "\t{",
-      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
-      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Create;",
-      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
-      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;",
+      "\t\t// GetPolicyName = ${WORKSPACE_NAME}Permissions.$2s.Default;",
+      "\t\t// GetListPolicyName = ${WORKSPACE_NAME}Permissions.$2s.Default;",
+      "\t\t// CreatePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Create;",
+      "\t\t// UpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Update;",
+      "\t\t// DeletePolicyName = ${WORKSPACE_NAME}Permissions.$2s.Delete;",
       "\t}",
       "}$0"
     ],
@@ -521,15 +520,15 @@
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepositoryDefaultCtorParam": {
+  "iRepoDefaultCtorParam": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a IRepository parameter",
-    "prefix": "xIRepositoryDefaultCtorParam"
+    "prefix": "xIRepoDefaultCtorParam"
   },
-  "iRepositoryCustomCtorParam": {
-    "body": "I${1:${TM_FILENAME/AppService.cs//}}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
+  "iRepoCustomCtorParam": {
+    "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter",
-    "prefix": "iRepositoryCustomCtorParam"
+    "prefix": "xIRepoCustomCtorParam"
   },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
@@ -1172,21 +1171,6 @@
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
     "prefix": "xUnAssertThrowsAsyncCustomException"
   },
-  "unAssertThrowsAsyncAbpValidationExceptionException": {
-    "body": [
-      "await Assert.ThrowsAsync<AbpValidationException$2>(async () =>",
-      "{",
-      "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
-      "\t\tnew ${5:Name}Dto",
-      "\t\t{",
-      "\t\t\t${6:PropertyName} = ${7:PropertyValue}$8",
-      "\t\t}",
-      "\t);",
-      "});"
-    ],
-    "description": "Inserts Assert.ThrowsAsync<AbpValidationException>",
-    "prefix": "xUnAssertThrowsAsyncAbpValidationException"
-  },
   "unAssertThrowsCustomException": {
     "body": [
       "Assert.Throws<${1:YourCustom}Exception$2>(() =>",
@@ -1276,6 +1260,11 @@
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
     "prefix": "xUnResultTotalCountShouldBeGreater"
+  },
+  "unResultShouldBe": {
+    "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
+    "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
+    "prefix": "xUnResultShouldBe"
   },
   "varIsObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
