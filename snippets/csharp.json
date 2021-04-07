@@ -15,7 +15,7 @@
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:item}s\",",
       "//\"Permission:$4:Update\": \"Editing $5s\",",
-      "//\"Permission:$4:Delete\": \"Deleting $5s\",$0"
+      "//\"Permission:$4:Delete\": \"Deleting $5s\"$0"
     ],
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
     "prefix": "xAddPermissionToGroup"
