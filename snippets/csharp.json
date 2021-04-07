@@ -537,7 +537,7 @@
     "prefix": "xIRepoCustomCtorParam"
   },
   "managerCustomCtorParam": {
-    "body": "I${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
+    "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
     "description": "Inserts a custom Manager parameter in constructor",
     "prefix": "xManagerCustomCtorParam"
   },
