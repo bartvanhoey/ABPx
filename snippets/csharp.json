@@ -801,8 +801,8 @@
     "prefix": "xInjectService"
   },
   "managerCreateAsync": {
-    "body": ["await _${1:name}Manager.CreateAsync($2);$0"],
-    "description": "Inserts _manager.CreateAsync statement",
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:Name}Manager$2.CreateAsync($3);$0",
+    "description": "Inserts var x = await _manager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
   },
   "methodAsync": {
