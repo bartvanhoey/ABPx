@@ -61,7 +61,7 @@
     "prefix": "xAppServiceDeleteAsync"
   },
   "appServiceGetListAsync": {
-    "body": ["${2:var $1} = await ${1:Name}AppService.GetListAsync();$0"],
+    "body": ["${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"],
     "description": "Inserts var x = NameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
