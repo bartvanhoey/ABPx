@@ -1080,7 +1080,7 @@
       "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
-    "description": "Inserts var items = _repository.GetListAsync statement",
+    "description": "Inserts var items = await _repository.GetListAsync() statement",
     "prefix": "xRepoGetListAsync"
   },
   "repoGetQueryableAsync": {
@@ -1088,14 +1088,14 @@
       "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
       "$0"
     ],
-    "description": "Inserts var queryable = _repository.GetQueryableAsync statement",
+    "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
   },
   "repoInsertAsync": {
     "body": [
-      "await _${1:name}Repository.InsertAsync(${2:$1}, autoSave:${3|false,true|});$0"
+      "var inserted${1/^([a-z])/${1:/upcase}/} = await _${1:name}Repository.InsertAsync(${2:$1}$3, autoSave:${4|false,true|});$0"
     ],
-    "description": "Inserts _repository.InsertAsync statement",
+    "description": "Inserts var inserted = await _repository.InsertAsync() statement",
     "prefix": "xRepoInsertAsync"
   },
   "repoInsertManyAsync": {

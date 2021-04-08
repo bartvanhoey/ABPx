@@ -162,9 +162,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xNewObjectConstructor                      | Instantiates a new object with constructor                                               
      xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
-     xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
-     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
-     xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
+     xRepoGetListAsync                          | Inserts var items = await _repository.GetListAsync() statement                           
+     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync() statement                        
+     xRepoInsertAsync                           | Inserts var inserted = await _repository.InsertAsync() statement                         
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync() statement                                           
