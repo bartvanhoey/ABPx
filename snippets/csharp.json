@@ -46,8 +46,8 @@
     "prefix": "xAppServiceClassStub"
   },
   "appServiceCreateAsync": {
-    "body": ["await ${1:Name}AppService.CreateAsync(${2:input});$0"],
-    "description": "Inserts AppService.CreateAsync() statement",
+    "body": ["${2:var $1} = await ${1:Name}AppService.CreateAsync(${2:input});$0"],
+    "description": "Inserts var x = AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
   "appServiceGetAsync": {
