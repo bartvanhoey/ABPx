@@ -510,7 +510,7 @@
   },
   "iAppServiceCreateAsyncDefinition": {
     "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(create$1Dto$4 input);",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
