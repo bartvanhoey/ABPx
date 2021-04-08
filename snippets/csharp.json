@@ -15,7 +15,7 @@
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:item}s\",",
       "//\"Permission:$4:Update\": \"Editing $5s\",",
-      "//\"Permission:$4:Delete\": \"Deleting $5s\",$0"
+      "//\"Permission:$4:Delete\": \"Deleting $5s\"$0"
     ],
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
     "prefix": "xAddPermissionToGroup"
@@ -100,7 +100,7 @@
   },
   "authorizeAttributeAbp": {
     "body": [
-      "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}.${5|Default,Create,Update,Delete|})]$0"
+      "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"
     ],
     "description": "Inserts the ABP Authorize attribute for a class or a method",
     "prefix": "xAuthorizeAttributeAbp"
@@ -350,6 +350,12 @@
     "description": "DataType attribute",
     "prefix": "xDataTypeAttribute"
   },
+  "getDbSetGetAsync": {
+    "body": "var dbSet = await GetDbSetAsync();$0",
+    "description": "Inserts var dbSet = await GetDbSetAsync();",
+    "prefix": "xGetDbSetAsync"
+  },
+
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
@@ -535,6 +541,11 @@
     "description": "Inserts a custom ClassRepository parameter",
     "prefix": "xIRepoCustomCtorParam"
   },
+  "managerCustomCtorParam": {
+    "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
+    "description": "Inserts a custom Manager parameter in constructor",
+    "prefix": "xManagerCustomCtorParam"
+  },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
     "description": "Inserts a ISpecification parameter",
@@ -578,6 +589,16 @@
     ],
     "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
     "prefix": "xIfIsGrantedAsyncPermission"
+  },
+  "ifInputSortingIsNullOrWhiteSpace": {
+    "body": [
+      " if (input.Sorting.IsNullOrWhiteSpace())",
+      "{",
+      "\tinput.Sorting = nameof(${1:Type}.${2:Property});",
+      "}$0"
+    ],
+    "description": "Inserts if input.Sorting.IsNullOrWhiteSpace statement",
+    "prefix": "xIfInputSortingIsNullOrWhiteSpace"
   },
   "ifNotNullInlineStatement": {
     "body": ["if (${1:MyVariable} != null) $2", "$0"],
@@ -785,8 +806,8 @@
     "prefix": "xInjectService"
   },
   "managerCreateAsync": {
-    "body": ["await _${1:name}Manager.CreateAsync($2);$0"],
-    "description": "Inserts _manager.CreateAsync statement",
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:Name}Manager$2.CreateAsync($3);$0",
+    "description": "Inserts var x = await _manager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
   },
   "methodAsync": {
@@ -1059,7 +1080,7 @@
     "prefix": "xNotEmptyGuidAttribute"
   },
   "returnDbSetFirstOrDefaultAsync": {
-    "body": "return await DbSet.FirstOrDefaultAsync$1($2)$0;",
+    "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$1(x => x$2 == $3)$0;",
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
   },
@@ -1266,10 +1287,15 @@
     "description": "Inserts result.Items.ShouldNotContain statement",
     "prefix": "xUnResultItemsShouldNotContain"
   },
-  "unResultTotalCountShouldBeGreater": {
+  "unResultTotalCountShouldBeGreaterThanOrEqual": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
-    "prefix": "xUnResultTotalCountShouldBeGreater"
+    "prefix": "xUnResultTotalCountShouldBeGreaterOrEqual"
+  },
+  "unResultTotalCountShouldBeGreaterThan": {
+    "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
+    "prefix": "xUnResultTotalCountShouldBeGreaterThan"
   },
   "unResultShouldBe": {
     "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",

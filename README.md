@@ -58,13 +58,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCtor                                      | constructor stub                                                                         
      xCtorBusinessException                     | constructor stub in a class derived from BusinessException                               
      xDataTypeAttribute                         | DataType attribute                                                                       
+     xGetDbSetAsync                             | Inserts var dbSet = await GetDbSetAsync();                                               
      xDbSet                                     | Inserts a DbSet for a class statement in DbContext                                       
      xEfCoreRepositoryClassStub                 | Inserts EfCoreRepositoryClass stub                                                       
      xGetQueryableExtensionsClassStub           | Inserts GetQueryableExtensionsClass stub                                                 
      xEmailAddressAttribute                     | EmailAddress Attribute                                                                   
      xFilterProperty                            | Inserts property Filter                                                                  
-     xFindByNameAsyncIRepository                | Adds a FindByNameAsync method to an IRepository interface                                
-     xGetListAsyncIRepository                   | Adds a GetListAsync method to an IRepository interface                                   
+     xIRepoFindByNameAsync                      | Adds a FindByNameAsync method to an IRepository interface                                
+     xIRepoGetListAsync                         | Adds a GetListAsync method to an IRepository interface                                   
      xGetLookupAppService                       | Adds a GetLookupAsync method to an AppService class                                      
      xGetLookupIAppService                      | Adds a GetLookupAsync method to an IAppService interface                                 
      xGps                                       | Inserts { get, private set }                                                             
@@ -82,12 +83,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
      xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
+     xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
      xIAppServiceParam                          | Inserts a IAppService parameter                                                          
      xIfInline                                  | Inline if statement                                                                      
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
+     xIfInputSortingIsNullOrWhiteSpace          | Inserts if input.Sorting.IsNullOrWhiteSpace statement                                    
      xIfNotNullInline                           | Inline if not null statement                                                             
      xIfNotNull                                 | If not null statement                                                                    
      xIfNullInline                              | Inline if not null statement                                                             
@@ -126,7 +129,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectIMapper                             | Inject IMapper property                                                                  
      xInjectNavigationManager                   | Inject NavigationManager property                                                        
      xInjectService                             | Inject IMyService MyService                                                              
-     xManagerCreateAsync                        | Inserts _manager.CreateAsync statement                                                   
+     xManagerCreateAsync                        | Inserts var x = await _manager.CreateAsync() statement                                   
      xMethodAsync                               | Inserts an async Task method stub                                                        
      xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
      xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
@@ -188,7 +191,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnResultIdShouldNotBeGuidEmpty            | Inserts result.Id.ShouldNotBe(Guid.Empty)                                                
      xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
-     xUnResultTotalCountShouldBeGreater         | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xUnResultTotalCountShouldBeGreaterOrEqual  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
+     xUnResultTotalCountShouldBeGreaterThan     | Inserts result.TotalCount.ShouldBeGreaterThan statement                                  
      xUnResultShouldBe                          | Inserts result.PropertyName.ShouldBe(Value) statement                                    
      xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
      xConstantGroupNamePermission               | a GroupName constant                                                                     
