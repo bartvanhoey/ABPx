@@ -481,8 +481,8 @@
       "\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});",
       "\t$0"
     ],
-    "description": "Inserts a UpdateAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceUpdateAsyncDefinition"
+    "description": "Inserts a DeleteAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceDeleteAsyncDefinition"
   },
   "iAppServiceUpdateAsyncDefinition": {
     "body": [

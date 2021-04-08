@@ -72,7 +72,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
-     xIAppServiceUpdateAsyncDefinition          | Inserts a UpdateAsync definition for an IAppService interface                            
+     xIAppServiceDeleteAsyncDefinition          | Inserts a DeleteAsync definition for an IAppService interface                            
      xIAppServiceUpdateAsyncDefinition          | Inserts a UpdateAsync definition for an IAppService interface                            
      xIAppServiceGetListAsyncDefinition         | Inserts a GetListAsync definition for an IAppService interface                           
      xIAppServiceGetAsyncDefinition             | Inserts a GetAsync definition for an IAppService interface                               
