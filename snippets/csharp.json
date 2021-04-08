@@ -817,7 +817,7 @@
   },
   "injectAppService": {
     "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3}AppService ${3:Name}AppService { get; set; }$0"
+      "[Inject$1] ${2|private,protected,public|} I${4:$3}AppService ${3:Name}AppService { get; set; }$0"
     ],
     "description": "Inject IMyAppService MyAppService statement",
     "prefix": "xInjectAppService"
