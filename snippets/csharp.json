@@ -541,6 +541,11 @@
     "description": "Inserts a custom ClassRepository parameter",
     "prefix": "xIRepoCustomCtorParam"
   },
+  "iBlobContainerCtorParam": {
+    "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
+    "description": "Inserts a IBlobContainer parameter",
+    "prefix": "xIBlobContainerCtorParam"
+  },
   "managerCustomCtorParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
     "description": "Inserts a custom Manager parameter in constructor",
