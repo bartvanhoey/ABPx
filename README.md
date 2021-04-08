@@ -105,6 +105,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhBusinessException                      | Inherits BusinessException class                                                         
      xInhSpecification                          | Inherits Specification class                                                             
      xInhAggregateRoot                          | Inherits AggregateRoot class                                                             
+     xInhBasicAggregateRoot                     | Inherits BasicAggregateRoot class                                                        
      xInhApplicationService                     | Inherits ApplicationService class                                                        
      xInhApplicationTestBase                    | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                   | Inherits AuditedAggregateRoot class                                                      

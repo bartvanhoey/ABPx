@@ -685,6 +685,11 @@
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
+  "inheritsBasicAggregateRoot": {
+    "body": " BasicAggregateRoot<${1|int,Guid,string|}>$0",
+    "description": "Inherits BasicAggregateRoot class",
+    "prefix": "xInhBasicAggregateRoot"
+  },
   "inheritsApplicationService": {
     "body": [" ApplicationService$0"],
     "description": "Inherits ApplicationService class",
