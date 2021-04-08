@@ -46,18 +46,23 @@
     "prefix": "xAppServiceClassStub"
   },
   "appServiceCreateAsync": {
-    "body": ["await _${1:name}AppService.CreateAsync(${2:Input});$0"],
-    "description": "Inserts _appService.CreateAsync statement",
+    "body": ["await ${1:Name}AppService.CreateAsync(${2:input});$0"],
+    "description": "Inserts AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
   "appServiceGetAsync": {
-    "body": ["var ${2:$1} await _${1:name}AppService.GetAsync(${3:Id});$0"],
-    "description": "Inserts var x = _nameAppService.GetAsync statement",
+    "body": ["${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"],
+    "description": "Inserts var x = NameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
+  "appServiceDeleteAsync": {
+    "body": ["await ${1:Name}AppService.DeleteAsync(${3:id});$0"],
+    "description": "Inserts await NameAppService.DeleteAsync() statement",
+    "prefix": "xAppServiceDeleteAsync"
+  },
   "appServiceGetListAsync": {
-    "body": ["var ${2:$1} await _${1:name}AppService.GetListAsync(${3:Id});$0"],
-    "description": "Inserts var x = _nameAppService.GetListAsync statement",
+    "body": ["${2:var $1} = await ${1:Name}AppService.GetListAsync();$0"],
+    "description": "Inserts var x = NameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
   "applicationMenuItemIcon": {

@@ -13,9 +13,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPermissionToGroup                      | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPolicyPermissions                      | Adds policy permissions                                                                  
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
-     xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
-     xAppServiceGetAsync                        | Inserts var x = _nameAppService.GetAsync statement                                       
-     xAppServiceGetListAsync                    | Inserts var x = _nameAppService.GetListAsync statement                                   
+     xAppServiceCreateAsync                     | Inserts AppService.CreateAsync() statement                                               
+     xAppServiceGetAsync                        | Inserts var x = NameAppService.GetAsync() statement                                      
+     xAppServiceDeleteAsync                     | Inserts await NameAppService.DeleteAsync() statement                                     
+     xAppServiceGetListAsync                    | Inserts var x = NameAppService.GetListAsync() statement                                  
      xApplicationMenuItemIcon                   | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                    | New ApplicationMenuItem variable with url                                                
      xAsyncExecuterCountAsync                   | Inserts AsyncExecuter.CountAsync statement                                               
