@@ -1079,7 +1079,7 @@
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "notEmptyGuitAttribute": {
+  "notEmptyGuidAttribute": {
     "body": ["[NotEmptyGuid$1] $0"],
     "description": "Inserts NotEmptyGuidAttribute",
     "prefix": "xNotEmptyGuidAttribute"

@@ -3,9 +3,6 @@
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 
 
-PRO TIP: Rename the aspnet-core folder of your abp.io project to [Your-Project-Name] to take full advantage of ABPx
-
-
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
 ## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
@@ -17,7 +14,8 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPolicyPermissions                      | Adds policy permissions                                                                  
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
      xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
-     xAppServiceGetAsync                        | Inserts _appService.GetAsync statement                                                   
+     xAppServiceGetAsync                        | Inserts var x = _nameAppService.GetAsync statement                                       
+     xAppServiceGetListAsync                    | Inserts var x = _nameAppService.GetListAsync statement                                   
      xApplicationMenuItemIcon                   | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                    | New ApplicationMenuItem variable with url                                                
      xAsyncExecuterCountAsync                   | Inserts AsyncExecuter.CountAsync statement                                               
@@ -83,6 +81,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
      xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
+     xIBlobContainerCtorParam                   | Inserts a IBlobContainer parameter                                                       
      xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
@@ -162,8 +161,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
-     xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync statement                                             
-     xRequiredAttribute                         | Required Attribute                                                                       
+     xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync() statement                                           
+     xRequiredAttribute                         | Inserts Required Attribute                                                               
+     xNotEmptyGuidAttribute                     | Inserts NotEmptyGuidAttribute                                                            
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
