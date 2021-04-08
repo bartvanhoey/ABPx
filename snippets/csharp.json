@@ -51,9 +51,14 @@
     "prefix": "xAppServiceCreateAsync"
   },
   "appServiceGetAsync": {
-    "body": ["await _${1:name}AppService.GetAsync(${2:Id});$0"],
-    "description": "Inserts _appService.GetAsync statement",
+    "body": ["var ${2:$1} await _${1:name}AppService.GetAsync(${3:Id});$0"],
+    "description": "Inserts var x = _nameAppService.GetAsync statement",
     "prefix": "xAppServiceGetAsync"
+  },
+  "appServiceGetListAsync": {
+    "body": ["var ${2:$1} await _${1:name}AppService.GetListAsync(${3:Id});$0"],
+    "description": "Inserts var x = _nameAppService.GetListAsync statement",
+    "prefix": "xAppServiceGetListAsync"
   },
   "applicationMenuItemIcon": {
     "body": [
@@ -535,6 +540,11 @@
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter",
     "prefix": "xIRepoCustomCtorParam"
+  },
+  "iBlobContainerCtorParam": {
+    "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
+    "description": "Inserts a IBlobContainer parameter",
+    "prefix": "xIBlobContainerCtorParam"
   },
   "managerCustomCtorParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
@@ -1061,13 +1071,18 @@
     "body": [
       "await _${1:name}Repository.UpdateManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
     ],
-    "description": "Inserts repository.UpdateManyAsync statement",
+    "description": "Inserts repository.UpdateManyAsync() statement",
     "prefix": "xRepoUpdateManyAsync"
   },
   "requiredAttribute": {
     "body": ["[Required$1] $0"],
-    "description": "Required Attribute",
+    "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
+  },
+  "notEmptyGuitAttribute": {
+    "body": ["[NotEmptyGuid$1] $0"],
+    "description": "Inserts NotEmptyGuidAttribute",
+    "prefix": "xNotEmptyGuidAttribute"
   },
   "returnDbSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$1(x => x$2 == $3)$0;",
