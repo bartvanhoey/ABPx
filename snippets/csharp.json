@@ -965,7 +965,7 @@
     "body": [
       "protected override async Task$1 OnInitializedAsync()",
       "{",
-      "\tawait base.OnInitializedAsync();",
+      "\t${2:await base.OnInitializedAsync();}",
       "\t$0",
       "}"
     ],
