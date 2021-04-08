@@ -46,9 +46,31 @@
     "prefix": "xAppServiceClassStub"
   },
   "appServiceCreateAsync": {
-    "body": ["${2:var $1} = await ${1:Name}AppService.CreateAsync(${2:input});$0"],
+    "body": [
+      "${2:var $1} = await ${1:Name}AppService.CreateAsync(${2:input});$0"
+    ],
     "description": "Inserts var x = AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
+  },
+  "notifyInfo": {
+    "body": "await Notify.Info(\"${1:Message}\");",
+    "description": "Inserts await Notify.Info(Message) statement",
+    "prefix": "xNotifyInfo"
+  },
+  "notifyError": {
+    "body": "await Notify.Error(\"${1:Message}\");",
+    "description": "Inserts await Notify.Error(Message) statement",
+    "prefix": "xNotifyError"
+  },
+  "notifySuccess": {
+    "body": "await Notify.Success(\"${1:Message}\");",
+    "description": "Inserts await Notify.Success(Message) statement",
+    "prefix": "xNotifySuccess"
+  },
+  "notifyWarn": {
+    "body": "await Notify.Warn(\"${1:Message}\");",
+    "description": "Inserts await Notify.Warn(Message) statement",
+    "prefix": "xNotifyWarn"
   },
   "appServiceGetAsync": {
     "body": ["${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"],
@@ -482,10 +504,7 @@
     "prefix": "xIAppServiceStubCrudMethods"
   },
   "iAppServiceDeleteAsyncDefinition": {
-    "body": [
-      "\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});",
-      "\t$0"
-    ],
+    "body": ["\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});", "\t$0"],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
     "prefix": "xIAppServiceDeleteAsyncDefinition"
   },

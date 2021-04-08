@@ -14,6 +14,10 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPolicyPermissions                      | Adds policy permissions                                                                  
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
      xAppServiceCreateAsync                     | Inserts var x = AppService.CreateAsync() statement                                       
+     xNotifyInfo                                | Inserts await Notify.Info(Message) statement                                             
+     xNotifyError                               | Inserts await Notify.Error(Message) statement                                            
+     xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
+     xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
      xAppServiceGetAsync                        | Inserts var x = NameAppService.GetAsync() statement                                      
      xAppServiceDeleteAsync                     | Inserts await NameAppService.DeleteAsync() statement                                     
      xAppServiceGetListAsync                    | Inserts var x = NameAppService.GetListAsync() statement                                  
