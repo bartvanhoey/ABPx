@@ -691,7 +691,7 @@
     "prefix": "xImpIApplicationService"
   },
   "implementICorrespondingAppService": {
-    "body": " I${TM_FILENAME_BASE}$0",
+    "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
     "prefix": "xImpICorrespondingAppService"
   },
