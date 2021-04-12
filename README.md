@@ -3,9 +3,6 @@
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
 
 
-PRO TIP: Rename the aspnet-core folder of your abp.io project to [Your-Project-Name] to take full advantage of ABPx
-
-
 Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
 ## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
@@ -16,8 +13,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAddPermissionToGroup                      | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPolicyPermissions                      | Adds policy permissions                                                                  
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
-     xAppServiceCreateAsync                     | Inserts _appService.CreateAsync statement                                                
-     xAppServiceGetAsync                        | Inserts _appService.GetAsync statement                                                   
+     xAppServiceCreateAsync                     | Inserts var x = AppService.CreateAsync() statement                                       
+     xNotifyInfo                                | Inserts await Notify.Info(Message) statement                                             
+     xNotifyError                               | Inserts await Notify.Error(Message) statement                                            
+     xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
+     xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
+     xAppServiceGetAsync                        | Inserts var x = NameAppService.GetAsync() statement                                      
+     xAppServiceDeleteAsync                     | Inserts await NameAppService.DeleteAsync() statement                                     
+     xAppServiceGetListAsync                    | Inserts var x = NameAppService.GetListAsync() statement                                  
      xApplicationMenuItemIcon                   | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                    | New ApplicationMenuItem variable with url                                                
      xAsyncExecuterCountAsync                   | Inserts AsyncExecuter.CountAsync statement                                               
@@ -74,6 +77,11 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
      xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
+     xIAppServiceDeleteAsyncDefinition          | Inserts a DeleteAsync definition for an IAppService interface                            
+     xIAppServiceUpdateAsyncDefinition          | Inserts a UpdateAsync definition for an IAppService interface                            
+     xIAppServiceGetListAsyncDefinition         | Inserts a GetListAsync definition for an IAppService interface                           
+     xIAppServiceGetAsyncDefinition             | Inserts a GetAsync definition for an IAppService interface                               
+     xIAppServiceCreateAsyncDefinition          | Inserts a CreateAsync definition for an IAppService interface                            
      xICrudAppServiceCreateUpdateDto            | Inserts a complete ICrudAppService - CreateUpdateDto                                     
      xExposeServicesAttribute                   | Inserts ExposeServices attribute                                                         
      xDependencyAttribute                       | Inserts Dependency attribute                                                             
@@ -83,6 +91,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
      xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
      xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
+     xIBlobContainerCtorParam                   | Inserts a IBlobContainer parameter                                                       
      xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
@@ -106,6 +115,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhBusinessException                      | Inherits BusinessException class                                                         
      xInhSpecification                          | Inherits Specification class                                                             
      xInhAggregateRoot                          | Inherits AggregateRoot class                                                             
+     xInhBasicAggregateRoot                     | Inherits BasicAggregateRoot class                                                        
      xInhApplicationService                     | Inherits ApplicationService class                                                        
      xInhApplicationTestBase                    | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                   | Inherits AuditedAggregateRoot class                                                      
@@ -123,7 +133,7 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhFullAuditedEntityDto                   | Inherits FullAuditedEntityDto class                                                      
      xInhPagedAndSortedResultRequestDto         | Inherits PagedAndSortedResultRequestDto class                                            
      xInhProjectNameAppService                  | Inherits ProjectNameAppService class                                                     
-     xInjectAppService                          | Inject IMyAppService MyAppService statement                                              
+     xInjectIAppService                         | Inserts [Inject] public IMyAppService MyAppService statement                             
      xInjectHttpClient                          | Inject HttpClient property                                                               
      xInjectIJSRuntime                          | Inject IJSRuntime property                                                               
      xInjectIMapper                             | Inject IMapper property                                                                  
@@ -157,13 +167,14 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xNewObjectConstructor                      | Instantiates a new object with constructor                                               
      xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
-     xRepoGetListAsync                          | Inserts var items = _repository.GetListAsync statement                                   
-     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync statement                          
-     xRepoInsertAsync                           | Inserts _repository.InsertAsync statement                                                
+     xRepoGetListAsync                          | Inserts var items = await _repository.GetListAsync() statement                           
+     xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync() statement                        
+     xRepoInsertAsync                           | Inserts var inserted = await _repository.InsertAsync() statement                         
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
-     xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync statement                                             
-     xRequiredAttribute                         | Required Attribute                                                                       
+     xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync() statement                                           
+     xRequiredAttribute                         | Inserts Required Attribute                                                               
+     xNotEmptyGuidAttribute                     | Inserts NotEmptyGuidAttribute                                                            
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        

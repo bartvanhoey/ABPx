@@ -46,18 +46,45 @@
     "prefix": "xAppServiceClassStub"
   },
   "appServiceCreateAsync": {
-    "body": ["await _${1:name}AppService.CreateAsync(${2:Input});$0"],
-    "description": "Inserts _appService.CreateAsync statement",
+    "body": [
+      "var ${2:created$1} = await ${1:Name}AppService.CreateAsync(${3:input});$0"
+    ],
+    "description": "Inserts var x = AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
+  "notifyInfo": {
+    "body": "await Notify.Info(\"${1:Message}\");",
+    "description": "Inserts await Notify.Info(Message) statement",
+    "prefix": "xNotifyInfo"
+  },
+  "notifyError": {
+    "body": "await Notify.Error(\"${1:Message}\");",
+    "description": "Inserts await Notify.Error(Message) statement",
+    "prefix": "xNotifyError"
+  },
+  "notifySuccess": {
+    "body": "await Notify.Success(\"${1:Message}\");",
+    "description": "Inserts await Notify.Success(Message) statement",
+    "prefix": "xNotifySuccess"
+  },
+  "notifyWarn": {
+    "body": "await Notify.Warn(\"${1:Message}\");",
+    "description": "Inserts await Notify.Warn(Message) statement",
+    "prefix": "xNotifyWarn"
+  },
   "appServiceGetAsync": {
-    "body": ["var ${2:$1} await _${1:name}AppService.GetAsync(${3:Id});$0"],
-    "description": "Inserts var x = _nameAppService.GetAsync statement",
+    "body": ["${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"],
+    "description": "Inserts var x = NameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
+  "appServiceDeleteAsync": {
+    "body": ["await ${1:Name}AppService.DeleteAsync(${3:id});$0"],
+    "description": "Inserts await NameAppService.DeleteAsync() statement",
+    "prefix": "xAppServiceDeleteAsync"
+  },
   "appServiceGetListAsync": {
-    "body": ["var ${2:$1} await _${1:name}AppService.GetListAsync(${3:Id});$0"],
-    "description": "Inserts var x = _nameAppService.GetListAsync statement",
+    "body": ["${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"],
+    "description": "Inserts var x = NameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
   "applicationMenuItemIcon": {
@@ -476,6 +503,43 @@
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppServiceStubCrudMethods"
   },
+  "iAppServiceDeleteAsyncDefinition": {
+    "body": ["\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});", "\t$0"],
+    "description": "Inserts a DeleteAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceDeleteAsyncDefinition"
+  },
+  "iAppServiceUpdateAsyncDefinition": {
+    "body": [
+      "\tTask$6 UpdateAsync(${3|int,Guid,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
+      "\t$0"
+    ],
+    "description": "Inserts a UpdateAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceUpdateAsyncDefinition"
+  },
+  "iAppServiceGetListAsyncDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
+      "\t$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceGetListAsyncDefinition"
+  },
+  "iAppServiceGetAsyncDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|int,Guid,string|}$5 ${6:id});",
+      "\t$0"
+    ],
+    "description": "Inserts a GetAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceGetAsyncDefinition"
+  },
+  "iAppServiceCreateAsyncDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
+      "\t$0"
+    ],
+    "description": "Inserts a CreateAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceCreateAsyncDefinition"
+  },
   "iCrudAppServiceCreateUpdateDto": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
@@ -651,7 +715,7 @@
     "prefix": "xImpIApplicationService"
   },
   "implementICorrespondingAppService": {
-    "body": " I${TM_FILENAME_BASE}$0",
+    "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
     "prefix": "xImpICorrespondingAppService"
   },
@@ -684,6 +748,11 @@
     "body": " AggregateRoot<${1|int,Guid,string|}>$0",
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
+  },
+  "inheritsBasicAggregateRoot": {
+    "body": " BasicAggregateRoot<${1|int,Guid,string|}>$0",
+    "description": "Inherits BasicAggregateRoot class",
+    "prefix": "xInhBasicAggregateRoot"
   },
   "inheritsApplicationService": {
     "body": [" ApplicationService$0"],
@@ -772,10 +841,10 @@
   },
   "injectAppService": {
     "body": [
-      "[Inject$1] ${2|protected,public|} I${4:$3}AppService ${3:Name}AppService { get; set; }$0"
+      "[Inject$1] ${2|private,protected,public|} I${4:$3}AppService$5 ${3:Name}AppService { get; set; }$0"
     ],
-    "description": "Inject IMyAppService MyAppService statement",
-    "prefix": "xInjectAppService"
+    "description": "Inserts [Inject] public IMyAppService MyAppService statement",
+    "prefix": "xInjectIAppService"
   },
   "injectHttpClient": {
     "body": [
@@ -920,7 +989,7 @@
     "body": [
       "protected override async Task$1 OnInitializedAsync()",
       "{",
-      "\tawait base.OnInitializedAsync();",
+      "\t${2:await base.OnInitializedAsync();}",
       "\t$0",
       "}"
     ],
@@ -1035,7 +1104,7 @@
       "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
-    "description": "Inserts var items = _repository.GetListAsync statement",
+    "description": "Inserts var items = await _repository.GetListAsync() statement",
     "prefix": "xRepoGetListAsync"
   },
   "repoGetQueryableAsync": {
@@ -1043,14 +1112,14 @@
       "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
       "$0"
     ],
-    "description": "Inserts var queryable = _repository.GetQueryableAsync statement",
+    "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
   },
   "repoInsertAsync": {
     "body": [
-      "await _${1:name}Repository.InsertAsync(${2:$1}, autoSave:${3|false,true|});$0"
+      "var inserted${1/^([a-z])/${1:/upcase}/} = await _${1:name}Repository.InsertAsync(${2:$1}$3, autoSave:${4|false,true|});$0"
     ],
-    "description": "Inserts _repository.InsertAsync statement",
+    "description": "Inserts var inserted = await _repository.InsertAsync() statement",
     "prefix": "xRepoInsertAsync"
   },
   "repoInsertManyAsync": {
@@ -1079,7 +1148,7 @@
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "notEmptyGuitAttribute": {
+  "notEmptyGuidAttribute": {
     "body": ["[NotEmptyGuid$1] $0"],
     "description": "Inserts NotEmptyGuidAttribute",
     "prefix": "xNotEmptyGuidAttribute"
