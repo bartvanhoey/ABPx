@@ -62,16 +62,16 @@
   },
   "applicationMenuItemIcon": {
     "body": [
-      "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], icon: \"${2:fa fa-book}\");",
-      "// \"Menu:$1s\": \"$1s\","
+      "var ${1/^([A-Z])/${1:/downcase}/}Menu = new ApplicationMenuItem(\"${1:MenuName}Menu\",l[\"Menu:$1\"], icon: \"${2:fa fa-book}\");",
+      "// \"Menu:$1\": \"$1\","
     ],
     "description": "New ApplicationMenuItem variable with icon",
     "prefix": "xApplicationMenuItemIcon"
   },
   "applicationMenuItemUrl": {
     "body": [
-      "var ${1/^([A-Z])/${1:/downcase}/}sMenu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1s\"], url: \"/${2:${1/(.*)/${1:/downcase}/}}s\");",
-      "// \"Menu:$1s\": \"$1s\","
+      "var ${1/^([A-Z])/${1:/downcase}/}Menu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1\"], url: \"/${2:${1/(.*)/${1:/downcase}/}}\");",
+      "// \"Menu:$1\": \"$1\","
     ],
     "description": "New ApplicationMenuItem variable with url",
     "prefix": "xApplicationMenuItemUrl"
@@ -538,12 +538,12 @@
   },
   "iRepoCustomCtorParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
-    "description": "Inserts a custom ClassRepository parameter",
+    "description": "Inserts a custom ClassRepository parameter in constructor",
     "prefix": "xIRepoCustomCtorParam"
   },
   "iBlobContainerCtorParam": {
     "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
-    "description": "Inserts a IBlobContainer parameter",
+    "description": "Inserts a IBlobContainer parameter in constructor",
     "prefix": "xIBlobContainerCtorParam"
   },
   "managerCustomCtorParam": {
@@ -585,11 +585,11 @@
   "ifIsGrantedAsyncPermission": {
     "body": [
       "// using ${WORKSPACE_NAME}.Permissions;",
-      "// \"Menu:$3s\": \"$3s\", ",
+      "// \"Menu:$3\": \"$3\", ",
       "if (await context.IsGrantedAsync(${WORKSPACE_NAME}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\tvar ${4:${3/(.*)/${1:/downcase}/}}sMenu = new ApplicationMenuItem(\"$3sMenu\", l[\"Menu:$3s\"], url: \"/${5:${3/(.*)/${1:/downcase}/}}s\");",
-      "\t${6:menuName}.AddItem($4sMenu);",
+      "\tvar ${4:${3/(.*)/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"$3Menu\", l[\"Menu:$3\"], url: \"/${5:${3/(.*)/${1:/downcase}/}}\");",
+      "\t${6:menuName}.AddItem($4Menu);",
       "}$0"
     ],
     "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
