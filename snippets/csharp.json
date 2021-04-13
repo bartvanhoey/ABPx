@@ -1266,7 +1266,7 @@
       "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
       "{",
       "\t // statement that throws exception comes here",
-      "\t $1",
+      "\t $0",
       "});"
     ],
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
