@@ -1263,14 +1263,10 @@
   },
   "unAssertThrowsAsyncCustomException": {
     "body": [
-      "await Assert.ThrowsAsync<${1:YourCustom}Exception$2>(async () =>",
+      "await Assert.ThrowsAsync<${1:YourCustomException}$2>(async () =>",
       "{",
-      "\tawait _${3:name}AppService.${4|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
-      "\t\tnew ${5:Name}Dto",
-      "\t\t{",
-      "\t\t\t${6:PropertyName} = ${7:PropertyValue}$8",
-      "\t\t}",
-      "\t);",
+      "\t // statement that throws exception comes here",
+      "\t $1",
       "});"
     ],
     "description": "Inserts Assert.ThrowsAsync<YourCustomException>",
