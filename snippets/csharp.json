@@ -1015,7 +1015,7 @@
     "body": [
       "public static class ${1:ClassName}",
       "{",
-      "\tpublic const string Default = GroupName + \".$1\";",
+      "\tpublic const string Default = ${2:NameGroup} + \".$1\";",
       "\tpublic const string Create = Default + \".Create\";",
       "\tpublic const string Update = Default+ \".Update\";",
       "\tpublic const string Delete = Default + \".Delete\";",
