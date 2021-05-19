@@ -1,4 +1,18 @@
 {
+  "GetQueryableExtensionsClassStub": {
+    "body": [
+      "public static class ${1:Type}GetQueryableExtensions",
+      "{",
+      "\tpublic static IQueryable<$1> IncludeDetails(this IQueryable<$1> queryable, bool include = true)",
+      "\t{",
+      "\t\tif (!include) return queryable;",
+      "\t\treturn queryable.Include(x => x.${2:PropertyName});",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts GetQueryableExtensionsClass stub",
+    "prefix": "xGetQueryableExtensionsClassStub"
+  },
   "addPermissionGroupToContext": {
     "body": "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.GroupName);",
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
@@ -52,38 +66,24 @@
     "description": "Inserts var x = AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
-  "notifyInfo": {
-    "body": "await Notify.Info(\"${1:Message}\");",
-    "description": "Inserts await Notify.Info(Message) statement",
-    "prefix": "xNotifyInfo"
-  },
-  "notifyError": {
-    "body": "await Notify.Error(\"${1:Message}\");",
-    "description": "Inserts await Notify.Error(Message) statement",
-    "prefix": "xNotifyError"
-  },
-  "notifySuccess": {
-    "body": "await Notify.Success(\"${1:Message}\");",
-    "description": "Inserts await Notify.Success(Message) statement",
-    "prefix": "xNotifySuccess"
-  },
-  "notifyWarn": {
-    "body": "await Notify.Warn(\"${1:Message}\");",
-    "description": "Inserts await Notify.Warn(Message) statement",
-    "prefix": "xNotifyWarn"
-  },
-  "appServiceGetAsync": {
-    "body": ["${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"],
-    "description": "Inserts var x = NameAppService.GetAsync() statement",
-    "prefix": "xAppServiceGetAsync"
-  },
   "appServiceDeleteAsync": {
-    "body": ["await ${1:Name}AppService.DeleteAsync(${3:id});$0"],
+    "body": [
+      "await ${1:Name}AppService.DeleteAsync(${3:id});$0"
+    ],
     "description": "Inserts await NameAppService.DeleteAsync() statement",
     "prefix": "xAppServiceDeleteAsync"
   },
+  "appServiceGetAsync": {
+    "body": [
+      "${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"
+    ],
+    "description": "Inserts var x = NameAppService.GetAsync() statement",
+    "prefix": "xAppServiceGetAsync"
+  },
   "appServiceGetListAsync": {
-    "body": ["${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"],
+    "body": [
+      "${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"
+    ],
     "description": "Inserts var x = NameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
@@ -133,7 +133,9 @@
     "prefix": "xAuthorizeAttributeAbp"
   },
   "authorizeAttributeMicrosoft": {
-    "body": ["[Authorize$1]$0"],
+    "body": [
+      "[Authorize$1]$0"
+    ],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthorizeAttributeMicrosoft"
   },
@@ -158,22 +160,10 @@
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
-  "customBusinessExceptionClass": {
-    "body": [
-      "public class ${TM_FILENAME_BASE}  : BusinessException$1",
-      "{",
-      "\tpublic ${TM_FILENAME_BASE}(${2:string} ${3:name})",
-      "\t\t: base(${WORKSPACE_NAME}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
-      "\t{",
-      "\t\tWithData$5(\"${6:$3}\", ${7:$3});",
-      "\t}",
-      "}"
-    ],
-    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
-    "prefix": "xCustomBusinessExceptionClass"
-  },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string} ${3:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -218,12 +208,16 @@
     "prefix": "xCanUpdate"
   },
   "checkGetListPolicyAsync": {
-    "body": ["await CheckGetListPolicyAsync$1();$0"],
+    "body": [
+      "await CheckGetListPolicyAsync$1();$0"
+    ],
     "description": "Inserts await CheckGetListPolicyAsync()",
     "prefix": "xCheckGetListPolicyAsync"
   },
   "checkGetPolicyAsync": {
-    "body": ["await CheckGetPolicyAsync$1();$0"],
+    "body": [
+      "await CheckGetPolicyAsync$1();$0"
+    ],
     "description": "Inserts await CheckGetPolicyAsync()",
     "prefix": "xCheckGetPolicyAsync"
   },
@@ -372,21 +366,36 @@
     "description": "constructor stub in a class derived from BusinessException",
     "prefix": "xCtorBusinessException"
   },
+  "customBusinessExceptionClass": {
+    "body": [
+      "public class ${TM_FILENAME_BASE}  : BusinessException$1",
+      "{",
+      "\tpublic ${TM_FILENAME_BASE}(${2:string} ${3:name})",
+      "\t\t: base(${WORKSPACE_NAME}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
+      "\t{",
+      "\t\tWithData$5(\"${6:$3}\", ${7:$3});",
+      "\t}",
+      "}"
+    ],
+    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
+    "prefix": "xCustomBusinessExceptionClass"
+  },
   "dataTypeAttribute": {
     "body": "[DataType$1(DataType.${2|CreditCard,Currency,Custom,Date,DateTime,Duration,EmailAddress,Html,ImageUrl,MultilineText,PhoneNumber|})]",
     "description": "DataType attribute",
     "prefix": "xDataTypeAttribute"
   },
-  "getDbSetGetAsync": {
-    "body": "var dbSet = await GetDbSetAsync();$0",
-    "description": "Inserts var dbSet = await GetDbSetAsync();",
-    "prefix": "xGetDbSetAsync"
-  },
-
   "dbSet": {
     "body": "public DbSet<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSet"
+  },
+  "dependencyAttribute": {
+    "body": [
+      "[Dependency$1(ReplaceServices = ${2|true,false|})]"
+    ],
+    "description": "Inserts Dependency attribute",
+    "prefix": "xDependencyAttribute"
   },
   "efCoreRepositoryClassStub": {
     "body": [
@@ -402,39 +411,31 @@
     "description": "Inserts EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
   },
-  "GetQueryableExtensionsClassStub": {
-    "body": [
-      "public static class ${1:Type}GetQueryableExtensions",
-      "{",
-      "\tpublic static IQueryable<$1> IncludeDetails(this IQueryable<$1> queryable, bool include = true)",
-      "\t{",
-      "\t\tif (!include) return queryable;",
-      "\t\treturn queryable.Include(x => x.${2:PropertyName});",
-      "\t}",
-      "}"
-    ],
-    "description": "Inserts GetQueryableExtensionsClass stub",
-    "prefix": "xGetQueryableExtensionsClassStub"
-  },
   "emailAddressAttribute": {
-    "body": ["[EmailAddress$1] $0"],
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
     "description": "EmailAddress Attribute",
     "prefix": "xEmailAddressAttribute"
   },
+  "exposeServicesAttribute": {
+    "body": [
+      "[ExposeServices$1(typeof(${2:TypeName}))]"
+    ],
+    "description": "Inserts ExposeServices attribute",
+    "prefix": "xExposeServicesAttribute"
+  },
   "filterProperty": {
-    "body": ["public string Filter { get; set; }"],
+    "body": [
+      "public string Filter { get; set; }"
+    ],
     "description": "Inserts property Filter",
     "prefix": "xFilterProperty"
   },
-  "iRepoFindByNameAsync": {
-    "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync method to an IRepository interface",
-    "prefix": "xIRepoFindByNameAsync"
-  },
-  "iRepoGetListAsync": {
-    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync method to an IRepository interface",
-    "prefix": "xIRepoGetListAsync"
+  "getDbSetGetAsync": {
+    "body": "var dbSet = await GetDbSetAsync();$0",
+    "description": "Inserts var dbSet = await GetDbSetAsync();",
+    "prefix": "xGetDbSetAsync"
   },
   "getLookupAppService": {
     "body": [
@@ -454,7 +455,9 @@
     "prefix": "xGetLookupIAppService"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
@@ -475,7 +478,9 @@
     "prefix": "xGetRequiredService"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
@@ -483,6 +488,43 @@
     "body": "${1|GuidGenerator,_guidGenerator,guidGenerator|}.Create()$0",
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
+  },
+  "iAppServiceCreateAsyncDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
+      "\t$0"
+    ],
+    "description": "Inserts a CreateAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceCreateAsyncDefinition"
+  },
+  "iAppServiceDeleteAsyncDefinition": {
+    "body": [
+      "\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});",
+      "\t$0"
+    ],
+    "description": "Inserts a DeleteAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceDeleteAsyncDefinition"
+  },
+  "iAppServiceGetAsyncDefinition": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|int,Guid,string|}$5 ${6:id});",
+      "\t$0"
+    ],
+    "description": "Inserts a GetAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceGetAsyncDefinition"
+  },
+  "iAppServiceGetListAsyncDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
+      "\t$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an IAppService interface",
+    "prefix": "xIAppServiceGetListAsyncDefinition"
+  },
+  "iAppServiceParam": {
+    "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
+    "description": "Inserts a IAppService parameter",
+    "prefix": "xIAppServiceParam"
   },
   "iAppServiceStubCrudMethods": {
     "body": [
@@ -503,11 +545,6 @@
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppServiceStubCrudMethods"
   },
-  "iAppServiceDeleteAsyncDefinition": {
-    "body": ["\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});", "\t$0"],
-    "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceDeleteAsyncDefinition"
-  },
   "iAppServiceUpdateAsyncDefinition": {
     "body": [
       "\tTask$6 UpdateAsync(${3|int,Guid,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
@@ -516,49 +553,10 @@
     "description": "Inserts a UpdateAsync definition for an IAppService interface",
     "prefix": "xIAppServiceUpdateAsyncDefinition"
   },
-  "iAppServiceGetListAsyncDefinition": {
-    "body": [
-      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
-      "\t$0"
-    ],
-    "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetListAsyncDefinition"
-  },
-  "iAppServiceGetAsyncDefinition": {
-    "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|int,Guid,string|}$5 ${6:id});",
-      "\t$0"
-    ],
-    "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetAsyncDefinition"
-  },
-  "iAppServiceCreateAsyncDefinition": {
-    "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
-      "\t$0"
-    ],
-    "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceCreateAsyncDefinition"
-  },
-  "iCrudAppServiceCreateUpdateDto": {
-    "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Inserts a complete ICrudAppService - CreateUpdateDto",
-    "prefix": "xICrudAppServiceCreateUpdateDto"
-  },
-  "exposeServicesAttribute": {
-    "body": ["[ExposeServices$1(typeof(${2:TypeName}))]"],
-    "description": "Inserts ExposeServices attribute",
-    "prefix": "xExposeServicesAttribute"
-  },
-  "dependencyAttribute": {
-    "body": ["[Dependency$1(ReplaceServices = ${2|true,false|})]"],
-    "description": "Inserts Dependency attribute",
-    "prefix": "xDependencyAttribute"
+  "iBlobContainerCtorParam": {
+    "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
+    "description": "Inserts a IBlobContainer parameter in constructor",
+    "prefix": "xIBlobContainerCtorParam"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -569,6 +567,16 @@
     ],
     "description": "Inserts a complete ICrudAppService CreateDto - UpdateDto",
     "prefix": "xICrudAppServiceCreateDtoAndUpdateDto"
+  },
+  "iCrudAppServiceCreateUpdateDto": {
+    "body": [
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts a complete ICrudAppService - CreateUpdateDto",
+    "prefix": "xICrudAppServiceCreateUpdateDto"
   },
   "iCrudMethodsAppService": {
     "body": [
@@ -585,6 +593,11 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
+  "iDataFilterISoftDeleteParam": {
+    "body": "IDataFilter<ISoftDelete> softDeleteFilter",
+    "description": "Inserts a IDataFilterISoftDelete parameter",
+    "prefix": "xIDataFilterISoftDeleteParam"
+  },
   "iGuidGeneratorParam": {
     "body": "IGuidGenerator$1 guidGenerator$0",
     "description": "Inserts a IGuidGenerator parameter",
@@ -595,35 +608,25 @@
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepoDefaultCtorParam": {
-    "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
-    "description": "Inserts a IRepository parameter",
-    "prefix": "xIRepoDefaultCtorParam"
-  },
   "iRepoCustomCtorParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter in constructor",
     "prefix": "xIRepoCustomCtorParam"
   },
-  "iBlobContainerCtorParam": {
-    "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
-    "description": "Inserts a IBlobContainer parameter in constructor",
-    "prefix": "xIBlobContainerCtorParam"
+  "iRepoDefaultCtorParam": {
+    "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
+    "description": "Inserts a IRepository parameter",
+    "prefix": "xIRepoDefaultCtorParam"
   },
-  "managerCustomCtorParam": {
-    "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
-    "description": "Inserts a custom Manager parameter in constructor",
-    "prefix": "xManagerCustomCtorParam"
+  "iRepoFindByNameAsync": {
+    "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
+    "description": "Adds a FindByNameAsync method to an IRepository interface",
+    "prefix": "xIRepoFindByNameAsync"
   },
-  "iSpecificationParam": {
-    "body": "ISpecification$1<${2:Type}> spec$0",
-    "description": "Inserts a ISpecification parameter",
-    "prefix": "xISpecificationParam"
-  },
-  "iDataFilterISoftDeleteParam": {
-    "body": "IDataFilter<ISoftDelete> softDeleteFilter",
-    "description": "Inserts a IDataFilterISoftDelete parameter",
-    "prefix": "xIDataFilterISoftDeleteParam"
+  "iRepoGetListAsync": {
+    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
+    "description": "Adds a GetListAsync method to an IRepository interface",
+    "prefix": "xIRepoGetListAsync"
   },
   "iSoftDeleteDisable": {
     "body": [
@@ -636,15 +639,28 @@
     "description": "Inserts using (_softDeleteFilter.Disable()){} statement",
     "prefix": "xISoftDeleteDisable"
   },
-  "iAppServiceParam": {
-    "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
-    "description": "Inserts a IAppService parameter",
-    "prefix": "xIAppServiceParam"
+  "iSpecificationParam": {
+    "body": "ISpecification$1<${2:Type}> spec$0",
+    "description": "Inserts a ISpecification parameter",
+    "prefix": "xISpecificationParam"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
+  },
+  "ifInputSortingIsNullOrWhiteSpace": {
+    "body": [
+      " if (input.Sorting.IsNullOrWhiteSpace())",
+      "{",
+      "\tinput.Sorting = nameof(${1:Type}.${2:Property});",
+      "}$0"
+    ],
+    "description": "Inserts if input.Sorting.IsNullOrWhiteSpace statement",
+    "prefix": "xIfInputSortingIsNullOrWhiteSpace"
   },
   "ifIsGrantedAsyncPermission": {
     "body": [
@@ -659,33 +675,41 @@
     "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
     "prefix": "xIfIsGrantedAsyncPermission"
   },
-  "ifInputSortingIsNullOrWhiteSpace": {
-    "body": [
-      " if (input.Sorting.IsNullOrWhiteSpace())",
-      "{",
-      "\tinput.Sorting = nameof(${1:Type}.${2:Property});",
-      "}$0"
-    ],
-    "description": "Inserts if input.Sorting.IsNullOrWhiteSpace statement",
-    "prefix": "xIfInputSortingIsNullOrWhiteSpace"
-  },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -700,7 +724,13 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -749,13 +779,10 @@
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
-  "inheritsBasicAggregateRoot": {
-    "body": " BasicAggregateRoot<${1|int,Guid,string|}>$0",
-    "description": "Inherits BasicAggregateRoot class",
-    "prefix": "xInhBasicAggregateRoot"
-  },
   "inheritsApplicationService": {
-    "body": [" ApplicationService$0"],
+    "body": [
+      " ApplicationService$0"
+    ],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
@@ -778,6 +805,11 @@
     "body": " AuditedEntityDto<${1|int,Guid,string|}>$0",
     "description": "Inherits AuditedEntityDto class",
     "prefix": "xInhAuditedEntityDto"
+  },
+  "inheritsBasicAggregateRoot": {
+    "body": " BasicAggregateRoot<${1|int,Guid,string|}>$0",
+    "description": "Inherits BasicAggregateRoot class",
+    "prefix": "xInhBasicAggregateRoot"
   },
   "inheritsCreationAuditedAggregateRoot": {
     "body": " CreationAuditedAggregateRoot$1<${2|int,Guid,string|}>$0",
@@ -835,7 +867,9 @@
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
   "inheritsProjectNameAppService": {
-    "body": [" ${1:${WORKSPACE_NAME}}AppService$0"],
+    "body": [
+      " ${1:${WORKSPACE_NAME}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhProjectNameAppService"
   },
@@ -861,7 +895,9 @@
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
     "description": "Inject IMapper property",
     "prefix": "xInjectIMapper"
   },
@@ -883,6 +919,11 @@
     "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:Name}Manager$2.CreateAsync($3);$0",
     "description": "Inserts var x = await _manager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
+  },
+  "managerCustomCtorParam": {
+    "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
+    "description": "Inserts a custom Manager parameter in constructor",
+    "prefix": "xManagerCustomCtorParam"
   },
   "methodAsync": {
     "body": [
@@ -931,13 +972,6 @@
     "description": "Inserts NavigationManager.NavigateTo page",
     "prefix": "xNavigateTo"
   },
-  "navigateToId": {
-    "body": [
-      "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
-    ],
-    "description": "Inserts NavigationManager.NavigateTo page\\Id",
-    "prefix": "xNavigateToId"
-  },
   "navigateToHomePage": {
     "body": [
       "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo(\"/\");$0"
@@ -945,15 +979,68 @@
     "description": "Inserts NavigationManager.NavigateTo(\"/\") ",
     "prefix": "xNavigateToHomePage"
   },
+  "navigateToId": {
+    "body": [
+      "${1|NavigationManager,Navigation,Nav,_navigationManager,_Navigation,_nav|}.NavigateTo($\"${2:routeUrl}/{${3:id}}\", ${4|false,true|});$0"
+    ],
+    "description": "Inserts NavigationManager.NavigateTo page\\Id",
+    "prefix": "xNavigateToId"
+  },
   "navigationManager": {
     "body": "NavigationManager$1 navigationManager$0",
     "description": "Inserts a Navigation parameter in  a constructor",
     "prefix": "xNavigationManager"
   },
+  "newObjectConstructor": {
+    "body": [
+      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3($4)$0;"
+    ],
+    "description": "Instantiates a new object with constructor",
+    "prefix": "xNewObjectConstructor"
+  },
+  "newObjectInitializer": {
+    "body": [
+      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3",
+      "{",
+      "\t\t$4",
+      "}$0;"
+    ],
+    "description": "Instantiates a new Object with initializer",
+    "prefix": "xNewObjectInitializer"
+  },
+  "notEmptyGuidAttribute": {
+    "body": [
+      "[NotEmptyGuid$1] $0"
+    ],
+    "description": "Inserts NotEmptyGuidAttribute",
+    "prefix": "xNotEmptyGuidAttribute"
+  },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
+  },
+  "notifyError": {
+    "body": "await Notify.Error(\"${1:Message}\");",
+    "description": "Inserts await Notify.Error(Message) statement",
+    "prefix": "xNotifyError"
+  },
+  "notifyInfo": {
+    "body": "await Notify.Info(\"${1:Message}\");",
+    "description": "Inserts await Notify.Info(Message) statement",
+    "prefix": "xNotifyInfo"
+  },
+  "notifySuccess": {
+    "body": "await Notify.Success(\"${1:Message}\");",
+    "description": "Inserts await Notify.Success(Message) statement",
+    "prefix": "xNotifySuccess"
+  },
+  "notifyWarn": {
+    "body": "await Notify.Warn(\"${1:Message}\");",
+    "description": "Inserts await Notify.Warn(Message) statement",
+    "prefix": "xNotifyWarn"
   },
   "objectMapperMap": {
     "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
@@ -981,7 +1068,12 @@
     "prefix": "xOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnInitialized method stub",
     "prefix": "xOnInitialized"
   },
@@ -997,7 +1089,12 @@
     "prefix": "xOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnParameterSet method stub",
     "prefix": "xOnParametersSet"
   },
@@ -1010,6 +1107,20 @@
     ],
     "description": "OnParameterSetAsync method stub",
     "prefix": "xOnParametersSetAsync"
+  },
+  "parameter": {
+    "body": [
+      "[Parameter$1] public string ${2:Name} { get; set; }$0"
+    ],
+    "description": "Inserts property with Parameter attribute",
+    "prefix": "xPara"
+  },
+  "parameterId": {
+    "body": [
+      "[Parameter$1] public string Id { get; set; }$0"
+    ],
+    "description": "Inserts Id property with Parameter attribute",
+    "prefix": "xParaId"
   },
   "permissionClass": {
     "body": [
@@ -1044,27 +1155,12 @@
     "description": "Inserts _repository.DeleteAsync statement",
     "prefix": "xRepoDeleteAsync"
   },
-  "repoHardDeleteAsync": {
-    "body": [
-      "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
-    ],
-    "description": "Inserts _repository.HardDeleteAsync statement",
-    "prefix": "xRepoHardDeleteAsync"
-  },
   "repoDeleteManyAsync": {
     "body": [
       "await _${1:name}Repository.DeleteManyAsync$4(${2:ids}, autoSave:${3|false,true|});$0"
     ],
     "description": "Inserts _repository.DeleteManyAsync statement",
     "prefix": "xRepoDeleteManyAsync"
-  },
-  "repoGetAsync": {
-    "body": [
-      "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
-      "$0"
-    ],
-    "description": "Inserts var varName = _repository.GetAsync statement",
-    "prefix": "xRepoGetAsync"
   },
   "repoFindAsync": {
     "body": [
@@ -1074,22 +1170,13 @@
     "description": "Inserts var varName = _repository.FindAsync statement",
     "prefix": "xRepoFindAsync"
   },
-  "newObjectConstructor": {
+  "repoGetAsync": {
     "body": [
-      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3($4)$0;"
+      "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
+      "$0"
     ],
-    "description": "Instantiates a new object with constructor",
-    "prefix": "xNewObjectConstructor"
-  },
-  "newObjectInitializer": {
-    "body": [
-      "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = new ${1:Type}$3",
-      "{",
-      "\t\t$4",
-      "}$0;"
-    ],
-    "description": "Instantiates a new Object with initializer",
-    "prefix": "xNewObjectInitializer"
+    "description": "Inserts var varName = _repository.GetAsync statement",
+    "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
     "body": [
@@ -1114,6 +1201,13 @@
     ],
     "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
+  },
+  "repoHardDeleteAsync": {
+    "body": [
+      "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
+    ],
+    "description": "Inserts _repository.HardDeleteAsync statement",
+    "prefix": "xRepoHardDeleteAsync"
   },
   "repoInsertAsync": {
     "body": [
@@ -1144,14 +1238,11 @@
     "prefix": "xRepoUpdateManyAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
-  },
-  "notEmptyGuidAttribute": {
-    "body": ["[NotEmptyGuid$1] $0"],
-    "description": "Inserts NotEmptyGuidAttribute",
-    "prefix": "xNotEmptyGuidAttribute"
   },
   "returnDbSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$1(x => x$2 == $3)$0;",
@@ -1166,25 +1257,20 @@
     "description": "Inserts return new ListResultDto statement",
     "prefix": "xReturnListResultDto"
   },
+  "returnObjectMapperListTypeToListTypeDto": {
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<List<${2:Type}>, List<${3:$2}Dto>>(${4:input});$0",
+    "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
+    "prefix": "xReturnObjectMapperListTypeToListTypeDto"
+  },
   "returnObjectMapperMap": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "return ObjectMapper.Map statement",
     "prefix": "xReturnObjectMapperMap"
   },
-  "todo": {
-    "body": "// TODO $0",
-    "description": "Inserts TODO statement",
-    "prefix": "xTodo"
-  },
   "returnObjectMapperToDto": {
-    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${2/(.*)/${1:/downcase}/}$3);$0",
+    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${3:${2/(.*)/${1:/downcase}/}});$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
     "prefix": "xReturnObjectMapperToDto"
-  },
-  "returnObjectMapperListTypeToListTypeDto": {
-    "body": "return ${1|ObjectMapper,_objectMapper|}.Map<List<${2:Type}>, List<${3:$2}Dto>>(${4:input});$0",
-    "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
-    "prefix": "xReturnObjectMapperListTypeToListTypeDto"
   },
   "returnPagedResultDto": {
     "body": [
@@ -1201,34 +1287,51 @@
     "prefix": "xReturnPagedResultDtoObjectMapper"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
   "throwBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
+    "body": [
+      "throw new BusinessException$1(\"${2:TranslationKey}\");"
+    ],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
   },
-  "throwNotImplementedException": {
-    "body": ["throw new System.NotImplementedException();"],
-    "description": "Inserts throw new NotImplementedException statement",
-    "prefix": "xThrowNotImplementedException"
-  },
   "throwCustomException": {
-    "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
+    "body": [
+      "throw new ${1:Name}Exception(\"${2:TranslationKey}\");"
+    ],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowCustomException"
   },
   "throwEntityNotFoundException": {
-    "body": ["throw new EntityNotFoundException$1($2);$0"],
+    "body": [
+      "throw new EntityNotFoundException$1($2);$0"
+    ],
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowEntityNotFoundException"
   },
+  "throwNotImplementedException": {
+    "body": [
+      "throw new System.NotImplementedException();"
+    ],
+    "description": "Inserts throw new NotImplementedException statement",
+    "prefix": "xThrowNotImplementedException"
+  },
   "throwUserFriendlyException": {
-    "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
+    "body": [
+      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
+    ],
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowUserFriendlyException"
+  },
+  "todo": {
+    "body": "// TODO $0",
+    "description": "Inserts TODO statement",
+    "prefix": "xTodo"
   },
   "unAssertThrowsAsyncAbpValidationException": {
     "body": [
@@ -1357,20 +1460,20 @@
     "description": "Inserts result.Items.ShouldNotContain statement",
     "prefix": "xUnResultItemsShouldNotContain"
   },
-  "unResultTotalCountShouldBeGreaterThanOrEqual": {
-    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
-    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
-    "prefix": "xUnResultTotalCountShouldBeGreaterOrEqual"
+  "unResultShouldBe": {
+    "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
+    "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
+    "prefix": "xUnResultShouldBe"
   },
   "unResultTotalCountShouldBeGreaterThan": {
     "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
   },
-  "unResultShouldBe": {
-    "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
-    "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
-    "prefix": "xUnResultShouldBe"
+  "unResultTotalCountShouldBeGreaterThanOrEqual": {
+    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
+    "prefix": "xUnResultTotalCountShouldBeGreaterOrEqual"
   },
   "varIsObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
@@ -1381,15 +1484,5 @@
     "body": "public const string GroupName = \"${1:GroupName}\";$0",
     "description": "a GroupName constant",
     "prefix": "xConstantGroupNamePermission"
-  },
-  "parameter": {
-    "body": ["[Parameter$1] public string ${2:Name} { get; set; }$0"],
-    "description": "Inserts property with Parameter attribute",
-    "prefix": "xPara"
-  },
-  "parameterId": {
-    "body": ["[Parameter$1] public string Id { get; set; }$0"],
-    "description": "Inserts Id property with Parameter attribute",
-    "prefix": "xParaId"
   }
 }
