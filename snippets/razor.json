@@ -298,6 +298,7 @@
       "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1s.Default)] *@",
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.BlazoriseUI",
+      "@using Volo.Abp.AspNetCore.Components.Web",
       "@* below namespace where I$1AppService exists *@",
       "@using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}",
       "@* @using ${WORKSPACE_NAME}.Application.Contracts.$2.Dtos *@",
