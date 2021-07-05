@@ -1211,7 +1211,7 @@
   },
   "repoInsertAsync": {
     "body": [
-      "var inserted${1:name} = await _${2:${1/(.*)/${1:/downcase}/}}Repository.InsertAsync(${3:$1}$4, autoSave:${5|false,true|});$0"
+      "var inserted${1:name} = await _${2:${1/(.*)/${1:/downcase}/}}Repository.InsertAsync(${3:${1/(.*)/${1:/downcase}/}}$4, autoSave:${5|false,true|});$0"
     ],
     "description": "Inserts var inserted = await _repository.InsertAsync() statement",
     "prefix": "xRepoInsertAsync"
