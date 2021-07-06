@@ -293,7 +293,7 @@
   },
   "listAbpCrudPageBase": {
     "body": [
-      "@* \"New$1\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
+      "@* \"New${1/^([a-z])/${1:/upcase}/}\": \"New ${4:${1/(.*)/${1:/downcase}/}}\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
       "@* @attribute [Authorize(${WORKSPACE_NAME}Permissions.$1s.Default)] *@",
       "@using Volo.Abp.Application.Dtos",
