@@ -97,7 +97,7 @@
   },
   "applicationMenuItemUrl": {
     "body": [
-      "var ${1/^([A-Z])/${1:/downcase}/}Menu = new ApplicationMenuItem(\"${1:MenuName}sMenu\",l[\"Menu:$1\"], url: \"/${2:${1/(.*)/${1:/downcase}/}}\");",
+      "var ${1/^([A-Z])/${1:/downcase}/}Menu = new ApplicationMenuItem(\"${1:MenuName}Menu\",l[\"Menu:$1\"], url: \"/${2:${1/(.*)/${1:/downcase}/}}\");",
       "// \"Menu:$1\": \"$1\","
     ],
     "description": "New ApplicationMenuItem variable with url",
