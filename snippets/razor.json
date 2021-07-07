@@ -163,7 +163,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <MemoEdit Rows=\"${3:5}\" @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <MemoEdit Rows=\"${3:5}\" @bind-Text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
       "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
     ],
@@ -205,7 +205,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <TextEdit @bind-text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "  <TextEdit @bind-Text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
       "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"$2\" *@"
     ],
