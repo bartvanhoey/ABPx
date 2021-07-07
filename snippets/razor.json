@@ -21,7 +21,7 @@
       "<Modal @ref=\"@CreateModal\">",
       "    <ModalBackdrop />",
       "    <ModalContent IsCentered=\"true\" Size=\"ModalSize.${2|None,Default,Small,Large,ExtraLarge|}\">",
-      "      </Form>",
+      "      <Form>",
       "        <ModalHeader>",
       "            <ModalTitle>@L[\"New${1:Type}\"]</ModalTitle>",
       "            <CloseButton Clicked=\"CloseCreateModalAsync\" />",
@@ -39,6 +39,9 @@
       "                       </Feedback>",
       "                     </TextEdit>",
       "                 </Field>",
+      "                 ",
+      "                 $0",
+      "                 ",
       "               </Validation>",
       "             </Column>",
       "           </Row>",
@@ -50,7 +53,7 @@
       "        </ModalFooter>",
       "      </Form>",
       "    </ModalContent>",
-      "</Modal>$0"
+      "</Modal>"
     ],
     "description": "Create modal dialog",
     "prefix": "xCreateModalDialog"
