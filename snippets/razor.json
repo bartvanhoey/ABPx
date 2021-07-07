@@ -32,7 +32,7 @@
       "               <Validation MessageLocalizer=\"@LH.Localize\">",
       "                 <Field>",
       "                   <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}Name\"]</FieldLabel>",
-      "                     <TextEdit @bind-text=\"@NewEntity.${3:PropertyName}\" >",
+      "                     <TextEdit @bind-Text=\"@NewEntity.${3:PropertyName}\" >",
       "                       <Feedback>",
       "                         <ValidationError/>",
       "                       </Feedback>",
