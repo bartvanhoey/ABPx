@@ -21,6 +21,7 @@
       "<Modal @ref=\"@CreateModal\">",
       "    <ModalBackdrop />",
       "    <ModalContent IsCentered=\"true\" Size=\"ModalSize.${2|None,Default,Small,Large,ExtraLarge|}\">",
+      "      </Form>",
       "        <ModalHeader>",
       "            <ModalTitle>@L[\"New${1:Type}\"]</ModalTitle>",
       "            <CloseButton Clicked=\"CloseCreateModalAsync\" />",
@@ -47,6 +48,7 @@
       "            <Button Color=\"Color.Secondary\" Clicked=\"CloseCreateModalAsync\">@L[\"Cancel\"]</Button>",
       "            <Button Color=\"Color.Primary\" Type=\"@ButtonType.Submit\" PreventDefaultOnSubmit=\"true\" Clicked=\"CreateEntityAsync\">@L[\"Save\"]</Button>",
       "        </ModalFooter>",
+      "      </Form>",
       "    </ModalContent>",
       "</Modal>$0"
     ],
