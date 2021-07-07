@@ -13,10 +13,10 @@
     "description": "Inserts GetQueryableExtensionsClass stub",
     "prefix": "xGetQueryableExtensionsClassStub"
   },
-  "addPermissionGroupToContext": {
-    "body": "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.GroupName);",
+  "addGroupPermissionToContext": {
+    "body": "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName});",
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
-    "prefix": "xAddPermissionGroupToContext"
+    "prefix": "xAddGroupPermissionsToContext"
   },
   "addPermissionToGroup": {
     "body": [
