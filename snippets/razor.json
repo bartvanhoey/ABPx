@@ -651,7 +651,30 @@
       "  </ModalContent>",
       "</Modal>$0"
     ],
-    "description": "Edit modal dialog",
+    "description": "Inserts an Edit modal dialog",
     "prefix": "xEditModalDialog"
+  },
+  "dataGridEntityActionsColumn" : {
+    "body" : [
+    "<DataGridEntityActionsColumn TItem=\"${1:TypeName}Dto\" @ref=\"@EntityActionsColumn\">",
+    "  <DisplayTemplate>",
+    "    <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
+    "      $0",
+    "    </EntityActions>",
+    "  </DisplayTemplate>",
+    "</DataGridEntityActionsColumn>"
+  ],
+    "description": "Inserts a DataGridEntityActionsColumn element",
+    "prefix": "xDataGridEntityActionsColumn"
+  },
+  "editEntityAction" : {
+    "body" : "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Edit\"]\" Clicked=\"() => OpenEditModalAsync(context)\" />",
+    "description": "Inserts a Edit EntityAction element",
+    "prefix": "xEditEntityAction"
+  },
+  "deleteEntityAction" : {
+    "body" : "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
+    "description": "Inserts a Delete EntityAction element",
+    "prefix": "xDeleteEntityAction"
   }
 }
