@@ -1330,7 +1330,7 @@
   "unMethodTaskStub": {
     "body": [
       "[Fact$1]",
-      "public async Task$2 ${3:Should_Name_Of_Your_Test}()",
+      "public async Task$2 ${3:Should}_${4:Name_Of_Your_Test}()",
       "{",
       "\t $0",
       "",
@@ -1343,7 +1343,7 @@
   "unMethodVoidStub": {
     "body": [
       "[Fact$1]",
-      "public void ${3:Should_Name_Of_Your_Test}()",
+      "public void ${2:Should}_${3:Name_Of_Your_Test}()",
       "{",
       "\t$0",
       "",
