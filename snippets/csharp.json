@@ -1389,7 +1389,7 @@
     "prefix": "xVarIsObjectMapperMap"
   },
   "xGroupNamePermissionConst": {
-    "body": "public const string ${2:$1}GroupName = \"${1:GroupName}\";$0",
+    "body": "public const string ${2:$1}GroupName = \"${1:Name}\";$0",
     "description": "a GroupName constant",
     "prefix": "xGroupNamePermissionConst"
   }
