@@ -29,9 +29,9 @@
       "",
       "//\"Permission:$3\": \"$3\",",
       "//\"Permission:$4\": \"$4 Management\",",
-      "//\"Permission:$4:Create\": \"Creating ${5:$4}\",",
-      "//\"Permission:$4:Update\": \"Editing $5\",",
-      "//\"Permission:$4:Delete\": \"Deleting $5\"$0"
+      "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
+      "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
+      "//\"Permission:$4:Delete\": \"Deleting ${5:${4/^([A-Z])/${1:/downcase}/}}\"$0"
     ],
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
     "prefix": "xAddPermissionToGroup"
@@ -638,9 +638,8 @@
       "// \"Menu:$3\": \"$3\", ",
       "if (await context.IsGrantedAsync(${WORKSPACE_NAME}Permissions$2.${3:ClassName}.Default))",
       "{",
-      "\tvar ${4:${3/(.*)/${1:/downcase}/}}Menu = new ApplicationMenuItem(\"$3Menu\", l[\"Menu:$3\"], url: \"/${5:${3/(.*)/${1:/downcase}/}}\");",
-      "\t${6:menuName}.AddItem($4Menu);",
-      "}$0"
+      "\t$0",
+      "}"
     ],
     "description": "Inserts if (await IsGrantedAsync(permission)){ }statement",
     "prefix": "xIfIsGrantedAsyncPermission"
