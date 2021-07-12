@@ -1392,5 +1392,40 @@
     "body": "public const string ${2:$1}GroupName = \"${1:Name}\";$0",
     "description": "a GroupName constant",
     "prefix": "xGroupNamePermissionConst"
+  },
+  "xGetPolicy": {
+    "body": [
+      "GetPolicyName = ${WORKSPACE_NAME}Permissions.${1:ClassName}s.Default;"
+    ],
+    "description": "Inserts GetPolicyName statement",
+    "prefix": "xGetPolicyName"
+  },
+  "xGetListPolicy": {
+    "body": [
+      "GetListPolicyName = ${WORKSPACE_NAME}Permissions.${1:ClassName}s.Default;"
+    ],
+    "description": "Inserts GetListPolicyName statement",
+    "prefix": "xGetListPolicyName"
+  },
+  "xCreatePolicy": {
+    "body": [
+      "CreatePolicyName = ${WORKSPACE_NAME}Permissions.${1:ClassName}s.Create;"
+    ],
+    "description": "Inserts CreatePolicyName statement",
+    "prefix": "xCreatePolicyName"
+  },
+  "xUpdatePolicy": {
+    "body": [
+      "UpdatePolicyName = ${WORKSPACE_NAME}Permissions.${1:ClassName}s.Update;"
+    ],
+    "description": "Inserts UpdatePolicyName statement",
+    "prefix": "xUpdatePolicyName"
+  },
+  "xDeletePolicy": {
+    "body": [
+      "DeletePolicyName = ${WORKSPACE_NAME}Permissions.${1:ClassName}s.Delete;"
+    ],
+    "description": "Inserts DeletePolicyName statement",
+    "prefix": "xDeletePolicyName"
   }
 }
