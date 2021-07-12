@@ -15,7 +15,7 @@
   },
   "addGroupPermissionToContext": {
     "body": [
-      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName}, L(\"Permission:${3:${1/^([a-z])/${1:/upcase}/}\"));"
+      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}\"));"
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddGroupPermissionsToContext"
