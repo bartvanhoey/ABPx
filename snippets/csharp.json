@@ -22,7 +22,7 @@
   },
   "addPermissionToGroup": {
     "body": [
-      "var ${1:name}Permission = ${2:name}Group.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
+      "var ${1:name}Permission = ${2:groupName}.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
       "$1Permission.AddChild($3Permissions.$4.Create, L(\"Permission:$4:Create\"));",
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
