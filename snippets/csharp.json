@@ -36,7 +36,7 @@
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
     "prefix": "xAddPermissionToGroup"
   },
-  "addPolicyPermissions": {
+  "addPermissionPoliciesAppService": {
     "body": [
       "\tGetPolicyName = ${WORKSPACE_NAME}Permissions$1.${2:ClassName}.Default;",
       "\tGetListPolicyName = ${WORKSPACE_NAME}Permissions.$2.Default;",
@@ -44,8 +44,8 @@
       "\tUpdatePolicyName = ${WORKSPACE_NAME}Permissions.$2.Update;",
       "\tDeletePolicyName = ${WORKSPACE_NAME}Permissions.$2.Delete;"
     ],
-    "description": "Adds policy permissions",
-    "prefix": "xAddPolicyPermissions"
+    "description": "Adds policy permissions to AppService",
+    "prefix": "xAddPermissionsPoliciesAppService"
   },
   "appServiceClassStub": {
     "body": [
