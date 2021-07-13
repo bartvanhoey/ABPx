@@ -591,15 +591,15 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
-  "iRepoFindByNameAsync": {
+  "findByNameAsyncMethodStub": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method to an IRepository interface",
-    "prefix": "xIRepoFindByNameAsync"
+    "prefix": "xFindByNameAsyncMethodStub"
   },
-  "iRepoGetListAsync": {
+  "getListAsyncMethodStub": {
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method to an IRepository interface",
-    "prefix": "xIRepoGetListAsync"
+    "prefix": "xGetListAsyncMethodStub"
   },
   "iSoftDeleteDisable": {
     "body": [
