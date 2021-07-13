@@ -1210,30 +1210,30 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
-  "throwBusinessException": {
+  "throwNewBusinessException": {
     "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
     "description": "Inserts throw new BusinessException statement",
-    "prefix": "xThrowBusinessException"
+    "prefix": "xThrowNewBusinessException"
   },
-  "throwCustomException": {
+  "throwNewCustomException": {
     "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
     "description": "Inserts throw new CustomException statement",
-    "prefix": "xThrowCustomException"
+    "prefix": "xThrowNewCustomException"
   },
-  "throwEntityNotFoundException": {
+  "throwNewEntityNotFoundException": {
     "body": ["throw new EntityNotFoundException$1($2);$0"],
     "description": "Inserts throw new EntityNotFoundException statement",
-    "prefix": "xThrowEntityNotFoundException"
+    "prefix": "xThrowNewEntityNotFoundException"
   },
-  "throwNotImplementedException": {
+  "throwNewNotImplementedException": {
     "body": ["throw new System.NotImplementedException();"],
     "description": "Inserts throw new NotImplementedException statement",
-    "prefix": "xThrowNotImplementedException"
+    "prefix": "xThrowNewNotImplementedException"
   },
-  "throwUserFriendlyException": {
+  "throwNewUserFriendlyException": {
     "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new UserFriendlyException statement",
-    "prefix": "xThrowUserFriendlyException"
+    "prefix": "xThrowNewUserFriendlyException"
   },
   "todo": {
     "body": "// TODO $0",
