@@ -1235,6 +1235,11 @@
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowNewUserFriendlyException"
   },
+  "withData": {
+    "body": ["\t\tWithData(\"${1:parameterName}\", ${2:$1})"],
+    "description": "Inserts a WithData statement",
+    "prefix": "xWithData"
+  },
   "todo": {
     "body": "// TODO $0",
     "description": "Inserts TODO statement",
