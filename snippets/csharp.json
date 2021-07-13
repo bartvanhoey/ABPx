@@ -581,15 +581,15 @@
     "description": "Inserts as IMongoCollection for a class statement in DbContext",
     "prefix": "xIMongoCollection"
   },
-  "iRepoCustomCtorParam": {
+  "iRepoCtorCustomParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
-    "description": "Inserts a custom ClassRepository parameter in constructor",
-    "prefix": "xIRepoCustomCtorParam"
+    "description": "Inserts a custom ClassRepository parameter in the constructor",
+    "prefix": "xIRepoCtorCustomParam"
   },
-  "iRepoDefaultCtorParam": {
+  "iRepoCtorDefaultParam": {
     "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
-    "description": "Inserts a IRepository parameter",
-    "prefix": "xIRepoDefaultCtorParam"
+    "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
+    "prefix": "xIRepoCtorDefaultParam"
   },
   "iRepoFindByNameAsync": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
