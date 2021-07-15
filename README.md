@@ -263,7 +263,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xSubmitButton                  | Inserts a SubmitButton                                              
      xEditModalDialog               | Inserts an Edit modal dialog                                        
      xDataGridEntityActionsColumn   | Inserts a DataGridEntityActionsColumn element                       
-     xEditEntityAction              | Inserts a Edit EntityAction element                                 
+     xEditEntityAction              | Inserts an Edit EntityAction element                                
      xDeleteEntityAction            | Inserts a Delete EntityAction element                               
 
 
