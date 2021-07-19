@@ -1164,7 +1164,7 @@
     "prefix": "xRequiredAttribute"
   },
   "returnDbSetFirstOrDefaultAsync": {
-    "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$1(x => x$2 == $3)$0;",
+    "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$2(x => x$3 == $4)$0;",
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
   },
