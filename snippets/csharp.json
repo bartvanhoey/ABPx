@@ -503,7 +503,7 @@
     "body": [
       "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
       "{",
-      "\tTask$3<${2:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$7> GetAsync(${4|int,Guid,string|}$5 id);",
+      "\tTask$3<${2:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$7> GetAsync(${4|Guid,int,string|}$5 id);",
       "",
       "\tTask<PagedResultDto<$2Dto>$6> GetListAsync(Get$2ListDto$8 input);",
       "",
