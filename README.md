@@ -1,25 +1,22 @@
-# Code snippets for [ABP](https://abp.io/) `that start with an x`  
+# Code Snippets for [ABP](https://abp.io/) `that start with an x`  
 
-![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code snippets that start with an 'x' - in Action!")
+![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code Snippets that start with an 'x' - in Action!")
 
 
-Do you see room for improvement or do you have a snippet in mind you want to have included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
+Do you see room for improvement or do you have a snippet in mind you want to be included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
 ## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
 
      Prefix                                     | Description                                                                              
      ------------------------------------------ | ----------------------------------------------------------------------------------------- 
-     xAddPermissionGroupToContext               | Add group permission to context in PermissionDefinitionProvider.cs                       
+     xGetQueryableExtensionsClassStub           | Inserts GetQueryableExtensionsClass stub                                                 
+     xAddGroupPermissionsToContext              | Add group permission to context in PermissionDefinitionProvider.cs                       
      xAddPermissionToGroup                      | Adds permission to group in PermissionDefinitionProvider.cs                              
-     xAddPolicyPermissions                      | Adds policy permissions                                                                  
+     xAddPermissionsPoliciesAppService          | Adds policy permissions to AppService                                                    
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
      xAppServiceCreateAsync                     | Inserts var x = AppService.CreateAsync() statement                                       
-     xNotifyInfo                                | Inserts await Notify.Info(Message) statement                                             
-     xNotifyError                               | Inserts await Notify.Error(Message) statement                                            
-     xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
-     xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
-     xAppServiceGetAsync                        | Inserts var x = NameAppService.GetAsync() statement                                      
      xAppServiceDeleteAsync                     | Inserts await NameAppService.DeleteAsync() statement                                     
+     xAppServiceGetAsync                        | Inserts var x = NameAppService.GetAsync() statement                                      
      xAppServiceGetListAsync                    | Inserts var x = NameAppService.GetListAsync() statement                                  
      xApplicationMenuItemIcon                   | New ApplicationMenuItem variable with icon                                               
      xApplicationMenuItemUrl                    | New ApplicationMenuItem variable with url                                                
@@ -30,7 +27,6 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xAuthorizeAttributeMicrosoft               | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
      xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
-     xCustomBusinessExceptionClass              | Inserts a complete CustomException class that inherits from class BusinessException      
      xCanBeNullAttribute                        | CanBeNull attribute                                                                      
      xCanCreate                                 | Boolean canCreate variable and checks if Create is granted                               
      xCanCrudMethods                            | Checks if CRUD methods are granted                                                       
@@ -60,15 +56,15 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xCrudAppServiceCreateUpdateDto             | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCtor                                      | constructor stub                                                                         
      xCtorBusinessException                     | constructor stub in a class derived from BusinessException                               
+     xCustomBusinessExceptionClass              | Inserts a complete CustomException class that inherits from class BusinessException      
      xDataTypeAttribute                         | DataType attribute                                                                       
-     xGetDbSetAsync                             | Inserts var dbSet = await GetDbSetAsync();                                               
      xDbSet                                     | Inserts a DbSet for a class statement in DbContext                                       
+     xDependencyAttribute                       | Inserts Dependency attribute                                                             
      xEfCoreRepositoryClassStub                 | Inserts EfCoreRepositoryClass stub                                                       
-     xGetQueryableExtensionsClassStub           | Inserts GetQueryableExtensionsClass stub                                                 
      xEmailAddressAttribute                     | EmailAddress Attribute                                                                   
+     xExposeServicesAttribute                   | Inserts ExposeServices attribute                                                         
      xFilterProperty                            | Inserts property Filter                                                                  
-     xIRepoFindByNameAsync                      | Adds a FindByNameAsync method to an IRepository interface                                
-     xIRepoGetListAsync                         | Adds a GetListAsync method to an IRepository interface                                   
+     xGetDbSetAsync                             | Inserts var dbSet = await GetDbSetAsync();                                               
      xGetLookupAppService                       | Adds a GetLookupAsync method to an AppService class                                      
      xGetLookupIAppService                      | Adds a GetLookupAsync method to an IAppService interface                                 
      xGps                                       | Inserts { get, private set }                                                             
@@ -76,30 +72,29 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xGetRequiredService                        | Inserts GetRequiredService and matching field                                            
      xGs                                        | Inserts { get, set }                                                                     
      xGuidGeneratorCreate                       | Inserts GuidGenerator.Create() statement                                                 
-     xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
-     xIAppServiceDeleteAsyncDefinition          | Inserts a DeleteAsync definition for an IAppService interface                            
-     xIAppServiceUpdateAsyncDefinition          | Inserts a UpdateAsync definition for an IAppService interface                            
-     xIAppServiceGetListAsyncDefinition         | Inserts a GetListAsync definition for an IAppService interface                           
-     xIAppServiceGetAsyncDefinition             | Inserts a GetAsync definition for an IAppService interface                               
      xIAppServiceCreateAsyncDefinition          | Inserts a CreateAsync definition for an IAppService interface                            
-     xICrudAppServiceCreateUpdateDto            | Inserts a complete ICrudAppService - CreateUpdateDto                                     
-     xExposeServicesAttribute                   | Inserts ExposeServices attribute                                                         
-     xDependencyAttribute                       | Inserts Dependency attribute                                                             
+     xIAppServiceDeleteAsyncDefinition          | Inserts a DeleteAsync definition for an IAppService interface                            
+     xIAppServiceGetAsyncDefinition             | Inserts a GetAsync definition for an IAppService interface                               
+     xIAppServiceGetListAsyncDefinition         | Inserts a GetListAsync definition for an IAppService interface                           
+     xIAppServiceParam                          | Inserts a IAppService parameter                                                          
+     xIAppServiceStubCrudMethods                | Inserts a complete IAppService interface with CRUD methods for a given Type              
+     xIAppServiceUpdateAsyncDefinition          | Inserts a UpdateAsync definition for an IAppService interface                            
+     xIBlobContainerCtorParam                   | Inserts a IBlobContainer parameter in constructor                                        
      xICrudAppServiceCreateDtoAndUpdateDto      | Inserts a complete ICrudAppService CreateDto - UpdateDto                                 
+     xICrudAppServiceCreateUpdateDto            | Inserts a complete ICrudAppService - CreateUpdateDto                                     
      xCrudMethodsIAppService                    | Inserts the basic CRUD methods in an IAppService                                         
+     xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
      xIGuidGeneratorParam                       | Inserts a IGuidGenerator parameter                                                       
      xIMongoCollection                          | Inserts as IMongoCollection for a class statement in DbContext                           
-     xIRepoDefaultCtorParam                     | Inserts a IRepository parameter                                                          
-     xIRepoCustomCtorParam                      | Inserts a custom ClassRepository parameter                                               
-     xIBlobContainerCtorParam                   | Inserts a IBlobContainer parameter                                                       
-     xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
-     xISpecificationParam                       | Inserts a ISpecification parameter                                                       
-     xIDataFilterISoftDeleteParam               | Inserts a IDataFilterISoftDelete parameter                                               
+     xIRepoCtorCustomParam                      | Inserts a custom ClassRepository parameter in the constructor                            
+     xIRepoCtorDefaultParam                     | Inserts a default IRepository<Type,TypeId> parameter in the constructor                  
+     xFindByNameAsyncMethodStub                 | Adds a FindByNameAsync method to an IRepository interface                                
+     xGetListAsyncMethodStub                    | Adds a GetListAsync method to an IRepository interface                                   
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
-     xIAppServiceParam                          | Inserts a IAppService parameter                                                          
+     xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIfInline                                  | Inline if statement                                                                      
-     xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfInputSortingIsNullOrWhiteSpace          | Inserts if input.Sorting.IsNullOrWhiteSpace statement                                    
+     xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             
      xIfNotNull                                 | If not null statement                                                                    
      xIfNullInline                              | Inline if not null statement                                                             
@@ -115,12 +110,12 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInhBusinessException                      | Inherits BusinessException class                                                         
      xInhSpecification                          | Inherits Specification class                                                             
      xInhAggregateRoot                          | Inherits AggregateRoot class                                                             
-     xInhBasicAggregateRoot                     | Inherits BasicAggregateRoot class                                                        
      xInhApplicationService                     | Inherits ApplicationService class                                                        
      xInhApplicationTestBase                    | Inherits ApplicationTestBase class                                                       
      xInhAuditedAggregateRoot                   | Inherits AuditedAggregateRoot class                                                      
      xInhAuditedEntity                          | Inherits AuditedEntity class                                                             
      xInhAuditedEntityDto                       | Inherits AuditedEntityDto class                                                          
+     xInhBasicAggregateRoot                     | Inherits BasicAggregateRoot class                                                        
      xInhCreationAuditedAggregateRoot           | Inherits CreationAuditedAggregateRoot class                                              
      xInhCreationAuditedEntity                  | Inherits CreationAuditedEntity class                                                     
      xInhCreationAuditedEntityDto               | Inherits CreationAuditedEntityDto class                                                  
@@ -140,15 +135,23 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xInjectNavigationManager                   | Inject NavigationManager property                                                        
      xInjectService                             | Inject IMyService MyService                                                              
      xManagerCreateAsync                        | Inserts var x = await _manager.CreateAsync() statement                                   
+     xManagerCustomCtorParam                    | Inserts a custom Manager parameter in constructor                                        
      xMethodAsync                               | Inserts an async Task method stub                                                        
      xMethodAsyncReturn                         | Inserts an async task<ReturnType> method stub                                            
      xMethodReturn                              | Inserts a <ReturnType> method stub                                                       
      xMethodVoid                                | Inserts a void method stub                                                               
      xNavigateTo                                | Inserts NavigationManager.NavigateTo page                                                
-     xNavigateToId                              | Inserts NavigationManager.NavigateTo page\\Id                                            
      xNavigateToHomePage                        | Inserts NavigationManager.NavigateTo("/")                                                
+     xNavigateToId                              | Inserts NavigationManager.NavigateTo page\\Id                                            
      xNavigationManager                         | Inserts a Navigation parameter in  a constructor                                         
+     xNewObjectConstructor                      | Instantiates a new object with constructor                                               
+     xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
+     xNotEmptyGuidAttribute                     | Inserts NotEmptyGuidAttribute                                                            
      xNotNullAttribute                          | NotNull attribute                                                                        
+     xNotifyError                               | Inserts await Notify.Error(Message) statement                                            
+     xNotifyInfo                                | Inserts await Notify.Info(Message) statement                                             
+     xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
+     xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
      xObjectMapperMap                           | ObjectMapper.Map statement                                                               
      xOnAfterRender                             | OnAfterRender method stub                                                                
      xOnAfterRenderAsync                        | OnAfterRenderAsync method stub                                                           
@@ -156,39 +159,39 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xOnInitializedAsync                        | OnInitializedAsync method stub                                                           
      xOnParametersSet                           | OnParameterSet method stub                                                               
      xOnParametersSetAsync                      | OnParameterSetAsync method stub                                                          
+     xPara                                      | Inserts property with Parameter attribute                                                
+     xParaId                                    | Inserts Id property with Parameter attribute                                             
      xPermissionClass                           | Inserts a static class with Default/Create/Update/Delete constants                       
      xPropPrivateSetter                         | property with private setter                                                             
      xReadOnlyListLookupDto                     | Inserts an IReadOnlyList for a LookupDto object                                          
      xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
-     xRepoHardDeleteAsync                       | Inserts _repository.HardDeleteAsync statement                                            
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
-     xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
      xRepoFindAsync                             | Inserts var varName = _repository.FindAsync statement                                    
-     xNewObjectConstructor                      | Instantiates a new object with constructor                                               
-     xNewObjectInitializer                      | Instantiates a new Object with initializer                                               
+     xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
      xRepoGetListAsync                          | Inserts var items = await _repository.GetListAsync() statement                           
      xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync() statement                        
+     xRepoHardDeleteAsync                       | Inserts _repository.HardDeleteAsync statement                                            
      xRepoInsertAsync                           | Inserts var inserted = await _repository.InsertAsync() statement                         
      xRepoInsertManyAsync                       | Inserts _repository.InsertManyAsync statement                                            
      xRepoUpdateAsync                           | Inserts repository.UpdateAsync statement                                                 
      xRepoUpdateManyAsync                       | Inserts repository.UpdateManyAsync() statement                                           
      xRequiredAttribute                         | Inserts Required Attribute                                                               
-     xNotEmptyGuidAttribute                     | Inserts NotEmptyGuidAttribute                                                            
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
-     xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
-     xTodo                                      | Inserts TODO statement                                                                   
-     xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnObjectMapperListTypeToListTypeDto   | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                              
+     xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
+     xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xStringLengthAttribute                     | StringLength attribute                                                                   
-     xThrowBusinessException                    | Inserts throw new BusinessException statement                                            
-     xThrowNotImplementedException              | Inserts throw new NotImplementedException statement                                      
-     xThrowCustomException                      | Inserts throw new CustomException statement                                              
-     xThrowEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                      
-     xThrowUserFriendlyException                | Inserts throw new UserFriendlyException statement                                        
+     xThrowNewBusinessException                 | Inserts throw new BusinessException statement                                            
+     xThrowNewCustomException                   | Inserts throw new CustomException statement                                              
+     xThrowNewEntityNotFoundException           | Inserts throw new EntityNotFoundException statement                                      
+     xThrowNewNotImplementedException           | Inserts throw new NotImplementedException statement                                      
+     xThrowNewUserFriendlyException             | Inserts throw new UserFriendlyException statement                                        
+     xWithData                                  | Inserts a WithData statement                                                             
+     xTodo                                      | Inserts TODO statement                                                                   
      xUnAssertThrowsAsyncAbpValidationException | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                       
      xUnAssertThrowsAsyncBusinessException      | Inserts var exception = Assert.ThrowsAsync<BusinessException>                            
      xUnAssertThrowsAsyncCustomException        | Inserts Assert.ThrowsAsync<YourCustomException>                                          
@@ -202,15 +205,16 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xUnResultIdShouldNotBeGuidEmpty            | Inserts result.Id.ShouldNotBe(Guid.Empty)                                                
      xUnResultItemsShouldContain                | Inserts result.Items.ShouldContain statement                                             
      xUnResultItemsShouldNotContain             | Inserts result.Items.ShouldNotContain statement                                          
-     xUnResultTotalCountShouldBeGreaterOrEqual  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
-     xUnResultTotalCountShouldBeGreaterThan     | Inserts result.TotalCount.ShouldBeGreaterThan statement                                  
      xUnResultShouldBe                          | Inserts result.PropertyName.ShouldBe(Value) statement                                    
+     xUnResultTotalCountShouldBeGreaterThan     | Inserts result.TotalCount.ShouldBeGreaterThan statement                                  
+     xUnResultTotalCountShouldBeGreaterOrEqual  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
-     xConstantGroupNamePermission               | a GroupName constant                                                                     
-     xPara                                      | Inserts property with Parameter attribute                                                
-     xParaId                                    | Inserts Id property with Parameter attribute                                             
-
-## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
+     xGroupNamePermissionConst                  | a GroupName constant                                                                     
+     xGetPolicyName                             | Inserts GetPolicyName statement                                                          
+     xGetListPolicyName                         | Inserts GetListPolicyName statement                                                      
+     xCreatePolicyName                          | Inserts CreatePolicyName statement                                                       
+     xUpdatePolicyName                          | Inserts UpdatePolicyName statement                                                       
+     xDeletePolicyName                          | Inserts DeletePolicyName statement                                                       
 
      Prefix                            | Description                                                       
      --------------------------------- | ------------------------------------------------------------------ 
@@ -257,6 +261,9 @@ Do you see room for improvement or do you have a snippet in mind you want to hav
      xPage                          | Inserts @page directive                                             
      xPageParam                     | Inserts @page directive with Parameter                              
      xSubmitButton                  | Inserts a SubmitButton                                              
-     xEditModalDialog               | Edit modal dialog                                                   
+     xEditModalDialog               | Inserts an Edit modal dialog                                        
+     xDataGridEntityActionsColumn   | Inserts a DataGridEntityActionsColumn element                       
+     xEditEntityAction              | Inserts an Edit EntityAction element                                
+     xDeleteEntityAction            | Inserts a Delete EntityAction element                               
 
 

@@ -8,11 +8,7 @@
     "prefix": "xAuthorizeAttribute"
   },
   "codeBlock": {
-    "body": [
-      "@code {",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@code {", "\t$0", "}"],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -125,11 +121,7 @@
     "prefix": "xExposeServicesAttribute"
   },
   "feedbackValidation": {
-    "body": [
-      "<Feedback>",
-      "\t<ValidationError/>",
-      "</Feedback>"
-    ],
+    "body": ["<Feedback>", "\t<ValidationError/>", "</Feedback>"],
     "description": "Inserts <Feedback> validation statement",
     "prefix": "xFeedbackValidation"
   },
@@ -216,39 +208,22 @@
     "prefix": "xFieldTextEdit"
   },
   "ifCanCreate": {
-    "body": [
-      "@if (CanCreate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
   "ifCanDelete": {
-    "body": [
-      "@if (CanDelete${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": [
-      "@if (CanUpdate${1:What})",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["@if (CanUpdate${1:What})", "{", "\t$0", "}"],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },
   "inheritsComponentBase": {
-    "body": [
-      "@inherits ${WORKSPACE_NAME}ComponentBase"
-    ],
+    "body": ["@inherits ${WORKSPACE_NAME}ComponentBase"],
     "description": "Inserts @inherits [YourProjectName]ComponentBase statement",
     "prefix": "xInheritsComponentBase"
   },
@@ -598,9 +573,7 @@
     "prefix": "xListIAppService"
   },
   "pageDirective": {
-    "body": [
-      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
-    ],
+    "body": ["@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""],
     "description": "Inserts @page directive",
     "prefix": "xPage"
   },
@@ -657,26 +630,26 @@
     "description": "Inserts an Edit modal dialog",
     "prefix": "xEditModalDialog"
   },
-  "dataGridEntityActionsColumn" : {
-    "body" : [
-    "<DataGridEntityActionsColumn TItem=\"${1:TypeName}Dto\" @ref=\"@EntityActionsColumn\">",
-    "  <DisplayTemplate>",
-    "    <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
-    "      $0",
-    "    </EntityActions>",
-    "  </DisplayTemplate>",
-    "</DataGridEntityActionsColumn>"
-  ],
+  "dataGridEntityActionsColumn": {
+    "body": [
+      "<DataGridEntityActionsColumn TItem=\"${1:TypeName}Dto\" @ref=\"@EntityActionsColumn\">",
+      "  <DisplayTemplate>",
+      "    <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
+      "      $0",
+      "    </EntityActions>",
+      "  </DisplayTemplate>",
+      "</DataGridEntityActionsColumn>"
+    ],
     "description": "Inserts a DataGridEntityActionsColumn element",
     "prefix": "xDataGridEntityActionsColumn"
   },
-  "editEntityAction" : {
-    "body" : "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Edit\"]\" Visible=\"HasUpdatePermission\" Clicked=\"() => OpenEditModalAsync(context)\" />",
-    "description": "Inserts a Edit EntityAction element",
+  "editEntityAction": {
+    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Edit\"]\" Visible=\"HasUpdatePermission\" Clicked=\"() => OpenEditModalAsync(context)\" />",
+    "description": "Inserts an Edit EntityAction element",
     "prefix": "xEditEntityAction"
   },
-  "deleteEntityAction" : {
-    "body" : "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
+  "deleteEntityAction": {
+    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
     "description": "Inserts a Delete EntityAction element",
     "prefix": "xDeleteEntityAction"
   }
