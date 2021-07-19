@@ -49,7 +49,7 @@
   },
   "appServiceClassStub": {
     "body": [
-      "// [Authorize(${WORKSPACE_NAME}Permissions.${TM_FILENAME_BASE/AppService//}.Default)] ",
+      "// [Authorize(${WORKSPACE_NAME}Permissions.${TM_FILENAME_BASE/AppService//}s.Default)] ",
       "public class ${TM_FILENAME_BASE} : ${WORKSPACE_NAME}AppService, I${TM_FILENAME_BASE}$1",
       "{",
       "\tpublic ${TM_FILENAME_BASE}($2)",
