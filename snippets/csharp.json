@@ -1389,12 +1389,12 @@
   },
   "varIsObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
-    "description": "var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement",
+    "description": "var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement",
     "prefix": "xVarIsObjectMapperMap"
   },
   "xGroupNamePermissionConst": {
-    "body": "public const string ${2:$1}GroupName = \"${1:Name}\";$0",
-    "description": "a GroupName constant",
+    "body": "public const string ${2:$1}Group = \"${1:Name}\";$0",
+    "description": "Inserts a permisson GroupName constant",
     "prefix": "xGroupNamePermissionConst"
   },
   "xGetPolicy": {
