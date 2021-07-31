@@ -94,6 +94,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xISoftDeleteDisable                        | Inserts using (_softDeleteFilter.Disable()){} statement                                  
      xISpecificationParam                       | Inserts a ISpecification parameter                                                       
      xIfInline                                  | Inline if statement                                                                      
+     xIfResultSucceeded                         | If result.Succeeded statement                                                            
      xIfInputSortingIsNullOrWhiteSpace          | Inserts if input.Sorting.IsNullOrWhiteSpace statement                                    
      xIfIsGrantedAsyncPermission                | Inserts if (await IsGrantedAsync(permission)){ }statement                                
      xIfNotNullInline                           | Inline if not null statement                                                             

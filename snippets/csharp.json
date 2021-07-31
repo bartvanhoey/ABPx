@@ -629,6 +629,12 @@
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
+  "ifResultSucceededStatement": {
+    "body": [
+      "if (result.Succeeded)" , "\t{", "\t$0", "\t}"],
+    "description": "If result.Succeeded statement",
+    "prefix": "xIfResultSucceeded"
+  },
   "ifInputSortingIsNullOrWhiteSpace": {
     "body": [
       " if (input.Sorting.IsNullOrWhiteSpace())",
