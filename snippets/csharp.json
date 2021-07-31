@@ -1251,6 +1251,11 @@
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowNewCustomException"
   },
+  "throwUnauthorizedException": {
+    "body": ["throw new UnauthorizedException();"],
+    "description": "Inserts throw new UnauthorizedException statement",
+    "prefix": "xThrowNewUnauthorizedException"
+  },
   "throwNewEntityNotFoundException": {
     "body": ["throw new EntityNotFoundException$1($2);$0"],
     "description": "Inserts throw new EntityNotFoundException statement",
