@@ -152,7 +152,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xNotifyInfo                                | Inserts await Notify.Info(Message) statement                                             
      xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
      xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
-     xObjectMapperMap                           | ObjectMapper.Map statement                                                               
+     xMap                                       | ObjectMapper.Map statement                                                               
      xMapFromDtoToType                          | ObjectMapper.Map from Dto to Type statement                                              
      xMapFromTypeToDto                          | ObjectMapper.Map from Type To Dto statement                                              
      xOnAfterRender                             | OnAfterRender method stub                                                                

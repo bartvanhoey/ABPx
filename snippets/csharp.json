@@ -980,10 +980,10 @@
   "map": {
     "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:${2/(.*)/${1:/downcase}/}});$0",
     "description": "ObjectMapper.Map statement",
-    "prefix": "xObjectMapperMap"
+    "prefix": "xMap"
   },
   "mapFromDtoToType": {
-    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:Source}Dto, ${3:$2}>(${4:${2/(.*)/${1:/downcase}/}});$0",
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:Source}Dto, ${3:$2}>(${4:${2/(.*)/${1:/downcase}/}}Dto);$0",
     "description": "ObjectMapper.Map from Dto to Type statement",
     "prefix": "xMapFromDtoToType"
   },
