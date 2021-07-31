@@ -977,10 +977,20 @@
     "description": "Inserts await Notify.Warn(Message) statement",
     "prefix": "xNotifyWarn"
   },
-  "objectMapperMap": {
-    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
+  "map": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:${2/(.*)/${1:/downcase}/}});$0",
     "description": "ObjectMapper.Map statement",
     "prefix": "xObjectMapperMap"
+  },
+  "mapFromDtoToType": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:Source}Dto, ${3:$2}>(${4:${2/(.*)/${1:/downcase}/}});$0",
+    "description": "ObjectMapper.Map from Dto to Type statement",
+    "prefix": "xMapFromDtoToType"
+  },
+  "mapFromTypeToDto": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:$2}Dto>(${4:${2/(.*)/${1:/downcase}/}});$0",
+    "description": "ObjectMapper.Map from Type To Dto statement",
+    "prefix": "xMapFromTypeToDto"
   },
   "onAfterRender": {
     "body": [
@@ -1181,15 +1191,15 @@
     "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
     "prefix": "xReturnObjectMapperListTypeToListTypeDto"
   },
-  "returnObjectMapperMap": {
+  "returnObjectMap": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "return ObjectMapper.Map statement",
-    "prefix": "xReturnObjectMapperMap"
+    "prefix": "xReturnObjectMap"
   },
-  "returnObjectMapperToDto": {
+  "returnObjectMapTypeToDto": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${3:${2/(.*)/${1:/downcase}/}});$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
-    "prefix": "xReturnObjectMapperToDto"
+    "prefix": "xReturnObjectMapTypeToDto"
   },
   "returnPagedResultDto": {
     "body": [

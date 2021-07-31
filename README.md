@@ -43,15 +43,15 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xCheckNotNullOrWhiteSpace                  | Check.NotNullOrWhiteSpace statement                                                      
      xCheckNotNullOrWhiteSpaceMaxLength         | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                        
      xCheckNotNullOrWhiteSpaceMaxMinLength      | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                    
-     xCreateMapFromCreateDtoToType              | CreateMap from Create[Type]Dto to [Type] statement                                       
-     xCreateMapFromCreateUpdateDtoToType        | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
-     xCreateMapFromDtoToCreateUpdateDto         | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
-     xCreateMapFromDtoToType                    | CreateMap from [Type]Dto to [Type] statement                                             
-     xCreateMapFromDtoToUpdateDto               | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
-     xCreateMapFromTo                           | CreateMap from SourceType to DestinationType statement                                   
-     xCreateMapFromTypeToDto                    | CreateMap from [Type] to [Type]Dto statement                                             
-     xCreateMapFromTypeToLookupDto              | CreateMap from [Type] to [Type]LookupDto statement                                       
-     xCreateMapFromUpdateDtoToType              | CreateMap from Update[Type]Dto to [Type] statement                                       
+     xCreateMapCreateDtoToType                  | CreateMap from Create[Type]Dto to [Type] statement                                       
+     xCreateMapCreateUpdateDtoToType            | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                 
+     xCreateMapDtoToCreateUpdateDto             | CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement                              
+     xCreateMapDtoToType                        | CreateMap from [Type]Dto to [Type] statement                                             
+     xCreateMapDtoToUpdateDto                   | CreateMap from [Type]Dto to Update[Type]Dto statement                                    
+     xCreateMapTo                               | CreateMap from SourceType to DestinationType statement                                   
+     xCreateMapTypeToDto                        | CreateMap from [Type] to [Type]Dto statement                                             
+     xCreateMapTypeToLookupDto                  | CreateMap from [Type] to [Type]LookupDto statement                                       
+     xCreateMapUpdateDtoToType                  | CreateMap from Update[Type]Dto to [Type] statement                                       
      xCrudAppServiceCreateDtoAndUpdateDto       | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated           
      xCrudAppServiceCreateUpdateDto             | Inserts a complete CrudAppService class with CreateUpdateDto combined                    
      xCtor                                      | constructor stub                                                                         
@@ -153,6 +153,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xNotifySuccess                             | Inserts await Notify.Success(Message) statement                                          
      xNotifyWarn                                | Inserts await Notify.Warn(Message) statement                                             
      xObjectMapperMap                           | ObjectMapper.Map statement                                                               
+     xMapFromDtoToType                          | ObjectMapper.Map from Dto to Type statement                                              
+     xMapFromTypeToDto                          | ObjectMapper.Map from Type To Dto statement                                              
      xOnAfterRender                             | OnAfterRender method stub                                                                
      xOnAfterRenderAsync                        | OnAfterRenderAsync method stub                                                           
      xOnInitialized                             | OnInitialized method stub                                                                
@@ -180,8 +182,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xReturnDbSetFirstOrDefaultAsync            | Inserts return await DbSet.FirstOrDefaultAsync()                                         
      xReturnListResultDto                       | Inserts return new ListResultDto statement                                               
      xReturnObjectMapperListTypeToListTypeDto   | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                              
-     xReturnObjectMapperMap                     | return ObjectMapper.Map statement                                                        
-     xReturnObjectMapperToDto                   | return ObjectMapper.Map from SourceType to Dto statement                                 
+     xReturnObjectMap                           | return ObjectMapper.Map statement                                                        
+     xReturnObjectMapTypeToDto                  | return ObjectMapper.Map from SourceType to Dto statement                                 
      xReturnPagedResultDto                      | Inserts return new PagedResultDto statement                                              
      xReturnPagedResultDtoObjectMapper          | Inserts return new PagedResultDto with ObjectMapper statement                            
      xStringLengthAttribute                     | StringLength attribute                                                                   
@@ -208,8 +210,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xUnResultShouldBe                          | Inserts result.PropertyName.ShouldBe(Value) statement                                    
      xUnResultTotalCountShouldBeGreaterThan     | Inserts result.TotalCount.ShouldBeGreaterThan statement                                  
      xUnResultTotalCountShouldBeGreaterOrEqual  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
-     xVarIsObjectMapperMap                      | var result=  ObjectMapper.Map<SourceType,DestinationType>(input) statement               
-     xGroupNamePermissionConst                  | a GroupName constant                                                                     
+     xVarIsObjectMapperMap                      | var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement               
+     xGroupNamePermissionConst                  | Inserts a permisson GroupName constant                                                   
      xGetPolicyName                             | Inserts GetPolicyName statement                                                          
      xGetListPolicyName                         | Inserts GetListPolicyName statement                                                      
      xCreatePolicyName                          | Inserts CreatePolicyName statement                                                       
