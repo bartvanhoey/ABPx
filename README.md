@@ -192,7 +192,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xStringLengthAttribute                     | StringLength attribute                                                                   
      xThrowNewBusinessException                 | Inserts throw new BusinessException statement                                            
      xThrowNewCustomException                   | Inserts throw new CustomException statement                                              
-     xThrowNewUnauthorizedException             | Inserts throw new UnauthorizedException statement                                        
+     xThrowNewUnauthorizedAccessException       | Inserts throw new UnauthorizedAccessException statement                                  
      xThrowNewEntityNotFoundException           | Inserts throw new EntityNotFoundException statement                                      
      xThrowNewNotImplementedException           | Inserts throw new NotImplementedException statement                                      
      xThrowNewUserFriendlyException             | Inserts throw new UserFriendlyException statement                                        
