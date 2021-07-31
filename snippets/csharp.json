@@ -15,7 +15,7 @@
   },
   "addGroupPermissionToContext": {
     "body": [
-      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}\"));"
+      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}Group\"));"
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddGroupPermissionsToContext"
@@ -27,7 +27,7 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "//\"Permission:$3\": \"$3\",",
+      "//\"Permission:$3Group\": \"$3\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
