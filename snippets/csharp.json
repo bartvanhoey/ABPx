@@ -128,6 +128,20 @@
     "description": "Inserts the AuthorizationService.AuthorizeAsync method",
     "prefix": "xAuthServiceAuthorizeAsync"
   },
+  "authServiceCheckAsync": {
+    "body": [
+      "await AuthorizationService.CheckAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.CheckAsync method",
+    "prefix": "xAuthServiceCheckAsync"
+  },
+  "authServiceIsGrantedAsync": {
+    "body": [
+      "await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.IsGrantedAsync method",
+    "prefix": "xAuthServiceIsGrantedAsync"
+  },
   "authAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"

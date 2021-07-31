@@ -24,6 +24,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAsyncExecuterFirstOrDefaultAsync          | Inserts AsyncExecuter.FirstOrDefaultAsync statement                                      
      xAsyncExecuterToListAsync                  | Inserts AsyncExecuter.ToListAsync statement                                              
      xAuthServiceAuthorizeAsync                 | Inserts the AuthorizationService.AuthorizeAsync method                                   
+     xAuthServiceCheckAsync                     | Inserts the AuthorizationService.CheckAsync method                                       
+     xAuthServiceIsGrantedAsync                 | Inserts the AuthorizationService.IsGrantedAsync method                                   
      xAuthAttributeAbp                          | Inserts the ABP Authorize attribute for a class or a method                              
      xAuthAttributeMicrosoft                    | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
