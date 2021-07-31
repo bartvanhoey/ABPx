@@ -121,17 +121,24 @@
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
   },
-  "authorizeAttributeAbp": {
+  "authServiceAuthorizeAsync": {
+    "body": [
+      "var result = await AuthorizationService.AuthorizeAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.AuthorizeAsync method",
+    "prefix": "xAuthServiceAuthorizeAsync"
+  },
+  "authAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"
     ],
     "description": "Inserts the ABP Authorize attribute for a class or a method",
-    "prefix": "xAuthorizeAttributeAbp"
+    "prefix": "xAuthAttributeAbp"
   },
-  "authorizeAttributeMicrosoft": {
+  "authAttributeMicrosoft": {
     "body": ["[Authorize$1]$0"],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
-    "prefix": "xAuthorizeAttributeMicrosoft"
+    "prefix": "xAuthAttributeMicrosoft"
   },
   "builderEntity": {
     "body": [

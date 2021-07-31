@@ -23,8 +23,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAsyncExecuterCountAsync                   | Inserts AsyncExecuter.CountAsync statement                                               
      xAsyncExecuterFirstOrDefaultAsync          | Inserts AsyncExecuter.FirstOrDefaultAsync statement                                      
      xAsyncExecuterToListAsync                  | Inserts AsyncExecuter.ToListAsync statement                                              
-     xAuthorizeAttributeAbp                     | Inserts the ABP Authorize attribute for a class or a method                              
-     xAuthorizeAttributeMicrosoft               | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
+     xAuthServiceAuthorizeAsync                 | Inserts the AuthorizationService.AuthorizeAsync method                                   
+     xAuthAttributeAbp                          | Inserts the ABP Authorize attribute for a class or a method                              
+     xAuthAttributeMicrosoft                    | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                       
      xBuilderEntity                             | builder.Entity stub                                                                      
      xBuilderHasOneWithManyForeignKeyRequired   | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                      
      xCanBeNullAttribute                        | CanBeNull attribute                                                                      
@@ -230,7 +231,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
 
      Prefix                         | Description                                                         
      ------------------------------ | -------------------------------------------------------------------- 
-     xAuthorizeAttribute            | xAuthorizeAttribute                                                 
+     xAuthAttribute                 | xAuthAttribute                                                      
      xCode                          | @code block                                                         
      xCreateModalDialog             | Create modal dialog                                                 
      xDataGridCheckColumn           | Inserts a DataGridCheckColumn for boolean values                    
