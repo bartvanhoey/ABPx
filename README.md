@@ -168,8 +168,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xReadOnlyListLookupDto                     | Inserts an IReadOnlyList for a LookupDto object                                          
      xRepoDeleteAsync                           | Inserts _repository.DeleteAsync statement                                                
      xRepoDeleteManyAsync                       | Inserts _repository.DeleteManyAsync statement                                            
-     xRepoFindAsync                             | Inserts var varName = _repository.FindAsync statement                                    
-     xRepoGetAsync                              | Inserts var varName = _repository.GetAsync statement                                     
+     xRepoFindAsync                             | Inserts var x = _repository.FindAsync statement                                          
+     xRepoFirstOrDefaultAsync                   | Inserts var x = _repository.FindAsync statement                                          
+     xRepoGetAsync                              | Inserts var x = _repository.GetAsync statement                                           
      xRepoGetCountAsync                         | Inserts var totalCount = _repository.GetCountAsync statement                             
      xRepoGetListAsync                          | Inserts var items = await _repository.GetListAsync() statement                           
      xRepoGetQueryableAsync                     | Inserts var queryable = _repository.GetQueryableAsync() statement                        

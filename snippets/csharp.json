@@ -1098,15 +1098,23 @@
       "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var varName = _repository.FindAsync statement",
+    "description": "Inserts var x = _repository.FindAsync statement",
     "prefix": "xRepoFindAsync"
+  },
+  "repoFirstOrDefaultAsync": {
+    "body": [
+      "var ${2:$1} = await _${1:name}Repository.FirstOrDefaultAsync$5(x => x.${3:Id} == ${4:id});",
+      "$0"
+    ],
+    "description": "Inserts var x = _repository.FindAsync statement",
+    "prefix": "xRepoFirstOrDefaultAsync"
   },
   "repoGetAsync": {
     "body": [
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var varName = _repository.GetAsync statement",
+    "description": "Inserts var x = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
