@@ -27,7 +27,6 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "//\"Permission:$4\": \"$4\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
