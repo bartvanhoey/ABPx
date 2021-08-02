@@ -232,6 +232,11 @@
     "description": "Inserts @inject MyService MyService",
     "prefix": "xInjectAppService"
   },
+  "injectAbpBlazorMessageLocalizerHelper": {
+    "body": "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH,",
+    "description": "Inserts @inject AbpBlazorMessageLocalizerHelper",
+    "prefix": "xInjectAbpBlazorMessageLocalizerHelper"
+  },
   "injectAuthorizationService": {
     "body": [
       "@* uncomment line below or add to _imports.razor *@",

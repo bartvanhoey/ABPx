@@ -217,7 +217,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xUnResultTotalCountShouldBeGreaterThan     | Inserts result.TotalCount.ShouldBeGreaterThan statement                                  
      xUnResultTotalCountShouldBeGreaterOrEqual  | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                           
      xVarIsObjectMapperMap                      | var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement               
-     xGroupNamePermissionConst                  | Inserts a permisson GroupName constant                                                   
+     xGroupNamePermissionConst                  | Inserts a permission GroupName constant                                                  
      xGetPolicyName                             | Inserts GetPolicyName statement                                                          
      xGetListPolicyName                         | Inserts GetListPolicyName statement                                                      
      xCreatePolicyName                          | Inserts CreatePolicyName statement                                                       
@@ -233,45 +233,46 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
-     Prefix                         | Description                                                         
-     ------------------------------ | -------------------------------------------------------------------- 
-     xAuthAttribute                 | xAuthAttribute                                                      
-     xCode                          | @code block                                                         
-     xCreateModalDialog             | Create modal dialog                                                 
-     xDataGridCheckColumn           | Inserts a DataGridCheckColumn for boolean values                    
-     xDataGridColumnEnum            | Inserts a DataGridColumn for an enum                                
-     xDataGridColumnLongDateString  | Inserts a DataGridColumn in long date format                        
-     xDataGridColumnShortDateString | Inserts a DataGridColumn in short date format                       
-     xDataGridColumnText            | Inserts a DataGridColumn                                            
-     xDependencyAttribute           | Inserts @attribute Dependency ReplaceServices                       
-     xExposeServicesAttribute       | Inserts @attribute ExposeServices                                   
-     xFeedbackValidation            | Inserts <Feedback> validation statement                             
-     xFieldDateEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
-     xFieldEnumSelect               | Inserts a Select field for enum in a Create/Update dialog           
-     xFieldMemoEdit                 | Inserts a MemoEdit field in a Create/Update dialog                  
-     xFieldNumericEdit              | Inserts a NumericEdit field in a Create/Update dialog               
-     xFieldSelect                   | Inserts a Select field a Create/Update dialog                       
-     xFieldTextEdit                 | Inserts a TextEdit field in a Create/Update dialog                  
-     xIfCanCreate                   | If CanCreate                                                        
-     xIfCanDelete                   | If CanDelete                                                        
-     xIfCanUpdate                   | If CanUpdate                                                        
-     xInheritsComponentBase         | Inserts @inherits [YourProjectName]ComponentBase statement          
-     xInjectAppService              | Inserts @inject MyService MyService                                 
-     xInjAuthorizationService       | Injects interface IAuthorizationService                             
-     xInjectHttpClient              | Inserts @inject HttpClient directive                                
-     xInjectIJSRuntime              | Inserts @inject IJSRuntime directive                                
-     xInjectIMapper                 | Inserts @inject IMapper directive                                   
-     xInjectService                 | Inserts @inject MyService MyService                                 
-     xInjectNavigationManager       | Inserts @inject NavigationManager directive                         
-     xInjectProtectedLocalStorage   | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
-     xListAbpCrudPageBase           | Inserts a paged list for a standard CrudAppService                  
-     xListIAppService               | Inserts a paged list for a custom IAppService                       
-     xPage                          | Inserts @page directive                                             
-     xPageParam                     | Inserts @page directive with Parameter                              
-     xSubmitButton                  | Inserts a SubmitButton                                              
-     xEditModalDialog               | Inserts an Edit modal dialog                                        
-     xDataGridEntityActionsColumn   | Inserts a DataGridEntityActionsColumn element                       
-     xEditEntityAction              | Inserts an Edit EntityAction element                                
-     xDeleteEntityAction            | Inserts a Delete EntityAction element                               
+     Prefix                                 | Description                                                         
+     -------------------------------------- | -------------------------------------------------------------------- 
+     xAuthAttribute                         | xAuthAttribute                                                      
+     xCode                                  | @code block                                                         
+     xCreateModalDialog                     | Create modal dialog                                                 
+     xDataGridCheckColumn                   | Inserts a DataGridCheckColumn for boolean values                    
+     xDataGridColumnEnum                    | Inserts a DataGridColumn for an enum                                
+     xDataGridColumnLongDateString          | Inserts a DataGridColumn in long date format                        
+     xDataGridColumnShortDateString         | Inserts a DataGridColumn in short date format                       
+     xDataGridColumnText                    | Inserts a DataGridColumn                                            
+     xDependencyAttribute                   | Inserts @attribute Dependency ReplaceServices                       
+     xExposeServicesAttribute               | Inserts @attribute ExposeServices                                   
+     xFeedbackValidation                    | Inserts <Feedback> validation statement                             
+     xFieldDateEdit                         | Inserts a TextEdit field in a Create/Update dialog                  
+     xFieldEnumSelect                       | Inserts a Select field for enum in a Create/Update dialog           
+     xFieldMemoEdit                         | Inserts a MemoEdit field in a Create/Update dialog                  
+     xFieldNumericEdit                      | Inserts a NumericEdit field in a Create/Update dialog               
+     xFieldSelect                           | Inserts a Select field a Create/Update dialog                       
+     xFieldTextEdit                         | Inserts a TextEdit field in a Create/Update dialog                  
+     xIfCanCreate                           | If CanCreate                                                        
+     xIfCanDelete                           | If CanDelete                                                        
+     xIfCanUpdate                           | If CanUpdate                                                        
+     xInheritsComponentBase                 | Inserts @inherits [YourProjectName]ComponentBase statement          
+     xInjectAppService                      | Inserts @inject MyService MyService                                 
+     xInjectAbpBlazorMessageLocalizerHelper | Inserts @inject AbpBlazorMessageLocalizerHelper                     
+     xInjAuthorizationService               | Injects interface IAuthorizationService                             
+     xInjectHttpClient                      | Inserts @inject HttpClient directive                                
+     xInjectIJSRuntime                      | Inserts @inject IJSRuntime directive                                
+     xInjectIMapper                         | Inserts @inject IMapper directive                                   
+     xInjectService                         | Inserts @inject MyService MyService                                 
+     xInjectNavigationManager               | Inserts @inject NavigationManager directive                         
+     xInjectProtectedLocalStorage           | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
+     xListAbpCrudPageBase                   | Inserts a paged list for a standard CrudAppService                  
+     xListIAppService                       | Inserts a paged list for a custom IAppService                       
+     xPage                                  | Inserts @page directive                                             
+     xPageParam                             | Inserts @page directive with Parameter                              
+     xSubmitButton                          | Inserts a SubmitButton                                              
+     xEditModalDialog                       | Inserts an Edit modal dialog                                        
+     xDataGridEntityActionsColumn           | Inserts a DataGridEntityActionsColumn element                       
+     xEditEntityAction                      | Inserts an Edit EntityAction element                                
+     xDeleteEntityAction                    | Inserts a Delete EntityAction element                               
 
 
