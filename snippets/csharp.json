@@ -15,7 +15,7 @@
   },
   "addGroupPermissionToContext": {
     "body": [
-      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}Group}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}\"));"
+      "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}GroupName}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}Group\"));"
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
     "prefix": "xAddGroupPermissionsToContext"
@@ -27,7 +27,7 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "//\"Permission:$3\": \"$3\",",
+      "//\"Permission:$3Group\": \"$3\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
@@ -121,17 +121,38 @@
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
   },
-  "authorizeAttributeAbp": {
+  "authServiceAuthorizeAsync": {
+    "body": [
+      "var result = await AuthorizationService.AuthorizeAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.AuthorizeAsync method",
+    "prefix": "xAuthServiceAuthorizeAsync"
+  },
+  "authServiceCheckAsync": {
+    "body": [
+      "await AuthorizationService.CheckAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.CheckAsync method",
+    "prefix": "xAuthServiceCheckAsync"
+  },
+  "authServiceIsGrantedAsync": {
+    "body": [
+      "var isGranted = await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|});$0"
+    ],
+    "description": "Inserts the AuthorizationService.IsGrantedAsync method",
+    "prefix": "xAuthServiceIsGrantedAsync"
+  },
+  "authAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"
     ],
     "description": "Inserts the ABP Authorize attribute for a class or a method",
-    "prefix": "xAuthorizeAttributeAbp"
+    "prefix": "xAuthAttributeAbp"
   },
-  "authorizeAttributeMicrosoft": {
+  "authAttributeMicrosoft": {
     "body": ["[Authorize$1]$0"],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
-    "prefix": "xAuthorizeAttributeMicrosoft"
+    "prefix": "xAuthAttributeMicrosoft"
   },
   "builderEntity": {
     "body": [
@@ -622,6 +643,12 @@
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
+  "ifResultSucceededStatement": {
+    "body": [
+      "if (result.Succeeded)" , "\t{", "\t$0", "\t}"],
+    "description": "If result.Succeeded statement",
+    "prefix": "xIfResultSucceeded"
+  },
   "ifInputSortingIsNullOrWhiteSpace": {
     "body": [
       " if (input.Sorting.IsNullOrWhiteSpace())",
@@ -977,10 +1004,20 @@
     "description": "Inserts await Notify.Warn(Message) statement",
     "prefix": "xNotifyWarn"
   },
-  "objectMapperMap": {
-    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
+  "map": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:${2/(.*)/${1:/downcase}/}});$0",
     "description": "ObjectMapper.Map statement",
-    "prefix": "xObjectMapperMap"
+    "prefix": "xMap"
+  },
+  "mapFromDtoToType": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:Source}Dto, ${3:$2}>(${4:${2/(.*)/${1:/downcase}/}}Dto);$0",
+    "description": "ObjectMapper.Map from Dto to Type statement",
+    "prefix": "xMapFromDtoToType"
+  },
+  "mapFromTypeToDto": {
+    "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:$2}Dto>(${4:${2/(.*)/${1:/downcase}/}});$0",
+    "description": "ObjectMapper.Map from Type To Dto statement",
+    "prefix": "xMapFromTypeToDto"
   },
   "onAfterRender": {
     "body": [
@@ -1088,15 +1125,23 @@
       "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var varName = _repository.FindAsync statement",
+    "description": "Inserts var x = _repository.FindAsync statement",
     "prefix": "xRepoFindAsync"
+  },
+  "repoFirstOrDefaultAsync": {
+    "body": [
+      "var ${2:$1} = await _${1:name}Repository.FirstOrDefaultAsync$5(x => x.${3:Id} == ${4:id});",
+      "$0"
+    ],
+    "description": "Inserts var x = _repository.FindAsync statement",
+    "prefix": "xRepoFirstOrDefaultAsync"
   },
   "repoGetAsync": {
     "body": [
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var varName = _repository.GetAsync statement",
+    "description": "Inserts var x = _repository.GetAsync statement",
     "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
@@ -1181,15 +1226,15 @@
     "description": "return ObjectMapper.Map<List<Type>,List<TypeDto>> statement",
     "prefix": "xReturnObjectMapperListTypeToListTypeDto"
   },
-  "returnObjectMapperMap": {
+  "returnObjectMap": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:DestinationType}>(${4:variable});$0",
     "description": "return ObjectMapper.Map statement",
-    "prefix": "xReturnObjectMapperMap"
+    "prefix": "xReturnObjectMap"
   },
-  "returnObjectMapperToDto": {
+  "returnObjectMapTypeToDto": {
     "body": "return ${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, $2Dto>(${3:${2/(.*)/${1:/downcase}/}});$0",
     "description": "return ObjectMapper.Map from SourceType to Dto statement",
-    "prefix": "xReturnObjectMapperToDto"
+    "prefix": "xReturnObjectMapTypeToDto"
   },
   "returnPagedResultDto": {
     "body": [
@@ -1219,6 +1264,11 @@
     "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowNewCustomException"
+  },
+  "throwUnauthorizedAccessException": {
+    "body": ["throw new UnauthorizedAccessException();"],
+    "description": "Inserts throw new UnauthorizedAccessException statement",
+    "prefix": "xThrowNewUnauthorizedAccessException"
   },
   "throwNewEntityNotFoundException": {
     "body": ["throw new EntityNotFoundException$1($2);$0"],

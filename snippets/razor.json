@@ -1,11 +1,11 @@
 {
-  "authorizeAttribute": {
+  "authAttribute": {
     "body": [
       "@attribute [Authorize(${WORKSPACE_NAME}Permissions.${1:ClassName}s.Default)]",
       "@using ${2:PermissionsNameSpace}.${WORKSPACE_NAME}.Permissions",
       "@* @using Microsoft.AspNetCore.Authorization *@"
     ],
-    "prefix": "xAuthorizeAttribute"
+    "prefix": "xAuthAttribute"
   },
   "codeBlock": {
     "body": ["@code {", "\t$0", "}"],
