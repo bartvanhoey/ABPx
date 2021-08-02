@@ -10,7 +10,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      Prefix                                     | Description                                                                              
      ------------------------------------------ | ----------------------------------------------------------------------------------------- 
      xGetQueryableExtensionsClassStub           | Inserts GetQueryableExtensionsClass stub                                                 
-     xAddGroupPermissionsToContext              | Add group permission to context in PermissionDefinitionProvider.cs                       
+     xAddPermissionGroupToContext               | Add group permission to context in PermissionDefinitionProvider.cs                       
      xAddPermissionToGroup                      | Adds permission to group in PermissionDefinitionProvider.cs                              
      xAddPermissionsPoliciesAppService          | Adds policy permissions to AppService                                                    
      xAppServiceClassStub                       | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class
