@@ -27,7 +27,7 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "//\"Permission:$3Group\": \"$3\",",
+      "//\"Permission:$4\": \"$4\",",
       "//\"Permission:$4\": \"$4 Management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
@@ -1444,7 +1444,7 @@
   },
   "xGroupNamePermissionConst": {
     "body": "public const string ${2:$1}Group = \"${1:GroupName}\";$0",
-    "description": "Inserts a permisson GroupName constant",
+    "description": "Inserts a permission GroupName constant",
     "prefix": "xGroupNamePermissionConst"
   },
   "xGetPolicy": {
