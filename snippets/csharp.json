@@ -16,7 +16,7 @@
   "addPermissionGroupToContext": {
     "body": [
       "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}Group}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}Group\"));",
-      "//\"Permission:${1/^([a-z])/${1:/upcase}/}Group\": \"${1/^([a-z])/${1:/upcase}/} Management\","
+      "//\"Permission:${1/^([a-z])/${1:/upcase}/}Group\": \"${1/^([a-z])/${1:/upcase}/} management\","
 
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider.cs",
@@ -29,7 +29,7 @@
       "$1Permission.AddChild($3Permissions.$4.Update, L(\"Permission:$4:Update\"));",
       "$1Permission.AddChild($3Permissions.$4.Delete, L(\"Permission:$4:Delete\"));",
       "",
-      "//\"Permission:$4\": \"$4 Management\",",
+      "//\"Permission:$4\": \"$4 management\",",
       "//\"Permission:$4:Create\": \"Creating ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Update\": \"Editing ${5:${4/^([A-Z])/${1:/downcase}/}}\",",
       "//\"Permission:$4:Delete\": \"Deleting ${5:${4/^([A-Z])/${1:/downcase}/}}\"$0"
