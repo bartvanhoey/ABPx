@@ -722,6 +722,11 @@
     "description": "Implements IApplicationService interface",
     "prefix": "xImpIApplicationService"
   },
+  "implementIMultitenant": {
+    "body": " IMultitenant$0",
+    "description": "Implements IMultitenant interface",
+    "prefix": "xImpIMultitenant"
+  },
   "implementICorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
