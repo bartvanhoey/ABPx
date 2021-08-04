@@ -322,7 +322,7 @@
   },
   "crudAppServiceCreateDtoUpdateDto": {
     "body": [
-      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, Create$2Dto, Update$2Dto>, I$2AppService",
+      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|Guid,int,string|}$5, PagedAndSortedResultRequestDto$6, Create$2Dto, Update$2Dto>, I$2AppService",
       "{",
       "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
       "\t{",
@@ -339,7 +339,7 @@
   },
   "crudAppServiceCreateUpdateDto": {
     "body": [
-      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|int,Guid,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
+      "public class ${1:${TM_FILENAME_BASE}} : CrudAppService<${2:Type}, ${3:$2}Dto, ${4|Guid,int,string|}$5, PagedAndSortedResultRequestDto$6, CreateUpdate$2Dto>, I$2AppService",
       "{",
       "\tpublic ${7:$1}(IRepository<$2, ${8:$4}> repository): base(repository)",
       "\t{",
@@ -406,7 +406,7 @@
   },
   "efCoreRepositoryClassStub": {
     "body": [
-      "public class ${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME}}DbContext, ${4:$1}$5, ${6|int,Guid,string|}$7>, I${8:$1}Repository$11",
+      "public class ${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME}}DbContext, ${4:$1}$5, ${6|Guid,int,string|}$7>, I${8:$1}Repository$11",
       "{",
       "public $1Repository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
       "{",
@@ -495,13 +495,13 @@
     "prefix": "xIAppServiceCreateAsyncDefinition"
   },
   "iAppServiceDeleteAsyncDefinition": {
-    "body": ["\tTask$4 DeleteAsync(${1|int,Guid,string|}$2 ${3:id});", "\t$0"],
+    "body": ["\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});", "\t$0"],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
     "prefix": "xIAppServiceDeleteAsyncDefinition"
   },
   "iAppServiceGetAsyncDefinition": {
     "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|int,Guid,string|}$5 ${6:id});",
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
@@ -541,7 +541,7 @@
   },
   "iAppServiceUpdateAsyncDefinition": {
     "body": [
-      "\tTask$6 UpdateAsync(${3|int,Guid,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
+      "\tTask$6 UpdateAsync(${3|Guid,int,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
       "\t$0"
     ],
     "description": "Inserts a UpdateAsync definition for an IAppService interface",
@@ -554,7 +554,7 @@
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, Create$1Dto, Update$1Dto>$0",
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, Create$1Dto, Update$1Dto>$0",
       "{",
       "\t$0",
       "}"
@@ -564,7 +564,7 @@
   },
   "iCrudAppServiceCreateUpdateDto": {
     "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|int,Guid,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
       "{",
       "\t$0",
       "}"
@@ -574,7 +574,7 @@
   },
   "iCrudMethodsAppService": {
     "body": [
-      "Task$2<${1:ClassName}Dto$6> GetAsync(${3|int,Guid,string|}$4 id);",
+      "Task$2<${1:ClassName}Dto$6> GetAsync(${3|Guid,int,string|}$4 id);",
       "",
       "Task<PagedResultDto<$1Dto>$5> GetListAsync(Get$1ListDto$7 input);",
       "",
@@ -608,7 +608,7 @@
     "prefix": "xIRepoCtorCustomParam"
   },
   "iRepoCtorDefaultParam": {
-    "body": "IRepository$1<${2:Type}, ${3|int,Guid,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
+    "body": "IRepository$1<${2:Type}, ${3|Guid,int,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
@@ -727,7 +727,7 @@
     "prefix": "xImpIDataSeedContributor"
   },
   "implementIRepository": {
-    "body": " IRepository$1<${2:Type}, ${3|int,Guid,string|}>$0",
+    "body": " IRepository$1<${2:Type}, ${3|Guid,int,string|}>$0",
     "description": "Implements IRepository interface",
     "prefix": "xImpIRepository"
   },
@@ -747,7 +747,7 @@
     "prefix": "xInhSpecification"
   },
   "inheritsAggregateRoot": {
-    "body": " AggregateRoot<${1|int,Guid,string|}>$0",
+    "body": " AggregateRoot<${1|Guid,int,string|}>$0",
     "description": "Inherits AggregateRoot class",
     "prefix": "xInhAggregateRoot"
   },
@@ -762,37 +762,37 @@
     "prefix": "xInhApplicationTestBase"
   },
   "inheritsAuditedAggregateRoot": {
-    "body": " AuditedAggregateRoot$1<${2|int,Guid,string|}>$0",
+    "body": " AuditedAggregateRoot$1<${2|Guid,int,string|}>$0",
     "description": "Inherits AuditedAggregateRoot class",
     "prefix": "xInhAuditedAggregateRoot"
   },
   "inheritsAuditedEntity": {
-    "body": " AuditedEntity$1<${2|int,Guid,string|}>$0",
+    "body": " AuditedEntity$1<${2|Guid,int,string|}>$0",
     "description": "Inherits AuditedEntity class",
     "prefix": "xInhAuditedEntity"
   },
   "inheritsAuditedEntityDto": {
-    "body": " AuditedEntityDto<${1|int,Guid,string|}>$0",
+    "body": " AuditedEntityDto<${1|Guid,int,string|}>$0",
     "description": "Inherits AuditedEntityDto class",
     "prefix": "xInhAuditedEntityDto"
   },
   "inheritsBasicAggregateRoot": {
-    "body": " BasicAggregateRoot<${1|int,Guid,string|}>$0",
+    "body": " BasicAggregateRoot<${1|Guid,int,string|}>$0",
     "description": "Inherits BasicAggregateRoot class",
     "prefix": "xInhBasicAggregateRoot"
   },
   "inheritsCreationAuditedAggregateRoot": {
-    "body": " CreationAuditedAggregateRoot$1<${2|int,Guid,string|}>$0",
+    "body": " CreationAuditedAggregateRoot$1<${2|Guid,int,string|}>$0",
     "description": "Inherits CreationAuditedAggregateRoot class",
     "prefix": "xInhCreationAuditedAggregateRoot"
   },
   "inheritsCreationAuditedEntity": {
-    "body": " CreationAuditedEntity$1<${2|int,Guid,string|}>$0",
+    "body": " CreationAuditedEntity$1<${2|Guid,int,string|}>$0",
     "description": "Inherits CreationAuditedEntity class",
     "prefix": "xInhCreationAuditedEntity"
   },
   "inheritsCreationAuditedEntityDto": {
-    "body": " CreationAuditedEntityDto$1<${2|int,Guid,string|}>$0",
+    "body": " CreationAuditedEntityDto$1<${2|Guid,int,string|}>$0",
     "description": "Inherits CreationAuditedEntityDto class",
     "prefix": "xInhCreationAuditedEntityDto"
   },
@@ -807,27 +807,27 @@
     "prefix": "xInhDomainTestBase"
   },
   "inheritsEntity": {
-    "body": " Entity<${1|int,Guid,string|}>$0",
+    "body": " Entity<${1|Guid,int,string|}>$0",
     "description": "Inherits Entity class",
     "prefix": "xInhEntity"
   },
   "inheritsEntityDto": {
-    "body": " EntityDto$1<${2|int,Guid,string|}$3>$0",
+    "body": " EntityDto$1<${2|Guid,int,string|}$3>$0",
     "description": "Inherits EntityDto class",
     "prefix": "xInhEntityDto"
   },
   "inheritsFullAuditedAggregateRoot": {
-    "body": " FullAuditedAggregateRoot$1<${2|int,Guid,string|}>$0",
+    "body": " FullAuditedAggregateRoot$1<${2|Guid,int,string|}>$0",
     "description": "Inherits FullAuditedAggregateRoot class",
     "prefix": "xInhFullAuditedAggregateRoot"
   },
   "inheritsFullAuditedEntity": {
-    "body": " FullAuditedEntity$1<${2|int,Guid,string|}>$0",
+    "body": " FullAuditedEntity$1<${2|Guid,int,string|}>$0",
     "description": "Inherits FullAuditedEntity class",
     "prefix": "xInhFullAuditedEntity"
   },
   "inheritsFullAuditedEntityDto": {
-    "body": " FullAuditedEntityDto$1<${2|int,Guid,string|}>$0",
+    "body": " FullAuditedEntityDto$1<${2|Guid,int,string|}>$0",
     "description": "Inherits FullAuditedEntityDto class",
     "prefix": "xInhFullAuditedEntityDto"
   },
