@@ -613,6 +613,11 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iStringLocalizerCtorParam": {
+    "body": "IStringLocalizer$1<${WORKSPACE_NAME}Resource> localizer$0",
+    "description": "Inserts the IStringLocalizer parameter in the constructor",
+    "prefix": "xIStringLocalizerCtorParam"
+  },
   "findByNameAsyncMethodStub": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method to an IRepository interface",
