@@ -241,6 +241,11 @@
     "description": "Check.NotNull (+ MaxLength) statement",
     "prefix": "xCheckNotNullMaxLength"
   },
+  "getDbContextAsync": {
+    "body": "var dbContext = await GetDbContextAsync();$0",
+    "description": "Inserts var dbContext = await GetDbContextAsync();",
+    "prefix": "xGetDbContextAsync"
+  },
   "checkNotNullMaxMinLength": {
     "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}), maxLength: ${4:2147483647}, minLength: ${5:0});$0",
     "description": "Check.NotNull (+ Max/MinLength) statement",
@@ -722,10 +727,10 @@
     "description": "Implements IApplicationService interface",
     "prefix": "xImpIApplicationService"
   },
-  "implementIMultitenant": {
-    "body": " IMultitenant$0",
-    "description": "Implements IMultitenant interface",
-    "prefix": "xImpIMultitenant"
+  "implementIMultiTenant": {
+    "body": " IMultiTenant$0",
+    "description": "Implements IMultiTenant interface",
+    "prefix": "xImpIMultiTenant"
   },
   "implementICorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
