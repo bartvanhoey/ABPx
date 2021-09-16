@@ -231,10 +231,15 @@
     "description": "Inserts await CheckGetPolicyAsync()",
     "prefix": "xCheckGetPolicyAsync"
   },
-  "tenantId": {
+  "tenantIdGuidProperty": {
     "body": ["public Guid? TenantId { get; set; }$0"],
     "description": "Inserts public Guid? TenantId { get; set; } property ",
-    "prefix": "xTenantId"
+    "prefix": "xTenantIdGuidProperty"
+  },
+  "tenantIdStringProperty": {
+    "body": ["public string TenantId { get; set; }$0"],
+    "description": "Inserts public string TenantId { get; set; } property ",
+    "prefix": "xTenantIdStringProperty"
   },
   "checkNotNull": {
     "body": "Check$1.NotNull(${2:value}, nameof(${3:$2}));$0",
