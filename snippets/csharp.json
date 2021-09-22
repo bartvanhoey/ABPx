@@ -1254,12 +1254,12 @@
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
   },
   "returnDbContextFirstOrDefaultAsync": {
-    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>.FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
+    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
     "description": "Inserts return await DbContext.FirstOrDefaultAsync()",
     "prefix": "xReturnDbContextFirstOrDefaultAsync"
   },
   "returnDbContextToListAsync": {
-    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>.Where(${3:x} => $3.${4:propertyName} == $5).ToListAsync();$0",
+    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where(${3:x} => $3.${4:propertyName} == $5).ToListAsync();$0",
     "description": "Inserts return await DbContext.ToListAsync()",
     "prefix": "xReturnDbContextToListAsync"
   },
