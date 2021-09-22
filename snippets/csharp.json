@@ -1124,6 +1124,17 @@
     "description": "Inserts a static class with Default/Create/Update/Delete constants",
     "prefix": "xPermissionClass"
   },
+  "currentTenantChange": {
+    "body": [
+      "using (CurrentTenant.Change(tenantId))",
+      "{",
+      "{",
+      "\t$0\";",
+      "}"
+    ],
+    "description": "Inserts using (CurrentTenant.Change(tenantId))",
+    "prefix": "xCurrentTenantChange"
+  },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
     "description": "property with private setter",
