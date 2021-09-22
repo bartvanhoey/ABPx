@@ -608,6 +608,11 @@
     "description": "Inserts a IDataFilterISoftDelete parameter",
     "prefix": "xIDataFilterISoftDeleteParam"
   },
+   "iDataFilterProperty": {
+    "body": "public IDataFilter DataFilter { get; set; }",
+    "description": "Inserts public IDataFilter DataFilter { get; set; }",
+    "prefix": "xIDataFilterProperty"
+  },
   "iGuidGeneratorParam": {
     "body": "IGuidGenerator$1 guidGenerator$0",
     "description": "Inserts a IGuidGenerator parameter",
