@@ -610,7 +610,7 @@
   },
    "iDataFilterProperty": {
     "body": "public IDataFilter DataFilter { get; set; }",
-    "description": "Inserts public IDataFilter DataFilter { get; set; }",
+    "description": "Inserts property public IDataFilter DataFilter { get; set; }",
     "prefix": "xIDataFilterProperty"
   },
   "iGuidGeneratorParam": {
