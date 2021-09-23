@@ -1126,7 +1126,6 @@
     "body": [
       "using (CurrentTenant.Change(tenantId))",
       "{",
-      "{",
       "\t$0",
       "}"
     ],
