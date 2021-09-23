@@ -1252,15 +1252,15 @@
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
   },
-  "returnDbContextFirstOrDefaultAsync": {
+  "returnDbContextSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
-    "description": "Inserts return await DbContext.FirstOrDefaultAsync()",
-    "prefix": "xReturnDbContextFirstOrDefaultAsync"
+    "description": "Inserts return await DbContextSet.FirstOrDefaultAsync()",
+    "prefix": "xReturnDbContextSetFirstOrDefaultAsync"
   },
-  "returnDbContextToListAsync": {
-    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where(${3:x} => $3.${4:propertyName} == $5).ToListAsync();$0",
-    "description": "Inserts return await DbContext.ToListAsync()",
-    "prefix": "xReturnDbContextToListAsync"
+  "returnDbContextSetToListAsync": {
+    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where$3(${4:x} => $4.${5:propertyName} == $6).ToListAsync();$0",
+    "description": "Inserts return await DbContextSet.ToListAsync()",
+    "prefix": "xReturnDbContextSetToListAsync"
   },
   "returnListResultDto": {
     "body": [
