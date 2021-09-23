@@ -1127,7 +1127,7 @@
       "using (CurrentTenant.Change(tenantId))",
       "{",
       "{",
-      "\t$0\";",
+      "\t$0",
       "}"
     ],
     "description": "Inserts using (CurrentTenant.Change(tenantId))",
