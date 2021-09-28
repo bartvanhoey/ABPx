@@ -1124,7 +1124,7 @@
   },
   "currentTenantChange": {
     "body": [
-      "using (CurrentTenant.Change(${1:tenantId|input.TenantId))}))",
+      "using (CurrentTenant.Change(${1:tenantId|input.TenantId}))",
       "{",
       "\t$0",
       "}"
