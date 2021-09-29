@@ -1257,6 +1257,11 @@
     "description": "Inserts return await DbContextSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbContextSetFirstOrDefaultAsync"
   },
+  "returnDbContextSetWhereToListAsync": {
+    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where(${3:x} => $3.${4:propertyName} == $5).ToListAsync()$6;$0",
+    "description": "Inserts return await DbContextSetWhereToListAsync",
+    "prefix": "xReturnDbContextSetWhereToListAsync"
+  },
   "returnDbContextSetToListAsync": {
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where$3(${4:x} => $4.${5:propertyName} == $6).ToListAsync();$0",
     "description": "Inserts return await DbContextSet.ToListAsync()",
