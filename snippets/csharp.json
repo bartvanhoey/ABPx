@@ -1247,6 +1247,11 @@
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
+  "ngRokHttpEuropeRegion": {
+    "body": ["ngrok http -region eu https://localhost:${1:44368}/ $0"],
+    "description": "Inserts ngrok http -region eu https://localhost:44368/",
+    "prefix": "xNgRokHttpEuropeRegion"
+  },
   "returnDbSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$2(${3:x} => $3.${4:propertyName} == $5);$0",
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
