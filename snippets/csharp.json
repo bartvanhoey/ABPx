@@ -632,6 +632,11 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iTenantManagerCtorParam": {
+    "body": "ITenantManager tenantManager$0",
+    "description": "Inserts ITenantManager tenantManger parameter in the constructor",
+    "prefix": "xITenantManagerCtorParam"
+  },
   "iStringLocalizerCtorParam": {
     "body": "IStringLocalizer$1<${WORKSPACE_NAME}Resource> localizer$0",
     "description": "Inserts the IStringLocalizer parameter in the constructor",
