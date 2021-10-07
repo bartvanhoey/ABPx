@@ -647,6 +647,11 @@
     "description": "Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor",
     "prefix": "xIPermissionGrantRepositoryCtorParamCtorParam"
   },
+  "iPermissionManagerCtorParam": {
+    "body": "IPermissionManager permissionManager$0",
+    "description": "Inserts an IPermissionManager permissionManager parameter in the constructor",
+    "prefix": "xIPermissionManagerCtorParam"
+  },
   "iTenantManagerCtorParam": {
     "body": "ITenantManager tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
