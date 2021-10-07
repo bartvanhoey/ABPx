@@ -637,6 +637,11 @@
     "description": "Inserts ITenantManager tenantManger parameter in the constructor",
     "prefix": "xITenantManagerCtorParam"
   },
+  "IdentityUserManager": {
+    "body": "IdentityUserManager identityUserManager$0",
+    "description": "Inserts IdentityUserManager identityManager parameter in the constructor",
+    "prefix": "xIdentityUserManagerCtorParam"
+  },
   "iStringLocalizerCtorParam": {
     "body": "IStringLocalizer$1<${WORKSPACE_NAME}Resource> localizer$0",
     "description": "Inserts the IStringLocalizer parameter in the constructor",
