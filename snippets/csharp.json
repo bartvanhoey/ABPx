@@ -637,6 +637,11 @@
     "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
     "prefix": "xIAppUserRepositoryCtorParam"
   },
+  "iCurrentTenantCtorParam": {
+    "body": "ICurrentTenant currentTenant$0",
+    "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
+    "prefix": "xICurrentTenantCtorParam"
+  },
   "iTenantManagerCtorParam": {
     "body": "ITenantManager tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
