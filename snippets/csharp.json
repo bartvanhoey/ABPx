@@ -652,6 +652,11 @@
     "description": "Inserts an IPermissionManager permissionManager parameter in the constructor",
     "prefix": "xIPermissionManagerCtorParam"
   },
+  "iConfigurationCtorParam": {
+    "body": "IConfiguration configuration$0",
+    "description": "Inserts an IConfiguration configuration parameter in the constructor",
+    "prefix": "xIConfigurationCtorParam"
+  },
   "iTenantManagerCtorParam": {
     "body": "ITenantManager tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
