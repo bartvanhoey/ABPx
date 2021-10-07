@@ -642,6 +642,11 @@
     "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
     "prefix": "xICurrentTenantCtorParam"
   },
+  "iPermissionGrantRepositoryCtorParam": {
+    "body": "IPermissionGrantRepository permissionGrantRepository$0",
+    "description": "Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor",
+    "prefix": "xIPermissionGrantRepositoryCtorParamCtorParam"
+  },
   "iTenantManagerCtorParam": {
     "body": "ITenantManager tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
