@@ -632,9 +632,14 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iAppUserRepositoryCtorParam": {
+    "body": "IAppUserRepository appUserRepository$0",
+    "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
+    "prefix": "xIAppUserRepositoryCtorParam"
+  },
   "iTenantManagerCtorParam": {
     "body": "ITenantManager tenantManager$0",
-    "description": "Inserts ITenantManager tenantManger parameter in the constructor",
+    "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
     "prefix": "xITenantManagerCtorParam"
   },
   "IdentityUserManager": {
