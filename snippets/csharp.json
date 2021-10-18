@@ -633,37 +633,37 @@
     "prefix": "xIRepoCtorDefaultParam"
   },
   "iAppUserRepositoryCtorParam": {
-    "body": "IAppUserRepository appUserRepository$0",
+    "body": "IAppUserRepository$1 appUserRepository$0",
     "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
     "prefix": "xIAppUserRepositoryCtorParam"
   },
   "iCurrentTenantCtorParam": {
-    "body": "ICurrentTenant currentTenant$0",
+    "body": "ICurrentTenant$1 currentTenant$0",
     "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
     "prefix": "xICurrentTenantCtorParam"
   },
   "iPermissionGrantRepositoryCtorParam": {
-    "body": "IPermissionGrantRepository permissionGrantRepository$0",
+    "body": "IPermissionGrantRepository$1 permissionGrantRepository$0",
     "description": "Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor",
     "prefix": "xIPermissionGrantRepositoryCtorParamCtorParam"
   },
   "iPermissionManagerCtorParam": {
-    "body": "IPermissionManager permissionManager$0",
+    "body": "IPermissionManager$1 permissionManager$0",
     "description": "Inserts an IPermissionManager permissionManager parameter in the constructor",
     "prefix": "xIPermissionManagerCtorParam"
   },
   "iConfigurationCtorParam": {
-    "body": "IConfiguration configuration$0",
+    "body": "IConfiguration$1 configuration$0",
     "description": "Inserts an IConfiguration configuration parameter in the constructor",
     "prefix": "xIConfigurationCtorParam"
   },
   "iTenantManagerCtorParam": {
-    "body": "ITenantManager tenantManager$0",
+    "body": "ITenantManager$1 tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
     "prefix": "xITenantManagerCtorParam"
   },
   "IdentityUserManager": {
-    "body": "IdentityUserManager identityUserManager$0",
+    "body": "IdentityUserManager$1 identityUserManager$0",
     "description": "Inserts IdentityUserManager identityManager parameter in the constructor",
     "prefix": "xIdentityUserManagerCtorParam"
   },
