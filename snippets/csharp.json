@@ -780,10 +780,15 @@
     "description": "Implements IMultiTenant interface",
     "prefix": "xImpIMultiTenant"
   },
-  "implementICorrespondingAppService": {
+  "implementCorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
-    "prefix": "xImpICorrespondingAppService"
+    "prefix": "xImpCorrespondingAppService"
+  },
+  "implementICorrespondingRepository": {
+    "body": "I${TM_FILENAME_BASE}$0",
+    "description": "Implements corresponding IRepository interface",
+    "prefix": "xImpCorrespondingRepository"
   },
   "implementIDataSeedContributor": {
     "body": " IDataSeedContributor$2, ITransientDependency$1$0",
