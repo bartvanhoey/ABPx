@@ -569,7 +569,7 @@
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, Create$1Dto, Update$1Dto>$0",
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, Create$1Dto, Update$1Dto>, IApplicationService$0",
       "{",
       "\t$0",
       "}"
@@ -579,7 +579,7 @@
   },
   "iCrudAppServiceCreateUpdateDto": {
     "body": [
-      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>$0",
+      "public interface ${TM_FILENAME_BASE} : ICrudAppService<${1:Type}Dto, ${2|Guid,int,string|}$3, PagedAndSortedResultRequestDto$4, CreateUpdate$1Dto>, IApplicationService$0",
       "{",
       "\t$0",
       "}"
