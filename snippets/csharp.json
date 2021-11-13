@@ -290,47 +290,62 @@
     "description": "Check.NotNullOrWhiteSpace (+ Max/MinLength) statement",
     "prefix": "xCheckNotNullOrWhiteSpaceMaxMinLength"
   },
-  "createMapFromCreateDtoToType": {
+  "createMapCreateDtoToType": {
     "body": "CreateMap<Create${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from Create[Type]Dto to [Type] statement",
     "prefix": "xCreateMapCreateDtoToType"
   },
-  "createMapFromCreateUpdateDtoToType": {
+  "createMapCreateUpdateDtoToType": {
     "body": "CreateMap<CreateUpdate${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from CreateUpdate[Type]Dto to [Type] statement",
     "prefix": "xCreateMapCreateUpdateDtoToType"
   },
-  "createMapFromDtoToCreateUpdateDto": {
+  "createMapDtoToCreateUpdateDto": {
     "body": "CreateMap<${1:SourceType}Dto, CreateUpdate$1Dto>();$0",
     "description": "CreateMap from [Type]Dto to CreateUpdate[Type]Dto statement",
     "prefix": "xCreateMapDtoToCreateUpdateDto"
   },
-  "createMapFromDtoToType": {
+  "createMapDtoToType": {
     "body": "CreateMap<${1:SourceType}Dto,${2:DestinationType}>();$0",
     "description": "CreateMap from [Type]Dto to [Type] statement",
     "prefix": "xCreateMapDtoToType"
   },
-  "createMapFromDtoToUpdateDto": {
+  "createMapDtoToUpdateDto": {
     "body": "CreateMap<${1:SourceType}Dto, Update$1Dto>();$0",
     "description": "CreateMap from [Type]Dto to Update[Type]Dto statement",
     "prefix": "xCreateMapDtoToUpdateDto"
   },
-  "createMapFromTo": {
+  "createMapTo": {
     "body": "CreateMap<${1:SourceType}$2,${3:DestinationType}$4>();$0",
     "description": "CreateMap from SourceType to DestinationType statement",
     "prefix": "xCreateMapTo"
   },
-  "createMapFromTypeToDto": {
+  "createMapTypeToDto": {
     "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
     "description": "CreateMap from [Type] to [Type]Dto statement",
     "prefix": "xCreateMapTypeToDto"
   },
-  "createMapFromTypeToLookupDto": {
+  "createMapTypeToCreateDto": {
+    "body": "CreateMap<${1:SourceType}, Create$1Dto>();$0",
+    "description": "CreateMap from [Type] to Create[Type]Dto statement",
+    "prefix": "xCreateMapTypeToCreateTypeDto"
+  },
+  "createMapTypeToUpdateDto": {
+    "body": "CreateMap<${1:SourceType}, Update$1Dto>();$0",
+    "description": "CreateMap from [Type] to Update[Type]Dto statement",
+    "prefix": "xCreateMapTypeToUpdateTypeDto"
+  },
+  "createMapTypeToCreateUpdateDto": {
+    "body": "CreateMap<${1:SourceType}, CreateUpdate$1Dto>();$0",
+    "description": "CreateMap from [Type] to CreateUpdate[Type]Dto statement",
+    "prefix": "xCreateMapTypeToCreateUpdateTypeDto"
+  },
+  "createMapTypeToLookupDto": {
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
     "description": "CreateMap from [Type] to [Type]LookupDto statement",
     "prefix": "xCreateMapTypeToLookupDto"
   },
-  "createMapFromUpdateDtoToType": {
+  "createMapUpdateDtoToType": {
     "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
     "description": "CreateMap from Update[Type]Dto to [Type] statement",
     "prefix": "xCreateMapUpdateDtoToType"
@@ -1078,15 +1093,15 @@
     "description": "ObjectMapper.Map statement",
     "prefix": "xMap"
   },
-  "mapFromDtoToType": {
+  "MapDtoToType": {
     "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:Source}Dto, ${3:$2}>(${4:${2/(.*)/${1:/downcase}/}}Dto);$0",
     "description": "ObjectMapper.Map from Dto to Type statement",
-    "prefix": "xMapFromDtoToType"
+    "prefix": "xMapDtoToType"
   },
-  "mapFromTypeToDto": {
+  "MapTypeToDto": {
     "body": "${1|ObjectMapper,_objectMapper|}.Map<${2:SourceType}, ${3:$2}Dto>(${4:${2/(.*)/${1:/downcase}/}});$0",
     "description": "ObjectMapper.Map from Type To Dto statement",
-    "prefix": "xMapFromTypeToDto"
+    "prefix": "xMapTypeToDto"
   },
   "onAfterRender": {
     "body": [
