@@ -56,6 +56,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xCreateMapDtoToUpdateDto                      | CreateMap from [Type]Dto to Update[Type]Dto statement                                       
      xCreateMapTo                                  | CreateMap from SourceType to DestinationType statement                                      
      xCreateMapTypeToDto                           | CreateMap from [Type] to [Type]Dto statement                                                
+     xCreateMapTypeToCreateTypeDto                 | CreateMap from [Type] to Create[Type]Dto statement                                          
+     xCreateMapTypeToUpdateTypeDto                 | CreateMap from [Type] to Update[Type]Dto statement                                          
+     xCreateMapTypeToCreateUpdateTypeDto           | CreateMap from [Type] to CreateUpdate[Type]Dto statement                                    
      xCreateMapTypeToLookupDto                     | CreateMap from [Type] to [Type]LookupDto statement                                          
      xCreateMapUpdateDtoToType                     | CreateMap from Update[Type]Dto to [Type] statement                                          
      xCrudAppServiceCreateDtoAndUpdateDto          | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated              
@@ -120,7 +123,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xImpIHasCreationTime                          | Implements IHasCreationTime interface                                                       
      xImpIApplicationService                       | Implements IApplicationService interface                                                    
      xImpIMultiTenant                              | Implements IMultiTenant interface                                                           
-     xImpICorrespondingAppService                  | Implements corresponding IAppService interface                                              
+     xImpCorrespondingAppService                   | Implements corresponding IAppService interface                                              
+     xImpCorrespondingRepository                   | Implements corresponding IRepository interface                                              
      xImpIDataSeedContributor                      | Implements IDataSeedContributor (+ ITransientDependency) interface                          
      xImpIRepository                               | Implements IRepository interface                                                            
      xImpITransientDependency                      | Implements ITransientDependency interface                                                   
@@ -170,8 +174,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xNotifySuccess                                | Inserts await Notify.Success(Message) statement                                             
      xNotifyWarn                                   | Inserts await Notify.Warn(Message) statement                                                
      xMap                                          | ObjectMapper.Map statement                                                                  
-     xMapFromDtoToType                             | ObjectMapper.Map from Dto to Type statement                                                 
-     xMapFromTypeToDto                             | ObjectMapper.Map from Type To Dto statement                                                 
+     xMapDtoToType                                 | ObjectMapper.Map from Dto to Type statement                                                 
+     xMapTypeToDto                                 | ObjectMapper.Map from Type To Dto statement                                                 
      xOnAfterRender                                | OnAfterRender method stub                                                                   
      xOnAfterRenderAsync                           | OnAfterRenderAsync method stub                                                              
      xOnInitialized                                | OnInitialized method stub                                                                   
