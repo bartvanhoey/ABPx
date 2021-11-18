@@ -727,6 +727,11 @@
     "description": "Adds a GetListAsync method to an IRepository interface",
     "prefix": "xGetListAsyncMethodStub"
   },
+  "getAsyncMethodStub": {
+    "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
+    "description": "Adds a GetAsync method to an IRepository interface",
+    "prefix": "xGetAsyncMethodStub"
+  },
   "iSoftDeleteDisable": {
     "body": [
       "//Temporary disable the ISoftDelete filter",

@@ -111,6 +111,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method to an IRepository interface                                   
      xGetListAsyncMethodStub                       | Adds a GetListAsync method to an IRepository interface                                      
+     xGetAsyncMethodStub                           | Adds a GetAsync method to an IRepository interface                                          
      xISoftDeleteDisable                           | Inserts using (_softDeleteFilter.Disable()){} statement                                     
      xISpecificationParam                          | Inserts a ISpecification parameter                                                          
      xIfInline                                     | Inline if statement                                                                         
