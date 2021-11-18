@@ -64,6 +64,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xCrudAppServiceCreateDtoAndUpdateDto          | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated              
      xCrudAppServiceCreateUpdateDto                | Inserts a complete CrudAppService class with CreateUpdateDto combined                       
      xCtor                                         | constructor stub                                                                            
+     xCtorPrivate                                  | Insert a private constructor stub                                                           
+     xCtorPublic                                   | Insert a public constructor stub                                                            
+     xGetKeysMethod                                | Insert a GetKeys method                                                                     
      xCtorBusinessException                        | constructor stub in a class derived from BusinessException                                  
      xCustomBusinessExceptionClass                 | Inserts a complete CustomException class that inherits from class BusinessException         
      xDataTypeAttribute                            | DataType attribute                                                                          

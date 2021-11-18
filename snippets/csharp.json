@@ -394,6 +394,36 @@
     "description": "constructor stub",
     "prefix": "xCtor"
   },
+  "ctorPrivate": {
+    "body": [
+      "private ${TM_FILENAME_BASE/.razor//}($1)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Insert a private constructor stub",
+    "prefix": "xCtorPrivate"
+  },
+  "ctorPublic": {
+    "body": [
+      "public ${TM_FILENAME_BASE/.razor//}($1)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Insert a public constructor stub",
+    "prefix": "xCtorPublic"
+  },
+  "getKeysMethod": {
+    "body": [
+      "public override object[] GetKeys()",
+      "{",
+      "\treturn new object[] {${1:className}, ${2:className}};$0",
+      "}"
+    ],
+    "description": "Insert a GetKeys method", 
+    "prefix": "xGetKeysMethod"
+  },
   "ctorBusinessException": {
     "body": [
       "public ${TM_FILENAME_BASE}(${1:string} ${2:name})",
