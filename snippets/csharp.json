@@ -176,7 +176,7 @@
     "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
   },
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+    "body": ["[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
