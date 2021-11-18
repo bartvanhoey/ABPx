@@ -189,7 +189,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xParaId                                       | Inserts Id property with Parameter attribute                                                
      xPermissionClass                              | Inserts a static class with Default/Create/Update/Delete constants                          
      xCurrentTenantChange                          | Inserts using (CurrentTenant.Change(tenantId))                                              
-     xPropPrivateSetter                            | property with private setter                                                                
+     xPropPrivateSetter                            | Inserts property with private setter                                                        
+     xPropProtectedSetter                          | Inserts property with protected setter                                                      
      xReadOnlyListLookupDto                        | Inserts an IReadOnlyList for a LookupDto object                                             
      xRepoDeleteAsync                              | Inserts _repository.DeleteAsync statement                                                   
      xRepoDeleteManyAsync                          | Inserts _repository.DeleteManyAsync statement                                               
