@@ -30,6 +30,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAuthAttributeMicrosoft                       | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                          
      xBuilderEntity                                | builder.Entity stub                                                                         
      xPropertyHasMaxLengthIsRequired               | Inserts b.Property.HasMaxLength.IsRequired statement                                        
+     xHasKey                                       | Inserts hasKey statement (composite key)                                                    
+     xHasIndexCompositeKey                         | Inserts hasIndex statement (composite key)                                                  
+     xHasIndex                                     | Inserts hasIndex statement                                                                  
      xHasOneWithManyForeignKeyIsRequired           | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
      xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasMany().WithOne().ForeignKey().IsRequired statement                               
      xCanBeNullAttribute                           | CanBeNull attribute                                                                         

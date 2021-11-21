@@ -175,6 +175,27 @@
     "description": "Inserts b.Property.HasMaxLength.IsRequired statement",
     "prefix": "xPropertyHasMaxLengthIsRequired"
   },
+  "hasKey": {
+    "body": [
+      "b.HasKey(x => new {x.${1:Type}, x.${2:Type}});$0"
+    ],
+    "description": "Inserts hasKey statement (composite key)",
+    "prefix": "xHasKey"
+  },
+  "hasIndexCompositeKey": {
+    "body": [
+      "b.HasIndex(x => new {x.${1:Type}, x.${2:Type}});$0"
+    ],
+    "description": "Inserts hasIndex statement (composite key)",
+    "prefix": "xHasIndexCompositeKey"
+  },
+  "hasIndex": {
+    "body": [
+      "b.HasIndex(x => x.${1:PropertyName});$0"
+    ],
+    "description": "Inserts hasIndex statement",
+    "prefix": "xHasIndex"
+  },
   "hasOneWithManyForeignKeyIsRequired": {
     "body": [
       "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
