@@ -29,9 +29,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAuthAttributeAbp                             | Inserts the ABP Authorize attribute for a class or a method                                 
      xAuthAttributeMicrosoft                       | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                          
      xBuilderEntity                                | builder.Entity stub                                                                         
-     xBuilderHasMaxLengthIsRequired                | Inserts builder.Property.HasMaxLength.IsRequired statement                                  
-     xBuilderHasOneWithManyForeignKeyIsRequired    | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
-     xBuilderHasManyWithOneHasForeignKeyIsRequired | Inserts HasMany().WithOne().ForeignKey().IsRequired statement                               
+     xPropertyHasMaxLengthIsRequired               | Inserts b.Property.HasMaxLength.IsRequired statement                                        
+     xHasOneWithManyForeignKeyIsRequired           | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
+     xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasMany().WithOne().ForeignKey().IsRequired statement                               
      xCanBeNullAttribute                           | CanBeNull attribute                                                                         
      xCanCreate                                    | Boolean canCreate variable and checks if Create is granted                                  
      xCanCrudMethods                               | Checks if CRUD methods are granted                                                          

@@ -168,26 +168,26 @@
     "description": "builder.Entity stub",
     "prefix": "xBuilderEntity"
   },
-  "builderHasMaxLengthIsRequired": {
+  "PropertyHasMaxLengthIsRequired": {
     "body": [
       "b.Property(x => x.${1:Type}).HasMaxLength($1Consts.MaxNameLength).IsRequired();$0"
     ],
-    "description": "Inserts builder.Property.HasMaxLength.IsRequired statement",
-    "prefix": "xBuilderHasMaxLengthIsRequired"
+    "description": "Inserts b.Property.HasMaxLength.IsRequired statement",
+    "prefix": "xPropertyHasMaxLengthIsRequired"
   },
-  "builderHasOneWithManyForeignKeyIsRequired": {
+  "hasOneWithManyForeignKeyIsRequired": {
     "body": [
       "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xBuilderHasOneWithManyForeignKeyIsRequired"
+    "prefix": "xHasOneWithManyForeignKeyIsRequired"
   },
-  "builderHasManyWithOneHasForeignKeyIsRequired": {
+  "hasManyWithOneHasForeignKeyIsRequired": {
     "body": [
       "b.HasMany<${1:Type}>().WithOne().HasForeignKey(x => x.${2:TypeId}).IsRequired();"
     ],
     "description": "Inserts HasMany().WithOne().ForeignKey().IsRequired statement",
-    "prefix": "xBuilderHasManyWithOneHasForeignKeyIsRequired"
+    "prefix": "xHasManyWithOneHasForeignKeyIsRequired"
   },
 
   "canBeNullAttribute": {
