@@ -205,6 +205,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xRepoFirstOrDefaultAsync                      | Inserts var x = _repository.FindAsync statement                                             
      xRepoGetAsync                                 | Inserts var x = _repository.GetAsync statement                                              
      xRepoGetCountAsync                            | Inserts var totalCount = _repository.GetCountAsync statement                                
+     xRepoGetListAsyncWithInputParams              | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetListAsync                             | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetQueryableAsync                        | Inserts var queryable = _repository.GetQueryableAsync() statement                           
      xRepoHardDeleteAsync                          | Inserts _repository.HardDeleteAsync statement                                               

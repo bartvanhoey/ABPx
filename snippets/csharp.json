@@ -1328,9 +1328,17 @@
     "description": "Inserts var totalCount = _repository.GetCountAsync statement",
     "prefix": "xRepoGetCountAsync"
   },
-  "repoGetListAsync": {
+  "repoGetListAsyncWithInputParams": {
     "body": [
       "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.Sorting, input.SkipCount, input.MaxResultCount);",
+      "$0"
+    ],
+    "description": "Inserts var items = await _repository.GetListAsync() statement",
+    "prefix": "xRepoGetListAsyncWithInputParams"
+  },
+  "repoGetListAsync": {
+    "body": [
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3();",
       "$0"
     ],
     "description": "Inserts var items = await _repository.GetListAsync() statement",
