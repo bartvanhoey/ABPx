@@ -1411,8 +1411,7 @@
   },
   "returnListResultDto": {
     "body": [
-      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${2/(.*)/${4:${1:/downcase}/}}s));",
-      "$0"
+      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${4:${2/(.*)/${1:/downcase}/}}s));$0"
     ],
     "description": "Inserts return new ListResultDto statement",
     "prefix": "xReturnListResultDto"
