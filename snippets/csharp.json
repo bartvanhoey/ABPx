@@ -1038,9 +1038,14 @@
     "prefix": "xInjectService"
   },
   "managerCreateAsync": {
-    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:Name}Manager$2.CreateAsync($3);$0",
-    "description": "Inserts var x = await _manager.CreateAsync() statement",
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.CreateAsync($3);$0",
+    "description": "Inserts var x = await _nameManager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
+  },
+  "managerUpdateAsync": {
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.UpdateAsync($3);$0",
+    "description": "Inserts var name = await _nameManager.UpdateAsync() statement",
+    "prefix": "xManagerUpdateAsync"
   },
   "managerCustomCtorParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",

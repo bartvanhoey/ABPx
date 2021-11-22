@@ -164,7 +164,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xInjectIMapper                                | Inject IMapper property                                                                     
      xInjectNavigationManager                      | Inject NavigationManager property                                                           
      xInjectService                                | Inject IMyService MyService                                                                 
-     xManagerCreateAsync                           | Inserts var x = await _manager.CreateAsync() statement                                      
+     xManagerCreateAsync                           | Inserts var x = await _nameManager.CreateAsync() statement                                  
+     xManagerUpdateAsync                           | Inserts var name = await _nameManager.UpdateAsync() statement                               
      xManagerCustomCtorParam                       | Inserts a custom Manager parameter in constructor                                           
      xMethodAsync                                  | Inserts an async Task method stub                                                           
      xMethodAsyncReturn                            | Inserts an async task<ReturnType> method stub                                               
