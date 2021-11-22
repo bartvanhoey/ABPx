@@ -629,9 +629,9 @@
       "",
       "\tTask UpdateAsync($4 id, Update$2Dto$10 input);",
       "",
-      "\tTask DeleteAsync($4 id);$0",
+      "\tTask DeleteAsync($4 id);",
       "",
-      "}"
+      "}$0"
     ],
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppServiceStubCrudMethods"
@@ -1325,7 +1325,7 @@
   },
   "repoGetListAsync": {
     "body": [
-      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.Sorting, input.SkipCount, input.MaxResultCount);",
       "$0"
     ],
     "description": "Inserts var items = await _repository.GetListAsync() statement",
