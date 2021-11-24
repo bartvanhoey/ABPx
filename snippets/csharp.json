@@ -168,15 +168,52 @@
     "description": "builder.Entity stub",
     "prefix": "xBuilderEntity"
   },
-  "builderHasOneWithManyForeignKeyRequired": {
+  "PropertyHasMaxLengthIsRequired": {
     "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();"
+      "b.Property(x => x.${1:Type}).HasMaxLength($1Consts.MaxNameLength).IsRequired();$0"
+    ],
+    "description": "Inserts b.Property.HasMaxLength.IsRequired statement",
+    "prefix": "xPropertyHasMaxLengthIsRequired"
+  },
+  "hasKey": {
+    "body": [
+      "b.HasKey(x => new {x.${1:Type}, x.${2:Type}});$0"
+    ],
+    "description": "Inserts hasKey statement (composite key)",
+    "prefix": "xHasKey"
+  },
+  "hasIndexCompositeKey": {
+    "body": [
+      "b.HasIndex(x => new {x.${1:Type}, x.${2:Type}});$0"
+    ],
+    "description": "Inserts hasIndex statement (composite key)",
+    "prefix": "xHasIndexCompositeKey"
+  },
+  "hasIndex": {
+    "body": [
+      "b.HasIndex(x => x.${1:PropertyName});$0"
+    ],
+    "description": "Inserts hasIndex statement",
+    "prefix": "xHasIndex"
+  },
+  "hasOneWithManyForeignKeyIsRequired": {
+    "body": [
+      "b.HasOne<${1:Type}>().WithMany($2).HasForeignKey(x => x.$1Id).IsRequired();$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xBuilderHasOneWithManyForeignKeyRequired"
+    "prefix": "xHasOneWithManyForeignKeyIsRequired"
   },
+  "hasManyWithOneHasForeignKeyIsRequired": {
+    "body": [
+      "b.HasMany(x => x.${1:Type}).WithOne().HasForeignKey(x => x.${2:Type}Id).IsRequired();$0"
+    ],
+    "description": "Inserts HasMany().WithOne().ForeignKey().IsRequired statement",
+    "prefix": "xHasManyWithOneHasForeignKeyIsRequired"
+  },
+
   "canBeNullAttribute": {
-    "body": ["[CanBeNull$1] ${2:string} ${3:name} = null$0"],
+
+    "body": ["[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -394,6 +431,36 @@
     "description": "constructor stub",
     "prefix": "xCtor"
   },
+  "ctorPrivate": {
+    "body": [
+      "private ${TM_FILENAME_BASE/.razor//}($1)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Insert a private constructor stub",
+    "prefix": "xCtorPrivate"
+  },
+  "ctorPublic": {
+    "body": [
+      "public ${TM_FILENAME_BASE/.razor//}($1)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Insert a public constructor stub",
+    "prefix": "xCtorPublic"
+  },
+  "getKeysMethod": {
+    "body": [
+      "public override object[] GetKeys()",
+      "{",
+      "\treturn new object[] {${1:className}, ${2:className}};$0",
+      "}"
+    ],
+    "description": "Insert a GetKeys method", 
+    "prefix": "xGetKeysMethod"
+  },
   "ctorBusinessException": {
     "body": [
       "public ${TM_FILENAME_BASE}(${1:string} ${2:name})",
@@ -562,9 +629,9 @@
       "",
       "\tTask UpdateAsync($4 id, Update$2Dto$10 input);",
       "",
-      "\tTask DeleteAsync($4 id);$0",
+      "\tTask DeleteAsync($4 id);",
       "",
-      "}"
+      "}$0"
     ],
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
     "prefix": "xIAppServiceStubCrudMethods"
@@ -696,6 +763,11 @@
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method to an IRepository interface",
     "prefix": "xGetListAsyncMethodStub"
+  },
+  "getAsyncMethodStub": {
+    "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
+    "description": "Adds a GetAsync method to an IRepository interface",
+    "prefix": "xGetAsyncMethodStub"
   },
   "iSoftDeleteDisable": {
     "body": [
@@ -966,9 +1038,14 @@
     "prefix": "xInjectService"
   },
   "managerCreateAsync": {
-    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:Name}Manager$2.CreateAsync($3);$0",
-    "description": "Inserts var x = await _manager.CreateAsync() statement",
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.CreateAsync($3);$0",
+    "description": "Inserts var x = await _nameManager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
+  },
+  "managerUpdateAsync": {
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.UpdateAsync($3);$0",
+    "description": "Inserts var name = await _nameManager.UpdateAsync() statement",
+    "prefix": "xManagerUpdateAsync"
   },
   "managerCustomCtorParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
@@ -1251,9 +1328,17 @@
     "description": "Inserts var totalCount = _repository.GetCountAsync statement",
     "prefix": "xRepoGetCountAsync"
   },
+  "repoGetListAsyncWithInputParams": {
+    "body": [
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.Sorting, input.SkipCount, input.MaxResultCount);",
+      "$0"
+    ],
+    "description": "Inserts var items = await _repository.GetListAsync() statement",
+    "prefix": "xRepoGetListAsyncWithInputParams"
+  },
   "repoGetListAsync": {
     "body": [
-      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3();",
       "$0"
     ],
     "description": "Inserts var items = await _repository.GetListAsync() statement",
@@ -1334,8 +1419,7 @@
   },
   "returnListResultDto": {
     "body": [
-      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${2/(.*)/${4:${1:/downcase}/}}s));",
-      "$0"
+      "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${4:${2/(.*)/${1:/downcase}/}}s));$0"
     ],
     "description": "Inserts return new ListResultDto statement",
     "prefix": "xReturnListResultDto"

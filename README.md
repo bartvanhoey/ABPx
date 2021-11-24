@@ -29,7 +29,12 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAuthAttributeAbp                             | Inserts the ABP Authorize attribute for a class or a method                                 
      xAuthAttributeMicrosoft                       | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                          
      xBuilderEntity                                | builder.Entity stub                                                                         
-     xBuilderHasOneWithManyForeignKeyRequired      | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
+     xPropertyHasMaxLengthIsRequired               | Inserts b.Property.HasMaxLength.IsRequired statement                                        
+     xHasKey                                       | Inserts hasKey statement (composite key)                                                    
+     xHasIndexCompositeKey                         | Inserts hasIndex statement (composite key)                                                  
+     xHasIndex                                     | Inserts hasIndex statement                                                                  
+     xHasOneWithManyForeignKeyIsRequired           | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
+     xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasMany().WithOne().ForeignKey().IsRequired statement                               
      xCanBeNullAttribute                           | CanBeNull attribute                                                                         
      xCanCreate                                    | Boolean canCreate variable and checks if Create is granted                                  
      xCanCrudMethods                               | Checks if CRUD methods are granted                                                          
@@ -64,6 +69,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xCrudAppServiceCreateDtoAndUpdateDto          | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated              
      xCrudAppServiceCreateUpdateDto                | Inserts a complete CrudAppService class with CreateUpdateDto combined                       
      xCtor                                         | constructor stub                                                                            
+     xCtorPrivate                                  | Insert a private constructor stub                                                           
+     xCtorPublic                                   | Insert a public constructor stub                                                            
+     xGetKeysMethod                                | Insert a GetKeys method                                                                     
      xCtorBusinessException                        | constructor stub in a class derived from BusinessException                                  
      xCustomBusinessExceptionClass                 | Inserts a complete CustomException class that inherits from class BusinessException         
      xDataTypeAttribute                            | DataType attribute                                                                          
@@ -108,6 +116,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method to an IRepository interface                                   
      xGetListAsyncMethodStub                       | Adds a GetListAsync method to an IRepository interface                                      
+     xGetAsyncMethodStub                           | Adds a GetAsync method to an IRepository interface                                          
      xISoftDeleteDisable                           | Inserts using (_softDeleteFilter.Disable()){} statement                                     
      xISpecificationParam                          | Inserts a ISpecification parameter                                                          
      xIfInline                                     | Inline if statement                                                                         
@@ -155,7 +164,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xInjectIMapper                                | Inject IMapper property                                                                     
      xInjectNavigationManager                      | Inject NavigationManager property                                                           
      xInjectService                                | Inject IMyService MyService                                                                 
-     xManagerCreateAsync                           | Inserts var x = await _manager.CreateAsync() statement                                      
+     xManagerCreateAsync                           | Inserts var x = await _nameManager.CreateAsync() statement                                  
+     xManagerUpdateAsync                           | Inserts var name = await _nameManager.UpdateAsync() statement                               
      xManagerCustomCtorParam                       | Inserts a custom Manager parameter in constructor                                           
      xMethodAsync                                  | Inserts an async Task method stub                                                           
      xMethodAsyncReturn                            | Inserts an async task<ReturnType> method stub                                               
@@ -186,7 +196,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xParaId                                       | Inserts Id property with Parameter attribute                                                
      xPermissionClass                              | Inserts a static class with Default/Create/Update/Delete constants                          
      xCurrentTenantChange                          | Inserts using (CurrentTenant.Change(tenantId))                                              
-     xPropPrivateSetter                            | property with private setter                                                                
+     xPropPrivateSetter                            | Inserts property with private setter                                                        
+     xPropProtectedSetter                          | Inserts property with protected setter                                                      
      xReadOnlyListLookupDto                        | Inserts an IReadOnlyList for a LookupDto object                                             
      xRepoDeleteAsync                              | Inserts _repository.DeleteAsync statement                                                   
      xRepoDeleteManyAsync                          | Inserts _repository.DeleteManyAsync statement                                               
@@ -194,6 +205,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xRepoFirstOrDefaultAsync                      | Inserts var x = _repository.FindAsync statement                                             
      xRepoGetAsync                                 | Inserts var x = _repository.GetAsync statement                                              
      xRepoGetCountAsync                            | Inserts var totalCount = _repository.GetCountAsync statement                                
+     xRepoGetListAsyncWithInputParams              | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetListAsync                             | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetQueryableAsync                        | Inserts var queryable = _repository.GetQueryableAsync() statement                           
      xRepoHardDeleteAsync                          | Inserts _repository.HardDeleteAsync statement                                               
