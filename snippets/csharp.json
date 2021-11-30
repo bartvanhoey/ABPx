@@ -1489,7 +1489,7 @@
     "prefix": "xThrowNewUserFriendlyException"
   },
   "withData": {
-    "body": ["\t\tWithData(\"${1:parameterName}\", ${2:$1})"],
+    "body": ["\t\tWithData(\"${1:parameterName}\", ${2:$1});"],
     "description": "Inserts a WithData statement",
     "prefix": "xWithData"
   },
