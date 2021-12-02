@@ -358,7 +358,7 @@
     "prefix": "xCreateMapTo"
   },
   "createMapTypeToDto": {
-    "body": "CreateMap<${1:SourceType},${2:$1}Dto>();$0",
+    "body": "CreateMap<${1:SourceType}, ${2:$1}Dto>();$0",
     "description": "CreateMap from [Type] to [Type]Dto statement",
     "prefix": "xCreateMapTypeToDto"
   },
