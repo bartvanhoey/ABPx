@@ -1527,6 +1527,11 @@
     "description": "Inserts return await DbContextSet.ToListAsync()",
     "prefix": "xReturnDbContextSetToListAsync"
   },
+  "usingSystemLinqDynamicCore": {
+    "body": "using System.Linq.Dynamic.Core;$0",
+    "description": "Inserts using System.Linq.Dynamic.Core statement",
+    "prefix": "xUsingSystemLinqDynamicCore"
+  },
   "returnListResultDto": {
     "body": [
       "return new ListResultDto<$3>(ObjectMapper.Map<List$1<${2:SourceType}>, List<${3:DestinationType}>>(${4:${2/(.*)/${1:/downcase}/}}s));$0"
