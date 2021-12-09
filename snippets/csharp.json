@@ -69,17 +69,23 @@
     "prefix": "xAppServiceCreateAsync"
   },
   "appServiceDeleteAsync": {
-    "body": ["await ${1:Name}AppService.DeleteAsync(${3:id});$0"],
+    "body": [
+      "await ${1:Name}AppService.DeleteAsync(${3:id});$0"
+    ],
     "description": "Inserts await NameAppService.DeleteAsync() statement",
     "prefix": "xAppServiceDeleteAsync"
   },
   "appServiceGetAsync": {
-    "body": ["${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"],
+    "body": [
+      "${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"
+    ],
     "description": "Inserts var x = NameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
   "appServiceGetListAsync": {
-    "body": ["${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"],
+    "body": [
+      "${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"
+    ],
     "description": "Inserts var x = NameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
@@ -150,7 +156,9 @@
     "prefix": "xAuthAttributeAbp"
   },
   "authAttributeMicrosoft": {
-    "body": ["[Authorize$1]$0"],
+    "body": [
+      "[Authorize$1]$0"
+    ],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthAttributeMicrosoft"
   },
@@ -210,10 +218,10 @@
     "description": "Inserts HasMany().WithOne().ForeignKey().IsRequired statement",
     "prefix": "xHasManyWithOneHasForeignKeyIsRequired"
   },
-
   "canBeNullAttribute": {
-
-    "body": ["[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"],
+    "body": [
+      "[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"
+    ],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -258,22 +266,30 @@
     "prefix": "xCanUpdate"
   },
   "checkGetListPolicyAsync": {
-    "body": ["await CheckGetListPolicyAsync$1();$0"],
+    "body": [
+      "await CheckGetListPolicyAsync$1();$0"
+    ],
     "description": "Inserts await CheckGetListPolicyAsync()",
     "prefix": "xCheckGetListPolicyAsync"
   },
   "checkGetPolicyAsync": {
-    "body": ["await CheckGetPolicyAsync$1();$0"],
+    "body": [
+      "await CheckGetPolicyAsync$1();$0"
+    ],
     "description": "Inserts await CheckGetPolicyAsync()",
     "prefix": "xCheckGetPolicyAsync"
   },
   "tenantIdGuidProperty": {
-    "body": ["public Guid? TenantId { get; set; }$0"],
+    "body": [
+      "public Guid? TenantId { get; set; }$0"
+    ],
     "description": "Inserts public Guid? TenantId { get; set; } property ",
     "prefix": "xTenantIdGuidProperty"
   },
   "tenantIdStringProperty": {
-    "body": ["public string TenantId { get; set; }$0"],
+    "body": [
+      "public string TenantId { get; set; }$0"
+    ],
     "description": "Inserts public string TenantId { get; set; } property ",
     "prefix": "xTenantIdStringProperty"
   },
@@ -463,7 +479,7 @@
       "\treturn new object[] {${1:className}, ${2:className}};$0",
       "}"
     ],
-    "description": "Insert a GetKeys method", 
+    "description": "Insert a GetKeys method",
     "prefix": "xGetKeysMethod"
   },
   "ctorBusinessException": {
@@ -502,7 +518,9 @@
     "prefix": "xDbSet"
   },
   "dependencyAttribute": {
-    "body": ["[Dependency$1(ReplaceServices = ${2|true,false|})]"],
+    "body": [
+      "[Dependency$1(ReplaceServices = ${2|true,false|})]"
+    ],
     "description": "Inserts Dependency attribute",
     "prefix": "xDependencyAttribute"
   },
@@ -521,17 +539,23 @@
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "emailAddressAttribute": {
-    "body": ["[EmailAddress$1] $0"],
+    "body": [
+      "[EmailAddress$1] $0"
+    ],
     "description": "EmailAddress Attribute",
     "prefix": "xEmailAddressAttribute"
   },
   "exposeServicesAttribute": {
-    "body": ["[ExposeServices$1(typeof(${2:TypeName}))]"],
+    "body": [
+      "[ExposeServices$1(typeof(${2:TypeName}))]"
+    ],
     "description": "Inserts ExposeServices attribute",
     "prefix": "xExposeServicesAttribute"
   },
   "filterProperty": {
-    "body": ["public string Filter { get; set; }"],
+    "body": [
+      "public string Filter { get; set; }"
+    ],
     "description": "Inserts property Filter",
     "prefix": "xFilterProperty"
   },
@@ -558,7 +582,9 @@
     "prefix": "xGetLookupIAppService"
   },
   "getPrivateSet": {
-    "body": ["{ get; private set; }$0"],
+    "body": [
+      "{ get; private set; }$0"
+    ],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
@@ -579,7 +605,9 @@
     "prefix": "xGetRequiredService"
   },
   "getSet": {
-    "body": ["{ get; set; }$0"],
+    "body": [
+      "{ get; set; }$0"
+    ],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
@@ -597,7 +625,10 @@
     "prefix": "xIAppServiceCreateAsyncDefinition"
   },
   "iAppServiceDeleteAsyncDefinition": {
-    "body": ["\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});", "\t$0"],
+    "body": [
+      "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
+      "\t$0"
+    ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
     "prefix": "xIAppServiceDeleteAsyncDefinition"
   },
@@ -791,12 +822,20 @@
     "prefix": "xISpecificationParam"
   },
   "ifInlineStatement": {
-    "body": ["if (${1:MyCondition}) $2", "$0"],
+    "body": [
+      "if (${1:MyCondition}) $2",
+      "$0"
+    ],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
   "ifResultSucceededStatement": {
-    "body": ["if (result.Succeeded)", "\t{", "\t$0", "\t}"],
+    "body": [
+      "if (result.Succeeded)",
+      "\t{",
+      "\t$0",
+      "\t}"
+    ],
     "description": "If result.Succeeded statement",
     "prefix": "xIfResultSucceeded"
   },
@@ -823,22 +862,40 @@
     "prefix": "xIfIsGrantedAsyncPermission"
   },
   "ifNotNullInlineStatement": {
-    "body": ["if (${1:MyVariable} != null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} != null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNullInlineStatement": {
-    "body": ["if (${1:MyVariable} == null) $2", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null) $2",
+      "$0"
+    ],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyVariable} == null)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -853,7 +910,13 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifStatement": {
-    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
+    "body": [
+      "if (${1:MyCondition})",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -913,7 +976,9 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsApplicationService": {
-    "body": [" ApplicationService$0"],
+    "body": [
+      " ApplicationService$0"
+    ],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
@@ -998,7 +1063,9 @@
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
   "inheritsProjectNameAppService": {
-    "body": [" ${1:${WORKSPACE_NAME}}AppService$0"],
+    "body": [
+      " ${1:${WORKSPACE_NAME}}AppService$0"
+    ],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhProjectNameAppService"
   },
@@ -1024,7 +1091,9 @@
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
+    "body": [
+      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
+    ],
     "description": "Inject IMapper property",
     "prefix": "xInjectIMapper"
   },
@@ -1141,12 +1210,16 @@
     "prefix": "xNewObjectInitializer"
   },
   "notEmptyGuidAttribute": {
-    "body": ["[NotEmptyGuid$1] $0"],
+    "body": [
+      "[NotEmptyGuid$1] $0"
+    ],
     "description": "Inserts NotEmptyGuidAttribute",
     "prefix": "xNotEmptyGuidAttribute"
   },
   "notNullAttribute": {
-    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
+    "body": [
+      "[NotNull$1] ${2:string} ${3:name}$0"
+    ],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -1206,7 +1279,12 @@
     "prefix": "xOnAfterRenderAsync"
   },
   "onInitialized": {
-    "body": ["protected override void OnInitialized()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnInitialized method stub",
     "prefix": "xOnInitialized"
   },
@@ -1222,7 +1300,12 @@
     "prefix": "xOnInitializedAsync"
   },
   "onParametersSet": {
-    "body": ["protected override void OnParametersSet()", "{", "\t$0", "}"],
+    "body": [
+      "protected override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "OnParameterSet method stub",
     "prefix": "xOnParametersSet"
   },
@@ -1237,12 +1320,16 @@
     "prefix": "xOnParametersSetAsync"
   },
   "parameter": {
-    "body": ["[Parameter$1] public string ${2:Name} { get; set; }$0"],
+    "body": [
+      "[Parameter$1] public string ${2:Name} { get; set; }$0"
+    ],
     "description": "Inserts property with Parameter attribute",
     "prefix": "xPara"
   },
   "parameterId": {
-    "body": ["[Parameter$1] public string Id { get; set; }$0"],
+    "body": [
+      "[Parameter$1] public string Id { get; set; }$0"
+    ],
     "description": "Inserts Id property with Parameter attribute",
     "prefix": "xParaId"
   },
@@ -1393,12 +1480,16 @@
     "prefix": "xRepoUpdateManyAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": [
+      "[Required$1] $0"
+    ],
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
   "ngRokHttpEuropeRegion": {
-    "body": ["ngrok http -region eu https://localhost:${1:44368}/ $0"],
+    "body": [
+      "ngrok http -region eu https://localhost:${1:44368}/ $0"
+    ],
     "description": "Inserts ngrok http -region eu https://localhost:44368/",
     "prefix": "xNgRokHttpEuropeRegion"
   },
@@ -1406,6 +1497,20 @@
     "body": "return await ${1|dbSet,DbSet|}.FirstOrDefaultAsync$2(${3:x} => $3.${4:propertyName} == $5);$0",
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
+  },
+  "returnDbSetToListAsync": {
+    "body": [
+      "return await ${1|dbSet,DbSet|}.",
+      "\tWhereIf(",
+      "\t\t!filter.IsNullOrWhiteSpace()",
+      "\t\tx => x.${2:PropertyName}.Contains(filter))",
+      "\t.OrderBy(sorting)",
+      "\t.Skip(skipCount)",
+      "\t.Take(maxResultCount)",
+      "\t.ToListAsync();"
+    ],
+    "description": "Inserts return await DbSet.ToListAsync()",
+    "prefix": "xReturnDbSetToListAsync"
   },
   "returnDbContextSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
@@ -1459,42 +1564,58 @@
     "prefix": "xReturnPagedResultDtoObjectMapper"
   },
   "stringLengthAttribute": {
-    "body": ["[StringLength(${1:50})$2]$0"],
+    "body": [
+      "[StringLength(${1:50})$2]$0"
+    ],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
   "throwNewBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
+    "body": [
+      "throw new BusinessException$1(\"${2:TranslationKey}\");"
+    ],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowNewBusinessException"
   },
   "throwNewCustomException": {
-    "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
+    "body": [
+      "throw new ${1:Name}Exception(\"${2:TranslationKey}\");"
+    ],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowNewCustomException"
   },
   "throwUnauthorizedAccessException": {
-    "body": ["throw new UnauthorizedAccessException();"],
+    "body": [
+      "throw new UnauthorizedAccessException();"
+    ],
     "description": "Inserts throw new UnauthorizedAccessException statement",
     "prefix": "xThrowNewUnauthorizedAccessException"
   },
   "throwNewEntityNotFoundException": {
-    "body": ["throw new EntityNotFoundException$1($2);$0"],
+    "body": [
+      "throw new EntityNotFoundException$1($2);$0"
+    ],
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowNewEntityNotFoundException"
   },
   "throwNewNotImplementedException": {
-    "body": ["throw new System.NotImplementedException();"],
+    "body": [
+      "throw new System.NotImplementedException();"
+    ],
     "description": "Inserts throw new NotImplementedException statement",
     "prefix": "xThrowNewNotImplementedException"
   },
   "throwNewUserFriendlyException": {
-    "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
+    "body": [
+      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
+    ],
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowNewUserFriendlyException"
   },
   "withData": {
-    "body": ["\t\tWithData(\"${1:parameterName}\", ${2:$1});"],
+    "body": [
+      "\t\tWithData(\"${1:parameterName}\", ${2:$1});"
+    ],
     "description": "Inserts a WithData statement",
     "prefix": "xWithData"
   },
