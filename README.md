@@ -113,7 +113,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIPermissionManagerCtorParam                  | Inserts an IPermissionManager permissionManager parameter in the constructor                
      xIConfigurationCtorParam                      | Inserts an IConfiguration configuration parameter in the constructor                        
      xITenantManagerCtorParam                      | Inserts an ITenantManager tenantManger parameter in the constructor                         
-     xIdentityUserManagerCtorParam                 | Inserts IdentityUserManager identityManager parameter in the constructor                    
+     xIdentityUserManagerCtorParam                 | Inserts an IdentityUserManager identityManager parameter in the constructor                 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method to an IRepository interface                                   
      xGetListAsyncMethodStub                       | Adds a GetListAsync method to an IRepository interface                                      

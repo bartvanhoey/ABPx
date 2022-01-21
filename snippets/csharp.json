@@ -751,7 +751,7 @@
   },
   "IdentityUserManager": {
     "body": "IdentityUserManager$1 identityUserManager$0",
-    "description": "Inserts IdentityUserManager identityManager parameter in the constructor",
+    "description": "Inserts an IdentityUserManager identityManager parameter in the constructor",
     "prefix": "xIdentityUserManagerCtorParam"
   },
   "iStringLocalizerCtorParam": {
