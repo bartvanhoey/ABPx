@@ -113,7 +113,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIPermissionManagerCtorParam                  | Inserts an IPermissionManager permissionManager parameter in the constructor                
      xIConfigurationCtorParam                      | Inserts an IConfiguration configuration parameter in the constructor                        
      xITenantManagerCtorParam                      | Inserts an ITenantManager tenantManger parameter in the constructor                         
-     xIdentityUserManagerCtorParam                 | Inserts IdentityUserManager identityManager parameter in the constructor                    
+     xIdentityUserManagerCtorParam                 | Inserts an IdentityUserManager identityManager parameter in the constructor                 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method to an IRepository interface                                   
      xGetListAsyncMethodStub                       | Adds a GetListAsync method to an IRepository interface                                      
@@ -217,9 +217,11 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xRequiredAttribute                            | Inserts Required Attribute                                                                  
      xNgRokHttpEuropeRegion                        | Inserts ngrok http -region eu https://localhost:44368/                                      
      xReturnDbSetFirstOrDefaultAsync               | Inserts return await DbSet.FirstOrDefaultAsync()                                            
+     xReturnDbSetToListAsync                       | Inserts return await DbSet.ToListAsync()                                                    
      xReturnDbContextSetFirstOrDefaultAsync        | Inserts return await DbContextSet.FirstOrDefaultAsync()                                     
      xReturnDbContextSetWhereToListAsync           | Inserts return await DbContextSetWhereToListAsync                                           
      xReturnDbContextSetToListAsync                | Inserts return await DbContextSet.ToListAsync()                                             
+     xUsingSystemLinqDynamicCore                   | Inserts using System.Linq.Dynamic.Core statement                                            
      xReturnListResultDto                          | Inserts return new ListResultDto statement                                                  
      xReturnObjectMapperListTypeToListTypeDto      | return ObjectMapper.Map<List<Type>,List<TypeDto>> statement                                 
      xReturnObjectMap                              | return ObjectMapper.Map statement                                                           
