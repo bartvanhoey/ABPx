@@ -781,7 +781,7 @@
     "prefix": "xITenantManagerCtorParam"
   },
   "iTenantRepoCtorParam": {
-    "body": "IRepository<Tenant, Guid>$1 tenantRepository$0",
+    "body": "IRepository$1<Tenant§2, Guid> tenantRepository$0",
     "description": "Inserts an ITenantRepo parameter in the constructor",
     "prefix": "xITenantRepoCtorParam"
   },
