@@ -257,6 +257,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xUnResultItemsShouldNotContain                | Inserts result.Items.ShouldNotContain statement                                             
      xUnResultShouldBe                             | Inserts result.PropertyName.ShouldBe(Value) statement                                       
      xUnResultTotalCountShouldBeGreaterThan        | Inserts result.TotalCount.ShouldBeGreaterThan statement                                     
+     xUnResultTotalCountShouldBe                   | Inserts result.TotalCount.ShouldBe statement                                                
      xUnResultTotalCountShouldBeGreaterOrEqual     | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                              
      xVarIsObjectMapperMap                         | var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement                  
      xGroupNamePermissionConst                     | Inserts a permission GroupName constant                                                     

@@ -1796,6 +1796,10 @@
     "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
+  }, "unResultTotalCountShouldBe": {
+    "body": "result.TotalCount.ShouldBe$1(${2:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBe statement",
+    "prefix": "xUnResultTotalCountShouldBe"
   },
   "unResultTotalCountShouldBeGreaterThanOrEqual": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
