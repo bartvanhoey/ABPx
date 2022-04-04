@@ -204,6 +204,13 @@
     "description": "Inserts hasIndex statement",
     "prefix": "xHasIndex"
   },
+  "hasIndexUnique": {
+    "body": [
+      "b.HasIndex(x => x.${1:PropertyName}).IsUnique();$0"
+    ],
+    "description": "Inserts hasIndex with Unique statement",
+    "prefix": "xHasIndexUnique"
+  },
   "hasOneWithManyForeignKeyIsRequired": {
     "body": [
       "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"

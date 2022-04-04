@@ -33,6 +33,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xHasKey                                       | Inserts hasKey statement (composite key)                                                    
      xHasIndexCompositeKey                         | Inserts hasIndex statement (composite key)                                                  
      xHasIndex                                     | Inserts hasIndex statement                                                                  
+     xHasIndexUnique                               | Inserts hasIndex with Unique statement                                                      
      xHasOneWithManyForeignKeyIsRequired           | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
      xMaxLengthConst                               | Inserts a max length constant                                                               
      xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
