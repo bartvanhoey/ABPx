@@ -780,6 +780,11 @@
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
     "prefix": "xITenantManagerCtorParam"
   },
+  "iTenantRepoCtorParam": {
+    "body": "IRepository$1<Tenant§2, Guid> tenantRepository$0",
+    "description": "Inserts an ITenantRepo parameter in the constructor",
+    "prefix": "xITenantRepoCtorParam"
+  },
   "IdentityUserManager": {
     "body": "IdentityUserManager$1 identityUserManager$0",
     "description": "Inserts an IdentityUserManager identityManager parameter in the constructor",
