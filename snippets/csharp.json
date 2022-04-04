@@ -811,13 +811,18 @@
   },
   "findByNameAsyncMethodStub": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync method to an IRepository interface",
+    "description": "Adds a FindByNameAsync method stub",
     "prefix": "xFindByNameAsyncMethodStub"
   },
   "getListAsyncMethodStub": {
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync method to an IRepository interface",
+    "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
+  },
+  "getPagedListAsyncMethodStub": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
+    "description": "Adds a paged GetListAsync method stub",
+    "prefix": "xGetPagedListAsyncMethodStub"
   },
   "getAsyncMethodStub": {
     "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",

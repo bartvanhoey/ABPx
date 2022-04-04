@@ -118,8 +118,9 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xITenantRepoCtorParam                         | Inserts an ITenantRepo parameter in the constructor                                         
      xIdentityUserManagerCtorParam                 | Inserts an IdentityUserManager identityManager parameter in the constructor                 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
-     xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method to an IRepository interface                                   
-     xGetListAsyncMethodStub                       | Adds a GetListAsync method to an IRepository interface                                      
+     xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method stub                                                          
+     xGetListAsyncMethodStub                       | Adds a GetListAsync method stub                                                             
+     xGetPagedListAsyncMethodStub                  | Adds a paged GetListAsync method stub                                                       
      xGetAsyncMethodStub                           | Adds a GetAsync method to an IRepository interface                                          
      xISoftDeleteDisable                           | Inserts using (_softDeleteFilter.Disable()){} statement                                     
      xISpecificationParam                          | Inserts a ISpecification parameter                                                          
