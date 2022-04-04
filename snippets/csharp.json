@@ -108,21 +108,21 @@
   "asyncExecuterCountAsync": {
     "body": [
       "// using System.Linq;",
-      "var ${1|totalCount,count,total|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+      "var ${1|totalCount,count,total|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.CountAsync statement",
     "prefix": "xAsyncExecuterCountAsync"
   },
   "asyncExecuterFirstOrDefaultAsync": {
     "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:query});"
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.FirstOrDefaultAsync statement",
     "prefix": "xAsyncExecuterFirstOrDefaultAsync"
   },
   "asyncExecuterToListAsync": {
     "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:query});"
+      "var ${1:list} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
