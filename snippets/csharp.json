@@ -962,12 +962,12 @@
   "implementCorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
-    "prefix": "xImpCorrespondingAppService"
+    "prefix": "xImpCorrespondingIAppService"
   },
   "implementICorrespondingRepository": {
     "body": "I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IRepository interface",
-    "prefix": "xImpCorrespondingRepository"
+    "prefix": "xImpCorrespondingIRepository"
   },
   "implementIDataSeedContributor": {
     "body": " IDataSeedContributor$2, ITransientDependency$1$0",

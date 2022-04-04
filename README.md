@@ -137,8 +137,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xImpIHasCreationTime                          | Implements IHasCreationTime interface                                                       
      xImpIApplicationService                       | Implements IApplicationService interface                                                    
      xImpIMultiTenant                              | Implements IMultiTenant interface                                                           
-     xImpCorrespondingAppService                   | Implements corresponding IAppService interface                                              
-     xImpCorrespondingRepository                   | Implements corresponding IRepository interface                                              
+     xImpCorrespondingIAppService                  | Implements corresponding IAppService interface                                              
+     xImpCorrespondingIRepository                  | Implements corresponding IRepository interface                                              
      xImpIDataSeedContributor                      | Implements IDataSeedContributor (+ ITransientDependency) interface                          
      xImpIRepository                               | Implements IRepository interface                                                            
      xImpITransientDependency                      | Implements ITransientDependency interface                                                   
