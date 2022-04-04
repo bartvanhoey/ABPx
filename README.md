@@ -34,7 +34,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xHasIndexCompositeKey                         | Inserts hasIndex statement (composite key)                                                  
      xHasIndex                                     | Inserts hasIndex statement                                                                  
      xHasOneWithManyForeignKeyIsRequired           | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
-     xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasMany().WithOne().ForeignKey().IsRequired statement                               
+     xMaxLengthConst                               | Inserts a max length constant                                                               
+     xHasManyWithOneHasForeignKeyIsRequired        | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                         
      xCanBeNullAttribute                           | CanBeNull attribute                                                                         
      xCanCreate                                    | Boolean canCreate variable and checks if Create is granted                                  
      xCanCrudMethods                               | Checks if CRUD methods are granted                                                          
