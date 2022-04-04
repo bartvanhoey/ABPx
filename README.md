@@ -213,6 +213,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xRepoGetListAsyncWithInputParams              | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetListAsync                             | Inserts var items = await _repository.GetListAsync() statement                              
      xRepoGetQueryableAsync                        | Inserts var queryable = _repository.GetQueryableAsync() statement                           
+     xQueryableWithDetailsAsync                    | Inserts var queryable = _repository.GetQueryableAsync() statement                           
      xRepoHardDeleteAsync                          | Inserts _repository.HardDeleteAsync statement                                               
      xRepoInsertAsync                              | Inserts var inserted = await _repository.InsertAsync() statement                            
      xRepoInsertManyAsync                          | Inserts _repository.InsertManyAsync statement                                               

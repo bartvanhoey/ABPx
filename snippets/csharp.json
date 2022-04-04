@@ -1468,6 +1468,13 @@
     "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
   },
+  "xQueryableWithDetailsAsync": {
+    "body": [
+      "var queryable = await _${1:name}Repository.WithDetailsAsync(x => x.${2:Type}{);$0"
+    ],
+    "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
+    "prefix": "xQueryableWithDetailsAsync"
+  },
   "repoHardDeleteAsync": {
     "body": [
       "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
