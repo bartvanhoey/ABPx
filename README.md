@@ -92,10 +92,10 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xGetRequiredService                           | Inserts GetRequiredService and matching field                                               
      xGs                                           | Inserts { get, set }                                                                        
      xGuidGeneratorCreate                          | Inserts GuidGenerator.Create() statement                                                    
-     xIAppServiceCreateAsyncDefinition             | Inserts a CreateAsync definition for an IAppService interface                               
-     xIAppServiceDeleteAsyncDefinition             | Inserts a DeleteAsync definition for an IAppService interface                               
-     xIAppServiceGetAsyncDefinition                | Inserts a GetAsync definition for an IAppService interface                                  
-     xIAppServiceGetListAsyncDefinition            | Inserts a GetListAsync definition for an IAppService interface                              
+     xCreateAsyncMethodStubIAppService             | Inserts a CreateAsync definition for an IAppService interface                               
+     xDeleteAsyncMethodStubIAppService             | Inserts a DeleteAsync definition for an IAppService interface                               
+     xGetAsyncMethodStubIAppService                | Inserts a GetAsync definition for an IAppService interface                                  
+     xGetListAsyncMethodStubIAppService            | Inserts a GetListAsync definition for an IAppService interface                              
      xIAppServiceParam                             | Inserts a IAppService parameter                                                             
      xIAppServiceStubCrudMethods                   | Inserts a complete IAppService interface with CRUD methods for a given Type                 
      xIAppServiceUpdateAsyncDefinition             | Inserts a UpdateAsync definition for an IAppService interface                               
@@ -120,6 +120,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIStringLocalizerCtorParam                    | Inserts the IStringLocalizer parameter in the constructor                                   
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method stub                                                          
      xGetListAsyncMethodStub                       | Adds a GetListAsync method stub                                                             
+     xCreateAsyncMethodStub                        | Adds a GetListAsync method stub                                                             
+     xCreateAsyncMethodStub                        | Adds a GetListAsync method stub                                                             
      xGetPagedListAsyncMethodStub                  | Adds a paged GetListAsync method stub                                                       
      xGetAsyncMethodStub                           | Adds a GetAsync method to an IRepository interface                                          
      xISoftDeleteDisable                           | Inserts using (_softDeleteFilter.Disable()){} statement                                     

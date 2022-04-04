@@ -630,37 +630,37 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "iAppServiceCreateAsyncDefinition": {
+  "createAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceCreateAsyncDefinition"
+    "prefix": "xCreateAsyncMethodStubIAppService"
   },
-  "iAppServiceDeleteAsyncDefinition": {
+  "deleteAsyncMethodStubIAppService": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
       "\t$0"
     ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceDeleteAsyncDefinition"
+    "prefix": "xDeleteAsyncMethodStubIAppService"
   },
-  "iAppServiceGetAsyncDefinition": {
+  "getAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetAsyncDefinition"
+    "prefix": "xGetAsyncMethodStubIAppService"
   },
-  "iAppServiceGetListAsyncDefinition": {
+  "getListAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
       "\t$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetListAsyncDefinition"
+    "prefix": "xGetListAsyncMethodStubIAppService"
   },
   "iAppServiceParam": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
@@ -818,6 +818,16 @@
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
+  },
+  "xCreateAsyncMethodStub": {
+    "body": "Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
+    "description": "Adds a GetListAsync method stub",
+    "prefix": "xCreateAsyncMethodStub"
+  },
+  "xDeleteAsyncMethodStub": {
+    "body": "Task DeleteAsync();$0",
+    "description": "Adds a GetListAsync method stub",
+    "prefix": "xCreateAsyncMethodStub"
   },
   "getPagedListAsyncMethodStub": {
     "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
