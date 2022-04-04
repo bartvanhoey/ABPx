@@ -85,8 +85,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xExposeServicesAttribute                      | Inserts ExposeServices attribute                                                            
      xFilterProperty                               | Inserts property Filter                                                                     
      xGetDbSetAsync                                | Inserts var dbSet = await GetDbSetAsync();                                                  
-     xGetLookupAppService                          | Adds a GetLookupAsync method to an AppService class                                         
-     xGetLookupIAppService                         | Adds a GetLookupAsync method to an IAppService interface                                    
+     xGetLookupMethodImplementationAppService      | Adds a GetLookupAsync method to an AppService class                                         
+     xGetLookupMethodStubIAppService               | Adds a GetLookupAsync method to an IAppService interface                                    
      xGps                                          | Inserts { get, private set }                                                                
      xGetRequiredIAppService                       | Inserts GetRequiredService<IAppService> and IAppService field                               
      xGetRequiredService                           | Inserts GetRequiredService and matching field                                               

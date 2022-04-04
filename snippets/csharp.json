@@ -578,7 +578,7 @@
     "description": "Inserts var dbSet = await GetDbSetAsync();",
     "prefix": "xGetDbSetAsync"
   },
-  "getLookupAppService": {
+  "getLookupMethodImplementationAppService": {
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
       "{",
@@ -588,12 +588,12 @@
       "}"
     ],
     "description": "Adds a GetLookupAsync method to an AppService class",
-    "prefix": "xGetLookupAppService"
+    "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getLookupIAppService": {
+  "getLookupMethodStubIAppService": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
     "description": "Adds a GetLookupAsync method to an IAppService interface",
-    "prefix": "xGetLookupIAppService"
+    "prefix": "xGetLookupMethodStubIAppService"
   },
   "getPrivateSet": {
     "body": [
