@@ -114,6 +114,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIMongoCollection                             | Inserts as IMongoCollection for a class statement in DbContext                               
      xIRepoCtorCustomParam                         | Inserts a custom ClassRepository parameter in the constructor                                
      xIRepoCtorDefaultParam                        | Inserts a default IRepository<Type,TypeId> parameter in the constructor                      
+     xIAsyncQueryableExecuterCtorParam             | Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor                
      xIAppUserRepositoryCtorParam                  | Inserts an IAppUserRepository appUserRepository parameter in the constructor                 
      xICurrentTenantCtorParam                      | Inserts an ICurrentTenant currentTenant parameter in the constructor                         
      xIPermissionGrantRepositoryCtorParamCtorParam | Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor 

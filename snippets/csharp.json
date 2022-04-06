@@ -798,6 +798,11 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iAsyncQueryableExecuterCtorParam": {
+    "body": "IAsyncQueryableExecuter$1 asyncExecuter$0",
+    "description": "Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor",
+    "prefix": "xIAsyncQueryableExecuterCtorParam"
+  },
   "iAppUserRepositoryCtorParam": {
     "body": "IAppUserRepository$1 appUserRepository$0",
     "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
