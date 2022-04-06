@@ -94,6 +94,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xGetRequiredService                           | Inserts GetRequiredService and matching field                                               
      xConfigureOptions                             | Inserts Configure Options statement for use in ConfigureServices method                     
      xContextGetRequiredService                    | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement          
+     xExecuteSqlRawAsync                           | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                               
      xGs                                           | Inserts { get, set }                                                                        
      xGuidGeneratorCreate                          | Inserts GuidGenerator.Create() statement                                                    
      xCreateAsyncMethodStubIAppService             | Inserts a CreateAsync definition for an IAppService interface                               

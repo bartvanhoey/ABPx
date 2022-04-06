@@ -645,6 +645,13 @@
     "description": "Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement",
     "prefix": "xContextGetRequiredService"
   },
+  "executeSqlRawAsync": {
+    "body": [
+      "await dbContext.Database.ExecuteSqlRawAsync(\"${1:YourSqlQueryHere}\");$0"
+    ],
+    "description": "Inserts await dbContext.Database.ExecuteSqlRawAsync statement",
+    "prefix": "xExecuteSqlRawAsync"
+  },
   "getSet": {
     "body": [
       "{ get; set; }$0"
