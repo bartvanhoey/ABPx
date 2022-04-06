@@ -1461,7 +1461,7 @@
       "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var x = _repository.FindAsync statement",
+    "description": "Inserts var x = _repository.FindAsync statement. Returns null when not found",
     "prefix": "xRepoFindAsync"
   },
   "repoFirstOrDefaultAsync": {
@@ -1477,7 +1477,7 @@
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var x = _repository.GetAsync statement",
+    "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
     "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
