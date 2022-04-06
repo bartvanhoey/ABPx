@@ -578,6 +578,11 @@
     "description": "Inserts var dbSet = await GetDbSetAsync();",
     "prefix": "xGetDbSetAsync"
   },
+  "contextAddTransient": {
+    "body": "context.Services.AddTransient<${1:Type}>();;$0",
+    "description": "Inserts context.Services.AddTransient statement;",
+    "prefix": "xContextAddTransient"
+  },
   "getLookupMethodImplementationAppService": {
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
@@ -610,6 +615,13 @@
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xGetRequiredIAppService"
   },
+  "getConfigurationFromContext": {
+    "body": [
+      "var configuration = context.Services.GetConfiguration();;$0"
+    ],
+    "description": "Inserts var configuration = context.Services.GetConfiguration(); statement",
+    "prefix": "xGetConfigurationFromContext"
+  },
   "getRequiredService": {
     "body": [
       "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
@@ -617,6 +629,21 @@
     ],
     "description": "Inserts GetRequiredService and matching field",
     "prefix": "xGetRequiredService"
+  },
+  "configureOptions": {
+    "body": [
+      "var configuration = context.Services.GetConfiguration();",
+      "Configure<${2:$1}Options>(configuration.GetSection(\"${1:SectionName}\"));$0"
+    ],
+    "description": "Inserts Configure Options statement for use in ConfigureServices method",
+    "prefix": "xConfigureOptions"
+  },
+  "contextGetRequiredService": {
+    "body": [
+      "var ${4:${1/(.*)/${1:/downcase}/}} =  context.ServiceProvider.GetRequiredService<${1:NameService}$2>();$0"
+    ],
+    "description": "Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement",
+    "prefix": "xContextGetRequiredService"
   },
   "getSet": {
     "body": [

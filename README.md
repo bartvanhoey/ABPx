@@ -85,11 +85,15 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xExposeServicesAttribute                      | Inserts ExposeServices attribute                                                            
      xFilterProperty                               | Inserts property Filter                                                                     
      xGetDbSetAsync                                | Inserts var dbSet = await GetDbSetAsync();                                                  
+     xContextAddTransient                          | Inserts context.Services.AddTransient statement;                                            
      xGetLookupMethodImplementationAppService      | Adds a GetLookupAsync method to an AppService class                                         
      xGetLookupMethodStubIAppService               | Adds a GetLookupAsync method to an IAppService interface                                    
      xGps                                          | Inserts { get, private set }                                                                
      xGetRequiredIAppService                       | Inserts GetRequiredService<IAppService> and IAppService field                               
+     xGetConfigurationFromContext                  | Inserts var configuration = context.Services.GetConfiguration(); statement                  
      xGetRequiredService                           | Inserts GetRequiredService and matching field                                               
+     xConfigureOptions                             | Inserts Configure Options statement for use in ConfigureServices method                     
+     xContextGetRequiredService                    | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement          
      xGs                                           | Inserts { get, set }                                                                        
      xGuidGeneratorCreate                          | Inserts GuidGenerator.Create() statement                                                    
      xCreateAsyncMethodStubIAppService             | Inserts a CreateAsync definition for an IAppService interface                               
