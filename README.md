@@ -179,10 +179,10 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xManagerCreateAsync                           | Inserts var x = await _nameManager.CreateAsync() statement                                   
      xManagerUpdateAsync                           | Inserts var name = await _nameManager.UpdateAsync() statement                                
      xManagerCustomCtorParam                       | Inserts a custom Manager parameter in constructor                                            
-     xMethodAsync                                  | Inserts an async Task method stub                                                            
-     xMethodAsyncReturn                            | Inserts an async task<ReturnType> method stub                                                
-     xMethodReturn                                 | Inserts a <ReturnType> method stub                                                           
-     xMethodVoid                                   | Inserts a void method stub                                                                   
+     xMethodAsyncTaskStub                          | Inserts an async Task method stub                                                            
+     xMethodAsyncTaskStubWithReturnValue           | Inserts an async task<ReturnType> method stub                                                
+     xMethodStubWithReturnValue                    | Inserts a <ReturnType> method stub                                                           
+     xMethodVoidStub                               | Inserts a void method stub                                                                   
      xNavigateTo                                   | Inserts NavigationManager.NavigateTo page                                                    
      xNavigateToHomePage                           | Inserts NavigationManager.NavigateTo("/")                                                    
      xNavigateToId                                 | Inserts NavigationManager.NavigateTo page\\Id                                                

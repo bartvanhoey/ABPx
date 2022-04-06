@@ -1202,7 +1202,7 @@
       "}"
     ],
     "description": "Inserts an async Task method stub",
-    "prefix": "xMethodAsync"
+    "prefix": "xMethodAsyncTaskStub"
   },
   "methodAsyncReturn": {
     "body": [
@@ -1212,7 +1212,7 @@
       "}"
     ],
     "description": "Inserts an async task<ReturnType> method stub",
-    "prefix": "xMethodAsyncReturn"
+    "prefix": "xMethodAsyncTaskStubWithReturnValue"
   },
   "methodReturn": {
     "body": [
@@ -1222,7 +1222,7 @@
       "}"
     ],
     "description": "Inserts a <ReturnType> method stub",
-    "prefix": "xMethodReturn"
+    "prefix": "xMethodStubWithReturnValue"
   },
   "methodVoid": {
     "body": [
@@ -1232,7 +1232,7 @@
       "}"
     ],
     "description": "Inserts a void method stub",
-    "prefix": "xMethodVoid"
+    "prefix": "xMethodVoidStub"
   },
   "navigateTo": {
     "body": [
