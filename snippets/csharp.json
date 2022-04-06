@@ -1498,7 +1498,7 @@
   },
   "repoGetListAsync": {
     "body": [
-      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3();",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3($4);",
       "$0"
     ],
     "description": "Inserts var items = await _repository.GetListAsync() statement",
