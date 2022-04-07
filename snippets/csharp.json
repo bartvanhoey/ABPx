@@ -768,6 +768,11 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
+  "unitOfWorkAttribute": {
+    "body": "[UnitOfWork(isTransactional: true)]",
+    "description": "Inserts the UnitOfWorkAttribute",
+    "prefix": "xUnitOfWorkAttribute"
+  },
   "iDataFilterISoftDeleteParam": {
     "body": "IDataFilter<ISoftDelete> softDeleteFilter",
     "description": "Inserts a IDataFilterISoftDelete parameter",
@@ -1845,7 +1850,8 @@
     "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
-  }, "unResultTotalCountShouldBe": {
+  },
+  "unResultTotalCountShouldBe": {
     "body": "result.TotalCount.ShouldBe$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBe statement",
     "prefix": "xUnResultTotalCountShouldBe"
