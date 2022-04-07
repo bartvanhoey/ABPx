@@ -108,21 +108,21 @@
   "asyncExecuterCountAsync": {
     "body": [
       "// using System.Linq;",
-      "var ${1|totalCount,count,total|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:query});"
+      "var ${1|totalCount,count,total|} = await ${2|_asyncExecuter,AsyncExecuter|}.CountAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.CountAsync statement",
     "prefix": "xAsyncExecuterCountAsync"
   },
   "asyncExecuterFirstOrDefaultAsync": {
     "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:query});"
+      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.FirstOrDefaultAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.FirstOrDefaultAsync statement",
     "prefix": "xAsyncExecuterFirstOrDefaultAsync"
   },
   "asyncExecuterToListAsync": {
     "body": [
-      "var ${1:queryResult} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:query});"
+      "var ${1:list} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4:queryable});"
     ],
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
@@ -204,18 +204,32 @@
     "description": "Inserts hasIndex statement",
     "prefix": "xHasIndex"
   },
+  "hasIndexUnique": {
+    "body": [
+      "b.HasIndex(x => x.${1:PropertyName}).IsUnique();$0"
+    ],
+    "description": "Inserts hasIndex with Unique statement",
+    "prefix": "xHasIndexUnique"
+  },
   "hasOneWithManyForeignKeyIsRequired": {
     "body": [
-      "b.HasOne<${1:Type}>().WithMany($2).HasForeignKey(x => x.$1Id).IsRequired();$0"
+      "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xHasOneWithManyForeignKeyIsRequired"
   },
+  "maxLengthConst": {
+    "body": [
+      "public const int Max${1:Name}Length = ${1:Length};$0"
+    ],
+    "description": "Inserts a max length constant",
+    "prefix": "xMaxLengthConst"
+  },
   "hasManyWithOneHasForeignKeyIsRequired": {
     "body": [
-      "b.HasMany(x => x.${1:Type}).WithOne().HasForeignKey(x => x.${2:Type}Id).IsRequired();$0"
+      "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
     ],
-    "description": "Inserts HasMany().WithOne().ForeignKey().IsRequired statement",
+    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xHasManyWithOneHasForeignKeyIsRequired"
   },
   "canBeNullAttribute": {
@@ -564,7 +578,12 @@
     "description": "Inserts var dbSet = await GetDbSetAsync();",
     "prefix": "xGetDbSetAsync"
   },
-  "getLookupAppService": {
+  "contextAddTransient": {
+    "body": "context.Services.AddTransient<${1:Type}>();;$0",
+    "description": "Inserts context.Services.AddTransient statement;",
+    "prefix": "xContextAddTransient"
+  },
+  "getLookupMethodImplementationAppService": {
     "body": [
       "public async Task$5<ListResultDto<$1LookupDto>> Get$1LookupAsync()",
       "{",
@@ -574,12 +593,12 @@
       "}"
     ],
     "description": "Adds a GetLookupAsync method to an AppService class",
-    "prefix": "xGetLookupAppService"
+    "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getLookupIAppService": {
+  "getLookupMethodStubIAppService": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
     "description": "Adds a GetLookupAsync method to an IAppService interface",
-    "prefix": "xGetLookupIAppService"
+    "prefix": "xGetLookupMethodStubIAppService"
   },
   "getPrivateSet": {
     "body": [
@@ -596,6 +615,13 @@
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xGetRequiredIAppService"
   },
+  "getConfigurationFromContext": {
+    "body": [
+      "var configuration = context.Services.GetConfiguration();;$0"
+    ],
+    "description": "Inserts var configuration = context.Services.GetConfiguration(); statement",
+    "prefix": "xGetConfigurationFromContext"
+  },
   "getRequiredService": {
     "body": [
       "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
@@ -603,6 +629,28 @@
     ],
     "description": "Inserts GetRequiredService and matching field",
     "prefix": "xGetRequiredService"
+  },
+  "configureOptions": {
+    "body": [
+      "var configuration = context.Services.GetConfiguration();",
+      "Configure<${2:$1}Options>(configuration.GetSection(\"${1:SectionName}\"));$0"
+    ],
+    "description": "Inserts Configure Options statement for use in ConfigureServices method",
+    "prefix": "xConfigureOptions"
+  },
+  "contextGetRequiredService": {
+    "body": [
+      "var ${4:${1/(.*)/${1:/downcase}/}} =  context.ServiceProvider.GetRequiredService<${1:NameService}$2>();$0"
+    ],
+    "description": "Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement",
+    "prefix": "xContextGetRequiredService"
+  },
+  "executeSqlRawAsync": {
+    "body": [
+      "await dbContext.Database.ExecuteSqlRawAsync(\"${1:YourSqlQueryHere}\");$0"
+    ],
+    "description": "Inserts await dbContext.Database.ExecuteSqlRawAsync statement",
+    "prefix": "xExecuteSqlRawAsync"
   },
   "getSet": {
     "body": [
@@ -616,37 +664,37 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "iAppServiceCreateAsyncDefinition": {
+  "createAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceCreateAsyncDefinition"
+    "prefix": "xCreateAsyncMethodStubIAppService"
   },
-  "iAppServiceDeleteAsyncDefinition": {
+  "deleteAsyncMethodStubIAppService": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
       "\t$0"
     ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceDeleteAsyncDefinition"
+    "prefix": "xDeleteAsyncMethodStubIAppService"
   },
-  "iAppServiceGetAsyncDefinition": {
+  "getAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetAsyncDefinition"
+    "prefix": "xGetAsyncMethodStubIAppService"
   },
-  "iAppServiceGetListAsyncDefinition": {
+  "getListAsyncMethodStubIAppService": {
     "body": [
       "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
       "\t$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xIAppServiceGetListAsyncDefinition"
+    "prefix": "xGetListAsyncMethodStubIAppService"
   },
   "iAppServiceParam": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
@@ -750,6 +798,11 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iAsyncQueryableExecuterCtorParam": {
+    "body": "IAsyncQueryableExecuter$1 asyncExecuter$0",
+    "description": "Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor",
+    "prefix": "xIAsyncQueryableExecuterCtorParam"
+  },
   "iAppUserRepositoryCtorParam": {
     "body": "IAppUserRepository$1 appUserRepository$0",
     "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
@@ -797,13 +850,28 @@
   },
   "findByNameAsyncMethodStub": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync method to an IRepository interface",
+    "description": "Adds a FindByNameAsync method stub",
     "prefix": "xFindByNameAsyncMethodStub"
   },
   "getListAsyncMethodStub": {
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync method to an IRepository interface",
+    "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
+  },
+  "xCreateAsyncMethodStub": {
+    "body": "Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
+    "description": "Adds a GetListAsync method stub",
+    "prefix": "xCreateAsyncMethodStub"
+  },
+  "xDeleteAsyncMethodStub": {
+    "body": "Task DeleteAsync();$0",
+    "description": "Adds a GetListAsync method stub",
+    "prefix": "xCreateAsyncMethodStub"
+  },
+  "getPagedListAsyncMethodStub": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
+    "description": "Adds a paged GetListAsync method stub",
+    "prefix": "xGetPagedListAsyncMethodStub"
   },
   "getAsyncMethodStub": {
     "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
@@ -943,12 +1011,12 @@
   "implementCorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
-    "prefix": "xImpCorrespondingAppService"
+    "prefix": "xImpCorrespondingIAppService"
   },
   "implementICorrespondingRepository": {
     "body": "I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IRepository interface",
-    "prefix": "xImpCorrespondingRepository"
+    "prefix": "xImpCorrespondingIRepository"
   },
   "implementIDataSeedContributor": {
     "body": " IDataSeedContributor$2, ITransientDependency$1$0",
@@ -1139,7 +1207,7 @@
       "}"
     ],
     "description": "Inserts an async Task method stub",
-    "prefix": "xMethodAsync"
+    "prefix": "xMethodAsyncTaskStub"
   },
   "methodAsyncReturn": {
     "body": [
@@ -1149,7 +1217,7 @@
       "}"
     ],
     "description": "Inserts an async task<ReturnType> method stub",
-    "prefix": "xMethodAsyncReturn"
+    "prefix": "xMethodAsyncTaskStubWithReturnValue"
   },
   "methodReturn": {
     "body": [
@@ -1159,7 +1227,7 @@
       "}"
     ],
     "description": "Inserts a <ReturnType> method stub",
-    "prefix": "xMethodReturn"
+    "prefix": "xMethodStubWithReturnValue"
   },
   "methodVoid": {
     "body": [
@@ -1169,7 +1237,7 @@
       "}"
     ],
     "description": "Inserts a void method stub",
-    "prefix": "xMethodVoid"
+    "prefix": "xMethodVoidStub"
   },
   "navigateTo": {
     "body": [
@@ -1398,7 +1466,7 @@
       "var ${2:$1} = await _${1:name}Repository.FindAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var x = _repository.FindAsync statement",
+    "description": "Inserts var x = _repository.FindAsync statement. Returns null when not found",
     "prefix": "xRepoFindAsync"
   },
   "repoFirstOrDefaultAsync": {
@@ -1414,7 +1482,7 @@
       "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
       "$0"
     ],
-    "description": "Inserts var x = _repository.GetAsync statement",
+    "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
     "prefix": "xRepoGetAsync"
   },
   "repoGetCountAsync": {
@@ -1435,7 +1503,7 @@
   },
   "repoGetListAsync": {
     "body": [
-      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3();",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3($4);",
       "$0"
     ],
     "description": "Inserts var items = await _repository.GetListAsync() statement",
@@ -1448,6 +1516,13 @@
     ],
     "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
+  },
+  "xQueryableWithDetailsAsync": {
+    "body": [
+      "var queryable = await _${1:name}Repository.WithDetailsAsync(x => x.${2:Type}{);$0"
+    ],
+    "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
+    "prefix": "xQueryableWithDetailsAsync"
   },
   "repoHardDeleteAsync": {
     "body": [
@@ -1568,7 +1643,7 @@
   },
   "returnPagedResultDtoObjectMapper": {
     "body": [
-      "return new PagedResultDto<$1Dto>(totalCount, ${2|ObjectMapper,_objectMapper|}.Map<List$3<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
+      "return new PagedResultDto<$1Dto>(${2|totalCount,count|}, ${3|ObjectMapper,_objectMapper|}.Map<List$4<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
     ],
     "description": "Inserts return new PagedResultDto with ObjectMapper statement",
     "prefix": "xReturnPagedResultDtoObjectMapper"
@@ -1770,6 +1845,10 @@
     "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
+  }, "unResultTotalCountShouldBe": {
+    "body": "result.TotalCount.ShouldBe$1(${2:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBe statement",
+    "prefix": "xUnResultTotalCountShouldBe"
   },
   "unResultTotalCountShouldBeGreaterThanOrEqual": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
