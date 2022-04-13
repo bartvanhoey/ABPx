@@ -148,6 +148,16 @@
     "description": "Inserts the AuthorizationService.IsGrantedAsync method",
     "prefix": "xAuthServiceIsGrantedAsync"
   },
+  "ifAuthServiceIsGrantedAsync": {
+    "body": [
+      "if(await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|}))",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Inserts the AuthorizationService.IsGrantedAsync method",
+    "prefix": "xIfAuthServiceIsGrantedAsync"
+  },
   "authAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"
@@ -768,6 +778,11 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
+  "unitOfWorkAttribute": {
+    "body": "[UnitOfWork(isTransactional: true)]",
+    "description": "Inserts the UnitOfWorkAttribute",
+    "prefix": "xUnitOfWorkAttribute"
+  },
   "iDataFilterISoftDeleteParam": {
     "body": "IDataFilter<ISoftDelete> softDeleteFilter",
     "description": "Inserts a IDataFilterISoftDelete parameter",
@@ -993,10 +1008,15 @@
     "description": "If statement",
     "prefix": "xIf"
   },
-  "implementHasCreationTime": {
+  "implementIHasCreationTime": {
     "body": " IHasCreationTime$0",
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
+  },
+  "implementIValidatableObject": {
+    "body": " IValidatableObject$0",
+    "description": "Implements IValidatableObject interface",
+    "prefix": "xImpIValidatableObject"
   },
   "implementIApplicationService": {
     "body": " IApplicationService$0",
@@ -1655,47 +1675,61 @@
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
-  "throwNewBusinessException": {
+  "urlAttribute": {
+    "body": [
+      "[Url$1]$0"
+    ],
+    "description": "Url attribute",
+    "prefix": "xUrlAttribute"
+  },
+  "rangeAttribute": {
+    "body": [
+      "[Range$1(${2:0},${2:1000})]$0"
+    ],
+    "description": "Range attribute",
+    "prefix": "xRangeAttribute"
+  },
+  "throwBusinessException": {
     "body": [
       "throw new BusinessException$1(\"${2:TranslationKey}\");"
     ],
     "description": "Inserts throw new BusinessException statement",
-    "prefix": "xThrowNewBusinessException"
+    "prefix": "xThrowBusinessException"
   },
-  "throwNewCustomException": {
+  "throwCustomException": {
     "body": [
       "throw new ${1:Name}Exception(\"${2:TranslationKey}\");"
     ],
     "description": "Inserts throw new CustomException statement",
-    "prefix": "xThrowNewCustomException"
+    "prefix": "xThrowCustomException"
   },
   "throwUnauthorizedAccessException": {
     "body": [
       "throw new UnauthorizedAccessException();"
     ],
     "description": "Inserts throw new UnauthorizedAccessException statement",
-    "prefix": "xThrowNewUnauthorizedAccessException"
+    "prefix": "xThrowUnauthorizedAccessException"
   },
-  "throwNewEntityNotFoundException": {
+  "throwEntityNotFoundException": {
     "body": [
       "throw new EntityNotFoundException$1($2);$0"
     ],
     "description": "Inserts throw new EntityNotFoundException statement",
-    "prefix": "xThrowNewEntityNotFoundException"
+    "prefix": "xThrowEntityNotFoundException"
   },
-  "throwNewNotImplementedException": {
+  "throwNotImplementedException": {
     "body": [
       "throw new System.NotImplementedException();"
     ],
     "description": "Inserts throw new NotImplementedException statement",
-    "prefix": "xThrowNewNotImplementedException"
+    "prefix": "xThrowNotImplementedException"
   },
-  "throwNewUserFriendlyException": {
+  "throwUserFriendlyException": {
     "body": [
       "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
     ],
     "description": "Inserts throw new UserFriendlyException statement",
-    "prefix": "xThrowNewUserFriendlyException"
+    "prefix": "xThrowUserFriendlyException"
   },
   "withData": {
     "body": [
@@ -1845,7 +1879,8 @@
     "body": "result.TotalCount.ShouldBeGreaterThan$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
-  }, "unResultTotalCountShouldBe": {
+  },
+  "unResultTotalCountShouldBe": {
     "body": "result.TotalCount.ShouldBe$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBe statement",
     "prefix": "xUnResultTotalCountShouldBe"
