@@ -1489,6 +1489,14 @@
     "description": "Inserts var x = _repository.FindAsync statement. Returns null when not found",
     "prefix": "xRepoFindAsync"
   },
+  "repoCountAsync": {
+    "body": [
+      "var ${1|totalCount,count,total|} = await _${2:name}Repository.CountAsync$3($4);",
+      "$0"
+    ],
+    "description": "Inserts var totalCount = _repository.CountAsync() statement",
+    "prefix": "xRepoCountAsync"
+  },
   "repoFirstOrDefaultAsync": {
     "body": [
       "var ${2:$1} = await _${1:name}Repository.FirstOrDefaultAsync$5(x => x.${3:Id} == ${4:id});",

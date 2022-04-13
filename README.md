@@ -26,6 +26,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xAuthServiceAuthorizeAsync                    | Inserts the AuthorizationService.AuthorizeAsync method                                       
      xAuthServiceCheckAsync                        | Inserts the AuthorizationService.CheckAsync method                                           
      xAuthServiceIsGrantedAsync                    | Inserts the AuthorizationService.IsGrantedAsync method                                       
+     xIfAuthServiceIsGrantedAsync                  | Inserts the AuthorizationService.IsGrantedAsync method                                       
      xAuthAttributeAbp                             | Inserts the ABP Authorize attribute for a class or a method                                  
      xAuthAttributeMicrosoft                       | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                           
      xBuilderEntity                                | builder.Entity stub                                                                          
@@ -108,6 +109,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xICrudAppServiceCreateDtoAndUpdateDto         | Inserts a complete ICrudAppService CreateDto - UpdateDto                                     
      xICrudAppServiceCreateUpdateDto               | Inserts a complete ICrudAppService - CreateUpdateDto                                         
      xCrudMethodsIAppService                       | Inserts the basic CRUD methods in an IAppService                                             
+     xUnitOfWorkAttribute                          | Inserts the UnitOfWorkAttribute                                                              
      xIDataFilterISoftDeleteParam                  | Inserts a IDataFilterISoftDelete parameter                                                   
      xIDataFilterProperty                          | Inserts property public IDataFilter DataFilter { get; set; }                                 
      xIGuidGeneratorParam                          | Inserts a IGuidGenerator parameter                                                           
@@ -143,6 +145,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIfRepoGetCountAsync                          | Inserts if(await _repository.GetCountAsync() ? 0) statement                                  
      xIf                                           | If statement                                                                                 
      xImpIHasCreationTime                          | Implements IHasCreationTime interface                                                        
+     xImpIValidatableObject                        | Implements IValidatableObject interface                                                      
      xImpIApplicationService                       | Implements IApplicationService interface                                                     
      xImpIMultiTenant                              | Implements IMultiTenant interface                                                            
      xImpCorrespondingIAppService                  | Implements corresponding IAppService interface                                               
@@ -215,6 +218,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xRepoDeleteAsync                              | Inserts _repository.DeleteAsync statement                                                    
      xRepoDeleteManyAsync                          | Inserts _repository.DeleteManyAsync statement                                                
      xRepoFindAsync                                | Inserts var x = _repository.FindAsync statement. Returns null when not found                 
+     xRepoCountAsync                               | Inserts var totalCount = _repository.CountAsync() statement                                  
      xRepoFirstOrDefaultAsync                      | Inserts var x = _repository.FindAsync statement                                              
      xRepoGetAsync                                 | Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found
      xRepoGetCountAsync                            | Inserts var totalCount = _repository.GetCountAsync statement                                 
@@ -242,12 +246,14 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xReturnPagedResultDto                         | Inserts return new PagedResultDto statement                                                  
      xReturnPagedResultDtoObjectMapper             | Inserts return new PagedResultDto with ObjectMapper statement                                
      xStringLengthAttribute                        | StringLength attribute                                                                       
-     xThrowNewBusinessException                    | Inserts throw new BusinessException statement                                                
-     xThrowNewCustomException                      | Inserts throw new CustomException statement                                                  
-     xThrowNewUnauthorizedAccessException          | Inserts throw new UnauthorizedAccessException statement                                      
-     xThrowNewEntityNotFoundException              | Inserts throw new EntityNotFoundException statement                                          
-     xThrowNewNotImplementedException              | Inserts throw new NotImplementedException statement                                          
-     xThrowNewUserFriendlyException                | Inserts throw new UserFriendlyException statement                                            
+     xUrlAttribute                                 | Url attribute                                                                                
+     xRangeAttribute                               | Range attribute                                                                              
+     xThrowBusinessException                       | Inserts throw new BusinessException statement                                                
+     xThrowCustomException                         | Inserts throw new CustomException statement                                                  
+     xThrowUnauthorizedAccessException             | Inserts throw new UnauthorizedAccessException statement                                      
+     xThrowEntityNotFoundException                 | Inserts throw new EntityNotFoundException statement                                          
+     xThrowNotImplementedException                 | Inserts throw new NotImplementedException statement                                          
+     xThrowUserFriendlyException                   | Inserts throw new UserFriendlyException statement                                            
      xWithData                                     | Inserts a WithData statement                                                                 
      xTodo                                         | Inserts TODO statement                                                                       
      xUnAssertThrowsAsyncAbpValidationException    | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                           
