@@ -1013,6 +1013,11 @@
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
   },
+  "implementIAbpClaimsPrincipalContributor": {
+    "body": " IHasCreationTime$0",
+    "description": "Implements IHasCreationTime interface",
+    "prefix": "xImpIHasCreationTime"
+  },
   "implementIValidatableObject": {
     "body": " IValidatableObject$0",
     "description": "Implements IValidatableObject interface",

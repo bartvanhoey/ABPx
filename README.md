@@ -145,6 +145,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xIfRepoGetCountAsync                          | Inserts if(await _repository.GetCountAsync() ? 0) statement                                  
      xIf                                           | If statement                                                                                 
      xImpIHasCreationTime                          | Implements IHasCreationTime interface                                                        
+     xImpIHasCreationTime                          | Implements IHasCreationTime interface                                                        
      xImpIValidatableObject                        | Implements IValidatableObject interface                                                      
      xImpIApplicationService                       | Implements IApplicationService interface                                                     
      xImpIMultiTenant                              | Implements IMultiTenant interface                                                            
