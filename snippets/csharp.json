@@ -625,14 +625,6 @@
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xGetRequiredIAppService"
   },
-  "getContextServiceProviderGetRequiredService": {
-    "body": [
-      "var ${3:${1/(.*)/${1:/downcase}/}}Service = context.ServiceProvider.GetRequiredService<I${1:Name}Service$2>();$0"
-      
-    ],
-    "description": "Inserts var service = context.ServiceProvider.GetRequiredService<IUserService>();",
-    "prefix": "xGetContextServiceProviderGetRequiredService"
-  },
   "getConfigurationFromContext": {
     "body": [
       "var configuration = context.Services.GetConfiguration();;$0"
@@ -796,11 +788,6 @@
     "description": "Inserts a IDataFilterISoftDelete parameter",
     "prefix": "xIDataFilterISoftDeleteParam"
   },
-  "implementISoftDelete": {
-    "body": "ISoftDelete",
-     "description": "Implements ISoftDelete interface",
-    "prefix": "xImpISoftDelete"
-  },
   "iDataFilterProperty": {
     "body": "public IDataFilter DataFilter { get; set; }",
     "description": "Inserts property public IDataFilter DataFilter { get; set; }",
@@ -825,21 +812,6 @@
     "body": "IRepository$1<${2:Type}, ${3|Guid,int,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
-  },
-  "iDataFilterCtorParam": {
-    "body": "IDataFilter dataFilter$0",
-    "description": "Inserts a IDataFilter parameter in the constructor",
-    "prefix": "xIDataFilterCtorParam"
-  },
-  "usingDataFilterDisable": {
-    "body": [
-      "using (_dataFilter.Disable<${1:SoftDelete}>())",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Inserts a using DataFilter.Disable statement",
-    "prefix": "xUsingDataFilterDisable"
   },
   "iAsyncQueryableExecuterCtorParam": {
     "body": "IAsyncQueryableExecuter$1 asyncExecuter$0",
@@ -1046,18 +1018,8 @@
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
   },
-<<<<<<< HEAD
   "implementAbpClaimsPrincipalContributor": {
     "body": " IAbpClaimsPrincipalContributor$0",
-=======
-  "claimsIdentity": {
-    "body": "ClaimsIdentity$1 identity = context.ClaimsPrincipal.Identities.FirstOrDefault();$0",
-    "description": "Inserts statement ClaimsIdentity$1 identity = context.ClaimsPrincipal.Identities.FirstOrDefault()",
-    "prefix": "xClaimsIdentity"
-  },
-  "implementIAbpClaimsPrincipalContributor": {
-    "body": " implementIAbpClaimsPrincipalContributor$0",
->>>>>>> 16d58cf19379c685dfd17a488f3d164720c68a97
     "description": "Implements IAbpClaimsPrincipalContributor interface",
     "prefix": "xImpIAbpClaimsPrincipalContributor"
   },
@@ -1276,16 +1238,6 @@
     ],
     "description": "Inserts an async Task method stub",
     "prefix": "xMethodAsyncTaskStub"
-  },
-  "methodAsyncTaskStub2": {
-    "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}($5)",
-      "{",
-      "\t$0",
-      "}"
-    ],
-    "description": "Inserts an async Task method stub",
-    "prefix": "xMethodAsyncTaskStub2"
   },
   "methodAsyncReturn": {
     "body": [
@@ -1546,14 +1498,6 @@
     ],
     "description": "Inserts var x = _repository.FindAsync statement. Returns null when not found",
     "prefix": "xRepoFindAsync"
-  },
-  "repoCountAsync": {
-    "body": [
-      "var ${1|totalCount,count,total|} = await _${2:name}Repository.CountAsync$3($4);",
-      "$0"
-    ],
-    "description": "Inserts var totalCount = _repository.CountAsync() statement",
-    "prefix": "xRepoCountAsync"
   },
   "repoFirstOrDefaultAsync": {
     "body": [
