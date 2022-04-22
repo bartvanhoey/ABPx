@@ -828,6 +828,11 @@
     "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
     "prefix": "xICurrentTenantCtorParam"
   },
+  "iCurrentUserCtorParam": {
+    "body": "ICurrentUser$1 currentUser$0",
+    "description": "Inserts an ICurrentUser currentUser parameter in the constructor",
+    "prefix": "xICurrentUserCtorParam"
+  },
   "iPermissionGrantRepositoryCtorParam": {
     "body": "IPermissionGrantRepository$1 permissionGrantRepository$0",
     "description": "Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor",
@@ -1012,6 +1017,11 @@
     "body": " IHasCreationTime$0",
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
+  },
+  "implementAbpClaimsPrincipalContributor": {
+    "body": " IAbpClaimsPrincipalContributor$0",
+    "description": "Implements IAbpClaimsPrincipalContributor interface",
+    "prefix": "xImpIAbpClaimsPrincipalContributor"
   },
   "implementIValidatableObject": {
     "body": " IValidatableObject$0",
@@ -1219,7 +1229,7 @@
     "description": "Inserts a custom Manager parameter in constructor",
     "prefix": "xManagerCustomCtorParam"
   },
-  "methodAsync": {
+  "methodAsyncTaskStub": {
     "body": [
       "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}($5)",
       "{",
