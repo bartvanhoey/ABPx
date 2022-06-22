@@ -682,6 +682,14 @@
     "description": "Inserts a CreateAsync definition for an IAppService interface",
     "prefix": "xCreateAsyncMethodStubIAppService"
   },
+  "createManyAsyncMethodStubIAppService": {
+    "body": [
+      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateManyAsync(Create$1Dto$4 input);",
+      "\t$0"
+    ],
+    "description": "Inserts a CreateManyAsync definition for an IAppService interface",
+    "prefix": "xCreateManyAsyncMethodStubIAppService"
+  },
   "deleteAsyncMethodStubIAppService": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
