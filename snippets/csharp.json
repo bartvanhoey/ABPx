@@ -828,6 +828,11 @@
     "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
     "prefix": "xICurrentTenantCtorParam"
   },
+  "iVirtualFileProviderCtorParam": {
+    "body": "IVirtualFileProvider$1 virtualFileProvider$0",
+    "description": "Inserts an IVirtualFileProvider virtualFileProvider parameter in the constructor",
+    "prefix": "xIVirtualFileProviderCtorParam"
+  },
   "iCurrentUserCtorParam": {
     "body": "ICurrentUser$1 currentUser$0",
     "description": "Inserts an ICurrentUser currentUser parameter in the constructor",
