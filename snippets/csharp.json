@@ -610,10 +610,10 @@
     "description": "Adds a GetLookupAsync method to an AppService class",
     "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getLookupMethodStubIAppService": {
+  "getLookupInterfaceMethodDefinition": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
     "description": "Adds a GetLookupAsync method to an IAppService interface",
-    "prefix": "xGetLookupMethodStubIAppService"
+    "prefix": "xGetLookupInterfaceMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
@@ -679,45 +679,45 @@
     "description": "Inserts GuidGenerator.Create() statement",
     "prefix": "xGuidGeneratorCreate"
   },
-  "createAsyncMethodStubIAppService": {
+  "createAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xCreateAsyncMethodStubIAppService"
+    "prefix": "xCreateAsyncInterfaceMethodDefinition"
   },
-  "createManyAsyncMethodStubIAppService": {
+  "createManyAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateManyAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateManyAsync definition for an IAppService interface",
-    "prefix": "xCreateManyAsyncMethodStubIAppService"
+    "prefix": "xCreateManyAsyncInterfaceMethodDefinition"
   },
-  "deleteAsyncMethodStubIAppService": {
+  "deleteAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
       "\t$0"
     ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xDeleteAsyncMethodStubIAppService"
+    "prefix": "xDeleteAsyncInterfaceMethodDefinition"
   },
-  "getAsyncMethodStubIAppService": {
+  "getAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xGetAsyncMethodStubIAppService"
+    "prefix": "xGetAsyncInterfaceMethodDefinition"
   },
-  "getListAsyncMethodStubIAppService": {
+  "getListAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
       "\t$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xGetListAsyncMethodStubIAppService"
+    "prefix": "xGetListAsyncInterfaceMethodDefinition"
   },
   "iAppServiceParam": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
@@ -886,35 +886,36 @@
     "description": "Inserts the IStringLocalizer parameter in the constructor",
     "prefix": "xIStringLocalizerCtorParam"
   },
-  "findByNameAsyncMethodStub": {
+  "findByNameAsyncInterfaceMethodStub": {
     "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync method stub",
-    "prefix": "xFindByNameAsyncMethodStub"
+    "description": "Adds a FindByNameAsync interface method stub",
+    "prefix": "xFindByNameAsyncInterfaceMethodStub"
   },
-  "getListAsyncMethodStub": {
+
+  "getListAsyncInterfaceMethodStub": {
     "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync method stub",
-    "prefix": "xGetListAsyncMethodStub"
+    "description": "Adds a GetListAsync interface method stub",
+    "prefix": "xGetListAsyncInterfaceMethodStub"
   },
-  "xCreateAsyncMethodStub": {
-    "body": "Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
+  "xCreateAsyncInterfaceMethodStub": {
+    "body": "public Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
     "description": "Adds a CreateAsync method stub",
-    "prefix": "xCreateAsyncMethodStub"
+    "prefix": "xCreateAsyncInterfaceMethodStub"
   },
-  "xDeleteAsyncMethodStub": {
-    "body": "Task DeleteAsync();$0",
-    "description": "Adds a GetListAsync method stub",
+  "xDeleteAsyncInterfaceMethodStub": {
+    "body": "Task DeleteAsync(${1|Guid,int,string} id);$0",
+    "description": "Adds a DeleteAsync interface method stub",
     "prefix": "xDeleteAsyncMethodStub"
   },
-  "getPagedListAsyncMethodStub": {
+  "getPagedListAsyncInterfaceMethodStub": {
     "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
-    "description": "Adds a paged GetListAsync method stub",
-    "prefix": "xGetPagedListAsyncMethodStub"
+    "description": "Adds a paged GetListAsync interface method stub",
+    "prefix": "xGetPagedListAsyncInterfaceMethodStub"
   },
-  "getAsyncMethodStub": {
-    "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
-    "description": "Adds a GetAsync method to an IRepository interface",
-    "prefix": "xGetAsyncMethodStub"
+  "getAsyncInterfaceMethodStub": {
+    "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
+    "description": "Adds a GetAsync interface method stub",
+    "prefix": "xGetAsyncInterfaceMethodStub"
   },
   "iSoftDeleteDisable": {
     "body": [
