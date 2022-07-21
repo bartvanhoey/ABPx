@@ -592,7 +592,7 @@
   },
   "getListAsyncInterfaceMethodDefinition": {
     "body": [
-      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync($5);",
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0;",
       "\t$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
