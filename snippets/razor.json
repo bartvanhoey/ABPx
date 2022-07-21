@@ -678,5 +678,11 @@
     "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
     "description": "Inserts a Delete EntityAction element",
     "prefix": "xDeleteEntityAction"
+  },
+  "validationTagMessageLocalizer": {
+    "body": "<Validation MessageLocalizer=\"@LH.Localize\"></Validation>",
+    "description": "Inserts a validation tag with MessageLocalizer attribute",
+    "prefix": "xValidationTagMessageLocalizer"
   }
+
 }
