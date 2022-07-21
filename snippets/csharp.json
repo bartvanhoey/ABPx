@@ -1619,9 +1619,11 @@
   },
   "returnDbSetToListAsync": {
     "body": [
+      "// using System.Linq.Dynamic.Core",
+      "",
       "return await ${1|dbSet,DbSet|}.",
       "\tWhereIf(",
-      "\t\t!filter.IsNullOrWhiteSpace()",
+      "\t\t!filter.IsNullOrWhiteSpace(),",
       "\t\tx => x.${2:PropertyName}.Contains(filter))",
       "\t.OrderBy(sorting)",
       "\t.Skip(skipCount)",
