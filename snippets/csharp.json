@@ -898,13 +898,13 @@
   },
   "xCreateAsyncMethodStub": {
     "body": "Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
-    "description": "Adds a GetListAsync method stub",
+    "description": "Adds a CreateAsync method stub",
     "prefix": "xCreateAsyncMethodStub"
   },
   "xDeleteAsyncMethodStub": {
     "body": "Task DeleteAsync();$0",
     "description": "Adds a GetListAsync method stub",
-    "prefix": "xCreateAsyncMethodStub"
+    "prefix": "xDeleteAsyncMethodStub"
   },
   "getPagedListAsyncMethodStub": {
     "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
