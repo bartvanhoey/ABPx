@@ -1888,6 +1888,11 @@
     "description": "Inserts result.Id.ShouldNotBe(Guid.Empty)",
     "prefix": "xUnResultIdShouldNotBeGuidEmpty"
   },
+  "unResultPropertyShouldBe": {
+    "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
+    "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
+    "prefix": "xUnResultPropertyShouldBe"
+  },
   "unResultItemsShouldContain": {
     "body": "result.Items.ShouldContain$1(i => i.$2);$0",
     "description": "Inserts result.Items.ShouldContain statement",
