@@ -1695,6 +1695,13 @@
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
   },
+  "throwAlreadyExistsException": {
+    "body": [
+      "throw new ${1:TypeName}AlreadyExistsException$1();"
+    ],
+    "description": "Inserts throw new AlreadyExistsException statement",
+    "prefix": "xThrowAlreadyExistsException"
+  },
   "throwCustomException": {
     "body": [
       "throw new ${1:Name}Exception(\"${2:TranslationKey}\");"
@@ -1739,7 +1746,7 @@
     "body": [
       "var exception = await Assert.ThrowsAsync<AbpValidationException$1>(async () =>",
       "{",
-      "\tawait _${2:name}AppService.${3|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
+      "\tawait _${2:Name}AppService.${3|GetAsync,GetListAsync,CreateAsync,UpdateAsync,DeleteAsync|} (",
       "\t\tnew ${4:Name}Dto",
       "\t\t{",
       "\t\t\t${5:PropertyName} = ${6:PropertyValue}$7",
