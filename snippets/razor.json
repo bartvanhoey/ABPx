@@ -233,7 +233,7 @@
     "prefix": "xInjectAppService"
   },
   "injectAbpBlazorMessageLocalizerHelper": {
-    "body": "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH,",
+    "body": "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH",
     "description": "Inserts @inject AbpBlazorMessageLocalizerHelper",
     "prefix": "xInjectAbpBlazorMessageLocalizerHelper"
   },
