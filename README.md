@@ -335,5 +335,3 @@ xEditModalDialog                       | Inserts an Edit modal dialog
 xDataGridEntityActionsColumn           | Inserts a DataGridEntityActionsColumn element
 xEditEntityAction                      | Inserts an Edit EntityAction element
 xDeleteEntityAction                    | Inserts a Delete EntityAction element
-
-
