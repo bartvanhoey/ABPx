@@ -1697,7 +1697,7 @@
   },
   "throwAlreadyExistsException": {
     "body": [
-      "throw new ${1:TypeName}AlreadyExistsException$1();"
+      "throw new ${1:TypeName}AlreadyExistsException$2($3);$0"
     ],
     "description": "Inserts throw new AlreadyExistsException statement",
     "prefix": "xThrowAlreadyExistsException"
