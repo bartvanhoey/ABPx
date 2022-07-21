@@ -540,10 +540,15 @@
     "description": "Inserts property Filter",
     "prefix": "xFilterProperty"
   },
-  "findByNameAsyncInterfaceMethodStub": {
-    "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync interface method stub",
-    "prefix": "xFindByNameAsyncInterfaceMethodStub"
+  "findByNameAsyncMethodStub": {
+    "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
+    "description": "Adds a FindByNameAsync method stub",
+    "prefix": "xFindByNameAsyncMethodStub"
+  },
+  "findByNameAsyncInterfaceMethodDefinition": {
+    "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
+    "description": "Adds a FindByNameAsync method definition for an IAppService interface",
+    "prefix": "xFindByNameAsyncInterfaceMethodDefinition"
   },
   "getAsyncInterfaceMethodDefinition": {
     "body": [
@@ -553,10 +558,10 @@
     "description": "Inserts a GetAsync definition for an IAppService interface",
     "prefix": "xGetAsyncInterfaceMethodDefinition"
   },
-  "getAsyncInterfaceMethodStub": {
+  "getAsyncMethodStub": {
     "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
-    "description": "Adds a GetAsync interface method stub",
-    "prefix": "xGetAsyncInterfaceMethodStub"
+    "description": "Adds a GetAsync method stub",
+    "prefix": "xGetAsynceMethodStub"
   },
   "getConfigurationFromContext": {
     "body": [
@@ -593,10 +598,10 @@
     "description": "Inserts a GetListAsync definition for an IAppService interface",
     "prefix": "xGetListAsyncInterfaceMethodDefinition"
   },
-  "getListAsyncInterfaceMethodStub": {
-    "body": "Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-    "description": "Adds a GetListAsync interface method stub",
-    "prefix": "xGetListAsyncInterfaceMethodStub"
+  "getListAsyncMethodStub": {
+    "body": "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
+    "description": "Adds a GetListAsync method stub",
+    "prefix": "xGetListAsyncMethodStub"
   },
   "getLookupInterfaceMethodDefinition": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
@@ -615,10 +620,10 @@
     "description": "Adds a GetLookupAsync method to an AppService class",
     "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getPagedListAsyncInterfaceMethodStub": {
+  "getPagedListAsyncMethodStub": {
     "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
-    "description": "Adds a paged GetListAsync interface method stub",
-    "prefix": "xGetPagedListAsyncInterfaceMethodStub"
+    "description": "Adds a paged GetListAsync method stub",
+    "prefix": "xGetPagedListAsyncMethodStub"
   },
   "getPrivateSet": {
     "body": [
@@ -1911,10 +1916,10 @@
     "description": "Inserts a WithData statement",
     "prefix": "xWithData"
   },
-  "xCreateAsyncInterfaceMethodStub": {
+  "xCreateAsyncMethodStub": {
     "body": "public Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
     "description": "Adds a CreateAsync method stub",
-    "prefix": "xCreateAsyncInterfaceMethodStub"
+    "prefix": "xCreateAsyncMethodStub"
   },
   "xCreatePolicy": {
     "body": [
@@ -1923,9 +1928,9 @@
     "description": "Inserts CreatePolicyName statement",
     "prefix": "xCreatePolicyName"
   },
-  "xDeleteAsyncInterfaceMethodStub": {
-    "body": "Task DeleteAsync(${1|Guid,int,string} id);$0",
-    "description": "Adds a DeleteAsync interface method stub",
+  "xDeleteAsyncMethodStub": {
+    "body": "public Task$1 DeleteAsync(${2|Guid,int,string} id);$0",
+    "description": "Adds a DeleteAsync method stub",
     "prefix": "xDeleteAsyncMethodStub"
   },
   "xDeletePolicy": {
