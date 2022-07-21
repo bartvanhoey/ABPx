@@ -341,32 +341,32 @@
   },
   "createMapTypeToCreateDto": {
     "body": "CreateMap<${1:SourceType}, Create$1Dto>();$0",
-    "description": "CreateMap from [Type] to Create[Type]Dto statement",
-    "prefix": "xCreateMapTypeToCreateTypeDto"
+    "description": "CreateMap from [Type] to CreateDto statement",
+    "prefix": "xCreateMapTypeToCreateDto"
   },
   "createMapTypeToCreateUpdateDto": {
     "body": "CreateMap<${1:SourceType}, CreateUpdate$1Dto>();$0",
-    "description": "CreateMap from [Type] to CreateUpdate[Type]Dto statement",
-    "prefix": "xCreateMapTypeToCreateUpdateTypeDto"
+    "description": "CreateMap from [Type] to CreateUpdateDto statement",
+    "prefix": "xCreateMapTypeToCreateUpdateDto"
   },
   "createMapTypeToDto": {
     "body": "CreateMap<${1:SourceType}, ${2:$1}Dto>();$0",
-    "description": "CreateMap from [Type] to [Type]Dto statement",
+    "description": "CreateMap from [Type] to Dto statement",
     "prefix": "xCreateMapTypeToDto"
   },
   "createMapTypeToLookupDto": {
     "body": "CreateMap<${1:SourceType}, $1LookupDto>();$0",
-    "description": "CreateMap from [Type] to [Type]LookupDto statement",
+    "description": "CreateMap from [Type] to LookupDto statement",
     "prefix": "xCreateMapTypeToLookupDto"
   },
   "createMapTypeToUpdateDto": {
     "body": "CreateMap<${1:SourceType}, Update$1Dto>();$0",
-    "description": "CreateMap from [Type] to Update[Type]Dto statement",
-    "prefix": "xCreateMapTypeToUpdateTypeDto"
+    "description": "CreateMap from [Type] to UpdateDto statement",
+    "prefix": "xCreateMapTypeToUpdateDto"
   },
   "createMapUpdateDtoToType": {
     "body": "CreateMap<Update${1:SourceType}Dto, $1>();$0",
-    "description": "CreateMap from Update[Type]Dto to [Type] statement",
+    "description": "CreateMap from UpdateDto to [Type] statement",
     "prefix": "xCreateMapUpdateDtoToType"
   },
   "crudAppServiceCreateDtoUpdateDto": {
