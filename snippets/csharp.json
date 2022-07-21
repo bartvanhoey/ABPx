@@ -541,6 +541,11 @@
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSet"
   },
+  "dbSetNewSyntax": {
+    "body": "public DbSet<${1:ClassName}$2> ${3:$1}s => Set<${4:$1}>();$0",
+    "description": "Inserts a DbSet for a class statement in DbContext",
+    "prefix": "xDbSetNewSyntax"
+  },
   "dependencyAttribute": {
     "body": [
       "[Dependency$1(ReplaceServices = ${2|true,false|})]"

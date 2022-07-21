@@ -80,6 +80,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xCustomBusinessExceptionClass                 | Inserts a complete CustomException class that inherits from class BusinessException          
      xDataTypeAttribute                            | DataType attribute                                                                           
      xDbSet                                        | Inserts a DbSet for a class statement in DbContext                                           
+     xDbSetNewSyntax                               | Inserts a DbSet for a class statement in DbContext                                           
      xDependencyAttribute                          | Inserts Dependency attribute                                                                 
      xEfCoreRepositoryClassStub                    | Inserts EfCoreRepositoryClass stub                                                           
      xEmailAddressAttribute                        | EmailAddress Attribute                                                                       
@@ -99,6 +100,7 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xGs                                           | Inserts { get, set }                                                                         
      xGuidGeneratorCreate                          | Inserts GuidGenerator.Create() statement                                                     
      xCreateAsyncMethodStubIAppService             | Inserts a CreateAsync definition for an IAppService interface                                
+     xCreateManyAsyncMethodStubIAppService         | Inserts a CreateManyAsync definition for an IAppService interface                            
      xDeleteAsyncMethodStubIAppService             | Inserts a DeleteAsync definition for an IAppService interface                                
      xGetAsyncMethodStubIAppService                | Inserts a GetAsync definition for an IAppService interface                                   
      xGetListAsyncMethodStubIAppService            | Inserts a GetListAsync definition for an IAppService interface                               
