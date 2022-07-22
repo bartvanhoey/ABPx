@@ -1472,12 +1472,26 @@
   },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
-    "description": "Inserts property with private setter",
+    "description": "Inserts a property with private setter",
     "prefix": "xPropPrivateSetter"
+  },
+  "propId": {
+    "body": [
+      "public $1|Guid,int,string} $2|Name}Id { get; set; }$0"
+    ],
+    "description": "Inserts an Id property ",
+    "prefix": "xPropId"
+  },
+  "propName": {
+    "body": [
+      "public string Name { get; set; }$0"
+    ],
+    "description": "Inserts an Name property ",
+    "prefix": "xPropName"
   },
   "propProtectedSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; protected set; }$0",
-    "description": "Inserts property with protected setter",
+    "description": "Inserts a property with protected setter",
     "prefix": "xPropProtectedSetter"
   },
   "rangeAttribute": {
