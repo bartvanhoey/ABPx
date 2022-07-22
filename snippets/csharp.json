@@ -1478,7 +1478,7 @@
   },
   "propId": {
     "body": [
-      "public $1|Guid,int,string} $2|Name}Id { get; set; }$0"
+      "public ${1|Guid,int,string} $2|Name}Id { get; set; }$0"
     ],
     "description": "Inserts an Id property ",
     "prefix": "xPropId"
