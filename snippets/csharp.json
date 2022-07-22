@@ -1563,6 +1563,13 @@
     "description": "Inserts var totalCount = _repository.CountAsync statement",
     "prefix": "xRepoCountAsync"
   },
+  "repositoryCountAsync": {
+    "body": [
+      "var ${1|totalCount,count,total|} = await Repository.CountAsync$3();$0"
+    ],
+    "description": "Inserts var totalCount = Repository.CountAsync statement",
+    "prefix": "xRepositoryCountAsync"
+  },
   "repoGetListAsync": {
     "body": [
       "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3($4);",
