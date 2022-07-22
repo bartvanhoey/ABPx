@@ -716,7 +716,7 @@
     "body": [
       "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
     ],
-    "description": "Inserts HasOne(x => x.Type).WithMany().ForeignKey().IsRequired statement",
+    "description": "Inserts HasOne(x => x.Type).WithMany().ForeignKey().OnDelete(DeleteBehavior.Restrict).IsRequired statement",
     "prefix": "xHasManyWithOneHasFkDeleteRestrictIsRequired"
   },
   "hasOneWithManyFkIsRequired": {
