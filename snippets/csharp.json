@@ -712,20 +712,21 @@
     "description": "Inserts hasKey statement (composite key)",
     "prefix": "xHasKey"
   },
-  "hasManyWithOneHasForeignKeyIsRequired": {
+  "hasManyWithOneHasFkDeleteRestrictIsRequired": {
     "body": [
       "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
     ],
-    "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xHasManyWithOneHasForeignKeyIsRequired"
+    "description": "Inserts HasOne(x => x.Type).WithMany().ForeignKey().IsRequired statement",
+    "prefix": "xHasManyWithOneHasFkDeleteRestrictIsRequired"
   },
-  "hasOneWithManyForeignKeyIsRequired": {
+  "hasOneWithManyFkIsRequired": {
     "body": [
-      "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
+      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id)..IsRequired();$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
-    "prefix": "xHasOneWithManyForeignKeyIsRequired"
+    "prefix": "xHasOneWithManyFkIsRequired"
   },
+  
   "iAppServiceParam": {
     "body": "I${1:Name}AppService$2 ${3:${1/(.*)/${1:/downcase}/}}AppService$0",
     "description": "Inserts a IAppService parameter",
