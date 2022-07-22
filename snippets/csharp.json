@@ -1589,7 +1589,7 @@
   },
   "RepositoryGetQueryableAsync": {
     "body": [
-      "var queryable = await Repository.GetQueryableAsync();",
+      "var queryable = await Repository.GetQueryableAsync$1();",
       "$0"
     ],
     "description": "Inserts var queryable = Repository.GetQueryableAsync() statement",
