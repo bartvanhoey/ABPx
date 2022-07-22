@@ -1579,13 +1579,21 @@
     "description": "Inserts var items = await _repository.GetListAsync() statement",
     "prefix": "xRepoGetListAsyncWithInputParams"
   },
-  "repoGetQueryableAsync": {
+  "RepoGetQueryableAsync": {
     "body": [
       "var queryable = await _${1:name}Repository.GetQueryableAsync$2();",
       "$0"
     ],
     "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xRepoGetQueryableAsync"
+  },
+  "RepositoryGetQueryableAsync": {
+    "body": [
+      "var queryable = await Repository.GetQueryableAsync();",
+      "$0"
+    ],
+    "description": "Inserts var queryable = Repository.GetQueryableAsync() statement",
+    "prefix": "xRepositoryGetQueryableAsync"
   },
   "repoHardDeleteAsync": {
     "body": [
