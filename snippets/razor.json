@@ -180,7 +180,7 @@
     "body": [
       "<Field>",
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-      "  <Select TValue=\"${3:Type}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
+      "  <Select TValue=\"${3|Guid,int,string|}\" @bind-SelectedValue=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}Id\">",
       "    @* <SelectItem TValue=\"$3\" Value=\"$3.Empty\">@L[\"PickAn$2\"]</SelectItem> *@",
       "    @foreach (var item in ${4:${2/(.*)/${1:/downcase}/}}List)",
       "    {",

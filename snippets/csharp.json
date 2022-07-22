@@ -1985,7 +1985,7 @@
     "prefix": "xCreatePolicyName"
   },
   "xDeleteAsyncMethodStub": {
-    "body": "public Task$1 DeleteAsync(${2|Guid,int,string} id);$0",
+    "body": "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
     "description": "Adds a DeleteAsync method stub",
     "prefix": "xDeleteAsyncMethodStub"
   },
