@@ -306,6 +306,14 @@
     "description": "Inserts a CreateAsync definition for an IAppService interface",
     "prefix": "xCreateAsyncInterfaceMethodDefinition"
   },
+  "saveBlobAsyncInterfaceMethodDefinition": {
+    "body": [
+      "\tTask$2 SaveAsync(SaveBlobInput$1Dto$4 input);",
+      "\t$0"
+    ],
+    "description": "Inserts a SaveBlobAsync definition for an IAppService interface",
+    "prefix": "xSaveBlobAsyncInterfaceMethodDefinition"
+  },
   "createManyAsyncInterfaceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateManyAsync(Create$1Dto$4 input);",
@@ -567,6 +575,14 @@
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
     "prefix": "xGetAsyncInterfaceMethodDefinition"
+  },
+  "getBlobAsyncInterfaceMethodDefinition": {
+    "body": [
+      "\tTask$2<BlobDto$3> GetBlobAsync(${4:GetBlobRequestDto}$5 ${6:input});",
+      "\t$0"
+    ],
+    "description": "Inserts a GetBlobAsync definition for an IAppService interface",
+    "prefix": "xGetBlobAsyncInterfaceMethodDefinition"
   },
   "getAsyncMethodStub": {
     "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
