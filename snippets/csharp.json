@@ -587,7 +587,17 @@
   "getAsyncMethodStub": {
     "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
     "description": "Adds a GetAsync method stub",
-    "prefix": "xGetAsynceMethodStub"
+    "prefix": "xGetAsyncMethodStub"
+  },
+  "getAllBytesAsyncMethodStubBlobStorage": {
+    "body": "var blob = await ${1:_fileContainer}.GetAllBytesAsync(${3:input.Name});$0",
+    "description": "Adds var blob = _fileContainer.GetAllBytesAsync method stub",
+    "prefix": "xGetAllBytesAsyncMethodStubBlobStorage"
+  },
+  "saveAsyncMethodStubBlobStorage": {
+    "body": "await ${1:_fileContainer}SaveAsync(${2:input.Name}, ${3:input.Content}, true);$0",
+    "description": "Inserts await _fileContainer.SaveAsync method stub",
+    "prefix": "xSaveAsyncMethodStubBlobStorage"
   },
   "getConfigurationFromContext": {
     "body": [
