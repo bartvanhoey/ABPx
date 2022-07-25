@@ -1686,6 +1686,13 @@
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
+  "bindPropertyAttribute": {
+    "body": [
+      "[BindProperty$1] $0"
+    ],
+    "description": "Inserts BindProperty attribute",
+    "prefix": "xBindPropertyAttribute"
+  },
   "blobContainerNameAttribute": {
     "body": [
       "[BlobContainerName$1(\"$1{YourBlobContainerName}\")] $0"
