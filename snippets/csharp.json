@@ -308,7 +308,7 @@
   },
   "saveBlobAsyncInterfaceMethodDefinition": {
     "body": [
-      "\tTask$2 SaveAsync(SaveBlobInput$1Dto$4 input);",
+      "\tTask$2 SaveBlobAsync(SaveBlobInput$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a SaveBlobAsync definition for an IAppService interface",
