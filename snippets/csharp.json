@@ -1655,6 +1655,13 @@
     "description": "Inserts Required Attribute",
     "prefix": "xRequiredAttribute"
   },
+  "blobContainerNameAttribute": {
+    "body": [
+      "[BlobContainerName$1(\"$1{YourBlobContainerName}\")] $0"
+    ],
+    "description": "Inserts Required Attribute",
+    "prefix": "xBlobContainerNameAttribute"
+  },
   "returnDbContextSetFirstOrDefaultAsync": {
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
     "description": "Inserts return await DbContextSet.FirstOrDefaultAsync()",
