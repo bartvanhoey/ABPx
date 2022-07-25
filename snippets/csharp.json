@@ -589,20 +589,20 @@
     "description": "Adds a GetAsync method stub",
     "prefix": "xGetAsyncMethodStub"
   },
-  "getAllBytesAsyncMethodBlobStorage": {
+  "getAllBytesAsyncMethodBlobContainer": {
     "body": "var blob = await ${1:_fileContainer}.GetAllBytesAsync(${3:input.Name});$0",
-    "description": "Adds var blob = _fileContainer.GetAllBytesAsync method",
-    "prefix": "xGetAllBytesAsyncMethodBlobStorage"
+    "description": "Inserts var blob = _fileContainer.GetAllBytesAsync method",
+    "prefix": "xGetAllBytesAsyncMethodBlobContainer"
   },
   "getBlobAsyncMethodAppService": {
     "body": "var fileDto = await ${1:_fileAppService}$2.GetBlobAsync(new GetBlobRequestDto {Name = ${3:fileName} });$0",
-    "description": "Adds var blob = _fileContainer.GetBlobAsync method",
+    "description": "Inserts var blob = _fileContainer.GetBlobAsync method",
     "prefix": "xBlobAsyncMethodAppService"
   },
-  "saveAsyncMethodStubStorage": {
-    "body": "await ${1:_fileContainer}SaveAsync(${2:input.Name}, ${3:input.Content}, true);$0",
+  "saveAsyncMethodBlobContainer": {
+    "body": "await ${1:_fileContainer}.SaveAsync(${2:input.Name}, ${3:input.Content}, true);$0",
     "description": "Inserts await _fileContainer.SaveAsync method",
-    "prefix": "xSaveAsyncMethodBlobStorage"
+    "prefix": "xSaveAsyncMethodBlobContainer"
   },
   "getConfigurationFromContext": {
     "body": [
