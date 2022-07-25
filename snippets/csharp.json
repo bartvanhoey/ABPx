@@ -604,6 +604,11 @@
     "description": "Inserts await _fileContainer.SaveAsync method",
     "prefix": "xSaveAsyncMethodBlobContainer"
   },
+  "saveAsyncMethodAppService": {
+    "body": "await ${1:_fileAppService}.SaveBlobAsync(new SaveBlobInputDto$2 {Name = ${3:fileName}, Content} = ${4:memoryStream.ToArray()});$0",
+    "description": "Inserts await _fileAppService.SaveBlobAsync method",
+    "prefix": "xSaveAsyncMethodAppService"
+  },
   "getConfigurationFromContext": {
     "body": [
       "var configuration = context.Services.GetConfiguration();;$0"
