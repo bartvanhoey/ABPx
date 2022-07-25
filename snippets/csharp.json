@@ -917,6 +917,17 @@
     "description": "If null statement",
     "prefix": "xIfNull"
   },
+  "ifNotStatement": {
+    "body": [
+      "if(!$1)",
+      "{",
+      "\t$2",
+      "}",
+      "$0"
+    ],
+    "description": "If not statement",
+    "prefix": "xIfNot"
+  },
   "ifRepositoryGetCountAsync": {
     "body": [
       "if (await _${1:name}Repository.GetCountAsync$2() ${3|<,<=,==,!=,>=,>|} 0)",
