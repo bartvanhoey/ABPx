@@ -1693,6 +1693,13 @@
     "description": "Inserts BindProperty attribute",
     "prefix": "xBindPropertyAttribute"
   },
+  "displayAttribute": {
+    "body": [
+      "[Display$1(Name = \"${2:Name} \")] $0"
+    ],
+    "description": "Inserts Display attribute",
+    "prefix": "xDisplayAttribute"
+  },
   "blobContainerNameAttribute": {
     "body": [
       "[BlobContainerName$1(\"$1{YourBlobContainerName}\")] $0"
