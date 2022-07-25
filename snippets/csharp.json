@@ -611,10 +611,15 @@
   },
   "getConfigurationFromContext": {
     "body": [
-      "var configuration = context.Services.GetConfiguration();;$0"
+      "var configuration = context.Services.GetConfiguration();$0"
     ],
     "description": "Inserts var configuration = context.Services.GetConfiguration(); statement",
     "prefix": "xGetConfigurationFromContext"
+  },
+  "builderConfigureBlobStoring": {
+    "body": "builder.ConfigureBlobStoring();$0",
+    "description": "Inserts builder.ConfigureBlobStoring() statement in OnModelCreating method in DbContext",
+    "prefix": "xBuilderConfigureBlobStoring"
   },
   "getDbContextAsync": {
     "body": "var dbContext = await GetDbContextAsync();$0",
