@@ -123,7 +123,7 @@
       "          \"request\": \"launch\",",
       "          \"preLaunchTask\": \"buildApi\",",
       "          // If you have changed target frameworks, make sure to update the program path.",
-      "          \"program\": \"${${workspaceFolder}}/src/$1.Web/bin/Debug/${2|net6.0,net5.0|}/$1.Web.dll\",",
+      "          \"program\": \"${${workspaceFolder}}/src/${1:${WORKSPACE_NAME}}.Web/bin/Debug/${2|net6.0,net5.0|}/$1.Web.dll\",",
       "          \"args\": [],",
       "          \"cwd\": \"${${workspaceFolder}}/src/$1.Web\",",
       "          \"stopAtEntry\": false,",
