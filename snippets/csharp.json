@@ -876,9 +876,14 @@
     "prefix": "xIDataFilterProperty"
   },
   "IdentityUserManager": {
-    "body": "IdentityUserManager$1 identityUserManager$0",
+    "body": "IdentityUserManager$1 ${2:identityUserManager}$0",
     "description": "Inserts an IdentityUserManager identityManager parameter in the constructor",
     "prefix": "xIdentityUserManagerCtorParam"
+  },
+  "AbpSignInManager": {
+    "body": "AbpSignInManager$1 ${2:abpSignInManager}$0",
+    "description": "Inserts an AbpSignInManager abpSignInManager parameter in the constructor",
+    "prefix": "xAbpSignInManagerCtorParam"
   },
   "IIdentityUserRepository": {
     "body": "IIdentityUserRepository$1 identityUserRepository$1$0",
