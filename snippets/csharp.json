@@ -70,6 +70,11 @@
     "description": "Inserts var x = AppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
+  "taskCompleted": {
+    "body":       "await Task.CompletedTask;$0",
+    "description": "Inserts await Task.CompletedTask statement",
+    "prefix": "xTaskCompleted"
+  },
   "appServiceDeleteAsync": {
     "body": [
       "await ${1:Name}AppService.DeleteAsync(${3:id});$0"
@@ -1545,9 +1550,9 @@
   },
   "propId": {
     "body": [
-      "public ${1|Guid,int,string} $2|Name}Id { get; set; }$0"
+      "public ${1|Guid,int,string} ${2:Id} { get; set; }$0"
     ],
-    "description": "Inserts an Id property ",
+    "description": "Inserts an Id property",
     "prefix": "xPropId"
   },
   "propName": {
