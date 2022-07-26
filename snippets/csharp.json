@@ -1282,6 +1282,11 @@
     "description": "Inserts var x = await _nameManager.CreateAsync() statement",
     "prefix": "xManagerCreateAsync"
   },
+  "managerFindByIdAsync": {
+    "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.FindByIdAsync(${3:id});$0",
+    "description": "Inserts var x = await _nameManager.FindByIdAsync() statement",
+    "prefix": "xManagerFindByIdAsync"
+  },
   "managerCustomCtorParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
     "description": "Inserts a custom Manager parameter in constructor",
