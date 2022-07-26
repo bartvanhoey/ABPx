@@ -880,6 +880,11 @@
     "description": "Inserts an IdentityUserManager identityManager parameter in the constructor",
     "prefix": "xIdentityUserManagerCtorParam"
   },
+  "IIdentityUserRepository": {
+    "body": "IIdentityUserRepository$1 identityUserRepository$1$0",
+    "description": "Inserts an IIdentityUserRepository identityUserRepository parameter in the constructor",
+    "prefix": "xIIdentityUserRepositoryCtorParam"
+  },
   "ifAuthServiceIsGrantedAsync": {
     "body": [
       "if(await AuthorizationService.IsGrantedAsync(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|}))",
