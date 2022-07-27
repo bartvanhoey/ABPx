@@ -528,7 +528,7 @@
       "\t}",
       "}"
     ],
-    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
+    "description": "Inserts a complete CustomException class inherits from class BusinessException",
     "prefix": "xCustomBusinessExceptionClass"
   },
   "dataTypeAttribute": {
