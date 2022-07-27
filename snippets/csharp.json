@@ -553,14 +553,14 @@
     "body": [
       "[ExposeServices$1(typeof(${2:TypeName}))]"
     ],
-    "description": "Inserts ExposeServices attribute",
+    "description": "Inserts an ExposeServices attribute",
     "prefix": "xExposeServicesAttribute"
   },
   "filterProperty": {
     "body": [
       "public string Filter { get; set; }"
     ],
-    "description": "Inserts property Filter",
+    "description": "Inserts a property Filter",
     "prefix": "xFilterProperty"
   },
   "findByNameAsyncMethodStub": {

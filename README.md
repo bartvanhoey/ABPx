@@ -226,8 +226,8 @@ Do you see room for improvement or do you have a snippet in mind you want to be 
      xGetAllBytesAsyncMethodBlobContainer          | Inserts var blob = _fileContainer.GetAllBytesAsync method                                                 
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method stub                                                                        
      xFindByNameAsyncInterfaceMethodDefinition     | Adds a FindByNameAsync method definition for an IAppService interface                                     
-     xFilterProperty                               | Inserts property Filter                                                                                   
-     xExposeServicesAttribute                      | Inserts ExposeServices attribute                                                                          
+     xFilterProperty                               | Inserts a property Filter                                                                                 
+     xExposeServicesAttribute                      | Inserts an ExposeServices attribute                                                                       
      xExecuteSqlRawAsync                           | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                                             
      xEmailAddressAttribute                        | EmailAddress Attribute                                                                                    
      xEfCoreRepositoryClassStub                    | Inserts EfCoreRepositoryClass stub                                                                        
