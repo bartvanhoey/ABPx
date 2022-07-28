@@ -321,7 +321,7 @@
   },
   "createManyAsyncInterfaceMethodDefinition": {
     "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateManyAsync(Create$1Dto$4 input);",
+      "\tTask$2<ListResultDto$4<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> CreateManyAsync(Create$1Dto$5 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateManyAsync definition for an IAppService interface",
