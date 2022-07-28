@@ -488,7 +488,7 @@
       "\t}",
       "}"
     ],
-    "description": "Inserts a complete CustomException class that inherits from class BusinessException",
+    "description": "Inserts a complete CustomException class inherits from class BusinessException",
     "prefix": "xCustomBusinessExceptionClass"
   },
   "dataTypeAttribute": {
@@ -553,14 +553,14 @@
     "body": [
       "[ExposeServices$1(typeof(${2:TypeName}))]"
     ],
-    "description": "Inserts ExposeServices attribute",
+    "description": "Inserts an ExposeServices attribute",
     "prefix": "xExposeServicesAttribute"
   },
   "filterProperty": {
     "body": [
       "public string Filter { get; set; }"
     ],
-    "description": "Inserts property Filter",
+    "description": "Inserts a property Filter",
     "prefix": "xFilterProperty"
   },
   "findByNameAsyncMethodStub": {
@@ -1550,7 +1550,7 @@
   },
   "propId": {
     "body": [
-      "public ${1|Guid,int,string} ${2:Id} { get; set; }$0"
+      "public ${1|Guid,int,string|} ${2:Id} { get; set; }$0"
     ],
     "description": "Inserts an Id property",
     "prefix": "xPropId"
