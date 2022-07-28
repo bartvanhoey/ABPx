@@ -1246,6 +1246,16 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iEmailSenderCtorParam": {
+    "body": "IEmailSender$1 emailSender$0",
+    "description": "Inserts a IEmailSender parameter in the constructor",
+    "prefix": "xIEmailSender"
+  },
+  "iTemplateRendererCtorParam": {
+    "body": "ITemplateRenderer$1 templateRenderer$0",
+    "description": "Inserts a ITemplateRenderer parameter in the constructor",
+    "prefix": "xITemplateRenderer"
+  },
   "iSoftDeleteDisable": {
     "body": [
       "//Temporary disable the ISoftDelete filter",
