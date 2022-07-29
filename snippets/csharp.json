@@ -1572,6 +1572,41 @@
     "description": "Inserts an Name property ",
     "prefix": "xPropName"
   },
+  "propTitle": {
+    "body": [
+      "public string Title { get; set; }$0"
+    ],
+    "description": "Inserts an Title property ",
+    "prefix": "xPropTitle"
+  },
+  "propDescription": {
+    "body": [
+      "public string Description{ get; set; }$0"
+    ],
+    "description": "Inserts a Description property ",
+    "prefix": "xPropDescription"
+  },
+  "propStartDate": {
+    "body": [
+      "public DateTime$1 StartDate { get; set; }$0"
+    ],
+    "description": "Inserts a StartDate property ",
+    "prefix": "xPropStartDate"
+  },
+  "propEndDate": {
+    "body": [
+      "public DateTime$1 EndDate { get; set; }$0"
+    ],
+    "description": "Inserts an EndDate property ",
+    "prefix": "xPropEndDate"
+  },
+  "propBirthDate": {
+    "body": [
+      "public DateTime$1 BirthDate { get; set; }$0"
+    ],
+    "description": "Inserts an BirthDate property ",
+    "prefix": "xPropBirthDate"
+  },
   "propProtectedSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; protected set; }$0",
     "description": "Inserts a property with protected setter",
