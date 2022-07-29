@@ -113,7 +113,7 @@
   },
   "asyncExecuterToListAsync": {
     "body": [
-      "var ${1|queryResult,list} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4|query,queryable|});"
+      "var ${1|queryResult,list|} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4|query,queryable|});"
     ],
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
