@@ -2098,11 +2098,33 @@
     "description": "Inserts using System.Linq.Dynamic.Core statement",
     "prefix": "xUsingSystemLinqDynamicCore"
   },
-  "varIsObjectMapperMap": {
+  "varObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
     "description": "var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement",
-    "prefix": "xVarIsObjectMapperMap"
+    "prefix": "xVarObjectMapperMap"
   },
+  "varObjectMapperMapCreateDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<Create${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<CreateDto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapCreateDtoToType"
+	},
+	"varObjectMapperMapDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<Dto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapDtoToType"
+	},
+	"varObjectMapperMapUpdateDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<Update${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapUpdateDtoToType"
+	},
+}
   "withData": {
     "body": [
       "\t\tWithData(\"${1:parameterName}\", ${2:$1});"
