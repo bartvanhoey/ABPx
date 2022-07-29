@@ -212,6 +212,15 @@
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
+  "ifCurrentUserIsAuthenticated": {
+    "body": ["@if (CurrentUser.isAuthenticated)", 
+    "{", 
+    "\t$0", 
+    "}"],
+    "description": "If CurrentUser.isAuthenticated",
+    "prefix": "xIfCurrentUserIsAuthenticated"
+  },
+
   "ifCanDelete": {
     "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
     "description": "If CanDelete",
