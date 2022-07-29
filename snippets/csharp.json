@@ -65,9 +65,9 @@
   },
   "appServiceCreateAsync": {
     "body": [
-      "var ${2:created$1} = await ${1:Name}AppService.CreateAsync(${3:input});$0"
+      "var ${2:created$1} = await _${1:Name}AppService.CreateAsync(${3:input});$0"
     ],
-    "description": "Inserts var x = AppService.CreateAsync() statement",
+    "description": "Inserts var x = _nameAppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
   "taskCompleted": {
@@ -77,23 +77,23 @@
   },
   "appServiceDeleteAsync": {
     "body": [
-      "await ${1:Name}AppService.DeleteAsync(${3:id});$0"
+      "await _${1:Name}AppService.DeleteAsync(${3:id});$0"
     ],
-    "description": "Inserts await NameAppService.DeleteAsync() statement",
+    "description": "Inserts await _nameAppService.DeleteAsync() statement",
     "prefix": "xAppServiceDeleteAsync"
   },
   "appServiceGetAsync": {
     "body": [
-      "${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"
+      "${2:var $1} = await _${1:Name}AppService.GetAsync(${3:id});$0"
     ],
-    "description": "Inserts var x = NameAppService.GetAsync() statement",
+    "description": "Inserts var x = _nameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
   "appServiceGetListAsync": {
     "body": [
-      "${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"
+      "${2:var $1s} = await _${1:Name}AppService.GetListAsync();$0"
     ],
-    "description": "Inserts var x = NameAppService.GetListAsync() statement",
+    "description": "Inserts var x = _nameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
   "asyncExecuterCountAsync": {
@@ -2124,7 +2124,6 @@
 		"description": "var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement",
 		"prefix": "xVarObjectMapperMapUpdateDtoToType"
 	},
-}
   "withData": {
     "body": [
       "\t\tWithData(\"${1:parameterName}\", ${2:$1});"
