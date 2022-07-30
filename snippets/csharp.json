@@ -1567,7 +1567,7 @@
   },
   "propName": {
     "body": [
-      "public string Name { get; set; }$0"
+      "public string ${1:Name} { get; set; }$0"
     ],
     "description": "Inserts an Name property ",
     "prefix": "xPropName"
