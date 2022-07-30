@@ -484,6 +484,14 @@
     "description": "Inserts CurrentUser.GetId() statement",
     "prefix": "xCurrentUserGetId"
   },
+  "ifCurrentUserIsAuthenticated": {
+    "body": ["if (CurrentUser.isAuthenticated)", 
+    "{", 
+    "\t$0", 
+    "}"],
+    "description": "If CurrentUser.isAuthenticated",
+    "prefix": "xIfCurrentUserIsAuthenticated"
+  },
   "customBusinessExceptionClass": {
     "body": [
       "public class ${TM_FILENAME_BASE}  : BusinessException$1",
