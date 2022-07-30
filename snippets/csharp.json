@@ -477,6 +477,13 @@
     "description": "Inserts using (CurrentTenant.Change(tenantId))",
     "prefix": "xCurrentTenantChange"
   },
+  "currentUserGetId": {
+    "body": [
+      "CurrentUser.GetId()"
+    ],
+    "description": "Inserts CurrentUser.GetId() statement",
+    "prefix": "xCurrentUserGetId"
+  },
   "customBusinessExceptionClass": {
     "body": [
       "public class ${TM_FILENAME_BASE}  : BusinessException$1",
