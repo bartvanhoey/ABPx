@@ -153,7 +153,7 @@
     "description": "Inserts the AuthorizationService.IsGrantedAsync method",
     "prefix": "xAuthServiceIsGrantedAsync"
   },
-  "modelBuilderEntityMongo": {
+  "modelBuilderEntityMongoDb": {
     "body": [
       "builder.Entity<${1:ClassName}>(b =>",
       "{",
@@ -161,7 +161,7 @@
       "});$0"
     ],
     "description": "builder.Entity stub",
-    "prefix": "xModelBuilderEntityMongo"
+    "prefix": "xBuilderEntityMongoDb"
   },
   "builderEntity": {
     "body": [
