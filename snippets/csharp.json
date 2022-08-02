@@ -1602,28 +1602,28 @@
   },
   "propStartDate": {
     "body": [
-      "public DateTime$1 ${1:StartDate} { get; set; }$0"
+      "public DateTime$2 ${1:StartDate} { get; set; }$0"
     ],
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
   },
   "propStartTime": {
     "body": [
-      "public DateTime$1 ${1:StartTime} { get; set; }$0"
+      "public DateTime$2 ${1:StartTime} { get; set; }$0"
     ],
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "xPropStartTime"
   },
   "propEndDate": {
     "body": [
-      "public DateTime$1 ${1:EndDate }{ get; set; }$0"
+      "public DateTime$2 ${1:EndDate }{ get; set; }$0"
     ],
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "xPropEndDate"
   },
   "propEndTime": {
     "body": [
-      "public DateTime$1 ${1:EndTime} { get; set; }$0"
+      "public DateTime$2 ${1:EndTime} { get; set; }$0"
     ],
     "description": "Inserts a DateTime EndTime property ",
     "prefix": "xPropEndTime"
