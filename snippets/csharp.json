@@ -157,7 +157,6 @@
     "body": [
       "builder.Entity<${1:ClassName}>(b =>",
       "{",
-      "\tb.CollectionName = \"${2:$1}s\";",
       "});$0"
     ],
     "description": "builder.Entity stub",
@@ -303,29 +302,29 @@
     "description": "Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement",
     "prefix": "xContextGetRequiredService"
   },
-  "createAsyncInterfaceMethodDefinition": {
+  "createAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xCreateAsyncInterfaceMethodDefinition"
+    "prefix": "xCreateAsyncIAppServiceMethodDefinition"
   },
-  "saveBlobAsyncInterfaceMethodDefinition": {
+  "saveBlobAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2 SaveBlobAsync(SaveBlobInput$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a SaveBlobAsync definition for an IAppService interface",
-    "prefix": "xSaveBlobAsyncInterfaceMethodDefinition"
+    "prefix": "xSaveBlobAsyncIAppServiceMethodDefinition"
   },
-  "createManyAsyncInterfaceMethodDefinition": {
+  "createManyAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<ListResultDto$4<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> CreateManyAsync(Create$1Dto$5 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateManyAsync definition for an IAppService interface",
-    "prefix": "xCreateManyAsyncInterfaceMethodDefinition"
+    "prefix": "xCreateManyAsyncIAppServiceMethodDefinition"
   },
   "createMapCreateDtoToType": {
     "body": "CreateMap<Create${1:SourceType}Dto, $1>();$0",
@@ -521,13 +520,13 @@
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSetNewSyntax"
   },
-  "deleteAsyncInterfaceMethodDefinition": {
+  "deleteAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
       "\t$0"
     ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xDeleteAsyncInterfaceMethodDefinition"
+    "prefix": "xDeleteAsyncIAppServiceMethodDefinition"
   },
   "dependencyAttribute": {
     "body": [
@@ -583,26 +582,26 @@
     "description": "Adds a FindByNameAsync method stub",
     "prefix": "xFindByNameAsyncMethodStub"
   },
-  "findByNameAsyncInterfaceMethodDefinition": {
+  "findByNameAsyncIAppServiceMethodDefinition": {
     "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method definition for an IAppService interface",
-    "prefix": "xFindByNameAsyncInterfaceMethodDefinition"
+    "prefix": "xFindByNameAsyncIAppServiceMethodDefinition"
   },
-  "getAsyncInterfaceMethodDefinition": {
+  "getAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xGetAsyncInterfaceMethodDefinition"
+    "prefix": "xGetAsyncIAppServiceMethodDefinition"
   },
-  "getBlobAsyncInterfaceMethodDefinition": {
+  "getBlobAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<BlobDto$3> GetBlobAsync(${4:GetBlobRequestDto}$5 ${6:input});",
       "\t$0"
     ],
     "description": "Inserts a GetBlobAsync definition for an IAppService interface",
-    "prefix": "xGetBlobAsyncInterfaceMethodDefinition"
+    "prefix": "xGetBlobAsyncIAppServiceMethodDefinition"
   },
   "getAsyncMethodStub": {
     "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
@@ -661,22 +660,29 @@
     "description": "Insert a GetKeys method",
     "prefix": "xGetKeysMethod"
   },
-  "getListAsyncInterfaceMethodDefinition": {
+  "getListAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync(Get${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}ListDto$4 input);$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xGetListAsyncInterfaceMethodDefinition"
+    "prefix": "xGetListAsyncIAppServiceMethodDefinition"
+  },
+  "getListAsyncIRepoMethodDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}Dto$3>> GetListAsync($4);$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an IRepository interface",
+    "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodStub": {
     "body": "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
   },
-  "getLookupInterfaceMethodDefinition": {
+  "getLookupIAppServiceMethodDefinition": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
     "description": "Adds a GetLookupAsync method to an IAppService interface",
-    "prefix": "xGetLookupInterfaceMethodDefinition"
+    "prefix": "xGetLookupIAppServiceMethodDefinition"
   },
   "getLookupMethodImplementationAppService": {
     "body": [
