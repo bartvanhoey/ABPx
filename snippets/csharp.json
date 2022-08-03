@@ -696,10 +696,15 @@
     "description": "Adds a GetLookupAsync method to an AppService class",
     "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getPagedListAsyncMethodStub": {
-    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
-    "description": "Adds a paged GetListAsync method stub",
-    "prefix": "xGetPagedListAsyncMethodStub"
+  "getPagedListAsyncIAppServiceMethodDefinition": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync(PagedAndSortedResultRequestDto$3 input);$0",
+    "description": "Adds a paged GetPagedListAsync method definition in IAppService",
+    "prefix": "xGetPagedListAsyncIAppServiceMethodDefinition"
+  },
+  "getPagedListAsyncIRepoMethodDefinition": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync($3);$0",
+    "description": "Adds a paged GetPagedListAsync method definition in IRepo",
+    "prefix": "xGetPagedListAsyncIRepoMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
