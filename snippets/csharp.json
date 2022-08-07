@@ -65,9 +65,9 @@
   },
   "appServiceCreateAsync": {
     "body": [
-      "var ${2:created$1} = await ${1:Name}AppService.CreateAsync(${3:input});$0"
+      "var ${2:created$1} = await _${1:Name}AppService.CreateAsync(${3:input});$0"
     ],
-    "description": "Inserts var x = AppService.CreateAsync() statement",
+    "description": "Inserts var x = _nameAppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
   },
   "taskCompleted": {
@@ -77,23 +77,23 @@
   },
   "appServiceDeleteAsync": {
     "body": [
-      "await ${1:Name}AppService.DeleteAsync(${3:id});$0"
+      "await _${1:Name}AppService.DeleteAsync(${3:id});$0"
     ],
-    "description": "Inserts await NameAppService.DeleteAsync() statement",
+    "description": "Inserts await _nameAppService.DeleteAsync() statement",
     "prefix": "xAppServiceDeleteAsync"
   },
   "appServiceGetAsync": {
     "body": [
-      "${2:var $1} = await ${1:Name}AppService.GetAsync(${3:id});$0"
+      "${2:var $1} = await _${1:Name}AppService.GetAsync(${3:id});$0"
     ],
-    "description": "Inserts var x = NameAppService.GetAsync() statement",
+    "description": "Inserts var x = _nameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
   "appServiceGetListAsync": {
     "body": [
-      "${2:var $1s} = await ${1:Name}AppService.GetListAsync();$0"
+      "${2:var $1s} = await _${1:Name}AppService.GetListAsync();$0"
     ],
-    "description": "Inserts var x = NameAppService.GetListAsync() statement",
+    "description": "Inserts var x = _nameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
   "asyncExecuterCountAsync": {
@@ -113,7 +113,7 @@
   },
   "asyncExecuterToListAsync": {
     "body": [
-      "var ${1|queryResult,list} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4|query,queryable|});"
+      "var ${1|queryResult,list|} = await ${2|_asyncExecuter,AsyncExecuter|}.ToListAsync$3(${4|query,queryable|});"
     ],
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
@@ -153,15 +153,14 @@
     "description": "Inserts the AuthorizationService.IsGrantedAsync method",
     "prefix": "xAuthServiceIsGrantedAsync"
   },
-  "modelBuilderEntityMongo": {
+  "modelBuilderEntityMongoDb": {
     "body": [
       "builder.Entity<${1:ClassName}>(b =>",
       "{",
-      "\tb.CollectionName = \"${2:$1}s\";",
       "});$0"
     ],
     "description": "builder.Entity stub",
-    "prefix": "xModelBuilderEntityMongo"
+    "prefix": "xBuilderEntityMongoDb"
   },
   "builderEntity": {
     "body": [
@@ -303,29 +302,29 @@
     "description": "Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement",
     "prefix": "xContextGetRequiredService"
   },
-  "createAsyncInterfaceMethodDefinition": {
+  "createAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateAsync(Create$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateAsync definition for an IAppService interface",
-    "prefix": "xCreateAsyncInterfaceMethodDefinition"
+    "prefix": "xCreateAsyncIAppServiceMethodDefinition"
   },
-  "saveBlobAsyncInterfaceMethodDefinition": {
+  "saveBlobAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2 SaveBlobAsync(SaveBlobInput$1Dto$4 input);",
       "\t$0"
     ],
     "description": "Inserts a SaveBlobAsync definition for an IAppService interface",
-    "prefix": "xSaveBlobAsyncInterfaceMethodDefinition"
+    "prefix": "xSaveBlobAsyncIAppServiceMethodDefinition"
   },
-  "createManyAsyncInterfaceMethodDefinition": {
+  "createManyAsyncIAppServiceMethodDefinition": {
     "body": [
-      "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> CreateManyAsync(Create$1Dto$4 input);",
+      "\tTask$2<ListResultDto$4<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> CreateManyAsync(Create$1Dto$5 input);",
       "\t$0"
     ],
     "description": "Inserts a CreateManyAsync definition for an IAppService interface",
-    "prefix": "xCreateManyAsyncInterfaceMethodDefinition"
+    "prefix": "xCreateManyAsyncIAppServiceMethodDefinition"
   },
   "createMapCreateDtoToType": {
     "body": "CreateMap<Create${1:SourceType}Dto, $1>();$0",
@@ -477,6 +476,21 @@
     "description": "Inserts using (CurrentTenant.Change(tenantId))",
     "prefix": "xCurrentTenantChange"
   },
+  "currentUserGetId": {
+    "body": [
+      "CurrentUser.GetId()"
+    ],
+    "description": "Inserts CurrentUser.GetId() statement",
+    "prefix": "xCurrentUserGetId"
+  },
+  "ifCurrentUserIsAuthenticated": {
+    "body": ["if (CurrentUser.isAuthenticated)", 
+    "{", 
+    "\t$0", 
+    "}"],
+    "description": "If CurrentUser.isAuthenticated",
+    "prefix": "xIfCurrentUserIsAuthenticated"
+  },
   "customBusinessExceptionClass": {
     "body": [
       "public class ${TM_FILENAME_BASE}  : BusinessException$1",
@@ -506,13 +520,13 @@
     "description": "Inserts a DbSet for a class statement in DbContext",
     "prefix": "xDbSetNewSyntax"
   },
-  "deleteAsyncInterfaceMethodDefinition": {
+  "deleteAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
       "\t$0"
     ],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
-    "prefix": "xDeleteAsyncInterfaceMethodDefinition"
+    "prefix": "xDeleteAsyncIAppServiceMethodDefinition"
   },
   "dependencyAttribute": {
     "body": [
@@ -568,26 +582,26 @@
     "description": "Adds a FindByNameAsync method stub",
     "prefix": "xFindByNameAsyncMethodStub"
   },
-  "findByNameAsyncInterfaceMethodDefinition": {
+  "findByNameAsyncIAppServiceMethodDefinition": {
     "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync method definition for an IAppService interface",
-    "prefix": "xFindByNameAsyncInterfaceMethodDefinition"
+    "prefix": "xFindByNameAsyncIAppServiceMethodDefinition"
   },
-  "getAsyncInterfaceMethodDefinition": {
+  "getAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3> GetAsync(${4|Guid,int,string|}$5 ${6:id});",
       "\t$0"
     ],
     "description": "Inserts a GetAsync definition for an IAppService interface",
-    "prefix": "xGetAsyncInterfaceMethodDefinition"
+    "prefix": "xGetAsyncIAppServiceMethodDefinition"
   },
-  "getBlobAsyncInterfaceMethodDefinition": {
+  "getBlobAsyncIAppServiceMethodDefinition": {
     "body": [
       "\tTask$2<BlobDto$3> GetBlobAsync(${4:GetBlobRequestDto}$5 ${6:input});",
       "\t$0"
     ],
     "description": "Inserts a GetBlobAsync definition for an IAppService interface",
-    "prefix": "xGetBlobAsyncInterfaceMethodDefinition"
+    "prefix": "xGetBlobAsyncIAppServiceMethodDefinition"
   },
   "getAsyncMethodStub": {
     "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
@@ -646,23 +660,29 @@
     "description": "Insert a GetKeys method",
     "prefix": "xGetKeysMethod"
   },
-  "getListAsyncInterfaceMethodDefinition": {
+  "getListAsyncIAppServiceMethodDefinition": {
     "body": [
-      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
-      "\t$0"
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$3>> GetListAsync(Get${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}ListDto$4 input);$0"
     ],
     "description": "Inserts a GetListAsync definition for an IAppService interface",
-    "prefix": "xGetListAsyncInterfaceMethodDefinition"
+    "prefix": "xGetListAsyncIAppServiceMethodDefinition"
+  },
+  "getListAsyncIRepoMethodDefinition": {
+    "body": [
+      "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetListAsync($4);$0"
+    ],
+    "description": "Inserts a GetListAsync definition for an IRepository interface",
+    "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodStub": {
     "body": "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
     "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
   },
-  "getLookupInterfaceMethodDefinition": {
+  "getLookupIAppServiceMethodDefinition": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
     "description": "Adds a GetLookupAsync method to an IAppService interface",
-    "prefix": "xGetLookupInterfaceMethodDefinition"
+    "prefix": "xGetLookupIAppServiceMethodDefinition"
   },
   "getLookupMethodImplementationAppService": {
     "body": [
@@ -676,10 +696,15 @@
     "description": "Adds a GetLookupAsync method to an AppService class",
     "prefix": "xGetLookupMethodImplementationAppService"
   },
-  "getPagedListAsyncMethodStub": {
-    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetListAsync(PagedAndSortedResultRequestDto$3 input);$0",
-    "description": "Adds a paged GetListAsync method stub",
-    "prefix": "xGetPagedListAsyncMethodStub"
+  "getPagedListAsyncIAppServiceMethodDefinition": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync(PagedAndSortedResultRequestDto$3 input);$0",
+    "description": "Adds a paged GetPagedListAsync method definition in IAppService",
+    "prefix": "xGetPagedListAsyncIAppServiceMethodDefinition"
+  },
+  "getPagedListAsyncIRepoMethodDefinition": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
+    "description": "Adds a paged GetPagedListAsync method definition in IRepo",
+    "prefix": "xGetPagedListAsyncIRepoMethodDefinition"
   },
   "getPrivateSet": {
     "body": [
@@ -715,7 +740,7 @@
       "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
       "private readonly ${3:$1} _${5:$4}$6;"
     ],
-    "description": "Inserts GetRequiredService and matching field",
+    "description": "Inserts GetRequiredService and matching field!",
     "prefix": "xGetRequiredService"
   },
   "getSet": {
@@ -1246,6 +1271,16 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iEmailSenderCtorParam": {
+    "body": "IEmailSender$1 emailSender$0",
+    "description": "Inserts a IEmailSender parameter in the constructor",
+    "prefix": "xIEmailSender"
+  },
+  "iTemplateRendererCtorParam": {
+    "body": "ITemplateRenderer$1 templateRenderer$0",
+    "description": "Inserts a ITemplateRenderer parameter in the constructor",
+    "prefix": "xITemplateRenderer"
+  },
   "iSoftDeleteDisable": {
     "body": [
       "//Temporary disable the ISoftDelete filter",
@@ -1550,17 +1585,66 @@
   },
   "propId": {
     "body": [
-      "public ${1|Guid,int,string} ${2:Id} { get; set; }$0"
+      "public ${1|Guid,int,string|} ${2:Id} { get; set; }$0"
     ],
     "description": "Inserts an Id property",
     "prefix": "xPropId"
   },
   "propName": {
     "body": [
-      "public string Name { get; set; }$0"
+      "public string ${1:Name} { get; set; }$0"
     ],
     "description": "Inserts an Name property ",
     "prefix": "xPropName"
+  },
+  "propTitle": {
+    "body": [
+      "public string Title { get; set; }$0"
+    ],
+    "description": "Inserts an Title property ",
+    "prefix": "xPropTitle"
+  },
+  "propDescription": {
+    "body": [
+      "public string Description{ get; set; }$0"
+    ],
+    "description": "Inserts a Description property ",
+    "prefix": "xPropDescription"
+  },
+  "propStartDate": {
+    "body": [
+      "public DateTime$2 ${1:StartDate} { get; set; }$0"
+    ],
+    "description": "Inserts a DateTime StartDate property ",
+    "prefix": "xPropStartDate"
+  },
+  "propStartTime": {
+    "body": [
+      "public DateTime$2 ${1:StartTime} { get; set; }$0"
+    ],
+    "description": "Inserts a DateTime StartTime property ",
+    "prefix": "xPropStartTime"
+  },
+  "propEndDate": {
+    "body": [
+      "public DateTime$2 ${1:EndDate }{ get; set; }$0"
+    ],
+    "description": "Inserts a DateTime EndDate property ",
+    "prefix": "xPropEndDate"
+  },
+  "propEndTime": {
+    "body": [
+      "public DateTime$2 ${1:EndTime} { get; set; }$0"
+    ],
+    "description": "Inserts a DateTime EndTime property ",
+    "prefix": "xPropEndTime"
+  },
+  "propBirthDate": {
+    "body": [
+      "public DateTime$1 BirthDate { get; set; }$0"
+    ],
+    "description": "Inserts an BirthDate property ",
+    "prefix": "xPropBirthDate"
   },
   "propProtectedSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; protected set; }$0",
@@ -2053,11 +2137,32 @@
     "description": "Inserts using System.Linq.Dynamic.Core statement",
     "prefix": "xUsingSystemLinqDynamicCore"
   },
-  "varIsObjectMapperMap": {
+  "varObjectMapperMap": {
     "body": "var ${1:result} = ${2|ObjectMapper,_objectMapper|}.Map<${3:SourceType}, ${4:DestinationType}>(${5:input});$0",
     "description": "var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement",
-    "prefix": "xVarIsObjectMapperMap"
+    "prefix": "xVarObjectMapperMap"
   },
+  "varObjectMapperMapCreateDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<Create${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<CreateDto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapCreateDtoToType"
+	},
+	"varObjectMapperMapDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<Dto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapDtoToType"
+	},
+	"varObjectMapperMapUpdateDtoToType": {
+		"body": [
+			"var ${3:${2/(.*)/${1:/downcase}/}} = ${1|ObjectMapper,_objectMapper|}.Map<Update${2:}Dto, $2>(${5:input});$0"
+		],
+		"description": "var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement",
+		"prefix": "xVarObjectMapperMapUpdateDtoToType"
+	},
   "withData": {
     "body": [
       "\t\tWithData(\"${1:parameterName}\", ${2:$1});"
