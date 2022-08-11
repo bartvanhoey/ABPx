@@ -1,9 +1,9 @@
-# Code Snippets for [ABP](https://abp.io/) `that start with an x`  
+# Snippets for [ABP](https://abp.io/) `that start with an x`
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code Snippets that start with an 'x' - in Action!")
 
 
-Do you see room for improvement or do you have a snippet in mind you want to be included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
+Do you see room for improvement, or do you have a snippet in mind you want to be included? Feel free to [create an issue](https://github.com/bartvanhoey/ABPx/issues/new), I will see what I can do!
 
 ## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
 
