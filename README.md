@@ -88,7 +88,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xDeletePolicyName                             | Inserts DeletePolicyName statement                                                                        
      xDependencyAttribute                          | Inserts Dependency attribute                                                                              
      xDisplayAttribute                             | Inserts Display attribute                                                                                 
-     xEfCoreRepositoryClassStub                    | Inserts EfCoreRepositoryClass stub                                                                        
+     xEfCoreRepositoryClassStub                    | Inserts an EfCoreRepositoryClass stub                                                                     
      xEmailAddressAttribute                        | EmailAddress Attribute                                                                                    
      xExecuteSqlRawAsync                           | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                                             
      xExposeServicesAttribute                      | Inserts an ExposeServices attribute                                                                       
