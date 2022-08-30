@@ -546,7 +546,7 @@
       "",
       "}"
     ],
-    "description": "Inserts EfCoreRepositoryClass stub",
+    "description": "Inserts an EfCoreRepositoryClass stub",
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "emailAddressAttribute": {
