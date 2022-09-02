@@ -381,5 +381,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPageParam                             | Inserts @page directive with Parameter                              
      xSubmitButton                          | Inserts a SubmitButton                                              
      xValidationTagMessageLocalizer         | Inserts a validation tag with MessageLocalizer attribute            
+     xVisibleHasDeletePermission            | Inserts Visible=HasDeletePermission                                 
+     xVisibleHasUpdatePermission            | Inserts Visible=HasUpdatePermission                                 
 
 
