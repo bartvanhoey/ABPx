@@ -655,10 +655,10 @@
     "description": "Inserts a GetListAsync definition for in an IRepo interface",
     "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
-  "getListAsyncIRepoMethodDefinitionWithParameters": {
-    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
-    "description": "Adds a paged GetListAsync method definition with parameters in IRepo",
-    "prefix": "xGetListAsyncIRepoMethodDefinitionWithParameters"
+  "getPagedListAsyncIRepoMethodDefinitionWithParameters": {
+    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
+    "description": "Adds a GetPagedListAsync method definition with parameters in IRepo",
+    "prefix": "xGetPagedListAsyncIRepoMethodDefinitionWithParameters"
   },
   "getPrivateSet": {
     "body": ["{ get; private set; }$0"],
