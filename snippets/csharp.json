@@ -697,14 +697,19 @@
     "prefix": "xGetLookupMethodImplementationAppService"
   },
   "getPagedListAsyncIAppServiceMethodDefinition": {
-    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync(PagedAndSortedResultRequestDto$3 input);$0",
+    "body": "Task$3<PagedResultDto$2<${1:Type}Dto>> GetPagedListAsync(PagedAndSortedResultRequestDto$3 input);$0",
     "description": "Adds a paged GetPagedListAsync method definition in IAppService",
     "prefix": "xGetPagedListAsyncIAppServiceMethodDefinition"
   },
-  "getPagedListAsyncIRepoMethodDefinition": {
-    "body": "Task$3<PagedResultDto$2<${1:Type}>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
+  "getPagedListAsyncIRepoMethodDefinitionGetTypeDtoInput": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}Dto>> GetPagedListAsync(Get$1PagedListDto input);$0",
     "description": "Adds a paged GetPagedListAsync method definition in IRepo",
-    "prefix": "xGetPagedListAsyncIRepoMethodDefinition"
+    "prefix": "xGetPagedListAsyncIRepoMethodDefinitionGetTypeDtoInput"
+  },
+  "getPagedListAsyncIRepoMethodDefinitionParametersInput": {
+    "body": "Task$3<PagedResultDto$2<${1:Type}Dto>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
+    "description": "Adds a paged GetPagedListAsync method definition in IRepo",
+    "prefix": "xGetPagedListAsyncIRepoMethodDefinitionParametersInput"
   },
   "getPrivateSet": {
     "body": [
