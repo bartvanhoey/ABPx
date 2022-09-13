@@ -994,6 +994,16 @@
     "description": "Implements IRepository interface",
     "prefix": "xImpIRepository"
   },
+  "implementISingletonDependency": {
+    "body": " ISingletonDependency$1",
+    "description": "Implements ISingletonDependency interface",
+    "prefix": "xImpISingletonDependency"
+  },
+  "implementIScopedDependency": {
+    "body": " IScopedDependency$1",
+    "description": "Implements IScopedDependency interface",
+    "prefix": "xImpIScopedDependency"
+  },
   "implementITransientDependency": {
     "body": " ITransientDependency$1",
     "description": "Implements ITransientDependency interface",
