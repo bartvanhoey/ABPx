@@ -734,7 +734,7 @@
   },
   "hasOneWithManyFkIsRequired": {
     "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id)..IsRequired();$0"
+      "b.HasOne<${1:Type}>().WithMany(x => x.${2:Type}).HasForeignKey(x => x.$1Id).IsRequired();$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xHasOneWithManyFkIsRequired"
