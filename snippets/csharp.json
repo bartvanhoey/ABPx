@@ -1698,7 +1698,7 @@
     "prefix": "xDisplayAttribute"
   },
   "blobContainerNameAttribute": {
-    "body": ["[BlobContainerName$1(\"$1{YourBlobContainerName}\")] $0"],
+    "body": ["[BlobContainerName$1(\"${1:YourBlobContainerName}\")] $0"],
     "description": "Inserts Required Attribute",
     "prefix": "xBlobContainerNameAttribute"
   },
