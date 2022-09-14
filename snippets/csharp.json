@@ -1422,7 +1422,7 @@
     "body": [
       "${1|public,protected|} override async Task$2 OnInitializedAsync()",
       "{",
-      "\t${2:await base.OnInitializedAsync();}",
+      "\t${3:await base.OnInitializedAsync();}",
       "\t$0",
       "}"
     ],
