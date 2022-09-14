@@ -605,7 +605,7 @@
     "body": [
       "public override object[] GetKeys()",
       "{",
-      "\treturn new object[] {${1:className}, ${2:className}};$0",
+      "\treturn new object[] {${1:PropertyName}, ${2:PropertyName}};$0",
       "}"
     ],
     "description": "Insert a GetKeys method",
@@ -1272,7 +1272,7 @@
   },
   "methodAsyncReturn": {
     "body": [
-      "${1|internal,private,public,protected|} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}($5)",
+      "${1|public,protected,private,internal |} async Task<${2:ReturnType}> ${3:MethodName}${4:Async}($5)",
       "{",
       "\t$0",
       "}"
@@ -1282,7 +1282,7 @@
   },
   "methodAsyncTaskStub": {
     "body": [
-      "${1|internal,private,public,protected|} async Task$2 ${3:MethodName}${4:Async}($5)",
+      "${1|public,protected,private,internal |} async Task$2 ${3:MethodName}${4:Async}($5)",
       "{",
       "\t$0",
       "}"
@@ -1292,7 +1292,7 @@
   },
   "methodReturn": {
     "body": [
-      "${1|internal,private,public,protected|} ${2:ReturnType} ${3:MethodName}($4)",
+      "${1|public,protected,private,internal |} ${2:ReturnType} ${3:MethodName}($4)",
       "{",
       "\t$0",
       "}"
@@ -1302,7 +1302,7 @@
   },
   "methodVoid": {
     "body": [
-      "${1|internal,private,public,protected|} void ${2:MethodName}($3)",
+      "${1|public,protected,private,internal |} void ${2:MethodName}($3)",
       "{",
       "\t$0",
       "}"
