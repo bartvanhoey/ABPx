@@ -1626,6 +1626,13 @@
     "description": "Inserts var items = await _repository.GetListAsync() statement",
     "prefix": "xRepoGetListAsync"
   },
+  "repoEnsureCollectionLoadedAsync": {
+    "body": [
+      "var ${2:$1}s = await _${1:name}Repository.EnsureCollectionLoadedAsync(${3:$1}, f => f.${4:PropertyName})$0;"
+    ],
+    "description": "Inserts var items = await _repository.GetListAsync() statement",
+    "prefix": "xRepoGetListAsync"
+  },
   "repoGetListAsyncWithInputParams": {
     "body": [
       "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.Sorting, input.SkipCount, input.MaxResultCount);",
