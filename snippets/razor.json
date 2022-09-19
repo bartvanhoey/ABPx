@@ -253,6 +253,11 @@
     "description": "Inserts @inject AbpBlazorMessageLocalizerHelper",
     "prefix": "xInjectAbpBlazorMessageLocalizerHelper"
   },
+  "injectIStringLocalizer": {
+    "body": "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
+    "description": "Inserts @inject IStringLocalizer",
+    "prefix": "xInjectIStringLocalizer"
+  },
   "injectAuthorizationService": {
     "body": [
       "@* uncomment line below or add to _imports.razor *@",
