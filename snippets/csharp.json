@@ -1450,8 +1450,8 @@
     "body": [
       "public override void OnApplicationInitialization(ApplicationInitializationContext context)",
       "{",
-        "\t// var service = context.ServiceProvider.GetRequiredService<${1:YourServiceHere}>();",
-        "\t// service.Initialize();$0",      
+      "\t// var service = context.ServiceProvider.GetRequiredService<${1:YourServiceHere}>();",
+      "\t// service.Initialize();$0",
       "}"
     ],
     "description": "OnApplicationInitialization method stub",
@@ -1702,7 +1702,9 @@
     "prefix": "xRequiredAttribute"
   },
   "regularExpressionAttribute": {
-    "body": ["[RegularExpression$1(\"${2:YourExpression}\", ErrorMessage = \"${3:YourErrorMessage}\")] $0"],
+    "body": [
+      "[RegularExpression$1(\"${2:YourExpression}\", ErrorMessage = \"${3:YourErrorMessage}\")] $0"
+    ],
     "description": "Inserts a RegularExpression Attribute",
     "prefix": "xRegularExpressionAttribute"
   },
@@ -1817,6 +1819,21 @@
     "body": ["throw new ${1:TypeName}AlreadyExistsException$2($3);$0"],
     "description": "Inserts throw new AlreadyExistsException statement",
     "prefix": "xThrowAlreadyExistsException"
+  },
+  "throwAbpValidationException": {
+    "body": [
+      "throw new AbpValidationException$1(",
+      "\tnew List<ValidationResult$2>",
+      "\t{",
+      "\t\tnew ValidationResult(",
+      "\t\t\t\"${3:YourErrorMessageHere}\",",
+      "\t\t\tnew[] {nameof(${4:PropertyName})}",
+      "\t\t)",
+      "\t}",
+      ");$0"
+    ],
+    "description": "Inserts throw new AbpValidationException statement",
+    "prefix": "xThrowAbpValidationException"
   },
   "throwCustomException": {
     "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
