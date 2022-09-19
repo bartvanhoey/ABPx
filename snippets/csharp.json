@@ -1138,6 +1138,14 @@
     "description": "Inserts [Inject] public IMyAppService MyAppService statement",
     "prefix": "xInjectIAppService"
   },
+  "injectBlazoredILocalStorageService": {
+    "body": [
+      "[Inject$1] public ILocalStorageService LocalStorageService { get; set; }$0"
+      
+    ],
+    "description": "Inserts [Inject] public ILocalStorageService LocalStorageService { get; set; } statement",
+    "prefix": "xInjectBlazoredILocalStorageService"
+  },
   "injectHttpClient": {
     "body": [
       "[Inject$1] public HttpClient$2 ${3|HttpClient,Http|} { get; set; }$0"
