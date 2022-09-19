@@ -1691,8 +1691,13 @@
   },
   "requiredAttribute": {
     "body": ["[Required$1] $0"],
-    "description": "Inserts Required Attribute",
+    "description": "Inserts a Required Attribute",
     "prefix": "xRequiredAttribute"
+  },
+  "regularExpressionAttribute": {
+    "body": ["[RegularExpression$1(\"${2:YourExpression}\", ErrorMessage = \"${3:YourErrorMessage}\")] $0"],
+    "description": "Inserts a RegularExpression Attribute",
+    "prefix": "xRegularExpressionAttribute"
   },
   "bindPropertyAttribute": {
     "body": ["[BindProperty$1] $0"],
