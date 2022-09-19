@@ -1697,9 +1697,19 @@
     "prefix": "xRepoUpdateManyAsync"
   },
   "requiredAttribute": {
-    "body": ["[Required$1] $0"],
+    "body": ["[Required$1]$0"],
     "description": "Inserts a Required Attribute",
     "prefix": "xRequiredAttribute"
+  },
+  "disableValidationAttribute": {
+    "body": ["[DisableValidation$1]$0"],
+    "description": "Inserts a DisableValidation Attribute",
+    "prefix": "xDisableValidationAttribute"
+  },
+  "enableValidationAttribute": {
+    "body": ["[EnableValidation$1]$0"],
+    "description": "Inserts an EnableValidation Attribute",
+    "prefix": "xEnableValidationAttribute"
   },
   "regularExpressionAttribute": {
     "body": [
