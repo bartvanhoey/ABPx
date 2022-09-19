@@ -695,6 +695,13 @@
     "description": "Inserts GetRequiredService and matching field!",
     "prefix": "xGetRequiredService"
   },
+  "getIStringLocalizerService": {
+    "body": [
+      "var localizer = ${1|validationContext,context|}.GetRequiredService$2<IStringLocalizer$3<${WORKSPACE_NAME}Resource$4>>();$0"
+    ],
+    "description": "Inserts var localizer = context.GetRequiredService<IStringLocalizer",
+    "prefix": "xGetIStringLocalizerService"
+  },
   "getSet": {
     "body": ["{ get; set; }$0"],
     "description": "Inserts { get, set }",
