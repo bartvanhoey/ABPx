@@ -1209,16 +1209,15 @@
     "description": "Inserts a ITemplateRenderer parameter in the constructor",
     "prefix": "xITemplateRenderer"
   },
-  "iSoftDeleteDisable": {
+  "iDisableSoftDelete": {
     "body": [
-      "//Temporary disable the ISoftDelete filter",
-      "using (_softDeleteFilter.Disable())",
+      "using (${1|_softDeleteFilter,_dataFilter|}.Disable())",
       "{",
       "\t$0",
       "}"
     ],
     "description": "Inserts using (_softDeleteFilter.Disable()){} statement",
-    "prefix": "xISoftDeleteDisable"
+    "prefix": "xDisableISoftDelete"
   },
   "iSpecificationParam": {
     "body": "ISpecification$1<${2:Type}> spec$0",
