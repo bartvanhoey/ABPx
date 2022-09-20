@@ -845,7 +845,7 @@
     "prefix": "xICurrentUserCtorParam"
   },
   "iDataFilterISoftDeleteParam": {
-    "body": "IDataFilter<ISoftDelete> softDeleteFilter",
+    "body": "IDataFilter<ISoftDelete> ${1|_dataFilter,_softDeleteFilter|}",
     "description": "Inserts a IDataFilterISoftDelete parameter",
     "prefix": "xIDataFilterISoftDeleteParam"
   },
@@ -1211,7 +1211,7 @@
   },
   "iDisableSoftDelete": {
     "body": [
-      "using (${1|_softDeleteFilter,_dataFilter|}.Disable())",
+      "using (${1|_dataFilter,_softDeleteFilter|}.Disable())",
       "{",
       "\t$0",
       "}"
