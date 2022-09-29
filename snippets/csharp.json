@@ -537,7 +537,7 @@
   },
   "findByNameAsyncIAppServiceMethodDefinition": {
     "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync method definition for an IAppService interface",
+    "description": "Adds a FindByNameAsync definition for an IAppService interface",
     "prefix": "xFindByNameAsyncIAppServiceMethodDefinition"
   },
   "getAsyncIAppServiceMethodDefinition": {
@@ -642,12 +642,12 @@
   },
   "getPagedListAsyncIAppServiceMethodDefinition": {
     "body": "Task$3<PagedResultDto$2<${1:Type}Dto>> GetPagedListAsync(PagedAndSortedResultRequestDto$3 input);$0",
-    "description": "Adds a paged GetPagedListAsync method definition in IAppService",
+    "description": "Adds a paged GetPagedListAsync definition in IAppService",
     "prefix": "xGetPagedListAsyncIAppServiceMethodDefinition"
   },
   "getPagedListAsyncIRepoMethodDefinitionGetTypeDtoInput": {
     "body": "Task$3<PagedResultDto$2<${1:Type}Dto>> GetPagedListAsync(Get$1PagedListDto input);$0",
-    "description": "Adds a paged GetPagedListAsync method definition in IRepo",
+    "description": "Adds a paged GetPagedListAsync definition in IRepo",
     "prefix": "xGetPagedListAsyncIRepoMethodDefinitionGetTypePageListDtoInput"
   },
   "getListAsyncIRepoMethodDefinition": {
@@ -657,7 +657,7 @@
   },
   "getPagedListAsyncIRepoMethodDefinitionWithParameters": {
     "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
-    "description": "Adds a GetPagedListAsync method definition with parameters in IRepo",
+    "description": "Adds a GetPagedListAsync definition with parameters in IRepo",
     "prefix": "xGetPagedListAsyncIRepoMethodDefinitionWithParameters"
   },
   "getPrivateSet": {

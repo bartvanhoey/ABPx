@@ -93,7 +93,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xExecuteSqlRawAsync                           | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                                             
      xExposeServicesAttribute                      | Inserts an ExposeServices attribute                                                                       
      xFilterProperty                               | Inserts a property Filter                                                                                 
-     xFindByNameAsyncIAppServiceMethodDefinition   | Adds a FindByNameAsync method definition for an IAppService interface                                     
+     xFindByNameAsyncIAppServiceMethodDefinition   | Adds a FindByNameAsync definition for an IAppService interface                                     
      xFindByNameAsyncMethodStub                    | Adds a FindByNameAsync method stub                                                                        
      xGetAllBytesAsyncMethodBlobContainer          | Inserts var blob = _fileContainer.GetAllBytesAsync method                                                 
      xGetAsyncIAppServiceMethodDefinition          | Inserts a GetAsync definition for an IAppService interface                                                
@@ -109,8 +109,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xGetListPolicyName                            | Inserts GetListPolicyName statement                                                                       
      xGetLookupIAppServiceMethodDefinition         | Adds a GetLookupAsync method to an IAppService interface                                                  
      xGetLookupMethodImplementationAppService      | Adds a GetLookupAsync method to an AppService class                                                       
-     xGetPagedListAsyncIAppServiceMethodDefinition | Adds a paged GetPagedListAsync method definition in IAppService                                           
-     xGetPagedListAsyncIRepoMethodDefinition       | Adds a paged GetPagedListAsync method definition in IRepo                                                 
+     xGetPagedListAsyncIAppServiceMethodDefinition | Adds a paged GetPagedListAsync definition in IAppService                                           
+     xGetPagedListAsyncIRepoMethodDefinition       | Adds a paged GetPagedListAsync definition in IRepo                                                 
      xGetPolicyName                                | Inserts GetPolicyName statement                                                                           
      xGetQueryableExtensionsClassStub              | Inserts GetQueryableExtensionsClass stub                                                                  
      xGetRequiredIAppService                       | Inserts GetRequiredService<IAppService> and IAppService field                                             
