@@ -8,7 +8,7 @@ if "%result%" == "true" (
 
 SET PathCurrentDirectory=%~dp0
 FOR %%a IN ("%PathCurrentDirectory:~0,-1%") DO SET PathParentCurrentDirectory=%%~dpa
-SET PathReadMeGeneratorDirectory=%PathParentCurrentDirectory%ReadMeGenerator\bin\Debug\net6.0\
+SET PathReadMeGeneratorDirectory=%PathParentCurrentDirectory%ReadMeGenerator\bin\Debug\net7.0\
 CD %PathReadMeGeneratorDirectory%
 ReadMeGenerator.exe
 CD %PathCurrentDirectory%
