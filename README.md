@@ -1,4 +1,4 @@
-# Snippets for [ABP](https://abp.io/) `that start with an x`
+# [ABP](https://abp.io/) `snippets starting with an x`
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code Snippets that start with an 'x' - in Action!")
 
@@ -337,6 +337,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xVarObjectMapperMapUpdateDtoToType                             | var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement                                          
      xWithData                                                      | Inserts a WithData statement                                                                              
 
+## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
+
      Prefix                            | Description                                                       
      --------------------------------- | ------------------------------------------------------------------ 
      xLaunchAngularJson                | Inserts launch configurations in launch.json needed to run project
@@ -348,7 +350,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xTasksJson                        | Inserts tasks in tasks.json needed to run project                 
      xTasksMvcJson                     | Inserts tasks to run MVC projects                                 
 
-## C# snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/csharp.json)
+## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
      Prefix                                 | Description                                                         
      -------------------------------------- | -------------------------------------------------------------------- 
