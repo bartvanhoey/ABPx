@@ -527,7 +527,7 @@
   },
   "filterProperty": {
     "body": ["public string Filter { get; set; }"],
-    "description": "Inserts a property Filter",
+    "description": "Inserts a Filter property",
     "prefix": "xFilterProperty"
   },
   "findByNameAsyncMethodStub": {
