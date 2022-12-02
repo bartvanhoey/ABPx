@@ -1952,6 +1952,20 @@
     "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xUnCreateAsyncAppService"
   },
+  "unAfterAddApplication": {
+    "body": [
+      "protected override void AfterAddApplication(IServiceCollection services)",
+      "\t{",
+      "\t\t//Mock the current user",
+      "\t\t_currentUser = Substitute.For<ICurrentUser>();",
+      "\t\tservices.AddSingleton(_currentUser);",
+      "\t}",
+      ");$0"
+    ],
+    "description": "Inserts AfterAddApplication method",
+    "prefix": "xUnAfterAddApplication"
+  },
+
   "unGetListAsyncAppService": {
     "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",

@@ -310,6 +310,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xThrowUnauthorizedAccessException                              | Inserts throw new UnauthorizedAccessException statement                                                   
      xThrowUserFriendlyException                                    | Inserts throw new UserFriendlyException statement                                                         
      xTodo                                                          | Inserts TODO statement                                                                                    
+     xUnAfterAddApplication                                         | Inserts AfterAddApplication method                                                                        
      xUnAssertThrowsAsyncAbpValidationException                     | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                                        
      xUnAssertThrowsAsyncBusinessException                          | Inserts var exception = Assert.ThrowsAsync<BusinessException>                                             
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                           
