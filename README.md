@@ -332,6 +332,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultTotalCountShouldBeGreaterOrEqual                      | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                                            
      xUnResultTotalCountShouldBeGreaterThan                         | Inserts result.TotalCount.ShouldBeGreaterThan statement                                                   
      xUnShouldThrowException                                        | Inserts a Should.ThrowException statement in unit test                                                    
+     xUnSubstituteForICurrentTenant                                 | Inserts SubstituteForICurrentTenant statement in unit test                                                
+     xUnSubstituteForICurrentUser                                   | Inserts SubstituteForICurrentUser statement in unit test                                                  
      xUpdatePolicyName                                              | Inserts UpdatePolicyName statement                                                                        
      xUrlAttribute                                                  | Url attribute                                                                                             
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                          

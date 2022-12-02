@@ -2012,6 +2012,20 @@
     "description": "a xUnit test Task method stub",
     "prefix": "xUnMethodTaskStub"
   },
+  "unSubstituteForICurrentUser": {
+    "body": [
+      "_currentUser = Substitute.For<ICurrentUser>();"
+    ],
+    "description": "Inserts SubstituteForICurrentUser statement in unit test",
+    "prefix": "xUnSubstituteForICurrentUser"
+  },
+  "unSubstituteForICurrentTenant": {
+    "body": [
+      "_currentUser = Substitute.For<ICurrentTenant>();"
+    ],
+    "description": "Inserts SubstituteForICurrentTenant statement in unit test",
+    "prefix": "xUnSubstituteForICurrentTenant"
+  },
   "unShouldThrowException": {
     "body": [
       "Should.Throw<${1|UserFriendlyException,AbpValidationException,BusinessException,YourCustomException|}>(async () => ",
