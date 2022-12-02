@@ -317,6 +317,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnCreateAsyncAppService                                       | Inserts var result = await AppService.CreateAsync statement                                               
      xUnGetListAsyncAppService                                      | Inserts var result = await AppService.GetListAsync statement                                              
      xUnGetRequiredIAppService                                      | Inserts GetRequiredService<IAppService> and IAppService field                                             
+     xUnGetRequiredIRepository                                      | Inserts GetRequiredService<IYourNameRepository> and IYourNameRepository field                             
      xUnGetRequiredService                                          | Inserts GetRequiredService and matching field                                                             
      xUnitOfWorkAttribute                                           | Inserts the UnitOfWorkAttribute                                                                           
      xUnMethodTaskStub                                              | a xUnit test Task method stub                                                                             

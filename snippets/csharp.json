@@ -1965,6 +1965,14 @@
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xUnGetRequiredIAppService"
   },
+  "unGetRequiredIRepository": {
+    "body": [
+      "_${4:${1/(.*)/${1:/downcase}/}}Repository = GetRequiredService<I${1:Name}Repository$2>();$0",
+      "private readonly I${3:$1}Repository _${5:$4}Repository$6;"
+    ],
+    "description": "Inserts GetRequiredService<IYourNameRepository> and IYourNameRepository field",
+    "prefix": "xUnGetRequiredIRepository"
+  },
   "unGetRequiredService": {
     "body": [
       "_${4:${1/(.*)/${1:/downcase}/}} = GetRequiredService<${1:NameService}$2>();$0",
