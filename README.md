@@ -248,6 +248,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xParaId                                                        | Inserts Id property with Parameter attribute                                                              
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                        
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                             
+     xPropDateTime                                                  | Inserts a DateTime property                                                                               
      xPropDescription                                               | Inserts a Description property                                                                            
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                       
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                       

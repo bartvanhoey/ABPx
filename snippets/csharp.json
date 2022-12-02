@@ -1534,6 +1534,11 @@
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
   },
+  "propDateTime": {
+    "body": ["public DateTime$2 ${1:PropertyName} { get; set; }$0"],
+    "description": "Inserts a DateTime property",
+    "prefix": "xPropDateTime"
+  },
   "propStartTime": {
     "body": ["public DateTime$2 ${1:StartTime} { get; set; }$0"],
     "description": "Inserts a DateTime StartTime property ",
