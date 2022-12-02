@@ -1141,7 +1141,6 @@
   "injectBlazoredILocalStorageService": {
     "body": [
       "[Inject$1] public ILocalStorageService LocalStorageService { get; set; }$0"
-      
     ],
     "description": "Inserts [Inject] public ILocalStorageService LocalStorageService { get; set; } statement",
     "prefix": "xInjectBlazoredILocalStorageService"
@@ -2012,6 +2011,17 @@
     ],
     "description": "a xUnit test Task method stub",
     "prefix": "xUnMethodTaskStub"
+  },
+  "unShouldThrowException": {
+    "body": [
+      "Should.Throw<${1|UserFriendlyException,AbpValidationException,BusinessException,YourCustomException|}>(async () => ",
+      "{",
+      "\t $0",
+      "",
+      "});"
+    ],
+    "description": "Inserts a Should.ThrowException statement in unit test",
+    "prefix": "xUnShouldThrowException"
   },
   "unMethodVoidStub": {
     "body": [
