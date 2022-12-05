@@ -136,6 +136,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xIAppUserRepositoryCtorParam                                   | Inserts an IAppUserRepository appUserRepository parameter in the constructor                              
      xIAsyncQueryableExecuterCtorParam                              | Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor                             
      xIBlobContainerCtorParam                                       | Inserts a IBlobContainer parameter in constructor                                                         
+     xICachedServiceProviderCtorParam                               | Inserts an ICachedServiceProvider cachedServiceProvider parameter in the constructor                      
      xIConfigurationCtorParam                                       | Inserts an IConfiguration configuration parameter in the constructor                                      
      xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts a complete ICrudAppService CreateDto - UpdateDto                                                  
      xICrudAppServiceCreateUpdateDto                                | Inserts a complete ICrudAppService - CreateUpdateDto                                                      

@@ -1204,6 +1204,11 @@
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
   },
+  "iCachedServiceProviderCtorParam ": {
+    "body": "ICachedServiceProvider cachedServiceProvider$0",
+    "description": "Inserts an ICachedServiceProvider cachedServiceProvider parameter in the constructor",
+    "prefix": "xICachedServiceProviderCtorParam"
+  },
   "iEmailSenderCtorParam": {
     "body": "IEmailSender$1 emailSender$0",
     "description": "Inserts a IEmailSender parameter in the constructor",
