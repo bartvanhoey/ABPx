@@ -1833,9 +1833,14 @@
     "prefix": "xTenantIdStringProperty"
   },
   "throwBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
+    "body": ["throw new BusinessException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
+  },
+  "throwApplicationException": {
+    "body": ["throw new ApplicationException$1(\"${2:ExceptionMessage}\");"],
+    "description": "Inserts throw new ApplicationException statement",
+    "prefix": "xThrowApplicationException"
   },
   "throwAlreadyExistsException": {
     "body": ["throw new ${1:TypeName}AlreadyExistsException$2($3);$0"],
@@ -1858,7 +1863,7 @@
     "prefix": "xThrowAbpValidationException"
   },
   "throwCustomException": {
-    "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
+    "body": ["throw new ${1:Name}Exception(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowCustomException"
   },
@@ -1869,7 +1874,7 @@
   },
   "throwNotImplementedException": {
     "body": ["throw new System.NotImplementedException();"],
-    "description": "Inserts throw new NotImplementedException statement",
+    "description": "Inserts throw new NotImplementedException stat",
     "prefix": "xThrowNotImplementedException"
   },
   "throwUnauthorizedAccessException": {

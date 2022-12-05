@@ -303,10 +303,11 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xTenantIdStringProperty                                        | Inserts public string TenantId { get; set; } property                                                     
      xThrowAbpValidationException                                   | Inserts throw new AbpValidationException statement                                                        
      xThrowAlreadyExistsException                                   | Inserts throw new AlreadyExistsException statement                                                        
+     xThrowApplicationException                                     | Inserts throw new ApplicationException statement                                                          
      xThrowBusinessException                                        | Inserts throw new BusinessException statement                                                             
      xThrowCustomException                                          | Inserts throw new CustomException statement                                                               
      xThrowEntityNotFoundException                                  | Inserts throw new EntityNotFoundException statement                                                       
-     xThrowNotImplementedException                                  | Inserts throw new NotImplementedException statement                                                       
+     xThrowNotImplementedException                                  | Inserts throw new NotImplementedException stat                                                            
      xThrowUnauthorizedAccessException                              | Inserts throw new UnauthorizedAccessException statement                                                   
      xThrowUserFriendlyException                                    | Inserts throw new UserFriendlyException statement                                                         
      xTodo                                                          | Inserts TODO statement                                                                                    
