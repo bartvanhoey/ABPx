@@ -987,6 +987,11 @@
     "prefix": "xImpIDataSeedContributor"
   },
   "implementIHasCreationTime": {
+    "body": " IInjectServiceProvider$0",
+    "description": "Implements IInjectServiceProvider interface",
+    "prefix": "xImpIInjectServiceProvider"
+  },
+  "implementIInjectServiceProvider": {
     "body": " IHasCreationTime$0",
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
@@ -1141,6 +1146,7 @@
   "injectBlazoredILocalStorageService": {
     "body": [
       "[Inject$1] public ILocalStorageService LocalStorageService { get; set; }$0"
+      
     ],
     "description": "Inserts [Inject] public ILocalStorageService LocalStorageService { get; set; } statement",
     "prefix": "xInjectBlazoredILocalStorageService"
@@ -1532,11 +1538,6 @@
     "body": ["public DateTime$2 ${1:StartDate} { get; set; }$0"],
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
-  },
-  "propDateTime": {
-    "body": ["public DateTime$2 ${1:PropertyName} { get; set; }$0"],
-    "description": "Inserts a DateTime property",
-    "prefix": "xPropDateTime"
   },
   "propStartTime": {
     "body": ["public DateTime$2 ${1:StartTime} { get; set; }$0"],
@@ -1951,20 +1952,6 @@
     "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xUnCreateAsyncAppService"
   },
-  "unAfterAddApplication": {
-    "body": [
-      "protected override void AfterAddApplication(IServiceCollection services)",
-      "\t{",
-      "\t\t//Mock the current user",
-      "\t\t_currentUser = Substitute.For<ICurrentUser>();",
-      "\t\tservices.AddSingleton(_currentUser);",
-      "\t}",
-      ");$0"
-    ],
-    "description": "Inserts AfterAddApplication method",
-    "prefix": "xUnAfterAddApplication"
-  },
-
   "unGetListAsyncAppService": {
     "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
@@ -1977,14 +1964,6 @@
     ],
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xUnGetRequiredIAppService"
-  },
-  "unGetRequiredIRepository": {
-    "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}}Repository = GetRequiredService<I${1:Name}Repository$2>();$0",
-      "private readonly I${3:$1}Repository _${5:$4}Repository$6;"
-    ],
-    "description": "Inserts GetRequiredService<IYourNameRepository> and IYourNameRepository field",
-    "prefix": "xUnGetRequiredIRepository"
   },
   "unGetRequiredService": {
     "body": [
@@ -2011,31 +1990,6 @@
     ],
     "description": "a xUnit test Task method stub",
     "prefix": "xUnMethodTaskStub"
-  },
-  "unSubstituteForICurrentUser": {
-    "body": [
-      "_currentUser = Substitute.For<ICurrentUser>();"
-    ],
-    "description": "Inserts SubstituteForICurrentUser statement in unit test",
-    "prefix": "xUnSubstituteForICurrentUser"
-  },
-  "unSubstituteForICurrentTenant": {
-    "body": [
-      "_currentUser = Substitute.For<ICurrentTenant>();"
-    ],
-    "description": "Inserts SubstituteForICurrentTenant statement in unit test",
-    "prefix": "xUnSubstituteForICurrentTenant"
-  },
-  "unShouldThrowException": {
-    "body": [
-      "Should.Throw<${1|UserFriendlyException,AbpValidationException,BusinessException,YourCustomException|}>(async () => ",
-      "{",
-      "\t $0",
-      "",
-      "});"
-    ],
-    "description": "Inserts a Should.ThrowException statement in unit test",
-    "prefix": "xUnShouldThrowException"
   },
   "unMethodVoidStub": {
     "body": [
