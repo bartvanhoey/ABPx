@@ -987,6 +987,11 @@
     "prefix": "xImpIDataSeedContributor"
   },
   "implementIHasCreationTime": {
+    "body": " IInjectServiceProvider$0",
+    "description": "Implements IInjectServiceProvider interface",
+    "prefix": "xImpIInjectServiceProvider"
+  },
+  "implementIInjectServiceProvider": {
     "body": " IHasCreationTime$0",
     "description": "Implements IHasCreationTime interface",
     "prefix": "xImpIHasCreationTime"
@@ -1141,6 +1146,7 @@
   "injectBlazoredILocalStorageService": {
     "body": [
       "[Inject$1] public ILocalStorageService LocalStorageService { get; set; }$0"
+      
     ],
     "description": "Inserts [Inject] public ILocalStorageService LocalStorageService { get; set; } statement",
     "prefix": "xInjectBlazoredILocalStorageService"
@@ -1197,6 +1203,11 @@
     "body": "IRepository$1<${2:Type}, ${3|Guid,int,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
+  },
+  "iCachedServiceProviderCtorParam ": {
+    "body": "ICachedServiceProvider cachedServiceProvider$0",
+    "description": "Inserts an ICachedServiceProvider cachedServiceProvider parameter in the constructor",
+    "prefix": "xICachedServiceProviderCtorParam"
   },
   "iEmailSenderCtorParam": {
     "body": "IEmailSender$1 emailSender$0",
@@ -1533,11 +1544,6 @@
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
   },
-  "propDateTime": {
-    "body": ["public DateTime$2 ${1:PropertyName} { get; set; }$0"],
-    "description": "Inserts a DateTime property",
-    "prefix": "xPropDateTime"
-  },
   "propStartTime": {
     "body": ["public DateTime$2 ${1:StartTime} { get; set; }$0"],
     "description": "Inserts a DateTime StartTime property ",
@@ -1832,9 +1838,14 @@
     "prefix": "xTenantIdStringProperty"
   },
   "throwBusinessException": {
-    "body": ["throw new BusinessException$1(\"${2:TranslationKey}\");"],
+    "body": ["throw new BusinessException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
+  },
+  "throwApplicationException": {
+    "body": ["throw new ApplicationException$1(\"${2:ExceptionMessage}\");"],
+    "description": "Inserts throw new ApplicationException statement",
+    "prefix": "xThrowApplicationException"
   },
   "throwAlreadyExistsException": {
     "body": ["throw new ${1:TypeName}AlreadyExistsException$2($3);$0"],
@@ -1857,7 +1868,7 @@
     "prefix": "xThrowAbpValidationException"
   },
   "throwCustomException": {
-    "body": ["throw new ${1:Name}Exception(\"${2:TranslationKey}\");"],
+    "body": ["throw new ${1:Name}Exception(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowCustomException"
   },
@@ -1868,7 +1879,7 @@
   },
   "throwNotImplementedException": {
     "body": ["throw new System.NotImplementedException();"],
-    "description": "Inserts throw new NotImplementedException statement",
+    "description": "Inserts throw new NotImplementedException stat",
     "prefix": "xThrowNotImplementedException"
   },
   "throwUnauthorizedAccessException": {
@@ -1951,20 +1962,6 @@
     "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xUnCreateAsyncAppService"
   },
-  "unAfterAddApplication": {
-    "body": [
-      "protected override void AfterAddApplication(IServiceCollection services)",
-      "\t{",
-      "\t\t//Mock the current user",
-      "\t\t_currentUser = Substitute.For<ICurrentUser>();",
-      "\t\tservices.AddSingleton(_currentUser);",
-      "\t}",
-      ");$0"
-    ],
-    "description": "Inserts AfterAddApplication method",
-    "prefix": "xUnAfterAddApplication"
-  },
-
   "unGetListAsyncAppService": {
     "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
@@ -1977,14 +1974,6 @@
     ],
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xUnGetRequiredIAppService"
-  },
-  "unGetRequiredIRepository": {
-    "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}}Repository = GetRequiredService<I${1:Name}Repository$2>();$0",
-      "private readonly I${3:$1}Repository _${5:$4}Repository$6;"
-    ],
-    "description": "Inserts GetRequiredService<IYourNameRepository> and IYourNameRepository field",
-    "prefix": "xUnGetRequiredIRepository"
   },
   "unGetRequiredService": {
     "body": [
@@ -2011,31 +2000,6 @@
     ],
     "description": "a xUnit test Task method stub",
     "prefix": "xUnMethodTaskStub"
-  },
-  "unSubstituteForICurrentUser": {
-    "body": [
-      "_currentUser = Substitute.For<ICurrentUser>();"
-    ],
-    "description": "Inserts SubstituteForICurrentUser statement in unit test",
-    "prefix": "xUnSubstituteForICurrentUser"
-  },
-  "unSubstituteForICurrentTenant": {
-    "body": [
-      "_currentUser = Substitute.For<ICurrentTenant>();"
-    ],
-    "description": "Inserts SubstituteForICurrentTenant statement in unit test",
-    "prefix": "xUnSubstituteForICurrentTenant"
-  },
-  "unShouldThrowException": {
-    "body": [
-      "Should.Throw<${1|UserFriendlyException,AbpValidationException,BusinessException,YourCustomException|}>(async () => ",
-      "{",
-      "\t $0",
-      "",
-      "});"
-    ],
-    "description": "Inserts a Should.ThrowException statement in unit test",
-    "prefix": "xUnShouldThrowException"
   },
   "unMethodVoidStub": {
     "body": [

@@ -1,4 +1,4 @@
-# [ABP](https://abp.io/) `snippets that start with an x`
+# [ABP](https://abp.io/) `snippets starting with an x`
 
 ![ABPx in Action!](images/abpx_in_action.gif "ABPx - Code Snippets that start with an 'x' - in Action!")
 
@@ -136,6 +136,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xIAppUserRepositoryCtorParam                                   | Inserts an IAppUserRepository appUserRepository parameter in the constructor                              
      xIAsyncQueryableExecuterCtorParam                              | Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor                             
      xIBlobContainerCtorParam                                       | Inserts a IBlobContainer parameter in constructor                                                         
+     xICachedServiceProviderCtorParam                               | Inserts an ICachedServiceProvider cachedServiceProvider parameter in the constructor                      
      xIConfigurationCtorParam                                       | Inserts an IConfiguration configuration parameter in the constructor                                      
      xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts a complete ICrudAppService CreateDto - UpdateDto                                                  
      xICrudAppServiceCreateUpdateDto                                | Inserts a complete ICrudAppService - CreateUpdateDto                                                      
@@ -167,6 +168,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xImpIApplicationService                                        | Implements IApplicationService interface                                                                  
      xImpIDataSeedContributor                                       | Implements IDataSeedContributor (+ ITransientDependency) interface                                        
      xImpIHasCreationTime                                           | Implements IHasCreationTime interface                                                                     
+     xImpIInjectServiceProvider                                     | Implements IInjectServiceProvider interface                                                               
      xImpIMultiTenant                                               | Implements IMultiTenant interface                                                                         
      xImpIRepository                                                | Implements IRepository interface                                                                          
      xImpIScopedDependency                                          | Implements IScopedDependency interface                                                                    
@@ -248,7 +250,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xParaId                                                        | Inserts Id property with Parameter attribute                                                              
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                        
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                             
-     xPropDateTime                                                  | Inserts a DateTime property                                                                               
      xPropDescription                                               | Inserts a Description property                                                                            
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                       
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                       
@@ -303,14 +304,14 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xTenantIdStringProperty                                        | Inserts public string TenantId { get; set; } property                                                     
      xThrowAbpValidationException                                   | Inserts throw new AbpValidationException statement                                                        
      xThrowAlreadyExistsException                                   | Inserts throw new AlreadyExistsException statement                                                        
+     xThrowApplicationException                                     | Inserts throw new ApplicationException statement                                                          
      xThrowBusinessException                                        | Inserts throw new BusinessException statement                                                             
      xThrowCustomException                                          | Inserts throw new CustomException statement                                                               
      xThrowEntityNotFoundException                                  | Inserts throw new EntityNotFoundException statement                                                       
-     xThrowNotImplementedException                                  | Inserts throw new NotImplementedException statement                                                       
+     xThrowNotImplementedException                                  | Inserts throw new NotImplementedException stat                                                            
      xThrowUnauthorizedAccessException                              | Inserts throw new UnauthorizedAccessException statement                                                   
      xThrowUserFriendlyException                                    | Inserts throw new UserFriendlyException statement                                                         
      xTodo                                                          | Inserts TODO statement                                                                                    
-     xUnAfterAddApplication                                         | Inserts AfterAddApplication method                                                                        
      xUnAssertThrowsAsyncAbpValidationException                     | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                                        
      xUnAssertThrowsAsyncBusinessException                          | Inserts var exception = Assert.ThrowsAsync<BusinessException>                                             
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                           
@@ -318,7 +319,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnCreateAsyncAppService                                       | Inserts var result = await AppService.CreateAsync statement                                               
      xUnGetListAsyncAppService                                      | Inserts var result = await AppService.GetListAsync statement                                              
      xUnGetRequiredIAppService                                      | Inserts GetRequiredService<IAppService> and IAppService field                                             
-     xUnGetRequiredIRepository                                      | Inserts GetRequiredService<IYourNameRepository> and IYourNameRepository field                             
      xUnGetRequiredService                                          | Inserts GetRequiredService and matching field                                                             
      xUnitOfWorkAttribute                                           | Inserts the UnitOfWorkAttribute                                                                           
      xUnMethodTaskStub                                              | a xUnit test Task method stub                                                                             
@@ -331,9 +331,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultTotalCountShouldBe                                    | Inserts result.TotalCount.ShouldBe statement                                                              
      xUnResultTotalCountShouldBeGreaterOrEqual                      | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                                            
      xUnResultTotalCountShouldBeGreaterThan                         | Inserts result.TotalCount.ShouldBeGreaterThan statement                                                   
-     xUnShouldThrowException                                        | Inserts a Should.ThrowException statement in unit test                                                    
-     xUnSubstituteForICurrentTenant                                 | Inserts SubstituteForICurrentTenant statement in unit test                                                
-     xUnSubstituteForICurrentUser                                   | Inserts SubstituteForICurrentUser statement in unit test                                                  
      xUpdatePolicyName                                              | Inserts UpdatePolicyName statement                                                                        
      xUrlAttribute                                                  | Url attribute                                                                                             
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                          
