@@ -966,6 +966,11 @@
     "description": "Implements IAbpClaimsPrincipalContributor interface",
     "prefix": "xImpIAbpClaimsPrincipalContributor"
   },
+  "inheritsFeatureDefinitionProvider": {
+    "body": " FeatureDefinitionProvider$0",
+    "description": "Inherits FeatureDefinitionProvider base class",
+    "prefix": "xInhFeatureDefinitionProvider"
+  },
   "implementCorrespondingAppService": {
     "body": "ApplicationService$1, I${TM_FILENAME_BASE}$0",
     "description": "Implements corresponding IAppService interface",
@@ -1146,7 +1151,6 @@
   "injectBlazoredILocalStorageService": {
     "body": [
       "[Inject$1] public ILocalStorageService LocalStorageService { get; set; }$0"
-      
     ],
     "description": "Inserts [Inject] public ILocalStorageService LocalStorageService { get; set; } statement",
     "prefix": "xInjectBlazoredILocalStorageService"

@@ -191,6 +191,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xInhDomainTestBase                                             | Inherits DomainTestBase class                                                                             
      xInhEntity                                                     | Inherits Entity class                                                                                     
      xInhEntityDto                                                  | Inherits EntityDto class                                                                                  
+     xInhFeatureDefinitionProvider                                  | Inherits FeatureDefinitionProvider base class                                                             
      xInhFullAuditedAggregateRoot                                   | Inherits FullAuditedAggregateRoot class                                                                   
      xInhFullAuditedEntity                                          | Inherits FullAuditedEntity class                                                                          
      xInhFullAuditedEntityDto                                       | Inherits FullAuditedEntityDto class                                                                       
