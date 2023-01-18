@@ -149,6 +149,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xIf                                                            | If statement                                                                                              
      xIfAuthServiceIsGrantedAsync                                   | Inserts the AuthorizationService.IsGrantedAsync method                                                    
      xIfCurrentUserIsAuthenticated                                  | If CurrentUser.isAuthenticated                                                                            
+     xIFeatureCheckerParam                                          | Inserts an IFeatureChecker interface parameter in the constructor                                         
      xIfInline                                                      | Inline if statement                                                                                       
      xIfInputSortingIsNullOrWhiteSpace                              | Inserts if input.Sorting.IsNullOrWhiteSpace statement                                                     
      xIfIsGrantedAsyncPermission                                    | Inserts if (await IsGrantedAsync(permission)){ }statement                                                 
@@ -286,6 +287,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepoUpdateAsync                                               | Inserts repository.UpdateAsync statement                                                                  
      xRepoUpdateManyAsync                                           | Inserts repository.UpdateManyAsync() statement                                                            
      xRequiredAttribute                                             | Inserts a Required Attribute                                                                              
+     xRequiresFeatureAttribute                                      | Inserts RequiresFeatureAttribute                                                                          
      xReturnDbContextSetFirstOrDefaultAsync                         | Inserts return await DbContextSet.FirstOrDefaultAsync()                                                   
      xReturnDbContextSetToListAsync                                 | Inserts return await DbContextSet.ToListAsync()                                                           
      xReturnDbContextSetWhereToListAsync                            | Inserts return await DbContextSetWhereToListAsync                                                         

@@ -1205,6 +1205,11 @@
     "description": "Inserts an IPermissionManager permissionManager parameter in the constructor",
     "prefix": "xIPermissionManagerCtorParam"
   },
+  "iFeatureCheckerParam": {
+    "body": "IFeatureChecker$1 featureChecker$0",
+    "description": "Inserts an IFeatureChecker interface parameter in the constructor",
+    "prefix": "xIFeatureCheckerParam"
+  },
   "iRepoCtorCustomParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository parameter in the constructor",
@@ -1397,6 +1402,11 @@
     "body": ["[NotEmptyGuid$1] $0"],
     "description": "Inserts NotEmptyGuidAttribute",
     "prefix": "xNotEmptyGuidAttribute"
+  },
+  "requuiresFeatureAttribute": {
+    "body": ["[RequiresFeature$1(\"${2:FeatureName}\")] $0"],
+    "description": "Inserts RequiresFeatureAttribute",
+    "prefix": "xRequiresFeatureAttribute"
   },
   "notifyError": {
     "body": "await Notify.Error(\"${1:Message}\");",
