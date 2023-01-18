@@ -702,6 +702,13 @@
     "description": "Inserts var localizer = context.GetRequiredService<IStringLocalizer",
     "prefix": "xGetIStringLocalizerService"
   },
+  "LocalizableStringCreate": {
+    "body": [
+      "LocalizableString.Create$1<${WORKSPACE_NAME}Resource$2>(\"${3:translationKey}\");$0"
+    ],
+    "description": "Inserts LocalizableString.Create<ProjectNameResource>(translationKey);",
+    "prefix": "xLocalizableStringCreate"
+  },
   "getSet": {
     "body": ["{ get; set; }$0"],
     "description": "Inserts { get, set }",
