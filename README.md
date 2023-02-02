@@ -208,7 +208,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xInjectService                                                 | Inject IMyService MyService                                                                               
      xIPermissionGrantRepositoryCtorParamCtorParam                  | Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor              
      xIPermissionManagerCtorParam                                   | Inserts an IPermissionManager permissionManager parameter in the constructor                              
-     xIRepoCtorCustomParam                                          | Inserts a custom ClassRepository parameter in the constructor                                             
+     xIRepoCtorCustomParam                                          | Inserts a custom ClassRepository param in the constructor                                                 
      xIRepoCtorDefaultParam                                         | Inserts a default IRepository<Type,TypeId> parameter in the constructor                                   
      xISpecificationParam                                           | Inserts a ISpecification parameter                                                                        
      xIStringLocalizerCtorParam                                     | Inserts the IStringLocalizer parameter in the constructor                                                 
