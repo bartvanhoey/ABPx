@@ -531,14 +531,18 @@
     "prefix": "xFilterProperty"
   },
   "findByNameAsyncMethodStub": {
-    "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
+    "body": ["public Task$2<${1:Type}> FindByNameAsync(string name)",
+    "{",
+    "\t$0",
+    "",
+    "}"],
     "description": "Adds a FindByNameAsync method stub",
     "prefix": "xFindByNameAsyncMethodStub"
   },
-  "findByNameAsyncIAppServiceMethodDefinition": {
+  "findByNameAsyncMethodDefinition": {
     "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
     "description": "Adds a FindByNameAsync definition for an IAppService interface",
-    "prefix": "xFindByNameAsyncIAppServiceMethodDefinition"
+    "prefix": "xFindByNameAsyncMethodDefinition"
   },
   "getAsyncIAppServiceMethodDefinition": {
     "body": [
@@ -2189,7 +2193,7 @@
   },
   "xCreateAsyncMethodStub": {
     "body": [
-      "public Task$1<${2:Type}> CreateAsync(${2:$1} ${3:input);$0",
+      "public Task$1<${2:Type}> CreateAsync(${2:$1} ${3:input)",
       "{",
       "\t$0",
       "",
@@ -2212,7 +2216,7 @@
   },
   "xDeleteAsyncMethodStub": {
     "body": [
-      "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+      "public Task$1 DeleteAsync(${2|Guid,int,string|} id)",
       "{",
       "\t$0",
       "",

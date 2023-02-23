@@ -100,7 +100,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xFactMethodTaskStub                                            | a xUnit test Task method stub                                                                             
      xFactMethodVoidStub                                            | a xUnit test void method stub                                                                             
      xFilterProperty                                                | Inserts a Filter property                                                                                 
-     xFindByNameAsyncIAppServiceMethodDefinition                    | Adds a FindByNameAsync definition for an IAppService interface                                            
+     xFindByNameAsyncMethodDefinition                               | Adds a FindByNameAsync definition for an IAppService interface                                            
      xFindByNameAsyncMethodStub                                     | Adds a FindByNameAsync method stub                                                                        
      xGetAllBytesAsyncMethodBlobContainer                           | Inserts var blob = _fileContainer.GetAllBytesAsync method                                                 
      xGetAsyncIAppServiceMethodDefinition                           | Inserts a GetAsync definition for an IAppService interface                                                
