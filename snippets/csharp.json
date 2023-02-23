@@ -1984,7 +1984,7 @@
     "prefix": "xUnCreateAsyncAppService"
   },
   "unGetListAsyncAppService": {
-    "body": "var ${1:result} = await _${2:name}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
+    "body": "var ${2:result} = await _${1/(.*)/${1:/downcase}/}AppService.GetListAsync(${3:new PagedAndSortedResultRequestDto}$4()$5);$0",
     "description": "Inserts var result = await AppService.GetListAsync statement",
     "prefix": "xUnGetListAsyncAppService"
   },
