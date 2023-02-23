@@ -95,6 +95,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xEnableValidationAttribute                                     | Inserts an EnableValidation Attribute                                                                     
      xExecuteSqlRawAsync                                            | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                                             
      xExposeServicesAttribute                                       | Inserts an ExposeServices attribute                                                                       
+     xFactMethodTaskStub                                            | a xUnit test Task method stub                                                                             
+     xFactMethodVoidStub                                            | a xUnit test void method stub                                                                             
      xFilterProperty                                                | Inserts a Filter property                                                                                 
      xFindByNameAsyncIAppServiceMethodDefinition                    | Adds a FindByNameAsync definition for an IAppService interface                                            
      xFindByNameAsyncMethodStub                                     | Adds a FindByNameAsync method stub                                                                        

@@ -2009,6 +2009,19 @@
     "description": "Inserts the UnitOfWorkAttribute",
     "prefix": "xUnitOfWorkAttribute"
   },
+  "factMethodTaskStub": {
+    "body": [
+      "[Fact$1]",
+      "public async Task$2 ${3:Should}_${4:Name_Of_Your_Test}()",
+      "{",
+      "\t $0",
+      "",
+      "",
+      "}"
+    ],
+    "description": "a xUnit test Task method stub",
+    "prefix": "xFactMethodTaskStub"
+  },
   "unMethodTaskStub": {
     "body": [
       "[Fact$1]",
@@ -2034,6 +2047,19 @@
     ],
     "description": "a xUnit test void method stub",
     "prefix": "xUnMethodVoidStub"
+  },
+  "factMethodVoidStub": {
+    "body": [
+      "[Fact$1]",
+      "public void ${2:Should}_${3:Name_Of_Your_Test}()",
+      "{",
+      "\t$0",
+      "",
+      "",
+      "}"
+    ],
+    "description": "a xUnit test void method stub",
+    "prefix": "xFactMethodVoidStub"
   },
   "unResultIdShouldNotBeGuidEmpty": {
     "body": "result.Id.ShouldNotBe$1(Guid$2.Empty);$0",
