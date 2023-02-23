@@ -284,6 +284,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepoDeleteAsync                                               | Inserts _repository.DeleteAsync statement                                                                 
      xRepoDeleteManyAsync                                           | Inserts _repository.DeleteManyAsync statement                                                             
      xRepoFindAsync                                                 | Inserts var x = _repository.FindAsync statement. Returns null when not found                              
+     xRepoFindByNameAsync                                           | Inserts var x = _repository.FindByNameAsync statement. Throws EntityNotFoundException when not found      
      xRepoFirstOrDefaultAsync                                       | Inserts var x = _repository.FindAsync statement                                                           
      xRepoGetAsync                                                  | Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found             
      xRepoGetCountAsync                                             | Inserts var totalCount = _repository.GetCountAsync statement                                              
