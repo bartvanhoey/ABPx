@@ -54,7 +54,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                          
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                        
      xCreateAsyncIAppServiceMethodDefinition                        | Inserts a CreateAsync definition for an IAppService interface                                             
-     xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an Interface                                                      
+     xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an IAppService Interface                                          
      xCreateAsyncMethodStub                                         | Adds a CreateAsync method stub to a class                                                                 
      xCreateManyAsyncIAppServiceMethodDefinition                    | Inserts a CreateManyAsync definition for an IAppService interface                                         
      xCreateMapCreateDtoToType                                      | CreateMap from Create[Type]Dto to [Type] statement                                                        
@@ -100,7 +100,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xFactMethodTaskStub                                            | a xUnit test Task method stub                                                                             
      xFactMethodVoidStub                                            | a xUnit test void method stub                                                                             
      xFilterProperty                                                | Inserts a Filter property                                                                                 
-     xFindByNameAsyncMethodDefinition                               | Adds a FindByNameAsync definition for an IAppService interface                                            
+     xFindByNameAsyncMethodDefinition                               | Adds a FindByNameAsync definition to an IRepository interface                                             
      xFindByNameAsyncMethodStub                                     | Adds a FindByNameAsync method stub                                                                        
      xGetAllBytesAsyncMethodBlobContainer                           | Inserts var blob = _fileContainer.GetAllBytesAsync method                                                 
      xGetAsyncIAppServiceMethodDefinition                           | Inserts a GetAsync definition for an IAppService interface                                                

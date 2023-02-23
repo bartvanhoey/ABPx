@@ -540,8 +540,8 @@
     "prefix": "xFindByNameAsyncMethodStub"
   },
   "findByNameAsyncMethodDefinition": {
-    "body": "public Task$2<${1:Type}> FindByNameAsync(string name);$0",
-    "description": "Adds a FindByNameAsync definition for an IAppService interface",
+    "body": "Task$2<${1:Type}> FindByNameAsync(string name);$0",
+    "description": "Adds a FindByNameAsync definition to an IRepository interface",
     "prefix": "xFindByNameAsyncMethodDefinition"
   },
   "getAsyncIAppServiceMethodDefinition": {
@@ -2195,8 +2195,8 @@
     "prefix": "xWithData"
   },
   "xCreateAsyncMethodDefinition": {
-    "body": "public Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
-    "description": "Adds a CreateAsync method Definition to an Interface ",
+    "body": "Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
+    "description": "Adds a CreateAsync method Definition to an IAppService Interface ",
     "prefix": "xCreateAsyncMethodDefinition"
   },
   "xCreateAsyncMethodStub": {
