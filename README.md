@@ -54,7 +54,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                          
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                        
      xCreateAsyncIAppServiceMethodDefinition                        | Inserts a CreateAsync definition for an IAppService interface                                             
-     xCreateAsyncMethodStub                                         | Adds a CreateAsync method stub                                                                            
+     xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an Interface                                                      
+     xCreateAsyncMethodStub                                         | Adds a CreateAsync method stub to a class                                                                 
      xCreateManyAsyncIAppServiceMethodDefinition                    | Inserts a CreateManyAsync definition for an IAppService interface                                         
      xCreateMapCreateDtoToType                                      | CreateMap from Create[Type]Dto to [Type] statement                                                        
      xCreateMapCreateUpdateDtoToType                                | CreateMap from CreateUpdate[Type]Dto to [Type] statement                                                  
@@ -84,6 +85,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xDbSet                                                         | Inserts a DbSet for a class statement in DbContext                                                        
      xDbSetNewSyntax                                                | Inserts a DbSet for a class statement in DbContext                                                        
      xDeleteAsyncIAppServiceMethodDefinition                        | Inserts a DeleteAsync definition for an IAppService interface                                             
+     xDeleteAsyncMethodDefinition                                   | Adds a DeleteAsync method definition to an interface                                                      
      xDeleteAsyncMethodStub                                         | Adds a DeleteAsync method stub                                                                            
      xDeletePolicyName                                              | Inserts DeletePolicyName statement                                                                        
      xDependencyAttribute                                           | Inserts Dependency attribute                                                                              

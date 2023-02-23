@@ -2182,9 +2182,20 @@
     "description": "Inserts a WithData statement",
     "prefix": "xWithData"
   },
-  "xCreateAsyncMethodStub": {
+  "xCreateAsyncMethodDefinition": {
     "body": "public Task$1<${2:Type}Dto> CreateAsync(Create${2:$1}Dto input);$0",
-    "description": "Adds a CreateAsync method stub",
+    "description": "Adds a CreateAsync method Definition to an Interface ",
+    "prefix": "xCreateAsyncMethodDefinition"
+  },
+  "xCreateAsyncMethodStub": {
+    "body": [
+      "public Task$1<${2:Type}> CreateAsync(${2:$1} ${3:input);$0",
+      "{",
+      "\t$0",
+      "",
+      "}"
+    ],
+    "description": "Adds a CreateAsync method stub to a class",
     "prefix": "xCreateAsyncMethodStub"
   },
   "xCreatePolicy": {
@@ -2194,8 +2205,19 @@
     "description": "Inserts CreatePolicyName statement",
     "prefix": "xCreatePolicyName"
   },
-  "xDeleteAsyncMethodStub": {
+  "xDeleteAsyncMethodDefinition": {
     "body": "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+    "description": "Adds a DeleteAsync method definition to an interface",
+    "prefix": "xDeleteAsyncMethodDefinition"
+  },
+  "xDeleteAsyncMethodStub": {
+    "body": [
+      "public Task$1 DeleteAsync(${2|Guid,int,string|} id);$0",
+      "{",
+      "\t$0",
+      "",
+      "}"
+  ],
     "description": "Adds a DeleteAsync method stub",
     "prefix": "xDeleteAsyncMethodStub"
   },
