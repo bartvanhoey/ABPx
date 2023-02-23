@@ -255,17 +255,25 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xParaId                                                        | Inserts Id property with Parameter attribute                                                              
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                        
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                             
+     xPropCity                                                      | Inserts a City property                                                                                   
+     xPropCountry                                                   | Inserts a Country property                                                                                
      xPropDescription                                               | Inserts a Description property                                                                            
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                       
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                       
      xPropertyHasMaxLengthIsRequired                                | Inserts b.Property.HasMaxLength.IsRequired statement                                                      
+     xPropFirstName                                                 | Inserts a First Name property                                                                             
      xPropId                                                        | Inserts an Id property                                                                                    
-     xPropName                                                      | Inserts an Name property                                                                                  
+     xPropLastName                                                  | Inserts a First Name property                                                                             
+     xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                           
+     xPropName                                                      | Inserts a Name property                                                                                   
+     xPropPhone                                                     | Inserts a Phone property                                                                                  
      xPropPrivateSetter                                             | Inserts a property with private setter                                                                    
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                                  
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                                     
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                                     
+     xPropStreet                                                    | Inserts a Street property                                                                                 
      xPropTitle                                                     | Inserts an Title property                                                                                 
+     xPropZipCode                                                   | Inserts a ZipCode property                                                                                
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                         
      xRangeAttribute                                                | Range attribute                                                                                           
      xReadOnlyListLookupDto                                         | Inserts an IReadOnlyList for a LookupDto object                                                           

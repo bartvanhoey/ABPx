@@ -1541,47 +1541,87 @@
     "prefix": "xPropPrivateSetter"
   },
   "propId": {
-    "body": ["public ${1|Guid,int,string|} ${2:Id} { get; set; }$0"],
+    "body": ["public ${1|Guid,int,string|} ${2:Id} ${3|set;,private set;|}$0"],
     "description": "Inserts an Id property",
     "prefix": "xPropId"
   },
   "propName": {
-    "body": ["public string ${1:Name} { get; set; }$0"],
-    "description": "Inserts an Name property ",
+    "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Name property ",
     "prefix": "xPropName"
   },
+  "propFirstName": {
+    "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "xPropFirstName"
+  },
+  "propLastName": {
+    "body": ["public string ${1:LastName} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a First Name property ",
+    "prefix": "xPropLastName"
+  },
+  "propZipCode": {
+    "body": ["public string ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a ZipCode property ",
+    "prefix": "xPropZipCode"
+  },
+  "propCountry": {
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Country property ",
+    "prefix": "xPropCountry"
+  },
+  "propMobilePhone": {
+    "body": ["public string ${1:MobilePhone} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Mobile Phone property ",
+    "prefix": "xPropMobilePhone"
+  },
+  "propPhone": {
+    "body": ["public string ${1:Phone} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Phone property ",
+    "prefix": "xPropPhone"
+  },
+  "propCity": {
+    "body": ["public string ${1:City} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a City property ",
+    "prefix": "xPropCity"
+  },
+  "propStreet": {
+    "body": ["public string ${1:Street} { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a Street property ",
+    "prefix": "xPropStreet"
+  },
   "propTitle": {
-    "body": ["public string Title { get; set; }$0"],
+    "body": ["public string Title { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts an Title property ",
     "prefix": "xPropTitle"
   },
   "propDescription": {
-    "body": ["public string Description{ get; set; }$0"],
+    "body": ["public string Description{ get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a Description property ",
     "prefix": "xPropDescription"
   },
   "propStartDate": {
-    "body": ["public DateTime$2 ${1:StartDate} { get; set; }$0"],
+    "body": ["public DateTime$2 ${1:StartDate} { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
   },
   "propStartTime": {
-    "body": ["public DateTime$2 ${1:StartTime} { get; set; }$0"],
+    "body": ["public DateTime$2 ${1:StartTime} { get; ${1|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "xPropStartTime"
   },
   "propEndDate": {
-    "body": ["public DateTime$2 ${1:EndDate }{ get; set; }$0"],
+    "body": ["public DateTime$2 ${1:EndDate }{ get; ${1|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "xPropEndDate"
   },
   "propEndTime": {
-    "body": ["public DateTime$2 ${1:EndTime} { get; set; }$0"],
+    "body": ["public DateTime$2 ${1:EndTime} { get; ${1|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime EndTime property ",
     "prefix": "xPropEndTime"
   },
   "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; set; }$0"],
+    "body": ["public DateTime$1 BirthDate { get; ${1|set;,private set;|}  }$0"],
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
