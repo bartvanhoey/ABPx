@@ -1605,27 +1605,27 @@
     "prefix": "xPropDescription"
   },
   "propStartDate": {
-    "body": ["public DateTime$2 ${1:StartDate} { get; ${1|set;,private set;|} }$0"],
+    "body": ["public DateTime$2 ${1:StartDate} { get; ${3|set;,private set;|} }$0"],
     "description": "Inserts a DateTime StartDate property ",
     "prefix": "xPropStartDate"
   },
   "propStartTime": {
-    "body": ["public DateTime$2 ${1:StartTime} { get; ${1|set;,private set;|}  }$0"],
+    "body": ["public DateTime$2 ${1:StartTime} { get; ${3|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime StartTime property ",
     "prefix": "xPropStartTime"
   },
   "propEndDate": {
-    "body": ["public DateTime$2 ${1:EndDate }{ get; ${1|set;,private set;|}  }$0"],
+    "body": ["public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "xPropEndDate"
   },
   "propEndTime": {
-    "body": ["public DateTime$2 ${1:EndTime} { get; ${1|set;,private set;|}  }$0"],
+    "body": ["public DateTime$2 ${1:EndTime} { get; ${3|set;,private set;|}  }$0"],
     "description": "Inserts a DateTime EndTime property ",
     "prefix": "xPropEndTime"
   },
   "propBirthDate": {
-    "body": ["public DateTime$1 BirthDate { get; ${1|set;,private set;|}  }$0"],
+    "body": ["public DateTime$1 BirthDate { get; ${2|set;,private set;|}  }$0"],
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
