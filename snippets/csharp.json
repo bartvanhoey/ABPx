@@ -763,7 +763,7 @@
     "description": "Inserts a IAppService parameter",
     "prefix": "xIAppServiceParam"
   },
-  "iAppServiceStubCrudMethods": {
+  "iAppServiceCrudDefinitions": {
     "body": [
       "public interface ${TM_FILENAME_BASE} : IApplicationService$1",
       "{",
@@ -780,7 +780,7 @@
       "}$0"
     ],
     "description": "Inserts a complete IAppService interface with CRUD methods for a given Type",
-    "prefix": "xIAppServiceStubCrudMethods"
+    "prefix": "xIAppServiceCrudDefinitions"
   },
   "iAppServiceUpdateAsyncDefinition": {
     "body": [
