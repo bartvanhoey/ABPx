@@ -469,7 +469,7 @@
       "          <CloseButton Clicked=\"CloseEditModalAsync\" />",
       "      </ModalHeader>",
       "      <ModalBody>",
-      "       <Validations @ref=\"@EditValidationsRef\" Model=\"@EditingAuthor\" ValidateOnLoad=\"false\">",
+      "       <Validations @ref=\"@EditValidationsRef\" Model=\"@EditingEntity\" ValidateOnLoad=\"false\">",
       "         <Row>",
       "           <Column ColumnSize=\"ColumnSize.Is12\">",
       "             $0@* <Field>",
