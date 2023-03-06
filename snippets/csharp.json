@@ -1547,7 +1547,7 @@
     "prefix": "xPropPrivateSetter"
   },
   "propId": {
-    "body": ["public ${1|Guid,int,string|} ${2:Id} ${3|set;,private set;|}$0"],
+    "body": ["public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"],
     "description": "Inserts an Id property",
     "prefix": "xPropId"
   },
