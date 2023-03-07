@@ -134,6 +134,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xHasKey                                                        | Inserts hasKey statement (composite key)                                                                  
      xHasManyWithOneHasFkDeleteRestrictIsRequired                   | Inserts HasOne(x => x.Type).WithMany().ForeignKey().OnDelete(DeleteBehavior.Restrict).IsRequired statement
      xHasOneWithManyFkIsRequired                                    | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                                       
+     xHasOneWithManyFkIsRequiredOnDelete                            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired().OnDelete statement                            
      xIAppServiceCrudDefinitions                                    | Inserts a complete IAppService interface with CRUD methods for a given Type                               
      xIAppServiceParam                                              | Inserts a IAppService parameter                                                                           
      xIAppServiceUpdateAsyncDefinition                              | Inserts a UpdateAsync definition for an IAppService interface                                             
