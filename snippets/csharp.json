@@ -745,12 +745,12 @@
     "description": "Inserts hasKey statement (composite key)",
     "prefix": "xHasKey"
   },
-  "hasManyWithOneHasFkDeleteRestrictIsRequired": {
+  "hasManyWithOneIsRequiredHasForeignKey": {
     "body": [
-      "b.HasOne(x => x.${1:Type}).WithMany().HasForeignKey(x => x.$1Id).OnDelete(DeleteBehavior.Restrict).IsRequired();$0"
+      "b.HasMany(x => x.${1:Type}).WithOne().IsRequired().HasForeignKey(x => x.${2:PropertyName}Id);$0"
     ],
-    "description": "Inserts HasOne(x => x.Type).WithMany().ForeignKey().OnDelete(DeleteBehavior.Restrict).IsRequired statement",
-    "prefix": "xHasManyWithOneHasFkDeleteRestrictIsRequired"
+    "description": "Inserts HasMany().WithOne().IsRequired().HasForeignKey() statement",
+    "prefix": "xHasManyWithOneIsRequiredHasForeignKey"
   },
   "hasOneWithManyFkIsRequired": {
     "body": [
