@@ -1536,7 +1536,7 @@
   },
   "PropertyHasMaxLengthIsRequired": {
     "body": [
-      "b.Property(x => x.${1:Type}).HasMaxLength($1Consts.MaxNameLength).IsRequired();$0"
+      "b.Property(x => x.${1:PropertyName}).HasMaxLength(${2:Type}Consts.MaxNameLength).IsRequired();$0"
     ],
     "description": "Inserts b.Property.HasMaxLength.IsRequired statement",
     "prefix": "xPropertyHasMaxLengthIsRequired"
