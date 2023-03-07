@@ -263,7 +263,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropDescription                                               | Inserts a Description property                                                                            
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                       
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                       
-     xPropertyHasMaxLengthIsRequired                                | Inserts b.Property.HasMaxLength.IsRequired statement                                                      
+     xPropertyHasMaxLength                                          | Inserts b.Property.HasMaxLengthstatement                                                                  
+     xPropertyIsRequiredHasMaxLength                                | Inserts b.Property.IsRequired.HasMaxLengthstatement                                                       
      xPropFilter                                                    | Inserts a Filter property                                                                                 
      xPropFirstName                                                 | Inserts a First Name property                                                                             
      xPropId                                                        | Inserts an Id property                                                                                    

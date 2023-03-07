@@ -1540,12 +1540,19 @@
     "description": "Inserts a static class with Default/Create/Update/Delete constants",
     "prefix": "xPermissionClass"
   },
-  "PropertyHasMaxLengthIsRequired": {
+  "PropertyIsRquuiredHasMaxLength": {
     "body": [
-      "b.Property(x => x.${1:PropertyName}).HasMaxLength(${2:Type}Consts.MaxNameLength).IsRequired();$0"
+      "b.Property(x => x.${1:PropertyName}).IsRequired().HasMaxLength(${2:Type}Consts.MaxNameLength);$0"
     ],
-    "description": "Inserts b.Property.HasMaxLength.IsRequired statement",
-    "prefix": "xPropertyHasMaxLengthIsRequired"
+    "description": "Inserts b.Property.IsRequired.HasMaxLengthstatement",
+    "prefix": "xPropertyIsRequiredHasMaxLength"
+  },
+  "PropertyHasMaxLength": {
+    "body": [
+      "b.Property(x => x.${1:PropertyName}).HasMaxLength(${2:Type}Consts.MaxNameLength);$0"
+    ],
+    "description": "Inserts b.Property.HasMaxLengthstatement",
+    "prefix": "xPropertyHasMaxLength"
   },
   "propPrivateSetter": {
     "body": "public ${1:int } ${2:MyProperty} { get; private set; }$0",
