@@ -318,6 +318,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xSaveAsyncMethodAppService                                     | Inserts await _fileAppService.SaveBlobAsync method                                                  
      xSaveAsyncMethodBlobContainer                                  | Inserts await _fileContainer.SaveAsync method                                                       
      xSaveBlobAsyncIAppServiceMethodDefinition                      | Inserts a SaveBlobAsync definition for an IAppService interface                                     
+     xSpecificationClass                                            | Inserts a Specification class stub                                                                  
      xStringLengthAttribute                                         | StringLength attribute                                                                              
      xTaskCompleted                                                 | Inserts await Task.CompletedTask statement                                                          
      xTenantIdGuidProperty                                          | Inserts public Guid? TenantId { get; set; } property                                                

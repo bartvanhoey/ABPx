@@ -1560,7 +1560,9 @@
     "prefix": "xPropPrivateSetter"
   },
   "propId": {
-    "body": ["public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"],
+    "body": [
+      "public ${1|Guid,int,string|} ${2:Id} { get; ${3|set;,private set;|} }$0"
+    ],
     "description": "Inserts an Id property",
     "prefix": "xPropId"
   },
@@ -1679,14 +1681,14 @@
   },
   "repoDeleteAsync": {
     "body": [
-      "await _${1:name}Repository.DeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.DeleteAsync$4(${2:id}, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts _repository.DeleteAsync statement",
     "prefix": "xRepoDeleteAsync"
   },
   "repoDeleteManyAsync": {
     "body": [
-      "await _${1:name}Repository.DeleteManyAsync$4(${2:ids}, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.DeleteManyAsync$4(${2:ids}, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts _repository.DeleteManyAsync statement",
     "prefix": "xRepoDeleteManyAsync"
@@ -1783,7 +1785,7 @@
   },
   "repoHardDeleteAsync": {
     "body": [
-      "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.HardDeleteAsync$4(${2:id}, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts _repository.HardDeleteAsync statement",
     "prefix": "xRepoHardDeleteAsync"
@@ -1797,21 +1799,21 @@
   },
   "repoInsertManyAsync": {
     "body": [
-      "await _${1:name}Repository.InsertManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.InsertManyAsync(${2:$1}s, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts _repository.InsertManyAsync statement",
     "prefix": "xRepoInsertManyAsync"
   },
   "repoUpdateAsync": {
     "body": [
-      "await _${1:name}Repository.UpdateAsync(${2:$1}, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.UpdateAsync(${2:$1}, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts repository.UpdateAsync statement",
     "prefix": "xRepoUpdateAsync"
   },
   "repoUpdateManyAsync": {
     "body": [
-      "await _${1:name}Repository.UpdateManyAsync(${2:$1}s, autoSave:${3|false,true|});$0"
+      "await _${1:name}Repository.UpdateManyAsync(${2:$1}s, autoSave:${3|true,false|});$0"
     ],
     "description": "Inserts repository.UpdateManyAsync() statement",
     "prefix": "xRepoUpdateManyAsync"
@@ -2302,5 +2304,15 @@
     ],
     "description": "Inserts UpdatePolicyName statement",
     "prefix": "xUpdatePolicyName"
+  },
+  "specificationClass": {
+    "body": [
+      "public class ${1:Name}Specification$0 : Specification<${2:Type}$3>",
+      "{",
+      "\t",
+      "}"
+    ],
+    "description": "Inserts a Specification class stub",
+    "prefix": "xSpecificationClass"
   }
 }
