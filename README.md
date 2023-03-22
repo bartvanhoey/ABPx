@@ -167,6 +167,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xIfResultSucceeded                                             | If result.Succeeded statement                                                                       
      xIGuidGeneratorParam                                           | Inserts a IGuidGenerator parameter                                                                  
      xIIdentityUserRepositoryCtorParam                              | Inserts an IIdentityUserRepository identityUserRepository parameter in the constructor              
+     xILocalEvenBushPublishAsync                                    | Inserts await _localEventBus.PublishAsync                                                           
+     xILocalEventBusCtorParam                                       | Inserts a ILocalEventBus param in the constructor                                                   
      xIMongoCollection                                              | Inserts as IMongoCollection for a class statement in DbContext                                      
      xImpCorrespondingIAppService                                   | Implements corresponding IAppService interface                                                      
      xImpCorrespondingIRepository                                   | Implements corresponding IRepository interface                                                      

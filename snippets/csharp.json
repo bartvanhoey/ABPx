@@ -1232,10 +1232,20 @@
     "description": "Inserts a custom ClassRepository param in the constructor",
     "prefix": "xIRepoCtorCustomParam"
   },
+  "iLocalEventBusCtorParam": {
+    "body": "ILocaEventBus localEventBus$0",
+    "description": "Inserts a ILocalEventBus param in the constructor",
+    "prefix": "xILocalEventBusCtorParam"
+  },
   "iRepoCtorDefaultParam": {
     "body": "IRepository$1<${2:Type}, ${3|Guid,int,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
     "prefix": "xIRepoCtorDefaultParam"
+  },
+  "iLocalEvenBushPublishAsync": {
+    "body": "await _localEventBus.PublishAsync(new ${1:EventName}($2))$0;",
+    "description": "Inserts await _localEventBus.PublishAsync", 
+    "prefix": "xILocalEvenBushPublishAsync"
   },
   "iCachedServiceProviderCtorParam ": {
     "body": "ICachedServiceProvider cachedServiceProvider$0",
