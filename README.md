@@ -175,6 +175,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xImpIDataSeedContributor                                       | Implements IDataSeedContributor (+ ITransientDependency) interface                                  
      xImpIHasCreationTime                                           | Implements IHasCreationTime interface                                                               
      xImpIInjectServiceProvider                                     | Implements IInjectServiceProvider interface                                                         
+     xImpILocalEventHandler                                         | Implements ILocalEventHandler interface                                                             
      xImpIMultiTenant                                               | Implements IMultiTenant interface                                                                   
      xImpIRepository                                                | Implements IRepository interface                                                                    
      xImpIScopedDependency                                          | Implements IScopedDependency interface                                                              

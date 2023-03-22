@@ -995,6 +995,11 @@
     "description": "Implements corresponding IAppService interface",
     "prefix": "xImpCorrespondingIAppService"
   },
+  "implementILocalEventHandler": {
+    "body": " ILocalEventHandler$1$0<${2:EventName}>, ITransientDependency$3",
+    "description": "Implements ILocalEventHandler interface",
+    "prefix": "xImpILocalEventHandler"
+  },
   "implementIApplicationService": {
     "body": " IApplicationService$0",
     "description": "Implements IApplicationService interface",
