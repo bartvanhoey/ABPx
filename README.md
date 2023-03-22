@@ -183,7 +183,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xImpIScopedDependency                                          | Implements IScopedDependency interface                                                              
      xImpISingletonDependency                                       | Implements ISingletonDependency interface                                                           
      xImpITransientDependency                                       | Implements ITransientDependency interface                                                           
-     xImpIValidatableObject                                         | Implements IValidatableObject interface                                                             
+     xImpIValidatableObject                                         | Implements IValidatableObject interface on a DTO                                                    
      xInhAbpModule                                                  | Inherits AbpModule                                                                                  
      xInhAggregateRoot                                              | Inherits AggregateRoot class                                                                        
      xInhApplicationService                                         | Inherits ApplicationService class                                                                   

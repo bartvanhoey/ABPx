@@ -1052,7 +1052,7 @@
   },
   "implementIValidatableObject": {
     "body": " IValidatableObject$0",
-    "description": "Implements IValidatableObject interface",
+    "description": "Implements IValidatableObject interface on a DTO",
     "prefix": "xImpIValidatableObject"
   },
   "inhAbpModule": {
