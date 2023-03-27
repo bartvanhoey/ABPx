@@ -254,7 +254,11 @@
     "prefix": "xInjectAbpBlazorMessageLocalizerHelper"
   },
   "injectIStringLocalizer": {
-    "body": "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L",
+    "body": [
+      "@using ${WORKSPACE_NAME}.Localization",
+      "@using Microsoft.Extensions.Localization",
+      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L"
+    ],
     "description": "Inserts @inject IStringLocalizer",
     "prefix": "xInjectIStringLocalizer"
   },
