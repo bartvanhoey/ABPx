@@ -411,7 +411,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xInheritsComponentBase                 | Inserts @inherits [YourProjectName]ComponentBase statement          
      xInjAuthorizationService               | Injects interface IAuthorizationService                             
      xInjectAbpBlazorMessageLocalizerHelper | Inserts @inject AbpBlazorMessageLocalizerHelper                     
-     xInjectAppService                      | Inserts @inject MyService MyService                                 
+     xInjectAppService                      | Inserts @inject IMyService MyService                                
      xInjectHttpClient                      | Inserts @inject HttpClient directive                                
      xInjectIJSRuntime                      | Inserts @inject IJSRuntime directive                                
      xInjectIMapper                         | Inserts @inject IMapper directive                                   

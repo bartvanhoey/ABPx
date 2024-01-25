@@ -245,7 +245,7 @@
   },
   "injectAppService": {
     "body": "@inject I${2:$1}AppService ${1:Name}AppService",
-    "description": "Inserts @inject MyService MyService",
+    "description": "Inserts @inject IMyService MyService",
     "prefix": "xInjectAppService"
   },
   "injectAbpBlazorMessageLocalizerHelper": {
