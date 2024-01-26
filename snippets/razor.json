@@ -154,7 +154,7 @@
       "    @foreach (int value in Enum.GetValues(typeof($3)))",
       "    {",
       "      <SelectItem TValue=\"$3\" Value=\"@(($3)value)\">",
-      "          @L[$\"Enum:$3.{Enum.GetName(($3)value)}\"]",
+      "          @L[$\"Enum:$3.{value}\"]",
       "      </SelectItem>",
       "    }",
       "  </Select>",
