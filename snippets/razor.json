@@ -35,10 +35,10 @@
       "                       </Feedback>",
       "                     </TextEdit>",
       "                 </Field>",
+      "               </Validation>",
       "                 ",
       "                 $0",
       "                 ",
-      "               </Validation>",
       "             </Column>",
       "           </Row>",
       "         </Validations>",
@@ -141,7 +141,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <DateEdit TValue=\"${3|DateTime,DateTime?|}\" @bind-Date=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\" *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\", *@$0"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldDateEdit"
@@ -159,7 +159,7 @@
       "    }",
       "  </Select>",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\"  *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\",  *@$0"
     ],
     "description": "Inserts a Select field for enum in a Create/Update dialog",
     "prefix": "xFieldEnumSelect"
@@ -170,7 +170,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <MemoEdit Rows=\"${3:5}\" @bind-Text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\" *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\", *@$0"
 
     ],
     "description": "Inserts a MemoEdit field in a Create/Update dialog",
@@ -182,7 +182,7 @@
           "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
           "  <NumericEdit TValue=\"${3|byte,byte?,int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
           "</Field>",
-          "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\"  *@$0"
+          "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\",  *@$0"
         ],
         "description": "Inserts a NumericEdit field in a Create/Update dialog",
         "prefix": "xFieldNumericEdit"
@@ -213,7 +213,7 @@
       "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
       "  <TextEdit @bind-Text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${3:$2}\" *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${3:$2}\", *@$0"
     ],
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldTextEdit"
