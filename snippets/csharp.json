@@ -1076,9 +1076,19 @@
     "prefix": "xInhApplicationService"
   },
   "inheritsApplicationTestBase": {
-    "body": " ${WORKSPACE_NAME}ApplicationTestBase$0",
+    "body": [
+      " ${WORKSPACE_NAME}ApplicationTestBase<TStartupModule>", 
+      "\twhere TStartupModule : IAbpModule$0"
+    ],
     "description": "Inherits ApplicationTestBase class",
     "prefix": "xInhApplicationTestBase"
+  },
+  "collectionDefinitionNameAttribute": {
+    "body": [
+      "[Collection(${WORKSPACE_NAME}TestConsts.CollectionDefinitionName)]"
+    ],
+    "description": "Inserts a CollectionDefinitionNameAttribute",
+    "prefix": "xCollectionDefinitionNameAttribute"
   },
   "inheritsAuditedAggregateRoot": {
     "body": " AuditedAggregateRoot$1<${2|Guid,int,string|}>$0",

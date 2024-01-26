@@ -50,6 +50,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCheckNotNullOrWhiteSpace                                      | Check.NotNullOrWhiteSpace statement                                                                 
      xCheckNotNullOrWhiteSpaceMaxLength                             | Check.NotNullOrWhiteSpace (+ MaxLength) statement                                                   
      xCheckNotNullOrWhiteSpaceMaxMinLength                          | Check.NotNullOrWhiteSpace (+ Max/MinLength) statement                                               
+     xCollectionDefinitionNameAttribute                             | Inserts a CollectionDefinitionNameAttribute                                                         
      xConfigureOptions                                              | Inserts Configure Options statement for use in ConfigureServices method                             
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                    
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                  
