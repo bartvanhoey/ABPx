@@ -1542,6 +1542,11 @@
     "description": "Inserts Id property with Parameter attribute",
     "prefix": "xParaId"
   },
+  "pageTitle": {
+    "body": "<PageTitle>${1:${TM_FILENAME_BASE}}</PageTitle>$0",
+    "description": "Inserts a PageTitle tag",
+    "prefix": "xPageTitle"
+  },
   "permissionClass": {
     "body": [
       "public static class ${1:ClassName}",
@@ -1585,6 +1590,11 @@
     "body": ["public string ${1:Name} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Name property ",
     "prefix": "xPropName"
+  },
+  "propBookType": {
+    "body": ["public BookType$1 Type { get; ${2|set;,private set;|} }$0"],
+    "description": "Inserts a BookType property ",
+    "prefix": "xPropBookType"
   },
   "propFirstName": {
     "body": ["public string ${1:FirstName} { get; ${2|set;,private set;|} }$0"],
@@ -1654,10 +1664,17 @@
   },
   "propEndDate": {
     "body": [
-      "public DateTime$2 ${1:EndDate }{ get; ${3|set;,private set;|}  }$0"
+      "public DateTime$2 ${1:EndDate}{ get; ${3|set;,private set;|}  }$0"
     ],
     "description": "Inserts a DateTime EndDate property ",
     "prefix": "xPropEndDate"
+  },
+  "propPublishDate": {
+    "body": [
+      "public DateTime$2 ${1:PublishDate}{ get; ${3|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a DateTime PublishDate property ",
+    "prefix": "xPropPublishDate"
   },
   "propEndTime": {
     "body": [

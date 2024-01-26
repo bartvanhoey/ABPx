@@ -257,10 +257,12 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xOnInitializedAsync                                            | OnInitializedAsync method stub                                                                      
      xOnParametersSet                                               | OnParameterSet method stub                                                                          
      xOnParametersSetAsync                                          | OnParameterSetAsync method stub                                                                     
+     xPageTitle                                                     | Inserts a PageTitle tag                                                                             
      xPara                                                          | Inserts property with Parameter attribute                                                           
      xParaId                                                        | Inserts Id property with Parameter attribute                                                        
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                  
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                       
+     xPropBookType                                                  | Inserts a BookType property                                                                         
      xPropCity                                                      | Inserts a City property                                                                             
      xPropCountry                                                   | Inserts a Country property                                                                          
      xPropDescription                                               | Inserts a Description property                                                                      
@@ -277,6 +279,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropPhone                                                     | Inserts a Phone property                                                                            
      xPropPrivateSetter                                             | Inserts a property with private setter                                                              
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                            
+     xPropPublishDate                                               | Inserts a DateTime PublishDate property                                                             
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                               
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                               
      xPropStreet                                                    | Inserts a Street property                                                                           
