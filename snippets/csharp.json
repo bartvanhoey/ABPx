@@ -1,11 +1,11 @@
 {
-  "addPermissionGroupToContext": {
+  "permissionAddGroupToContext": {
     "body": [
       "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}Group}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}Group\"));",
       "//\"Permission:${1/^([a-z])/${1:/upcase}/}Group\": \"${1/^([a-z])/${1:/upcase}/} management\","
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider",
-    "prefix": "xAddPermissionGroupToContext"
+    "prefix": "xPermissionAddGroupToContext"
   },
   "addPermissionPoliciesAppService": {
     "body": [
@@ -18,7 +18,7 @@
     "description": "Adds policy permissions to AppService",
     "prefix": "xAddPermissionsPoliciesAppService"
   },
-  "addPermissionToGroup": {
+  "permissionAddPermissionToGroup": {
     "body": [
       "var ${1:name}Permission = ${2:groupName}.AddPermission(${3:${TM_FILENAME/PermissionDefinitionProvider.cs//}}Permissions.${4:ClassName}.Default, L(\"Permission:$4\"));",
       "$1Permission.AddChild($3Permissions.$4.Create, L(\"Permission:$4:Create\"));",
@@ -31,7 +31,7 @@
       "//\"Permission:$4:Delete\": \"Deleting ${5:${4/^([A-Z])/${1:/downcase}/}}\"$0"
     ],
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
-    "prefix": "xAddPermissionToGroup"
+    "prefix": "xPermissionAddPermissionToGroup"
   },
   "applicationMenuItemIcon": {
     "body": [
@@ -2135,7 +2135,7 @@
     "description": "Inserts the UnitOfWorkAttribute",
     "prefix": "xUnitOfWorkAttribute"
   },
-  "factMethodTaskStub": {
+  "unFactMethodTaskStub": {
     "body": [
       "[Fact$1]",
       "public async Task$2 ${3:Should}_${4:Name_Of_Your_Test}()",
@@ -2146,7 +2146,7 @@
       "}"
     ],
     "description": "a xUnit test Task method stub",
-    "prefix": "xFactMethodTaskStub"
+    "prefix": "xunFactMethodTaskStub"
   },
   "unMethodTaskStub": {
     "body": [
@@ -2174,7 +2174,7 @@
     "description": "a xUnit test void method stub",
     "prefix": "xUnMethodVoidStub"
   },
-  "factMethodVoidStub": {
+  "unFactMethodVoidStub": {
     "body": [
       "[Fact$1]",
       "public void ${2:Should}_${3:Name_Of_Your_Test}()",
@@ -2185,7 +2185,7 @@
       "}"
     ],
     "description": "a xUnit test void method stub",
-    "prefix": "xFactMethodVoidStub"
+    "prefix": "xUnFactMethodVoidStub"
   },
   "unResultIdShouldNotBeGuidEmpty": {
     "body": "result.Id.ShouldNotBe$1(Guid$2.Empty);$0",
@@ -2211,6 +2211,11 @@
     "body": "result.${1:PropertyName}.ShouldBe$2(${3:Value});$0",
     "description": "Inserts result.PropertyName.ShouldBe(Value) statement",
     "prefix": "xUnResultShouldBe"
+  },
+  "unResultNameShouldBe": {
+    "body": "result.${1:PropertyName}.ShouldBe$2(\"${3:Value}\");$0",
+    "description": "Inserts result.Name.ShouldBe(Value) statement",
+    "prefix": "xUnResultNameShouldBe"
   },
   "unResultTotalCountShouldBe": {
     "body": "result.TotalCount.ShouldBe$1(${2:totalCount});$0",

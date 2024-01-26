@@ -10,9 +10,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      Prefix                                                         | Description                                                                                         
      -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- 
      xAbpSignInManagerCtorParam                                     | Inserts an AbpSignInManager abpSignInManager parameter in the constructor                           
-     xAddPermissionGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                     
      xAddPermissionsPoliciesAppService                              | Adds policy permissions to AppService                                                               
-     xAddPermissionToGroup                                          | Adds permission to group in PermissionDefinitionProvider.cs                                         
      xApplicationMenuItemIcon                                       | New ApplicationMenuItem variable with icon                                                          
      xApplicationMenuItemUrl                                        | New ApplicationMenuItem variable with url                                                           
      xAppServiceClassStub                                           | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class           
@@ -98,8 +96,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xEnableValidationAttribute                                     | Inserts an EnableValidation Attribute                                                               
      xExecuteSqlRawAsync                                            | Inserts await dbContext.Database.ExecuteSqlRawAsync statement                                       
      xExposeServicesAttribute                                       | Inserts an ExposeServices attribute                                                                 
-     xFactMethodTaskStub                                            | a xUnit test Task method stub                                                                       
-     xFactMethodVoidStub                                            | a xUnit test void method stub                                                                       
      xFilterProperty                                                | Inserts a Filter property                                                                           
      xFindByNameAsyncMethodDefinition                               | Adds a FindByNameAsync definition to an IRepository interface                                       
      xFindByNameAsyncMethodStub                                     | Adds a FindByNameAsync method stub                                                                  
@@ -261,6 +257,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPageTitle                                                     | Inserts a PageTitle tag                                                                             
      xPara                                                          | Inserts property with Parameter attribute                                                           
      xParaId                                                        | Inserts Id property with Parameter attribute                                                        
+     xPermissionAddGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                     
+     xPermissionAddPermissionToGroup                                | Adds permission to group in PermissionDefinitionProvider.cs                                         
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                  
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                       
      xPropBookType                                                  | Inserts a BookType property                                                                         
@@ -345,6 +343,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                     
      xUnAssertThrowsCustomException                                 | Inserts Assert.Throws<YourCustomException>                                                          
      xUnCreateAsyncAppService                                       | Inserts var result = await AppService.CreateAsync statement                                         
+     xunFactMethodTaskStub                                          | a xUnit test Task method stub                                                                       
+     xUnFactMethodVoidStub                                          | a xUnit test void method stub                                                                       
      xUnGetListAsyncAppService                                      | Inserts var result = await AppService.GetListAsync statement                                        
      xUnGetRequiredIAppService                                      | Inserts GetRequiredService<IAppService> and IAppService field                                       
      xUnGetRequiredService                                          | Inserts GetRequiredService and matching field                                                       
@@ -354,6 +354,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultIdShouldNotBeGuidEmpty                                | Inserts result.Id.ShouldNotBe(Guid.Empty)                                                           
      xUnResultItemsShouldContain                                    | Inserts result.Items.ShouldContain statement                                                        
      xUnResultItemsShouldNotContain                                 | Inserts result.Items.ShouldNotContain statement                                                     
+     xUnResultNameShouldBe                                          | Inserts result.Name.ShouldBe(Value) statement                                                       
      xUnResultPropertyShouldBe                                      | Inserts result.PropertyName.ShouldBe(Value) statement                                               
      xUnResultShouldBe                                              | Inserts result.PropertyName.ShouldBe(Value) statement                                               
      xUnResultTotalCountShouldBe                                    | Inserts result.TotalCount.ShouldBe statement                                                        
