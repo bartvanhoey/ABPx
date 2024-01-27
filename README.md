@@ -360,6 +360,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultTotalCountShouldBe                                    | Inserts result.TotalCount.ShouldBe statement                                                                                    
      xUnResultTotalCountShouldBeGreaterOrEqual                      | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                                                                  
      xUnResultTotalCountShouldBeGreaterThan                         | Inserts result.TotalCount.ShouldBeGreaterThan statement                                                                         
+     xUnResultTotalCountShouldBeGreaterThanOrEqualTo                | Inserts result.TotalCount.ShouldBeGreaterThanOrEqualTo statement                                                                
      xUpdatePolicyName                                              | Inserts UpdatePolicyName statement                                                                                              
      xUrlAttribute                                                  | Url attribute                                                                                                                   
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                                                

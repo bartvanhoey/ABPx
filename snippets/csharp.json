@@ -2225,6 +2225,11 @@
     "description": "Inserts result.TotalCount.ShouldBeGreaterThan statement",
     "prefix": "xUnResultTotalCountShouldBeGreaterThan"
   },
+  "unResultTotalCountShouldBeGreaterThanOrEqualTo": {
+    "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
+    "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqualTo statement",
+    "prefix": "xUnResultTotalCountShouldBeGreaterThanOrEqualTo"
+  },
   "unResultTotalCountShouldBeGreaterThanOrEqual": {
     "body": "result.TotalCount.ShouldBeGreaterThanOrEqualTo$1(${2:totalCount});$0",
     "description": "Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement",
