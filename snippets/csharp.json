@@ -1317,10 +1317,10 @@
     "description": "Inserts var x = await _nameManager.FindByIdAsync() statement",
     "prefix": "xManagerFindByIdAsync"
   },
-  "managerCtorDefaultParam": {
+  "ctorManagerCustomParam": {
     "body": "${1:Name}Manager$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Manager$0",
     "description": "Inserts a custom Manager parameter in constructor",
-    "prefix": "xManagerCtorDefaultParam"
+    "prefix": "xCtorManagerCustomParam"
   },
   "managerUpdateAsync": {
     "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.UpdateAsync($3);$0",
@@ -2114,8 +2114,8 @@
   },
   "unGetRequiredIAppService": {
     "body": [
-      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();$0",
-      "private readonly I${3:$1}AppService _${5:$4}AppService$6;"
+      "private readonly I${3:$1}AppService _${5:$4}AppService$6;$0",
+      "_${4:${1/(.*)/${1:/downcase}/}}AppService = GetRequiredService<I${1:Name}AppService$2>();"
     ],
     "description": "Inserts GetRequiredService<IAppService> and IAppService field",
     "prefix": "xUnGetRequiredIAppService"

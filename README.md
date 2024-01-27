@@ -95,6 +95,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCtorITenantManagerParam                                       | Inserts an ITenantManager tenantManger parameter in the constructor                                                             
      xCtorITenantRepoParam                                          | Inserts an ITenantRepo parameter in the constructor                                                                             
      xCtorIVirtualFileProviderParam                                 | Inserts an IVirtualFileProvider virtualFileProvider parameter in the constructor                                                
+     xCtorManagerCustomParam                                        | Inserts a custom Manager parameter in constructor                                                                               
      xCtorPrivate                                                   | Insert a private constructor stub                                                                                               
      xCtorPublic                                                    | Insert a public constructor stub                                                                                                
      xCurrentTenantChange                                           | Inserts using (CurrentTenant.Change(tenantId))                                                                                  
@@ -223,7 +224,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xISpecificationParam                                           | Inserts a ISpecification parameter                                                                                              
      xLocalizableStringCreate                                       | Inserts LocalizableString.Create<ProjectNameResource>(translationKey);                                                          
      xManagerCreateAsync                                            | Inserts var x = await _nameManager.CreateAsync() statement                                                                      
-     xManagerCtorDefaultParam                                       | Inserts a custom Manager parameter in constructor                                                                               
      xManagerFindByIdAsync                                          | Inserts var x = await _nameManager.FindByIdAsync() statement                                                                    
      xManagerUpdateAsync                                            | Inserts var name = await _nameManager.UpdateAsync() statement                                                                   
      xMap                                                           | ObjectMapper.Map statement                                                                                                      
