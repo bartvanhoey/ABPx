@@ -1085,7 +1085,7 @@
   },
   "collectionDefinitionNameAttribute": {
     "body": [
-      "[Collection(${WORKSPACE_NAME}TestConsts.CollectionDefinitionName)]"
+      "[Collection$1(${WORKSPACE_NAME}TestConsts.CollectionDefinitionName)]$0"
     ],
     "description": "Inserts a CollectionDefinitionNameAttribute",
     "prefix": "xCollectionDefinitionNameAttribute"
