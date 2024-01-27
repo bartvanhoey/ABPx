@@ -291,12 +291,12 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepoCountAsync                                                | Inserts var totalCount = _repository.CountAsync statement                                           
      xRepoDeleteAsync                                               | Inserts _repository.DeleteAsync statement                                                           
      xRepoDeleteManyAsync                                           | Inserts _repository.DeleteManyAsync statement                                                       
+     xRepoEnsureCollectionLoadedAsync                               | Inserts var items = await _repository.GetListAsync() statement                                      
      xRepoFindAsync                                                 | Inserts var x = _repository.FindAsync statement. Returns null when not found                        
      xRepoFindByNameAsync                                           | Inserts var x = _repository.FindByNameAsync statement. Throws EntityNotFoundException when not found
      xRepoFirstOrDefaultAsync                                       | Inserts var x = _repository.FindAsync statement                                                     
      xRepoGetAsync                                                  | Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found       
      xRepoGetCountAsync                                             | Inserts var totalCount = _repository.GetCountAsync statement                                        
-     xRepoGetListAsync                                              | Inserts var items = await _repository.GetListAsync() statement                                      
      xRepoGetListAsync                                              | Inserts var items = await _repository.GetListAsync() statement                                      
      xRepoGetListAsyncWithInputParams                               | Inserts var items = await _repository.GetListAsync() statement                                      
      xRepoGetQueryableAsync                                         | Inserts var queryable = _repository.GetQueryableAsync() statement                                   
