@@ -414,7 +414,7 @@
     "description": "constructor stub",
     "prefix": "xCtor"
   },
-  "ctorBusinessException": {
+  "ctorBusinessExceptionStub": {
     "body": [
       "public ${TM_FILENAME_BASE}(${1:string} ${2:name})",
       "\t: base(${3:${WORKSPACE_NAME}}DomainErrorCodes.${4:${TM_FILENAME_BASE/Exception//}})",
@@ -423,7 +423,7 @@
       "}"
     ],
     "description": "constructor stub in a class derived from BusinessException",
-    "prefix": "xCtorBusinessException"
+    "prefix": "xCtorBusinessExceptionStub"
   },
   "ctorPrivate": {
     "body": ["private ${TM_FILENAME_BASE/.razor//}($1)", "{", "\t$0", "}"],
@@ -798,25 +798,25 @@
     "description": "Inserts a UpdateAsync definition for an IAppService interface",
     "prefix": "xIAppServiceUpdateAsyncDefinition"
   },
-  "iAppUserRepositoryCtorParam": {
+  "ctorIAppUserRepositoryParam": {
     "body": "IAppUserRepository$1 appUserRepository$0",
     "description": "Inserts an IAppUserRepository appUserRepository parameter in the constructor",
-    "prefix": "xIAppUserRepositoryCtorParam"
+    "prefix": "xCtorIAppUserRepositoryParam"
   },
-  "iAsyncQueryableExecuterCtorParam": {
+  "ctorIAsyncQueryableExecuterParam": {
     "body": "IAsyncQueryableExecuter$1 asyncExecuter$0",
     "description": "Inserts an IAsyncQueryableExecuter asyncExecuter parameter in the constructor",
-    "prefix": "xIAsyncQueryableExecuterCtorParam"
+    "prefix": "xCtorIAsyncQueryableExecuterParam"
   },
-  "iBlobContainerCtorParam": {
+  "ctorIBlobContainerParam": {
     "body": "IBlobContainer<${1:Name}>$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}$0",
     "description": "Inserts a IBlobContainer parameter in constructor",
-    "prefix": "xIBlobContainerCtorParam"
+    "prefix": "xCtorIBlobContainerParam"
   },
-  "iConfigurationCtorParam": {
+  "ctorIConfigurationParam": {
     "body": "IConfiguration$1 configuration$0",
     "description": "Inserts an IConfiguration configuration parameter in the constructor",
-    "prefix": "xIConfigurationCtorParam"
+    "prefix": "xCtorIConfigurationParam"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -853,15 +853,15 @@
     "description": "Inserts the basic CRUD methods in an IAppService",
     "prefix": "xCrudMethodsIAppService"
   },
-  "iCurrentTenantCtorParam": {
+  "ctorICurrentTenantParam": {
     "body": "ICurrentTenant$1 currentTenant$0",
     "description": "Inserts an ICurrentTenant currentTenant parameter in the constructor",
-    "prefix": "xICurrentTenantCtorParam"
+    "prefix": "xCtorICurrentTenantParam"
   },
-  "iCurrentUserCtorParam": {
+  "ctorICurrentUserParam": {
     "body": "ICurrentUser$1 currentUser$0",
     "description": "Inserts an ICurrentUser currentUser parameter in the constructor",
-    "prefix": "xICurrentUserCtorParam"
+    "prefix": "xCtorICurrentUserParam"
   },
   "iDataFilterISoftDeleteParam": {
     "body": "IDataFilter<ISoftDelete> ${1|_dataFilter,_softDeleteFilter|}",
@@ -873,20 +873,20 @@
     "description": "Inserts property public IDataFilter DataFilter { get; set; }",
     "prefix": "xIDataFilterProperty"
   },
-  "IdentityUserManager": {
+  "ctorIdentityUserManager": {
     "body": "IdentityUserManager$1 ${2:identityUserManager}$0",
     "description": "Inserts an IdentityUserManager identityManager parameter in the constructor",
-    "prefix": "xIdentityUserManagerCtorParam"
+    "prefix": "xCtorIdentityUserManagerParam"
   },
-  "AbpSignInManager": {
+  "ctorAbpSignInManagerParam": {
     "body": "AbpSignInManager$1 ${2:abpSignInManager}$0",
     "description": "Inserts an AbpSignInManager abpSignInManager parameter in the constructor",
-    "prefix": "xAbpSignInManagerCtorParam"
+    "prefix": "xCtorAbpSignInManagerParam"
   },
-  "IIdentityUserRepository": {
+  "ctorIIdentityUserRepository": {
     "body": "IIdentityUserRepository$1 identityUserRepository$1$0",
     "description": "Inserts an IIdentityUserRepository identityUserRepository parameter in the constructor",
-    "prefix": "xIIdentityUserRepositoryCtorParam"
+    "prefix": "xCtorIIdentityUserRepositoryParam"
   },
   "ifAuthServiceIsGrantedAsync": {
     "body": [
@@ -1222,55 +1222,55 @@
     "description": "Inject IMyService MyService",
     "prefix": "xInjectService"
   },
-  "iPermissionGrantRepositoryCtorParam": {
+  "ctorIPermissionGrantRepositoryParam": {
     "body": "IPermissionGrantRepository$1 permissionGrantRepository$0",
     "description": "Inserts an IPermissionGrantRepository permissionGrantRepository parameter in the constructor",
-    "prefix": "xIPermissionGrantRepositoryCtorParamCtorParam"
+    "prefix": "xCtorIPermissionGrantRepositoryParam"
   },
-  "iPermissionManagerCtorParam": {
+  "ctorIPermissionManagerParam": {
     "body": "IPermissionManager$1 permissionManager$0",
     "description": "Inserts an IPermissionManager permissionManager parameter in the constructor",
-    "prefix": "xIPermissionManagerCtorParam"
+    "prefix": "xCtorIPermissionManagerParam"
   },
   "iFeatureCheckerParam": {
     "body": "IFeatureChecker$1 featureChecker$0",
     "description": "Inserts an IFeatureChecker interface parameter in the constructor",
     "prefix": "xIFeatureCheckerParam"
   },
-  "iRepoCtorCustomParam": {
+  "iCtorRepoCustomParam": {
     "body": "I${1:Name}Repository$2 ${1/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a custom ClassRepository param in the constructor",
-    "prefix": "xIRepoCtorCustomParam"
+    "prefix": "xCtorIRepoCustomParam"
   },
-  "iLocalEventBusCtorParam": {
-    "body": "ILocaEventBus localEventBus$0",
+  "iCtorLocalEventBusParam": {
+    "body": "ILocalEventBus localEventBus$0",
     "description": "Inserts a ILocalEventBus param in the constructor",
-    "prefix": "xILocalEventBusCtorParam"
+    "prefix": "xCtorILocalEventBusParam"
   },
-  "iRepoCtorDefaultParam": {
+  "iCtorRepoDefaultParam": {
     "body": "IRepository$1<${2:Type}, ${3|Guid,int,string|}> ${2/^([A-Z])(.*)/${1:/downcase}$2/}Repository$0",
     "description": "Inserts a default IRepository<Type,TypeId> parameter in the constructor",
-    "prefix": "xIRepoCtorDefaultParam"
+    "prefix": "xCtorIRepoDefaultParam"
   },
   "iLocalEvenBushPublishAsync": {
     "body": "await _localEventBus.PublishAsync(new ${1:EventName}($2))$0;",
     "description": "Inserts await _localEventBus.PublishAsync", 
     "prefix": "xILocalEvenBushPublishAsync"
   },
-  "iCachedServiceProviderCtorParam ": {
+  "ctorICachedServiceProviderParam ": {
     "body": "ICachedServiceProvider cachedServiceProvider$0",
     "description": "Inserts an ICachedServiceProvider cachedServiceProvider parameter in the constructor",
-    "prefix": "xICachedServiceProviderCtorParam"
+    "prefix": "xCtorICachedServiceProviderParam"
   },
-  "iEmailSenderCtorParam": {
+  "ctorIEmailSenderParam": {
     "body": "IEmailSender$1 emailSender$0",
     "description": "Inserts a IEmailSender parameter in the constructor",
-    "prefix": "xIEmailSender"
+    "prefix": "xCtorIEmailSender"
   },
-  "iTemplateRendererCtorParam": {
+  "ctorITemplateRendererParam": {
     "body": "ITemplateRenderer$1 templateRenderer$0",
     "description": "Inserts a ITemplateRenderer parameter in the constructor",
-    "prefix": "xITemplateRenderer"
+    "prefix": "xCtorITemplateRenderer"
   },
   "iDisableSoftDelete": {
     "body": [
@@ -1287,25 +1287,25 @@
     "description": "Inserts a ISpecification parameter",
     "prefix": "xISpecificationParam"
   },
-  "iStringLocalizerCtorParam": {
+  "ctorIStringLocalizerParam": {
     "body": "IStringLocalizer$1<${WORKSPACE_NAME}Resource> localizer$0",
     "description": "Inserts the IStringLocalizer parameter in the constructor",
-    "prefix": "xIStringLocalizerCtorParam"
+    "prefix": "xCtorIStringLocalizerParam"
   },
-  "iTenantManagerCtorParam": {
+  "ctorITenantManagerParam": {
     "body": "ITenantManager$1 tenantManager$0",
     "description": "Inserts an ITenantManager tenantManger parameter in the constructor",
-    "prefix": "xITenantManagerCtorParam"
+    "prefix": "xCtorITenantManagerParam"
   },
-  "iTenantRepoCtorParam": {
+  "ctorITenantRepoParam": {
     "body": "IRepository$1<Tenant§2, Guid> tenantRepository$0",
     "description": "Inserts an ITenantRepo parameter in the constructor",
-    "prefix": "xITenantRepoCtorParam"
+    "prefix": "xCtorITenantRepoParam"
   },
-  "iVirtualFileProviderCtorParam": {
+  "ctorIVirtualFileProviderParam": {
     "body": "IVirtualFileProvider$1 virtualFileProvider$0",
     "description": "Inserts an IVirtualFileProvider virtualFileProvider parameter in the constructor",
-    "prefix": "xIVirtualFileProviderCtorParam"
+    "prefix": "xCtorIVirtualFileProviderParam"
   },
   "managerCreateAsync": {
     "body": "var ${1/^([A-Z])(.*)/${1:/downcase}$2/} = await _${1:name}Manager$2.CreateAsync($3);$0",
@@ -1804,10 +1804,10 @@
   },
   "repoGetListAsyncWithInputParams": {
     "body": [
-      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.Sorting, input.SkipCount, input.MaxResultCount);",
+      "var ${2:$1}s = await _${1:name}Repository.GetListAsync$3(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter);",
       "$0"
     ],
-    "description": "Inserts var items = await _repository.GetListAsync() statement",
+    "description": "Inserts var items = await _repository.GetListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter) statement",
     "prefix": "xRepoGetListAsyncWithInputParams"
   },
   "RepoGetQueryableAsync": {
@@ -1960,12 +1960,12 @@
     "description": "Inserts return new PagedResultDto statement",
     "prefix": "xReturnPagedResultDto"
   },
-  "returnPagedResultDtoObjectMapper": {
+  "returnObjectMapperPagedResultDto": {
     "body": [
-      "return new PagedResultDto<$1Dto>(${2|totalCount,count|}, ${3|ObjectMapper,_objectMapper|}.Map<List$4<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s));$0"
+      "return new PagedResultDto<$1Dto>(${2|totalCount,count|}, ${3|ObjectMapper,_objectMapper|}.Map<List$4<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s ?? []));$0"
     ],
     "description": "Inserts return new PagedResultDto with ObjectMapper statement",
-    "prefix": "xReturnPagedResultDtoObjectMapper"
+    "prefix": "xReturnObjectMapperPagedResultDto"
   },
   "stringLengthAttribute": {
     "body": ["[StringLength(${1:50})$2]$0"],
