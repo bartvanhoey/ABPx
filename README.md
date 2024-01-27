@@ -223,7 +223,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xIVirtualFileProviderCtorParam                                 | Inserts an IVirtualFileProvider virtualFileProvider parameter in the constructor                    
      xLocalizableStringCreate                                       | Inserts LocalizableString.Create<ProjectNameResource>(translationKey);                              
      xManagerCreateAsync                                            | Inserts var x = await _nameManager.CreateAsync() statement                                          
-     xManagerCustomCtorParam                                        | Inserts a custom Manager parameter in constructor                                                   
+     xManagerCtorDefaultParam                                       | Inserts a custom Manager parameter in constructor                                                   
      xManagerFindByIdAsync                                          | Inserts var x = await _nameManager.FindByIdAsync() statement                                        
      xManagerUpdateAsync                                            | Inserts var name = await _nameManager.UpdateAsync() statement                                       
      xMap                                                           | ObjectMapper.Map statement                                                                          
