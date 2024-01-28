@@ -426,7 +426,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xInjectProtectedLocalStorage           | Inserts @inject ProtectedLocalStorage directive in Blazor Server app
      xInjectService                         | Inserts @inject MyService MyService                                 
      xListAbpCrudPageBase                   | Inserts a paged list for a standard CrudAppService                  
-     xListIAppService                       | Inserts a paged list for a custom IAppService                       
+     xListIAppServicePage                   | Inserts a paged list for a custom IAppService                       
      xPage                                  | Inserts @page directive                                             
      xPageParam                             | Inserts @page directive with Parameter                              
      xSubmitButton                          | Inserts a SubmitButton                                              

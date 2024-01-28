@@ -373,14 +373,14 @@
     "description": "Inserts a paged list for a standard CrudAppService",
     "prefix": "xListAbpCrudPageBase"
   },
-  "listIAppService": {
+  "listIAppServicePage": {
     "body": [
       "@* \"New$1\": \"New ${3:${1/(.*)/${1:/downcase}/}}\",",
       "   \"$1DeletionConfirmationMessage\": \"Are you sure to delete the ${3:${1/(.*)/${1:/downcase}/}} '{0}'?\", *@",
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\"",
       "@* below namespace where I$1AppService exists *@",
-      "@using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}",
-      "@* @using ${WORKSPACE_NAME}.Application.Contracts.${2:${TM_FILENAME_BASE}}.Dtos *@",
+      "@using ${WORKSPACE_NAME}.Application.Contracts.${2:$1}s",
+      "@* @using ${WORKSPACE_NAME}.Application.Contracts.${2:$1}s.Dtos *@",
       "@inherits ${WORKSPACE_NAME}ComponentBase",
       "@using ${WORKSPACE_NAME}.Localization",
       "@using Microsoft.AspNetCore.Authorization",
@@ -622,7 +622,7 @@
       "}"
     ],
     "description": "Inserts a paged list for a custom IAppService",
-    "prefix": "xListIAppService"
+    "prefix": "xListIAppServicePage"
   },
   "pageDirective": {
     "body": ["@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""],
