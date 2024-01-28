@@ -366,10 +366,10 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUrlAttribute                                                  | Url attribute                                                                                                                   
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                                                
      xVarObjectMapperMap                                            | var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement                                                      
-     xVarObjectMapperMapCreateDtoToType                             | var type = ObjectMapper.Map<CreateDto, TypeDto>(input) statement                                                                
+     xVarObjectMapperMapCreateDtoToType                             | var type = ObjectMapper.Map<CreateDto,TypeDto>(input) statement                                                                 
      xVarObjectMapperMapDtoToType                                   | var type = ObjectMapper.Map<Dto,TypeDto>(input) statement                                                                       
-     xVarObjectMapperMapTypeToDto                                   | var type = ObjectMapper.Map<Type, TypeDto>(input) statement                                                                     
-     xVarObjectMapperMapUpdateDtoToType                             | var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement                                                                
+     xVarObjectMapperMapTypeToDto                                   | var type = ObjectMapper.Map<Type,TypeDto>(input) statement                                                                      
+     xVarObjectMapperMapUpdateDtoToType                             | var type = ObjectMapper.Map<UpdateDto,TypeDto>(input) statement                                                                 
      xWithData                                                      | Inserts a WithData statement                                                                                                    
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
