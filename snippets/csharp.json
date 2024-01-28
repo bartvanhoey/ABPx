@@ -2224,7 +2224,7 @@
   },
   "throwEntityNotFoundException": {
     "body": [
-      "throw new EntityNotFoundException$1($2);$0"
+      "throw new EntityNotFoundException$1(typeof(${2:TypeName), ${3:id});$0"
     ],
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowEntityNotFoundException"
