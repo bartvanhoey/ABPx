@@ -699,7 +699,10 @@
     "prefix": "xDeleteEntityAction"
   },
   "validationTagMessageLocalizer": {
-    "body": "<Validation MessageLocalizer=\"@LH.Localize\"></Validation>",
+    "body": [
+      "<Validation MessageLocalizer=\"@LH.Localize\">", 
+      "\t$0",
+      "</Validation>"],
     "description": "Inserts a validation tag with MessageLocalizer attribute",
     "prefix": "xValidationTagMessageLocalizer"
   }
