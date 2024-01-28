@@ -389,6 +389,7 @@
       "@using Volo.Abp.Application.Dtos",
       "@using Volo.Abp.ObjectMapping",
       "@inject I${1:TypeName}AppService $1AppService",
+      "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH",
       "",
       "<Card>",
       "    <CardHeader>",
