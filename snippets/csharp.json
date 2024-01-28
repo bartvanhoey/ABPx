@@ -832,13 +832,18 @@
   },
   "getListAsyncMethodStub": {
     "body": [
-      "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null)",
+      "public Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> GetListAsync($4)",
       "{",
       "\t$0",
       "}"
     ],
     "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
+  },
+  "getListAsyncMethodDefinition": {
+    "body": [ "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> GetListAsync($4);$0"],
+    "description": "Adds a GetListAsync method definition",
+    "prefix": "xGetListAsyncMethodDefinition"
   },
   "getLookupIAppServiceMethodDefinition": {
     "body": "Task$2<ListResultDto<${1:Type}LookupDto>> Get$1LookupAsync();$0",
@@ -868,7 +873,7 @@
     "prefix": "xGetPagedListAsyncIRepoMethodDefinitionGetTypePageListDtoInput"
   },
   "getPagedListAsyncIRepoMethodDefinitionWithParameters": {
-    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string filter = null);$0",
+    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetPagedListAsync($3int skipCount, int maxResultCount,string sorting = null, string? filter = null);$0",
     "description": "Adds a GetPagedListAsync definition with parameters in IRepo",
     "prefix": "xGetPagedListAsyncIRepoMethodDefinitionWithParameters"
   },

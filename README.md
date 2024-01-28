@@ -132,6 +132,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xGetKeysMethod                                                 | Insert a GetKeys method                                                                                                         
      xGetListAsyncIAppServiceMethodDefinition                       | Inserts a GetListAsync definition for an IAppService interface                                                                  
      xGetListAsyncIRepoMethodDefinition                             | Inserts a GetListAsync definition for in an IRepo interface                                                                     
+     xGetListAsyncMethodDefinition                                  | Adds a GetListAsync method definition                                                                                           
      xGetListAsyncMethodStub                                        | Adds a GetListAsync method stub                                                                                                 
      xGetListPolicyName                                             | Inserts GetListPolicyName statement                                                                                             
      xGetLookupIAppServiceMethodDefinition                          | Adds a GetLookupAsync method to an IAppService interface                                                                        
