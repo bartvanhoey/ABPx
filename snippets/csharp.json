@@ -2118,14 +2118,14 @@
   },
   "returnObjectMapperPagedResultDto": {
     "body": [
-      "return new PagedResultDto<$1Dto>(${2|totalCount,count|}, ${3|ObjectMapper,_objectMapper|}.Map<List$4<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s ?? []));$0"
+      "return new PagedResultDto<${1:TypeName}Dto>(${2|totalCount,count|}, ${3|ObjectMapper,_objectMapper|}.Map<List$4<${1:SourceType}>, List<$1Dto>>(${1/(.*)/${1:/downcase}/}s ?? []));$0"
     ],
     "description": "Inserts return new PagedResultDto with ObjectMapper statement",
     "prefix": "xReturnObjectMapperPagedResultDto"
   },
   "returnPagedResultDto": {
     "body": [
-      "return new PagedResultDto<$1Dto>(totalCount, ${1/(.*)/${1:/downcase}/}Dtos);$0"
+      "return new PagedResultDto<${1:TypeName}Dto>(totalCount, ${1/(.*)/${1:/downcase}/}Dtos);$0"
     ],
     "description": "Inserts return new PagedResultDto statement",
     "prefix": "xReturnPagedResultDto"
