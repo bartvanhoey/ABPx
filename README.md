@@ -367,7 +367,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                                                
      xVarObjectMapperMap                                            | var result = ObjectMapper.Map<SourceType,DestinationType>(input) statement                                                      
      xVarObjectMapperMapCreateDtoToType                             | var type = ObjectMapper.Map<CreateDto, TypeDto>(input) statement                                                                
-     xVarObjectMapperMapDtoToType                                   | var type = ObjectMapper.Map<Dto, TypeDto>(input) statement                                                                      
+     xVarObjectMapperMapDtoToType                                   | var type = ObjectMapper.Map<Dto,TypeDto>(input) statement                                                                       
+     xVarObjectMapperMapTypeToDto                                   | var type = ObjectMapper.Map<Type, TypeDto>(input) statement                                                                     
      xVarObjectMapperMapUpdateDtoToType                             | var type = ObjectMapper.Map<UpdateDto, TypeDto>(input) statement                                                                
      xWithData                                                      | Inserts a WithData statement                                                                                                    
 
