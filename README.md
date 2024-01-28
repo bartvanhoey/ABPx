@@ -122,6 +122,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xFindByNameAsyncMethodStub                                     | Adds a FindByNameAsync method stub                                                                                              
      xGetAllBytesAsyncMethodBlobContainer                           | Inserts var blob = _fileContainer.GetAllBytesAsync method                                                                       
      xGetAsyncIAppServiceMethodDefinition                           | Inserts a GetAsync definition for an IAppService interface                                                                      
+     xGetAsyncMethodDefinition                                      | Adds a GetAsync method definition                                                                                               
      xGetAsyncMethodStub                                            | Adds a GetAsync method stub                                                                                                     
      xGetBlobAsyncIAppServiceMethodDefinition                       | Inserts a GetBlobAsync definition for an IAppService interface                                                                  
      xGetConfigurationFromContext                                   | Inserts var configuration = context.Services.GetConfiguration(); statement                                                      

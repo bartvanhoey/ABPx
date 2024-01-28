@@ -756,8 +756,18 @@
     "description": "Inserts a GetAsync definition for an IAppService interface",
     "prefix": "xGetAsyncIAppServiceMethodDefinition"
   },
+  "getAsyncMethodDefinition": {
+    "body": "Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
+    "description": "Adds a GetAsync method definition",
+    "prefix": "xGetAsyncMethodDefinition"
+  },
   "getAsyncMethodStub": {
-    "body": "public Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4);$0",
+    "body": [
+      "public async Task$2<${1:Type}> GetAsync(${3|Guid,int,string|} id$4)",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Adds a GetAsync method stub",
     "prefix": "xGetAsyncMethodStub"
   },
@@ -821,7 +831,12 @@
     "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodStub": {
-    "body": "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null);$0",
+    "body": [
+      "public Task$3<List$2<${1:Type}>> GetListAsync(int skipCount, int maxResultCount, string sorting, string filter = null)",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "Adds a GetListAsync method stub",
     "prefix": "xGetListAsyncMethodStub"
   },
