@@ -698,6 +698,78 @@
     "description": "Inserts a paged list for a custom IAppService",
     "prefix": "xListIAppServicePage"
   },
+  "onAfterRender": {
+    "body": [
+      "${1|public,protected|} override void OnAfterRender(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRender method stub",
+    "prefix": "xOnAfterRender"
+  },
+  "onAfterRenderAsync": {
+    "body": [
+      "${1|public,protected|} override async Task$2 OnAfterRenderAsync(bool firstRender)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnAfterRenderAsync method stub",
+    "prefix": "xOnAfterRenderAsync"
+  },
+  "onApplicationInitialization": {
+    "body": [
+      "public override void OnApplicationInitialization(ApplicationInitializationContext context)",
+      "{",
+      "\t// var service = context.ServiceProvider.GetRequiredService<${1:YourServiceHere}>();",
+      "\t// service.Initialize();$0",
+      "}"
+    ],
+    "description": "OnApplicationInitialization method stub",
+    "prefix": "xOnApplicationInitialization"
+  },
+  "onInitialized": {
+    "body": [
+      "${1|public,protected|}  override void OnInitialized()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitialized method stub",
+    "prefix": "xOnInitialized"
+  },
+  "onInitializedAsync": {
+    "body": [
+      "${1|public,protected|} override async Task$2 OnInitializedAsync()",
+      "{",
+      "\t${3:await base.OnInitializedAsync();}",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnInitializedAsync method stub",
+    "prefix": "xOnInitializedAsync"
+  },
+  "onParametersSet": {
+    "body": [
+      "${1|public,protected|}  override void OnParametersSet()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSet method stub",
+    "prefix": "xOnParametersSet"
+  },
+  "onParametersSetAsync": {
+    "body": [
+      "${1|public,protected|} override async Task$2 OnParametersSetAsync()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnParameterSetAsync method stub",
+    "prefix": "xOnParametersSetAsync"
+  },
   "pageDirective": {
     "body": [
       "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
