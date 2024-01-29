@@ -1660,6 +1660,17 @@
     "description": "OnInitialized method stub",
     "prefix": "xOnInitialized"
   },
+  "onOpenCreateModalAsync": {
+    "body": [
+      "protected override async Task$2 OnOpenCreateModalAsync()",
+      "{",
+      "\t${3:await base.OnOpenCreateModalAsync;}",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnOpenCreateModalAsync method stub",
+    "prefix": "xOnOpenCreateModalAsync"
+  },
   "onInitializedAsync": {
     "body": [
       "${1|public,protected|} override async Task$2 OnInitializedAsync()",

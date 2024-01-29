@@ -700,7 +700,7 @@
   },
   "onAfterRender": {
     "body": [
-      "${1|public,protected|} override void OnAfterRender(bool firstRender)",
+      "protected override void OnAfterRender(bool firstRender)",
       "{",
       "\t$0",
       "}"
@@ -710,7 +710,7 @@
   },
   "onAfterRenderAsync": {
     "body": [
-      "${1|public,protected|} override async Task$2 OnAfterRenderAsync(bool firstRender)",
+      "protected override async Task$2 OnAfterRenderAsync(bool firstRender)",
       "{",
       "\t$0",
       "}"
@@ -731,7 +731,7 @@
   },
   "onInitialized": {
     "body": [
-      "${1|public,protected|}  override void OnInitialized()",
+      "protected override void OnInitialized()",
       "{",
       "\t$0",
       "}"
@@ -739,9 +739,20 @@
     "description": "OnInitialized method stub",
     "prefix": "xOnInitialized"
   },
+  "onOpenCreateModalAsync": {
+    "body": [
+      "protected override async Task$2 OnOpenCreateModalAsync()",
+      "{",
+      "\t${3:await base.OnOpenCreateModalAsync;}",
+      "\t$0",
+      "}"
+    ],
+    "description": "OnOpenCreateModalAsync method stub",
+    "prefix": "xOnOpenCreateModalAsync"
+  },
   "onInitializedAsync": {
     "body": [
-      "${1|public,protected|} override async Task$2 OnInitializedAsync()",
+      "protected override async Task$2 OnInitializedAsync()",
       "{",
       "\t${3:await base.OnInitializedAsync();}",
       "\t$0",
@@ -762,7 +773,7 @@
   },
   "onParametersSetAsync": {
     "body": [
-      "${1|public,protected|} override async Task$2 OnParametersSetAsync()",
+      "protected override async Task$2 OnParametersSetAsync()",
       "{",
       "\t$0",
       "}"
