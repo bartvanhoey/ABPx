@@ -743,7 +743,7 @@
     "body": [
       "protected override async Task$2 OpenCreateModalAsync()",
       "{",
-      "\t${3:await base.OpenCreateModalAsync;}",
+      "\t${3:await base.OpenCreateModalAsync();}",
       "\t$0",
       "}"
     ],
