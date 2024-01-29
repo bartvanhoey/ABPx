@@ -8,7 +8,11 @@
     "prefix": "xAuthAttribute"
   },
   "codeBlock": {
-    "body": ["@code {", "\t$0", "}"],
+    "body": [
+      "@code {",
+      "\t$0",
+      "}"
+    ],
     "description": "@code block",
     "prefix": "xCode"
   },
@@ -61,7 +65,7 @@
       "   <Check TValue=\"bool\" Checked=\"context.$2\" Disabled=\"true\" ReadOnly=\"true\" />",
       " </DisplayTemplate>",
       "</DataGridCheckColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridCheckColumn for boolean values",
     "prefix": "xDataGridCheckColumn"
@@ -73,7 +77,7 @@
       "\t\t@L[$\"Enum:${4:TypeName}.{context.$2}\"]",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn for an enum",
     "prefix": "xDataGridColumnEnum"
@@ -85,20 +89,10 @@
       "\t\t@context.$2.ToLongDateString()",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn in long date format",
     "prefix": "xDataGridColumnLongDateString"
-  },
-  "visibleHasUpdatePermission": {
-    "body": "Visible=\"HasUpdatePermission\"",
-    "description": "Inserts Visible=HasUpdatePermission",
-    "prefix": "xVisibleHasUpdatePermission"
-  },
-  "visibleHasDeletePermission": {
-    "body": "Visible=\"HasDeletePermission\"",
-    "description": "Inserts Visible=HasDeletePermission",
-    "prefix": "xVisibleHasDeletePermission"
   },
   "dataGridColumnShortDate": {
     "body": [
@@ -107,7 +101,7 @@
       "\t\t@context.$2.ToShortDateString()",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\": \"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn in short date format",
     "prefix": "xDataGridColumnShortDateString"
@@ -115,15 +109,78 @@
   "dataGridColumnText": {
     "body": [
       "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\" *@"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn",
     "prefix": "xDataGridColumnText"
+  },
+  "dataGridEntityActionsColumn": {
+    "body": [
+      "<DataGridEntityActionsColumn TItem=\"${1:TypeName}Dto\" @ref=\"@EntityActionsColumn\">",
+      "  <DisplayTemplate>",
+      "    <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
+      "      $0",
+      "    </EntityActions>",
+      "  </DisplayTemplate>",
+      "</DataGridEntityActionsColumn>"
+    ],
+    "description": "Inserts a DataGridEntityActionsColumn element",
+    "prefix": "xDataGridEntityActionsColumn"
+  },
+  "deleteEntityAction": {
+    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
+    "description": "Inserts a Delete EntityAction element",
+    "prefix": "xDeleteEntityAction"
   },
   "dependencyAttribute": {
     "body": "@attribute [Dependency(ReplaceServices = ${1|true,false|})]",
     "description": "Inserts @attribute Dependency ReplaceServices",
     "prefix": "xDependencyAttribute"
+  },
+  "editEntityAction": {
+    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Edit\"]\" Visible=\"HasUpdatePermission\" Clicked=\"() => OpenEditModalAsync(context)\" />",
+    "description": "Inserts an Edit EntityAction element",
+    "prefix": "xEditEntityAction"
+  },
+  "editModalDialog": {
+    "body": [
+      "<Modal @ref=\"@EditModal\">",
+      "  <ModalBackdrop />",
+      "  <ModalContent IsCentered=\"true\" Size=\"ModalSize.${2|Default,Small,Large,ExtraLarge,FullScreen|}\">",
+      "      <ModalHeader>",
+      "          <ModalTitle>@EditingEntity.${1:PropertyName}</ModalTitle>",
+      "          <CloseButton Clicked=\"CloseEditModalAsync\" />",
+      "      </ModalHeader>",
+      "      <ModalBody>",
+      "          <Validations @ref=\"@EditValidationsRef\" Model=\"@EditingEntity\" ValidateOnLoad=\"false\">",
+      "             <Row>",
+      "               <Column ColumnSize=\"ColumnSize.Is12\">",
+      "                 <Validation MessageLocalizer=\"@LH.Localize\">",
+      "                   <Field>",
+      "                       <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$1\"]</FieldLabel>",
+      "                       <TextEdit @bind-Text=\"EditingEntity.${3:$1}\" >",
+      "                         <Feedback>",
+      "                           <ValidationError/>",
+      "                         </Feedback>",
+      "                       </TextEdit>",
+      "                   </Field>",
+      "                 </Validation>",
+      "                 ",
+      "                 $0",
+      "                 ",
+      "               </Column>",
+      "             </Row>",
+      "           </Validations>",
+      "      </ModalBody>",
+      "      <ModalFooter>",
+      "          <Button Color=\"Color.Secondary\" Clicked=\"CloseEditModalAsync\">@L[\"Cancel\"]</Button>",
+      "          <Button Color=\"Color.Primary\" Type=\"@ButtonType.Submit\" PreventDefaultOnSubmit=\"true\" Clicked=\"UpdateEntityAsync\">@L[\"Save\"]</Button>",
+      "      </ModalFooter>",
+      "  </ModalContent>",
+      "</Modal>"
+    ],
+    "description": "Inserts an Edit modal dialog",
+    "prefix": "xEditModalDialog"
   },
   "exposeServicesAttribute": {
     "body": "@attribute [ExposeServices(typeof(${1:TypeName}))]",
@@ -131,7 +188,11 @@
     "prefix": "xExposeServicesAttribute"
   },
   "feedbackValidation": {
-    "body": ["<Feedback>", "\t<ValidationError/>", "</Feedback>"],
+    "body": [
+      "<Feedback>",
+      "\t<ValidationError/>",
+      "</Feedback>"
+    ],
     "description": "Inserts <Feedback> validation statement",
     "prefix": "xFeedbackValidation"
   },
@@ -171,22 +232,21 @@
       "  <MemoEdit Rows=\"${3:5}\" @bind-Text=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
       "</Field>",
       "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\", *@$0"
-
     ],
     "description": "Inserts a MemoEdit field in a Create/Update dialog",
     "prefix": "xFieldMemoEdit"
   },
   "fieldNumericEdit": {
-        "body": [
-          "<Field>",
-          "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
-          "  <NumericEdit TValue=\"${3|byte,byte?,int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
-          "</Field>",
-          "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\",  *@$0"
-        ],
-        "description": "Inserts a NumericEdit field in a Create/Update dialog",
-        "prefix": "xFieldNumericEdit"
-      },    
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <NumericEdit TValue=\"${3|byte,byte?,int,int?,float,long,long?,decimal,decimal?|}\" @bind-Value=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\" />",
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${4:$2}\",  *@$0"
+    ],
+    "description": "Inserts a NumericEdit field in a Create/Update dialog",
+    "prefix": "xFieldNumericEdit"
+  },
   "fieldSelect": {
     "body": [
       "<Field>",
@@ -219,49 +279,61 @@
     "prefix": "xFieldTextEdit"
   },
   "ifCanCreate": {
-    "body": ["@if (CanCreate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanCreate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanCreate",
     "prefix": "xIfCanCreate"
   },
-  "ifCurrentUserIsAuthenticated": {
-    "body": ["@if (CurrentUser.isAuthenticated)", "{", "\t$0", "}"],
-    "description": "If CurrentUser.isAuthenticated",
-    "prefix": "xIfCurrentUserIsAuthenticated"
-  },
-
   "ifCanDelete": {
-    "body": ["@if (CanDelete${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanDelete${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanDelete",
     "prefix": "xIfCanDelete"
   },
   "ifCanUpdate": {
-    "body": ["@if (CanUpdate${1:What})", "{", "\t$0", "}"],
+    "body": [
+      "@if (CanUpdate${1:What})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "If CanUpdate",
     "prefix": "xIfCanUpdate"
   },
+  "ifCurrentUserIsAuthenticated": {
+    "body": [
+      "@if (CurrentUser.isAuthenticated)",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "If CurrentUser.isAuthenticated",
+    "prefix": "xIfCurrentUserIsAuthenticated"
+  },
   "inheritsComponentBase": {
-    "body": ["@inherits ${WORKSPACE_NAME}ComponentBase"],
+    "body": [
+      "@inherits ${WORKSPACE_NAME}ComponentBase"
+    ],
     "description": "Inserts @inherits [YourProjectName]ComponentBase statement",
     "prefix": "xInheritsComponentBase"
-  },
-  "injectAppService": {
-    "body": "@inject I${2:$1}AppService ${1:Name}AppService",
-    "description": "Inserts @inject IMyService MyService",
-    "prefix": "xInjectAppService"
   },
   "injectAbpBlazorMessageLocalizerHelper": {
     "body": "@inject AbpBlazorMessageLocalizerHelper<${WORKSPACE_NAME}Resource> LH",
     "description": "Inserts @inject AbpBlazorMessageLocalizerHelper",
     "prefix": "xInjectAbpBlazorMessageLocalizerHelper"
   },
-  "injectIStringLocalizer": {
-    "body": [
-      "@using ${WORKSPACE_NAME}.Localization",
-      "@using Microsoft.Extensions.Localization",
-      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L"
-    ],
-    "description": "Inserts @inject IStringLocalizer",
-    "prefix": "xInjectIStringLocalizer"
+  "injectAppService": {
+    "body": "@inject I${2:$1}AppService ${1:Name}AppService",
+    "description": "Inserts @inject IMyService MyService",
+    "prefix": "xInjectAppService"
   },
   "injectAuthorizationService": {
     "body": [
@@ -286,6 +358,15 @@
     "body": "@inject IMapper Mapper$0",
     "description": "Inserts @inject IMapper directive",
     "prefix": "xInjectIMapper"
+  },
+  "injectIStringLocalizer": {
+    "body": [
+      "@using ${WORKSPACE_NAME}.Localization",
+      "@using Microsoft.Extensions.Localization",
+      "@inject IStringLocalizer<${WORKSPACE_NAME}Resource> L"
+    ],
+    "description": "Inserts @inject IStringLocalizer",
+    "prefix": "xInjectIStringLocalizer"
   },
   "injectMyServiceDirective": {
     "body": "@inject ${1:MyService} ${2:$1}",
@@ -618,7 +699,9 @@
     "prefix": "xListIAppServicePage"
   },
   "pageDirective": {
-    "body": ["@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""],
+    "body": [
+      "@page \"/${TM_FILENAME_BASE/(.*)/${1:/downcase}/}\""
+    ],
     "description": "Inserts @page directive",
     "prefix": "xPage"
   },
@@ -635,75 +718,23 @@
     "description": "Inserts a SubmitButton",
     "prefix": "xSubmitButton"
   },
-  "editModalDialog": {
-    "body": [
-      "<Modal @ref=\"@EditModal\">",
-      "  <ModalBackdrop />",
-      "  <ModalContent IsCentered=\"true\" Size=\"ModalSize.${2|Default,Small,Large,ExtraLarge,FullScreen|}\">",
-      "      <ModalHeader>",
-      "          <ModalTitle>@EditingEntity.${1:PropertyName}</ModalTitle>",
-      "          <CloseButton Clicked=\"CloseEditModalAsync\" />",
-      "      </ModalHeader>",
-      "      <ModalBody>",
-      "          <Validations @ref=\"@EditValidationsRef\" Model=\"@EditingEntity\" ValidateOnLoad=\"false\">",
-      "             <Row>",
-      "               <Column ColumnSize=\"ColumnSize.Is12\">",
-      "                 <Validation MessageLocalizer=\"@LH.Localize\">",
-      "                   <Field>",
-      "                       <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$1\"]</FieldLabel>",
-      "                       <TextEdit @bind-Text=\"EditingEntity.${3:$1}\" >",
-      "                         <Feedback>",
-      "                           <ValidationError/>",
-      "                         </Feedback>",
-      "                       </TextEdit>",
-      "                   </Field>",
-      "                 </Validation>",
-      "                 ",
-      "                 $0",
-      "                 ",
-      "               </Column>",
-      "             </Row>",
-      "           </Validations>",
-      "      </ModalBody>",
-      "      <ModalFooter>",
-      "          <Button Color=\"Color.Secondary\" Clicked=\"CloseEditModalAsync\">@L[\"Cancel\"]</Button>",
-      "          <Button Color=\"Color.Primary\" Type=\"@ButtonType.Submit\" PreventDefaultOnSubmit=\"true\" Clicked=\"UpdateEntityAsync\">@L[\"Save\"]</Button>",
-      "      </ModalFooter>",
-      "  </ModalContent>",
-      "</Modal>"
-    ],
-    "description": "Inserts an Edit modal dialog",
-    "prefix": "xEditModalDialog"
-  },
-  "dataGridEntityActionsColumn": {
-    "body": [
-      "<DataGridEntityActionsColumn TItem=\"${1:TypeName}Dto\" @ref=\"@EntityActionsColumn\">",
-      "  <DisplayTemplate>",
-      "    <EntityActions TItem=\"$1Dto\" EntityActionsColumn=\"@EntityActionsColumn\">",
-      "      $0",
-      "    </EntityActions>",
-      "  </DisplayTemplate>",
-      "</DataGridEntityActionsColumn>"
-    ],
-    "description": "Inserts a DataGridEntityActionsColumn element",
-    "prefix": "xDataGridEntityActionsColumn"
-  },
-  "editEntityAction": {
-    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Edit\"]\" Visible=\"HasUpdatePermission\" Clicked=\"() => OpenEditModalAsync(context)\" />",
-    "description": "Inserts an Edit EntityAction element",
-    "prefix": "xEditEntityAction"
-  },
-  "deleteEntityAction": {
-    "body": "<EntityAction TItem=\"${1:TypeName}Dto\" Text=\"@L[\"Delete\"]\" Visible=\"HasDeletePermission\" Clicked=\"() => DeleteEntityAsync(context)\" ConfirmationMessage=\"() => GetDeleteConfirmationMessage(context)\"/>",
-    "description": "Inserts a Delete EntityAction element",
-    "prefix": "xDeleteEntityAction"
-  },
   "validationTagMessageLocalizer": {
     "body": [
-      "<Validation MessageLocalizer=\"@LH.Localize\">", 
+      "<Validation MessageLocalizer=\"@LH.Localize\">",
       "\t$0",
-      "</Validation>"],
+      "</Validation>"
+    ],
     "description": "Inserts a validation tag with MessageLocalizer attribute",
     "prefix": "xValidationTagMessageLocalizer"
+  },
+  "visibleHasDeletePermission": {
+    "body": "Visible=\"HasDeletePermission\"",
+    "description": "Inserts Visible=HasDeletePermission",
+    "prefix": "xVisibleHasDeletePermission"
+  },
+  "visibleHasUpdatePermission": {
+    "body": "Visible=\"HasUpdatePermission\"",
+    "description": "Inserts Visible=HasUpdatePermission",
+    "prefix": "xVisibleHasUpdatePermission"
   }
 }
