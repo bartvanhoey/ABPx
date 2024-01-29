@@ -436,9 +436,9 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xOnApplicationInitialization           | OnApplicationInitialization method stub                             
      xOnInitialized                         | OnInitialized method stub                                           
      xOnInitializedAsync                    | OnInitializedAsync method stub                                      
-     xOnOpenCreateModalAsync                | OnOpenCreateModalAsync method stub                                  
      xOnParametersSet                       | OnParameterSet method stub                                          
      xOnParametersSetAsync                  | OnParameterSetAsync method stub                                     
+     xOpenCreateModalAsync                  | OpenCreateModalAsync method stub                                    
      xPage                                  | Inserts @page directive                                             
      xPageParam                             | Inserts @page directive with Parameter                              
      xSubmitButton                          | Inserts a SubmitButton                                              
