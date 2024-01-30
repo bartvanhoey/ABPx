@@ -74,7 +74,7 @@
     "body": [
       "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\">",
       "\t<DisplayTemplate>",
-      "\t\t@L[$\"Enum:${4:TypeName}.{($4)context.$2}\"]",
+      "\t\t@L[$\"Enum:${4:EnumName}.{($4)context.$2}\"]",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
       "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
