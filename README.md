@@ -376,18 +376,18 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
 
 ## Snippets for launch.json and tasks.json files [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/jsonc.json)
 
-     Prefix                            | Description                                                       
-     --------------------------------- | ------------------------------------------------------------------ 
-     xLaunchAngularJson                | Inserts launch configurations in launch.json needed to run project
-     xLaunchBlazorServerJson           | Inserts launch configurations in launch.json needed to run project
-     xLaunchBlazorWasmJson             | Inserts launch configurations in launch.json needed to run project
-     xLaunchMvcJson                    | Inserts a launch configurations needed to run an MVC project      
-     xLaunchSeparateIdentityServerJson | Inserts launch configurations in launch.json needed to run project
-     xTasksAngularJson                 | Inserts tasks in tasks.json needed to run project                 
-     xTasksBlazorServerJson            | Inserts tasks in tasks.json needed to run project                 
-     xTasksBlazorWasmJson              | Inserts tasks in tasks.json needed to run project                 
-     xTaskSeparateIdentityServerJson   | Inserts tasks in tasks.json needed to run project                 
-     xTasksMvcJson                     | Inserts tasks to run MVC projects                                 
+     Prefix                            | Description                                                                    
+     --------------------------------- | ------------------------------------------------------------------------------- 
+     xLaunchAngularJson                | Inserts launch configurations in launch.json needed to run project             
+     xLaunchBlazorServerJson           | Inserts BlazorServer launch configurations in launch.json needed to run project
+     xLaunchBlazorWasmJson             | Inserts launch configurations in launch.json needed to run project             
+     xLaunchMvcJson                    | Inserts a launch configurations needed to run an MVC project                   
+     xLaunchSeparateIdentityServerJson | Inserts launch configurations in launch.json needed to run project             
+     xTasksAngularJson                 | Inserts tasks in tasks.json needed to run project                              
+     xTasksBlazorServerJson            | Inserts tasks in tasks.json needed to run project                              
+     xTasksBlazorWasmJson              | Inserts tasks in tasks.json needed to run project                              
+     xTaskSeparateIdentityServerJson   | Inserts tasks in tasks.json needed to run project                              
+     xTasksMvcJson                     | Inserts tasks to run MVC projects                                              
 
 ## Razor snippets [(source code)](https://github.com/bartvanhoey/ABPx/blob/master/snippets/razor.json)
 
