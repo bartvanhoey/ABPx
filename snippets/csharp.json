@@ -832,7 +832,7 @@
   },
   "getListAsyncMethodStub": {
     "body": [
-      "public Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> GetListAsync($4)",
+      "public Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async($5)",
       "{",
       "\t$0",
       "}"
@@ -841,7 +841,7 @@
     "prefix": "xGetListAsyncMethodStub"
   },
   "getListAsyncMethodDefinition": {
-    "body": [ "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> GetListAsync($4);$0"],
+    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async($5);$0",
     "description": "Adds a GetListAsync method definition",
     "prefix": "xGetListAsyncMethodDefinition"
   },
@@ -1764,6 +1764,13 @@
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
+  "propCreationTime": {
+    "body": [
+      "public DateTime$1 CreationTime { get; ${2|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a CreationTime property ",
+    "prefix": "xPropCreationTime"
+  },
   "propBookType": {
     "body": [
       "public BookType$1 Type { get; ${2|set;,private set;|} }$0"
@@ -1847,6 +1854,13 @@
     ],
     "description": "Inserts a Name property ",
     "prefix": "xPropName"
+  },
+  "propText": {
+    "body": [
+      "public string? ${1:Text} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Text property ",
+    "prefix": "xPropText"
   },
   "propPhone": {
     "body": [
@@ -1983,7 +1997,7 @@
   },
   "repoGetAsync": {
     "body": [
-      "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id});",
+      "var ${2:$1} = await _${1:name}Repository.GetAsync$4(${3:id}, includeDetails: true);",
       "$0"
     ],
     "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
