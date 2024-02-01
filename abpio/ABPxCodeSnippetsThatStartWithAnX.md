@@ -18,7 +18,7 @@ Below you will see 3 examples of how to use ABPx code snippets in practice. At t
 
 Starting with an ABP project in VsCode can be a bit of hassle. **ABPx makes it a lot easier** to get you up and running by **generating the launch configurations needed**, as you can see below.
 
-When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
+After you opened an ABP application in **Visual Studio Code** hit CTRL+SHIFT+P (.NET Generate Assets for Build and Debug). This will add a .vscode folder to the root of the project with a launch.json and tasks.json file.
 
 ![Required Assets Missing!](../images/RequiredAssetsMissing.jpg "Required Assets Missing!")
 
