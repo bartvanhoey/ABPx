@@ -1764,6 +1764,13 @@
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
+  "propCreationTime": {
+    "body": [
+      "public DateTime$1 CreationTime { get; ${2|set;,private set;|}  }$0"
+    ],
+    "description": "Inserts a CreationTime property ",
+    "prefix": "xPropCreationTime"
+  },
   "propBookType": {
     "body": [
       "public BookType$1 Type { get; ${2|set;,private set;|} }$0"
@@ -1847,6 +1854,13 @@
     ],
     "description": "Inserts a Name property ",
     "prefix": "xPropName"
+  },
+  "propText": {
+    "body": [
+      "public string? ${1:Text} { get; ${2|set;,private set;|} }$0"
+    ],
+    "description": "Inserts a Text property ",
+    "prefix": "xPropText"
   },
   "propPhone": {
     "body": [
