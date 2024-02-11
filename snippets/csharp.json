@@ -1874,6 +1874,11 @@
     "description": "Inserts a property with private setter",
     "prefix": "xPropPrivateSetter"
   },
+  "propPrice": {
+    "body": "public ${1|decimal,float|} ${2|Price, TotalPrice|} { get; ${3|set;,private set;|} }$0",
+    "description": "Inserts a Price property ",
+    "prefix": "xPropPrice"
+  },
   "propProtectedSetter": {
     "body": "public ${1:int} ${2:MyProperty} { get; protected set; }$0",
     "description": "Inserts a property with protected setter",

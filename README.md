@@ -267,6 +267,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropBookType                                                  | Inserts a BookType property                                                                                                     
      xPropCity                                                      | Inserts a City property                                                                                                         
      xPropCountry                                                   | Inserts a Country property                                                                                                      
+     xPropCreationTime                                              | Inserts a CreationTime property                                                                                                 
      xPropDescription                                               | Inserts a Description property                                                                                                  
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                                             
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                                             
@@ -279,12 +280,14 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
      xPropName                                                      | Inserts a Name property                                                                                                         
      xPropPhone                                                     | Inserts a Phone property                                                                                                        
+     xPropPrice                                                     | Inserts a Price property                                                                                                        
      xPropPrivateSetter                                             | Inserts a property with private setter                                                                                          
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                                                        
      xPropPublishDate                                               | Inserts a DateTime PublishDate property                                                                                         
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                                                           
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                                                           
      xPropStreet                                                    | Inserts a Street property                                                                                                       
+     xPropText                                                      | Inserts a Text property                                                                                                         
      xPropTitle                                                     | Inserts an Title property                                                                                                       
      xPropZipCode                                                   | Inserts a ZipCode property                                                                                                      
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
