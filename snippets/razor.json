@@ -65,7 +65,7 @@
       "   <Check TValue=\"bool\" Checked=\"context.$2\" Disabled=\"true\" ReadOnly=\"true\" />",
       " </DisplayTemplate>",
       "</DataGridCheckColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${4:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridCheckColumn for boolean values",
     "prefix": "xDataGridCheckColumn"
@@ -77,7 +77,7 @@
       "\t\t@L[$\"Enum:${4:EnumName}.{($4)context.$2}\"]",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${5:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn for an enum",
     "prefix": "xDataGridColumnEnum"
@@ -89,7 +89,7 @@
       "\t\t@context.$2.ToLongDateString()",
       "\t</DisplayTemplate>",
       "</DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${4:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn in long date format",
     "prefix": "xDataGridColumnLongDateString"
@@ -109,7 +109,7 @@
   "dataGridColumnText": {
     "body": [
       "<DataGridColumn TItem=\"${1:Type}Dto\" Field=\"@nameof($1Dto.${2:PropertyName})\" Caption=\"@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}${3:$2}\"]\"></DataGridColumn>",
-      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${0:$2}\", *@$0"
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\":  \"${4:$2}\", *@$0"
     ],
     "description": "Inserts a DataGridColumn",
     "prefix": "xDataGridColumnText"
