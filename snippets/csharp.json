@@ -1713,6 +1713,11 @@
     "description": "Inserts an IsVisible property ",
     "prefix": "xPropIsVisible"
   },
+  "propIs": {
+    "body": "public bool Is{1:YourName} { get; set; } = ${2|false,true|};$0",
+    "description": "Inserts an Is YourName boolean property ",
+    "prefix": "xPropIs"
+  },
   "propLastName": {
     "body": ["public string? ${1:LastName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",

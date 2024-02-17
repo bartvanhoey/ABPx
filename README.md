@@ -279,6 +279,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropFirstName                                                 | Inserts a First Name property                                                                                                   
      xPropId                                                        | Inserts an Id property                                                                                                          
      xPropImageUrl                                                  | Inserts an ImageUrl property                                                                                                    
+     xPropIs                                                        | Inserts an Is YourName boolean property                                                                                         
      xPropIsVisible                                                 | Inserts an IsVisible property                                                                                                   
      xPropLastName                                                  | Inserts a First Name property                                                                                                   
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
