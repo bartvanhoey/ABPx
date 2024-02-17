@@ -266,9 +266,11 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                                                   
      xPropBookType                                                  | Inserts a BookType property                                                                                                     
      xPropCity                                                      | Inserts a City property                                                                                                         
+     xPropConfirmPassword                                           | Inserts a ConfirmPassword property                                                                                              
      xPropCountry                                                   | Inserts a Country property                                                                                                      
      xPropCreationTime                                              | Inserts a CreationTime property                                                                                                 
-     xPropDescription                                               | Inserts a Description property                                                                                                  
+     xPropDescription                                               | Inserts a Desription property                                                                                                   
+     xPropEmail                                                     | Inserts an Email property                                                                                                       
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                                             
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                                             
      xPropertyHasMaxLength                                          | Inserts b.Property.HasMaxLengthstatement                                                                                        
@@ -276,19 +278,26 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropFilter                                                    | Inserts a Filter property                                                                                                       
      xPropFirstName                                                 | Inserts a First Name property                                                                                                   
      xPropId                                                        | Inserts an Id property                                                                                                          
+     xPropImageUrl                                                  | Inserts an ImageUrl property                                                                                                    
+     xPropIsVisible                                                 | Inserts an IsVisible property                                                                                                   
      xPropLastName                                                  | Inserts a First Name property                                                                                                   
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
      xPropName                                                      | Inserts a Name property                                                                                                         
+     xPropPassword                                                  | Inserts a Password property                                                                                                     
      xPropPhone                                                     | Inserts a Phone property                                                                                                        
      xPropPrice                                                     | Inserts a Price property                                                                                                        
      xPropPrivateSetter                                             | Inserts a property with private setter                                                                                          
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                                                        
      xPropPublishDate                                               | Inserts a DateTime PublishDate property                                                                                         
+     xPropQuantity                                                  | Inserts a Quantity property                                                                                                     
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                                                           
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                                                           
+     xPropState                                                     | Inserts a State property                                                                                                        
      xPropStreet                                                    | Inserts a Street property                                                                                                       
      xPropText                                                      | Inserts a Text property                                                                                                         
      xPropTitle                                                     | Inserts an Title property                                                                                                       
+     xPropUserId                                                    | Inserts an UserId property                                                                                                      
+     xPropUserName                                                  | Inserts a UserName property                                                                                                     
      xPropZipCode                                                   | Inserts a ZipCode property                                                                                                      
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
      xRangeAttribute                                                | Range attribute                                                                                                                 
