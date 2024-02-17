@@ -277,6 +277,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropertyIsRequiredHasMaxLength                                | Inserts b.Property.IsRequired.HasMaxLengthstatement                                                                             
      xPropFilter                                                    | Inserts a Filter property                                                                                                       
      xPropFirstName                                                 | Inserts a First Name property                                                                                                   
+     xPropICollection                                               | Inserts an ICollection property                                                                                                 
      xPropId                                                        | Inserts an Id property                                                                                                          
      xPropImageUrl                                                  | Inserts an ImageUrl property                                                                                                    
      xPropIs                                                        | Inserts an Is YourName boolean property                                                                                         

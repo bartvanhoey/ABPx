@@ -1708,6 +1708,11 @@
     "description": "Inserts an ImageUrl property ",
     "prefix": "xPropImageUrl"
   },
+  "propICollection": {
+    "body": "public ICollection<${1:ClassName}$2> ${3:$1}s { get; set; }$0",
+    "description": "Inserts an ICollection property",
+    "prefix": "xPropICollection"
+  },
   "propIsVisible": {
     "body": "public bool Is{1:Visible} { get; set; } = ${2|false,true|};$0",
     "description": "Inserts an IsVisible property ",
