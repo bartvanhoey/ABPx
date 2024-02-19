@@ -305,6 +305,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRangeAttribute                                                | Range attribute                                                                                                                 
      xReadOnlyListLookupDto                                         | Inserts an IReadOnlyList for a LookupDto object                                                                                 
      xRegularExpressionAttribute                                    | Inserts a RegularExpression Attribute                                                                                           
+     xRepoAnyAsync                                                  | Inserts var x = _repository.AnyAsync statement. Throws EntityNotFoundException when not found                                   
      xRepoCountAsync                                                | Inserts var totalCount = _repository.CountAsync statement                                                                       
      xRepoDeleteAsync                                               | Inserts _repository.DeleteAsync statement                                                                                       
      xRepoDeleteManyAsync                                           | Inserts _repository.DeleteManyAsync statement                                                                                   
