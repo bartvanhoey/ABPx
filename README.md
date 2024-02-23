@@ -302,6 +302,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropUserId                                                    | Inserts an UserId property                                                                                                      
      xPropUserName                                                  | Inserts a UserName property                                                                                                     
      xPropZipCode                                                   | Inserts a ZipCode property                                                                                                      
+     xQueryableSkipTake                                             | Inserts queryable = queryable.Skip.Take  statement                                                                              
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
      xRangeAttribute                                                | Range attribute                                                                                                                 
      xReadOnlyListLookupDto                                         | Inserts an IReadOnlyList for a LookupDto object                                                                                 
@@ -326,6 +327,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepositoryGetQueryableAsync                                   | Inserts var queryable = Repository.GetQueryableAsync() statement                                                                
      xRepoUpdateAsync                                               | Inserts repository.UpdateAsync statement                                                                                        
      xRepoUpdateManyAsync                                           | Inserts repository.UpdateManyAsync() statement                                                                                  
+     xRepoWithDetailsAsync                                          | Inserts var queryable = _repository.WithDetailsAsync statement.                                                                 
      xRequiredAttribute                                             | Inserts a Required Attribute                                                                                                    
      xRequiresFeatureAttribute                                      | Inserts RequiresFeatureAttribute                                                                                                
      xReturnDbContextSetFirstOrDefaultAsync                         | Inserts return await DbContextSet.FirstOrDefaultAsync()                                                                         

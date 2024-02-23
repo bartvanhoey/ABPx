@@ -1912,6 +1912,13 @@
     "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
     "prefix": "xRepoGetAsync"
   },
+  "repoWithDetailsAsync": {
+    "body": [
+      "var ${1:queryable} = await _${2:name}Repository.WithDetailsAsync$4(x => x.${3:TypeName});$0"
+    ],
+    "description": "Inserts var queryable = _repository.WithDetailsAsync statement.",
+    "prefix": "xRepoWithDetailsAsync"
+  },
   "repoAnyAsync": {
     "body": [
       "await _${1:name}Repository.AnyAsync$3(x => x.${4:Property} == ${5:Variable});",
@@ -2483,10 +2490,17 @@
   },
   "xQueryableWithDetailsAsync": {
     "body": [
-      "var queryable = await _${1:name}Repository.WithDetailsAsync(x => x.${2:Type}{);$0"
+      "var queryable = await _${1:name}Repository.WithDetailsAsync(x => x.${2:TypeName}{);$0"
     ],
     "description": "Inserts var queryable = _repository.GetQueryableAsync() statement",
     "prefix": "xQueryableWithDetailsAsync"
+  },
+  "xQueryableSkipTake": {
+    "body": [
+      "queryable = queryable.Skip(input.SkipCount).Take(input.MaxResultCount).OrderBy(input.Sorting ?? nameof(${1:TypeName}.${2:PropertyName});$0"
+    ],
+    "description": "Inserts queryable = queryable.Skip.Take  statement",
+    "prefix": "xQueryableSkipTake"
   },
   "xUpdatePolicy": {
     "body": [
