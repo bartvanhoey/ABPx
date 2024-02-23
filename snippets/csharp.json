@@ -1714,13 +1714,13 @@
     "prefix": "xPropICollection"
   },
   "propIsVisible": {
-    "body": "public bool Is{1:Visible} { get; set; } = ${2|false,true|};$0",
+    "body": "public bool Is${1:Visible} { get; set; } = ${2|false,true|};$0",
     "description": "Inserts an IsVisible property ",
     "prefix": "xPropIsVisible"
   },
   "propIs": {
-    "body": "public bool Is{1:YourName} { get; set; } = ${2|false,true|};$0",
-    "description": "Inserts an Is YourName boolean property ",
+    "body": "public bool Is${1:YourName} { get; set; } = ${2|false,true|};$0",
+    "description": "Inserts an IsYourName boolean property ",
     "prefix": "xPropIs"
   },
   "propLastName": {

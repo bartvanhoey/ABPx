@@ -280,7 +280,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropICollection                                               | Inserts an ICollection property                                                                                                 
      xPropId                                                        | Inserts an Id property                                                                                                          
      xPropImageUrl                                                  | Inserts an ImageUrl property                                                                                                    
-     xPropIs                                                        | Inserts an Is YourName boolean property                                                                                         
+     xPropIs                                                        | Inserts an IsYourName boolean property                                                                                          
      xPropIsVisible                                                 | Inserts an IsVisible property                                                                                                   
      xPropLastName                                                  | Inserts a First Name property                                                                                                   
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
