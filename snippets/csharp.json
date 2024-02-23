@@ -1633,6 +1633,11 @@
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
+  "propDateTime": {
+    "body": ["public DateTime$1 ${2:DateTime} { get; ${3|set;,private set;|}  }$0"],
+    "description": "Inserts an DateTime property ",
+    "prefix": "xPropDateTime"
+  },
   "propBookType": {
     "body": ["public BookType$1 Type { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a BookType property ",

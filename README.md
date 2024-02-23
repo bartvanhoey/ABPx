@@ -269,6 +269,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropConfirmPassword                                           | Inserts a ConfirmPassword property                                                                                              
      xPropCountry                                                   | Inserts a Country property                                                                                                      
      xPropCreationTime                                              | Inserts a CreationTime property                                                                                                 
+     xPropDateTime                                                  | Inserts an DateTime property                                                                                                    
      xPropDescription                                               | Inserts a Desription property                                                                                                   
      xPropEmail                                                     | Inserts an Email property                                                                                                       
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                                             
