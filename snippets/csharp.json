@@ -885,14 +885,14 @@
   },
   "hasOneWithManyFkIsRequired": {
     "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired();$0"
+      "b.HasOne(x => ${1:Type}).WithMany().HasForeignKey(x => x.$1Id).IsRequired();$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement",
     "prefix": "xHasOneWithManyFkIsRequired"
   },
   "hasOneWithManyFkIsRequiredOnDelete": {
     "body": [
-      "b.HasOne<${1:Type}>().WithMany().HasForeignKey(x => x.$1Id).IsRequired().OnDelete(DeleteBehavior.${2|NoAction,Cascade,Restrict|});$0"
+      "b.HasOne(x => ${1:Type}).WithMany().HasForeignKey(x => x.$1Id).IsRequired().OnDelete(DeleteBehavior.${2|NoAction,Cascade,Restrict|});$0"
     ],
     "description": "Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired().OnDelete statement",
     "prefix": "xHasOneWithManyFkIsRequiredOnDelete"
