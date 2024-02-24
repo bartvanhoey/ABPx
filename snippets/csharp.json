@@ -926,8 +926,16 @@
       "\tTask$6 UpdateAsync(${3|Guid,int,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
       "\t$0"
     ],
-    "description": "Inserts a UpdateAsync definition for an IAppService interface",
+    "description": "Inserts an UpdateAsync definition for an IAppService interface",
     "prefix": "xIAppServiceUpdateAsyncDefinition"
+  },
+  "updateAsyncDefinition": {
+    "body": [
+      "\tTask$6 UpdateAsync(${3|Guid,int,string|}$4 ${5:id}, Update${1:${TM_FILENAME_BASE/([\\I])(.*)(AppService)/$2/gi}}Dto$2 input);",
+      "\t$0"
+    ],
+    "description": "Inserts an UpdateAsync definition for an IAppService interface",
+    "prefix": "xUpdateAsyncDefinition"
   },
   "iCrudAppServiceCreateDtoUpdateDto": {
     "body": [
@@ -1823,7 +1831,7 @@
   },
   "propUserName": {
     "body": "public string ${1:UserName} { get; ${2|set;,private set;|} }$0",
-    "description": "Inserts a UserName property ",
+    "description": "Inserts an UserName property ",
     "prefix": "xPropUserName"
   },
 

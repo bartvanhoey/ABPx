@@ -157,7 +157,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xHasOneWithManyFkIsRequiredOnDelete                            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired().OnDelete statement                                                  
      xIAppServiceCrudDefinitions                                    | Inserts a complete IAppService interface with CRUD methods for a given Type                                                     
      xIAppServiceParam                                              | Inserts a IAppService parameter                                                                                                 
-     xIAppServiceUpdateAsyncDefinition                              | Inserts a UpdateAsync definition for an IAppService interface                                                                   
+     xIAppServiceUpdateAsyncDefinition                              | Inserts an UpdateAsync definition for an IAppService interface                                                                  
      xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts a complete ICrudAppService CreateDto - UpdateDto                                                                        
      xICrudAppServiceCreateUpdateDto                                | Inserts a complete ICrudAppService - CreateUpdateDto                                                                            
      xIDataFilterISoftDeleteParam                                   | Inserts a IDataFilterISoftDelete parameter                                                                                      
@@ -300,7 +300,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropText                                                      | Inserts a Text property                                                                                                         
      xPropTitle                                                     | Inserts an Title property                                                                                                       
      xPropUserId                                                    | Inserts an UserId property                                                                                                      
-     xPropUserName                                                  | Inserts a UserName property                                                                                                     
+     xPropUserName                                                  | Inserts an UserName property                                                                                                    
      xPropZipCode                                                   | Inserts a ZipCode property                                                                                                      
      xQueryableSkipTake                                             | Inserts queryable = queryable.Skip.Take  statement                                                                              
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
@@ -382,6 +382,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultTotalCountShouldBeGreaterOrEqual                      | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                                                                  
      xUnResultTotalCountShouldBeGreaterThan                         | Inserts result.TotalCount.ShouldBeGreaterThan statement                                                                         
      xUnResultTotalCountShouldBeGreaterThanOrEqualTo                | Inserts result.TotalCount.ShouldBeGreaterThanOrEqualTo statement                                                                
+     xUpdateAsyncDefinition                                         | Inserts an UpdateAsync definition for an IAppService interface                                                                  
      xUpdatePolicyName                                              | Inserts UpdatePolicyName statement                                                                                              
      xUrlAttribute                                                  | Url attribute                                                                                                                   
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                                                
