@@ -2497,7 +2497,7 @@
   },
   "xQueryableSkipTake": {
     "body": [
-      "queryable = queryable.Skip(input.SkipCount).Take(input.MaxResultCount).OrderBy(input.Sorting ?? nameof(${1:TypeName}.${2:PropertyName});$0"
+      "queryable = queryable.Skip(input.SkipCount).Take(input.MaxResultCount).OrderBy(input.Sorting ?? nameof(${1:TypeName}.${2:PropertyName}));$0"
     ],
     "description": "Inserts queryable = queryable.Skip.Take  statement",
     "prefix": "xQueryableSkipTake"
