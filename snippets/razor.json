@@ -278,6 +278,17 @@
     "description": "Inserts a TextEdit field in a Create/Update dialog",
     "prefix": "xFieldTextEdit"
   },
+  "fieldCheckBox": {
+    "body": [
+      "<Field>",
+      "  <FieldLabel>@L[\"${TM_FILENAME/(.*)s\\..+$/$1/}$2\"]</FieldLabel>",
+      "  <Check TValue=\"bool\" @bind-Checked=\"@${1|NewEntity,EditingEntity|}.${2:PropertyName}\">${4:Text} </Check>",
+      "</Field>",
+      "@* \"${TM_FILENAME/(.*)s\\..+$/$1/}$2\": \"${3:$2}\", *@$0"
+    ],
+    "description": "Inserts a Checkbox field in a Create/Update dialog",
+    "prefix": "xFieldCheckBox"
+  },
   "ifCanCreate": {
     "body": [
       "@if (CanCreate${1:What})",

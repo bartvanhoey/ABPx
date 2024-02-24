@@ -426,6 +426,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xEditModalDialog                       | Inserts an Edit modal dialog                                        
      xExposeServicesAttribute               | Inserts @attribute ExposeServices                                   
      xFeedbackValidation                    | Inserts <Feedback> validation statement                             
+     xFieldCheckBox                         | Inserts a Checkbox field in a Create/Update dialog                  
      xFieldDateEdit                         | Inserts a TextEdit field in a Create/Update dialog                  
      xFieldEnumSelect                       | Inserts a Select field for enum in a Create/Update dialog           
      xFieldMemoEdit                         | Inserts a MemoEdit field in a Create/Update dialog                  
