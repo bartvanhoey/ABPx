@@ -50,6 +50,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCollectionDefinitionNameAttribute                             | Inserts a CollectionDefinitionNameAttribute                                                                                     
      xConfigureOptions                                              | Inserts Configure Options statement for use in ConfigureServices method                                                         
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                                                
+     xContextGetApplicationBuilder                                  | Inserts var app = context.GetApplicationBuilder() statement;                                                                    
+     xContextGetEnvironment                                         | Inserts var env = context.GetEnvironment() statement;                                                                           
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                                              
      xCreateAsyncIAppServiceMethodDefinition                        | Inserts a CreateAsync definition for an IAppService interface                                                                   
      xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an IAppService Interface                                                                

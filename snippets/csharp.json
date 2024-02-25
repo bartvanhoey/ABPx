@@ -320,9 +320,19 @@
     "prefix": "xConfigureOptions"
   },
   "contextAddTransient": {
-    "body": "context.Services.AddTransient<${1:Type}>();;$0",
+    "body": "context.Services.AddTransient<${1:Type}>();$0",
     "description": "Inserts context.Services.AddTransient statement;",
     "prefix": "xContextAddTransient"
+  },
+  "contextGetApplicationBuilder": {
+    "body": "var app = context.GetApplicationBuilder();$0",
+    "description": "Inserts var app = context.GetApplicationBuilder() statement;",
+    "prefix": "xContextGetApplicationBuilder"
+  },
+  "contextGetEnvironment": {
+    "body": "var env = context.GetEnvironment();$0",
+    "description": "Inserts var env = context.GetEnvironment() statement;",
+    "prefix": "xContextGetEnvironment"
   },
   "contextGetRequiredService": {
     "body": [
