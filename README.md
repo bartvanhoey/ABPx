@@ -52,6 +52,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                                                
      xContextGetApplicationBuilder                                  | Inserts var app = context.GetApplicationBuilder() statement;                                                                    
      xContextGetEnvironment                                         | Inserts var env = context.GetEnvironment() statement;                                                                           
+     xContextGetHostingEnvironment                                  | Inserts var hostingEnvironment = context.GetHostingEnvironment() statement;                                                     
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                                              
      xCreateAsyncIAppServiceMethodDefinition                        | Inserts a CreateAsync definition for an IAppService interface                                                                   
      xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an IAppService Interface                                                                
