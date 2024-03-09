@@ -22,7 +22,7 @@ After you opened an ABP application in **Visual Studio Code** hit CTRL+SHIFT+P (
 
 ![Required Assets Missing!](../images/RequiredAssetsMissing.jpg "Required Assets Missing!")
 
-* Click **Yes** to add the *required assets to build and debug* your application. Select the *IssueTracking.HttpApi.Host* project in the *Select the project to launch* dropdown.
+* Click **Yes** to add the *required assets to build and debug* your application. Select the *HttpApi.Host* project in the *Select the project to launch* dropdown.
 
 ![Generate Launch Configurations!](../images/launchconfigurations.gif "Generate Launch Configurations needed for your project!")
 
