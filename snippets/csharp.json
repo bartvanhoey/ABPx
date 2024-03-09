@@ -2486,6 +2486,11 @@
     "description": "Adds a DeleteAsync method definition to an interface",
     "prefix": "xDeleteAsyncMethodDefinition"
   },
+  "xDeleteAllAsyncMethodDefinition": {
+    "body": "public Task$1 DeleteAll$2Async();$0",
+    "description": "Adds a DeleteAllAsync method definition to an interface",
+    "prefix": "xDeleteAllAsyncMethodDefinition"
+  },
   "xDeleteAsyncMethodStub": {
     "body": [
       "public Task$1 DeleteAsync(${2|Guid,int,string|} id)",

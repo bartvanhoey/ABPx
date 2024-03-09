@@ -107,6 +107,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xDataTypeAttribute                                             | DataType attribute                                                                                                              
      xDbSet                                                         | Inserts a DbSet for a class statement in DbContext                                                                              
      xDbSetNewSyntax                                                | Inserts a DbSet for a class statement in DbContext                                                                              
+     xDeleteAllAsyncMethodDefinition                                | Adds a DeleteAllAsync method definition to an interface                                                                         
      xDeleteAsyncIAppServiceMethodDefinition                        | Inserts a DeleteAsync definition for an IAppService interface                                                                   
      xDeleteAsyncMethodDefinition                                   | Adds a DeleteAsync method definition to an interface                                                                            
      xDeleteAsyncMethodStub                                         | Adds a DeleteAsync method stub                                                                                                  
