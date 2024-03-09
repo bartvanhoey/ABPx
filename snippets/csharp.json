@@ -1694,7 +1694,7 @@
     "prefix": "xPropDescription"
   },
   "propEmail": {
-    "body": "public string ${1:Email} { get; ${2|set;,private set;|} }$0",
+    "body": "public string ${1|Email,EmailAddress|} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts an Email property ",
     "prefix": "xPropEmail"
   },
