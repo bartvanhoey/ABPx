@@ -142,6 +142,13 @@
     "description": "Inserts AsyncExecuter.ToListAsync statement",
     "prefix": "xAsyncExecuterToListAsync"
   },
+  "returnAsyncExecuterToListAsync": {
+    "body": [
+      "return await ${1|_asyncExecuter,AsyncExecuter|}.ToListAsync$2(${3|query,queryable|});"
+    ],
+    "description": "Inserts return await AsyncExecuter.ToListAsync statement",
+    "prefix": "xReturnAsyncExecuterToListAsync"
+  },
   "authAttributeAbp": {
     "body": [
       "[Authorize$1(${WORKSPACE_NAME}Permissions$3.${4:${TM_FILENAME_BASE/AppService//}}s.${5|Default,Create,Update,Delete|})]$0"

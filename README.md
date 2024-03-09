@@ -333,6 +333,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepoWithDetailsAsync                                          | Inserts var queryable = _repository.WithDetailsAsync statement.                                                                 
      xRequiredAttribute                                             | Inserts a Required Attribute                                                                                                    
      xRequiresFeatureAttribute                                      | Inserts RequiresFeatureAttribute                                                                                                
+     xReturnAsyncExecuterToListAsync                                | Inserts return await AsyncExecuter.ToListAsync statement                                                                        
      xReturnDbContextSetFirstOrDefaultAsync                         | Inserts return await DbContextSet.FirstOrDefaultAsync()                                                                         
      xReturnDbContextSetToListAsync                                 | Inserts return await DbContextSet.ToListAsync()                                                                                 
      xReturnDbContextSetWhereToListAsync                            | Inserts return await DbContextSetWhereToListAsync                                                                               
