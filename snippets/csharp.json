@@ -2053,6 +2053,11 @@
     "description": "Inserts return await DbSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbSetFirstOrDefaultAsync"
   },
+  "returnQueryToListAsync": {
+    "body": "return await query.ToListAsync();$0",
+    "description": "Inserts return await query.ToListAsync()",
+    "prefix": "xReturnQueryToListAsync"
+  },
   "returnDbSetToListAsync": {
     "body": [
       "// using System.Linq.Dynamic.Core;",

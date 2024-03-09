@@ -345,6 +345,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xReturnObjectMapperPagedResultDto                              | Inserts return new PagedResultDto with ObjectMapper statement                                                                   
      xReturnObjectMapTypeToDto                                      | return ObjectMapper.Map from SourceType to Dto statement                                                                        
      xReturnPagedResultDto                                          | Inserts return new PagedResultDto statement                                                                                     
+     xReturnQueryToListAsync                                        | Inserts return await query.ToListAsync()                                                                                        
      xSaveAsyncMethodAppService                                     | Inserts await _fileAppService.SaveBlobAsync method                                                                              
      xSaveAsyncMethodBlobContainer                                  | Inserts await _fileContainer.SaveAsync method                                                                                   
      xSaveBlobAsyncIAppServiceMethodDefinition                      | Inserts a SaveBlobAsync definition for an IAppService interface                                                                 
