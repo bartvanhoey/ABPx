@@ -2028,7 +2028,7 @@
     "description": "Inserts a Required Attribute",
     "prefix": "xRequiredAttribute"
   },
-  "requuiresFeatureAttribute": {
+  "requiresFeatureAttribute": {
     "body": ["[RequiresFeature$1(\"${2:FeatureName}\")] $0"],
     "description": "Inserts RequiresFeatureAttribute",
     "prefix": "xRequiresFeatureAttribute"
@@ -2037,6 +2037,11 @@
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().FirstOrDefaultAsync(${3:x} => $3.${4:propertyName} == $5);$0",
     "description": "Inserts return await DbContextSet.FirstOrDefaultAsync()",
     "prefix": "xReturnDbContextSetFirstOrDefaultAsync"
+  },
+  "returnDbContextSingleAsync": {
+    "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().SingleAsync(${3:x} => $3.${4:propertyName} == $5);$0",
+    "description": "Inserts return await DbContextSet.SingleAsync()",
+    "prefix": "xReturnDbContextSingleAsync"
   },
   "returnDbContextSetToListAsync": {
     "body": "return await ${1|dbContext, DbContext|}.Set<${2:Type}>().Where$3(${4:x} => $4.${5:propertyName} == $6).ToListAsync();$0",

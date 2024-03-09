@@ -338,6 +338,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xReturnDbContextSetFirstOrDefaultAsync                         | Inserts return await DbContextSet.FirstOrDefaultAsync()                                                                         
      xReturnDbContextSetToListAsync                                 | Inserts return await DbContextSet.ToListAsync()                                                                                 
      xReturnDbContextSetWhereToListAsync                            | Inserts return await DbContextSetWhereToListAsync                                                                               
+     xReturnDbContextSingleAsync                                    | Inserts return await DbContextSet.SingleAsync()                                                                                 
      xReturnDbSetFirstOrDefaultAsync                                | Inserts return await DbSet.FirstOrDefaultAsync()                                                                                
      xReturnDbSetToListAsync                                        | Inserts return await DbSet.ToListAsync()                                                                                        
      xReturnListResultDto                                           | Inserts return new ListResultDto statement                                                                                      
