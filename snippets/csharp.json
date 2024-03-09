@@ -1884,7 +1884,7 @@
   },
   "repoCountAsync": {
     "body": [
-      "var ${1|totalCount,count,total|} = await _${2:name}Repository.CountAsync$3();$0"
+      "var ${1|totalCount,count,total|} = await _${2:name}Repository.CountAsync$3($4);$0"
     ],
     "description": "Inserts var totalCount = _repository.CountAsync statement",
     "prefix": "xRepoCountAsync"
