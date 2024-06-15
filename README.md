@@ -297,6 +297,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                                                        
      xPropPublishDate                                               | Inserts a DateTime PublishDate property                                                                                         
      xPropQuantity                                                  | Inserts a Quantity property                                                                                                     
+     xPropShortBio                                                  | Inserts a ShortBio property                                                                                                     
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                                                           
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                                                           
      xPropState                                                     | Inserts a State property                                                                                                        

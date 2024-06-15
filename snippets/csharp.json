@@ -1777,6 +1777,11 @@
     "description": "Inserts a Name property ",
     "prefix": "xPropName"
   },
+  "propShortBio": {
+    "body": ["public string? ${1:ShortBio} { get; set; } }$0"],
+    "description": "Inserts a ShortBio property ",
+    "prefix": "xPropShortBio"
+  },
   "propPassword": {
     "body": "public string ${1:Password} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a Password property ",
