@@ -9,7 +9,9 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
 
      Prefix                                                         | Description                                                                                                                     
      -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- 
+     xAddPermissionGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
      xAddPermissionsPoliciesAppService                              | Adds policy permissions to AppService                                                                                           
+     xAddPermissionToGroup                                          | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xApplicationMenuItemIcon                                       | New ApplicationMenuItem variable with icon                                                                                      
      xApplicationMenuItemUrl                                        | New ApplicationMenuItem variable with url                                                                                       
      xAppServiceClassStub                                           | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class                                       
@@ -264,8 +266,6 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPageTitle                                                     | Inserts a PageTitle tag                                                                                                         
      xPara                                                          | Inserts property with Parameter attribute                                                                                       
      xParaId                                                        | Inserts Id property with Parameter attribute                                                                                    
-     xPermissionAddGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
-     xPermissionAddPermissionToGroup                                | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                                              
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                                                   
      xPropBookType                                                  | Inserts a BookType property                                                                                                     

@@ -1238,6 +1238,8 @@
   },
   "inheritsApplicationTestBase": {
     "body": [
+      "// using Volo.Abp.Modularity;",
+      "",
       " ${WORKSPACE_NAME}ApplicationTestBase<TStartupModule>",
       "\twhere TStartupModule : IAbpModule$0"
     ],
@@ -1628,7 +1630,7 @@
       "//\"Permission:${1/^([a-z])/${1:/upcase}/}Group\": \"${1/^([a-z])/${1:/upcase}/} management\","
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider",
-    "prefix": "xPermissionAddGroupToContext"
+    "prefix": "xAddPermissionGroupToContext"
   },
   "permissionAddPermissionToGroup": {
     "body": [
@@ -1643,7 +1645,7 @@
       "//\"Permission:$4:Delete\": \"Deleting ${5:${4/^([A-Z])/${1:/downcase}/}}\",$0"
     ],
     "description": "Adds permission to group in PermissionDefinitionProvider.cs ",
-    "prefix": "xPermissionAddPermissionToGroup"
+    "prefix": "xAddPermissionToGroup"
   },
   "permissionClass": {
     "body": [
@@ -1990,7 +1992,7 @@
   },
   "repoInsertAsync": {
     "body": [
-      "var inserted${1:name} = await _${2:${1/(.*)/${1:/downcase}/}}Repository.InsertAsync(${3:${1/(.*)/${1:/downcase}/}}$4, autoSave:${5|false,true|});$0"
+      "var inserted${1:name} = await _${2:${1/(.*)/${1:/downcase}/}}Repository.InsertAsync(${3:${1/(.*)/${1:/downcase}/}}$4, autoSave:${5|true,false|});$0"
     ],
     "description": "Inserts var inserted = await _repository.InsertAsync() statement",
     "prefix": "xRepoInsertAsync"
