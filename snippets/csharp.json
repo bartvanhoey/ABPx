@@ -2410,8 +2410,8 @@
   },
   "unAppServiceClassStub": {
     "body": [
-      "\tpublic class ${TM_FILENAME_BASE}<TStartUpModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartUpModule>",
-      "\t\twhere TStartUpModule : IAbpModule$1",
+      "\tpublic class ${TM_FILENAME_BASE}<TStartupModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartupModule>",
+      "\t\twhere TStartupModule : IAbpModule$1",
       "\t{",
       "\t\t$0",
       "\t}"
