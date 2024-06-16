@@ -2410,11 +2410,11 @@
   },
   "unAppServiceClassStub": {
     "body": [
-      "public class ${TM_FILENAME_BASE}<TStartUpModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartUpModule>",
-      "\twhere TStartUpModule : IAbpModule$1",
-      "{",
-      "\t$0",
-      "}"
+      "\tpublic class ${TM_FILENAME_BASE}<TStartUpModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartUpModule>",
+      "\t\twhere TStartUpModule : IAbpModule$1",
+      "\t{",
+      "\t\t$0",
+      "\t}"
     ],
     "description": "Inserts an AppServiceTest class stub",
     "prefix": "xunAppServiceClassStub"
@@ -2483,6 +2483,17 @@
     ],
     "description": "Inserts var result = await AppService.CreateAsync statement",
     "prefix": "xUnCreateAsyncAppService"
+  },
+  "unEfCoreAppServiceClassStub": {
+    "body": [
+      "\t[Collection$1(${WORKSPACE_NAME}TestConsts.CollectionDefinitionName)]",
+      "\tpublic class ${TM_FILENAME_BASE} : ${TM_FILENAME_BASE/EfCore//gi}$2<${WORKSPACE_NAME}EntityFrameworkCoreTestModule>",
+      "\t{",
+      "\t\t$0",
+      "\t}"
+    ],
+    "description": "Inserts an EfCoreAppServiceTest class stub",
+    "prefix": "xunEfCoreAppServiceClassStub"
   },
   "unFactMethodTaskStub": {
     "body": [

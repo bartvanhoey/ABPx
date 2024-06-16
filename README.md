@@ -373,6 +373,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                                                 
      xUnAssertThrowsCustomException                                 | Inserts Assert.Throws<YourCustomException>                                                                                      
      xUnCreateAsyncAppService                                       | Inserts var result = await AppService.CreateAsync statement                                                                     
+     xunEfCoreAppServiceClassStub                                   | Inserts an EfCoreAppServiceTest class stub                                                                                      
      xunFactMethodTaskStub                                          | a xUnit test Task method stub                                                                                                   
      xUnFactMethodVoidStub                                          | a xUnit test void method stub                                                                                                   
      xUnGetListAsyncAppService                                      | Inserts var result = await AppService.GetListAsync statement                                                                    
