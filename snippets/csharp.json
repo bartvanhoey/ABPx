@@ -53,10 +53,7 @@
     "prefix": "xRepoGetQueryableAsync"
   },
   "RepositoryGetQueryableAsync": {
-    "body": [
-      "var queryable = await Repository.GetQueryableAsync$1();",
-      "$0"
-    ],
+    "body": ["var queryable = await Repository.GetQueryableAsync$1();", "$0"],
     "description": "Inserts var queryable = Repository.GetQueryableAsync() statement",
     "prefix": "xRepositoryGetQueryableAsync"
   },
@@ -93,23 +90,17 @@
     "prefix": "xAppServiceCreateAsync"
   },
   "appServiceDeleteAsync": {
-    "body": [
-      "await _${1:Name}AppService.DeleteAsync(${3:id});$0"
-    ],
+    "body": ["await _${1:Name}AppService.DeleteAsync(${3:id});$0"],
     "description": "Inserts await _nameAppService.DeleteAsync() statement",
     "prefix": "xAppServiceDeleteAsync"
   },
   "appServiceGetAsync": {
-    "body": [
-      "${2:var $1} = await _${1:Name}AppService.GetAsync(${3:id});$0"
-    ],
+    "body": ["${2:var $1} = await _${1:Name}AppService.GetAsync(${3:id});$0"],
     "description": "Inserts var x = _nameAppService.GetAsync() statement",
     "prefix": "xAppServiceGetAsync"
   },
   "appServiceGetListAsync": {
-    "body": [
-      "${2:var $1s} = await _${1:Name}AppService.GetListAsync();$0"
-    ],
+    "body": ["${2:var $1s} = await _${1:Name}AppService.GetListAsync();$0"],
     "description": "Inserts var x = _nameAppService.GetListAsync() statement",
     "prefix": "xAppServiceGetListAsync"
   },
@@ -159,9 +150,7 @@
     "prefix": "xAuthAttributeAbp"
   },
   "authAttributeMicrosoft": {
-    "body": [
-      "[Authorize$1]$0"
-    ],
+    "body": ["[Authorize$1]$0"],
     "description": "Inserts the Microsoft.AspNetCore.Authorization Authorize attribute",
     "prefix": "xAuthAttributeMicrosoft"
   },
@@ -187,16 +176,12 @@
     "prefix": "xAuthServiceIsGrantedAsync"
   },
   "bindPropertyAttribute": {
-    "body": [
-      "[BindProperty$1] $0"
-    ],
+    "body": ["[BindProperty$1] $0"],
     "description": "Inserts BindProperty attribute",
     "prefix": "xBindPropertyAttribute"
   },
   "blobContainerNameAttribute": {
-    "body": [
-      "[BlobContainerName$1(\"${1:YourBlobContainerName}\")] $0"
-    ],
+    "body": ["[BlobContainerName$1(\"${1:YourBlobContainerName}\")] $0"],
     "description": "Inserts Required Attribute",
     "prefix": "xBlobContainerNameAttribute"
   },
@@ -220,9 +205,7 @@
     "prefix": "xBuilderEntity"
   },
   "canBeNullAttribute": {
-    "body": [
-      "[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"
-    ],
+    "body": ["[CanBeNull$1] ${2:string}$3 ${4:name} = null$0"],
     "description": "CanBeNull attribute",
     "prefix": "xCanBeNullAttribute"
   },
@@ -267,16 +250,12 @@
     "prefix": "xCanUpdate"
   },
   "checkGetListPolicyAsync": {
-    "body": [
-      "await CheckGetListPolicyAsync$1();$0"
-    ],
+    "body": ["await CheckGetListPolicyAsync$1();$0"],
     "description": "Inserts await CheckGetListPolicyAsync()",
     "prefix": "xCheckGetListPolicyAsync"
   },
   "checkGetPolicyAsync": {
-    "body": [
-      "await CheckGetPolicyAsync$1();$0"
-    ],
+    "body": ["await CheckGetPolicyAsync$1();$0"],
     "description": "Inserts await CheckGetPolicyAsync()",
     "prefix": "xCheckGetPolicyAsync"
   },
@@ -599,22 +578,12 @@
     "prefix": "xCtorManagerCustomParam"
   },
   "ctorPrivate": {
-    "body": [
-      "private ${TM_FILENAME_BASE/.razor//}($1)",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["private ${TM_FILENAME_BASE/.razor//}($1)", "{", "\t$0", "}"],
     "description": "Insert a private constructor stub",
     "prefix": "xCtorPrivate"
   },
   "ctorPublic": {
-    "body": [
-      "public ${TM_FILENAME_BASE/.razor//}($1)",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["public ${TM_FILENAME_BASE/.razor//}($1)", "{", "\t$0", "}"],
     "description": "Insert a public constructor stub",
     "prefix": "xCtorPublic"
   },
@@ -629,9 +598,7 @@
     "prefix": "xCurrentTenantChange"
   },
   "currentUserGetId": {
-    "body": [
-      "CurrentUser.GetId()"
-    ],
+    "body": ["CurrentUser.GetId()"],
     "description": "Inserts CurrentUser.GetId() statement",
     "prefix": "xCurrentUserGetId"
   },
@@ -665,31 +632,22 @@
     "prefix": "xDbSetNewSyntax"
   },
   "deleteAsyncIAppServiceMethodDefinition": {
-    "body": [
-      "\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});",
-      "\t$0"
-    ],
+    "body": ["\tTask$4 DeleteAsync(${1|Guid,int,string|}$2 ${3:id});", "\t$0"],
     "description": "Inserts a DeleteAsync definition for an IAppService interface",
     "prefix": "xDeleteAsyncIAppServiceMethodDefinition"
   },
   "dependencyAttribute": {
-    "body": [
-      "[Dependency$1(ReplaceServices = ${2|true,false|})]"
-    ],
+    "body": ["[Dependency$1(ReplaceServices = ${2|true,false|})]"],
     "description": "Inserts Dependency attribute",
     "prefix": "xDependencyAttribute"
   },
   "disableValidationAttribute": {
-    "body": [
-      "[DisableValidation$1]$0"
-    ],
+    "body": ["[DisableValidation$1]$0"],
     "description": "Inserts a DisableValidation Attribute",
     "prefix": "xDisableValidationAttribute"
   },
   "displayAttribute": {
-    "body": [
-      "[Display$1(Name = \"${2:Name} \")] $0"
-    ],
+    "body": ["[Display$1(Name = \"${2:Name} \")] $0"],
     "description": "Inserts Display attribute",
     "prefix": "xDisplayAttribute"
   },
@@ -708,16 +666,12 @@
     "prefix": "xEfCoreRepositoryClassStub"
   },
   "emailAddressAttribute": {
-    "body": [
-      "[EmailAddress$1] $0"
-    ],
+    "body": ["[EmailAddress$1] $0"],
     "description": "EmailAddress Attribute",
     "prefix": "xEmailAddressAttribute"
   },
   "enableValidationAttribute": {
-    "body": [
-      "[EnableValidation$1]$0"
-    ],
+    "body": ["[EnableValidation$1]$0"],
     "description": "Inserts an EnableValidation Attribute",
     "prefix": "xEnableValidationAttribute"
   },
@@ -729,16 +683,12 @@
     "prefix": "xExecuteSqlRawAsync"
   },
   "exposeServicesAttribute": {
-    "body": [
-      "[ExposeServices$1(typeof(${2:TypeName}))]"
-    ],
+    "body": ["[ExposeServices$1(typeof(${2:TypeName}))]"],
     "description": "Inserts an ExposeServices attribute",
     "prefix": "xExposeServicesAttribute"
   },
   "filterProperty": {
-    "body": [
-      "public string Filter { get; set; }"
-    ],
+    "body": ["public string Filter { get; set; }"],
     "description": "Inserts a Filter property",
     "prefix": "xFilterProperty"
   },
@@ -800,9 +750,7 @@
     "prefix": "xBlobAsyncMethodAppService"
   },
   "getConfigurationFromContext": {
-    "body": [
-      "var configuration = context.Services.GetConfiguration();$0"
-    ],
+    "body": ["var configuration = context.Services.GetConfiguration();$0"],
     "description": "Inserts var configuration = context.Services.GetConfiguration(); statement",
     "prefix": "xGetConfigurationFromContext"
   },
@@ -893,9 +841,7 @@
     "prefix": "xGetPagedListAsyncIRepoMethodDefinitionWithParameters"
   },
   "getPrivateSet": {
-    "body": [
-      "{ get; private set; }$0"
-    ],
+    "body": ["{ get; private set; }$0"],
     "description": "Inserts { get, private set }",
     "prefix": "xGps"
   },
@@ -916,9 +862,7 @@
     "prefix": "xGetRequiredService"
   },
   "getSet": {
-    "body": [
-      "{ get; set; }$0"
-    ],
+    "body": ["{ get; set; }$0"],
     "description": "Inserts { get, set }",
     "prefix": "xGs"
   },
@@ -928,30 +872,22 @@
     "prefix": "xGuidGeneratorCreate"
   },
   "hasIndex": {
-    "body": [
-      "b.HasIndex(x => x.${1:PropertyName});$0"
-    ],
+    "body": ["b.HasIndex(x => x.${1:PropertyName});$0"],
     "description": "Inserts hasIndex statement",
     "prefix": "xHasIndex"
   },
   "hasIndexCompositeKey": {
-    "body": [
-      "b.HasIndex(x => new {x.${1:Type}, x.${2:Type}});$0"
-    ],
+    "body": ["b.HasIndex(x => new {x.${1:Type}, x.${2:Type}});$0"],
     "description": "Inserts hasIndex statement (composite key)",
     "prefix": "xHasIndexCompositeKey"
   },
   "hasIndexUnique": {
-    "body": [
-      "b.HasIndex(x => x.${1:PropertyName}).IsUnique();$0"
-    ],
+    "body": ["b.HasIndex(x => x.${1:PropertyName}).IsUnique();$0"],
     "description": "Inserts hasIndex with Unique statement",
     "prefix": "xHasIndexUnique"
   },
   "hasKey": {
-    "body": [
-      "b.HasKey(x => new {x.${1:Type}, x.${2:Type}});$0"
-    ],
+    "body": ["b.HasKey(x => new {x.${1:Type}, x.${2:Type}});$0"],
     "description": "Inserts hasKey statement (composite key)",
     "prefix": "xHasKey"
   },
@@ -1114,20 +1050,12 @@
     "prefix": "xIfAuthServiceIsGrantedAsync"
   },
   "ifCurrentUserIsAuthenticated": {
-    "body": [
-      "if (CurrentUser.isAuthenticated)",
-      "{",
-      "\t$0",
-      "}"
-    ],
+    "body": ["if (CurrentUser.isAuthenticated)", "{", "\t$0", "}"],
     "description": "If CurrentUser.isAuthenticated",
     "prefix": "xIfCurrentUserIsAuthenticated"
   },
   "ifInlineStatement": {
-    "body": [
-      "if (${1:MyCondition}) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition}) $2", "$0"],
     "description": "Inline if statement",
     "prefix": "xIfInline"
   },
@@ -1154,51 +1082,27 @@
     "prefix": "xIfIsGrantedAsyncPermission"
   },
   "ifNotNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} != null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNotNullInline"
   },
   "ifNotNullStatement": {
-    "body": [
-      "if (${1:MyVariable} != null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} != null)", "{", "\t$2", "}", "$0"],
     "description": "If not null statement",
     "prefix": "xIfNotNull"
   },
   "ifNotStatement": {
-    "body": [
-      "if(!$1)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if(!$1)", "{", "\t$2", "}", "$0"],
     "description": "If not statement",
     "prefix": "xIfNot"
   },
   "ifNullInlineStatement": {
-    "body": [
-      "if (${1:MyVariable} == null) $2",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null) $2", "$0"],
     "description": "Inline if not null statement",
     "prefix": "xIfNullInline"
   },
   "ifNullStatement": {
-    "body": [
-      "if (${1:MyVariable} == null)",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyVariable} == null)", "{", "\t$2", "}", "$0"],
     "description": "If null statement",
     "prefix": "xIfNull"
   },
@@ -1213,23 +1117,12 @@
     "prefix": "xIfRepoGetCountAsync"
   },
   "ifResultSucceededStatement": {
-    "body": [
-      "if (result.Succeeded)",
-      "\t{",
-      "\t$0",
-      "\t}"
-    ],
+    "body": ["if (result.Succeeded)", "\t{", "\t$0", "\t}"],
     "description": "If result.Succeeded statement",
     "prefix": "xIfResultSucceeded"
   },
   "ifStatement": {
-    "body": [
-      "if (${1:MyCondition})",
-      "{",
-      "\t$2",
-      "}",
-      "$0"
-    ],
+    "body": ["if (${1:MyCondition})", "{", "\t$2", "}", "$0"],
     "description": "If statement",
     "prefix": "xIf"
   },
@@ -1324,9 +1217,7 @@
     "prefix": "xInhAggregateRoot"
   },
   "inheritsApplicationService": {
-    "body": [
-      " ApplicationService$0"
-    ],
+    "body": [" ApplicationService$0"],
     "description": "Inherits ApplicationService class",
     "prefix": "xInhApplicationService"
   },
@@ -1421,9 +1312,7 @@
     "prefix": "xInhPagedAndSortedResultRequestDto"
   },
   "inheritsProjectNameAppService": {
-    "body": [
-      " ${1:${WORKSPACE_NAME}}AppService$0"
-    ],
+    "body": [" ${1:${WORKSPACE_NAME}}AppService$0"],
     "description": "Inherits ProjectNameAppService class",
     "prefix": "xInhProjectNameAppService"
   },
@@ -1456,9 +1345,7 @@
     "prefix": "xInjectIJSRuntime"
   },
   "injectIMapper": {
-    "body": [
-      "[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"
-    ],
+    "body": ["[Inject$1] public IMapper$2 ${3:Mapper} { get; set; }$0"],
     "description": "Inject IMapper property",
     "prefix": "xInjectIMapper"
   },
@@ -1497,9 +1384,7 @@
     "prefix": "xMap"
   },
   "maxLengthConst": {
-    "body": [
-      "public const int Max${1:Name}Length = ${1:Length};$0"
-    ],
+    "body": ["public const int Max${1:Name}Length = ${1:Length};$0"],
     "description": "Inserts a max length constant",
     "prefix": "xMaxLengthConst"
   },
@@ -1544,11 +1429,7 @@
     "prefix": "xMethodVoidStub"
   },
   "modelBuilderEntityMongoDb": {
-    "body": [
-      "builder.Entity<${1:ClassName}>(b =>",
-      "{",
-      "});$0"
-    ],
+    "body": ["builder.Entity<${1:ClassName}>(b =>", "{", "});$0"],
     "description": "builder.Entity stub",
     "prefix": "xBuilderEntityMongoDb"
   },
@@ -1596,23 +1477,17 @@
     "prefix": "xNewObjectInitializer"
   },
   "ngRokHttpEuropeRegion": {
-    "body": [
-      "ngrok http -region eu https://localhost:${1:44368}/ $0"
-    ],
+    "body": ["ngrok http -region eu https://localhost:${1:44368}/ $0"],
     "description": "Inserts ngrok http -region eu https://localhost:44368/",
     "prefix": "xNgRokHttpEuropeRegion"
   },
   "notEmptyGuidAttribute": {
-    "body": [
-      "[NotEmptyGuid$1] $0"
-    ],
+    "body": ["[NotEmptyGuid$1] $0"],
     "description": "Inserts NotEmptyGuidAttribute",
     "prefix": "xNotEmptyGuidAttribute"
   },
   "notNullAttribute": {
-    "body": [
-      "[NotNull$1] ${2:string} ${3:name}$0"
-    ],
+    "body": ["[NotNull$1] ${2:string} ${3:name}$0"],
     "description": "NotNull attribute",
     "prefix": "xNotNullAttribute"
   },
@@ -1725,16 +1600,12 @@
     "prefix": "xPageTitle"
   },
   "parameter": {
-    "body": [
-      "[Parameter$1] public string ${2:Name} { get; set; }$0"
-    ],
+    "body": ["[Parameter$1] public string ${2:Name} { get; set; }$0"],
     "description": "Inserts property with Parameter attribute",
     "prefix": "xPara"
   },
   "parameterId": {
-    "body": [
-      "[Parameter$1] public string Id { get; set; }$0"
-    ],
+    "body": ["[Parameter$1] public string Id { get; set; }$0"],
     "description": "Inserts Id property with Parameter attribute",
     "prefix": "xParaId"
   },
@@ -1782,16 +1653,12 @@
     "prefix": "xPropBirthDate"
   },
   "propBookType": {
-    "body": [
-      "public BookType$1 Type { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public BookType$1 Type { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a BookType property ",
     "prefix": "xPropBookType"
   },
   "propCity": {
-    "body": [
-      "public string? ${1:City} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:City} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a City property ",
     "prefix": "xPropCity"
   },
@@ -1801,9 +1668,7 @@
     "prefix": "xPropConfirmPassword"
   },
   "propCountry": {
-    "body": [
-      "public string ${1:Country} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string ${1:Country} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Country property ",
     "prefix": "xPropCountry"
   },
@@ -1822,9 +1687,7 @@
     "prefix": "xPropDateTime"
   },
   "propDescription": {
-    "body": [
-      "public string? Description{ get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string? Description{ get; ${1|set;,private set;|} }$0"],
     "description": "Inserts a Desription property ",
     "prefix": "xPropDescription"
   },
@@ -1848,9 +1711,7 @@
     "prefix": "xPropEndTime"
   },
   "propFilter": {
-    "body": [
-      "public string? Filter{ get; set; }$0"
-    ],
+    "body": ["public string? Filter{ get; set; }$0"],
     "description": "Inserts a Filter property ",
     "prefix": "xPropFilter"
   },
@@ -1889,9 +1750,7 @@
     "prefix": "xPropIsVisible"
   },
   "propLastName": {
-    "body": [
-      "public string? ${1:LastName} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:LastName} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a First Name property ",
     "prefix": "xPropLastName"
   },
@@ -1903,9 +1762,7 @@
     "prefix": "xPropMobilePhone"
   },
   "propName": {
-    "body": [
-      "public string? ${1:Name} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:Name} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Name property ",
     "prefix": "xPropName"
   },
@@ -1915,9 +1772,7 @@
     "prefix": "xPropPassword"
   },
   "propPhone": {
-    "body": [
-      "public string? ${1:Phone} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:Phone} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Phone property ",
     "prefix": "xPropPhone"
   },
@@ -1949,9 +1804,7 @@
     "prefix": "xPropQuantity"
   },
   "propShortBio": {
-    "body": [
-      "public string? ${1:ShortBio} { get; set; } }$0"
-    ],
+    "body": ["public string? ${1:ShortBio} { get; set; } }$0"],
     "description": "Inserts a ShortBio property ",
     "prefix": "xPropShortBio"
   },
@@ -1975,23 +1828,17 @@
     "prefix": "xPropState"
   },
   "propStreet": {
-    "body": [
-      "public string? ${1:Street} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:Street} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Street property ",
     "prefix": "xPropStreet"
   },
   "propText": {
-    "body": [
-      "public string? ${1:Text} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:Text} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a Text property ",
     "prefix": "xPropText"
   },
   "propTitle": {
-    "body": [
-      "public string? Title { get; ${1|set;,private set;|} }$0"
-    ],
+    "body": ["public string? Title { get; ${1|set;,private set;|} }$0"],
     "description": "Inserts an Title property ",
     "prefix": "xPropTitle"
   },
@@ -2006,16 +1853,12 @@
     "prefix": "xPropUserName"
   },
   "propZipCode": {
-    "body": [
-      "public string? ${1:ZipCode} { get; ${2|set;,private set;|} }$0"
-    ],
+    "body": ["public string? ${1:ZipCode} { get; ${2|set;,private set;|} }$0"],
     "description": "Inserts a ZipCode property ",
     "prefix": "xPropZipCode"
   },
   "rangeAttribute": {
-    "body": [
-      "[Range$1(${2:0},${2:1000})]$0"
-    ],
+    "body": ["[Range$1(${2:0},${2:1000})]$0"],
     "description": "Range attribute",
     "prefix": "xRangeAttribute"
   },
@@ -2176,16 +2019,12 @@
     "prefix": "xRepositoryCountAsync"
   },
   "requiredAttribute": {
-    "body": [
-      "[Required$1]$0"
-    ],
+    "body": ["[Required$1]$0"],
     "description": "Inserts a Required Attribute",
     "prefix": "xRequiredAttribute"
   },
   "requiresFeatureAttribute": {
-    "body": [
-      "[RequiresFeature$1(\"${2:FeatureName}\")] $0"
-    ],
+    "body": ["[RequiresFeature$1(\"${2:FeatureName}\")] $0"],
     "description": "Inserts RequiresFeatureAttribute",
     "prefix": "xRequiresFeatureAttribute"
   },
@@ -2289,10 +2128,7 @@
     "prefix": "xSaveAsyncMethodBlobContainer"
   },
   "saveBlobAsyncIAppServiceMethodDefinition": {
-    "body": [
-      "\tTask$2 SaveBlobAsync(SaveBlobInput$1Dto$4 input);",
-      "\t$0"
-    ],
+    "body": ["\tTask$2 SaveBlobAsync(SaveBlobInput$1Dto$4 input);", "\t$0"],
     "description": "Inserts a SaveBlobAsync definition for an IAppService interface",
     "prefix": "xSaveBlobAsyncIAppServiceMethodDefinition"
   },
@@ -2307,9 +2143,7 @@
     "prefix": "xSpecificationClass"
   },
   "stringLengthAttribute": {
-    "body": [
-      "[StringLength(${1:50})$2]$0"
-    ],
+    "body": ["[StringLength(${1:50})$2]$0"],
     "description": "StringLength attribute",
     "prefix": "xStringLengthAttribute"
   },
@@ -2319,16 +2153,12 @@
     "prefix": "xTaskCompleted"
   },
   "tenantIdGuidProperty": {
-    "body": [
-      "public Guid? TenantId { get; set; }$0"
-    ],
+    "body": ["public Guid? TenantId { get; set; }$0"],
     "description": "Inserts public Guid? TenantId { get; set; } property ",
     "prefix": "xTenantIdGuidProperty"
   },
   "tenantIdStringProperty": {
-    "body": [
-      "public string TenantId { get; set; }$0"
-    ],
+    "body": ["public string TenantId { get; set; }$0"],
     "description": "Inserts public string TenantId { get; set; } property ",
     "prefix": "xTenantIdStringProperty"
   },
@@ -2348,58 +2178,42 @@
     "prefix": "xThrowAbpValidationException"
   },
   "throwAlreadyExistsException": {
-    "body": [
-      "throw new ${1:TypeName}AlreadyExistsException$2($3);$0"
-    ],
+    "body": ["throw new ${1:TypeName}AlreadyExistsException$2($3);$0"],
     "description": "Inserts throw new AlreadyExistsException statement",
     "prefix": "xThrowAlreadyExistsException"
   },
   "throwApplicationException": {
-    "body": [
-      "throw new ApplicationException$1(\"${2:ExceptionMessage}\");"
-    ],
+    "body": ["throw new ApplicationException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new ApplicationException statement",
     "prefix": "xThrowApplicationException"
   },
   "throwBusinessException": {
-    "body": [
-      "throw new BusinessException$1(\"${2:ExceptionMessage}\");"
-    ],
+    "body": ["throw new BusinessException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new BusinessException statement",
     "prefix": "xThrowBusinessException"
   },
   "throwCustomException": {
-    "body": [
-      "throw new ${1:Name}Exception(\"${2:ExceptionMessage}\");"
-    ],
+    "body": ["throw new ${1:Name}Exception(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new CustomException statement",
     "prefix": "xThrowCustomException"
   },
   "throwEntityNotFoundException": {
-    "body": [
-      "throw new EntityNotFoundException$1(typeof(${2:TypeName), ${3:id});$0"
-    ],
+    "body": "throw new EntityNotFoundException$1(typeof(${2:TypeName}), ${3:id});$0",
     "description": "Inserts throw new EntityNotFoundException statement",
     "prefix": "xThrowEntityNotFoundException"
   },
   "throwNotImplementedException": {
-    "body": [
-      "throw new System.NotImplementedException();"
-    ],
+    "body": ["throw new System.NotImplementedException();"],
     "description": "Inserts throw new NotImplementedException stat",
     "prefix": "xThrowNotImplementedException"
   },
   "throwUnauthorizedAccessException": {
-    "body": [
-      "throw new UnauthorizedAccessException();"
-    ],
+    "body": ["throw new UnauthorizedAccessException();"],
     "description": "Inserts throw new UnauthorizedAccessException statement",
     "prefix": "xThrowUnauthorizedAccessException"
   },
   "throwUserFriendlyException": {
-    "body": [
-      "throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"
-    ],
+    "body": ["throw new UserFriendlyException$1(\"${2:ExceptionMessage}\");"],
     "description": "Inserts throw new UserFriendlyException statement",
     "prefix": "xThrowUserFriendlyException"
   },
@@ -2410,7 +2224,7 @@
   },
   "unAppServiceClassStub": {
     "body": [
-      "\tpublic class ${TM_FILENAME_BASE}<TStartupModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartupModule>",
+      "\tpublic abstract class ${TM_FILENAME_BASE}<TStartupModule> : ${WORKSPACE_NAME}ApplicationTestBase<TStartupModule>",
       "\t\twhere TStartupModule : IAbpModule$1",
       "\t{",
       "\t\t$0",
@@ -2632,9 +2446,7 @@
     "prefix": "xUpdateAsyncDefinition"
   },
   "urlAttribute": {
-    "body": [
-      "[Url$1]$0"
-    ],
+    "body": ["[Url$1]$0"],
     "description": "Url attribute",
     "prefix": "xUrlAttribute"
   },
@@ -2677,9 +2489,7 @@
     "prefix": "xVarObjectMapperMapUpdateDtoToType"
   },
   "withData": {
-    "body": [
-      "\t\tWithData(\"${1:parameterName}\", ${2:$1});"
-    ],
+    "body": ["\t\tWithData(\"${1:parameterName}\", ${2:$1});"],
     "description": "Inserts a WithData statement",
     "prefix": "xWithData"
   },
