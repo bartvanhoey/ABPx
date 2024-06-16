@@ -14,7 +14,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xAddPermissionToGroup                                          | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xApplicationMenuItemIcon                                       | New ApplicationMenuItem variable with icon                                                                                      
      xApplicationMenuItemUrl                                        | New ApplicationMenuItem variable with url                                                                                       
-     xAppServiceClassStub                                           | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class                                       
+     xAppServiceClassStub                                           | Inserts an AppService class stub based upon the [YourProjectName]AppService class                                               
      xAppServiceCreateAsync                                         | Inserts var x = _nameAppService.CreateAsync() statement                                                                         
      xAppServiceDeleteAsync                                         | Inserts await _nameAppService.DeleteAsync() statement                                                                           
      xAppServiceGetAsync                                            | Inserts var x = _nameAppService.GetAsync() statement                                                                            
@@ -74,8 +74,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCreateMapTypeToUpdateDto                                      | CreateMap from [Type] to UpdateDto statement                                                                                    
      xCreateMapUpdateDtoToType                                      | CreateMap from UpdateDto to [Type] statement                                                                                    
      xCreatePolicyName                                              | Inserts CreatePolicyName statement                                                                                              
-     xCrudAppServiceCreateDtoAndUpdateDto                           | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated                                                  
-     xCrudAppServiceCreateUpdateDto                                 | Inserts a complete CrudAppService class with CreateUpdateDto combined                                                           
+     xCrudAppServiceCreateDtoAndUpdateDto                           | Inserts a CrudAppService class with CreateDto and UpdateDto separated                                                           
+     xCrudAppServiceCreateUpdateDto                                 | Inserts a CrudAppService class with CreateUpdateDto combined                                                                    
      xCrudMethodsIAppService                                        | Inserts the basic CRUD methods in an IAppService                                                                                
      xCtor                                                          | constructor stub                                                                                                                
      xCtorAbpSignInManagerParam                                     | Inserts an AbpSignInManager abpSignInManager parameter in the constructor                                                       
@@ -105,7 +105,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCtorPublic                                                    | Insert a public constructor stub                                                                                                
      xCurrentTenantChange                                           | Inserts using (CurrentTenant.Change(tenantId))                                                                                  
      xCurrentUserGetId                                              | Inserts CurrentUser.GetId() statement                                                                                           
-     xCustomBusinessExceptionClass                                  | Inserts a complete CustomException class inherits from class BusinessException                                                  
+     xCustomBusinessExceptionClass                                  | Inserts a CustomException class inherits from class BusinessException                                                           
      xDataTypeAttribute                                             | DataType attribute                                                                                                              
      xDbSet                                                         | Inserts a DbSet for a class statement in DbContext                                                                              
      xDbSetNewSyntax                                                | Inserts a DbSet for a class statement in DbContext                                                                              
@@ -161,11 +161,11 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xHasManyWithOneIsRequiredHasForeignKey                         | Inserts HasMany().WithOne().IsRequired().HasForeignKey() statement                                                              
      xHasOneWithManyFkIsRequired                                    | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                                                             
      xHasOneWithManyFkIsRequiredOnDelete                            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired().OnDelete statement                                                  
-     xIAppServiceCrudDefinitions                                    | Inserts a complete IAppService interface with CRUD methods for a given Type                                                     
+     xIAppServiceCrudDefinitions                                    | Inserts an IAppService interface with CRUD methods for a given Type                                                             
      xIAppServiceParam                                              | Inserts a IAppService parameter                                                                                                 
      xIAppServiceUpdateAsyncDefinition                              | Inserts an UpdateAsync definition for an IAppService interface                                                                  
-     xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts a complete ICrudAppService CreateDto - UpdateDto                                                                        
-     xICrudAppServiceCreateUpdateDto                                | Inserts a complete ICrudAppService - CreateUpdateDto                                                                            
+     xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts an ICrudAppService CreateDto - UpdateDto                                                                                
+     xICrudAppServiceCreateUpdateDto                                | Inserts an ICrudAppService - CreateUpdateDto                                                                                    
      xIDataFilterISoftDeleteParam                                   | Inserts a IDataFilterISoftDelete parameter                                                                                      
      xIDataFilterProperty                                           | Inserts property public IDataFilter DataFilter { get; set; }                                                                    
      xIf                                                            | If statement                                                                                                                    
@@ -367,6 +367,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xThrowUnauthorizedAccessException                              | Inserts throw new UnauthorizedAccessException statement                                                                         
      xThrowUserFriendlyException                                    | Inserts throw new UserFriendlyException statement                                                                               
      xTodo                                                          | Inserts TODO statement                                                                                                          
+     xunAppServiceClassStub                                         | Inserts an AppServiceTest class stub                                                                                            
      xUnAssertThrowsAsyncAbpValidationException                     | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                                                              
      xUnAssertThrowsAsyncBusinessException                          | Inserts var exception = Assert.ThrowsAsync<BusinessException>                                                                   
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                                                 
