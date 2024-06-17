@@ -8,7 +8,7 @@ In this article, I would like to introduce you to **ABPx**, a **VsCode Extension
 
 The **main goal of ABPx** is to **speed up the development process** of **ABP applications** in **Visual Studio Code**.
 
-When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code structures. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an **ABP Framework developer** a little easier.
+When I started learning the ABP Framework, I noticed that the ABP Framework has a **convention over configuration** approach and you often end up writing the same code over and over again. That's why I started to develop a VsCode Extension with **useful code snippets** to make the life of an **ABP Framework developer** a little easier.
 
 ## ABPx Code Snippets in Action
 
@@ -18,11 +18,11 @@ Below you will see 3 examples of how to use ABPx code snippets in practice. At t
 
 Starting with an ABP project in VsCode can be a bit of hassle. **ABPx makes it a lot easier** to get you up and running by **generating the launch configurations needed**, as you can see below.
 
-When opening an ABP application in **Visual Studio Code**, the editor will show you **a notification** (if not, hit CTRL+SHIFT+P to Restart OmniSharp).
+After you opened an ABP application in **Visual Studio Code** hit CTRL+SHIFT+P (.NET Generate Assets for Build and Debug). This will add a .vscode folder to the root of the project with a launch.json and tasks.json file.
 
 ![Required Assets Missing!](../images/RequiredAssetsMissing.jpg "Required Assets Missing!")
 
-* Click **Yes** to add the *required assets to build and debug* your application. Select the *IssueTracking.HttpApi.Host* project in the *Select the project to launch* dropdown.
+* Click **Yes** to add the *required assets to build and debug* your application. Select the *HttpApi.Host* project in the *Select the project to launch* dropdown.
 
 ![Generate Launch Configurations!](../images/launchconfigurations.gif "Generate Launch Configurations needed for your project!")
 

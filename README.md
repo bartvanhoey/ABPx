@@ -9,10 +9,12 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
 
      Prefix                                                         | Description                                                                                                                     
      -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- 
+     xAddPermissionGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
      xAddPermissionsPoliciesAppService                              | Adds policy permissions to AppService                                                                                           
+     xAddPermissionToGroup                                          | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xApplicationMenuItemIcon                                       | New ApplicationMenuItem variable with icon                                                                                      
      xApplicationMenuItemUrl                                        | New ApplicationMenuItem variable with url                                                                                       
-     xAppServiceClassStub                                           | Inserts a complete AppService class stub based upon the [YourProjectName]AppService class                                       
+     xAppServiceClassStub                                           | Inserts an AppService class stub based upon the [YourProjectName]AppService class                                               
      xAppServiceCreateAsync                                         | Inserts var x = _nameAppService.CreateAsync() statement                                                                         
      xAppServiceDeleteAsync                                         | Inserts await _nameAppService.DeleteAsync() statement                                                                           
      xAppServiceGetAsync                                            | Inserts var x = _nameAppService.GetAsync() statement                                                                            
@@ -50,6 +52,9 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCollectionDefinitionNameAttribute                             | Inserts a CollectionDefinitionNameAttribute                                                                                     
      xConfigureOptions                                              | Inserts Configure Options statement for use in ConfigureServices method                                                         
      xContextAddTransient                                           | Inserts context.Services.AddTransient statement;                                                                                
+     xContextGetApplicationBuilder                                  | Inserts var app = context.GetApplicationBuilder() statement;                                                                    
+     xContextGetEnvironment                                         | Inserts var env = context.GetEnvironment() statement;                                                                           
+     xContextGetHostingEnvironment                                  | Inserts var hostingEnvironment = context.GetHostingEnvironment() statement;                                                     
      xContextGetRequiredService                                     | Inserts var service = context.ServiceProvider.GetRequiredService<Type>() statement                                              
      xCreateAsyncIAppServiceMethodDefinition                        | Inserts a CreateAsync definition for an IAppService interface                                                                   
      xCreateAsyncMethodDefinition                                   | Adds a CreateAsync method Definition to an IAppService Interface                                                                
@@ -69,8 +74,8 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCreateMapTypeToUpdateDto                                      | CreateMap from [Type] to UpdateDto statement                                                                                    
      xCreateMapUpdateDtoToType                                      | CreateMap from UpdateDto to [Type] statement                                                                                    
      xCreatePolicyName                                              | Inserts CreatePolicyName statement                                                                                              
-     xCrudAppServiceCreateDtoAndUpdateDto                           | Inserts a complete CrudAppService class with CreateDto and UpdateDto separated                                                  
-     xCrudAppServiceCreateUpdateDto                                 | Inserts a complete CrudAppService class with CreateUpdateDto combined                                                           
+     xCrudAppServiceCreateDtoAndUpdateDto                           | Inserts a CrudAppService class with CreateDto and UpdateDto separated                                                           
+     xCrudAppServiceCreateUpdateDto                                 | Inserts a CrudAppService class with CreateUpdateDto combined                                                                    
      xCrudMethodsIAppService                                        | Inserts the basic CRUD methods in an IAppService                                                                                
      xCtor                                                          | constructor stub                                                                                                                
      xCtorAbpSignInManagerParam                                     | Inserts an AbpSignInManager abpSignInManager parameter in the constructor                                                       
@@ -100,10 +105,11 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xCtorPublic                                                    | Insert a public constructor stub                                                                                                
      xCurrentTenantChange                                           | Inserts using (CurrentTenant.Change(tenantId))                                                                                  
      xCurrentUserGetId                                              | Inserts CurrentUser.GetId() statement                                                                                           
-     xCustomBusinessExceptionClass                                  | Inserts a complete CustomException class inherits from class BusinessException                                                  
+     xCustomBusinessExceptionClass                                  | Inserts a CustomException class inherits from class BusinessException                                                           
      xDataTypeAttribute                                             | DataType attribute                                                                                                              
      xDbSet                                                         | Inserts a DbSet for a class statement in DbContext                                                                              
      xDbSetNewSyntax                                                | Inserts a DbSet for a class statement in DbContext                                                                              
+     xDeleteAllAsyncMethodDefinition                                | Adds a DeleteAllAsync method definition to an interface                                                                         
      xDeleteAsyncIAppServiceMethodDefinition                        | Inserts a DeleteAsync definition for an IAppService interface                                                                   
      xDeleteAsyncMethodDefinition                                   | Adds a DeleteAsync method definition to an interface                                                                            
      xDeleteAsyncMethodStub                                         | Adds a DeleteAsync method stub                                                                                                  
@@ -155,11 +161,11 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xHasManyWithOneIsRequiredHasForeignKey                         | Inserts HasMany().WithOne().IsRequired().HasForeignKey() statement                                                              
      xHasOneWithManyFkIsRequired                                    | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired statement                                                             
      xHasOneWithManyFkIsRequiredOnDelete                            | Inserts HasOne<Type>().WithMany().ForeignKey().IsRequired().OnDelete statement                                                  
-     xIAppServiceCrudDefinitions                                    | Inserts a complete IAppService interface with CRUD methods for a given Type                                                     
+     xIAppServiceCrudDefinitions                                    | Inserts an IAppService interface with CRUD methods for a given Type                                                             
      xIAppServiceParam                                              | Inserts a IAppService parameter                                                                                                 
-     xIAppServiceUpdateAsyncDefinition                              | Inserts a UpdateAsync definition for an IAppService interface                                                                   
-     xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts a complete ICrudAppService CreateDto - UpdateDto                                                                        
-     xICrudAppServiceCreateUpdateDto                                | Inserts a complete ICrudAppService - CreateUpdateDto                                                                            
+     xIAppServiceUpdateAsyncDefinition                              | Inserts an UpdateAsync definition for an IAppService interface                                                                  
+     xICrudAppServiceCreateDtoAndUpdateDto                          | Inserts an ICrudAppService CreateDto - UpdateDto                                                                                
+     xICrudAppServiceCreateUpdateDto                                | Inserts an ICrudAppService - CreateUpdateDto                                                                                    
      xIDataFilterISoftDeleteParam                                   | Inserts a IDataFilterISoftDelete parameter                                                                                      
      xIDataFilterProperty                                           | Inserts property public IDataFilter DataFilter { get; set; }                                                                    
      xIf                                                            | If statement                                                                                                                    
@@ -260,37 +266,53 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPageTitle                                                     | Inserts a PageTitle tag                                                                                                         
      xPara                                                          | Inserts property with Parameter attribute                                                                                       
      xParaId                                                        | Inserts Id property with Parameter attribute                                                                                    
-     xPermissionAddGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
-     xPermissionAddPermissionToGroup                                | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xPermissionClass                                               | Inserts a static class with Default/Create/Update/Delete constants                                                              
      xPropBirthDate                                                 | Inserts an BirthDate property                                                                                                   
      xPropBookType                                                  | Inserts a BookType property                                                                                                     
      xPropCity                                                      | Inserts a City property                                                                                                         
+     xPropConfirmPassword                                           | Inserts a ConfirmPassword property                                                                                              
      xPropCountry                                                   | Inserts a Country property                                                                                                      
-     xPropDescription                                               | Inserts a Description property                                                                                                  
+     xPropCreationTime                                              | Inserts a CreationTime property                                                                                                 
+     xPropDateTime                                                  | Inserts an DateTime property                                                                                                    
+     xPropDescription                                               | Inserts a Desription property                                                                                                   
+     xPropEmail                                                     | Inserts an Email property                                                                                                       
      xPropEndDate                                                   | Inserts a DateTime EndDate property                                                                                             
      xPropEndTime                                                   | Inserts a DateTime EndTime property                                                                                             
      xPropertyHasMaxLength                                          | Inserts b.Property.HasMaxLengthstatement                                                                                        
      xPropertyIsRequiredHasMaxLength                                | Inserts b.Property.IsRequired.HasMaxLengthstatement                                                                             
      xPropFilter                                                    | Inserts a Filter property                                                                                                       
      xPropFirstName                                                 | Inserts a First Name property                                                                                                   
+     xPropICollection                                               | Inserts an ICollection property                                                                                                 
      xPropId                                                        | Inserts an Id property                                                                                                          
+     xPropImageUrl                                                  | Inserts an ImageUrl property                                                                                                    
+     xPropIs                                                        | Inserts an IsYourName boolean property                                                                                          
+     xPropIsVisible                                                 | Inserts an IsVisible property                                                                                                   
      xPropLastName                                                  | Inserts a First Name property                                                                                                   
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
      xPropName                                                      | Inserts a Name property                                                                                                         
+     xPropPassword                                                  | Inserts a Password property                                                                                                     
      xPropPhone                                                     | Inserts a Phone property                                                                                                        
+     xPropPrice                                                     | Inserts a Price property                                                                                                        
      xPropPrivateSetter                                             | Inserts a property with private setter                                                                                          
      xPropProtectedSetter                                           | Inserts a property with protected setter                                                                                        
      xPropPublishDate                                               | Inserts a DateTime PublishDate property                                                                                         
+     xPropQuantity                                                  | Inserts a Quantity property                                                                                                     
+     xPropShortBio                                                  | Inserts a ShortBio property                                                                                                     
      xPropStartDate                                                 | Inserts a DateTime StartDate property                                                                                           
      xPropStartTime                                                 | Inserts a DateTime StartTime property                                                                                           
+     xPropState                                                     | Inserts a State property                                                                                                        
      xPropStreet                                                    | Inserts a Street property                                                                                                       
+     xPropText                                                      | Inserts a Text property                                                                                                         
      xPropTitle                                                     | Inserts an Title property                                                                                                       
+     xPropUserId                                                    | Inserts an UserId property                                                                                                      
+     xPropUserName                                                  | Inserts an UserName property                                                                                                    
      xPropZipCode                                                   | Inserts a ZipCode property                                                                                                      
+     xQueryableSkipTake                                             | Inserts queryable = queryable.Skip.Take  statement                                                                              
      xQueryableWithDetailsAsync                                     | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
      xRangeAttribute                                                | Range attribute                                                                                                                 
      xReadOnlyListLookupDto                                         | Inserts an IReadOnlyList for a LookupDto object                                                                                 
      xRegularExpressionAttribute                                    | Inserts a RegularExpression Attribute                                                                                           
+     xRepoAnyAsync                                                  | Inserts var x = _repository.AnyAsync statement. Throws EntityNotFoundException when not found                                   
      xRepoCountAsync                                                | Inserts var totalCount = _repository.CountAsync statement                                                                       
      xRepoDeleteAsync                                               | Inserts _repository.DeleteAsync statement                                                                                       
      xRepoDeleteManyAsync                                           | Inserts _repository.DeleteManyAsync statement                                                                                   
@@ -310,11 +332,14 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepositoryGetQueryableAsync                                   | Inserts var queryable = Repository.GetQueryableAsync() statement                                                                
      xRepoUpdateAsync                                               | Inserts repository.UpdateAsync statement                                                                                        
      xRepoUpdateManyAsync                                           | Inserts repository.UpdateManyAsync() statement                                                                                  
+     xRepoWithDetailsAsync                                          | Inserts var queryable = _repository.WithDetailsAsync statement.                                                                 
      xRequiredAttribute                                             | Inserts a Required Attribute                                                                                                    
      xRequiresFeatureAttribute                                      | Inserts RequiresFeatureAttribute                                                                                                
+     xReturnAsyncExecuterToListAsync                                | Inserts return await AsyncExecuter.ToListAsync statement                                                                        
      xReturnDbContextSetFirstOrDefaultAsync                         | Inserts return await DbContextSet.FirstOrDefaultAsync()                                                                         
      xReturnDbContextSetToListAsync                                 | Inserts return await DbContextSet.ToListAsync()                                                                                 
      xReturnDbContextSetWhereToListAsync                            | Inserts return await DbContextSetWhereToListAsync                                                                               
+     xReturnDbContextSingleAsync                                    | Inserts return await DbContextSet.SingleAsync()                                                                                 
      xReturnDbSetFirstOrDefaultAsync                                | Inserts return await DbSet.FirstOrDefaultAsync()                                                                                
      xReturnDbSetToListAsync                                        | Inserts return await DbSet.ToListAsync()                                                                                        
      xReturnListResultDto                                           | Inserts return new ListResultDto statement                                                                                      
@@ -323,6 +348,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xReturnObjectMapperPagedResultDto                              | Inserts return new PagedResultDto with ObjectMapper statement                                                                   
      xReturnObjectMapTypeToDto                                      | return ObjectMapper.Map from SourceType to Dto statement                                                                        
      xReturnPagedResultDto                                          | Inserts return new PagedResultDto statement                                                                                     
+     xReturnQueryToListAsync                                        | Inserts return await query.ToListAsync()                                                                                        
      xSaveAsyncMethodAppService                                     | Inserts await _fileAppService.SaveBlobAsync method                                                                              
      xSaveAsyncMethodBlobContainer                                  | Inserts await _fileContainer.SaveAsync method                                                                                   
      xSaveBlobAsyncIAppServiceMethodDefinition                      | Inserts a SaveBlobAsync definition for an IAppService interface                                                                 
@@ -341,11 +367,13 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xThrowUnauthorizedAccessException                              | Inserts throw new UnauthorizedAccessException statement                                                                         
      xThrowUserFriendlyException                                    | Inserts throw new UserFriendlyException statement                                                                               
      xTodo                                                          | Inserts TODO statement                                                                                                          
+     xunAppServiceClassStub                                         | Inserts an AppServiceTest class stub                                                                                            
      xUnAssertThrowsAsyncAbpValidationException                     | Inserts var exception = Assert.ThrowsAsync<AbpValidationException>                                                              
      xUnAssertThrowsAsyncBusinessException                          | Inserts var exception = Assert.ThrowsAsync<BusinessException>                                                                   
      xUnAssertThrowsAsyncCustomException                            | Inserts Assert.ThrowsAsync<YourCustomException>                                                                                 
      xUnAssertThrowsCustomException                                 | Inserts Assert.Throws<YourCustomException>                                                                                      
      xUnCreateAsyncAppService                                       | Inserts var result = await AppService.CreateAsync statement                                                                     
+     xunEfCoreAppServiceClassStub                                   | Inserts an EfCoreAppServiceTest class stub                                                                                      
      xunFactMethodTaskStub                                          | a xUnit test Task method stub                                                                                                   
      xUnFactMethodVoidStub                                          | a xUnit test void method stub                                                                                                   
      xUnGetListAsyncAppService                                      | Inserts var result = await AppService.GetListAsync statement                                                                    
@@ -364,6 +392,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xUnResultTotalCountShouldBeGreaterOrEqual                      | Inserts result.TotalCount.ShouldBeGreaterThanOrEqual statement                                                                  
      xUnResultTotalCountShouldBeGreaterThan                         | Inserts result.TotalCount.ShouldBeGreaterThan statement                                                                         
      xUnResultTotalCountShouldBeGreaterThanOrEqualTo                | Inserts result.TotalCount.ShouldBeGreaterThanOrEqualTo statement                                                                
+     xUpdateAsyncDefinition                                         | Inserts an UpdateAsync definition for an IAppService interface                                                                  
      xUpdatePolicyName                                              | Inserts UpdatePolicyName statement                                                                                              
      xUrlAttribute                                                  | Url attribute                                                                                                                   
      xUsingSystemLinqDynamicCore                                    | Inserts using System.Linq.Dynamic.Core statement                                                                                
@@ -408,6 +437,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xEditModalDialog                       | Inserts an Edit modal dialog                                        
      xExposeServicesAttribute               | Inserts @attribute ExposeServices                                   
      xFeedbackValidation                    | Inserts <Feedback> validation statement                             
+     xFieldCheckBox                         | Inserts a Checkbox field in a Create/Update dialog                  
      xFieldDateEdit                         | Inserts a TextEdit field in a Create/Update dialog                  
      xFieldEnumSelect                       | Inserts a Select field for enum in a Create/Update dialog           
      xFieldMemoEdit                         | Inserts a MemoEdit field in a Create/Update dialog                  
