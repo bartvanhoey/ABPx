@@ -1781,6 +1781,13 @@
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
+  "propCount": {
+    "body": [
+      "public int$1 Count { get; set; }$0"
+    ],
+    "description": "Inserts a Count property ",
+    "prefix": "xPropCount"
+  },
   "propBookType": {
     "body": [
       "public BookType$1 Type { get; ${2|set;,private set;|} }$0"
@@ -1865,6 +1872,11 @@
     "body": "public ICollection<${1:ClassName}$2> ${3:$1}s { get; set; } = [];$0",
     "description": "Inserts an ICollection property",
     "prefix": "xPropICollection"
+  },
+  "propList": {
+    "body": "public List<${1:ClassName}$2> ${3:$1}s { get; set; } = [];$0",
+    "description": "Inserts an List property",
+    "prefix": "xPropList"
   },
   "propId": {
     "body": [
