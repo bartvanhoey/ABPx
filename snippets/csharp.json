@@ -2013,7 +2013,7 @@
     "prefix": "xPropUserId"
   },
   "propUserName": {
-    "body": "public string ${1:UserName} { get; ${2|set;,private set;|} }$0",
+    "body": "public string? ${1:UserName} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts an UserName property ",
     "prefix": "xPropUserName"
   },
