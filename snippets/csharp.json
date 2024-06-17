@@ -87,7 +87,7 @@
   },
   "appServiceCreateAsync": {
     "body": [
-      "var ${2:created$1} = await _${1:Name}AppService.CreateAsync(${3:input});$0"
+      "var created${1:Name} = await _${2:${1/(.*)/${1:/downcase}/}}AppService.CreateAsync(${3:input});$0"
     ],
     "description": "Inserts var x = _nameAppService.CreateAsync() statement",
     "prefix": "xAppServiceCreateAsync"
