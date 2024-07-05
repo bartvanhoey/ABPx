@@ -6,6 +6,8 @@ if "%result%" == "true" (
     SET argument=%1
 )
 
+git pull
+
 SET PathCurrentDirectory=%~dp0
 FOR %%a IN ("%PathCurrentDirectory:~0,-1%") DO SET PathParentCurrentDirectory=%%~dpa
 SET PathReadMeGeneratorDirectory=%PathParentCurrentDirectory%ReadMeGenerator\bin\Debug\net7.0\

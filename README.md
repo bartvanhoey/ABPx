@@ -271,6 +271,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropBookType                                                  | Inserts a BookType property                                                                                                     
      xPropCity                                                      | Inserts a City property                                                                                                         
      xPropConfirmPassword                                           | Inserts a ConfirmPassword property                                                                                              
+     xPropCount                                                     | Inserts a Count property                                                                                                        
      xPropCountry                                                   | Inserts a Country property                                                                                                      
      xPropCreationTime                                              | Inserts a CreationTime property                                                                                                 
      xPropDateTime                                                  | Inserts an DateTime property                                                                                                    
@@ -288,6 +289,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xPropIs                                                        | Inserts an IsYourName boolean property                                                                                          
      xPropIsVisible                                                 | Inserts an IsVisible property                                                                                                   
      xPropLastName                                                  | Inserts a First Name property                                                                                                   
+     xPropList                                                      | Inserts an List property                                                                                                        
      xPropMobilePhone                                               | Inserts a Mobile Phone property                                                                                                 
      xPropName                                                      | Inserts a Name property                                                                                                         
      xPropPassword                                                  | Inserts a Password property                                                                                                     
@@ -324,6 +326,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xRepoGetCountAsync                                             | Inserts var totalCount = _repository.GetCountAsync statement                                                                    
      xRepoGetListAsync                                              | Inserts var items = await _repository.GetListAsync() statement                                                                  
      xRepoGetListAsyncWithInputParams                               | Inserts var items = await _repository.GetListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter) statement
+     xRepoGetPagedListAsync                                         | Inserts var x = _repository.GetPagedListAsync statement.                                                                        
      xRepoGetQueryableAsync                                         | Inserts var queryable = _repository.GetQueryableAsync() statement                                                               
      xRepoHardDeleteAsync                                           | Inserts _repository.HardDeleteAsync statement                                                                                   
      xRepoInsertAsync                                               | Inserts var inserted = await _repository.InsertAsync() statement                                                                
@@ -410,6 +413,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xLaunchAngularJson                | Inserts launch configurations in launch.json needed to run project             
      xLaunchBlazorServerJson           | Inserts BlazorServer launch configurations in launch.json needed to run project
      xLaunchBlazorWasmJson             | Inserts launch configurations in launch.json needed to run project             
+     xLaunchBlazorWebAppJson           | Inserts launch configurations in launch.json needed to run project             
      xLaunchMvcJson                    | Inserts a launch configurations needed to run an MVC project                   
      xLaunchSeparateIdentityServerJson | Inserts launch configurations in launch.json needed to run project             
      xTasksAngularJson                 | Inserts tasks in tasks.json needed to run project                              

@@ -841,12 +841,12 @@
     "prefix": "xGetListAsyncIAppServiceMethodDefinition"
   },
   "getListAsyncIRepoMethodDefinition": {
-    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetListAsync($4);$0",
+    "body": "\tTask$2<List<${1:${TM_FILENAME_BASE/([\\I])(.*)(Repository)/$2/gi}}$3>> GetListAsync(${4:int skipCount, int maxResultCount, string sorting, string? filter = null});$0",
     "description": "Inserts a GetListAsync definition for in an IRepo interface",
     "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodDefinition": {
-    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async($5);$0",
+    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async(${5:int skipCount, int maxResultCount, string sorting, string? filter = null);$0",
     "description": "Adds a GetListAsync method definition",
     "prefix": "xGetListAsyncMethodDefinition"
   },
