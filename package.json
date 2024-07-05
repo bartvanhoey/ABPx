@@ -3,11 +3,7 @@
   "displayName": "ABPx",
   "description": "Code Snippets that start with an x to speed up your ABP.IO development process",
   "icon": "images/abpx-icon.png",
-<<<<<<< HEAD
   "version": "0.0.852",
-=======
-  "version": "0.0.854",
->>>>>>> 557e1a94798acd544a0ca1cfeb30c7c4653502f5
   "engines": {
     "vscode": "^1.49.0"
   },
