@@ -846,7 +846,7 @@
     "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodDefinition": {
-    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async(${5:int skipCount, int maxResultCount, string sorting, string? filter = null);$0",
+    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async(${5:int skipCount, int maxResultCount, string sorting, string? filter = null});$0",
     "description": "Adds a GetListAsync method definition",
     "prefix": "xGetListAsyncMethodDefinition"
   },
