@@ -846,7 +846,7 @@
     "prefix": "xGetListAsyncIRepoMethodDefinition"
   },
   "getListAsyncMethodDefinition": {
-    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async(${5:int skipCount, int maxResultCount, string sorting, string? filter = null);$0",
+    "body": "Task$3<${1|List,ListResultDto,PagedResultDto|}<${2:Type}>> ${4:GetList}Async(${5:int skipCount, int maxResultCount, string sorting, string? filter = null});$0",
     "description": "Adds a GetListAsync method definition",
     "prefix": "xGetListAsyncMethodDefinition"
   },
@@ -2108,7 +2108,7 @@
   },
   "repoGetAsync": {
     "body": [
-      "var ${2:$1} = await _${1:name}Repository.GetAsync$5(${3:id}, includeDetails:$4{|true,false|});",
+      "var ${2:$1} = await _${1:name}Repository.GetAsync$5(${3:id}, includeDetails:${4|true,false|});",
       "$0"
     ],
     "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
@@ -2116,7 +2116,7 @@
   },
   "repoGetPagedListAsync": {
     "body": [
-      "var ${2:$1} = await _${1:name}Repository.GetPagedListAsync$6(${3:skipCount}, ${4:maxResultCount}, ${4:sorting}, includeDetails:$5{|true,false|});",
+      "var ${2:$1} = await _${1:name}Repository.GetPagedListAsync$6(${3:skipCount}, ${4:maxResultCount}, ${4:sorting}, includeDetails:${5|true,false|});",
       "$0"
     ],
     "description": "Inserts var x = _repository.GetPagedListAsync statement.",
