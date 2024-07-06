@@ -1548,7 +1548,7 @@
   },
   "maxLengthConst": {
     "body": [
-      "public const int Max${1:Name}Length = ${1:Length};$0"
+      "public const int Max${1:Name}Length = ${1:64};$0"
     ],
     "description": "Inserts a max length constant",
     "prefix": "xMaxLengthConst"
