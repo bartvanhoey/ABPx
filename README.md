@@ -9,7 +9,7 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
 
      Prefix                                                         | Description                                                                                                                     
      -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- 
-     xAddPermissionGroupToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
+     xAddGroupPermissionToContext                                   | Add group permission to context in PermissionDefinitionProvider                                                                 
      xAddPermissionsPoliciesAppService                              | Adds policy permissions to AppService                                                                                           
      xAddPermissionToGroup                                          | Adds permission to group in PermissionDefinitionProvider.cs                                                                     
      xApplicationMenuItemIcon                                       | New ApplicationMenuItem variable with icon                                                                                      

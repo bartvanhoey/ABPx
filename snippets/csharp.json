@@ -1788,13 +1788,13 @@
     "description": "Inserts Id property with Parameter attribute",
     "prefix": "xParaId"
   },
-  "permissionAddGroupToContext": {
+  "addGroupPermissionToContext": {
     "body": [
       "var ${1:name}Group = context.AddGroup(${TM_FILENAME/PermissionDefinitionProvider.cs//}Permissions.${2:${1/^([a-z])/${1:/upcase}/}Group}, L(\"Permission:${1/^([a-z])/${1:/upcase}/}Group\"));",
       "//\"Permission:${1/^([a-z])/${1:/upcase}/}Group\": \"${1/^([a-z])/${1:/upcase}/} management\","
     ],
     "description": "Add group permission to context in PermissionDefinitionProvider",
-    "prefix": "xAddPermissionGroupToContext"
+    "prefix": "xAddGroupPermissionToContext"
   },
   "permissionAddPermissionToGroup": {
     "body": [
