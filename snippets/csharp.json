@@ -745,9 +745,9 @@
   },
   "efCoreRepositoryClassStub": {
     "body": [
-      "public class ${1:ClassName}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME}}DbContext, ${4:$1}$5, ${6|Guid,int,string|}$7>, I${8:$1}Repository$11",
+      "public class ${1:${TM_FILENAME_BASE/Repository//}}Repository : EfCoreRepository$2<${3:${WORKSPACE_NAME}}DbContext, ${4:$1}$5, ${6|Guid,int,string|}$7>, I$1Repository$10",
       "{",
-      "public $1Repository(IDbContextProvider$9<${10:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
+      "public $1Repository(IDbContextProvider$8<${9:$3}DbContext> dbContextProvider) : base(dbContextProvider)",
       "{",
       "}",
       "$0",
