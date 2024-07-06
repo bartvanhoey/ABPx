@@ -24,12 +24,16 @@ Do you see room for improvement, or do you have a snippet in mind you want to be
      xAsyncExecuterToListAsync                                      | Inserts AsyncExecuter.ToListAsync statement                                                                                     
      xAuthAttributeAbp                                              | Inserts the ABP Authorize attribute for a class or a method                                                                     
      xAuthAttributeMicrosoft                                        | Inserts the Microsoft.AspNetCore.Authorization Authorize attribute                                                              
+     xAuthorDouglasAdams                                            | Inserts new Author Douglas Adams                                                                                                
+     xAuthorOrwell                                                  | Inserts new Author Orwell                                                                                                       
      xAuthServiceAuthorizeAsync                                     | Inserts the AuthorizationService.AuthorizeAsync method                                                                          
      xAuthServiceCheckAsync                                         | Inserts the AuthorizationService.CheckAsync method                                                                              
      xAuthServiceIsGrantedAsync                                     | Inserts the AuthorizationService.IsGrantedAsync method                                                                          
      xBindPropertyAttribute                                         | Inserts BindProperty attribute                                                                                                  
      xBlobAsyncMethodAppService                                     | Inserts var blob = _fileContainer.GetBlobAsync method                                                                           
      xBlobContainerNameAttribute                                    | Inserts Required Attribute                                                                                                      
+     xBook1984                                                      | Inserts new Book 1984                                                                                                           
+     xBookHitchHiker                                                | Inserts new Book The Hitchhiker                                                                                                 
      xBuilderConfigureBlobStoring                                   | Inserts builder.ConfigureBlobStoring() statement in OnModelCreating method in DbContext                                         
      xBuilderEntity                                                 | builder.Entity stub                                                                                                             
      xBuilderEntityMongoDb                                          | builder.Entity stub                                                                                                             

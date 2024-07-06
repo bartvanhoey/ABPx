@@ -186,6 +186,30 @@
     "description": "Inserts the AuthorizationService.IsGrantedAsync method",
     "prefix": "xAuthServiceIsGrantedAsync"
   },
+  "authorDouglasAdams": {
+    "body": [
+      "Author authorDouglasAdams = new()",
+      "{",
+      "\tName = \"Douglas Adams\",",
+      "\tBirthDate = new DateTime(1952, 03, 11),",
+      "\tShortBio = \"Douglas Adams was an English author, screenwriter, essayist, humorist, satirist and dramatist. Adams was an advocate for environmentalism and conservation, a lover of fast cars, technological innovation and the Apple Macintosh, and a self-proclaimed 'radical atheist'.\"",
+      "};"
+    ],
+    "description": "Inserts new Author Douglas Adams",
+    "prefix": "xAuthorDouglasAdams"
+  },
+  "authorOrwell": {
+    "body": [
+      "Author authorOrwell = new()",
+      "{",
+      "\tName = \"George Orwell\",",
+      "\tBirthDate = new DateTime(1903, 06, 25),",
+      "\tShortBio = \"Orwell produced literary criticism and poetry, fiction and polemical journalism; and is best known for the allegorical novella Animal Farm (1945) and the dystopian novel Nineteen Eighty-Four (1949).\"",
+      "};"
+    ],
+    "description": "Inserts new Author Orwell",
+    "prefix": "xAuthorOrwell"
+  },
   "bindPropertyAttribute": {
     "body": [
       "[BindProperty$1] $0"
@@ -199,6 +223,32 @@
     ],
     "description": "Inserts Required Attribute",
     "prefix": "xBlobContainerNameAttribute"
+  },
+  "book1984": {
+    "body": [
+      "Book book1984 = new()",
+      "{",
+      "\tName = \"1984\",",
+      "\tType = BookType.Dystopia,",
+      "\tPublishDate = new DateTime(1949, 6, 8),",
+      "\tPrice = 19.84f",
+      "};"
+    ],
+    "description": "Inserts new Book 1984",
+    "prefix": "xBook1984"
+  },
+  "bookHitchHiker": {
+    "body": [
+      "Book bookHitchHiker = new()",
+      "{",
+      "\tName = \"The Hitchhiker's Guide to the Galaxy\",",
+      "\tType = BookType.ScienceFiction,",
+      "\tPublishDate = new DateTime(1995, 9, 27),",
+      "\tPrice = 42.0f",
+      "};"
+    ],
+    "description": "Inserts new Book The Hitchhiker",
+    "prefix": "xBookHitchHiker"
   },
   "builderConfigureBlobStoring": {
     "body": "builder.ConfigureBlobStoring();$0",
@@ -1781,13 +1831,6 @@
     "description": "Inserts an BirthDate property ",
     "prefix": "xPropBirthDate"
   },
-  "propCount": {
-    "body": [
-      "public int$1 Count { get; set; }$0"
-    ],
-    "description": "Inserts a Count property ",
-    "prefix": "xPropCount"
-  },
   "propBookType": {
     "body": [
       "public BookType$1 Type { get; ${2|set;,private set;|} }$0"
@@ -1806,6 +1849,13 @@
     "body": "public string ${1:ConfirmPassword} { get; ${2|set;,private set;|} }$0",
     "description": "Inserts a ConfirmPassword property ",
     "prefix": "xPropConfirmPassword"
+  },
+  "propCount": {
+    "body": [
+      "public int$1 Count { get; set; }$0"
+    ],
+    "description": "Inserts a Count property ",
+    "prefix": "xPropCount"
   },
   "propCountry": {
     "body": [
@@ -1873,11 +1923,6 @@
     "description": "Inserts an ICollection property",
     "prefix": "xPropICollection"
   },
-  "propList": {
-    "body": "public List<${1:ClassName}$2> ${3:$1}s { get; set; } = [];$0",
-    "description": "Inserts an List property",
-    "prefix": "xPropList"
-  },
   "propId": {
     "body": [
       "public ${1|Guid,int,string|} $2${3:Id} { get; ${4|set;,private set;|} }$0"
@@ -1906,6 +1951,11 @@
     ],
     "description": "Inserts a First Name property ",
     "prefix": "xPropLastName"
+  },
+  "propList": {
+    "body": "public List<${1:ClassName}$2> ${3:$1}s { get; set; } = [];$0",
+    "description": "Inserts an List property",
+    "prefix": "xPropList"
   },
   "propMobilePhone": {
     "body": [
@@ -2114,14 +2164,6 @@
     "description": "Inserts var x = _repository.GetAsync statement. Throws EntityNotFoundException when not found",
     "prefix": "xRepoGetAsync"
   },
-  "repoGetPagedListAsync": {
-    "body": [
-      "var ${2:$1} = await _${1:name}Repository.GetPagedListAsync$6(${3:skipCount}, ${4:maxResultCount}, ${4:sorting}, includeDetails:${5|true,false|});",
-      "$0"
-    ],
-    "description": "Inserts var x = _repository.GetPagedListAsync statement.",
-    "prefix": "xRepoGetPagedListAsync"
-  },
   "repoGetCountAsync": {
     "body": [
       "var ${1|totalCount,count,total|} = await _${2:name}Repository.GetCountAsync$3();",
@@ -2145,6 +2187,14 @@
     ],
     "description": "Inserts var items = await _repository.GetListAsync(input.SkipCount, input.MaxResultCount, input.Sorting, input.Filter) statement",
     "prefix": "xRepoGetListAsyncWithInputParams"
+  },
+  "repoGetPagedListAsync": {
+    "body": [
+      "var ${2:$1} = await _${1:name}Repository.GetPagedListAsync$6(${3:skipCount}, ${4:maxResultCount}, ${4:sorting}, includeDetails:${5|true,false|});",
+      "$0"
+    ],
+    "description": "Inserts var x = _repository.GetPagedListAsync statement.",
+    "prefix": "xRepoGetPagedListAsync"
   },
   "repoHardDeleteAsync": {
     "body": [
